@@ -1,0 +1,18 @@
+syntax = "proto3";
+package iamport;
+
+option go_package = "github.com/iamport/interface/build/go/iamport";
+
+import "authenticate/token.proto";
+import "payment/payment.proto";
+
+message Response {
+    int32 code = 1;
+    string message = 2;
+    oneof response {
+        authenticate.Token token = 3;
+        payment.Payment payment = 4;
+        payment.PaymentList payment_list = 5;
+        payment.PaymentPage payment_page = 6;
+    }
+}

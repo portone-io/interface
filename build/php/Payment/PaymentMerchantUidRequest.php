@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>payment.MerchantUidPaymentRequest</code>
+ * Generated from protobuf message <code>payment.PaymentMerchantUidRequest</code>
  */
-class MerchantUidPaymentRequest extends \Google\Protobuf\Internal\Message
+class PaymentMerchantUidRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string merchant_uid = 1;</code>
@@ -22,11 +22,7 @@ class MerchantUidPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     protected $status = '';
     /**
-     * Generated from protobuf field <code>int32 pages = 3;</code>
-     */
-    protected $pages = 0;
-    /**
-     * Generated from protobuf field <code>string sorting = 4;</code>
+     * Generated from protobuf field <code>string sorting = 3;</code>
      */
     protected $sorting = '';
 
@@ -38,7 +34,6 @@ class MerchantUidPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $merchant_uid
      *     @type string $status
-     *     @type int $pages
      *     @type string $sorting
      * }
      */
@@ -92,29 +87,7 @@ class MerchantUidPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 pages = 3;</code>
-     * @return int
-     */
-    public function getPages()
-    {
-        return $this->pages;
-    }
-
-    /**
-     * Generated from protobuf field <code>int32 pages = 3;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setPages($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->pages = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string sorting = 4;</code>
+     * Generated from protobuf field <code>string sorting = 3;</code>
      * @return string
      */
     public function getSorting()
@@ -123,7 +96,7 @@ class MerchantUidPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string sorting = 4;</code>
+     * Generated from protobuf field <code>string sorting = 3;</code>
      * @param string $var
      * @return $this
      */

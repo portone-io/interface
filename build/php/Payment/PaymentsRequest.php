@@ -9,14 +9,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>payment.PaymentRequest</code>
+ * Generated from protobuf message <code>payment.PaymentsRequest</code>
  */
-class PaymentRequest extends \Google\Protobuf\Internal\Message
+class PaymentsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string imp_uid = 1;</code>
+     * Generated from protobuf field <code>repeated string imp_uid = 1;</code>
      */
-    protected $imp_uid = '';
+    private $imp_uid;
 
     /**
      * Constructor.
@@ -24,7 +24,7 @@ class PaymentRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $imp_uid
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $imp_uid
      * }
      */
     public function __construct($data = NULL) {
@@ -33,8 +33,8 @@ class PaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string imp_uid = 1;</code>
-     * @return string
+     * Generated from protobuf field <code>repeated string imp_uid = 1;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getImpUid()
     {
@@ -42,14 +42,14 @@ class PaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string imp_uid = 1;</code>
-     * @param string $var
+     * Generated from protobuf field <code>repeated string imp_uid = 1;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setImpUid($var)
     {
-        GPBUtil::checkString($var, True);
-        $this->imp_uid = $var;
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->imp_uid = $arr;
 
         return $this;
     }

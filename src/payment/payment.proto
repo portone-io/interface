@@ -14,7 +14,7 @@ message Payment {
     string buyer_postcode =8;
     string buyer_tel = 9;
     int32 cancel_amount = 10;
-    repeated Cancle cancel_history = 11;
+    repeated CancleHistory cancel_history = 11;
     string cancel_reason = 12;
     repeated string cancel_receipt_urls = 13;
     int32 cancelled_at = 14;
@@ -49,11 +49,7 @@ message Payment {
     string vbank_num = 43;
 }
 
-message PaymentList {
-    repeated Payment response = 1;
-}
-
-message Cancle {
+message CancleHistory {
     string pg_tid = 1;
     int32 amount = 2;
     int32 cancelled_at = 3;
@@ -68,13 +64,114 @@ message PaymentPage {
     repeated Payment list = 4;
 }
 
+message PaymentBalanceDetail {
+    int32 tax_free = 1;
+    int32 supply = 2;
+    int32 vat = 3;
+    int32 service = 4;
+}
+
+message PaymentBalance {
+    int32 amount = 1;
+    PaymentBalanceDetail cash_receipt = 2;
+    PaymentBalanceDetail primary = 3;
+    PaymentBalanceDetail secondary = 4;
+    PaymentBalanceDetail discount = 5;
+    repeated PaymentBalanceHistory histories = 6;
+}
+
+message PaymentBalanceHistory {
+    PaymentBalanceDetail cash_receipt = 1;
+    PaymentBalanceDetail primary = 2;
+    PaymentBalanceDetail secondary = 3;
+    PaymentBalanceDetail discount = 4;
+    int32 created = 5;
+}
+
 message PaymentRequest {
+    string imp_uid = 1;
+}
+
+message PaymentResponse{
+    int32 code = 1;
+    string message = 2;
+    Payment response = 3;
+}
+
+message PaymentsRequest {
     repeated string imp_uid = 1;
 }
 
-message MerchantUidPaymentRequest {
+message PaymentsResponse{
+    int32 code = 1;
+    string message = 2;
+    repeated Payment response = 3;
+}
+
+message PaymentsMerchantUidRequest {
     string merchant_uid = 1;
     string status = 2;
-    int32 pages = 3;
+    int32 page = 3;
     string sorting = 4;
+}
+
+message PaymentsMerchantUidResponse{
+    int32 code = 1;
+    string message = 2;
+    PaymentPage response = 3;
+}
+
+message PaymentStatusRequest {
+    string status = 1;
+    int32 page = 2;
+    int32 limit = 3;
+    int32 from = 4;
+    int32 to = 5;
+    string sorting = 6;
+}
+
+message PaymentStatusResponse {
+    int32 code = 1;
+    string message = 2;
+    PaymentPage response = 3;
+}
+
+message PaymentMerchantUidRequest {
+    string merchant_uid = 1;
+    string status = 2;
+    string sorting = 3;
+}
+
+message PaymentMerchantUidResponse{
+    int32 code = 1;
+    string message = 2;
+    Payment response = 3;
+}
+
+message PaymentCancleRequest {
+    string imp_uid = 1;
+    string merchant_uid = 2;
+    double amount = 3;
+    double tx_free = 4;
+    double checksum = 5;
+    string reasom = 6;
+    string refund_holder = 7;
+    string refund_bank = 8;
+    string refund_account = 9;
+}
+
+message PaymentCancleResponse {
+    int32 code = 1;
+    string message = 2;
+    Payment response = 3;
+}
+
+message PaymentBalanceRequest {
+    string imp_uid = 1;
+}
+
+message PaymentBalanceResponse {
+    int32 code = 1;
+    string message = 2;
+    PaymentBalance response = 3;
 }

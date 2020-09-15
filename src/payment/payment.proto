@@ -22,7 +22,7 @@ message Payment {
     string card_name = 16;
     string card_number = 17;
     int32 card_quota = 18;
-    string card_type = 19;
+    int32 card_type = 19;
     bool cash_receipt_issued = 20;
     string channel = 21;
     string currency = 22;

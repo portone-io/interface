@@ -230,16 +230,10 @@ public final class PaymentOuterClass {
     int getCardQuota();
 
     /**
-     * <code>string card_type = 19;</code>
+     * <code>int32 card_type = 19;</code>
      * @return The cardType.
      */
-    java.lang.String getCardType();
-    /**
-     * <code>string card_type = 19;</code>
-     * @return The bytes for cardType.
-     */
-    com.google.protobuf.ByteString
-        getCardTypeBytes();
+    int getCardType();
 
     /**
      * <code>bool cash_receipt_issued = 20;</code>
@@ -549,7 +543,6 @@ public final class PaymentOuterClass {
       cardCode_ = "";
       cardName_ = "";
       cardNumber_ = "";
-      cardType_ = "";
       channel_ = "";
       currency_ = "";
       customData_ = "";
@@ -712,10 +705,9 @@ public final class PaymentOuterClass {
               cardQuota_ = input.readInt32();
               break;
             }
-            case 154: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 152: {
 
-              cardType_ = s;
+              cardType_ = input.readInt32();
               break;
             }
             case 160: {
@@ -1460,41 +1452,14 @@ public final class PaymentOuterClass {
     }
 
     public static final int CARD_TYPE_FIELD_NUMBER = 19;
-    private volatile java.lang.Object cardType_;
+    private int cardType_;
     /**
-     * <code>string card_type = 19;</code>
+     * <code>int32 card_type = 19;</code>
      * @return The cardType.
      */
     @java.lang.Override
-    public java.lang.String getCardType() {
-      java.lang.Object ref = cardType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cardType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string card_type = 19;</code>
-     * @return The bytes for cardType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCardTypeBytes() {
-      java.lang.Object ref = cardType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cardType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getCardType() {
+      return cardType_;
     }
 
     public static final int CASH_RECEIPT_ISSUED_FIELD_NUMBER = 20;
@@ -2402,8 +2367,8 @@ public final class PaymentOuterClass {
       if (cardQuota_ != 0) {
         output.writeInt32(18, cardQuota_);
       }
-      if (!getCardTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, cardType_);
+      if (cardType_ != 0) {
+        output.writeInt32(19, cardType_);
       }
       if (cashReceiptIssued_ != false) {
         output.writeBool(20, cashReceiptIssued_);
@@ -2560,8 +2525,9 @@ public final class PaymentOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(18, cardQuota_);
       }
-      if (!getCardTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, cardType_);
+      if (cardType_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(19, cardType_);
       }
       if (cashReceiptIssued_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -2702,8 +2668,8 @@ public final class PaymentOuterClass {
           .equals(other.getCardNumber())) return false;
       if (getCardQuota()
           != other.getCardQuota()) return false;
-      if (!getCardType()
-          .equals(other.getCardType())) return false;
+      if (getCardType()
+          != other.getCardType()) return false;
       if (getCashReceiptIssued()
           != other.getCashReceiptIssued()) return false;
       if (!getChannel()
@@ -2810,7 +2776,7 @@ public final class PaymentOuterClass {
       hash = (37 * hash) + CARD_QUOTA_FIELD_NUMBER;
       hash = (53 * hash) + getCardQuota();
       hash = (37 * hash) + CARD_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getCardType().hashCode();
+      hash = (53 * hash) + getCardType();
       hash = (37 * hash) + CASH_RECEIPT_ISSUED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getCashReceiptIssued());
@@ -3041,7 +3007,7 @@ public final class PaymentOuterClass {
 
         cardQuota_ = 0;
 
-        cardType_ = "";
+        cardType_ = 0;
 
         cashReceiptIssued_ = false;
 
@@ -3325,9 +3291,8 @@ public final class PaymentOuterClass {
         if (other.getCardQuota() != 0) {
           setCardQuota(other.getCardQuota());
         }
-        if (!other.getCardType().isEmpty()) {
-          cardType_ = other.cardType_;
-          onChanged();
+        if (other.getCardType() != 0) {
+          setCardType(other.getCardType());
         }
         if (other.getCashReceiptIssued() != false) {
           setCashReceiptIssued(other.getCashReceiptIssued());
@@ -4801,78 +4766,33 @@ public final class PaymentOuterClass {
         return this;
       }
 
-      private java.lang.Object cardType_ = "";
+      private int cardType_ ;
       /**
-       * <code>string card_type = 19;</code>
+       * <code>int32 card_type = 19;</code>
        * @return The cardType.
        */
-      public java.lang.String getCardType() {
-        java.lang.Object ref = cardType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cardType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public int getCardType() {
+        return cardType_;
       }
       /**
-       * <code>string card_type = 19;</code>
-       * @return The bytes for cardType.
-       */
-      public com.google.protobuf.ByteString
-          getCardTypeBytes() {
-        java.lang.Object ref = cardType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cardType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string card_type = 19;</code>
+       * <code>int32 card_type = 19;</code>
        * @param value The cardType to set.
        * @return This builder for chaining.
        */
-      public Builder setCardType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setCardType(int value) {
+        
         cardType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string card_type = 19;</code>
+       * <code>int32 card_type = 19;</code>
        * @return This builder for chaining.
        */
       public Builder clearCardType() {
         
-        cardType_ = getDefaultInstance().getCardType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string card_type = 19;</code>
-       * @param value The bytes for cardType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cardType_ = value;
+        cardType_ = 0;
         onChanged();
         return this;
       }
@@ -24641,7 +24561,7 @@ public final class PaymentOuterClass {
       "ancel_receipt_urls\030\r \003(\t\022\024\n\014cancelled_at" +
       "\030\016 \001(\005\022\021\n\tcard_code\030\017 \001(\t\022\021\n\tcard_name\030\020" +
       " \001(\t\022\023\n\013card_number\030\021 \001(\t\022\022\n\ncard_quota\030" +
-      "\022 \001(\005\022\021\n\tcard_type\030\023 \001(\t\022\033\n\023cash_receipt" +
+      "\022 \001(\005\022\021\n\tcard_type\030\023 \001(\005\022\033\n\023cash_receipt" +
       "_issued\030\024 \001(\010\022\017\n\007channel\030\025 \001(\t\022\020\n\010curren" +
       "cy\030\026 \001(\t\022\023\n\013custom_data\030\027 \001(\t\022\024\n\014custome" +
       "r_uid\030\030 \001(\t\022\032\n\022customer_uid_usage\030\031 \001(\t\022" +

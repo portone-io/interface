@@ -86,9 +86,9 @@ class Payment extends \Google\Protobuf\Internal\Message
      */
     protected $card_quota = 0;
     /**
-     * Generated from protobuf field <code>string card_type = 19;</code>
+     * Generated from protobuf field <code>int32 card_type = 19;</code>
      */
-    protected $card_type = '';
+    protected $card_type = 0;
     /**
      * Generated from protobuf field <code>bool cash_receipt_issued = 20;</code>
      */
@@ -222,7 +222,7 @@ class Payment extends \Google\Protobuf\Internal\Message
      *     @type string $card_name
      *     @type string $card_number
      *     @type int $card_quota
-     *     @type string $card_type
+     *     @type int $card_type
      *     @type bool $cash_receipt_issued
      *     @type string $channel
      *     @type string $currency
@@ -654,8 +654,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string card_type = 19;</code>
-     * @return string
+     * Generated from protobuf field <code>int32 card_type = 19;</code>
+     * @return int
      */
     public function getCardType()
     {
@@ -663,13 +663,13 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string card_type = 19;</code>
-     * @param string $var
+     * Generated from protobuf field <code>int32 card_type = 19;</code>
+     * @param int $var
      * @return $this
      */
     public function setCardType($var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkInt32($var);
         $this->card_type = $var;
 
         return $this;

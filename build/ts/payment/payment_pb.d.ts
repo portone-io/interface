@@ -62,8 +62,8 @@ export class Payment extends jspb.Message {
   getCardQuota(): number;
   setCardQuota(value: number): void;
 
-  getCardType(): string;
-  setCardType(value: string): void;
+  getCardType(): number;
+  setCardType(value: number): void;
 
   getCashReceiptIssued(): boolean;
   setCashReceiptIssued(value: boolean): void;
@@ -176,7 +176,7 @@ export namespace Payment {
     cardName: string,
     cardNumber: string,
     cardQuota: number,
-    cardType: string,
+    cardType: number,
     cashReceiptIssued: boolean,
     channel: string,
     currency: string,

@@ -510,7 +510,7 @@ proto.payment.Payment.toObject = function(includeInstance, msg) {
     cardName: jspb.Message.getFieldWithDefault(msg, 16, ""),
     cardNumber: jspb.Message.getFieldWithDefault(msg, 17, ""),
     cardQuota: jspb.Message.getFieldWithDefault(msg, 18, 0),
-    cardType: jspb.Message.getFieldWithDefault(msg, 19, ""),
+    cardType: jspb.Message.getFieldWithDefault(msg, 19, 0),
     cashReceiptIssued: jspb.Message.getBooleanFieldWithDefault(msg, 20, false),
     channel: jspb.Message.getFieldWithDefault(msg, 21, ""),
     currency: jspb.Message.getFieldWithDefault(msg, 22, ""),
@@ -648,7 +648,7 @@ proto.payment.Payment.deserializeBinaryFromReader = function(msg, reader) {
       msg.setCardQuota(value);
       break;
     case 19:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setCardType(value);
       break;
     case 20:
@@ -916,8 +916,8 @@ proto.payment.Payment.serializeBinaryToWriter = function(message, writer) {
     );
   }
   f = message.getCardType();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0) {
+    writer.writeInt32(
       19,
       f
     );
@@ -1478,20 +1478,20 @@ proto.payment.Payment.prototype.setCardQuota = function(value) {
 
 
 /**
- * optional string card_type = 19;
- * @return {string}
+ * optional int32 card_type = 19;
+ * @return {number}
  */
 proto.payment.Payment.prototype.getCardType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 19, ""));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 19, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {number} value
  * @return {!proto.payment.Payment} returns this
  */
 proto.payment.Payment.prototype.setCardType = function(value) {
-  return jspb.Message.setProto3StringField(this, 19, value);
+  return jspb.Message.setProto3IntField(this, 19, value);
 };
 
 

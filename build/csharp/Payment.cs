@@ -34,7 +34,7 @@ namespace Payment {
             "EhsKE2NhbmNlbF9yZWNlaXB0X3VybHMYDSADKAkSFAoMY2FuY2VsbGVkX2F0",
             "GA4gASgFEhEKCWNhcmRfY29kZRgPIAEoCRIRCgljYXJkX25hbWUYECABKAkS",
             "EwoLY2FyZF9udW1iZXIYESABKAkSEgoKY2FyZF9xdW90YRgSIAEoBRIRCglj",
-            "YXJkX3R5cGUYEyABKAkSGwoTY2FzaF9yZWNlaXB0X2lzc3VlZBgUIAEoCBIP",
+            "YXJkX3R5cGUYEyABKAUSGwoTY2FzaF9yZWNlaXB0X2lzc3VlZBgUIAEoCBIP",
             "CgdjaGFubmVsGBUgASgJEhAKCGN1cnJlbmN5GBYgASgJEhMKC2N1c3RvbV9k",
             "YXRhGBcgASgJEhQKDGN1c3RvbWVyX3VpZBgYIAEoCRIaChJjdXN0b21lcl91",
             "aWRfdXNhZ2UYGSABKAkSDgoGZXNjcm93GBogASgIEhMKC2ZhaWxfcmVhc29u",
@@ -404,12 +404,12 @@ namespace Payment {
 
     /// <summary>Field number for the "card_type" field.</summary>
     public const int CardTypeFieldNumber = 19;
-    private string cardType_ = "";
+    private int cardType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CardType {
+    public int CardType {
       get { return cardType_; }
       set {
-        cardType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        cardType_ = value;
       }
     }
 
@@ -793,7 +793,7 @@ namespace Payment {
       if (CardName.Length != 0) hash ^= CardName.GetHashCode();
       if (CardNumber.Length != 0) hash ^= CardNumber.GetHashCode();
       if (CardQuota != 0) hash ^= CardQuota.GetHashCode();
-      if (CardType.Length != 0) hash ^= CardType.GetHashCode();
+      if (CardType != 0) hash ^= CardType.GetHashCode();
       if (CashReceiptIssued != false) hash ^= CashReceiptIssued.GetHashCode();
       if (Channel.Length != 0) hash ^= Channel.GetHashCode();
       if (Currency.Length != 0) hash ^= Currency.GetHashCode();
@@ -903,9 +903,9 @@ namespace Payment {
         output.WriteRawTag(144, 1);
         output.WriteInt32(CardQuota);
       }
-      if (CardType.Length != 0) {
-        output.WriteRawTag(154, 1);
-        output.WriteString(CardType);
+      if (CardType != 0) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt32(CardType);
       }
       if (CashReceiptIssued != false) {
         output.WriteRawTag(160, 1);
@@ -1090,9 +1090,9 @@ namespace Payment {
         output.WriteRawTag(144, 1);
         output.WriteInt32(CardQuota);
       }
-      if (CardType.Length != 0) {
-        output.WriteRawTag(154, 1);
-        output.WriteString(CardType);
+      if (CardType != 0) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt32(CardType);
       }
       if (CashReceiptIssued != false) {
         output.WriteRawTag(160, 1);
@@ -1261,8 +1261,8 @@ namespace Payment {
       if (CardQuota != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(CardQuota);
       }
-      if (CardType.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(CardType);
+      if (CardType != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(CardType);
       }
       if (CashReceiptIssued != false) {
         size += 2 + 1;
@@ -1406,7 +1406,7 @@ namespace Payment {
       if (other.CardQuota != 0) {
         CardQuota = other.CardQuota;
       }
-      if (other.CardType.Length != 0) {
+      if (other.CardType != 0) {
         CardType = other.CardType;
       }
       if (other.CashReceiptIssued != false) {
@@ -1576,8 +1576,8 @@ namespace Payment {
             CardQuota = input.ReadInt32();
             break;
           }
-          case 154: {
-            CardType = input.ReadString();
+          case 152: {
+            CardType = input.ReadInt32();
             break;
           }
           case 160: {
@@ -1774,8 +1774,8 @@ namespace Payment {
             CardQuota = input.ReadInt32();
             break;
           }
-          case 154: {
-            CardType = input.ReadString();
+          case 152: {
+            CardType = input.ReadInt32();
             break;
           }
           case 160: {

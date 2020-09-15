@@ -515,26 +515,29 @@ proto.payment.Payment.toObject = function(includeInstance, msg) {
     channel: jspb.Message.getFieldWithDefault(msg, 21, ""),
     currency: jspb.Message.getFieldWithDefault(msg, 22, ""),
     customData: jspb.Message.getFieldWithDefault(msg, 23, ""),
-    escrow: jspb.Message.getBooleanFieldWithDefault(msg, 24, false),
-    failReason: jspb.Message.getFieldWithDefault(msg, 25, ""),
-    failedAt: jspb.Message.getFieldWithDefault(msg, 26, 0),
-    impUid: jspb.Message.getFieldWithDefault(msg, 27, ""),
-    merchantUid: jspb.Message.getFieldWithDefault(msg, 28, ""),
-    name: jspb.Message.getFieldWithDefault(msg, 29, ""),
-    paidAt: jspb.Message.getFieldWithDefault(msg, 30, 0),
-    payMethod: jspb.Message.getFieldWithDefault(msg, 31, ""),
-    pgId: jspb.Message.getFieldWithDefault(msg, 32, ""),
-    pgProvider: jspb.Message.getFieldWithDefault(msg, 33, ""),
-    pgTid: jspb.Message.getFieldWithDefault(msg, 34, ""),
-    receiptUrl: jspb.Message.getFieldWithDefault(msg, 35, ""),
-    status: jspb.Message.getFieldWithDefault(msg, 36, ""),
-    userAgent: jspb.Message.getFieldWithDefault(msg, 37, ""),
-    vbankCode: jspb.Message.getFieldWithDefault(msg, 38, ""),
-    vbankDate: jspb.Message.getFieldWithDefault(msg, 39, 0),
-    vbankHolder: jspb.Message.getFieldWithDefault(msg, 40, ""),
-    vbankIssuedAt: jspb.Message.getFieldWithDefault(msg, 41, 0),
-    vbankName: jspb.Message.getFieldWithDefault(msg, 42, ""),
-    vbankNum: jspb.Message.getFieldWithDefault(msg, 43, "")
+    customerUid: jspb.Message.getFieldWithDefault(msg, 24, ""),
+    customerUidUsage: jspb.Message.getFieldWithDefault(msg, 25, ""),
+    escrow: jspb.Message.getBooleanFieldWithDefault(msg, 26, false),
+    failReason: jspb.Message.getFieldWithDefault(msg, 27, ""),
+    failedAt: jspb.Message.getFieldWithDefault(msg, 28, 0),
+    impUid: jspb.Message.getFieldWithDefault(msg, 29, ""),
+    merchantUid: jspb.Message.getFieldWithDefault(msg, 30, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 31, ""),
+    paidAt: jspb.Message.getFieldWithDefault(msg, 32, 0),
+    payMethod: jspb.Message.getFieldWithDefault(msg, 33, ""),
+    pgId: jspb.Message.getFieldWithDefault(msg, 34, ""),
+    pgProvider: jspb.Message.getFieldWithDefault(msg, 35, ""),
+    pgTid: jspb.Message.getFieldWithDefault(msg, 36, ""),
+    receiptUrl: jspb.Message.getFieldWithDefault(msg, 37, ""),
+    startedAt: jspb.Message.getFieldWithDefault(msg, 38, 0),
+    status: jspb.Message.getFieldWithDefault(msg, 39, ""),
+    userAgent: jspb.Message.getFieldWithDefault(msg, 40, ""),
+    vbankCode: jspb.Message.getFieldWithDefault(msg, 41, ""),
+    vbankDate: jspb.Message.getFieldWithDefault(msg, 42, 0),
+    vbankHolder: jspb.Message.getFieldWithDefault(msg, 43, ""),
+    vbankIssuedAt: jspb.Message.getFieldWithDefault(msg, 44, 0),
+    vbankName: jspb.Message.getFieldWithDefault(msg, 45, ""),
+    vbankNum: jspb.Message.getFieldWithDefault(msg, 46, "")
   };
 
   if (includeInstance) {
@@ -665,82 +668,94 @@ proto.payment.Payment.deserializeBinaryFromReader = function(msg, reader) {
       msg.setCustomData(value);
       break;
     case 24:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setEscrow(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCustomerUid(value);
       break;
     case 25:
       var value = /** @type {string} */ (reader.readString());
-      msg.setFailReason(value);
+      msg.setCustomerUidUsage(value);
       break;
     case 26:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setFailedAt(value);
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setEscrow(value);
       break;
     case 27:
       var value = /** @type {string} */ (reader.readString());
-      msg.setImpUid(value);
+      msg.setFailReason(value);
       break;
     case 28:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setMerchantUid(value);
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setFailedAt(value);
       break;
     case 29:
       var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
+      msg.setImpUid(value);
       break;
     case 30:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setPaidAt(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMerchantUid(value);
       break;
     case 31:
       var value = /** @type {string} */ (reader.readString());
-      msg.setPayMethod(value);
+      msg.setName(value);
       break;
     case 32:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPgId(value);
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setPaidAt(value);
       break;
     case 33:
       var value = /** @type {string} */ (reader.readString());
-      msg.setPgProvider(value);
+      msg.setPayMethod(value);
       break;
     case 34:
       var value = /** @type {string} */ (reader.readString());
-      msg.setPgTid(value);
+      msg.setPgId(value);
       break;
     case 35:
       var value = /** @type {string} */ (reader.readString());
-      msg.setReceiptUrl(value);
+      msg.setPgProvider(value);
       break;
     case 36:
       var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
+      msg.setPgTid(value);
       break;
     case 37:
       var value = /** @type {string} */ (reader.readString());
-      msg.setUserAgent(value);
+      msg.setReceiptUrl(value);
       break;
     case 38:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setVbankCode(value);
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setStartedAt(value);
       break;
     case 39:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setVbankDate(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setStatus(value);
       break;
     case 40:
       var value = /** @type {string} */ (reader.readString());
-      msg.setVbankHolder(value);
+      msg.setUserAgent(value);
       break;
     case 41:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setVbankCode(value);
+      break;
+    case 42:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setVbankDate(value);
+      break;
+    case 43:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setVbankHolder(value);
+      break;
+    case 44:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setVbankIssuedAt(value);
       break;
-    case 42:
+    case 45:
       var value = /** @type {string} */ (reader.readString());
       msg.setVbankName(value);
       break;
-    case 43:
+    case 46:
       var value = /** @type {string} */ (reader.readString());
       msg.setVbankNum(value);
       break;
@@ -935,143 +950,164 @@ proto.payment.Payment.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getEscrow();
-  if (f) {
-    writer.writeBool(
+  f = message.getCustomerUid();
+  if (f.length > 0) {
+    writer.writeString(
       24,
       f
     );
   }
-  f = message.getFailReason();
+  f = message.getCustomerUidUsage();
   if (f.length > 0) {
     writer.writeString(
       25,
       f
     );
   }
-  f = message.getFailedAt();
-  if (f !== 0) {
-    writer.writeInt32(
+  f = message.getEscrow();
+  if (f) {
+    writer.writeBool(
       26,
       f
     );
   }
-  f = message.getImpUid();
+  f = message.getFailReason();
   if (f.length > 0) {
     writer.writeString(
       27,
       f
     );
   }
-  f = message.getMerchantUid();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getFailedAt();
+  if (f !== 0) {
+    writer.writeInt32(
       28,
       f
     );
   }
-  f = message.getName();
+  f = message.getImpUid();
   if (f.length > 0) {
     writer.writeString(
       29,
       f
     );
   }
-  f = message.getPaidAt();
-  if (f !== 0) {
-    writer.writeInt32(
+  f = message.getMerchantUid();
+  if (f.length > 0) {
+    writer.writeString(
       30,
       f
     );
   }
-  f = message.getPayMethod();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       31,
       f
     );
   }
-  f = message.getPgId();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getPaidAt();
+  if (f !== 0) {
+    writer.writeInt32(
       32,
       f
     );
   }
-  f = message.getPgProvider();
+  f = message.getPayMethod();
   if (f.length > 0) {
     writer.writeString(
       33,
       f
     );
   }
-  f = message.getPgTid();
+  f = message.getPgId();
   if (f.length > 0) {
     writer.writeString(
       34,
       f
     );
   }
-  f = message.getReceiptUrl();
+  f = message.getPgProvider();
   if (f.length > 0) {
     writer.writeString(
       35,
       f
     );
   }
-  f = message.getStatus();
+  f = message.getPgTid();
   if (f.length > 0) {
     writer.writeString(
       36,
       f
     );
   }
-  f = message.getUserAgent();
+  f = message.getReceiptUrl();
   if (f.length > 0) {
     writer.writeString(
       37,
       f
     );
   }
-  f = message.getVbankCode();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getStartedAt();
+  if (f !== 0) {
+    writer.writeInt32(
       38,
       f
     );
   }
-  f = message.getVbankDate();
-  if (f !== 0) {
-    writer.writeInt32(
+  f = message.getStatus();
+  if (f.length > 0) {
+    writer.writeString(
       39,
       f
     );
   }
-  f = message.getVbankHolder();
+  f = message.getUserAgent();
   if (f.length > 0) {
     writer.writeString(
       40,
       f
     );
   }
+  f = message.getVbankCode();
+  if (f.length > 0) {
+    writer.writeString(
+      41,
+      f
+    );
+  }
+  f = message.getVbankDate();
+  if (f !== 0) {
+    writer.writeInt32(
+      42,
+      f
+    );
+  }
+  f = message.getVbankHolder();
+  if (f.length > 0) {
+    writer.writeString(
+      43,
+      f
+    );
+  }
   f = message.getVbankIssuedAt();
   if (f !== 0) {
     writer.writeInt32(
-      41,
+      44,
       f
     );
   }
   f = message.getVbankName();
   if (f.length > 0) {
     writer.writeString(
-      42,
+      45,
       f
     );
   }
   f = message.getVbankNum();
   if (f.length > 0) {
     writer.writeString(
-      43,
+      46,
       f
     );
   }
@@ -1532,28 +1568,28 @@ proto.payment.Payment.prototype.setCustomData = function(value) {
 
 
 /**
- * optional bool escrow = 24;
- * @return {boolean}
- */
-proto.payment.Payment.prototype.getEscrow = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 24, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.payment.Payment} returns this
- */
-proto.payment.Payment.prototype.setEscrow = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 24, value);
-};
-
-
-/**
- * optional string fail_reason = 25;
+ * optional string customer_uid = 24;
  * @return {string}
  */
-proto.payment.Payment.prototype.getFailReason = function() {
+proto.payment.Payment.prototype.getCustomerUid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 24, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.payment.Payment} returns this
+ */
+proto.payment.Payment.prototype.setCustomerUid = function(value) {
+  return jspb.Message.setProto3StringField(this, 24, value);
+};
+
+
+/**
+ * optional string customer_uid_usage = 25;
+ * @return {string}
+ */
+proto.payment.Payment.prototype.getCustomerUidUsage = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 25, ""));
 };
 
@@ -1562,34 +1598,34 @@ proto.payment.Payment.prototype.getFailReason = function() {
  * @param {string} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setFailReason = function(value) {
+proto.payment.Payment.prototype.setCustomerUidUsage = function(value) {
   return jspb.Message.setProto3StringField(this, 25, value);
 };
 
 
 /**
- * optional int32 failed_at = 26;
- * @return {number}
+ * optional bool escrow = 26;
+ * @return {boolean}
  */
-proto.payment.Payment.prototype.getFailedAt = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 26, 0));
+proto.payment.Payment.prototype.getEscrow = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 26, false));
 };
 
 
 /**
- * @param {number} value
+ * @param {boolean} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setFailedAt = function(value) {
-  return jspb.Message.setProto3IntField(this, 26, value);
+proto.payment.Payment.prototype.setEscrow = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 26, value);
 };
 
 
 /**
- * optional string imp_uid = 27;
+ * optional string fail_reason = 27;
  * @return {string}
  */
-proto.payment.Payment.prototype.getImpUid = function() {
+proto.payment.Payment.prototype.getFailReason = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 27, ""));
 };
 
@@ -1598,34 +1634,34 @@ proto.payment.Payment.prototype.getImpUid = function() {
  * @param {string} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setImpUid = function(value) {
+proto.payment.Payment.prototype.setFailReason = function(value) {
   return jspb.Message.setProto3StringField(this, 27, value);
 };
 
 
 /**
- * optional string merchant_uid = 28;
- * @return {string}
+ * optional int32 failed_at = 28;
+ * @return {number}
  */
-proto.payment.Payment.prototype.getMerchantUid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 28, ""));
+proto.payment.Payment.prototype.getFailedAt = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 28, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {number} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setMerchantUid = function(value) {
-  return jspb.Message.setProto3StringField(this, 28, value);
+proto.payment.Payment.prototype.setFailedAt = function(value) {
+  return jspb.Message.setProto3IntField(this, 28, value);
 };
 
 
 /**
- * optional string name = 29;
+ * optional string imp_uid = 29;
  * @return {string}
  */
-proto.payment.Payment.prototype.getName = function() {
+proto.payment.Payment.prototype.getImpUid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 29, ""));
 };
 
@@ -1634,34 +1670,34 @@ proto.payment.Payment.prototype.getName = function() {
  * @param {string} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setName = function(value) {
+proto.payment.Payment.prototype.setImpUid = function(value) {
   return jspb.Message.setProto3StringField(this, 29, value);
 };
 
 
 /**
- * optional int32 paid_at = 30;
- * @return {number}
- */
-proto.payment.Payment.prototype.getPaidAt = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 30, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.payment.Payment} returns this
- */
-proto.payment.Payment.prototype.setPaidAt = function(value) {
-  return jspb.Message.setProto3IntField(this, 30, value);
-};
-
-
-/**
- * optional string pay_method = 31;
+ * optional string merchant_uid = 30;
  * @return {string}
  */
-proto.payment.Payment.prototype.getPayMethod = function() {
+proto.payment.Payment.prototype.getMerchantUid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 30, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.payment.Payment} returns this
+ */
+proto.payment.Payment.prototype.setMerchantUid = function(value) {
+  return jspb.Message.setProto3StringField(this, 30, value);
+};
+
+
+/**
+ * optional string name = 31;
+ * @return {string}
+ */
+proto.payment.Payment.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 31, ""));
 };
 
@@ -1670,34 +1706,34 @@ proto.payment.Payment.prototype.getPayMethod = function() {
  * @param {string} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setPayMethod = function(value) {
+proto.payment.Payment.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 31, value);
 };
 
 
 /**
- * optional string pg_id = 32;
- * @return {string}
+ * optional int32 paid_at = 32;
+ * @return {number}
  */
-proto.payment.Payment.prototype.getPgId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 32, ""));
+proto.payment.Payment.prototype.getPaidAt = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 32, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {number} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setPgId = function(value) {
-  return jspb.Message.setProto3StringField(this, 32, value);
+proto.payment.Payment.prototype.setPaidAt = function(value) {
+  return jspb.Message.setProto3IntField(this, 32, value);
 };
 
 
 /**
- * optional string pg_provider = 33;
+ * optional string pay_method = 33;
  * @return {string}
  */
-proto.payment.Payment.prototype.getPgProvider = function() {
+proto.payment.Payment.prototype.getPayMethod = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 33, ""));
 };
 
@@ -1706,16 +1742,16 @@ proto.payment.Payment.prototype.getPgProvider = function() {
  * @param {string} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setPgProvider = function(value) {
+proto.payment.Payment.prototype.setPayMethod = function(value) {
   return jspb.Message.setProto3StringField(this, 33, value);
 };
 
 
 /**
- * optional string pg_tid = 34;
+ * optional string pg_id = 34;
  * @return {string}
  */
-proto.payment.Payment.prototype.getPgTid = function() {
+proto.payment.Payment.prototype.getPgId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 34, ""));
 };
 
@@ -1724,16 +1760,16 @@ proto.payment.Payment.prototype.getPgTid = function() {
  * @param {string} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setPgTid = function(value) {
+proto.payment.Payment.prototype.setPgId = function(value) {
   return jspb.Message.setProto3StringField(this, 34, value);
 };
 
 
 /**
- * optional string receipt_url = 35;
+ * optional string pg_provider = 35;
  * @return {string}
  */
-proto.payment.Payment.prototype.getReceiptUrl = function() {
+proto.payment.Payment.prototype.getPgProvider = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 35, ""));
 };
 
@@ -1742,16 +1778,16 @@ proto.payment.Payment.prototype.getReceiptUrl = function() {
  * @param {string} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setReceiptUrl = function(value) {
+proto.payment.Payment.prototype.setPgProvider = function(value) {
   return jspb.Message.setProto3StringField(this, 35, value);
 };
 
 
 /**
- * optional string status = 36;
+ * optional string pg_tid = 36;
  * @return {string}
  */
-proto.payment.Payment.prototype.getStatus = function() {
+proto.payment.Payment.prototype.getPgTid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 36, ""));
 };
 
@@ -1760,16 +1796,16 @@ proto.payment.Payment.prototype.getStatus = function() {
  * @param {string} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setStatus = function(value) {
+proto.payment.Payment.prototype.setPgTid = function(value) {
   return jspb.Message.setProto3StringField(this, 36, value);
 };
 
 
 /**
- * optional string user_agent = 37;
+ * optional string receipt_url = 37;
  * @return {string}
  */
-proto.payment.Payment.prototype.getUserAgent = function() {
+proto.payment.Payment.prototype.getReceiptUrl = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 37, ""));
 };
 
@@ -1778,35 +1814,17 @@ proto.payment.Payment.prototype.getUserAgent = function() {
  * @param {string} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setUserAgent = function(value) {
+proto.payment.Payment.prototype.setReceiptUrl = function(value) {
   return jspb.Message.setProto3StringField(this, 37, value);
 };
 
 
 /**
- * optional string vbank_code = 38;
- * @return {string}
- */
-proto.payment.Payment.prototype.getVbankCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 38, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.payment.Payment} returns this
- */
-proto.payment.Payment.prototype.setVbankCode = function(value) {
-  return jspb.Message.setProto3StringField(this, 38, value);
-};
-
-
-/**
- * optional int32 vbank_date = 39;
+ * optional int32 started_at = 38;
  * @return {number}
  */
-proto.payment.Payment.prototype.getVbankDate = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 39, 0));
+proto.payment.Payment.prototype.getStartedAt = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 38, 0));
 };
 
 
@@ -1814,16 +1832,34 @@ proto.payment.Payment.prototype.getVbankDate = function() {
  * @param {number} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setVbankDate = function(value) {
-  return jspb.Message.setProto3IntField(this, 39, value);
+proto.payment.Payment.prototype.setStartedAt = function(value) {
+  return jspb.Message.setProto3IntField(this, 38, value);
 };
 
 
 /**
- * optional string vbank_holder = 40;
+ * optional string status = 39;
  * @return {string}
  */
-proto.payment.Payment.prototype.getVbankHolder = function() {
+proto.payment.Payment.prototype.getStatus = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 39, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.payment.Payment} returns this
+ */
+proto.payment.Payment.prototype.setStatus = function(value) {
+  return jspb.Message.setProto3StringField(this, 39, value);
+};
+
+
+/**
+ * optional string user_agent = 40;
+ * @return {string}
+ */
+proto.payment.Payment.prototype.getUserAgent = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 40, ""));
 };
 
@@ -1832,35 +1868,17 @@ proto.payment.Payment.prototype.getVbankHolder = function() {
  * @param {string} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setVbankHolder = function(value) {
+proto.payment.Payment.prototype.setUserAgent = function(value) {
   return jspb.Message.setProto3StringField(this, 40, value);
 };
 
 
 /**
- * optional int32 vbank_issued_at = 41;
- * @return {number}
- */
-proto.payment.Payment.prototype.getVbankIssuedAt = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 41, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.payment.Payment} returns this
- */
-proto.payment.Payment.prototype.setVbankIssuedAt = function(value) {
-  return jspb.Message.setProto3IntField(this, 41, value);
-};
-
-
-/**
- * optional string vbank_name = 42;
+ * optional string vbank_code = 41;
  * @return {string}
  */
-proto.payment.Payment.prototype.getVbankName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 42, ""));
+proto.payment.Payment.prototype.getVbankCode = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 41, ""));
 };
 
 
@@ -1868,16 +1886,34 @@ proto.payment.Payment.prototype.getVbankName = function() {
  * @param {string} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setVbankName = function(value) {
-  return jspb.Message.setProto3StringField(this, 42, value);
+proto.payment.Payment.prototype.setVbankCode = function(value) {
+  return jspb.Message.setProto3StringField(this, 41, value);
 };
 
 
 /**
- * optional string vbank_num = 43;
+ * optional int32 vbank_date = 42;
+ * @return {number}
+ */
+proto.payment.Payment.prototype.getVbankDate = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 42, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.payment.Payment} returns this
+ */
+proto.payment.Payment.prototype.setVbankDate = function(value) {
+  return jspb.Message.setProto3IntField(this, 42, value);
+};
+
+
+/**
+ * optional string vbank_holder = 43;
  * @return {string}
  */
-proto.payment.Payment.prototype.getVbankNum = function() {
+proto.payment.Payment.prototype.getVbankHolder = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 43, ""));
 };
 
@@ -1886,8 +1922,62 @@ proto.payment.Payment.prototype.getVbankNum = function() {
  * @param {string} value
  * @return {!proto.payment.Payment} returns this
  */
-proto.payment.Payment.prototype.setVbankNum = function(value) {
+proto.payment.Payment.prototype.setVbankHolder = function(value) {
   return jspb.Message.setProto3StringField(this, 43, value);
+};
+
+
+/**
+ * optional int32 vbank_issued_at = 44;
+ * @return {number}
+ */
+proto.payment.Payment.prototype.getVbankIssuedAt = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 44, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.payment.Payment} returns this
+ */
+proto.payment.Payment.prototype.setVbankIssuedAt = function(value) {
+  return jspb.Message.setProto3IntField(this, 44, value);
+};
+
+
+/**
+ * optional string vbank_name = 45;
+ * @return {string}
+ */
+proto.payment.Payment.prototype.getVbankName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 45, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.payment.Payment} returns this
+ */
+proto.payment.Payment.prototype.setVbankName = function(value) {
+  return jspb.Message.setProto3StringField(this, 45, value);
+};
+
+
+/**
+ * optional string vbank_num = 46;
+ * @return {string}
+ */
+proto.payment.Payment.prototype.getVbankNum = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 46, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.payment.Payment} returns this
+ */
+proto.payment.Payment.prototype.setVbankNum = function(value) {
+  return jspb.Message.setProto3StringField(this, 46, value);
 };
 
 

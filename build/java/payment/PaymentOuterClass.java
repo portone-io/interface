@@ -284,210 +284,240 @@ public final class PaymentOuterClass {
         getCustomDataBytes();
 
     /**
-     * <code>bool escrow = 24;</code>
+     * <code>string customer_uid = 24;</code>
+     * @return The customerUid.
+     */
+    java.lang.String getCustomerUid();
+    /**
+     * <code>string customer_uid = 24;</code>
+     * @return The bytes for customerUid.
+     */
+    com.google.protobuf.ByteString
+        getCustomerUidBytes();
+
+    /**
+     * <code>string customer_uid_usage = 25;</code>
+     * @return The customerUidUsage.
+     */
+    java.lang.String getCustomerUidUsage();
+    /**
+     * <code>string customer_uid_usage = 25;</code>
+     * @return The bytes for customerUidUsage.
+     */
+    com.google.protobuf.ByteString
+        getCustomerUidUsageBytes();
+
+    /**
+     * <code>bool escrow = 26;</code>
      * @return The escrow.
      */
     boolean getEscrow();
 
     /**
-     * <code>string fail_reason = 25;</code>
+     * <code>string fail_reason = 27;</code>
      * @return The failReason.
      */
     java.lang.String getFailReason();
     /**
-     * <code>string fail_reason = 25;</code>
+     * <code>string fail_reason = 27;</code>
      * @return The bytes for failReason.
      */
     com.google.protobuf.ByteString
         getFailReasonBytes();
 
     /**
-     * <code>int32 failed_at = 26;</code>
+     * <code>int32 failed_at = 28;</code>
      * @return The failedAt.
      */
     int getFailedAt();
 
     /**
-     * <code>string imp_uid = 27;</code>
+     * <code>string imp_uid = 29;</code>
      * @return The impUid.
      */
     java.lang.String getImpUid();
     /**
-     * <code>string imp_uid = 27;</code>
+     * <code>string imp_uid = 29;</code>
      * @return The bytes for impUid.
      */
     com.google.protobuf.ByteString
         getImpUidBytes();
 
     /**
-     * <code>string merchant_uid = 28;</code>
+     * <code>string merchant_uid = 30;</code>
      * @return The merchantUid.
      */
     java.lang.String getMerchantUid();
     /**
-     * <code>string merchant_uid = 28;</code>
+     * <code>string merchant_uid = 30;</code>
      * @return The bytes for merchantUid.
      */
     com.google.protobuf.ByteString
         getMerchantUidBytes();
 
     /**
-     * <code>string name = 29;</code>
+     * <code>string name = 31;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 29;</code>
+     * <code>string name = 31;</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>int32 paid_at = 30;</code>
+     * <code>int32 paid_at = 32;</code>
      * @return The paidAt.
      */
     int getPaidAt();
 
     /**
-     * <code>string pay_method = 31;</code>
+     * <code>string pay_method = 33;</code>
      * @return The payMethod.
      */
     java.lang.String getPayMethod();
     /**
-     * <code>string pay_method = 31;</code>
+     * <code>string pay_method = 33;</code>
      * @return The bytes for payMethod.
      */
     com.google.protobuf.ByteString
         getPayMethodBytes();
 
     /**
-     * <code>string pg_id = 32;</code>
+     * <code>string pg_id = 34;</code>
      * @return The pgId.
      */
     java.lang.String getPgId();
     /**
-     * <code>string pg_id = 32;</code>
+     * <code>string pg_id = 34;</code>
      * @return The bytes for pgId.
      */
     com.google.protobuf.ByteString
         getPgIdBytes();
 
     /**
-     * <code>string pg_provider = 33;</code>
+     * <code>string pg_provider = 35;</code>
      * @return The pgProvider.
      */
     java.lang.String getPgProvider();
     /**
-     * <code>string pg_provider = 33;</code>
+     * <code>string pg_provider = 35;</code>
      * @return The bytes for pgProvider.
      */
     com.google.protobuf.ByteString
         getPgProviderBytes();
 
     /**
-     * <code>string pg_tid = 34;</code>
+     * <code>string pg_tid = 36;</code>
      * @return The pgTid.
      */
     java.lang.String getPgTid();
     /**
-     * <code>string pg_tid = 34;</code>
+     * <code>string pg_tid = 36;</code>
      * @return The bytes for pgTid.
      */
     com.google.protobuf.ByteString
         getPgTidBytes();
 
     /**
-     * <code>string receipt_url = 35;</code>
+     * <code>string receipt_url = 37;</code>
      * @return The receiptUrl.
      */
     java.lang.String getReceiptUrl();
     /**
-     * <code>string receipt_url = 35;</code>
+     * <code>string receipt_url = 37;</code>
      * @return The bytes for receiptUrl.
      */
     com.google.protobuf.ByteString
         getReceiptUrlBytes();
 
     /**
-     * <code>string status = 36;</code>
+     * <code>int32 started_at = 38;</code>
+     * @return The startedAt.
+     */
+    int getStartedAt();
+
+    /**
+     * <code>string status = 39;</code>
      * @return The status.
      */
     java.lang.String getStatus();
     /**
-     * <code>string status = 36;</code>
+     * <code>string status = 39;</code>
      * @return The bytes for status.
      */
     com.google.protobuf.ByteString
         getStatusBytes();
 
     /**
-     * <code>string user_agent = 37;</code>
+     * <code>string user_agent = 40;</code>
      * @return The userAgent.
      */
     java.lang.String getUserAgent();
     /**
-     * <code>string user_agent = 37;</code>
+     * <code>string user_agent = 40;</code>
      * @return The bytes for userAgent.
      */
     com.google.protobuf.ByteString
         getUserAgentBytes();
 
     /**
-     * <code>string vbank_code = 38;</code>
+     * <code>string vbank_code = 41;</code>
      * @return The vbankCode.
      */
     java.lang.String getVbankCode();
     /**
-     * <code>string vbank_code = 38;</code>
+     * <code>string vbank_code = 41;</code>
      * @return The bytes for vbankCode.
      */
     com.google.protobuf.ByteString
         getVbankCodeBytes();
 
     /**
-     * <code>int32 vbank_date = 39;</code>
+     * <code>int32 vbank_date = 42;</code>
      * @return The vbankDate.
      */
     int getVbankDate();
 
     /**
-     * <code>string vbank_holder = 40;</code>
+     * <code>string vbank_holder = 43;</code>
      * @return The vbankHolder.
      */
     java.lang.String getVbankHolder();
     /**
-     * <code>string vbank_holder = 40;</code>
+     * <code>string vbank_holder = 43;</code>
      * @return The bytes for vbankHolder.
      */
     com.google.protobuf.ByteString
         getVbankHolderBytes();
 
     /**
-     * <code>int32 vbank_issued_at = 41;</code>
+     * <code>int32 vbank_issued_at = 44;</code>
      * @return The vbankIssuedAt.
      */
     int getVbankIssuedAt();
 
     /**
-     * <code>string vbank_name = 42;</code>
+     * <code>string vbank_name = 45;</code>
      * @return The vbankName.
      */
     java.lang.String getVbankName();
     /**
-     * <code>string vbank_name = 42;</code>
+     * <code>string vbank_name = 45;</code>
      * @return The bytes for vbankName.
      */
     com.google.protobuf.ByteString
         getVbankNameBytes();
 
     /**
-     * <code>string vbank_num = 43;</code>
+     * <code>string vbank_num = 46;</code>
      * @return The vbankNum.
      */
     java.lang.String getVbankNum();
     /**
-     * <code>string vbank_num = 43;</code>
+     * <code>string vbank_num = 46;</code>
      * @return The bytes for vbankNum.
      */
     com.google.protobuf.ByteString
@@ -523,6 +553,8 @@ public final class PaymentOuterClass {
       channel_ = "";
       currency_ = "";
       customData_ = "";
+      customerUid_ = "";
+      customerUidUsage_ = "";
       failReason_ = "";
       impUid_ = "";
       merchantUid_ = "";
@@ -709,116 +741,133 @@ public final class PaymentOuterClass {
               customData_ = s;
               break;
             }
-            case 192: {
+            case 194: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              escrow_ = input.readBool();
+              customerUid_ = s;
               break;
             }
             case 202: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              failReason_ = s;
+              customerUidUsage_ = s;
               break;
             }
             case 208: {
 
-              failedAt_ = input.readInt32();
+              escrow_ = input.readBool();
               break;
             }
             case 218: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              impUid_ = s;
+              failReason_ = s;
               break;
             }
-            case 226: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 224: {
 
-              merchantUid_ = s;
+              failedAt_ = input.readInt32();
               break;
             }
             case 234: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              name_ = s;
+              impUid_ = s;
               break;
             }
-            case 240: {
+            case 242: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              paidAt_ = input.readInt32();
+              merchantUid_ = s;
               break;
             }
             case 250: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              payMethod_ = s;
+              name_ = s;
               break;
             }
-            case 258: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 256: {
 
-              pgId_ = s;
+              paidAt_ = input.readInt32();
               break;
             }
             case 266: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              pgProvider_ = s;
+              payMethod_ = s;
               break;
             }
             case 274: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              pgTid_ = s;
+              pgId_ = s;
               break;
             }
             case 282: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              receiptUrl_ = s;
+              pgProvider_ = s;
               break;
             }
             case 290: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              status_ = s;
+              pgTid_ = s;
               break;
             }
             case 298: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              userAgent_ = s;
+              receiptUrl_ = s;
               break;
             }
-            case 306: {
+            case 304: {
+
+              startedAt_ = input.readInt32();
+              break;
+            }
+            case 314: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              vbankCode_ = s;
-              break;
-            }
-            case 312: {
-
-              vbankDate_ = input.readInt32();
+              status_ = s;
               break;
             }
             case 322: {
               java.lang.String s = input.readStringRequireUtf8();
 
+              userAgent_ = s;
+              break;
+            }
+            case 330: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              vbankCode_ = s;
+              break;
+            }
+            case 336: {
+
+              vbankDate_ = input.readInt32();
+              break;
+            }
+            case 346: {
+              java.lang.String s = input.readStringRequireUtf8();
+
               vbankHolder_ = s;
               break;
             }
-            case 328: {
+            case 352: {
 
               vbankIssuedAt_ = input.readInt32();
               break;
             }
-            case 338: {
+            case 362: {
               java.lang.String s = input.readStringRequireUtf8();
 
               vbankName_ = s;
               break;
             }
-            case 346: {
+            case 370: {
               java.lang.String s = input.readStringRequireUtf8();
 
               vbankNum_ = s;
@@ -1573,10 +1622,86 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int ESCROW_FIELD_NUMBER = 24;
+    public static final int CUSTOMER_UID_FIELD_NUMBER = 24;
+    private volatile java.lang.Object customerUid_;
+    /**
+     * <code>string customer_uid = 24;</code>
+     * @return The customerUid.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomerUid() {
+      java.lang.Object ref = customerUid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customerUid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string customer_uid = 24;</code>
+     * @return The bytes for customerUid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCustomerUidBytes() {
+      java.lang.Object ref = customerUid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customerUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CUSTOMER_UID_USAGE_FIELD_NUMBER = 25;
+    private volatile java.lang.Object customerUidUsage_;
+    /**
+     * <code>string customer_uid_usage = 25;</code>
+     * @return The customerUidUsage.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomerUidUsage() {
+      java.lang.Object ref = customerUidUsage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customerUidUsage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string customer_uid_usage = 25;</code>
+     * @return The bytes for customerUidUsage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCustomerUidUsageBytes() {
+      java.lang.Object ref = customerUidUsage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customerUidUsage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ESCROW_FIELD_NUMBER = 26;
     private boolean escrow_;
     /**
-     * <code>bool escrow = 24;</code>
+     * <code>bool escrow = 26;</code>
      * @return The escrow.
      */
     @java.lang.Override
@@ -1584,10 +1709,10 @@ public final class PaymentOuterClass {
       return escrow_;
     }
 
-    public static final int FAIL_REASON_FIELD_NUMBER = 25;
+    public static final int FAIL_REASON_FIELD_NUMBER = 27;
     private volatile java.lang.Object failReason_;
     /**
-     * <code>string fail_reason = 25;</code>
+     * <code>string fail_reason = 27;</code>
      * @return The failReason.
      */
     @java.lang.Override
@@ -1604,7 +1729,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string fail_reason = 25;</code>
+     * <code>string fail_reason = 27;</code>
      * @return The bytes for failReason.
      */
     @java.lang.Override
@@ -1622,10 +1747,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int FAILED_AT_FIELD_NUMBER = 26;
+    public static final int FAILED_AT_FIELD_NUMBER = 28;
     private int failedAt_;
     /**
-     * <code>int32 failed_at = 26;</code>
+     * <code>int32 failed_at = 28;</code>
      * @return The failedAt.
      */
     @java.lang.Override
@@ -1633,10 +1758,10 @@ public final class PaymentOuterClass {
       return failedAt_;
     }
 
-    public static final int IMP_UID_FIELD_NUMBER = 27;
+    public static final int IMP_UID_FIELD_NUMBER = 29;
     private volatile java.lang.Object impUid_;
     /**
-     * <code>string imp_uid = 27;</code>
+     * <code>string imp_uid = 29;</code>
      * @return The impUid.
      */
     @java.lang.Override
@@ -1653,7 +1778,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string imp_uid = 27;</code>
+     * <code>string imp_uid = 29;</code>
      * @return The bytes for impUid.
      */
     @java.lang.Override
@@ -1671,10 +1796,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int MERCHANT_UID_FIELD_NUMBER = 28;
+    public static final int MERCHANT_UID_FIELD_NUMBER = 30;
     private volatile java.lang.Object merchantUid_;
     /**
-     * <code>string merchant_uid = 28;</code>
+     * <code>string merchant_uid = 30;</code>
      * @return The merchantUid.
      */
     @java.lang.Override
@@ -1691,7 +1816,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string merchant_uid = 28;</code>
+     * <code>string merchant_uid = 30;</code>
      * @return The bytes for merchantUid.
      */
     @java.lang.Override
@@ -1709,10 +1834,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int NAME_FIELD_NUMBER = 29;
+    public static final int NAME_FIELD_NUMBER = 31;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 29;</code>
+     * <code>string name = 31;</code>
      * @return The name.
      */
     @java.lang.Override
@@ -1729,7 +1854,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string name = 29;</code>
+     * <code>string name = 31;</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -1747,10 +1872,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int PAID_AT_FIELD_NUMBER = 30;
+    public static final int PAID_AT_FIELD_NUMBER = 32;
     private int paidAt_;
     /**
-     * <code>int32 paid_at = 30;</code>
+     * <code>int32 paid_at = 32;</code>
      * @return The paidAt.
      */
     @java.lang.Override
@@ -1758,10 +1883,10 @@ public final class PaymentOuterClass {
       return paidAt_;
     }
 
-    public static final int PAY_METHOD_FIELD_NUMBER = 31;
+    public static final int PAY_METHOD_FIELD_NUMBER = 33;
     private volatile java.lang.Object payMethod_;
     /**
-     * <code>string pay_method = 31;</code>
+     * <code>string pay_method = 33;</code>
      * @return The payMethod.
      */
     @java.lang.Override
@@ -1778,7 +1903,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string pay_method = 31;</code>
+     * <code>string pay_method = 33;</code>
      * @return The bytes for payMethod.
      */
     @java.lang.Override
@@ -1796,10 +1921,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int PG_ID_FIELD_NUMBER = 32;
+    public static final int PG_ID_FIELD_NUMBER = 34;
     private volatile java.lang.Object pgId_;
     /**
-     * <code>string pg_id = 32;</code>
+     * <code>string pg_id = 34;</code>
      * @return The pgId.
      */
     @java.lang.Override
@@ -1816,7 +1941,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string pg_id = 32;</code>
+     * <code>string pg_id = 34;</code>
      * @return The bytes for pgId.
      */
     @java.lang.Override
@@ -1834,10 +1959,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int PG_PROVIDER_FIELD_NUMBER = 33;
+    public static final int PG_PROVIDER_FIELD_NUMBER = 35;
     private volatile java.lang.Object pgProvider_;
     /**
-     * <code>string pg_provider = 33;</code>
+     * <code>string pg_provider = 35;</code>
      * @return The pgProvider.
      */
     @java.lang.Override
@@ -1854,7 +1979,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string pg_provider = 33;</code>
+     * <code>string pg_provider = 35;</code>
      * @return The bytes for pgProvider.
      */
     @java.lang.Override
@@ -1872,10 +1997,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int PG_TID_FIELD_NUMBER = 34;
+    public static final int PG_TID_FIELD_NUMBER = 36;
     private volatile java.lang.Object pgTid_;
     /**
-     * <code>string pg_tid = 34;</code>
+     * <code>string pg_tid = 36;</code>
      * @return The pgTid.
      */
     @java.lang.Override
@@ -1892,7 +2017,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string pg_tid = 34;</code>
+     * <code>string pg_tid = 36;</code>
      * @return The bytes for pgTid.
      */
     @java.lang.Override
@@ -1910,10 +2035,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int RECEIPT_URL_FIELD_NUMBER = 35;
+    public static final int RECEIPT_URL_FIELD_NUMBER = 37;
     private volatile java.lang.Object receiptUrl_;
     /**
-     * <code>string receipt_url = 35;</code>
+     * <code>string receipt_url = 37;</code>
      * @return The receiptUrl.
      */
     @java.lang.Override
@@ -1930,7 +2055,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string receipt_url = 35;</code>
+     * <code>string receipt_url = 37;</code>
      * @return The bytes for receiptUrl.
      */
     @java.lang.Override
@@ -1948,10 +2073,21 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int STATUS_FIELD_NUMBER = 36;
+    public static final int STARTED_AT_FIELD_NUMBER = 38;
+    private int startedAt_;
+    /**
+     * <code>int32 started_at = 38;</code>
+     * @return The startedAt.
+     */
+    @java.lang.Override
+    public int getStartedAt() {
+      return startedAt_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 39;
     private volatile java.lang.Object status_;
     /**
-     * <code>string status = 36;</code>
+     * <code>string status = 39;</code>
      * @return The status.
      */
     @java.lang.Override
@@ -1968,7 +2104,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string status = 36;</code>
+     * <code>string status = 39;</code>
      * @return The bytes for status.
      */
     @java.lang.Override
@@ -1986,10 +2122,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int USER_AGENT_FIELD_NUMBER = 37;
+    public static final int USER_AGENT_FIELD_NUMBER = 40;
     private volatile java.lang.Object userAgent_;
     /**
-     * <code>string user_agent = 37;</code>
+     * <code>string user_agent = 40;</code>
      * @return The userAgent.
      */
     @java.lang.Override
@@ -2006,7 +2142,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string user_agent = 37;</code>
+     * <code>string user_agent = 40;</code>
      * @return The bytes for userAgent.
      */
     @java.lang.Override
@@ -2024,10 +2160,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int VBANK_CODE_FIELD_NUMBER = 38;
+    public static final int VBANK_CODE_FIELD_NUMBER = 41;
     private volatile java.lang.Object vbankCode_;
     /**
-     * <code>string vbank_code = 38;</code>
+     * <code>string vbank_code = 41;</code>
      * @return The vbankCode.
      */
     @java.lang.Override
@@ -2044,7 +2180,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string vbank_code = 38;</code>
+     * <code>string vbank_code = 41;</code>
      * @return The bytes for vbankCode.
      */
     @java.lang.Override
@@ -2062,10 +2198,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int VBANK_DATE_FIELD_NUMBER = 39;
+    public static final int VBANK_DATE_FIELD_NUMBER = 42;
     private int vbankDate_;
     /**
-     * <code>int32 vbank_date = 39;</code>
+     * <code>int32 vbank_date = 42;</code>
      * @return The vbankDate.
      */
     @java.lang.Override
@@ -2073,10 +2209,10 @@ public final class PaymentOuterClass {
       return vbankDate_;
     }
 
-    public static final int VBANK_HOLDER_FIELD_NUMBER = 40;
+    public static final int VBANK_HOLDER_FIELD_NUMBER = 43;
     private volatile java.lang.Object vbankHolder_;
     /**
-     * <code>string vbank_holder = 40;</code>
+     * <code>string vbank_holder = 43;</code>
      * @return The vbankHolder.
      */
     @java.lang.Override
@@ -2093,7 +2229,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string vbank_holder = 40;</code>
+     * <code>string vbank_holder = 43;</code>
      * @return The bytes for vbankHolder.
      */
     @java.lang.Override
@@ -2111,10 +2247,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int VBANK_ISSUED_AT_FIELD_NUMBER = 41;
+    public static final int VBANK_ISSUED_AT_FIELD_NUMBER = 44;
     private int vbankIssuedAt_;
     /**
-     * <code>int32 vbank_issued_at = 41;</code>
+     * <code>int32 vbank_issued_at = 44;</code>
      * @return The vbankIssuedAt.
      */
     @java.lang.Override
@@ -2122,10 +2258,10 @@ public final class PaymentOuterClass {
       return vbankIssuedAt_;
     }
 
-    public static final int VBANK_NAME_FIELD_NUMBER = 42;
+    public static final int VBANK_NAME_FIELD_NUMBER = 45;
     private volatile java.lang.Object vbankName_;
     /**
-     * <code>string vbank_name = 42;</code>
+     * <code>string vbank_name = 45;</code>
      * @return The vbankName.
      */
     @java.lang.Override
@@ -2142,7 +2278,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string vbank_name = 42;</code>
+     * <code>string vbank_name = 45;</code>
      * @return The bytes for vbankName.
      */
     @java.lang.Override
@@ -2160,10 +2296,10 @@ public final class PaymentOuterClass {
       }
     }
 
-    public static final int VBANK_NUM_FIELD_NUMBER = 43;
+    public static final int VBANK_NUM_FIELD_NUMBER = 46;
     private volatile java.lang.Object vbankNum_;
     /**
-     * <code>string vbank_num = 43;</code>
+     * <code>string vbank_num = 46;</code>
      * @return The vbankNum.
      */
     @java.lang.Override
@@ -2180,7 +2316,7 @@ public final class PaymentOuterClass {
       }
     }
     /**
-     * <code>string vbank_num = 43;</code>
+     * <code>string vbank_num = 46;</code>
      * @return The bytes for vbankNum.
      */
     @java.lang.Override
@@ -2281,65 +2417,74 @@ public final class PaymentOuterClass {
       if (!getCustomDataBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 23, customData_);
       }
+      if (!getCustomerUidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 24, customerUid_);
+      }
+      if (!getCustomerUidUsageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, customerUidUsage_);
+      }
       if (escrow_ != false) {
-        output.writeBool(24, escrow_);
+        output.writeBool(26, escrow_);
       }
       if (!getFailReasonBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, failReason_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, failReason_);
       }
       if (failedAt_ != 0) {
-        output.writeInt32(26, failedAt_);
+        output.writeInt32(28, failedAt_);
       }
       if (!getImpUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, impUid_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 29, impUid_);
       }
       if (!getMerchantUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 28, merchantUid_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 30, merchantUid_);
       }
       if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 29, name_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 31, name_);
       }
       if (paidAt_ != 0) {
-        output.writeInt32(30, paidAt_);
+        output.writeInt32(32, paidAt_);
       }
       if (!getPayMethodBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 31, payMethod_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 33, payMethod_);
       }
       if (!getPgIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 32, pgId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 34, pgId_);
       }
       if (!getPgProviderBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 33, pgProvider_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 35, pgProvider_);
       }
       if (!getPgTidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 34, pgTid_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 36, pgTid_);
       }
       if (!getReceiptUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 35, receiptUrl_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 37, receiptUrl_);
+      }
+      if (startedAt_ != 0) {
+        output.writeInt32(38, startedAt_);
       }
       if (!getStatusBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 36, status_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 39, status_);
       }
       if (!getUserAgentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 37, userAgent_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 40, userAgent_);
       }
       if (!getVbankCodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 38, vbankCode_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 41, vbankCode_);
       }
       if (vbankDate_ != 0) {
-        output.writeInt32(39, vbankDate_);
+        output.writeInt32(42, vbankDate_);
       }
       if (!getVbankHolderBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 40, vbankHolder_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 43, vbankHolder_);
       }
       if (vbankIssuedAt_ != 0) {
-        output.writeInt32(41, vbankIssuedAt_);
+        output.writeInt32(44, vbankIssuedAt_);
       }
       if (!getVbankNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 42, vbankName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 45, vbankName_);
       }
       if (!getVbankNumBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 43, vbankNum_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 46, vbankNum_);
       }
       unknownFields.writeTo(output);
     }
@@ -2431,70 +2576,80 @@ public final class PaymentOuterClass {
       if (!getCustomDataBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, customData_);
       }
+      if (!getCustomerUidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, customerUid_);
+      }
+      if (!getCustomerUidUsageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, customerUidUsage_);
+      }
       if (escrow_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(24, escrow_);
+          .computeBoolSize(26, escrow_);
       }
       if (!getFailReasonBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, failReason_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, failReason_);
       }
       if (failedAt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(26, failedAt_);
+          .computeInt32Size(28, failedAt_);
       }
       if (!getImpUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, impUid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(29, impUid_);
       }
       if (!getMerchantUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(28, merchantUid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, merchantUid_);
       }
       if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(29, name_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, name_);
       }
       if (paidAt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(30, paidAt_);
+          .computeInt32Size(32, paidAt_);
       }
       if (!getPayMethodBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, payMethod_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, payMethod_);
       }
       if (!getPgIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, pgId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, pgId_);
       }
       if (!getPgProviderBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, pgProvider_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, pgProvider_);
       }
       if (!getPgTidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, pgTid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, pgTid_);
       }
       if (!getReceiptUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, receiptUrl_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, receiptUrl_);
+      }
+      if (startedAt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(38, startedAt_);
       }
       if (!getStatusBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, status_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(39, status_);
       }
       if (!getUserAgentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, userAgent_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, userAgent_);
       }
       if (!getVbankCodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(38, vbankCode_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(41, vbankCode_);
       }
       if (vbankDate_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(39, vbankDate_);
+          .computeInt32Size(42, vbankDate_);
       }
       if (!getVbankHolderBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, vbankHolder_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(43, vbankHolder_);
       }
       if (vbankIssuedAt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(41, vbankIssuedAt_);
+          .computeInt32Size(44, vbankIssuedAt_);
       }
       if (!getVbankNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(42, vbankName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(45, vbankName_);
       }
       if (!getVbankNumBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(43, vbankNum_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(46, vbankNum_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2557,6 +2712,10 @@ public final class PaymentOuterClass {
           .equals(other.getCurrency())) return false;
       if (!getCustomData()
           .equals(other.getCustomData())) return false;
+      if (!getCustomerUid()
+          .equals(other.getCustomerUid())) return false;
+      if (!getCustomerUidUsage()
+          .equals(other.getCustomerUidUsage())) return false;
       if (getEscrow()
           != other.getEscrow()) return false;
       if (!getFailReason()
@@ -2581,6 +2740,8 @@ public final class PaymentOuterClass {
           .equals(other.getPgTid())) return false;
       if (!getReceiptUrl()
           .equals(other.getReceiptUrl())) return false;
+      if (getStartedAt()
+          != other.getStartedAt()) return false;
       if (!getStatus()
           .equals(other.getStatus())) return false;
       if (!getUserAgent()
@@ -2659,6 +2820,10 @@ public final class PaymentOuterClass {
       hash = (53 * hash) + getCurrency().hashCode();
       hash = (37 * hash) + CUSTOM_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getCustomData().hashCode();
+      hash = (37 * hash) + CUSTOMER_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerUid().hashCode();
+      hash = (37 * hash) + CUSTOMER_UID_USAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerUidUsage().hashCode();
       hash = (37 * hash) + ESCROW_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEscrow());
@@ -2684,6 +2849,8 @@ public final class PaymentOuterClass {
       hash = (53 * hash) + getPgTid().hashCode();
       hash = (37 * hash) + RECEIPT_URL_FIELD_NUMBER;
       hash = (53 * hash) + getReceiptUrl().hashCode();
+      hash = (37 * hash) + STARTED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getStartedAt();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + getStatus().hashCode();
       hash = (37 * hash) + USER_AGENT_FIELD_NUMBER;
@@ -2884,6 +3051,10 @@ public final class PaymentOuterClass {
 
         customData_ = "";
 
+        customerUid_ = "";
+
+        customerUidUsage_ = "";
+
         escrow_ = false;
 
         failReason_ = "";
@@ -2907,6 +3078,8 @@ public final class PaymentOuterClass {
         pgTid_ = "";
 
         receiptUrl_ = "";
+
+        startedAt_ = 0;
 
         status_ = "";
 
@@ -2986,6 +3159,8 @@ public final class PaymentOuterClass {
         result.channel_ = channel_;
         result.currency_ = currency_;
         result.customData_ = customData_;
+        result.customerUid_ = customerUid_;
+        result.customerUidUsage_ = customerUidUsage_;
         result.escrow_ = escrow_;
         result.failReason_ = failReason_;
         result.failedAt_ = failedAt_;
@@ -2998,6 +3173,7 @@ public final class PaymentOuterClass {
         result.pgProvider_ = pgProvider_;
         result.pgTid_ = pgTid_;
         result.receiptUrl_ = receiptUrl_;
+        result.startedAt_ = startedAt_;
         result.status_ = status_;
         result.userAgent_ = userAgent_;
         result.vbankCode_ = vbankCode_;
@@ -3168,6 +3344,14 @@ public final class PaymentOuterClass {
           customData_ = other.customData_;
           onChanged();
         }
+        if (!other.getCustomerUid().isEmpty()) {
+          customerUid_ = other.customerUid_;
+          onChanged();
+        }
+        if (!other.getCustomerUidUsage().isEmpty()) {
+          customerUidUsage_ = other.customerUidUsage_;
+          onChanged();
+        }
         if (other.getEscrow() != false) {
           setEscrow(other.getEscrow());
         }
@@ -3212,6 +3396,9 @@ public final class PaymentOuterClass {
         if (!other.getReceiptUrl().isEmpty()) {
           receiptUrl_ = other.receiptUrl_;
           onChanged();
+        }
+        if (other.getStartedAt() != 0) {
+          setStartedAt(other.getStartedAt());
         }
         if (!other.getStatus().isEmpty()) {
           status_ = other.status_;
@@ -4949,9 +5136,161 @@ public final class PaymentOuterClass {
         return this;
       }
 
+      private java.lang.Object customerUid_ = "";
+      /**
+       * <code>string customer_uid = 24;</code>
+       * @return The customerUid.
+       */
+      public java.lang.String getCustomerUid() {
+        java.lang.Object ref = customerUid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          customerUid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string customer_uid = 24;</code>
+       * @return The bytes for customerUid.
+       */
+      public com.google.protobuf.ByteString
+          getCustomerUidBytes() {
+        java.lang.Object ref = customerUid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          customerUid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string customer_uid = 24;</code>
+       * @param value The customerUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerUid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        customerUid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string customer_uid = 24;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomerUid() {
+        
+        customerUid_ = getDefaultInstance().getCustomerUid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string customer_uid = 24;</code>
+       * @param value The bytes for customerUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        customerUid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object customerUidUsage_ = "";
+      /**
+       * <code>string customer_uid_usage = 25;</code>
+       * @return The customerUidUsage.
+       */
+      public java.lang.String getCustomerUidUsage() {
+        java.lang.Object ref = customerUidUsage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          customerUidUsage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string customer_uid_usage = 25;</code>
+       * @return The bytes for customerUidUsage.
+       */
+      public com.google.protobuf.ByteString
+          getCustomerUidUsageBytes() {
+        java.lang.Object ref = customerUidUsage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          customerUidUsage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string customer_uid_usage = 25;</code>
+       * @param value The customerUidUsage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerUidUsage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        customerUidUsage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string customer_uid_usage = 25;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomerUidUsage() {
+        
+        customerUidUsage_ = getDefaultInstance().getCustomerUidUsage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string customer_uid_usage = 25;</code>
+       * @param value The bytes for customerUidUsage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerUidUsageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        customerUidUsage_ = value;
+        onChanged();
+        return this;
+      }
+
       private boolean escrow_ ;
       /**
-       * <code>bool escrow = 24;</code>
+       * <code>bool escrow = 26;</code>
        * @return The escrow.
        */
       @java.lang.Override
@@ -4959,7 +5298,7 @@ public final class PaymentOuterClass {
         return escrow_;
       }
       /**
-       * <code>bool escrow = 24;</code>
+       * <code>bool escrow = 26;</code>
        * @param value The escrow to set.
        * @return This builder for chaining.
        */
@@ -4970,7 +5309,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>bool escrow = 24;</code>
+       * <code>bool escrow = 26;</code>
        * @return This builder for chaining.
        */
       public Builder clearEscrow() {
@@ -4982,7 +5321,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object failReason_ = "";
       /**
-       * <code>string fail_reason = 25;</code>
+       * <code>string fail_reason = 27;</code>
        * @return The failReason.
        */
       public java.lang.String getFailReason() {
@@ -4998,7 +5337,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string fail_reason = 25;</code>
+       * <code>string fail_reason = 27;</code>
        * @return The bytes for failReason.
        */
       public com.google.protobuf.ByteString
@@ -5015,7 +5354,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string fail_reason = 25;</code>
+       * <code>string fail_reason = 27;</code>
        * @param value The failReason to set.
        * @return This builder for chaining.
        */
@@ -5030,7 +5369,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string fail_reason = 25;</code>
+       * <code>string fail_reason = 27;</code>
        * @return This builder for chaining.
        */
       public Builder clearFailReason() {
@@ -5040,7 +5379,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string fail_reason = 25;</code>
+       * <code>string fail_reason = 27;</code>
        * @param value The bytes for failReason to set.
        * @return This builder for chaining.
        */
@@ -5058,7 +5397,7 @@ public final class PaymentOuterClass {
 
       private int failedAt_ ;
       /**
-       * <code>int32 failed_at = 26;</code>
+       * <code>int32 failed_at = 28;</code>
        * @return The failedAt.
        */
       @java.lang.Override
@@ -5066,7 +5405,7 @@ public final class PaymentOuterClass {
         return failedAt_;
       }
       /**
-       * <code>int32 failed_at = 26;</code>
+       * <code>int32 failed_at = 28;</code>
        * @param value The failedAt to set.
        * @return This builder for chaining.
        */
@@ -5077,7 +5416,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>int32 failed_at = 26;</code>
+       * <code>int32 failed_at = 28;</code>
        * @return This builder for chaining.
        */
       public Builder clearFailedAt() {
@@ -5089,7 +5428,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object impUid_ = "";
       /**
-       * <code>string imp_uid = 27;</code>
+       * <code>string imp_uid = 29;</code>
        * @return The impUid.
        */
       public java.lang.String getImpUid() {
@@ -5105,7 +5444,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string imp_uid = 27;</code>
+       * <code>string imp_uid = 29;</code>
        * @return The bytes for impUid.
        */
       public com.google.protobuf.ByteString
@@ -5122,7 +5461,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string imp_uid = 27;</code>
+       * <code>string imp_uid = 29;</code>
        * @param value The impUid to set.
        * @return This builder for chaining.
        */
@@ -5137,7 +5476,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string imp_uid = 27;</code>
+       * <code>string imp_uid = 29;</code>
        * @return This builder for chaining.
        */
       public Builder clearImpUid() {
@@ -5147,7 +5486,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string imp_uid = 27;</code>
+       * <code>string imp_uid = 29;</code>
        * @param value The bytes for impUid to set.
        * @return This builder for chaining.
        */
@@ -5165,7 +5504,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object merchantUid_ = "";
       /**
-       * <code>string merchant_uid = 28;</code>
+       * <code>string merchant_uid = 30;</code>
        * @return The merchantUid.
        */
       public java.lang.String getMerchantUid() {
@@ -5181,7 +5520,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string merchant_uid = 28;</code>
+       * <code>string merchant_uid = 30;</code>
        * @return The bytes for merchantUid.
        */
       public com.google.protobuf.ByteString
@@ -5198,7 +5537,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string merchant_uid = 28;</code>
+       * <code>string merchant_uid = 30;</code>
        * @param value The merchantUid to set.
        * @return This builder for chaining.
        */
@@ -5213,7 +5552,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string merchant_uid = 28;</code>
+       * <code>string merchant_uid = 30;</code>
        * @return This builder for chaining.
        */
       public Builder clearMerchantUid() {
@@ -5223,7 +5562,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string merchant_uid = 28;</code>
+       * <code>string merchant_uid = 30;</code>
        * @param value The bytes for merchantUid to set.
        * @return This builder for chaining.
        */
@@ -5241,7 +5580,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 29;</code>
+       * <code>string name = 31;</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -5257,7 +5596,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string name = 29;</code>
+       * <code>string name = 31;</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -5274,7 +5613,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string name = 29;</code>
+       * <code>string name = 31;</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -5289,7 +5628,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string name = 29;</code>
+       * <code>string name = 31;</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -5299,7 +5638,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string name = 29;</code>
+       * <code>string name = 31;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -5317,7 +5656,7 @@ public final class PaymentOuterClass {
 
       private int paidAt_ ;
       /**
-       * <code>int32 paid_at = 30;</code>
+       * <code>int32 paid_at = 32;</code>
        * @return The paidAt.
        */
       @java.lang.Override
@@ -5325,7 +5664,7 @@ public final class PaymentOuterClass {
         return paidAt_;
       }
       /**
-       * <code>int32 paid_at = 30;</code>
+       * <code>int32 paid_at = 32;</code>
        * @param value The paidAt to set.
        * @return This builder for chaining.
        */
@@ -5336,7 +5675,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>int32 paid_at = 30;</code>
+       * <code>int32 paid_at = 32;</code>
        * @return This builder for chaining.
        */
       public Builder clearPaidAt() {
@@ -5348,7 +5687,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object payMethod_ = "";
       /**
-       * <code>string pay_method = 31;</code>
+       * <code>string pay_method = 33;</code>
        * @return The payMethod.
        */
       public java.lang.String getPayMethod() {
@@ -5364,7 +5703,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string pay_method = 31;</code>
+       * <code>string pay_method = 33;</code>
        * @return The bytes for payMethod.
        */
       public com.google.protobuf.ByteString
@@ -5381,7 +5720,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string pay_method = 31;</code>
+       * <code>string pay_method = 33;</code>
        * @param value The payMethod to set.
        * @return This builder for chaining.
        */
@@ -5396,7 +5735,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string pay_method = 31;</code>
+       * <code>string pay_method = 33;</code>
        * @return This builder for chaining.
        */
       public Builder clearPayMethod() {
@@ -5406,7 +5745,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string pay_method = 31;</code>
+       * <code>string pay_method = 33;</code>
        * @param value The bytes for payMethod to set.
        * @return This builder for chaining.
        */
@@ -5424,7 +5763,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object pgId_ = "";
       /**
-       * <code>string pg_id = 32;</code>
+       * <code>string pg_id = 34;</code>
        * @return The pgId.
        */
       public java.lang.String getPgId() {
@@ -5440,7 +5779,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string pg_id = 32;</code>
+       * <code>string pg_id = 34;</code>
        * @return The bytes for pgId.
        */
       public com.google.protobuf.ByteString
@@ -5457,7 +5796,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string pg_id = 32;</code>
+       * <code>string pg_id = 34;</code>
        * @param value The pgId to set.
        * @return This builder for chaining.
        */
@@ -5472,7 +5811,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string pg_id = 32;</code>
+       * <code>string pg_id = 34;</code>
        * @return This builder for chaining.
        */
       public Builder clearPgId() {
@@ -5482,7 +5821,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string pg_id = 32;</code>
+       * <code>string pg_id = 34;</code>
        * @param value The bytes for pgId to set.
        * @return This builder for chaining.
        */
@@ -5500,7 +5839,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object pgProvider_ = "";
       /**
-       * <code>string pg_provider = 33;</code>
+       * <code>string pg_provider = 35;</code>
        * @return The pgProvider.
        */
       public java.lang.String getPgProvider() {
@@ -5516,7 +5855,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string pg_provider = 33;</code>
+       * <code>string pg_provider = 35;</code>
        * @return The bytes for pgProvider.
        */
       public com.google.protobuf.ByteString
@@ -5533,7 +5872,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string pg_provider = 33;</code>
+       * <code>string pg_provider = 35;</code>
        * @param value The pgProvider to set.
        * @return This builder for chaining.
        */
@@ -5548,7 +5887,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string pg_provider = 33;</code>
+       * <code>string pg_provider = 35;</code>
        * @return This builder for chaining.
        */
       public Builder clearPgProvider() {
@@ -5558,7 +5897,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string pg_provider = 33;</code>
+       * <code>string pg_provider = 35;</code>
        * @param value The bytes for pgProvider to set.
        * @return This builder for chaining.
        */
@@ -5576,7 +5915,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object pgTid_ = "";
       /**
-       * <code>string pg_tid = 34;</code>
+       * <code>string pg_tid = 36;</code>
        * @return The pgTid.
        */
       public java.lang.String getPgTid() {
@@ -5592,7 +5931,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string pg_tid = 34;</code>
+       * <code>string pg_tid = 36;</code>
        * @return The bytes for pgTid.
        */
       public com.google.protobuf.ByteString
@@ -5609,7 +5948,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string pg_tid = 34;</code>
+       * <code>string pg_tid = 36;</code>
        * @param value The pgTid to set.
        * @return This builder for chaining.
        */
@@ -5624,7 +5963,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string pg_tid = 34;</code>
+       * <code>string pg_tid = 36;</code>
        * @return This builder for chaining.
        */
       public Builder clearPgTid() {
@@ -5634,7 +5973,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string pg_tid = 34;</code>
+       * <code>string pg_tid = 36;</code>
        * @param value The bytes for pgTid to set.
        * @return This builder for chaining.
        */
@@ -5652,7 +5991,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object receiptUrl_ = "";
       /**
-       * <code>string receipt_url = 35;</code>
+       * <code>string receipt_url = 37;</code>
        * @return The receiptUrl.
        */
       public java.lang.String getReceiptUrl() {
@@ -5668,7 +6007,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string receipt_url = 35;</code>
+       * <code>string receipt_url = 37;</code>
        * @return The bytes for receiptUrl.
        */
       public com.google.protobuf.ByteString
@@ -5685,7 +6024,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string receipt_url = 35;</code>
+       * <code>string receipt_url = 37;</code>
        * @param value The receiptUrl to set.
        * @return This builder for chaining.
        */
@@ -5700,7 +6039,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string receipt_url = 35;</code>
+       * <code>string receipt_url = 37;</code>
        * @return This builder for chaining.
        */
       public Builder clearReceiptUrl() {
@@ -5710,7 +6049,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string receipt_url = 35;</code>
+       * <code>string receipt_url = 37;</code>
        * @param value The bytes for receiptUrl to set.
        * @return This builder for chaining.
        */
@@ -5726,9 +6065,40 @@ public final class PaymentOuterClass {
         return this;
       }
 
+      private int startedAt_ ;
+      /**
+       * <code>int32 started_at = 38;</code>
+       * @return The startedAt.
+       */
+      @java.lang.Override
+      public int getStartedAt() {
+        return startedAt_;
+      }
+      /**
+       * <code>int32 started_at = 38;</code>
+       * @param value The startedAt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartedAt(int value) {
+        
+        startedAt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 started_at = 38;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartedAt() {
+        
+        startedAt_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object status_ = "";
       /**
-       * <code>string status = 36;</code>
+       * <code>string status = 39;</code>
        * @return The status.
        */
       public java.lang.String getStatus() {
@@ -5744,7 +6114,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string status = 36;</code>
+       * <code>string status = 39;</code>
        * @return The bytes for status.
        */
       public com.google.protobuf.ByteString
@@ -5761,7 +6131,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string status = 36;</code>
+       * <code>string status = 39;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -5776,7 +6146,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string status = 36;</code>
+       * <code>string status = 39;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -5786,7 +6156,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string status = 36;</code>
+       * <code>string status = 39;</code>
        * @param value The bytes for status to set.
        * @return This builder for chaining.
        */
@@ -5804,7 +6174,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object userAgent_ = "";
       /**
-       * <code>string user_agent = 37;</code>
+       * <code>string user_agent = 40;</code>
        * @return The userAgent.
        */
       public java.lang.String getUserAgent() {
@@ -5820,7 +6190,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string user_agent = 37;</code>
+       * <code>string user_agent = 40;</code>
        * @return The bytes for userAgent.
        */
       public com.google.protobuf.ByteString
@@ -5837,7 +6207,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string user_agent = 37;</code>
+       * <code>string user_agent = 40;</code>
        * @param value The userAgent to set.
        * @return This builder for chaining.
        */
@@ -5852,7 +6222,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string user_agent = 37;</code>
+       * <code>string user_agent = 40;</code>
        * @return This builder for chaining.
        */
       public Builder clearUserAgent() {
@@ -5862,7 +6232,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string user_agent = 37;</code>
+       * <code>string user_agent = 40;</code>
        * @param value The bytes for userAgent to set.
        * @return This builder for chaining.
        */
@@ -5880,7 +6250,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object vbankCode_ = "";
       /**
-       * <code>string vbank_code = 38;</code>
+       * <code>string vbank_code = 41;</code>
        * @return The vbankCode.
        */
       public java.lang.String getVbankCode() {
@@ -5896,7 +6266,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string vbank_code = 38;</code>
+       * <code>string vbank_code = 41;</code>
        * @return The bytes for vbankCode.
        */
       public com.google.protobuf.ByteString
@@ -5913,7 +6283,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string vbank_code = 38;</code>
+       * <code>string vbank_code = 41;</code>
        * @param value The vbankCode to set.
        * @return This builder for chaining.
        */
@@ -5928,7 +6298,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string vbank_code = 38;</code>
+       * <code>string vbank_code = 41;</code>
        * @return This builder for chaining.
        */
       public Builder clearVbankCode() {
@@ -5938,7 +6308,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string vbank_code = 38;</code>
+       * <code>string vbank_code = 41;</code>
        * @param value The bytes for vbankCode to set.
        * @return This builder for chaining.
        */
@@ -5956,7 +6326,7 @@ public final class PaymentOuterClass {
 
       private int vbankDate_ ;
       /**
-       * <code>int32 vbank_date = 39;</code>
+       * <code>int32 vbank_date = 42;</code>
        * @return The vbankDate.
        */
       @java.lang.Override
@@ -5964,7 +6334,7 @@ public final class PaymentOuterClass {
         return vbankDate_;
       }
       /**
-       * <code>int32 vbank_date = 39;</code>
+       * <code>int32 vbank_date = 42;</code>
        * @param value The vbankDate to set.
        * @return This builder for chaining.
        */
@@ -5975,7 +6345,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>int32 vbank_date = 39;</code>
+       * <code>int32 vbank_date = 42;</code>
        * @return This builder for chaining.
        */
       public Builder clearVbankDate() {
@@ -5987,7 +6357,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object vbankHolder_ = "";
       /**
-       * <code>string vbank_holder = 40;</code>
+       * <code>string vbank_holder = 43;</code>
        * @return The vbankHolder.
        */
       public java.lang.String getVbankHolder() {
@@ -6003,7 +6373,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string vbank_holder = 40;</code>
+       * <code>string vbank_holder = 43;</code>
        * @return The bytes for vbankHolder.
        */
       public com.google.protobuf.ByteString
@@ -6020,7 +6390,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string vbank_holder = 40;</code>
+       * <code>string vbank_holder = 43;</code>
        * @param value The vbankHolder to set.
        * @return This builder for chaining.
        */
@@ -6035,7 +6405,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string vbank_holder = 40;</code>
+       * <code>string vbank_holder = 43;</code>
        * @return This builder for chaining.
        */
       public Builder clearVbankHolder() {
@@ -6045,7 +6415,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string vbank_holder = 40;</code>
+       * <code>string vbank_holder = 43;</code>
        * @param value The bytes for vbankHolder to set.
        * @return This builder for chaining.
        */
@@ -6063,7 +6433,7 @@ public final class PaymentOuterClass {
 
       private int vbankIssuedAt_ ;
       /**
-       * <code>int32 vbank_issued_at = 41;</code>
+       * <code>int32 vbank_issued_at = 44;</code>
        * @return The vbankIssuedAt.
        */
       @java.lang.Override
@@ -6071,7 +6441,7 @@ public final class PaymentOuterClass {
         return vbankIssuedAt_;
       }
       /**
-       * <code>int32 vbank_issued_at = 41;</code>
+       * <code>int32 vbank_issued_at = 44;</code>
        * @param value The vbankIssuedAt to set.
        * @return This builder for chaining.
        */
@@ -6082,7 +6452,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>int32 vbank_issued_at = 41;</code>
+       * <code>int32 vbank_issued_at = 44;</code>
        * @return This builder for chaining.
        */
       public Builder clearVbankIssuedAt() {
@@ -6094,7 +6464,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object vbankName_ = "";
       /**
-       * <code>string vbank_name = 42;</code>
+       * <code>string vbank_name = 45;</code>
        * @return The vbankName.
        */
       public java.lang.String getVbankName() {
@@ -6110,7 +6480,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string vbank_name = 42;</code>
+       * <code>string vbank_name = 45;</code>
        * @return The bytes for vbankName.
        */
       public com.google.protobuf.ByteString
@@ -6127,7 +6497,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string vbank_name = 42;</code>
+       * <code>string vbank_name = 45;</code>
        * @param value The vbankName to set.
        * @return This builder for chaining.
        */
@@ -6142,7 +6512,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string vbank_name = 42;</code>
+       * <code>string vbank_name = 45;</code>
        * @return This builder for chaining.
        */
       public Builder clearVbankName() {
@@ -6152,7 +6522,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string vbank_name = 42;</code>
+       * <code>string vbank_name = 45;</code>
        * @param value The bytes for vbankName to set.
        * @return This builder for chaining.
        */
@@ -6170,7 +6540,7 @@ public final class PaymentOuterClass {
 
       private java.lang.Object vbankNum_ = "";
       /**
-       * <code>string vbank_num = 43;</code>
+       * <code>string vbank_num = 46;</code>
        * @return The vbankNum.
        */
       public java.lang.String getVbankNum() {
@@ -6186,7 +6556,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string vbank_num = 43;</code>
+       * <code>string vbank_num = 46;</code>
        * @return The bytes for vbankNum.
        */
       public com.google.protobuf.ByteString
@@ -6203,7 +6573,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>string vbank_num = 43;</code>
+       * <code>string vbank_num = 46;</code>
        * @param value The vbankNum to set.
        * @return This builder for chaining.
        */
@@ -6218,7 +6588,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string vbank_num = 43;</code>
+       * <code>string vbank_num = 46;</code>
        * @return This builder for chaining.
        */
       public Builder clearVbankNum() {
@@ -6228,7 +6598,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>string vbank_num = 43;</code>
+       * <code>string vbank_num = 46;</code>
        * @param value The bytes for vbankNum to set.
        * @return This builder for chaining.
        */
@@ -24260,7 +24630,7 @@ public final class PaymentOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025payment/payment.proto\022\007payment\"\377\006\n\007Pay" +
+      "\n\025payment/payment.proto\022\007payment\"\305\007\n\007Pay" +
       "ment\022\016\n\006amount\030\001 \001(\005\022\021\n\tapply_num\030\002 \001(\t\022" +
       "\021\n\tbank_code\030\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n" +
       "\nbuyer_addr\030\005 \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022" +
@@ -24273,70 +24643,72 @@ public final class PaymentOuterClass {
       " \001(\t\022\023\n\013card_number\030\021 \001(\t\022\022\n\ncard_quota\030" +
       "\022 \001(\005\022\021\n\tcard_type\030\023 \001(\t\022\033\n\023cash_receipt" +
       "_issued\030\024 \001(\010\022\017\n\007channel\030\025 \001(\t\022\020\n\010curren" +
-      "cy\030\026 \001(\t\022\023\n\013custom_data\030\027 \001(\t\022\016\n\006escrow\030" +
-      "\030 \001(\010\022\023\n\013fail_reason\030\031 \001(\t\022\021\n\tfailed_at\030" +
-      "\032 \001(\005\022\017\n\007imp_uid\030\033 \001(\t\022\024\n\014merchant_uid\030\034" +
-      " \001(\t\022\014\n\004name\030\035 \001(\t\022\017\n\007paid_at\030\036 \001(\005\022\022\n\np" +
-      "ay_method\030\037 \001(\t\022\r\n\005pg_id\030  \001(\t\022\023\n\013pg_pro" +
-      "vider\030! \001(\t\022\016\n\006pg_tid\030\" \001(\t\022\023\n\013receipt_u" +
-      "rl\030# \001(\t\022\016\n\006status\030$ \001(\t\022\022\n\nuser_agent\030%" +
-      " \001(\t\022\022\n\nvbank_code\030& \001(\t\022\022\n\nvbank_date\030\'" +
-      " \001(\005\022\024\n\014vbank_holder\030( \001(\t\022\027\n\017vbank_issu" +
-      "ed_at\030) \001(\005\022\022\n\nvbank_name\030* \001(\t\022\021\n\tvbank" +
-      "_num\030+ \001(\t\"j\n\rCancleHistory\022\016\n\006pg_tid\030\001 " +
-      "\001(\t\022\016\n\006amount\030\002 \001(\005\022\024\n\014cancelled_at\030\003 \001(" +
-      "\005\022\016\n\006reason\030\004 \001(\t\022\023\n\013receipt_url\030\005 \001(\t\"\\" +
-      "\n\013PaymentPage\022\r\n\005total\030\001 \001(\005\022\020\n\010previous" +
-      "\030\002 \001(\005\022\014\n\004next\030\003 \001(\005\022\036\n\004list\030\004 \003(\0132\020.pay" +
-      "ment.Payment\"V\n\024PaymentBalanceDetail\022\020\n\010" +
-      "tax_free\030\001 \001(\005\022\016\n\006supply\030\002 \001(\005\022\013\n\003vat\030\003 " +
-      "\001(\005\022\017\n\007service\030\004 \001(\005\"\233\002\n\016PaymentBalance\022" +
-      "\016\n\006amount\030\001 \001(\005\0223\n\014cash_receipt\030\002 \001(\0132\035." +
-      "payment.PaymentBalanceDetail\022.\n\007primary\030" +
-      "\003 \001(\0132\035.payment.PaymentBalanceDetail\0220\n\t" +
-      "secondary\030\004 \001(\0132\035.payment.PaymentBalance" +
-      "Detail\022/\n\010discount\030\005 \001(\0132\035.payment.Payme" +
-      "ntBalanceDetail\0221\n\thistories\030\006 \003(\0132\036.pay" +
-      "ment.PaymentBalanceHistory\"\360\001\n\025PaymentBa" +
-      "lanceHistory\0223\n\014cash_receipt\030\001 \001(\0132\035.pay" +
-      "ment.PaymentBalanceDetail\022.\n\007primary\030\002 \001" +
-      "(\0132\035.payment.PaymentBalanceDetail\0220\n\tsec" +
-      "ondary\030\003 \001(\0132\035.payment.PaymentBalanceDet" +
-      "ail\022/\n\010discount\030\004 \001(\0132\035.payment.PaymentB" +
-      "alanceDetail\022\017\n\007created\030\005 \001(\005\"!\n\016Payment" +
-      "Request\022\017\n\007imp_uid\030\001 \001(\t\"T\n\017PaymentRespo" +
-      "nse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010re" +
-      "sponse\030\003 \001(\0132\020.payment.Payment\"\"\n\017Paymen" +
-      "tsRequest\022\017\n\007imp_uid\030\001 \003(\t\"U\n\020PaymentsRe" +
-      "sponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n" +
-      "\010response\030\003 \003(\0132\020.payment.Payment\"a\n\032Pay" +
-      "mentsMerchantUidRequest\022\024\n\014merchant_uid\030" +
-      "\001 \001(\t\022\016\n\006status\030\002 \001(\t\022\014\n\004page\030\003 \001(\005\022\017\n\007s" +
-      "orting\030\004 \001(\t\"d\n\033PaymentsMerchantUidRespo" +
-      "nse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022&\n\010re" +
-      "sponse\030\003 \001(\0132\024.payment.PaymentPage\"n\n\024Pa" +
-      "ymentStatusRequest\022\016\n\006status\030\001 \001(\t\022\014\n\004pa" +
-      "ge\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\022\014\n\004from\030\004 \001(\005\022\n\n" +
-      "\002to\030\005 \001(\005\022\017\n\007sorting\030\006 \001(\t\"^\n\025PaymentSta" +
-      "tusResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001" +
-      "(\t\022&\n\010response\030\003 \001(\0132\024.payment.PaymentPa" +
-      "ge\"R\n\031PaymentMerchantUidRequest\022\024\n\014merch" +
-      "ant_uid\030\001 \001(\t\022\016\n\006status\030\002 \001(\t\022\017\n\007sorting" +
-      "\030\003 \001(\t\"_\n\032PaymentMerchantUidResponse\022\014\n\004" +
+      "cy\030\026 \001(\t\022\023\n\013custom_data\030\027 \001(\t\022\024\n\014custome" +
+      "r_uid\030\030 \001(\t\022\032\n\022customer_uid_usage\030\031 \001(\t\022" +
+      "\016\n\006escrow\030\032 \001(\010\022\023\n\013fail_reason\030\033 \001(\t\022\021\n\t" +
+      "failed_at\030\034 \001(\005\022\017\n\007imp_uid\030\035 \001(\t\022\024\n\014merc" +
+      "hant_uid\030\036 \001(\t\022\014\n\004name\030\037 \001(\t\022\017\n\007paid_at\030" +
+      "  \001(\005\022\022\n\npay_method\030! \001(\t\022\r\n\005pg_id\030\" \001(\t" +
+      "\022\023\n\013pg_provider\030# \001(\t\022\016\n\006pg_tid\030$ \001(\t\022\023\n" +
+      "\013receipt_url\030% \001(\t\022\022\n\nstarted_at\030& \001(\005\022\016" +
+      "\n\006status\030\' \001(\t\022\022\n\nuser_agent\030( \001(\t\022\022\n\nvb" +
+      "ank_code\030) \001(\t\022\022\n\nvbank_date\030* \001(\005\022\024\n\014vb" +
+      "ank_holder\030+ \001(\t\022\027\n\017vbank_issued_at\030, \001(" +
+      "\005\022\022\n\nvbank_name\030- \001(\t\022\021\n\tvbank_num\030. \001(\t" +
+      "\"j\n\rCancleHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amo" +
+      "unt\030\002 \001(\005\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reaso" +
+      "n\030\004 \001(\t\022\023\n\013receipt_url\030\005 \001(\t\"\\\n\013PaymentP" +
+      "age\022\r\n\005total\030\001 \001(\005\022\020\n\010previous\030\002 \001(\005\022\014\n\004" +
+      "next\030\003 \001(\005\022\036\n\004list\030\004 \003(\0132\020.payment.Payme" +
+      "nt\"V\n\024PaymentBalanceDetail\022\020\n\010tax_free\030\001" +
+      " \001(\005\022\016\n\006supply\030\002 \001(\005\022\013\n\003vat\030\003 \001(\005\022\017\n\007ser" +
+      "vice\030\004 \001(\005\"\233\002\n\016PaymentBalance\022\016\n\006amount\030" +
+      "\001 \001(\005\0223\n\014cash_receipt\030\002 \001(\0132\035.payment.Pa" +
+      "ymentBalanceDetail\022.\n\007primary\030\003 \001(\0132\035.pa" +
+      "yment.PaymentBalanceDetail\0220\n\tsecondary\030" +
+      "\004 \001(\0132\035.payment.PaymentBalanceDetail\022/\n\010" +
+      "discount\030\005 \001(\0132\035.payment.PaymentBalanceD" +
+      "etail\0221\n\thistories\030\006 \003(\0132\036.payment.Payme" +
+      "ntBalanceHistory\"\360\001\n\025PaymentBalanceHisto" +
+      "ry\0223\n\014cash_receipt\030\001 \001(\0132\035.payment.Payme" +
+      "ntBalanceDetail\022.\n\007primary\030\002 \001(\0132\035.payme" +
+      "nt.PaymentBalanceDetail\0220\n\tsecondary\030\003 \001" +
+      "(\0132\035.payment.PaymentBalanceDetail\022/\n\010dis" +
+      "count\030\004 \001(\0132\035.payment.PaymentBalanceDeta" +
+      "il\022\017\n\007created\030\005 \001(\005\"!\n\016PaymentRequest\022\017\n" +
+      "\007imp_uid\030\001 \001(\t\"T\n\017PaymentResponse\022\014\n\004cod" +
+      "e\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001" +
+      "(\0132\020.payment.Payment\"\"\n\017PaymentsRequest\022" +
+      "\017\n\007imp_uid\030\001 \003(\t\"U\n\020PaymentsResponse\022\014\n\004" +
       "code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030" +
-      "\003 \001(\0132\020.payment.Payment\"\304\001\n\024PaymentCancl" +
-      "eRequest\022\017\n\007imp_uid\030\001 \001(\t\022\024\n\014merchant_ui" +
-      "d\030\002 \001(\t\022\016\n\006amount\030\003 \001(\001\022\017\n\007tx_free\030\004 \001(\001" +
-      "\022\020\n\010checksum\030\005 \001(\001\022\016\n\006reasom\030\006 \001(\t\022\025\n\rre" +
-      "fund_holder\030\007 \001(\t\022\023\n\013refund_bank\030\010 \001(\t\022\026" +
-      "\n\016refund_account\030\t \001(\t\"Z\n\025PaymentCancleR" +
-      "esponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"" +
-      "\n\010response\030\003 \001(\0132\020.payment.Payment\"(\n\025Pa" +
-      "ymentBalanceRequest\022\017\n\007imp_uid\030\001 \001(\t\"b\n\026" +
-      "PaymentBalanceResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007" +
-      "message\030\002 \001(\t\022)\n\010response\030\003 \001(\0132\027.paymen" +
-      "t.PaymentBalanceB/Z-github.com/iamport/i" +
-      "nterface/build/go/paymentb\006proto3"
+      "\003 \003(\0132\020.payment.Payment\"a\n\032PaymentsMerch" +
+      "antUidRequest\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006s" +
+      "tatus\030\002 \001(\t\022\014\n\004page\030\003 \001(\005\022\017\n\007sorting\030\004 \001" +
+      "(\t\"d\n\033PaymentsMerchantUidResponse\022\014\n\004cod" +
+      "e\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022&\n\010response\030\003 \001" +
+      "(\0132\024.payment.PaymentPage\"n\n\024PaymentStatu" +
+      "sRequest\022\016\n\006status\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r" +
+      "\n\005limit\030\003 \001(\005\022\014\n\004from\030\004 \001(\005\022\n\n\002to\030\005 \001(\005\022" +
+      "\017\n\007sorting\030\006 \001(\t\"^\n\025PaymentStatusRespons" +
+      "e\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022&\n\010resp" +
+      "onse\030\003 \001(\0132\024.payment.PaymentPage\"R\n\031Paym" +
+      "entMerchantUidRequest\022\024\n\014merchant_uid\030\001 " +
+      "\001(\t\022\016\n\006status\030\002 \001(\t\022\017\n\007sorting\030\003 \001(\t\"_\n\032" +
+      "PaymentMerchantUidResponse\022\014\n\004code\030\001 \001(\005" +
+      "\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.pa" +
+      "yment.Payment\"\304\001\n\024PaymentCancleRequest\022\017" +
+      "\n\007imp_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n" +
+      "\006amount\030\003 \001(\001\022\017\n\007tx_free\030\004 \001(\001\022\020\n\010checks" +
+      "um\030\005 \001(\001\022\016\n\006reasom\030\006 \001(\t\022\025\n\rrefund_holde" +
+      "r\030\007 \001(\t\022\023\n\013refund_bank\030\010 \001(\t\022\026\n\016refund_a" +
+      "ccount\030\t \001(\t\"Z\n\025PaymentCancleResponse\022\014\n" +
+      "\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response" +
+      "\030\003 \001(\0132\020.payment.Payment\"(\n\025PaymentBalan" +
+      "ceRequest\022\017\n\007imp_uid\030\001 \001(\t\"b\n\026PaymentBal" +
+      "anceResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 " +
+      "\001(\t\022)\n\010response\030\003 \001(\0132\027.payment.PaymentB" +
+      "alanceB/Z-github.com/iamport/interface/b" +
+      "uild/go/paymentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24347,7 +24719,7 @@ public final class PaymentOuterClass {
     internal_static_payment_Payment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payment_Payment_descriptor,
-        new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "CardNumber", "CardQuota", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "Name", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", });
+        new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "CardNumber", "CardQuota", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CustomerUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "Name", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", });
     internal_static_payment_CancleHistory_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_payment_CancleHistory_fieldAccessorTable = new

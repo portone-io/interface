@@ -77,6 +77,12 @@ export class Payment extends jspb.Message {
   getCustomData(): string;
   setCustomData(value: string): void;
 
+  getCustomerUid(): string;
+  setCustomerUid(value: string): void;
+
+  getCustomerUidUsage(): string;
+  setCustomerUidUsage(value: string): void;
+
   getEscrow(): boolean;
   setEscrow(value: boolean): void;
 
@@ -112,6 +118,9 @@ export class Payment extends jspb.Message {
 
   getReceiptUrl(): string;
   setReceiptUrl(value: string): void;
+
+  getStartedAt(): number;
+  setStartedAt(value: number): void;
 
   getStatus(): string;
   setStatus(value: string): void;
@@ -172,6 +181,8 @@ export namespace Payment {
     channel: string,
     currency: string,
     customData: string,
+    customerUid: string,
+    customerUidUsage: string,
     escrow: boolean,
     failReason: string,
     failedAt: number,
@@ -184,6 +195,7 @@ export namespace Payment {
     pgProvider: string,
     pgTid: string,
     receiptUrl: string,
+    startedAt: number,
     status: string,
     userAgent: string,
     vbankCode: string,

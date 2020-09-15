@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z-github.com/iamport/interface/build/go/payment',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x15payment/payment.proto\x12\x07payment\"\xff\x06\n\x07Payment\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x05\x12\x11\n\tapply_num\x18\x02 \x01(\t\x12\x11\n\tbank_code\x18\x03 \x01(\x05\x12\x11\n\tbank_name\x18\x04 \x01(\t\x12\x12\n\nbuyer_addr\x18\x05 \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x06 \x01(\t\x12\x12\n\nbuyer_name\x18\x07 \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\x08 \x01(\t\x12\x11\n\tbuyer_tel\x18\t \x01(\t\x12\x15\n\rcancel_amount\x18\n \x01(\x05\x12.\n\x0e\x63\x61ncel_history\x18\x0b \x03(\x0b\x32\x16.payment.CancleHistory\x12\x15\n\rcancel_reason\x18\x0c \x01(\t\x12\x1b\n\x13\x63\x61ncel_receipt_urls\x18\r \x03(\t\x12\x14\n\x0c\x63\x61ncelled_at\x18\x0e \x01(\x05\x12\x11\n\tcard_code\x18\x0f \x01(\t\x12\x11\n\tcard_name\x18\x10 \x01(\t\x12\x13\n\x0b\x63\x61rd_number\x18\x11 \x01(\t\x12\x12\n\ncard_quota\x18\x12 \x01(\x05\x12\x11\n\tcard_type\x18\x13 \x01(\t\x12\x1b\n\x13\x63\x61sh_receipt_issued\x18\x14 \x01(\x08\x12\x0f\n\x07\x63hannel\x18\x15 \x01(\t\x12\x10\n\x08\x63urrency\x18\x16 \x01(\t\x12\x13\n\x0b\x63ustom_data\x18\x17 \x01(\t\x12\x0e\n\x06\x65scrow\x18\x18 \x01(\x08\x12\x13\n\x0b\x66\x61il_reason\x18\x19 \x01(\t\x12\x11\n\tfailed_at\x18\x1a \x01(\x05\x12\x0f\n\x07imp_uid\x18\x1b \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x1c \x01(\t\x12\x0c\n\x04name\x18\x1d \x01(\t\x12\x0f\n\x07paid_at\x18\x1e \x01(\x05\x12\x12\n\npay_method\x18\x1f \x01(\t\x12\r\n\x05pg_id\x18  \x01(\t\x12\x13\n\x0bpg_provider\x18! \x01(\t\x12\x0e\n\x06pg_tid\x18\" \x01(\t\x12\x13\n\x0breceipt_url\x18# \x01(\t\x12\x0e\n\x06status\x18$ \x01(\t\x12\x12\n\nuser_agent\x18% \x01(\t\x12\x12\n\nvbank_code\x18& \x01(\t\x12\x12\n\nvbank_date\x18\' \x01(\x05\x12\x14\n\x0cvbank_holder\x18( \x01(\t\x12\x17\n\x0fvbank_issued_at\x18) \x01(\x05\x12\x12\n\nvbank_name\x18* \x01(\t\x12\x11\n\tvbank_num\x18+ \x01(\t\"j\n\rCancleHistory\x12\x0e\n\x06pg_tid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x05\x12\x14\n\x0c\x63\x61ncelled_at\x18\x03 \x01(\x05\x12\x0e\n\x06reason\x18\x04 \x01(\t\x12\x13\n\x0breceipt_url\x18\x05 \x01(\t\"\\\n\x0bPaymentPage\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x10\n\x08previous\x18\x02 \x01(\x05\x12\x0c\n\x04next\x18\x03 \x01(\x05\x12\x1e\n\x04list\x18\x04 \x03(\x0b\x32\x10.payment.Payment\"V\n\x14PaymentBalanceDetail\x12\x10\n\x08tax_free\x18\x01 \x01(\x05\x12\x0e\n\x06supply\x18\x02 \x01(\x05\x12\x0b\n\x03vat\x18\x03 \x01(\x05\x12\x0f\n\x07service\x18\x04 \x01(\x05\"\x9b\x02\n\x0ePaymentBalance\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x05\x12\x33\n\x0c\x63\x61sh_receipt\x18\x02 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12.\n\x07primary\x18\x03 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x30\n\tsecondary\x18\x04 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12/\n\x08\x64iscount\x18\x05 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x31\n\thistories\x18\x06 \x03(\x0b\x32\x1e.payment.PaymentBalanceHistory\"\xf0\x01\n\x15PaymentBalanceHistory\x12\x33\n\x0c\x63\x61sh_receipt\x18\x01 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12.\n\x07primary\x18\x02 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x30\n\tsecondary\x18\x03 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12/\n\x08\x64iscount\x18\x04 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x0f\n\x07\x63reated\x18\x05 \x01(\x05\"!\n\x0ePaymentRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\"T\n\x0fPaymentResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"\"\n\x0fPaymentsRequest\x12\x0f\n\x07imp_uid\x18\x01 \x03(\t\"U\n\x10PaymentsResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x03(\x0b\x32\x10.payment.Payment\"a\n\x1aPaymentsMerchantUidRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x0c\n\x04page\x18\x03 \x01(\x05\x12\x0f\n\x07sorting\x18\x04 \x01(\t\"d\n\x1bPaymentsMerchantUidResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12&\n\x08response\x18\x03 \x01(\x0b\x32\x14.payment.PaymentPage\"n\n\x14PaymentStatusRequest\x12\x0e\n\x06status\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x0c\n\x04\x66rom\x18\x04 \x01(\x05\x12\n\n\x02to\x18\x05 \x01(\x05\x12\x0f\n\x07sorting\x18\x06 \x01(\t\"^\n\x15PaymentStatusResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12&\n\x08response\x18\x03 \x01(\x0b\x32\x14.payment.PaymentPage\"R\n\x19PaymentMerchantUidRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x0f\n\x07sorting\x18\x03 \x01(\t\"_\n\x1aPaymentMerchantUidResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"\xc4\x01\n\x14PaymentCancleRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x01\x12\x0f\n\x07tx_free\x18\x04 \x01(\x01\x12\x10\n\x08\x63hecksum\x18\x05 \x01(\x01\x12\x0e\n\x06reasom\x18\x06 \x01(\t\x12\x15\n\rrefund_holder\x18\x07 \x01(\t\x12\x13\n\x0brefund_bank\x18\x08 \x01(\t\x12\x16\n\x0erefund_account\x18\t \x01(\t\"Z\n\x15PaymentCancleResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"(\n\x15PaymentBalanceRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\"b\n\x16PaymentBalanceResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12)\n\x08response\x18\x03 \x01(\x0b\x32\x17.payment.PaymentBalanceB/Z-github.com/iamport/interface/build/go/paymentb\x06proto3'
+  serialized_pb=b'\n\x15payment/payment.proto\x12\x07payment\"\xc5\x07\n\x07Payment\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x05\x12\x11\n\tapply_num\x18\x02 \x01(\t\x12\x11\n\tbank_code\x18\x03 \x01(\x05\x12\x11\n\tbank_name\x18\x04 \x01(\t\x12\x12\n\nbuyer_addr\x18\x05 \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x06 \x01(\t\x12\x12\n\nbuyer_name\x18\x07 \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\x08 \x01(\t\x12\x11\n\tbuyer_tel\x18\t \x01(\t\x12\x15\n\rcancel_amount\x18\n \x01(\x05\x12.\n\x0e\x63\x61ncel_history\x18\x0b \x03(\x0b\x32\x16.payment.CancleHistory\x12\x15\n\rcancel_reason\x18\x0c \x01(\t\x12\x1b\n\x13\x63\x61ncel_receipt_urls\x18\r \x03(\t\x12\x14\n\x0c\x63\x61ncelled_at\x18\x0e \x01(\x05\x12\x11\n\tcard_code\x18\x0f \x01(\t\x12\x11\n\tcard_name\x18\x10 \x01(\t\x12\x13\n\x0b\x63\x61rd_number\x18\x11 \x01(\t\x12\x12\n\ncard_quota\x18\x12 \x01(\x05\x12\x11\n\tcard_type\x18\x13 \x01(\t\x12\x1b\n\x13\x63\x61sh_receipt_issued\x18\x14 \x01(\x08\x12\x0f\n\x07\x63hannel\x18\x15 \x01(\t\x12\x10\n\x08\x63urrency\x18\x16 \x01(\t\x12\x13\n\x0b\x63ustom_data\x18\x17 \x01(\t\x12\x14\n\x0c\x63ustomer_uid\x18\x18 \x01(\t\x12\x1a\n\x12\x63ustomer_uid_usage\x18\x19 \x01(\t\x12\x0e\n\x06\x65scrow\x18\x1a \x01(\x08\x12\x13\n\x0b\x66\x61il_reason\x18\x1b \x01(\t\x12\x11\n\tfailed_at\x18\x1c \x01(\x05\x12\x0f\n\x07imp_uid\x18\x1d \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x1e \x01(\t\x12\x0c\n\x04name\x18\x1f \x01(\t\x12\x0f\n\x07paid_at\x18  \x01(\x05\x12\x12\n\npay_method\x18! \x01(\t\x12\r\n\x05pg_id\x18\" \x01(\t\x12\x13\n\x0bpg_provider\x18# \x01(\t\x12\x0e\n\x06pg_tid\x18$ \x01(\t\x12\x13\n\x0breceipt_url\x18% \x01(\t\x12\x12\n\nstarted_at\x18& \x01(\x05\x12\x0e\n\x06status\x18\' \x01(\t\x12\x12\n\nuser_agent\x18( \x01(\t\x12\x12\n\nvbank_code\x18) \x01(\t\x12\x12\n\nvbank_date\x18* \x01(\x05\x12\x14\n\x0cvbank_holder\x18+ \x01(\t\x12\x17\n\x0fvbank_issued_at\x18, \x01(\x05\x12\x12\n\nvbank_name\x18- \x01(\t\x12\x11\n\tvbank_num\x18. \x01(\t\"j\n\rCancleHistory\x12\x0e\n\x06pg_tid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x05\x12\x14\n\x0c\x63\x61ncelled_at\x18\x03 \x01(\x05\x12\x0e\n\x06reason\x18\x04 \x01(\t\x12\x13\n\x0breceipt_url\x18\x05 \x01(\t\"\\\n\x0bPaymentPage\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x10\n\x08previous\x18\x02 \x01(\x05\x12\x0c\n\x04next\x18\x03 \x01(\x05\x12\x1e\n\x04list\x18\x04 \x03(\x0b\x32\x10.payment.Payment\"V\n\x14PaymentBalanceDetail\x12\x10\n\x08tax_free\x18\x01 \x01(\x05\x12\x0e\n\x06supply\x18\x02 \x01(\x05\x12\x0b\n\x03vat\x18\x03 \x01(\x05\x12\x0f\n\x07service\x18\x04 \x01(\x05\"\x9b\x02\n\x0ePaymentBalance\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x05\x12\x33\n\x0c\x63\x61sh_receipt\x18\x02 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12.\n\x07primary\x18\x03 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x30\n\tsecondary\x18\x04 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12/\n\x08\x64iscount\x18\x05 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x31\n\thistories\x18\x06 \x03(\x0b\x32\x1e.payment.PaymentBalanceHistory\"\xf0\x01\n\x15PaymentBalanceHistory\x12\x33\n\x0c\x63\x61sh_receipt\x18\x01 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12.\n\x07primary\x18\x02 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x30\n\tsecondary\x18\x03 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12/\n\x08\x64iscount\x18\x04 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x0f\n\x07\x63reated\x18\x05 \x01(\x05\"!\n\x0ePaymentRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\"T\n\x0fPaymentResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"\"\n\x0fPaymentsRequest\x12\x0f\n\x07imp_uid\x18\x01 \x03(\t\"U\n\x10PaymentsResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x03(\x0b\x32\x10.payment.Payment\"a\n\x1aPaymentsMerchantUidRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x0c\n\x04page\x18\x03 \x01(\x05\x12\x0f\n\x07sorting\x18\x04 \x01(\t\"d\n\x1bPaymentsMerchantUidResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12&\n\x08response\x18\x03 \x01(\x0b\x32\x14.payment.PaymentPage\"n\n\x14PaymentStatusRequest\x12\x0e\n\x06status\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x0c\n\x04\x66rom\x18\x04 \x01(\x05\x12\n\n\x02to\x18\x05 \x01(\x05\x12\x0f\n\x07sorting\x18\x06 \x01(\t\"^\n\x15PaymentStatusResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12&\n\x08response\x18\x03 \x01(\x0b\x32\x14.payment.PaymentPage\"R\n\x19PaymentMerchantUidRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x0f\n\x07sorting\x18\x03 \x01(\t\"_\n\x1aPaymentMerchantUidResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"\xc4\x01\n\x14PaymentCancleRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x01\x12\x0f\n\x07tx_free\x18\x04 \x01(\x01\x12\x10\n\x08\x63hecksum\x18\x05 \x01(\x01\x12\x0e\n\x06reasom\x18\x06 \x01(\t\x12\x15\n\rrefund_holder\x18\x07 \x01(\t\x12\x13\n\x0brefund_bank\x18\x08 \x01(\t\x12\x16\n\x0erefund_account\x18\t \x01(\t\"Z\n\x15PaymentCancleResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"(\n\x15PaymentBalanceRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\"b\n\x16PaymentBalanceResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12)\n\x08response\x18\x03 \x01(\x0b\x32\x17.payment.PaymentBalanceB/Z-github.com/iamport/interface/build/go/paymentb\x06proto3'
 )
 
 
@@ -195,141 +195,162 @@ _PAYMENT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='escrow', full_name='payment.Payment.escrow', index=23,
-      number=24, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='customer_uid', full_name='payment.Payment.customer_uid', index=23,
+      number=24, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='fail_reason', full_name='payment.Payment.fail_reason', index=24,
+      name='customer_uid_usage', full_name='payment.Payment.customer_uid_usage', index=24,
       number=25, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='failed_at', full_name='payment.Payment.failed_at', index=25,
-      number=26, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='escrow', full_name='payment.Payment.escrow', index=25,
+      number=26, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='imp_uid', full_name='payment.Payment.imp_uid', index=26,
+      name='fail_reason', full_name='payment.Payment.fail_reason', index=26,
       number=27, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='merchant_uid', full_name='payment.Payment.merchant_uid', index=27,
-      number=28, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      name='failed_at', full_name='payment.Payment.failed_at', index=27,
+      number=28, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='name', full_name='payment.Payment.name', index=28,
+      name='imp_uid', full_name='payment.Payment.imp_uid', index=28,
       number=29, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='paid_at', full_name='payment.Payment.paid_at', index=29,
-      number=30, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='merchant_uid', full_name='payment.Payment.merchant_uid', index=29,
+      number=30, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='pay_method', full_name='payment.Payment.pay_method', index=30,
+      name='name', full_name='payment.Payment.name', index=30,
       number=31, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='pg_id', full_name='payment.Payment.pg_id', index=31,
-      number=32, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      name='paid_at', full_name='payment.Payment.paid_at', index=31,
+      number=32, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='pg_provider', full_name='payment.Payment.pg_provider', index=32,
+      name='pay_method', full_name='payment.Payment.pay_method', index=32,
       number=33, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='pg_tid', full_name='payment.Payment.pg_tid', index=33,
+      name='pg_id', full_name='payment.Payment.pg_id', index=33,
       number=34, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='receipt_url', full_name='payment.Payment.receipt_url', index=34,
+      name='pg_provider', full_name='payment.Payment.pg_provider', index=34,
       number=35, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='status', full_name='payment.Payment.status', index=35,
+      name='pg_tid', full_name='payment.Payment.pg_tid', index=35,
       number=36, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='user_agent', full_name='payment.Payment.user_agent', index=36,
+      name='receipt_url', full_name='payment.Payment.receipt_url', index=36,
       number=37, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='vbank_code', full_name='payment.Payment.vbank_code', index=37,
-      number=38, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='vbank_date', full_name='payment.Payment.vbank_date', index=38,
-      number=39, type=5, cpp_type=1, label=1,
+      name='started_at', full_name='payment.Payment.started_at', index=37,
+      number=38, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='vbank_holder', full_name='payment.Payment.vbank_holder', index=39,
+      name='status', full_name='payment.Payment.status', index=38,
+      number=39, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='user_agent', full_name='payment.Payment.user_agent', index=39,
       number=40, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='vbank_issued_at', full_name='payment.Payment.vbank_issued_at', index=40,
-      number=41, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='vbank_name', full_name='payment.Payment.vbank_name', index=41,
-      number=42, type=9, cpp_type=9, label=1,
+      name='vbank_code', full_name='payment.Payment.vbank_code', index=40,
+      number=41, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='vbank_num', full_name='payment.Payment.vbank_num', index=42,
+      name='vbank_date', full_name='payment.Payment.vbank_date', index=41,
+      number=42, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='vbank_holder', full_name='payment.Payment.vbank_holder', index=42,
       number=43, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='vbank_issued_at', full_name='payment.Payment.vbank_issued_at', index=43,
+      number=44, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='vbank_name', full_name='payment.Payment.vbank_name', index=44,
+      number=45, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='vbank_num', full_name='payment.Payment.vbank_num', index=45,
+      number=46, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -347,7 +368,7 @@ _PAYMENT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=35,
-  serialized_end=930,
+  serialized_end=1000,
 )
 
 
@@ -406,8 +427,8 @@ _CANCLEHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=932,
-  serialized_end=1038,
+  serialized_start=1002,
+  serialized_end=1108,
 )
 
 
@@ -459,8 +480,8 @@ _PAYMENTPAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1040,
-  serialized_end=1132,
+  serialized_start=1110,
+  serialized_end=1202,
 )
 
 
@@ -512,8 +533,8 @@ _PAYMENTBALANCEDETAIL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1134,
-  serialized_end=1220,
+  serialized_start=1204,
+  serialized_end=1290,
 )
 
 
@@ -579,8 +600,8 @@ _PAYMENTBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1223,
-  serialized_end=1506,
+  serialized_start=1293,
+  serialized_end=1576,
 )
 
 
@@ -639,8 +660,8 @@ _PAYMENTBALANCEHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1509,
-  serialized_end=1749,
+  serialized_start=1579,
+  serialized_end=1819,
 )
 
 
@@ -671,8 +692,8 @@ _PAYMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1751,
-  serialized_end=1784,
+  serialized_start=1821,
+  serialized_end=1854,
 )
 
 
@@ -717,8 +738,8 @@ _PAYMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1786,
-  serialized_end=1870,
+  serialized_start=1856,
+  serialized_end=1940,
 )
 
 
@@ -749,8 +770,8 @@ _PAYMENTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1872,
-  serialized_end=1906,
+  serialized_start=1942,
+  serialized_end=1976,
 )
 
 
@@ -795,8 +816,8 @@ _PAYMENTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1908,
-  serialized_end=1993,
+  serialized_start=1978,
+  serialized_end=2063,
 )
 
 
@@ -848,8 +869,8 @@ _PAYMENTSMERCHANTUIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1995,
-  serialized_end=2092,
+  serialized_start=2065,
+  serialized_end=2162,
 )
 
 
@@ -894,8 +915,8 @@ _PAYMENTSMERCHANTUIDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2094,
-  serialized_end=2194,
+  serialized_start=2164,
+  serialized_end=2264,
 )
 
 
@@ -961,8 +982,8 @@ _PAYMENTSTATUSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2196,
-  serialized_end=2306,
+  serialized_start=2266,
+  serialized_end=2376,
 )
 
 
@@ -1007,8 +1028,8 @@ _PAYMENTSTATUSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2308,
-  serialized_end=2402,
+  serialized_start=2378,
+  serialized_end=2472,
 )
 
 
@@ -1053,8 +1074,8 @@ _PAYMENTMERCHANTUIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2404,
-  serialized_end=2486,
+  serialized_start=2474,
+  serialized_end=2556,
 )
 
 
@@ -1099,8 +1120,8 @@ _PAYMENTMERCHANTUIDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2488,
-  serialized_end=2583,
+  serialized_start=2558,
+  serialized_end=2653,
 )
 
 
@@ -1187,8 +1208,8 @@ _PAYMENTCANCLEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2586,
-  serialized_end=2782,
+  serialized_start=2656,
+  serialized_end=2852,
 )
 
 
@@ -1233,8 +1254,8 @@ _PAYMENTCANCLERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2784,
-  serialized_end=2874,
+  serialized_start=2854,
+  serialized_end=2944,
 )
 
 
@@ -1265,8 +1286,8 @@ _PAYMENTBALANCEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2876,
-  serialized_end=2916,
+  serialized_start=2946,
+  serialized_end=2986,
 )
 
 
@@ -1311,8 +1332,8 @@ _PAYMENTBALANCERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2918,
-  serialized_end=3016,
+  serialized_start=2988,
+  serialized_end=3086,
 )
 
 _PAYMENT.fields_by_name['cancel_history'].message_type = _CANCLEHISTORY

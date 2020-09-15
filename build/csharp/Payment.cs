@@ -24,7 +24,7 @@ namespace Payment {
     static PaymentReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVwYXltZW50L3BheW1lbnQucHJvdG8SB3BheW1lbnQi/wYKB1BheW1lbnQS",
+            "ChVwYXltZW50L3BheW1lbnQucHJvdG8SB3BheW1lbnQixQcKB1BheW1lbnQS",
             "DgoGYW1vdW50GAEgASgFEhEKCWFwcGx5X251bRgCIAEoCRIRCgliYW5rX2Nv",
             "ZGUYAyABKAUSEQoJYmFua19uYW1lGAQgASgJEhIKCmJ1eWVyX2FkZHIYBSAB",
             "KAkSEwoLYnV5ZXJfZW1haWwYBiABKAkSEgoKYnV5ZXJfbmFtZRgHIAEoCRIW",
@@ -36,67 +36,68 @@ namespace Payment {
             "EwoLY2FyZF9udW1iZXIYESABKAkSEgoKY2FyZF9xdW90YRgSIAEoBRIRCglj",
             "YXJkX3R5cGUYEyABKAkSGwoTY2FzaF9yZWNlaXB0X2lzc3VlZBgUIAEoCBIP",
             "CgdjaGFubmVsGBUgASgJEhAKCGN1cnJlbmN5GBYgASgJEhMKC2N1c3RvbV9k",
-            "YXRhGBcgASgJEg4KBmVzY3JvdxgYIAEoCBITCgtmYWlsX3JlYXNvbhgZIAEo",
-            "CRIRCglmYWlsZWRfYXQYGiABKAUSDwoHaW1wX3VpZBgbIAEoCRIUCgxtZXJj",
-            "aGFudF91aWQYHCABKAkSDAoEbmFtZRgdIAEoCRIPCgdwYWlkX2F0GB4gASgF",
-            "EhIKCnBheV9tZXRob2QYHyABKAkSDQoFcGdfaWQYICABKAkSEwoLcGdfcHJv",
-            "dmlkZXIYISABKAkSDgoGcGdfdGlkGCIgASgJEhMKC3JlY2VpcHRfdXJsGCMg",
-            "ASgJEg4KBnN0YXR1cxgkIAEoCRISCgp1c2VyX2FnZW50GCUgASgJEhIKCnZi",
-            "YW5rX2NvZGUYJiABKAkSEgoKdmJhbmtfZGF0ZRgnIAEoBRIUCgx2YmFua19o",
-            "b2xkZXIYKCABKAkSFwoPdmJhbmtfaXNzdWVkX2F0GCkgASgFEhIKCnZiYW5r",
-            "X25hbWUYKiABKAkSEQoJdmJhbmtfbnVtGCsgASgJImoKDUNhbmNsZUhpc3Rv",
-            "cnkSDgoGcGdfdGlkGAEgASgJEg4KBmFtb3VudBgCIAEoBRIUCgxjYW5jZWxs",
-            "ZWRfYXQYAyABKAUSDgoGcmVhc29uGAQgASgJEhMKC3JlY2VpcHRfdXJsGAUg",
-            "ASgJIlwKC1BheW1lbnRQYWdlEg0KBXRvdGFsGAEgASgFEhAKCHByZXZpb3Vz",
-            "GAIgASgFEgwKBG5leHQYAyABKAUSHgoEbGlzdBgEIAMoCzIQLnBheW1lbnQu",
-            "UGF5bWVudCJWChRQYXltZW50QmFsYW5jZURldGFpbBIQCgh0YXhfZnJlZRgB",
-            "IAEoBRIOCgZzdXBwbHkYAiABKAUSCwoDdmF0GAMgASgFEg8KB3NlcnZpY2UY",
-            "BCABKAUimwIKDlBheW1lbnRCYWxhbmNlEg4KBmFtb3VudBgBIAEoBRIzCgxj",
-            "YXNoX3JlY2VpcHQYAiABKAsyHS5wYXltZW50LlBheW1lbnRCYWxhbmNlRGV0",
-            "YWlsEi4KB3ByaW1hcnkYAyABKAsyHS5wYXltZW50LlBheW1lbnRCYWxhbmNl",
-            "RGV0YWlsEjAKCXNlY29uZGFyeRgEIAEoCzIdLnBheW1lbnQuUGF5bWVudEJh",
-            "bGFuY2VEZXRhaWwSLwoIZGlzY291bnQYBSABKAsyHS5wYXltZW50LlBheW1l",
-            "bnRCYWxhbmNlRGV0YWlsEjEKCWhpc3RvcmllcxgGIAMoCzIeLnBheW1lbnQu",
-            "UGF5bWVudEJhbGFuY2VIaXN0b3J5IvABChVQYXltZW50QmFsYW5jZUhpc3Rv",
-            "cnkSMwoMY2FzaF9yZWNlaXB0GAEgASgLMh0ucGF5bWVudC5QYXltZW50QmFs",
-            "YW5jZURldGFpbBIuCgdwcmltYXJ5GAIgASgLMh0ucGF5bWVudC5QYXltZW50",
-            "QmFsYW5jZURldGFpbBIwCglzZWNvbmRhcnkYAyABKAsyHS5wYXltZW50LlBh",
-            "eW1lbnRCYWxhbmNlRGV0YWlsEi8KCGRpc2NvdW50GAQgASgLMh0ucGF5bWVu",
-            "dC5QYXltZW50QmFsYW5jZURldGFpbBIPCgdjcmVhdGVkGAUgASgFIiEKDlBh",
-            "eW1lbnRSZXF1ZXN0Eg8KB2ltcF91aWQYASABKAkiVAoPUGF5bWVudFJlc3Bv",
-            "bnNlEgwKBGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRIiCghyZXNwb25z",
-            "ZRgDIAEoCzIQLnBheW1lbnQuUGF5bWVudCIiCg9QYXltZW50c1JlcXVlc3QS",
-            "DwoHaW1wX3VpZBgBIAMoCSJVChBQYXltZW50c1Jlc3BvbnNlEgwKBGNvZGUY",
-            "ASABKAUSDwoHbWVzc2FnZRgCIAEoCRIiCghyZXNwb25zZRgDIAMoCzIQLnBh",
-            "eW1lbnQuUGF5bWVudCJhChpQYXltZW50c01lcmNoYW50VWlkUmVxdWVzdBIU",
-            "CgxtZXJjaGFudF91aWQYASABKAkSDgoGc3RhdHVzGAIgASgJEgwKBHBhZ2UY",
-            "AyABKAUSDwoHc29ydGluZxgEIAEoCSJkChtQYXltZW50c01lcmNoYW50VWlk",
-            "UmVzcG9uc2USDAoEY29kZRgBIAEoBRIPCgdtZXNzYWdlGAIgASgJEiYKCHJl",
-            "c3BvbnNlGAMgASgLMhQucGF5bWVudC5QYXltZW50UGFnZSJuChRQYXltZW50",
-            "U3RhdHVzUmVxdWVzdBIOCgZzdGF0dXMYASABKAkSDAoEcGFnZRgCIAEoBRIN",
-            "CgVsaW1pdBgDIAEoBRIMCgRmcm9tGAQgASgFEgoKAnRvGAUgASgFEg8KB3Nv",
-            "cnRpbmcYBiABKAkiXgoVUGF5bWVudFN0YXR1c1Jlc3BvbnNlEgwKBGNvZGUY",
-            "ASABKAUSDwoHbWVzc2FnZRgCIAEoCRImCghyZXNwb25zZRgDIAEoCzIULnBh",
-            "eW1lbnQuUGF5bWVudFBhZ2UiUgoZUGF5bWVudE1lcmNoYW50VWlkUmVxdWVz",
-            "dBIUCgxtZXJjaGFudF91aWQYASABKAkSDgoGc3RhdHVzGAIgASgJEg8KB3Nv",
-            "cnRpbmcYAyABKAkiXwoaUGF5bWVudE1lcmNoYW50VWlkUmVzcG9uc2USDAoE",
-            "Y29kZRgBIAEoBRIPCgdtZXNzYWdlGAIgASgJEiIKCHJlc3BvbnNlGAMgASgL",
-            "MhAucGF5bWVudC5QYXltZW50IsQBChRQYXltZW50Q2FuY2xlUmVxdWVzdBIP",
-            "CgdpbXBfdWlkGAEgASgJEhQKDG1lcmNoYW50X3VpZBgCIAEoCRIOCgZhbW91",
-            "bnQYAyABKAESDwoHdHhfZnJlZRgEIAEoARIQCghjaGVja3N1bRgFIAEoARIO",
-            "CgZyZWFzb20YBiABKAkSFQoNcmVmdW5kX2hvbGRlchgHIAEoCRITCgtyZWZ1",
-            "bmRfYmFuaxgIIAEoCRIWCg5yZWZ1bmRfYWNjb3VudBgJIAEoCSJaChVQYXlt",
-            "ZW50Q2FuY2xlUmVzcG9uc2USDAoEY29kZRgBIAEoBRIPCgdtZXNzYWdlGAIg",
-            "ASgJEiIKCHJlc3BvbnNlGAMgASgLMhAucGF5bWVudC5QYXltZW50IigKFVBh",
-            "eW1lbnRCYWxhbmNlUmVxdWVzdBIPCgdpbXBfdWlkGAEgASgJImIKFlBheW1l",
-            "bnRCYWxhbmNlUmVzcG9uc2USDAoEY29kZRgBIAEoBRIPCgdtZXNzYWdlGAIg",
-            "ASgJEikKCHJlc3BvbnNlGAMgASgLMhcucGF5bWVudC5QYXltZW50QmFsYW5j",
-            "ZUIvWi1naXRodWIuY29tL2lhbXBvcnQvaW50ZXJmYWNlL2J1aWxkL2dvL3Bh",
-            "eW1lbnRiBnByb3RvMw=="));
+            "YXRhGBcgASgJEhQKDGN1c3RvbWVyX3VpZBgYIAEoCRIaChJjdXN0b21lcl91",
+            "aWRfdXNhZ2UYGSABKAkSDgoGZXNjcm93GBogASgIEhMKC2ZhaWxfcmVhc29u",
+            "GBsgASgJEhEKCWZhaWxlZF9hdBgcIAEoBRIPCgdpbXBfdWlkGB0gASgJEhQK",
+            "DG1lcmNoYW50X3VpZBgeIAEoCRIMCgRuYW1lGB8gASgJEg8KB3BhaWRfYXQY",
+            "ICABKAUSEgoKcGF5X21ldGhvZBghIAEoCRINCgVwZ19pZBgiIAEoCRITCgtw",
+            "Z19wcm92aWRlchgjIAEoCRIOCgZwZ190aWQYJCABKAkSEwoLcmVjZWlwdF91",
+            "cmwYJSABKAkSEgoKc3RhcnRlZF9hdBgmIAEoBRIOCgZzdGF0dXMYJyABKAkS",
+            "EgoKdXNlcl9hZ2VudBgoIAEoCRISCgp2YmFua19jb2RlGCkgASgJEhIKCnZi",
+            "YW5rX2RhdGUYKiABKAUSFAoMdmJhbmtfaG9sZGVyGCsgASgJEhcKD3ZiYW5r",
+            "X2lzc3VlZF9hdBgsIAEoBRISCgp2YmFua19uYW1lGC0gASgJEhEKCXZiYW5r",
+            "X251bRguIAEoCSJqCg1DYW5jbGVIaXN0b3J5Eg4KBnBnX3RpZBgBIAEoCRIO",
+            "CgZhbW91bnQYAiABKAUSFAoMY2FuY2VsbGVkX2F0GAMgASgFEg4KBnJlYXNv",
+            "bhgEIAEoCRITCgtyZWNlaXB0X3VybBgFIAEoCSJcCgtQYXltZW50UGFnZRIN",
+            "CgV0b3RhbBgBIAEoBRIQCghwcmV2aW91cxgCIAEoBRIMCgRuZXh0GAMgASgF",
+            "Eh4KBGxpc3QYBCADKAsyEC5wYXltZW50LlBheW1lbnQiVgoUUGF5bWVudEJh",
+            "bGFuY2VEZXRhaWwSEAoIdGF4X2ZyZWUYASABKAUSDgoGc3VwcGx5GAIgASgF",
+            "EgsKA3ZhdBgDIAEoBRIPCgdzZXJ2aWNlGAQgASgFIpsCCg5QYXltZW50QmFs",
+            "YW5jZRIOCgZhbW91bnQYASABKAUSMwoMY2FzaF9yZWNlaXB0GAIgASgLMh0u",
+            "cGF5bWVudC5QYXltZW50QmFsYW5jZURldGFpbBIuCgdwcmltYXJ5GAMgASgL",
+            "Mh0ucGF5bWVudC5QYXltZW50QmFsYW5jZURldGFpbBIwCglzZWNvbmRhcnkY",
+            "BCABKAsyHS5wYXltZW50LlBheW1lbnRCYWxhbmNlRGV0YWlsEi8KCGRpc2Nv",
+            "dW50GAUgASgLMh0ucGF5bWVudC5QYXltZW50QmFsYW5jZURldGFpbBIxCglo",
+            "aXN0b3JpZXMYBiADKAsyHi5wYXltZW50LlBheW1lbnRCYWxhbmNlSGlzdG9y",
+            "eSLwAQoVUGF5bWVudEJhbGFuY2VIaXN0b3J5EjMKDGNhc2hfcmVjZWlwdBgB",
+            "IAEoCzIdLnBheW1lbnQuUGF5bWVudEJhbGFuY2VEZXRhaWwSLgoHcHJpbWFy",
+            "eRgCIAEoCzIdLnBheW1lbnQuUGF5bWVudEJhbGFuY2VEZXRhaWwSMAoJc2Vj",
+            "b25kYXJ5GAMgASgLMh0ucGF5bWVudC5QYXltZW50QmFsYW5jZURldGFpbBIv",
+            "CghkaXNjb3VudBgEIAEoCzIdLnBheW1lbnQuUGF5bWVudEJhbGFuY2VEZXRh",
+            "aWwSDwoHY3JlYXRlZBgFIAEoBSIhCg5QYXltZW50UmVxdWVzdBIPCgdpbXBf",
+            "dWlkGAEgASgJIlQKD1BheW1lbnRSZXNwb25zZRIMCgRjb2RlGAEgASgFEg8K",
+            "B21lc3NhZ2UYAiABKAkSIgoIcmVzcG9uc2UYAyABKAsyEC5wYXltZW50LlBh",
+            "eW1lbnQiIgoPUGF5bWVudHNSZXF1ZXN0Eg8KB2ltcF91aWQYASADKAkiVQoQ",
+            "UGF5bWVudHNSZXNwb25zZRIMCgRjb2RlGAEgASgFEg8KB21lc3NhZ2UYAiAB",
+            "KAkSIgoIcmVzcG9uc2UYAyADKAsyEC5wYXltZW50LlBheW1lbnQiYQoaUGF5",
+            "bWVudHNNZXJjaGFudFVpZFJlcXVlc3QSFAoMbWVyY2hhbnRfdWlkGAEgASgJ",
+            "Eg4KBnN0YXR1cxgCIAEoCRIMCgRwYWdlGAMgASgFEg8KB3NvcnRpbmcYBCAB",
+            "KAkiZAobUGF5bWVudHNNZXJjaGFudFVpZFJlc3BvbnNlEgwKBGNvZGUYASAB",
+            "KAUSDwoHbWVzc2FnZRgCIAEoCRImCghyZXNwb25zZRgDIAEoCzIULnBheW1l",
+            "bnQuUGF5bWVudFBhZ2UibgoUUGF5bWVudFN0YXR1c1JlcXVlc3QSDgoGc3Rh",
+            "dHVzGAEgASgJEgwKBHBhZ2UYAiABKAUSDQoFbGltaXQYAyABKAUSDAoEZnJv",
+            "bRgEIAEoBRIKCgJ0bxgFIAEoBRIPCgdzb3J0aW5nGAYgASgJIl4KFVBheW1l",
+            "bnRTdGF0dXNSZXNwb25zZRIMCgRjb2RlGAEgASgFEg8KB21lc3NhZ2UYAiAB",
+            "KAkSJgoIcmVzcG9uc2UYAyABKAsyFC5wYXltZW50LlBheW1lbnRQYWdlIlIK",
+            "GVBheW1lbnRNZXJjaGFudFVpZFJlcXVlc3QSFAoMbWVyY2hhbnRfdWlkGAEg",
+            "ASgJEg4KBnN0YXR1cxgCIAEoCRIPCgdzb3J0aW5nGAMgASgJIl8KGlBheW1l",
+            "bnRNZXJjaGFudFVpZFJlc3BvbnNlEgwKBGNvZGUYASABKAUSDwoHbWVzc2Fn",
+            "ZRgCIAEoCRIiCghyZXNwb25zZRgDIAEoCzIQLnBheW1lbnQuUGF5bWVudCLE",
+            "AQoUUGF5bWVudENhbmNsZVJlcXVlc3QSDwoHaW1wX3VpZBgBIAEoCRIUCgxt",
+            "ZXJjaGFudF91aWQYAiABKAkSDgoGYW1vdW50GAMgASgBEg8KB3R4X2ZyZWUY",
+            "BCABKAESEAoIY2hlY2tzdW0YBSABKAESDgoGcmVhc29tGAYgASgJEhUKDXJl",
+            "ZnVuZF9ob2xkZXIYByABKAkSEwoLcmVmdW5kX2JhbmsYCCABKAkSFgoOcmVm",
+            "dW5kX2FjY291bnQYCSABKAkiWgoVUGF5bWVudENhbmNsZVJlc3BvbnNlEgwK",
+            "BGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRIiCghyZXNwb25zZRgDIAEo",
+            "CzIQLnBheW1lbnQuUGF5bWVudCIoChVQYXltZW50QmFsYW5jZVJlcXVlc3QS",
+            "DwoHaW1wX3VpZBgBIAEoCSJiChZQYXltZW50QmFsYW5jZVJlc3BvbnNlEgwK",
+            "BGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRIpCghyZXNwb25zZRgDIAEo",
+            "CzIXLnBheW1lbnQuUGF5bWVudEJhbGFuY2VCL1otZ2l0aHViLmNvbS9pYW1w",
+            "b3J0L2ludGVyZmFjZS9idWlsZC9nby9wYXltZW50YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Payment.Payment), global::Payment.Payment.Parser, new[]{ "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "CardNumber", "CardQuota", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "Name", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Payment.Payment), global::Payment.Payment.Parser, new[]{ "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "CardNumber", "CardQuota", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CustomerUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "Name", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.CancleHistory), global::Payment.CancleHistory.Parser, new[]{ "PgTid", "Amount", "CancelledAt", "Reason", "ReceiptUrl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentPage), global::Payment.PaymentPage.Parser, new[]{ "Total", "Previous", "Next", "List" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentBalanceDetail), global::Payment.PaymentBalanceDetail.Parser, new[]{ "TaxFree", "Supply", "Vat", "Service" }, null, null, null, null),
@@ -174,6 +175,8 @@ namespace Payment {
       channel_ = other.channel_;
       currency_ = other.currency_;
       customData_ = other.customData_;
+      customerUid_ = other.customerUid_;
+      customerUidUsage_ = other.customerUidUsage_;
       escrow_ = other.escrow_;
       failReason_ = other.failReason_;
       failedAt_ = other.failedAt_;
@@ -186,6 +189,7 @@ namespace Payment {
       pgProvider_ = other.pgProvider_;
       pgTid_ = other.pgTid_;
       receiptUrl_ = other.receiptUrl_;
+      startedAt_ = other.startedAt_;
       status_ = other.status_;
       userAgent_ = other.userAgent_;
       vbankCode_ = other.vbankCode_;
@@ -453,8 +457,30 @@ namespace Payment {
       }
     }
 
+    /// <summary>Field number for the "customer_uid" field.</summary>
+    public const int CustomerUidFieldNumber = 24;
+    private string customerUid_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CustomerUid {
+      get { return customerUid_; }
+      set {
+        customerUid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "customer_uid_usage" field.</summary>
+    public const int CustomerUidUsageFieldNumber = 25;
+    private string customerUidUsage_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CustomerUidUsage {
+      get { return customerUidUsage_; }
+      set {
+        customerUidUsage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "escrow" field.</summary>
-    public const int EscrowFieldNumber = 24;
+    public const int EscrowFieldNumber = 26;
     private bool escrow_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Escrow {
@@ -465,7 +491,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "fail_reason" field.</summary>
-    public const int FailReasonFieldNumber = 25;
+    public const int FailReasonFieldNumber = 27;
     private string failReason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FailReason {
@@ -476,7 +502,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "failed_at" field.</summary>
-    public const int FailedAtFieldNumber = 26;
+    public const int FailedAtFieldNumber = 28;
     private int failedAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int FailedAt {
@@ -487,7 +513,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "imp_uid" field.</summary>
-    public const int ImpUidFieldNumber = 27;
+    public const int ImpUidFieldNumber = 29;
     private string impUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ImpUid {
@@ -498,7 +524,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "merchant_uid" field.</summary>
-    public const int MerchantUidFieldNumber = 28;
+    public const int MerchantUidFieldNumber = 30;
     private string merchantUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MerchantUid {
@@ -509,7 +535,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 29;
+    public const int NameFieldNumber = 31;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -520,7 +546,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "paid_at" field.</summary>
-    public const int PaidAtFieldNumber = 30;
+    public const int PaidAtFieldNumber = 32;
     private int paidAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PaidAt {
@@ -531,7 +557,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "pay_method" field.</summary>
-    public const int PayMethodFieldNumber = 31;
+    public const int PayMethodFieldNumber = 33;
     private string payMethod_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PayMethod {
@@ -542,7 +568,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "pg_id" field.</summary>
-    public const int PgIdFieldNumber = 32;
+    public const int PgIdFieldNumber = 34;
     private string pgId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PgId {
@@ -553,7 +579,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "pg_provider" field.</summary>
-    public const int PgProviderFieldNumber = 33;
+    public const int PgProviderFieldNumber = 35;
     private string pgProvider_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PgProvider {
@@ -564,7 +590,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "pg_tid" field.</summary>
-    public const int PgTidFieldNumber = 34;
+    public const int PgTidFieldNumber = 36;
     private string pgTid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PgTid {
@@ -575,7 +601,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "receipt_url" field.</summary>
-    public const int ReceiptUrlFieldNumber = 35;
+    public const int ReceiptUrlFieldNumber = 37;
     private string receiptUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ReceiptUrl {
@@ -585,8 +611,19 @@ namespace Payment {
       }
     }
 
+    /// <summary>Field number for the "started_at" field.</summary>
+    public const int StartedAtFieldNumber = 38;
+    private int startedAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int StartedAt {
+      get { return startedAt_; }
+      set {
+        startedAt_ = value;
+      }
+    }
+
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 36;
+    public const int StatusFieldNumber = 39;
     private string status_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Status {
@@ -597,7 +634,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "user_agent" field.</summary>
-    public const int UserAgentFieldNumber = 37;
+    public const int UserAgentFieldNumber = 40;
     private string userAgent_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string UserAgent {
@@ -608,7 +645,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "vbank_code" field.</summary>
-    public const int VbankCodeFieldNumber = 38;
+    public const int VbankCodeFieldNumber = 41;
     private string vbankCode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string VbankCode {
@@ -619,7 +656,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "vbank_date" field.</summary>
-    public const int VbankDateFieldNumber = 39;
+    public const int VbankDateFieldNumber = 42;
     private int vbankDate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int VbankDate {
@@ -630,7 +667,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "vbank_holder" field.</summary>
-    public const int VbankHolderFieldNumber = 40;
+    public const int VbankHolderFieldNumber = 43;
     private string vbankHolder_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string VbankHolder {
@@ -641,7 +678,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "vbank_issued_at" field.</summary>
-    public const int VbankIssuedAtFieldNumber = 41;
+    public const int VbankIssuedAtFieldNumber = 44;
     private int vbankIssuedAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int VbankIssuedAt {
@@ -652,7 +689,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "vbank_name" field.</summary>
-    public const int VbankNameFieldNumber = 42;
+    public const int VbankNameFieldNumber = 45;
     private string vbankName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string VbankName {
@@ -663,7 +700,7 @@ namespace Payment {
     }
 
     /// <summary>Field number for the "vbank_num" field.</summary>
-    public const int VbankNumFieldNumber = 43;
+    public const int VbankNumFieldNumber = 46;
     private string vbankNum_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string VbankNum {
@@ -709,6 +746,8 @@ namespace Payment {
       if (Channel != other.Channel) return false;
       if (Currency != other.Currency) return false;
       if (CustomData != other.CustomData) return false;
+      if (CustomerUid != other.CustomerUid) return false;
+      if (CustomerUidUsage != other.CustomerUidUsage) return false;
       if (Escrow != other.Escrow) return false;
       if (FailReason != other.FailReason) return false;
       if (FailedAt != other.FailedAt) return false;
@@ -721,6 +760,7 @@ namespace Payment {
       if (PgProvider != other.PgProvider) return false;
       if (PgTid != other.PgTid) return false;
       if (ReceiptUrl != other.ReceiptUrl) return false;
+      if (StartedAt != other.StartedAt) return false;
       if (Status != other.Status) return false;
       if (UserAgent != other.UserAgent) return false;
       if (VbankCode != other.VbankCode) return false;
@@ -758,6 +798,8 @@ namespace Payment {
       if (Channel.Length != 0) hash ^= Channel.GetHashCode();
       if (Currency.Length != 0) hash ^= Currency.GetHashCode();
       if (CustomData.Length != 0) hash ^= CustomData.GetHashCode();
+      if (CustomerUid.Length != 0) hash ^= CustomerUid.GetHashCode();
+      if (CustomerUidUsage.Length != 0) hash ^= CustomerUidUsage.GetHashCode();
       if (Escrow != false) hash ^= Escrow.GetHashCode();
       if (FailReason.Length != 0) hash ^= FailReason.GetHashCode();
       if (FailedAt != 0) hash ^= FailedAt.GetHashCode();
@@ -770,6 +812,7 @@ namespace Payment {
       if (PgProvider.Length != 0) hash ^= PgProvider.GetHashCode();
       if (PgTid.Length != 0) hash ^= PgTid.GetHashCode();
       if (ReceiptUrl.Length != 0) hash ^= ReceiptUrl.GetHashCode();
+      if (StartedAt != 0) hash ^= StartedAt.GetHashCode();
       if (Status.Length != 0) hash ^= Status.GetHashCode();
       if (UserAgent.Length != 0) hash ^= UserAgent.GetHashCode();
       if (VbankCode.Length != 0) hash ^= VbankCode.GetHashCode();
@@ -880,84 +923,96 @@ namespace Payment {
         output.WriteRawTag(186, 1);
         output.WriteString(CustomData);
       }
+      if (CustomerUid.Length != 0) {
+        output.WriteRawTag(194, 1);
+        output.WriteString(CustomerUid);
+      }
+      if (CustomerUidUsage.Length != 0) {
+        output.WriteRawTag(202, 1);
+        output.WriteString(CustomerUidUsage);
+      }
       if (Escrow != false) {
-        output.WriteRawTag(192, 1);
+        output.WriteRawTag(208, 1);
         output.WriteBool(Escrow);
       }
       if (FailReason.Length != 0) {
-        output.WriteRawTag(202, 1);
+        output.WriteRawTag(218, 1);
         output.WriteString(FailReason);
       }
       if (FailedAt != 0) {
-        output.WriteRawTag(208, 1);
+        output.WriteRawTag(224, 1);
         output.WriteInt32(FailedAt);
       }
       if (ImpUid.Length != 0) {
-        output.WriteRawTag(218, 1);
+        output.WriteRawTag(234, 1);
         output.WriteString(ImpUid);
       }
       if (MerchantUid.Length != 0) {
-        output.WriteRawTag(226, 1);
+        output.WriteRawTag(242, 1);
         output.WriteString(MerchantUid);
       }
       if (Name.Length != 0) {
-        output.WriteRawTag(234, 1);
+        output.WriteRawTag(250, 1);
         output.WriteString(Name);
       }
       if (PaidAt != 0) {
-        output.WriteRawTag(240, 1);
+        output.WriteRawTag(128, 2);
         output.WriteInt32(PaidAt);
       }
       if (PayMethod.Length != 0) {
-        output.WriteRawTag(250, 1);
+        output.WriteRawTag(138, 2);
         output.WriteString(PayMethod);
       }
       if (PgId.Length != 0) {
-        output.WriteRawTag(130, 2);
+        output.WriteRawTag(146, 2);
         output.WriteString(PgId);
       }
       if (PgProvider.Length != 0) {
-        output.WriteRawTag(138, 2);
+        output.WriteRawTag(154, 2);
         output.WriteString(PgProvider);
       }
       if (PgTid.Length != 0) {
-        output.WriteRawTag(146, 2);
+        output.WriteRawTag(162, 2);
         output.WriteString(PgTid);
       }
       if (ReceiptUrl.Length != 0) {
-        output.WriteRawTag(154, 2);
+        output.WriteRawTag(170, 2);
         output.WriteString(ReceiptUrl);
       }
+      if (StartedAt != 0) {
+        output.WriteRawTag(176, 2);
+        output.WriteInt32(StartedAt);
+      }
       if (Status.Length != 0) {
-        output.WriteRawTag(162, 2);
+        output.WriteRawTag(186, 2);
         output.WriteString(Status);
       }
       if (UserAgent.Length != 0) {
-        output.WriteRawTag(170, 2);
+        output.WriteRawTag(194, 2);
         output.WriteString(UserAgent);
       }
       if (VbankCode.Length != 0) {
-        output.WriteRawTag(178, 2);
+        output.WriteRawTag(202, 2);
         output.WriteString(VbankCode);
       }
       if (VbankDate != 0) {
-        output.WriteRawTag(184, 2);
+        output.WriteRawTag(208, 2);
         output.WriteInt32(VbankDate);
       }
       if (VbankHolder.Length != 0) {
-        output.WriteRawTag(194, 2);
+        output.WriteRawTag(218, 2);
         output.WriteString(VbankHolder);
       }
       if (VbankIssuedAt != 0) {
-        output.WriteRawTag(200, 2);
+        output.WriteRawTag(224, 2);
         output.WriteInt32(VbankIssuedAt);
       }
       if (VbankName.Length != 0) {
-        output.WriteRawTag(210, 2);
+        output.WriteRawTag(234, 2);
         output.WriteString(VbankName);
       }
       if (VbankNum.Length != 0) {
-        output.WriteRawTag(218, 2);
+        output.WriteRawTag(242, 2);
         output.WriteString(VbankNum);
       }
       if (_unknownFields != null) {
@@ -1055,84 +1110,96 @@ namespace Payment {
         output.WriteRawTag(186, 1);
         output.WriteString(CustomData);
       }
+      if (CustomerUid.Length != 0) {
+        output.WriteRawTag(194, 1);
+        output.WriteString(CustomerUid);
+      }
+      if (CustomerUidUsage.Length != 0) {
+        output.WriteRawTag(202, 1);
+        output.WriteString(CustomerUidUsage);
+      }
       if (Escrow != false) {
-        output.WriteRawTag(192, 1);
+        output.WriteRawTag(208, 1);
         output.WriteBool(Escrow);
       }
       if (FailReason.Length != 0) {
-        output.WriteRawTag(202, 1);
+        output.WriteRawTag(218, 1);
         output.WriteString(FailReason);
       }
       if (FailedAt != 0) {
-        output.WriteRawTag(208, 1);
+        output.WriteRawTag(224, 1);
         output.WriteInt32(FailedAt);
       }
       if (ImpUid.Length != 0) {
-        output.WriteRawTag(218, 1);
+        output.WriteRawTag(234, 1);
         output.WriteString(ImpUid);
       }
       if (MerchantUid.Length != 0) {
-        output.WriteRawTag(226, 1);
+        output.WriteRawTag(242, 1);
         output.WriteString(MerchantUid);
       }
       if (Name.Length != 0) {
-        output.WriteRawTag(234, 1);
+        output.WriteRawTag(250, 1);
         output.WriteString(Name);
       }
       if (PaidAt != 0) {
-        output.WriteRawTag(240, 1);
+        output.WriteRawTag(128, 2);
         output.WriteInt32(PaidAt);
       }
       if (PayMethod.Length != 0) {
-        output.WriteRawTag(250, 1);
+        output.WriteRawTag(138, 2);
         output.WriteString(PayMethod);
       }
       if (PgId.Length != 0) {
-        output.WriteRawTag(130, 2);
+        output.WriteRawTag(146, 2);
         output.WriteString(PgId);
       }
       if (PgProvider.Length != 0) {
-        output.WriteRawTag(138, 2);
+        output.WriteRawTag(154, 2);
         output.WriteString(PgProvider);
       }
       if (PgTid.Length != 0) {
-        output.WriteRawTag(146, 2);
+        output.WriteRawTag(162, 2);
         output.WriteString(PgTid);
       }
       if (ReceiptUrl.Length != 0) {
-        output.WriteRawTag(154, 2);
+        output.WriteRawTag(170, 2);
         output.WriteString(ReceiptUrl);
       }
+      if (StartedAt != 0) {
+        output.WriteRawTag(176, 2);
+        output.WriteInt32(StartedAt);
+      }
       if (Status.Length != 0) {
-        output.WriteRawTag(162, 2);
+        output.WriteRawTag(186, 2);
         output.WriteString(Status);
       }
       if (UserAgent.Length != 0) {
-        output.WriteRawTag(170, 2);
+        output.WriteRawTag(194, 2);
         output.WriteString(UserAgent);
       }
       if (VbankCode.Length != 0) {
-        output.WriteRawTag(178, 2);
+        output.WriteRawTag(202, 2);
         output.WriteString(VbankCode);
       }
       if (VbankDate != 0) {
-        output.WriteRawTag(184, 2);
+        output.WriteRawTag(208, 2);
         output.WriteInt32(VbankDate);
       }
       if (VbankHolder.Length != 0) {
-        output.WriteRawTag(194, 2);
+        output.WriteRawTag(218, 2);
         output.WriteString(VbankHolder);
       }
       if (VbankIssuedAt != 0) {
-        output.WriteRawTag(200, 2);
+        output.WriteRawTag(224, 2);
         output.WriteInt32(VbankIssuedAt);
       }
       if (VbankName.Length != 0) {
-        output.WriteRawTag(210, 2);
+        output.WriteRawTag(234, 2);
         output.WriteString(VbankName);
       }
       if (VbankNum.Length != 0) {
-        output.WriteRawTag(218, 2);
+        output.WriteRawTag(242, 2);
         output.WriteString(VbankNum);
       }
       if (_unknownFields != null) {
@@ -1209,6 +1276,12 @@ namespace Payment {
       if (CustomData.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(CustomData);
       }
+      if (CustomerUid.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CustomerUid);
+      }
+      if (CustomerUidUsage.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CustomerUidUsage);
+      }
       if (Escrow != false) {
         size += 2 + 1;
       }
@@ -1244,6 +1317,9 @@ namespace Payment {
       }
       if (ReceiptUrl.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ReceiptUrl);
+      }
+      if (StartedAt != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(StartedAt);
       }
       if (Status.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Status);
@@ -1345,6 +1421,12 @@ namespace Payment {
       if (other.CustomData.Length != 0) {
         CustomData = other.CustomData;
       }
+      if (other.CustomerUid.Length != 0) {
+        CustomerUid = other.CustomerUid;
+      }
+      if (other.CustomerUidUsage.Length != 0) {
+        CustomerUidUsage = other.CustomerUidUsage;
+      }
       if (other.Escrow != false) {
         Escrow = other.Escrow;
       }
@@ -1380,6 +1462,9 @@ namespace Payment {
       }
       if (other.ReceiptUrl.Length != 0) {
         ReceiptUrl = other.ReceiptUrl;
+      }
+      if (other.StartedAt != 0) {
+        StartedAt = other.StartedAt;
       }
       if (other.Status.Length != 0) {
         Status = other.Status;
@@ -1511,83 +1596,95 @@ namespace Payment {
             CustomData = input.ReadString();
             break;
           }
-          case 192: {
-            Escrow = input.ReadBool();
+          case 194: {
+            CustomerUid = input.ReadString();
             break;
           }
           case 202: {
-            FailReason = input.ReadString();
+            CustomerUidUsage = input.ReadString();
             break;
           }
           case 208: {
-            FailedAt = input.ReadInt32();
+            Escrow = input.ReadBool();
             break;
           }
           case 218: {
-            ImpUid = input.ReadString();
+            FailReason = input.ReadString();
             break;
           }
-          case 226: {
-            MerchantUid = input.ReadString();
+          case 224: {
+            FailedAt = input.ReadInt32();
             break;
           }
           case 234: {
-            Name = input.ReadString();
+            ImpUid = input.ReadString();
             break;
           }
-          case 240: {
-            PaidAt = input.ReadInt32();
+          case 242: {
+            MerchantUid = input.ReadString();
             break;
           }
           case 250: {
-            PayMethod = input.ReadString();
+            Name = input.ReadString();
             break;
           }
-          case 258: {
-            PgId = input.ReadString();
+          case 256: {
+            PaidAt = input.ReadInt32();
             break;
           }
           case 266: {
-            PgProvider = input.ReadString();
+            PayMethod = input.ReadString();
             break;
           }
           case 274: {
-            PgTid = input.ReadString();
+            PgId = input.ReadString();
             break;
           }
           case 282: {
-            ReceiptUrl = input.ReadString();
+            PgProvider = input.ReadString();
             break;
           }
           case 290: {
-            Status = input.ReadString();
+            PgTid = input.ReadString();
             break;
           }
           case 298: {
-            UserAgent = input.ReadString();
+            ReceiptUrl = input.ReadString();
             break;
           }
-          case 306: {
-            VbankCode = input.ReadString();
+          case 304: {
+            StartedAt = input.ReadInt32();
             break;
           }
-          case 312: {
-            VbankDate = input.ReadInt32();
+          case 314: {
+            Status = input.ReadString();
             break;
           }
           case 322: {
-            VbankHolder = input.ReadString();
+            UserAgent = input.ReadString();
             break;
           }
-          case 328: {
-            VbankIssuedAt = input.ReadInt32();
+          case 330: {
+            VbankCode = input.ReadString();
             break;
           }
-          case 338: {
-            VbankName = input.ReadString();
+          case 336: {
+            VbankDate = input.ReadInt32();
             break;
           }
           case 346: {
+            VbankHolder = input.ReadString();
+            break;
+          }
+          case 352: {
+            VbankIssuedAt = input.ReadInt32();
+            break;
+          }
+          case 362: {
+            VbankName = input.ReadString();
+            break;
+          }
+          case 370: {
             VbankNum = input.ReadString();
             break;
           }
@@ -1697,83 +1794,95 @@ namespace Payment {
             CustomData = input.ReadString();
             break;
           }
-          case 192: {
-            Escrow = input.ReadBool();
+          case 194: {
+            CustomerUid = input.ReadString();
             break;
           }
           case 202: {
-            FailReason = input.ReadString();
+            CustomerUidUsage = input.ReadString();
             break;
           }
           case 208: {
-            FailedAt = input.ReadInt32();
+            Escrow = input.ReadBool();
             break;
           }
           case 218: {
-            ImpUid = input.ReadString();
+            FailReason = input.ReadString();
             break;
           }
-          case 226: {
-            MerchantUid = input.ReadString();
+          case 224: {
+            FailedAt = input.ReadInt32();
             break;
           }
           case 234: {
-            Name = input.ReadString();
+            ImpUid = input.ReadString();
             break;
           }
-          case 240: {
-            PaidAt = input.ReadInt32();
+          case 242: {
+            MerchantUid = input.ReadString();
             break;
           }
           case 250: {
-            PayMethod = input.ReadString();
+            Name = input.ReadString();
             break;
           }
-          case 258: {
-            PgId = input.ReadString();
+          case 256: {
+            PaidAt = input.ReadInt32();
             break;
           }
           case 266: {
-            PgProvider = input.ReadString();
+            PayMethod = input.ReadString();
             break;
           }
           case 274: {
-            PgTid = input.ReadString();
+            PgId = input.ReadString();
             break;
           }
           case 282: {
-            ReceiptUrl = input.ReadString();
+            PgProvider = input.ReadString();
             break;
           }
           case 290: {
-            Status = input.ReadString();
+            PgTid = input.ReadString();
             break;
           }
           case 298: {
-            UserAgent = input.ReadString();
+            ReceiptUrl = input.ReadString();
             break;
           }
-          case 306: {
-            VbankCode = input.ReadString();
+          case 304: {
+            StartedAt = input.ReadInt32();
             break;
           }
-          case 312: {
-            VbankDate = input.ReadInt32();
+          case 314: {
+            Status = input.ReadString();
             break;
           }
           case 322: {
-            VbankHolder = input.ReadString();
+            UserAgent = input.ReadString();
             break;
           }
-          case 328: {
-            VbankIssuedAt = input.ReadInt32();
+          case 330: {
+            VbankCode = input.ReadString();
             break;
           }
-          case 338: {
-            VbankName = input.ReadString();
+          case 336: {
+            VbankDate = input.ReadInt32();
             break;
           }
           case 346: {
+            VbankHolder = input.ReadString();
+            break;
+          }
+          case 352: {
+            VbankIssuedAt = input.ReadInt32();
+            break;
+          }
+          case 362: {
+            VbankName = input.ReadString();
+            break;
+          }
+          case 370: {
             VbankNum = input.ReadString();
             break;
           }

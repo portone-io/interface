@@ -178,3 +178,19 @@ message PaymentBalanceResponse {
     string message = 2;
     PaymentBalance response = 3;
 }
+
+message Prepare {
+    string merchant_uid = 1;
+    int32 amount = 2;
+}
+
+message PaymentPrepareRequest {
+    string merchant_uid = 1;
+    double amount = 2;
+}
+
+message PaymentPrepareResponse {
+    int32 code = 1;
+    string message = 2;
+    Prepare response = 3;
+}

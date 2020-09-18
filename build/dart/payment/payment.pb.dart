@@ -1581,3 +1581,138 @@ class PaymentBalanceResponse extends $pb.GeneratedMessage {
   PaymentBalance ensureResponse() => $_ensure(2);
 }
 
+class Prepare extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Prepare', package: const $pb.PackageName('payment'), createEmptyInstance: create)
+    ..aOS(1, 'merchantUid')
+    ..a<$core.int>(2, 'amount', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
+
+  Prepare._() : super();
+  factory Prepare() => create();
+  factory Prepare.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Prepare.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  Prepare clone() => Prepare()..mergeFromMessage(this);
+  Prepare copyWith(void Function(Prepare) updates) => super.copyWith((message) => updates(message as Prepare));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Prepare create() => Prepare._();
+  Prepare createEmptyInstance() => create();
+  static $pb.PbList<Prepare> createRepeated() => $pb.PbList<Prepare>();
+  @$core.pragma('dart2js:noInline')
+  static Prepare getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Prepare>(create);
+  static Prepare _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get merchantUid => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set merchantUid($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasMerchantUid() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMerchantUid() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get amount => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set amount($core.int v) { $_setSignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAmount() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAmount() => clearField(2);
+}
+
+class PaymentPrepareRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PaymentPrepareRequest', package: const $pb.PackageName('payment'), createEmptyInstance: create)
+    ..aOS(1, 'merchantUid')
+    ..a<$core.double>(2, 'amount', $pb.PbFieldType.OD)
+    ..hasRequiredFields = false
+  ;
+
+  PaymentPrepareRequest._() : super();
+  factory PaymentPrepareRequest() => create();
+  factory PaymentPrepareRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PaymentPrepareRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  PaymentPrepareRequest clone() => PaymentPrepareRequest()..mergeFromMessage(this);
+  PaymentPrepareRequest copyWith(void Function(PaymentPrepareRequest) updates) => super.copyWith((message) => updates(message as PaymentPrepareRequest));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PaymentPrepareRequest create() => PaymentPrepareRequest._();
+  PaymentPrepareRequest createEmptyInstance() => create();
+  static $pb.PbList<PaymentPrepareRequest> createRepeated() => $pb.PbList<PaymentPrepareRequest>();
+  @$core.pragma('dart2js:noInline')
+  static PaymentPrepareRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PaymentPrepareRequest>(create);
+  static PaymentPrepareRequest _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get merchantUid => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set merchantUid($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasMerchantUid() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMerchantUid() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get amount => $_getN(1);
+  @$pb.TagNumber(2)
+  set amount($core.double v) { $_setDouble(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAmount() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAmount() => clearField(2);
+}
+
+class PaymentPrepareResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PaymentPrepareResponse', package: const $pb.PackageName('payment'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'code', $pb.PbFieldType.O3)
+    ..aOS(2, 'message')
+    ..aOM<Prepare>(3, 'response', subBuilder: Prepare.create)
+    ..hasRequiredFields = false
+  ;
+
+  PaymentPrepareResponse._() : super();
+  factory PaymentPrepareResponse() => create();
+  factory PaymentPrepareResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PaymentPrepareResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  PaymentPrepareResponse clone() => PaymentPrepareResponse()..mergeFromMessage(this);
+  PaymentPrepareResponse copyWith(void Function(PaymentPrepareResponse) updates) => super.copyWith((message) => updates(message as PaymentPrepareResponse));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PaymentPrepareResponse create() => PaymentPrepareResponse._();
+  PaymentPrepareResponse createEmptyInstance() => create();
+  static $pb.PbList<PaymentPrepareResponse> createRepeated() => $pb.PbList<PaymentPrepareResponse>();
+  @$core.pragma('dart2js:noInline')
+  static PaymentPrepareResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PaymentPrepareResponse>(create);
+  static PaymentPrepareResponse _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get code => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set code($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCode() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCode() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get message => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set message($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMessage() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMessage() => clearField(2);
+
+  @$pb.TagNumber(3)
+  Prepare get response => $_getN(2);
+  @$pb.TagNumber(3)
+  set response(Prepare v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasResponse() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearResponse() => clearField(3);
+  @$pb.TagNumber(3)
+  Prepare ensureResponse() => $_ensure(2);
+}
+

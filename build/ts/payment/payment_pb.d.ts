@@ -827,3 +827,81 @@ export namespace PaymentBalanceResponse {
   }
 }
 
+export class Prepare extends jspb.Message {
+  getMerchantUid(): string;
+  setMerchantUid(value: string): void;
+
+  getAmount(): number;
+  setAmount(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Prepare.AsObject;
+  static toObject(includeInstance: boolean, msg: Prepare): Prepare.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: Prepare, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Prepare;
+  static deserializeBinaryFromReader(message: Prepare, reader: jspb.BinaryReader): Prepare;
+}
+
+export namespace Prepare {
+  export type AsObject = {
+    merchantUid: string,
+    amount: number,
+  }
+}
+
+export class PaymentPrepareRequest extends jspb.Message {
+  getMerchantUid(): string;
+  setMerchantUid(value: string): void;
+
+  getAmount(): number;
+  setAmount(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PaymentPrepareRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: PaymentPrepareRequest): PaymentPrepareRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: PaymentPrepareRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PaymentPrepareRequest;
+  static deserializeBinaryFromReader(message: PaymentPrepareRequest, reader: jspb.BinaryReader): PaymentPrepareRequest;
+}
+
+export namespace PaymentPrepareRequest {
+  export type AsObject = {
+    merchantUid: string,
+    amount: number,
+  }
+}
+
+export class PaymentPrepareResponse extends jspb.Message {
+  getCode(): number;
+  setCode(value: number): void;
+
+  getMessage(): string;
+  setMessage(value: string): void;
+
+  hasResponse(): boolean;
+  clearResponse(): void;
+  getResponse(): Prepare | undefined;
+  setResponse(value?: Prepare): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PaymentPrepareResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: PaymentPrepareResponse): PaymentPrepareResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: PaymentPrepareResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PaymentPrepareResponse;
+  static deserializeBinaryFromReader(message: PaymentPrepareResponse, reader: jspb.BinaryReader): PaymentPrepareResponse;
+}
+
+export namespace PaymentPrepareResponse {
+  export type AsObject = {
+    code: number,
+    message: string,
+    response?: Prepare.AsObject,
+  }
+}
+

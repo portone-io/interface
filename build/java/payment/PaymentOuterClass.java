@@ -24441,6 +24441,2125 @@ public final class PaymentOuterClass {
 
   }
 
+  public interface PrepareOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payment.Prepare)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string merchant_uid = 1;</code>
+     * @return The merchantUid.
+     */
+    java.lang.String getMerchantUid();
+    /**
+     * <code>string merchant_uid = 1;</code>
+     * @return The bytes for merchantUid.
+     */
+    com.google.protobuf.ByteString
+        getMerchantUidBytes();
+
+    /**
+     * <code>int32 amount = 2;</code>
+     * @return The amount.
+     */
+    int getAmount();
+  }
+  /**
+   * Protobuf type {@code payment.Prepare}
+   */
+  public static final class Prepare extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payment.Prepare)
+      PrepareOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Prepare.newBuilder() to construct.
+    private Prepare(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Prepare() {
+      merchantUid_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Prepare();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Prepare(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              merchantUid_ = s;
+              break;
+            }
+            case 16: {
+
+              amount_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return payment.PaymentOuterClass.internal_static_payment_Prepare_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return payment.PaymentOuterClass.internal_static_payment_Prepare_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              payment.PaymentOuterClass.Prepare.class, payment.PaymentOuterClass.Prepare.Builder.class);
+    }
+
+    public static final int MERCHANT_UID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object merchantUid_;
+    /**
+     * <code>string merchant_uid = 1;</code>
+     * @return The merchantUid.
+     */
+    @java.lang.Override
+    public java.lang.String getMerchantUid() {
+      java.lang.Object ref = merchantUid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        merchantUid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string merchant_uid = 1;</code>
+     * @return The bytes for merchantUid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMerchantUidBytes() {
+      java.lang.Object ref = merchantUid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        merchantUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private int amount_;
+    /**
+     * <code>int32 amount = 2;</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public int getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getMerchantUidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, merchantUid_);
+      }
+      if (amount_ != 0) {
+        output.writeInt32(2, amount_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getMerchantUidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, merchantUid_);
+      }
+      if (amount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, amount_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof payment.PaymentOuterClass.Prepare)) {
+        return super.equals(obj);
+      }
+      payment.PaymentOuterClass.Prepare other = (payment.PaymentOuterClass.Prepare) obj;
+
+      if (!getMerchantUid()
+          .equals(other.getMerchantUid())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MERCHANT_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getMerchantUid().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static payment.PaymentOuterClass.Prepare parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.Prepare parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.Prepare parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.Prepare parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.Prepare parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.Prepare parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.Prepare parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.Prepare parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.Prepare parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.Prepare parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.Prepare parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.Prepare parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(payment.PaymentOuterClass.Prepare prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payment.Prepare}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payment.Prepare)
+        payment.PaymentOuterClass.PrepareOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return payment.PaymentOuterClass.internal_static_payment_Prepare_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return payment.PaymentOuterClass.internal_static_payment_Prepare_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                payment.PaymentOuterClass.Prepare.class, payment.PaymentOuterClass.Prepare.Builder.class);
+      }
+
+      // Construct using payment.PaymentOuterClass.Prepare.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        merchantUid_ = "";
+
+        amount_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return payment.PaymentOuterClass.internal_static_payment_Prepare_descriptor;
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.Prepare getDefaultInstanceForType() {
+        return payment.PaymentOuterClass.Prepare.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.Prepare build() {
+        payment.PaymentOuterClass.Prepare result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.Prepare buildPartial() {
+        payment.PaymentOuterClass.Prepare result = new payment.PaymentOuterClass.Prepare(this);
+        result.merchantUid_ = merchantUid_;
+        result.amount_ = amount_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof payment.PaymentOuterClass.Prepare) {
+          return mergeFrom((payment.PaymentOuterClass.Prepare)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(payment.PaymentOuterClass.Prepare other) {
+        if (other == payment.PaymentOuterClass.Prepare.getDefaultInstance()) return this;
+        if (!other.getMerchantUid().isEmpty()) {
+          merchantUid_ = other.merchantUid_;
+          onChanged();
+        }
+        if (other.getAmount() != 0) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        payment.PaymentOuterClass.Prepare parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (payment.PaymentOuterClass.Prepare) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object merchantUid_ = "";
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @return The merchantUid.
+       */
+      public java.lang.String getMerchantUid() {
+        java.lang.Object ref = merchantUid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          merchantUid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @return The bytes for merchantUid.
+       */
+      public com.google.protobuf.ByteString
+          getMerchantUidBytes() {
+        java.lang.Object ref = merchantUid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          merchantUid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @param value The merchantUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMerchantUid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        merchantUid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMerchantUid() {
+        
+        merchantUid_ = getDefaultInstance().getMerchantUid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @param value The bytes for merchantUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMerchantUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        merchantUid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int amount_ ;
+      /**
+       * <code>int32 amount = 2;</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public int getAmount() {
+        return amount_;
+      }
+      /**
+       * <code>int32 amount = 2;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(int value) {
+        
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 amount = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        
+        amount_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payment.Prepare)
+    }
+
+    // @@protoc_insertion_point(class_scope:payment.Prepare)
+    private static final payment.PaymentOuterClass.Prepare DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new payment.PaymentOuterClass.Prepare();
+    }
+
+    public static payment.PaymentOuterClass.Prepare getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Prepare>
+        PARSER = new com.google.protobuf.AbstractParser<Prepare>() {
+      @java.lang.Override
+      public Prepare parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Prepare(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Prepare> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Prepare> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public payment.PaymentOuterClass.Prepare getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PaymentPrepareRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payment.PaymentPrepareRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string merchant_uid = 1;</code>
+     * @return The merchantUid.
+     */
+    java.lang.String getMerchantUid();
+    /**
+     * <code>string merchant_uid = 1;</code>
+     * @return The bytes for merchantUid.
+     */
+    com.google.protobuf.ByteString
+        getMerchantUidBytes();
+
+    /**
+     * <code>double amount = 2;</code>
+     * @return The amount.
+     */
+    double getAmount();
+  }
+  /**
+   * Protobuf type {@code payment.PaymentPrepareRequest}
+   */
+  public static final class PaymentPrepareRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payment.PaymentPrepareRequest)
+      PaymentPrepareRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PaymentPrepareRequest.newBuilder() to construct.
+    private PaymentPrepareRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PaymentPrepareRequest() {
+      merchantUid_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PaymentPrepareRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PaymentPrepareRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              merchantUid_ = s;
+              break;
+            }
+            case 17: {
+
+              amount_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return payment.PaymentOuterClass.internal_static_payment_PaymentPrepareRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return payment.PaymentOuterClass.internal_static_payment_PaymentPrepareRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              payment.PaymentOuterClass.PaymentPrepareRequest.class, payment.PaymentOuterClass.PaymentPrepareRequest.Builder.class);
+    }
+
+    public static final int MERCHANT_UID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object merchantUid_;
+    /**
+     * <code>string merchant_uid = 1;</code>
+     * @return The merchantUid.
+     */
+    @java.lang.Override
+    public java.lang.String getMerchantUid() {
+      java.lang.Object ref = merchantUid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        merchantUid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string merchant_uid = 1;</code>
+     * @return The bytes for merchantUid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMerchantUidBytes() {
+      java.lang.Object ref = merchantUid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        merchantUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private double amount_;
+    /**
+     * <code>double amount = 2;</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public double getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getMerchantUidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, merchantUid_);
+      }
+      if (amount_ != 0D) {
+        output.writeDouble(2, amount_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getMerchantUidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, merchantUid_);
+      }
+      if (amount_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, amount_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof payment.PaymentOuterClass.PaymentPrepareRequest)) {
+        return super.equals(obj);
+      }
+      payment.PaymentOuterClass.PaymentPrepareRequest other = (payment.PaymentOuterClass.PaymentPrepareRequest) obj;
+
+      if (!getMerchantUid()
+          .equals(other.getMerchantUid())) return false;
+      if (java.lang.Double.doubleToLongBits(getAmount())
+          != java.lang.Double.doubleToLongBits(
+              other.getAmount())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MERCHANT_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getMerchantUid().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getAmount()));
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static payment.PaymentOuterClass.PaymentPrepareRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(payment.PaymentOuterClass.PaymentPrepareRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payment.PaymentPrepareRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payment.PaymentPrepareRequest)
+        payment.PaymentOuterClass.PaymentPrepareRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return payment.PaymentOuterClass.internal_static_payment_PaymentPrepareRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return payment.PaymentOuterClass.internal_static_payment_PaymentPrepareRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                payment.PaymentOuterClass.PaymentPrepareRequest.class, payment.PaymentOuterClass.PaymentPrepareRequest.Builder.class);
+      }
+
+      // Construct using payment.PaymentOuterClass.PaymentPrepareRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        merchantUid_ = "";
+
+        amount_ = 0D;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return payment.PaymentOuterClass.internal_static_payment_PaymentPrepareRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.PaymentPrepareRequest getDefaultInstanceForType() {
+        return payment.PaymentOuterClass.PaymentPrepareRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.PaymentPrepareRequest build() {
+        payment.PaymentOuterClass.PaymentPrepareRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.PaymentPrepareRequest buildPartial() {
+        payment.PaymentOuterClass.PaymentPrepareRequest result = new payment.PaymentOuterClass.PaymentPrepareRequest(this);
+        result.merchantUid_ = merchantUid_;
+        result.amount_ = amount_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof payment.PaymentOuterClass.PaymentPrepareRequest) {
+          return mergeFrom((payment.PaymentOuterClass.PaymentPrepareRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(payment.PaymentOuterClass.PaymentPrepareRequest other) {
+        if (other == payment.PaymentOuterClass.PaymentPrepareRequest.getDefaultInstance()) return this;
+        if (!other.getMerchantUid().isEmpty()) {
+          merchantUid_ = other.merchantUid_;
+          onChanged();
+        }
+        if (other.getAmount() != 0D) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        payment.PaymentOuterClass.PaymentPrepareRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (payment.PaymentOuterClass.PaymentPrepareRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object merchantUid_ = "";
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @return The merchantUid.
+       */
+      public java.lang.String getMerchantUid() {
+        java.lang.Object ref = merchantUid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          merchantUid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @return The bytes for merchantUid.
+       */
+      public com.google.protobuf.ByteString
+          getMerchantUidBytes() {
+        java.lang.Object ref = merchantUid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          merchantUid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @param value The merchantUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMerchantUid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        merchantUid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMerchantUid() {
+        
+        merchantUid_ = getDefaultInstance().getMerchantUid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @param value The bytes for merchantUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMerchantUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        merchantUid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private double amount_ ;
+      /**
+       * <code>double amount = 2;</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public double getAmount() {
+        return amount_;
+      }
+      /**
+       * <code>double amount = 2;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(double value) {
+        
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double amount = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        
+        amount_ = 0D;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payment.PaymentPrepareRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:payment.PaymentPrepareRequest)
+    private static final payment.PaymentOuterClass.PaymentPrepareRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new payment.PaymentOuterClass.PaymentPrepareRequest();
+    }
+
+    public static payment.PaymentOuterClass.PaymentPrepareRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PaymentPrepareRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PaymentPrepareRequest>() {
+      @java.lang.Override
+      public PaymentPrepareRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PaymentPrepareRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PaymentPrepareRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PaymentPrepareRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public payment.PaymentOuterClass.PaymentPrepareRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PaymentPrepareResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payment.PaymentPrepareResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 code = 1;</code>
+     * @return The code.
+     */
+    int getCode();
+
+    /**
+     * <code>string message = 2;</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 2;</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+
+    /**
+     * <code>.payment.Prepare response = 3;</code>
+     * @return Whether the response field is set.
+     */
+    boolean hasResponse();
+    /**
+     * <code>.payment.Prepare response = 3;</code>
+     * @return The response.
+     */
+    payment.PaymentOuterClass.Prepare getResponse();
+    /**
+     * <code>.payment.Prepare response = 3;</code>
+     */
+    payment.PaymentOuterClass.PrepareOrBuilder getResponseOrBuilder();
+  }
+  /**
+   * Protobuf type {@code payment.PaymentPrepareResponse}
+   */
+  public static final class PaymentPrepareResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payment.PaymentPrepareResponse)
+      PaymentPrepareResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PaymentPrepareResponse.newBuilder() to construct.
+    private PaymentPrepareResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PaymentPrepareResponse() {
+      message_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PaymentPrepareResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PaymentPrepareResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              code_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              message_ = s;
+              break;
+            }
+            case 26: {
+              payment.PaymentOuterClass.Prepare.Builder subBuilder = null;
+              if (response_ != null) {
+                subBuilder = response_.toBuilder();
+              }
+              response_ = input.readMessage(payment.PaymentOuterClass.Prepare.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(response_);
+                response_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return payment.PaymentOuterClass.internal_static_payment_PaymentPrepareResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return payment.PaymentOuterClass.internal_static_payment_PaymentPrepareResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              payment.PaymentOuterClass.PaymentPrepareResponse.class, payment.PaymentOuterClass.PaymentPrepareResponse.Builder.class);
+    }
+
+    public static final int CODE_FIELD_NUMBER = 1;
+    private int code_;
+    /**
+     * <code>int32 code = 1;</code>
+     * @return The code.
+     */
+    @java.lang.Override
+    public int getCode() {
+      return code_;
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object message_;
+    /**
+     * <code>string message = 2;</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string message = 2;</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESPONSE_FIELD_NUMBER = 3;
+    private payment.PaymentOuterClass.Prepare response_;
+    /**
+     * <code>.payment.Prepare response = 3;</code>
+     * @return Whether the response field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponse() {
+      return response_ != null;
+    }
+    /**
+     * <code>.payment.Prepare response = 3;</code>
+     * @return The response.
+     */
+    @java.lang.Override
+    public payment.PaymentOuterClass.Prepare getResponse() {
+      return response_ == null ? payment.PaymentOuterClass.Prepare.getDefaultInstance() : response_;
+    }
+    /**
+     * <code>.payment.Prepare response = 3;</code>
+     */
+    @java.lang.Override
+    public payment.PaymentOuterClass.PrepareOrBuilder getResponseOrBuilder() {
+      return getResponse();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (code_ != 0) {
+        output.writeInt32(1, code_);
+      }
+      if (!getMessageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
+      }
+      if (response_ != null) {
+        output.writeMessage(3, getResponse());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (code_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, code_);
+      }
+      if (!getMessageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
+      }
+      if (response_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getResponse());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof payment.PaymentOuterClass.PaymentPrepareResponse)) {
+        return super.equals(obj);
+      }
+      payment.PaymentOuterClass.PaymentPrepareResponse other = (payment.PaymentOuterClass.PaymentPrepareResponse) obj;
+
+      if (getCode()
+          != other.getCode()) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (hasResponse() != other.hasResponse()) return false;
+      if (hasResponse()) {
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCode();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
+      if (hasResponse()) {
+        hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getResponse().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static payment.PaymentOuterClass.PaymentPrepareResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.PaymentPrepareResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(payment.PaymentOuterClass.PaymentPrepareResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payment.PaymentPrepareResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payment.PaymentPrepareResponse)
+        payment.PaymentOuterClass.PaymentPrepareResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return payment.PaymentOuterClass.internal_static_payment_PaymentPrepareResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return payment.PaymentOuterClass.internal_static_payment_PaymentPrepareResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                payment.PaymentOuterClass.PaymentPrepareResponse.class, payment.PaymentOuterClass.PaymentPrepareResponse.Builder.class);
+      }
+
+      // Construct using payment.PaymentOuterClass.PaymentPrepareResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        code_ = 0;
+
+        message_ = "";
+
+        if (responseBuilder_ == null) {
+          response_ = null;
+        } else {
+          response_ = null;
+          responseBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return payment.PaymentOuterClass.internal_static_payment_PaymentPrepareResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.PaymentPrepareResponse getDefaultInstanceForType() {
+        return payment.PaymentOuterClass.PaymentPrepareResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.PaymentPrepareResponse build() {
+        payment.PaymentOuterClass.PaymentPrepareResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.PaymentPrepareResponse buildPartial() {
+        payment.PaymentOuterClass.PaymentPrepareResponse result = new payment.PaymentOuterClass.PaymentPrepareResponse(this);
+        result.code_ = code_;
+        result.message_ = message_;
+        if (responseBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = responseBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof payment.PaymentOuterClass.PaymentPrepareResponse) {
+          return mergeFrom((payment.PaymentOuterClass.PaymentPrepareResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(payment.PaymentOuterClass.PaymentPrepareResponse other) {
+        if (other == payment.PaymentOuterClass.PaymentPrepareResponse.getDefaultInstance()) return this;
+        if (other.getCode() != 0) {
+          setCode(other.getCode());
+        }
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          onChanged();
+        }
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        payment.PaymentOuterClass.PaymentPrepareResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (payment.PaymentOuterClass.PaymentPrepareResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int code_ ;
+      /**
+       * <code>int32 code = 1;</code>
+       * @return The code.
+       */
+      @java.lang.Override
+      public int getCode() {
+        return code_;
+      }
+      /**
+       * <code>int32 code = 1;</code>
+       * @param value The code to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCode(int value) {
+        
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 code = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCode() {
+        
+        code_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <code>string message = 2;</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        message_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        
+        message_ = getDefaultInstance().getMessage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        message_ = value;
+        onChanged();
+        return this;
+      }
+
+      private payment.PaymentOuterClass.Prepare response_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          payment.PaymentOuterClass.Prepare, payment.PaymentOuterClass.Prepare.Builder, payment.PaymentOuterClass.PrepareOrBuilder> responseBuilder_;
+      /**
+       * <code>.payment.Prepare response = 3;</code>
+       * @return Whether the response field is set.
+       */
+      public boolean hasResponse() {
+        return responseBuilder_ != null || response_ != null;
+      }
+      /**
+       * <code>.payment.Prepare response = 3;</code>
+       * @return The response.
+       */
+      public payment.PaymentOuterClass.Prepare getResponse() {
+        if (responseBuilder_ == null) {
+          return response_ == null ? payment.PaymentOuterClass.Prepare.getDefaultInstance() : response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payment.Prepare response = 3;</code>
+       */
+      public Builder setResponse(payment.PaymentOuterClass.Prepare value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payment.Prepare response = 3;</code>
+       */
+      public Builder setResponse(
+          payment.PaymentOuterClass.Prepare.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payment.Prepare response = 3;</code>
+       */
+      public Builder mergeResponse(payment.PaymentOuterClass.Prepare value) {
+        if (responseBuilder_ == null) {
+          if (response_ != null) {
+            response_ =
+              payment.PaymentOuterClass.Prepare.newBuilder(response_).mergeFrom(value).buildPartial();
+          } else {
+            response_ = value;
+          }
+          onChanged();
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payment.Prepare response = 3;</code>
+       */
+      public Builder clearResponse() {
+        if (responseBuilder_ == null) {
+          response_ = null;
+          onChanged();
+        } else {
+          response_ = null;
+          responseBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payment.Prepare response = 3;</code>
+       */
+      public payment.PaymentOuterClass.Prepare.Builder getResponseBuilder() {
+        
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payment.Prepare response = 3;</code>
+       */
+      public payment.PaymentOuterClass.PrepareOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_ == null ?
+              payment.PaymentOuterClass.Prepare.getDefaultInstance() : response_;
+        }
+      }
+      /**
+       * <code>.payment.Prepare response = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          payment.PaymentOuterClass.Prepare, payment.PaymentOuterClass.Prepare.Builder, payment.PaymentOuterClass.PrepareOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              payment.PaymentOuterClass.Prepare, payment.PaymentOuterClass.Prepare.Builder, payment.PaymentOuterClass.PrepareOrBuilder>(
+                  getResponse(),
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payment.PaymentPrepareResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:payment.PaymentPrepareResponse)
+    private static final payment.PaymentOuterClass.PaymentPrepareResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new payment.PaymentOuterClass.PaymentPrepareResponse();
+    }
+
+    public static payment.PaymentOuterClass.PaymentPrepareResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PaymentPrepareResponse>
+        PARSER = new com.google.protobuf.AbstractParser<PaymentPrepareResponse>() {
+      @java.lang.Override
+      public PaymentPrepareResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PaymentPrepareResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PaymentPrepareResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PaymentPrepareResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public payment.PaymentOuterClass.PaymentPrepareResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payment_Payment_descriptor;
   private static final 
@@ -24541,6 +26660,21 @@ public final class PaymentOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payment_PaymentBalanceResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payment_Prepare_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payment_Prepare_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payment_PaymentPrepareRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payment_PaymentPrepareRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payment_PaymentPrepareResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payment_PaymentPrepareResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -24627,8 +26761,13 @@ public final class PaymentOuterClass {
       "nceRequest\022\017\n\007imp_uid\030\001 \001(\t\"b\n\026PaymentBa" +
       "lanceResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002" +
       " \001(\t\022)\n\010response\030\003 \001(\0132\027.payment.Payment" +
-      "BalanceB/Z-github.com/iamport/interface/" +
-      "build/go/paymentb\006proto3"
+      "Balance\"/\n\007Prepare\022\024\n\014merchant_uid\030\001 \001(\t" +
+      "\022\016\n\006amount\030\002 \001(\005\"=\n\025PaymentPrepareReques" +
+      "t\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\"" +
+      "[\n\026PaymentPrepareResponse\022\014\n\004code\030\001 \001(\005\022" +
+      "\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.pay" +
+      "ment.PrepareB/Z-github.com/iamport/inter" +
+      "face/build/go/paymentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24753,6 +26892,24 @@ public final class PaymentOuterClass {
     internal_static_payment_PaymentBalanceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payment_PaymentBalanceResponse_descriptor,
+        new java.lang.String[] { "Code", "Message", "Response", });
+    internal_static_payment_Prepare_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_payment_Prepare_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payment_Prepare_descriptor,
+        new java.lang.String[] { "MerchantUid", "Amount", });
+    internal_static_payment_PaymentPrepareRequest_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_payment_PaymentPrepareRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payment_PaymentPrepareRequest_descriptor,
+        new java.lang.String[] { "MerchantUid", "Amount", });
+    internal_static_payment_PaymentPrepareResponse_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_payment_PaymentPrepareResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payment_PaymentPrepareResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
   }
 

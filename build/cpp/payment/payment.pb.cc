@@ -20,6 +20,7 @@ extern PROTOBUF_INTERNAL_EXPORT_payment_2fpayment_2eproto ::PROTOBUF_NAMESPACE_I
 extern PROTOBUF_INTERNAL_EXPORT_payment_2fpayment_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentBalanceDetail_payment_2fpayment_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_payment_2fpayment_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentBalanceHistory_payment_2fpayment_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_payment_2fpayment_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentPage_payment_2fpayment_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_payment_2fpayment_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Prepare_payment_2fpayment_2eproto;
 namespace payment {
 class PaymentDefaultTypeInternal {
  public:
@@ -101,6 +102,18 @@ class PaymentBalanceResponseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PaymentBalanceResponse> _instance;
 } _PaymentBalanceResponse_default_instance_;
+class PrepareDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Prepare> _instance;
+} _Prepare_default_instance_;
+class PaymentPrepareRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PaymentPrepareRequest> _instance;
+} _PaymentPrepareRequest_default_instance_;
+class PaymentPrepareResponseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PaymentPrepareResponse> _instance;
+} _PaymentPrepareResponse_default_instance_;
 }  // namespace payment
 static void InitDefaultsscc_info_CancleHistory_payment_2fpayment_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -278,6 +291,35 @@ static void InitDefaultsscc_info_PaymentPage_payment_2fpayment_2eproto() {
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_PaymentPage_payment_2fpayment_2eproto}, {
       &scc_info_Payment_payment_2fpayment_2eproto.base,}};
 
+static void InitDefaultsscc_info_PaymentPrepareRequest_payment_2fpayment_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::payment::_PaymentPrepareRequest_default_instance_;
+    new (ptr) ::payment::PaymentPrepareRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::payment::PaymentPrepareRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentPrepareRequest_payment_2fpayment_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PaymentPrepareRequest_payment_2fpayment_2eproto}, {}};
+
+static void InitDefaultsscc_info_PaymentPrepareResponse_payment_2fpayment_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::payment::_PaymentPrepareResponse_default_instance_;
+    new (ptr) ::payment::PaymentPrepareResponse();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::payment::PaymentPrepareResponse::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentPrepareResponse_payment_2fpayment_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_PaymentPrepareResponse_payment_2fpayment_2eproto}, {
+      &scc_info_Prepare_payment_2fpayment_2eproto.base,}};
+
 static void InitDefaultsscc_info_PaymentRequest_payment_2fpayment_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -394,7 +436,21 @@ static void InitDefaultsscc_info_PaymentsResponse_payment_2fpayment_2eproto() {
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_PaymentsResponse_payment_2fpayment_2eproto}, {
       &scc_info_Payment_payment_2fpayment_2eproto.base,}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_payment_2fpayment_2eproto[20];
+static void InitDefaultsscc_info_Prepare_payment_2fpayment_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::payment::_Prepare_default_instance_;
+    new (ptr) ::payment::Prepare();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::payment::Prepare::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Prepare_payment_2fpayment_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Prepare_payment_2fpayment_2eproto}, {}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_payment_2fpayment_2eproto[23];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_payment_2fpayment_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_payment_2fpayment_2eproto = nullptr;
 
@@ -615,6 +671,28 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_payment_2fpayment_2eproto::off
   PROTOBUF_FIELD_OFFSET(::payment::PaymentBalanceResponse, code_),
   PROTOBUF_FIELD_OFFSET(::payment::PaymentBalanceResponse, message_),
   PROTOBUF_FIELD_OFFSET(::payment::PaymentBalanceResponse, response_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::payment::Prepare, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::payment::Prepare, merchant_uid_),
+  PROTOBUF_FIELD_OFFSET(::payment::Prepare, amount_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentPrepareRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentPrepareRequest, merchant_uid_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentPrepareRequest, amount_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentPrepareResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentPrepareResponse, code_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentPrepareResponse, message_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentPrepareResponse, response_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::payment::Payment)},
@@ -637,6 +715,9 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 194, -1, sizeof(::payment::PaymentCancleResponse)},
   { 202, -1, sizeof(::payment::PaymentBalanceRequest)},
   { 208, -1, sizeof(::payment::PaymentBalanceResponse)},
+  { 216, -1, sizeof(::payment::Prepare)},
+  { 223, -1, sizeof(::payment::PaymentPrepareRequest)},
+  { 230, -1, sizeof(::payment::PaymentPrepareResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -660,6 +741,9 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentCancleResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentBalanceRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentBalanceResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_Prepare_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentPrepareRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentPrepareResponse_default_instance_),
 };
 
 const char descriptor_table_protodef_payment_2fpayment_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -740,12 +824,17 @@ const char descriptor_table_protodef_payment_2fpayment_2eproto[] PROTOBUF_SECTIO
   "nceRequest\022\017\n\007imp_uid\030\001 \001(\t\"b\n\026PaymentBa"
   "lanceResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002"
   " \001(\t\022)\n\010response\030\003 \001(\0132\027.payment.Payment"
-  "BalanceB/Z-github.com/iamport/interface/"
-  "build/go/paymentb\006proto3"
+  "Balance\"/\n\007Prepare\022\024\n\014merchant_uid\030\001 \001(\t"
+  "\022\016\n\006amount\030\002 \001(\005\"=\n\025PaymentPrepareReques"
+  "t\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\""
+  "[\n\026PaymentPrepareResponse\022\014\n\004code\030\001 \001(\005\022"
+  "\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.pay"
+  "ment.PrepareB/Z-github.com/iamport/inter"
+  "face/build/go/paymentb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_payment_2fpayment_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_payment_2fpayment_2eproto_sccs[20] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_payment_2fpayment_2eproto_sccs[23] = {
   &scc_info_CancleHistory_payment_2fpayment_2eproto.base,
   &scc_info_Payment_payment_2fpayment_2eproto.base,
   &scc_info_PaymentBalance_payment_2fpayment_2eproto.base,
@@ -758,6 +847,8 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pay
   &scc_info_PaymentMerchantUidRequest_payment_2fpayment_2eproto.base,
   &scc_info_PaymentMerchantUidResponse_payment_2fpayment_2eproto.base,
   &scc_info_PaymentPage_payment_2fpayment_2eproto.base,
+  &scc_info_PaymentPrepareRequest_payment_2fpayment_2eproto.base,
+  &scc_info_PaymentPrepareResponse_payment_2fpayment_2eproto.base,
   &scc_info_PaymentRequest_payment_2fpayment_2eproto.base,
   &scc_info_PaymentResponse_payment_2fpayment_2eproto.base,
   &scc_info_PaymentStatusRequest_payment_2fpayment_2eproto.base,
@@ -766,13 +857,14 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pay
   &scc_info_PaymentsMerchantUidResponse_payment_2fpayment_2eproto.base,
   &scc_info_PaymentsRequest_payment_2fpayment_2eproto.base,
   &scc_info_PaymentsResponse_payment_2fpayment_2eproto.base,
+  &scc_info_Prepare_payment_2fpayment_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_payment_2fpayment_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_payment_2fpayment_2eproto = {
-  false, false, descriptor_table_protodef_payment_2fpayment_2eproto, "payment/payment.proto", 3144,
-  &descriptor_table_payment_2fpayment_2eproto_once, descriptor_table_payment_2fpayment_2eproto_sccs, descriptor_table_payment_2fpayment_2eproto_deps, 20, 0,
+  false, false, descriptor_table_protodef_payment_2fpayment_2eproto, "payment/payment.proto", 3349,
+  &descriptor_table_payment_2fpayment_2eproto_once, descriptor_table_payment_2fpayment_2eproto_sccs, descriptor_table_payment_2fpayment_2eproto_deps, 23, 0,
   schemas, file_default_instances, TableStruct_payment_2fpayment_2eproto::offsets,
-  file_level_metadata_payment_2fpayment_2eproto, 20, file_level_enum_descriptors_payment_2fpayment_2eproto, file_level_service_descriptors_payment_2fpayment_2eproto,
+  file_level_metadata_payment_2fpayment_2eproto, 23, file_level_enum_descriptors_payment_2fpayment_2eproto, file_level_service_descriptors_payment_2fpayment_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -8227,6 +8319,761 @@ void PaymentBalanceResponse::InternalSwap(PaymentBalanceResponse* other) {
 }
 
 
+// ===================================================================
+
+void Prepare::InitAsDefaultInstance() {
+}
+class Prepare::_Internal {
+ public:
+};
+
+Prepare::Prepare(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:payment.Prepare)
+}
+Prepare::Prepare(const Prepare& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_merchant_uid().empty()) {
+    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+      GetArena());
+  }
+  amount_ = from.amount_;
+  // @@protoc_insertion_point(copy_constructor:payment.Prepare)
+}
+
+void Prepare::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Prepare_payment_2fpayment_2eproto.base);
+  merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  amount_ = 0;
+}
+
+Prepare::~Prepare() {
+  // @@protoc_insertion_point(destructor:payment.Prepare)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Prepare::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  merchant_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void Prepare::ArenaDtor(void* object) {
+  Prepare* _this = reinterpret_cast< Prepare* >(object);
+  (void)_this;
+}
+void Prepare::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Prepare::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Prepare& Prepare::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Prepare_payment_2fpayment_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Prepare::Clear() {
+// @@protoc_insertion_point(message_clear_start:payment.Prepare)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  amount_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Prepare::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string merchant_uid = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_merchant_uid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.Prepare.merchant_uid"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 amount = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          amount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Prepare::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:payment.Prepare)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string merchant_uid = 1;
+  if (this->merchant_uid().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_merchant_uid().data(), static_cast<int>(this->_internal_merchant_uid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "payment.Prepare.merchant_uid");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_merchant_uid(), target);
+  }
+
+  // int32 amount = 2;
+  if (this->amount() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_amount(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:payment.Prepare)
+  return target;
+}
+
+size_t Prepare::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:payment.Prepare)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string merchant_uid = 1;
+  if (this->merchant_uid().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_merchant_uid());
+  }
+
+  // int32 amount = 2;
+  if (this->amount() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_amount());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Prepare::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:payment.Prepare)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Prepare* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Prepare>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:payment.Prepare)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:payment.Prepare)
+    MergeFrom(*source);
+  }
+}
+
+void Prepare::MergeFrom(const Prepare& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:payment.Prepare)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.merchant_uid().size() > 0) {
+    _internal_set_merchant_uid(from._internal_merchant_uid());
+  }
+  if (from.amount() != 0) {
+    _internal_set_amount(from._internal_amount());
+  }
+}
+
+void Prepare::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:payment.Prepare)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Prepare::CopyFrom(const Prepare& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:payment.Prepare)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Prepare::IsInitialized() const {
+  return true;
+}
+
+void Prepare::InternalSwap(Prepare* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  merchant_uid_.Swap(&other->merchant_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(amount_, other->amount_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Prepare::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void PaymentPrepareRequest::InitAsDefaultInstance() {
+}
+class PaymentPrepareRequest::_Internal {
+ public:
+};
+
+PaymentPrepareRequest::PaymentPrepareRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:payment.PaymentPrepareRequest)
+}
+PaymentPrepareRequest::PaymentPrepareRequest(const PaymentPrepareRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_merchant_uid().empty()) {
+    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+      GetArena());
+  }
+  amount_ = from.amount_;
+  // @@protoc_insertion_point(copy_constructor:payment.PaymentPrepareRequest)
+}
+
+void PaymentPrepareRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentPrepareRequest_payment_2fpayment_2eproto.base);
+  merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  amount_ = 0;
+}
+
+PaymentPrepareRequest::~PaymentPrepareRequest() {
+  // @@protoc_insertion_point(destructor:payment.PaymentPrepareRequest)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void PaymentPrepareRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  merchant_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void PaymentPrepareRequest::ArenaDtor(void* object) {
+  PaymentPrepareRequest* _this = reinterpret_cast< PaymentPrepareRequest* >(object);
+  (void)_this;
+}
+void PaymentPrepareRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void PaymentPrepareRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const PaymentPrepareRequest& PaymentPrepareRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PaymentPrepareRequest_payment_2fpayment_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void PaymentPrepareRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:payment.PaymentPrepareRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  amount_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* PaymentPrepareRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string merchant_uid = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_merchant_uid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentPrepareRequest.merchant_uid"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // double amount = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 17)) {
+          amount_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* PaymentPrepareRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:payment.PaymentPrepareRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string merchant_uid = 1;
+  if (this->merchant_uid().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_merchant_uid().data(), static_cast<int>(this->_internal_merchant_uid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "payment.PaymentPrepareRequest.merchant_uid");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_merchant_uid(), target);
+  }
+
+  // double amount = 2;
+  if (!(this->amount() <= 0 && this->amount() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_amount(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:payment.PaymentPrepareRequest)
+  return target;
+}
+
+size_t PaymentPrepareRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:payment.PaymentPrepareRequest)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string merchant_uid = 1;
+  if (this->merchant_uid().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_merchant_uid());
+  }
+
+  // double amount = 2;
+  if (!(this->amount() <= 0 && this->amount() >= 0)) {
+    total_size += 1 + 8;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void PaymentPrepareRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:payment.PaymentPrepareRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const PaymentPrepareRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PaymentPrepareRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:payment.PaymentPrepareRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:payment.PaymentPrepareRequest)
+    MergeFrom(*source);
+  }
+}
+
+void PaymentPrepareRequest::MergeFrom(const PaymentPrepareRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:payment.PaymentPrepareRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.merchant_uid().size() > 0) {
+    _internal_set_merchant_uid(from._internal_merchant_uid());
+  }
+  if (!(from.amount() <= 0 && from.amount() >= 0)) {
+    _internal_set_amount(from._internal_amount());
+  }
+}
+
+void PaymentPrepareRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:payment.PaymentPrepareRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void PaymentPrepareRequest::CopyFrom(const PaymentPrepareRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:payment.PaymentPrepareRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PaymentPrepareRequest::IsInitialized() const {
+  return true;
+}
+
+void PaymentPrepareRequest::InternalSwap(PaymentPrepareRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  merchant_uid_.Swap(&other->merchant_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(amount_, other->amount_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PaymentPrepareRequest::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void PaymentPrepareResponse::InitAsDefaultInstance() {
+  ::payment::_PaymentPrepareResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::payment::Prepare*>(
+      ::payment::Prepare::internal_default_instance());
+}
+class PaymentPrepareResponse::_Internal {
+ public:
+  static const ::payment::Prepare& response(const PaymentPrepareResponse* msg);
+};
+
+const ::payment::Prepare&
+PaymentPrepareResponse::_Internal::response(const PaymentPrepareResponse* msg) {
+  return *msg->response_;
+}
+PaymentPrepareResponse::PaymentPrepareResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:payment.PaymentPrepareResponse)
+}
+PaymentPrepareResponse::PaymentPrepareResponse(const PaymentPrepareResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_message().empty()) {
+    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+      GetArena());
+  }
+  if (from._internal_has_response()) {
+    response_ = new ::payment::Prepare(*from.response_);
+  } else {
+    response_ = nullptr;
+  }
+  code_ = from.code_;
+  // @@protoc_insertion_point(copy_constructor:payment.PaymentPrepareResponse)
+}
+
+void PaymentPrepareResponse::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentPrepareResponse_payment_2fpayment_2eproto.base);
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&response_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&code_) -
+      reinterpret_cast<char*>(&response_)) + sizeof(code_));
+}
+
+PaymentPrepareResponse::~PaymentPrepareResponse() {
+  // @@protoc_insertion_point(destructor:payment.PaymentPrepareResponse)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void PaymentPrepareResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete response_;
+}
+
+void PaymentPrepareResponse::ArenaDtor(void* object) {
+  PaymentPrepareResponse* _this = reinterpret_cast< PaymentPrepareResponse* >(object);
+  (void)_this;
+}
+void PaymentPrepareResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void PaymentPrepareResponse::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const PaymentPrepareResponse& PaymentPrepareResponse::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PaymentPrepareResponse_payment_2fpayment_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void PaymentPrepareResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:payment.PaymentPrepareResponse)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && response_ != nullptr) {
+    delete response_;
+  }
+  response_ = nullptr;
+  code_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* PaymentPrepareResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int32 code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string message = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_message();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentPrepareResponse.message"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .payment.Prepare response = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_response(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* PaymentPrepareResponse::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:payment.PaymentPrepareResponse)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 code = 1;
+  if (this->code() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
+  }
+
+  // string message = 2;
+  if (this->message().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "payment.PaymentPrepareResponse.message");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_message(), target);
+  }
+
+  // .payment.Prepare response = 3;
+  if (this->has_response()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::response(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:payment.PaymentPrepareResponse)
+  return target;
+}
+
+size_t PaymentPrepareResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:payment.PaymentPrepareResponse)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string message = 2;
+  if (this->message().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_message());
+  }
+
+  // .payment.Prepare response = 3;
+  if (this->has_response()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *response_);
+  }
+
+  // int32 code = 1;
+  if (this->code() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_code());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void PaymentPrepareResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:payment.PaymentPrepareResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const PaymentPrepareResponse* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PaymentPrepareResponse>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:payment.PaymentPrepareResponse)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:payment.PaymentPrepareResponse)
+    MergeFrom(*source);
+  }
+}
+
+void PaymentPrepareResponse::MergeFrom(const PaymentPrepareResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:payment.PaymentPrepareResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.message().size() > 0) {
+    _internal_set_message(from._internal_message());
+  }
+  if (from.has_response()) {
+    _internal_mutable_response()->::payment::Prepare::MergeFrom(from._internal_response());
+  }
+  if (from.code() != 0) {
+    _internal_set_code(from._internal_code());
+  }
+}
+
+void PaymentPrepareResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:payment.PaymentPrepareResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void PaymentPrepareResponse::CopyFrom(const PaymentPrepareResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:payment.PaymentPrepareResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PaymentPrepareResponse::IsInitialized() const {
+  return true;
+}
+
+void PaymentPrepareResponse::InternalSwap(PaymentPrepareResponse* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(PaymentPrepareResponse, code_)
+      + sizeof(PaymentPrepareResponse::code_)
+      - PROTOBUF_FIELD_OFFSET(PaymentPrepareResponse, response_)>(
+          reinterpret_cast<char*>(&response_),
+          reinterpret_cast<char*>(&other->response_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PaymentPrepareResponse::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace payment
 PROTOBUF_NAMESPACE_OPEN
@@ -8289,6 +9136,15 @@ template<> PROTOBUF_NOINLINE ::payment::PaymentBalanceRequest* Arena::CreateMayb
 }
 template<> PROTOBUF_NOINLINE ::payment::PaymentBalanceResponse* Arena::CreateMaybeMessage< ::payment::PaymentBalanceResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::payment::PaymentBalanceResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::payment::Prepare* Arena::CreateMaybeMessage< ::payment::Prepare >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::payment::Prepare >(arena);
+}
+template<> PROTOBUF_NOINLINE ::payment::PaymentPrepareRequest* Arena::CreateMaybeMessage< ::payment::PaymentPrepareRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::payment::PaymentPrepareRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::payment::PaymentPrepareResponse* Arena::CreateMaybeMessage< ::payment::PaymentPrepareResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::payment::PaymentPrepareResponse >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

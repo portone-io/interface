@@ -241,3 +241,28 @@ const PaymentBalanceResponse$json = const {
   ],
 };
 
+const Prepare$json = const {
+  '1': 'Prepare',
+  '2': const [
+    const {'1': 'merchant_uid', '3': 1, '4': 1, '5': 9, '10': 'merchantUid'},
+    const {'1': 'amount', '3': 2, '4': 1, '5': 5, '10': 'amount'},
+  ],
+};
+
+const PaymentPrepareRequest$json = const {
+  '1': 'PaymentPrepareRequest',
+  '2': const [
+    const {'1': 'merchant_uid', '3': 1, '4': 1, '5': 9, '10': 'merchantUid'},
+    const {'1': 'amount', '3': 2, '4': 1, '5': 1, '10': 'amount'},
+  ],
+};
+
+const PaymentPrepareResponse$json = const {
+  '1': 'PaymentPrepareResponse',
+  '2': const [
+    const {'1': 'code', '3': 1, '4': 1, '5': 5, '10': 'code'},
+    const {'1': 'message', '3': 2, '4': 1, '5': 9, '10': 'message'},
+    const {'1': 'response', '3': 3, '4': 1, '5': 11, '6': '.payment.Prepare', '10': 'response'},
+  ],
+};
+

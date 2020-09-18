@@ -3883,12 +3883,12 @@ class PaymentCancleRequest PROTOBUF_FINAL :
   enum : int {
     kImpUidFieldNumber = 1,
     kMerchantUidFieldNumber = 2,
-    kReasomFieldNumber = 6,
+    kReasonFieldNumber = 6,
     kRefundHolderFieldNumber = 7,
     kRefundBankFieldNumber = 8,
     kRefundAccountFieldNumber = 9,
     kAmountFieldNumber = 3,
-    kTxFreeFieldNumber = 4,
+    kTaxFreeFieldNumber = 4,
     kChecksumFieldNumber = 5,
   };
   // string imp_uid = 1;
@@ -3923,20 +3923,20 @@ class PaymentCancleRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_merchant_uid();
   public:
 
-  // string reasom = 6;
-  void clear_reasom();
-  const std::string& reasom() const;
-  void set_reasom(const std::string& value);
-  void set_reasom(std::string&& value);
-  void set_reasom(const char* value);
-  void set_reasom(const char* value, size_t size);
-  std::string* mutable_reasom();
-  std::string* release_reasom();
-  void set_allocated_reasom(std::string* reasom);
+  // string reason = 6;
+  void clear_reason();
+  const std::string& reason() const;
+  void set_reason(const std::string& value);
+  void set_reason(std::string&& value);
+  void set_reason(const char* value);
+  void set_reason(const char* value, size_t size);
+  std::string* mutable_reason();
+  std::string* release_reason();
+  void set_allocated_reason(std::string* reason);
   private:
-  const std::string& _internal_reasom() const;
-  void _internal_set_reasom(const std::string& value);
-  std::string* _internal_mutable_reasom();
+  const std::string& _internal_reason() const;
+  void _internal_set_reason(const std::string& value);
+  std::string* _internal_mutable_reason();
   public:
 
   // string refund_holder = 7;
@@ -3996,13 +3996,13 @@ class PaymentCancleRequest PROTOBUF_FINAL :
   void _internal_set_amount(double value);
   public:
 
-  // double tx_free = 4;
-  void clear_tx_free();
-  double tx_free() const;
-  void set_tx_free(double value);
+  // double tax_free = 4;
+  void clear_tax_free();
+  double tax_free() const;
+  void set_tax_free(double value);
   private:
-  double _internal_tx_free() const;
-  void _internal_set_tx_free(double value);
+  double _internal_tax_free() const;
+  void _internal_set_tax_free(double value);
   public:
 
   // double checksum = 5;
@@ -4023,12 +4023,12 @@ class PaymentCancleRequest PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr imp_uid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr merchant_uid_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr reasom_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr reason_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr refund_holder_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr refund_bank_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr refund_account_;
   double amount_;
-  double tx_free_;
+  double tax_free_;
   double checksum_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_payment_2fpayment_2eproto;
@@ -9702,24 +9702,24 @@ inline void PaymentCancleRequest::set_amount(double value) {
   // @@protoc_insertion_point(field_set:payment.PaymentCancleRequest.amount)
 }
 
-// double tx_free = 4;
-inline void PaymentCancleRequest::clear_tx_free() {
-  tx_free_ = 0;
+// double tax_free = 4;
+inline void PaymentCancleRequest::clear_tax_free() {
+  tax_free_ = 0;
 }
-inline double PaymentCancleRequest::_internal_tx_free() const {
-  return tx_free_;
+inline double PaymentCancleRequest::_internal_tax_free() const {
+  return tax_free_;
 }
-inline double PaymentCancleRequest::tx_free() const {
-  // @@protoc_insertion_point(field_get:payment.PaymentCancleRequest.tx_free)
-  return _internal_tx_free();
+inline double PaymentCancleRequest::tax_free() const {
+  // @@protoc_insertion_point(field_get:payment.PaymentCancleRequest.tax_free)
+  return _internal_tax_free();
 }
-inline void PaymentCancleRequest::_internal_set_tx_free(double value) {
+inline void PaymentCancleRequest::_internal_set_tax_free(double value) {
   
-  tx_free_ = value;
+  tax_free_ = value;
 }
-inline void PaymentCancleRequest::set_tx_free(double value) {
-  _internal_set_tx_free(value);
-  // @@protoc_insertion_point(field_set:payment.PaymentCancleRequest.tx_free)
+inline void PaymentCancleRequest::set_tax_free(double value) {
+  _internal_set_tax_free(value);
+  // @@protoc_insertion_point(field_set:payment.PaymentCancleRequest.tax_free)
 }
 
 // double checksum = 5;
@@ -9742,66 +9742,66 @@ inline void PaymentCancleRequest::set_checksum(double value) {
   // @@protoc_insertion_point(field_set:payment.PaymentCancleRequest.checksum)
 }
 
-// string reasom = 6;
-inline void PaymentCancleRequest::clear_reasom() {
-  reasom_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// string reason = 6;
+inline void PaymentCancleRequest::clear_reason() {
+  reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline const std::string& PaymentCancleRequest::reasom() const {
-  // @@protoc_insertion_point(field_get:payment.PaymentCancleRequest.reasom)
-  return _internal_reasom();
+inline const std::string& PaymentCancleRequest::reason() const {
+  // @@protoc_insertion_point(field_get:payment.PaymentCancleRequest.reason)
+  return _internal_reason();
 }
-inline void PaymentCancleRequest::set_reasom(const std::string& value) {
-  _internal_set_reasom(value);
-  // @@protoc_insertion_point(field_set:payment.PaymentCancleRequest.reasom)
+inline void PaymentCancleRequest::set_reason(const std::string& value) {
+  _internal_set_reason(value);
+  // @@protoc_insertion_point(field_set:payment.PaymentCancleRequest.reason)
 }
-inline std::string* PaymentCancleRequest::mutable_reasom() {
-  // @@protoc_insertion_point(field_mutable:payment.PaymentCancleRequest.reasom)
-  return _internal_mutable_reasom();
+inline std::string* PaymentCancleRequest::mutable_reason() {
+  // @@protoc_insertion_point(field_mutable:payment.PaymentCancleRequest.reason)
+  return _internal_mutable_reason();
 }
-inline const std::string& PaymentCancleRequest::_internal_reasom() const {
-  return reasom_.Get();
+inline const std::string& PaymentCancleRequest::_internal_reason() const {
+  return reason_.Get();
 }
-inline void PaymentCancleRequest::_internal_set_reasom(const std::string& value) {
+inline void PaymentCancleRequest::_internal_set_reason(const std::string& value) {
   
-  reasom_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void PaymentCancleRequest::set_reasom(std::string&& value) {
+inline void PaymentCancleRequest::set_reason(std::string&& value) {
   
-  reasom_.Set(
+  reason_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:payment.PaymentCancleRequest.reasom)
+  // @@protoc_insertion_point(field_set_rvalue:payment.PaymentCancleRequest.reason)
 }
-inline void PaymentCancleRequest::set_reasom(const char* value) {
+inline void PaymentCancleRequest::set_reason(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  reasom_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+  reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:payment.PaymentCancleRequest.reasom)
+  // @@protoc_insertion_point(field_set_char:payment.PaymentCancleRequest.reason)
 }
-inline void PaymentCancleRequest::set_reasom(const char* value,
+inline void PaymentCancleRequest::set_reason(const char* value,
     size_t size) {
   
-  reasom_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+  reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:payment.PaymentCancleRequest.reasom)
+  // @@protoc_insertion_point(field_set_pointer:payment.PaymentCancleRequest.reason)
 }
-inline std::string* PaymentCancleRequest::_internal_mutable_reasom() {
+inline std::string* PaymentCancleRequest::_internal_mutable_reason() {
   
-  return reasom_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  return reason_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* PaymentCancleRequest::release_reasom() {
-  // @@protoc_insertion_point(field_release:payment.PaymentCancleRequest.reasom)
-  return reasom_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* PaymentCancleRequest::release_reason() {
+  // @@protoc_insertion_point(field_release:payment.PaymentCancleRequest.reason)
+  return reason_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void PaymentCancleRequest::set_allocated_reasom(std::string* reasom) {
-  if (reasom != nullptr) {
+inline void PaymentCancleRequest::set_allocated_reason(std::string* reason) {
+  if (reason != nullptr) {
     
   } else {
     
   }
-  reasom_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), reasom,
+  reason_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), reason,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:payment.PaymentCancleRequest.reasom)
+  // @@protoc_insertion_point(field_set_allocated:payment.PaymentCancleRequest.reason)
 }
 
 // string refund_holder = 7;

@@ -705,14 +705,14 @@ export class PaymentCancleRequest extends jspb.Message {
   getAmount(): number;
   setAmount(value: number): void;
 
-  getTxFree(): number;
-  setTxFree(value: number): void;
+  getTaxFree(): number;
+  setTaxFree(value: number): void;
 
   getChecksum(): number;
   setChecksum(value: number): void;
 
-  getReasom(): string;
-  setReasom(value: string): void;
+  getReason(): string;
+  setReason(value: string): void;
 
   getRefundHolder(): string;
   setRefundHolder(value: string): void;
@@ -738,9 +738,9 @@ export namespace PaymentCancleRequest {
     impUid: string,
     merchantUid: string,
     amount: number,
-    txFree: number,
+    taxFree: number,
     checksum: number,
-    reasom: string,
+    reason: string,
     refundHolder: string,
     refundBank: string,
     refundAccount: string,

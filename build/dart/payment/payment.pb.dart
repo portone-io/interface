@@ -1338,9 +1338,9 @@ class PaymentCancleRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'impUid')
     ..aOS(2, 'merchantUid')
     ..a<$core.double>(3, 'amount', $pb.PbFieldType.OD)
-    ..a<$core.double>(4, 'txFree', $pb.PbFieldType.OD)
+    ..a<$core.double>(4, 'taxFree', $pb.PbFieldType.OD)
     ..a<$core.double>(5, 'checksum', $pb.PbFieldType.OD)
-    ..aOS(6, 'reasom')
+    ..aOS(6, 'reason')
     ..aOS(7, 'refundHolder')
     ..aOS(8, 'refundBank')
     ..aOS(9, 'refundAccount')
@@ -1390,13 +1390,13 @@ class PaymentCancleRequest extends $pb.GeneratedMessage {
   void clearAmount() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.double get txFree => $_getN(3);
+  $core.double get taxFree => $_getN(3);
   @$pb.TagNumber(4)
-  set txFree($core.double v) { $_setDouble(3, v); }
+  set taxFree($core.double v) { $_setDouble(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasTxFree() => $_has(3);
+  $core.bool hasTaxFree() => $_has(3);
   @$pb.TagNumber(4)
-  void clearTxFree() => clearField(4);
+  void clearTaxFree() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.double get checksum => $_getN(4);
@@ -1408,13 +1408,13 @@ class PaymentCancleRequest extends $pb.GeneratedMessage {
   void clearChecksum() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get reasom => $_getSZ(5);
+  $core.String get reason => $_getSZ(5);
   @$pb.TagNumber(6)
-  set reasom($core.String v) { $_setString(5, v); }
+  set reason($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasReasom() => $_has(5);
+  $core.bool hasReason() => $_has(5);
   @$pb.TagNumber(6)
-  void clearReasom() => clearField(6);
+  void clearReason() => clearField(6);
 
   @$pb.TagNumber(7)
   $core.String get refundHolder => $_getSZ(6);

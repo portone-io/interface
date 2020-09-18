@@ -20692,10 +20692,10 @@ public final class PaymentOuterClass {
     double getAmount();
 
     /**
-     * <code>double tx_free = 4;</code>
-     * @return The txFree.
+     * <code>double tax_free = 4;</code>
+     * @return The taxFree.
      */
-    double getTxFree();
+    double getTaxFree();
 
     /**
      * <code>double checksum = 5;</code>
@@ -20704,16 +20704,16 @@ public final class PaymentOuterClass {
     double getChecksum();
 
     /**
-     * <code>string reasom = 6;</code>
-     * @return The reasom.
+     * <code>string reason = 6;</code>
+     * @return The reason.
      */
-    java.lang.String getReasom();
+    java.lang.String getReason();
     /**
-     * <code>string reasom = 6;</code>
-     * @return The bytes for reasom.
+     * <code>string reason = 6;</code>
+     * @return The bytes for reason.
      */
     com.google.protobuf.ByteString
-        getReasomBytes();
+        getReasonBytes();
 
     /**
      * <code>string refund_holder = 7;</code>
@@ -20766,7 +20766,7 @@ public final class PaymentOuterClass {
     private PaymentCancleRequest() {
       impUid_ = "";
       merchantUid_ = "";
-      reasom_ = "";
+      reason_ = "";
       refundHolder_ = "";
       refundBank_ = "";
       refundAccount_ = "";
@@ -20821,7 +20821,7 @@ public final class PaymentOuterClass {
             }
             case 33: {
 
-              txFree_ = input.readDouble();
+              taxFree_ = input.readDouble();
               break;
             }
             case 41: {
@@ -20832,7 +20832,7 @@ public final class PaymentOuterClass {
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              reasom_ = s;
+              reason_ = s;
               break;
             }
             case 58: {
@@ -20972,15 +20972,15 @@ public final class PaymentOuterClass {
       return amount_;
     }
 
-    public static final int TX_FREE_FIELD_NUMBER = 4;
-    private double txFree_;
+    public static final int TAX_FREE_FIELD_NUMBER = 4;
+    private double taxFree_;
     /**
-     * <code>double tx_free = 4;</code>
-     * @return The txFree.
+     * <code>double tax_free = 4;</code>
+     * @return The taxFree.
      */
     @java.lang.Override
-    public double getTxFree() {
-      return txFree_;
+    public double getTaxFree() {
+      return taxFree_;
     }
 
     public static final int CHECKSUM_FIELD_NUMBER = 5;
@@ -20994,38 +20994,38 @@ public final class PaymentOuterClass {
       return checksum_;
     }
 
-    public static final int REASOM_FIELD_NUMBER = 6;
-    private volatile java.lang.Object reasom_;
+    public static final int REASON_FIELD_NUMBER = 6;
+    private volatile java.lang.Object reason_;
     /**
-     * <code>string reasom = 6;</code>
-     * @return The reasom.
+     * <code>string reason = 6;</code>
+     * @return The reason.
      */
     @java.lang.Override
-    public java.lang.String getReasom() {
-      java.lang.Object ref = reasom_;
+    public java.lang.String getReason() {
+      java.lang.Object ref = reason_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        reasom_ = s;
+        reason_ = s;
         return s;
       }
     }
     /**
-     * <code>string reasom = 6;</code>
-     * @return The bytes for reasom.
+     * <code>string reason = 6;</code>
+     * @return The bytes for reason.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getReasomBytes() {
-      java.lang.Object ref = reasom_;
+        getReasonBytes() {
+      java.lang.Object ref = reason_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        reasom_ = b;
+        reason_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -21169,14 +21169,14 @@ public final class PaymentOuterClass {
       if (amount_ != 0D) {
         output.writeDouble(3, amount_);
       }
-      if (txFree_ != 0D) {
-        output.writeDouble(4, txFree_);
+      if (taxFree_ != 0D) {
+        output.writeDouble(4, taxFree_);
       }
       if (checksum_ != 0D) {
         output.writeDouble(5, checksum_);
       }
-      if (!getReasomBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, reasom_);
+      if (!getReasonBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, reason_);
       }
       if (!getRefundHolderBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, refundHolder_);
@@ -21206,16 +21206,16 @@ public final class PaymentOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, amount_);
       }
-      if (txFree_ != 0D) {
+      if (taxFree_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(4, txFree_);
+          .computeDoubleSize(4, taxFree_);
       }
       if (checksum_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(5, checksum_);
       }
-      if (!getReasomBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, reasom_);
+      if (!getReasonBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, reason_);
       }
       if (!getRefundHolderBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, refundHolder_);
@@ -21248,14 +21248,14 @@ public final class PaymentOuterClass {
       if (java.lang.Double.doubleToLongBits(getAmount())
           != java.lang.Double.doubleToLongBits(
               other.getAmount())) return false;
-      if (java.lang.Double.doubleToLongBits(getTxFree())
+      if (java.lang.Double.doubleToLongBits(getTaxFree())
           != java.lang.Double.doubleToLongBits(
-              other.getTxFree())) return false;
+              other.getTaxFree())) return false;
       if (java.lang.Double.doubleToLongBits(getChecksum())
           != java.lang.Double.doubleToLongBits(
               other.getChecksum())) return false;
-      if (!getReasom()
-          .equals(other.getReasom())) return false;
+      if (!getReason()
+          .equals(other.getReason())) return false;
       if (!getRefundHolder()
           .equals(other.getRefundHolder())) return false;
       if (!getRefundBank()
@@ -21280,14 +21280,14 @@ public final class PaymentOuterClass {
       hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getAmount()));
-      hash = (37 * hash) + TX_FREE_FIELD_NUMBER;
+      hash = (37 * hash) + TAX_FREE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getTxFree()));
+          java.lang.Double.doubleToLongBits(getTaxFree()));
       hash = (37 * hash) + CHECKSUM_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getChecksum()));
-      hash = (37 * hash) + REASOM_FIELD_NUMBER;
-      hash = (53 * hash) + getReasom().hashCode();
+      hash = (37 * hash) + REASON_FIELD_NUMBER;
+      hash = (53 * hash) + getReason().hashCode();
       hash = (37 * hash) + REFUND_HOLDER_FIELD_NUMBER;
       hash = (53 * hash) + getRefundHolder().hashCode();
       hash = (37 * hash) + REFUND_BANK_FIELD_NUMBER;
@@ -21433,11 +21433,11 @@ public final class PaymentOuterClass {
 
         amount_ = 0D;
 
-        txFree_ = 0D;
+        taxFree_ = 0D;
 
         checksum_ = 0D;
 
-        reasom_ = "";
+        reason_ = "";
 
         refundHolder_ = "";
 
@@ -21474,9 +21474,9 @@ public final class PaymentOuterClass {
         result.impUid_ = impUid_;
         result.merchantUid_ = merchantUid_;
         result.amount_ = amount_;
-        result.txFree_ = txFree_;
+        result.taxFree_ = taxFree_;
         result.checksum_ = checksum_;
-        result.reasom_ = reasom_;
+        result.reason_ = reason_;
         result.refundHolder_ = refundHolder_;
         result.refundBank_ = refundBank_;
         result.refundAccount_ = refundAccount_;
@@ -21539,14 +21539,14 @@ public final class PaymentOuterClass {
         if (other.getAmount() != 0D) {
           setAmount(other.getAmount());
         }
-        if (other.getTxFree() != 0D) {
-          setTxFree(other.getTxFree());
+        if (other.getTaxFree() != 0D) {
+          setTaxFree(other.getTaxFree());
         }
         if (other.getChecksum() != 0D) {
           setChecksum(other.getChecksum());
         }
-        if (!other.getReasom().isEmpty()) {
-          reasom_ = other.reasom_;
+        if (!other.getReason().isEmpty()) {
+          reason_ = other.reason_;
           onChanged();
         }
         if (!other.getRefundHolder().isEmpty()) {
@@ -21773,33 +21773,33 @@ public final class PaymentOuterClass {
         return this;
       }
 
-      private double txFree_ ;
+      private double taxFree_ ;
       /**
-       * <code>double tx_free = 4;</code>
-       * @return The txFree.
+       * <code>double tax_free = 4;</code>
+       * @return The taxFree.
        */
       @java.lang.Override
-      public double getTxFree() {
-        return txFree_;
+      public double getTaxFree() {
+        return taxFree_;
       }
       /**
-       * <code>double tx_free = 4;</code>
-       * @param value The txFree to set.
+       * <code>double tax_free = 4;</code>
+       * @param value The taxFree to set.
        * @return This builder for chaining.
        */
-      public Builder setTxFree(double value) {
+      public Builder setTaxFree(double value) {
         
-        txFree_ = value;
+        taxFree_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>double tx_free = 4;</code>
+       * <code>double tax_free = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTxFree() {
+      public Builder clearTaxFree() {
         
-        txFree_ = 0D;
+        taxFree_ = 0D;
         onChanged();
         return this;
       }
@@ -21835,78 +21835,78 @@ public final class PaymentOuterClass {
         return this;
       }
 
-      private java.lang.Object reasom_ = "";
+      private java.lang.Object reason_ = "";
       /**
-       * <code>string reasom = 6;</code>
-       * @return The reasom.
+       * <code>string reason = 6;</code>
+       * @return The reason.
        */
-      public java.lang.String getReasom() {
-        java.lang.Object ref = reasom_;
+      public java.lang.String getReason() {
+        java.lang.Object ref = reason_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          reasom_ = s;
+          reason_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string reasom = 6;</code>
-       * @return The bytes for reasom.
+       * <code>string reason = 6;</code>
+       * @return The bytes for reason.
        */
       public com.google.protobuf.ByteString
-          getReasomBytes() {
-        java.lang.Object ref = reasom_;
+          getReasonBytes() {
+        java.lang.Object ref = reason_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          reasom_ = b;
+          reason_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string reasom = 6;</code>
-       * @param value The reasom to set.
+       * <code>string reason = 6;</code>
+       * @param value The reason to set.
        * @return This builder for chaining.
        */
-      public Builder setReasom(
+      public Builder setReason(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        reasom_ = value;
+        reason_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string reasom = 6;</code>
+       * <code>string reason = 6;</code>
        * @return This builder for chaining.
        */
-      public Builder clearReasom() {
+      public Builder clearReason() {
         
-        reasom_ = getDefaultInstance().getReasom();
+        reason_ = getDefaultInstance().getReason();
         onChanged();
         return this;
       }
       /**
-       * <code>string reasom = 6;</code>
-       * @param value The bytes for reasom to set.
+       * <code>string reason = 6;</code>
+       * @param value The bytes for reason to set.
        * @return This builder for chaining.
        */
-      public Builder setReasomBytes(
+      public Builder setReasonBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        reasom_ = value;
+        reason_ = value;
         onChanged();
         return this;
       }
@@ -24616,19 +24616,19 @@ public final class PaymentOuterClass {
       "\001(\t\022\016\n\006status\030\002 \001(\t\022\017\n\007sorting\030\003 \001(\t\"_\n\032" +
       "PaymentMerchantUidResponse\022\014\n\004code\030\001 \001(\005" +
       "\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.pa" +
-      "yment.Payment\"\304\001\n\024PaymentCancleRequest\022\017" +
+      "yment.Payment\"\305\001\n\024PaymentCancleRequest\022\017" +
       "\n\007imp_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n" +
-      "\006amount\030\003 \001(\001\022\017\n\007tx_free\030\004 \001(\001\022\020\n\010checks" +
-      "um\030\005 \001(\001\022\016\n\006reasom\030\006 \001(\t\022\025\n\rrefund_holde" +
-      "r\030\007 \001(\t\022\023\n\013refund_bank\030\010 \001(\t\022\026\n\016refund_a" +
-      "ccount\030\t \001(\t\"Z\n\025PaymentCancleResponse\022\014\n" +
-      "\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response" +
-      "\030\003 \001(\0132\020.payment.Payment\"(\n\025PaymentBalan" +
-      "ceRequest\022\017\n\007imp_uid\030\001 \001(\t\"b\n\026PaymentBal" +
-      "anceResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 " +
-      "\001(\t\022)\n\010response\030\003 \001(\0132\027.payment.PaymentB" +
-      "alanceB/Z-github.com/iamport/interface/b" +
-      "uild/go/paymentb\006proto3"
+      "\006amount\030\003 \001(\001\022\020\n\010tax_free\030\004 \001(\001\022\020\n\010check" +
+      "sum\030\005 \001(\001\022\016\n\006reason\030\006 \001(\t\022\025\n\rrefund_hold" +
+      "er\030\007 \001(\t\022\023\n\013refund_bank\030\010 \001(\t\022\026\n\016refund_" +
+      "account\030\t \001(\t\"Z\n\025PaymentCancleResponse\022\014" +
+      "\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010respons" +
+      "e\030\003 \001(\0132\020.payment.Payment\"(\n\025PaymentBala" +
+      "nceRequest\022\017\n\007imp_uid\030\001 \001(\t\"b\n\026PaymentBa" +
+      "lanceResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002" +
+      " \001(\t\022)\n\010response\030\003 \001(\0132\027.payment.Payment" +
+      "BalanceB/Z-github.com/iamport/interface/" +
+      "build/go/paymentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24735,7 +24735,7 @@ public final class PaymentOuterClass {
     internal_static_payment_PaymentCancleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payment_PaymentCancleRequest_descriptor,
-        new java.lang.String[] { "ImpUid", "MerchantUid", "Amount", "TxFree", "Checksum", "Reasom", "RefundHolder", "RefundBank", "RefundAccount", });
+        new java.lang.String[] { "ImpUid", "MerchantUid", "Amount", "TaxFree", "Checksum", "Reason", "RefundHolder", "RefundBank", "RefundAccount", });
     internal_static_payment_PaymentCancleResponse_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_payment_PaymentCancleResponse_fieldAccessorTable = new

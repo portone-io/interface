@@ -26,17 +26,17 @@ class PaymentCancleRequest extends \Google\Protobuf\Internal\Message
      */
     protected $amount = 0.0;
     /**
-     * Generated from protobuf field <code>double tx_free = 4;</code>
+     * Generated from protobuf field <code>double tax_free = 4;</code>
      */
-    protected $tx_free = 0.0;
+    protected $tax_free = 0.0;
     /**
      * Generated from protobuf field <code>double checksum = 5;</code>
      */
     protected $checksum = 0.0;
     /**
-     * Generated from protobuf field <code>string reasom = 6;</code>
+     * Generated from protobuf field <code>string reason = 6;</code>
      */
-    protected $reasom = '';
+    protected $reason = '';
     /**
      * Generated from protobuf field <code>string refund_holder = 7;</code>
      */
@@ -59,9 +59,9 @@ class PaymentCancleRequest extends \Google\Protobuf\Internal\Message
      *     @type string $imp_uid
      *     @type string $merchant_uid
      *     @type float $amount
-     *     @type float $tx_free
+     *     @type float $tax_free
      *     @type float $checksum
-     *     @type string $reasom
+     *     @type string $reason
      *     @type string $refund_holder
      *     @type string $refund_bank
      *     @type string $refund_account
@@ -139,23 +139,23 @@ class PaymentCancleRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>double tx_free = 4;</code>
+     * Generated from protobuf field <code>double tax_free = 4;</code>
      * @return float
      */
-    public function getTxFree()
+    public function getTaxFree()
     {
-        return $this->tx_free;
+        return $this->tax_free;
     }
 
     /**
-     * Generated from protobuf field <code>double tx_free = 4;</code>
+     * Generated from protobuf field <code>double tax_free = 4;</code>
      * @param float $var
      * @return $this
      */
-    public function setTxFree($var)
+    public function setTaxFree($var)
     {
         GPBUtil::checkDouble($var);
-        $this->tx_free = $var;
+        $this->tax_free = $var;
 
         return $this;
     }
@@ -183,23 +183,23 @@ class PaymentCancleRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string reasom = 6;</code>
+     * Generated from protobuf field <code>string reason = 6;</code>
      * @return string
      */
-    public function getReasom()
+    public function getReason()
     {
-        return $this->reasom;
+        return $this->reason;
     }
 
     /**
-     * Generated from protobuf field <code>string reasom = 6;</code>
+     * Generated from protobuf field <code>string reason = 6;</code>
      * @param string $var
      * @return $this
      */
-    public function setReasom($var)
+    public function setReason($var)
     {
         GPBUtil::checkString($var, True);
-        $this->reasom = $var;
+        $this->reason = $var;
 
         return $this;
     }

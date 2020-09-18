@@ -5504,9 +5504,9 @@ proto.payment.PaymentCancleRequest.toObject = function(includeInstance, msg) {
     impUid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     merchantUid: jspb.Message.getFieldWithDefault(msg, 2, ""),
     amount: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
-    txFree: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
+    taxFree: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
     checksum: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
-    reasom: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    reason: jspb.Message.getFieldWithDefault(msg, 6, ""),
     refundHolder: jspb.Message.getFieldWithDefault(msg, 7, ""),
     refundBank: jspb.Message.getFieldWithDefault(msg, 8, ""),
     refundAccount: jspb.Message.getFieldWithDefault(msg, 9, "")
@@ -5560,7 +5560,7 @@ proto.payment.PaymentCancleRequest.deserializeBinaryFromReader = function(msg, r
       break;
     case 4:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setTxFree(value);
+      msg.setTaxFree(value);
       break;
     case 5:
       var value = /** @type {number} */ (reader.readDouble());
@@ -5568,7 +5568,7 @@ proto.payment.PaymentCancleRequest.deserializeBinaryFromReader = function(msg, r
       break;
     case 6:
       var value = /** @type {string} */ (reader.readString());
-      msg.setReasom(value);
+      msg.setReason(value);
       break;
     case 7:
       var value = /** @type {string} */ (reader.readString());
@@ -5632,7 +5632,7 @@ proto.payment.PaymentCancleRequest.serializeBinaryToWriter = function(message, w
       f
     );
   }
-  f = message.getTxFree();
+  f = message.getTaxFree();
   if (f !== 0.0) {
     writer.writeDouble(
       4,
@@ -5646,7 +5646,7 @@ proto.payment.PaymentCancleRequest.serializeBinaryToWriter = function(message, w
       f
     );
   }
-  f = message.getReasom();
+  f = message.getReason();
   if (f.length > 0) {
     writer.writeString(
       6,
@@ -5732,10 +5732,10 @@ proto.payment.PaymentCancleRequest.prototype.setAmount = function(value) {
 
 
 /**
- * optional double tx_free = 4;
+ * optional double tax_free = 4;
  * @return {number}
  */
-proto.payment.PaymentCancleRequest.prototype.getTxFree = function() {
+proto.payment.PaymentCancleRequest.prototype.getTaxFree = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
 };
 
@@ -5744,7 +5744,7 @@ proto.payment.PaymentCancleRequest.prototype.getTxFree = function() {
  * @param {number} value
  * @return {!proto.payment.PaymentCancleRequest} returns this
  */
-proto.payment.PaymentCancleRequest.prototype.setTxFree = function(value) {
+proto.payment.PaymentCancleRequest.prototype.setTaxFree = function(value) {
   return jspb.Message.setProto3FloatField(this, 4, value);
 };
 
@@ -5768,10 +5768,10 @@ proto.payment.PaymentCancleRequest.prototype.setChecksum = function(value) {
 
 
 /**
- * optional string reasom = 6;
+ * optional string reason = 6;
  * @return {string}
  */
-proto.payment.PaymentCancleRequest.prototype.getReasom = function() {
+proto.payment.PaymentCancleRequest.prototype.getReason = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
@@ -5780,7 +5780,7 @@ proto.payment.PaymentCancleRequest.prototype.getReasom = function() {
  * @param {string} value
  * @return {!proto.payment.PaymentCancleRequest} returns this
  */
-proto.payment.PaymentCancleRequest.prototype.setReasom = function(value) {
+proto.payment.PaymentCancleRequest.prototype.setReason = function(value) {
   return jspb.Message.setProto3StringField(this, 6, value);
 };
 

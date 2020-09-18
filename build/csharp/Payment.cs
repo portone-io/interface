@@ -82,18 +82,18 @@ namespace Payment {
             "GVBheW1lbnRNZXJjaGFudFVpZFJlcXVlc3QSFAoMbWVyY2hhbnRfdWlkGAEg",
             "ASgJEg4KBnN0YXR1cxgCIAEoCRIPCgdzb3J0aW5nGAMgASgJIl8KGlBheW1l",
             "bnRNZXJjaGFudFVpZFJlc3BvbnNlEgwKBGNvZGUYASABKAUSDwoHbWVzc2Fn",
-            "ZRgCIAEoCRIiCghyZXNwb25zZRgDIAEoCzIQLnBheW1lbnQuUGF5bWVudCLE",
+            "ZRgCIAEoCRIiCghyZXNwb25zZRgDIAEoCzIQLnBheW1lbnQuUGF5bWVudCLF",
             "AQoUUGF5bWVudENhbmNsZVJlcXVlc3QSDwoHaW1wX3VpZBgBIAEoCRIUCgxt",
-            "ZXJjaGFudF91aWQYAiABKAkSDgoGYW1vdW50GAMgASgBEg8KB3R4X2ZyZWUY",
-            "BCABKAESEAoIY2hlY2tzdW0YBSABKAESDgoGcmVhc29tGAYgASgJEhUKDXJl",
-            "ZnVuZF9ob2xkZXIYByABKAkSEwoLcmVmdW5kX2JhbmsYCCABKAkSFgoOcmVm",
-            "dW5kX2FjY291bnQYCSABKAkiWgoVUGF5bWVudENhbmNsZVJlc3BvbnNlEgwK",
-            "BGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRIiCghyZXNwb25zZRgDIAEo",
-            "CzIQLnBheW1lbnQuUGF5bWVudCIoChVQYXltZW50QmFsYW5jZVJlcXVlc3QS",
-            "DwoHaW1wX3VpZBgBIAEoCSJiChZQYXltZW50QmFsYW5jZVJlc3BvbnNlEgwK",
-            "BGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRIpCghyZXNwb25zZRgDIAEo",
-            "CzIXLnBheW1lbnQuUGF5bWVudEJhbGFuY2VCL1otZ2l0aHViLmNvbS9pYW1w",
-            "b3J0L2ludGVyZmFjZS9idWlsZC9nby9wYXltZW50YgZwcm90bzM="));
+            "ZXJjaGFudF91aWQYAiABKAkSDgoGYW1vdW50GAMgASgBEhAKCHRheF9mcmVl",
+            "GAQgASgBEhAKCGNoZWNrc3VtGAUgASgBEg4KBnJlYXNvbhgGIAEoCRIVCg1y",
+            "ZWZ1bmRfaG9sZGVyGAcgASgJEhMKC3JlZnVuZF9iYW5rGAggASgJEhYKDnJl",
+            "ZnVuZF9hY2NvdW50GAkgASgJIloKFVBheW1lbnRDYW5jbGVSZXNwb25zZRIM",
+            "CgRjb2RlGAEgASgFEg8KB21lc3NhZ2UYAiABKAkSIgoIcmVzcG9uc2UYAyAB",
+            "KAsyEC5wYXltZW50LlBheW1lbnQiKAoVUGF5bWVudEJhbGFuY2VSZXF1ZXN0",
+            "Eg8KB2ltcF91aWQYASABKAkiYgoWUGF5bWVudEJhbGFuY2VSZXNwb25zZRIM",
+            "CgRjb2RlGAEgASgFEg8KB21lc3NhZ2UYAiABKAkSKQoIcmVzcG9uc2UYAyAB",
+            "KAsyFy5wYXltZW50LlBheW1lbnRCYWxhbmNlQi9aLWdpdGh1Yi5jb20vaWFt",
+            "cG9ydC9pbnRlcmZhY2UvYnVpbGQvZ28vcGF5bWVudGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -113,7 +113,7 @@ namespace Payment {
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentStatusResponse), global::Payment.PaymentStatusResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentMerchantUidRequest), global::Payment.PaymentMerchantUidRequest.Parser, new[]{ "MerchantUid", "Status", "Sorting" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentMerchantUidResponse), global::Payment.PaymentMerchantUidResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentCancleRequest), global::Payment.PaymentCancleRequest.Parser, new[]{ "ImpUid", "MerchantUid", "Amount", "TxFree", "Checksum", "Reasom", "RefundHolder", "RefundBank", "RefundAccount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentCancleRequest), global::Payment.PaymentCancleRequest.Parser, new[]{ "ImpUid", "MerchantUid", "Amount", "TaxFree", "Checksum", "Reason", "RefundHolder", "RefundBank", "RefundAccount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentCancleResponse), global::Payment.PaymentCancleResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentBalanceRequest), global::Payment.PaymentBalanceRequest.Parser, new[]{ "ImpUid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentBalanceResponse), global::Payment.PaymentBalanceResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null)
@@ -5973,9 +5973,9 @@ namespace Payment {
       impUid_ = other.impUid_;
       merchantUid_ = other.merchantUid_;
       amount_ = other.amount_;
-      txFree_ = other.txFree_;
+      taxFree_ = other.taxFree_;
       checksum_ = other.checksum_;
-      reasom_ = other.reasom_;
+      reason_ = other.reason_;
       refundHolder_ = other.refundHolder_;
       refundBank_ = other.refundBank_;
       refundAccount_ = other.refundAccount_;
@@ -6020,14 +6020,14 @@ namespace Payment {
       }
     }
 
-    /// <summary>Field number for the "tx_free" field.</summary>
-    public const int TxFreeFieldNumber = 4;
-    private double txFree_;
+    /// <summary>Field number for the "tax_free" field.</summary>
+    public const int TaxFreeFieldNumber = 4;
+    private double taxFree_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double TxFree {
-      get { return txFree_; }
+    public double TaxFree {
+      get { return taxFree_; }
       set {
-        txFree_ = value;
+        taxFree_ = value;
       }
     }
 
@@ -6042,14 +6042,14 @@ namespace Payment {
       }
     }
 
-    /// <summary>Field number for the "reasom" field.</summary>
-    public const int ReasomFieldNumber = 6;
-    private string reasom_ = "";
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 6;
+    private string reason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Reasom {
-      get { return reasom_; }
+    public string Reason {
+      get { return reason_; }
       set {
-        reasom_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        reason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -6102,9 +6102,9 @@ namespace Payment {
       if (ImpUid != other.ImpUid) return false;
       if (MerchantUid != other.MerchantUid) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Amount, other.Amount)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TxFree, other.TxFree)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TaxFree, other.TaxFree)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Checksum, other.Checksum)) return false;
-      if (Reasom != other.Reasom) return false;
+      if (Reason != other.Reason) return false;
       if (RefundHolder != other.RefundHolder) return false;
       if (RefundBank != other.RefundBank) return false;
       if (RefundAccount != other.RefundAccount) return false;
@@ -6117,9 +6117,9 @@ namespace Payment {
       if (ImpUid.Length != 0) hash ^= ImpUid.GetHashCode();
       if (MerchantUid.Length != 0) hash ^= MerchantUid.GetHashCode();
       if (Amount != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Amount);
-      if (TxFree != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TxFree);
+      if (TaxFree != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TaxFree);
       if (Checksum != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Checksum);
-      if (Reasom.Length != 0) hash ^= Reasom.GetHashCode();
+      if (Reason.Length != 0) hash ^= Reason.GetHashCode();
       if (RefundHolder.Length != 0) hash ^= RefundHolder.GetHashCode();
       if (RefundBank.Length != 0) hash ^= RefundBank.GetHashCode();
       if (RefundAccount.Length != 0) hash ^= RefundAccount.GetHashCode();
@@ -6151,17 +6151,17 @@ namespace Payment {
         output.WriteRawTag(25);
         output.WriteDouble(Amount);
       }
-      if (TxFree != 0D) {
+      if (TaxFree != 0D) {
         output.WriteRawTag(33);
-        output.WriteDouble(TxFree);
+        output.WriteDouble(TaxFree);
       }
       if (Checksum != 0D) {
         output.WriteRawTag(41);
         output.WriteDouble(Checksum);
       }
-      if (Reasom.Length != 0) {
+      if (Reason.Length != 0) {
         output.WriteRawTag(50);
-        output.WriteString(Reasom);
+        output.WriteString(Reason);
       }
       if (RefundHolder.Length != 0) {
         output.WriteRawTag(58);
@@ -6196,17 +6196,17 @@ namespace Payment {
         output.WriteRawTag(25);
         output.WriteDouble(Amount);
       }
-      if (TxFree != 0D) {
+      if (TaxFree != 0D) {
         output.WriteRawTag(33);
-        output.WriteDouble(TxFree);
+        output.WriteDouble(TaxFree);
       }
       if (Checksum != 0D) {
         output.WriteRawTag(41);
         output.WriteDouble(Checksum);
       }
-      if (Reasom.Length != 0) {
+      if (Reason.Length != 0) {
         output.WriteRawTag(50);
-        output.WriteString(Reasom);
+        output.WriteString(Reason);
       }
       if (RefundHolder.Length != 0) {
         output.WriteRawTag(58);
@@ -6238,14 +6238,14 @@ namespace Payment {
       if (Amount != 0D) {
         size += 1 + 8;
       }
-      if (TxFree != 0D) {
+      if (TaxFree != 0D) {
         size += 1 + 8;
       }
       if (Checksum != 0D) {
         size += 1 + 8;
       }
-      if (Reasom.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Reasom);
+      if (Reason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Reason);
       }
       if (RefundHolder.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RefundHolder);
@@ -6276,14 +6276,14 @@ namespace Payment {
       if (other.Amount != 0D) {
         Amount = other.Amount;
       }
-      if (other.TxFree != 0D) {
-        TxFree = other.TxFree;
+      if (other.TaxFree != 0D) {
+        TaxFree = other.TaxFree;
       }
       if (other.Checksum != 0D) {
         Checksum = other.Checksum;
       }
-      if (other.Reasom.Length != 0) {
-        Reasom = other.Reasom;
+      if (other.Reason.Length != 0) {
+        Reason = other.Reason;
       }
       if (other.RefundHolder.Length != 0) {
         RefundHolder = other.RefundHolder;
@@ -6321,7 +6321,7 @@ namespace Payment {
             break;
           }
           case 33: {
-            TxFree = input.ReadDouble();
+            TaxFree = input.ReadDouble();
             break;
           }
           case 41: {
@@ -6329,7 +6329,7 @@ namespace Payment {
             break;
           }
           case 50: {
-            Reasom = input.ReadString();
+            Reason = input.ReadString();
             break;
           }
           case 58: {
@@ -6371,7 +6371,7 @@ namespace Payment {
             break;
           }
           case 33: {
-            TxFree = input.ReadDouble();
+            TaxFree = input.ReadDouble();
             break;
           }
           case 41: {
@@ -6379,7 +6379,7 @@ namespace Payment {
             break;
           }
           case 50: {
-            Reasom = input.ReadString();
+            Reason = input.ReadString();
             break;
           }
           case 58: {

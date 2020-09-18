@@ -1,0 +1,31 @@
+syntax = "proto3";
+package escrow;
+
+option go_package = "github.com/iamport/interface/build/go/escrow";
+
+message Info {
+    string name = 1;
+    string tel = 2;
+    string addr = 3;
+    string postcode = 4;
+}
+
+message Logis {
+    string company = 1;
+    string invoice = 2;
+    int32 sent_at =3;
+    int32 applied_at = 4;
+}
+
+message EscrowRequest {
+    string imp_uid = 1;
+    Info sender = 2;
+    Info receiver = 3;
+    Logis logis = 4;
+}
+
+message EscrowResponse {
+    int32 code = 1;
+    string message = 2;
+    Logis response = 3;
+}

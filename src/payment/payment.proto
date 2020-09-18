@@ -155,9 +155,9 @@ message PaymentCancleRequest {
     string imp_uid = 1;
     string merchant_uid = 2;
     double amount = 3;
-    double tx_free = 4;
+    double tax_free = 4;
     double checksum = 5;
-    string reasom = 6;
+    string reason = 6;
     string refund_holder = 7;
     string refund_bank = 8;
     string refund_account = 9;

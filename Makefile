@@ -1,4 +1,4 @@
-SRC = src/authenticate/token.proto src/payment/payment.proto
+SRC = src/authenticate/token.proto src/payment/payment.proto src/escrow/escrow.proto
 
 .PHONY: build
 build:

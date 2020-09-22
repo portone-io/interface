@@ -7,7 +7,7 @@
 
 ## Build
 ```
-$ git clone https://github.com/JoowonYun/interface.git
+$ git clone https://github.com/iamport/interface.git
 
 $ cd interface
 

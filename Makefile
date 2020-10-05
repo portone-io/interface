@@ -1,19 +1,36 @@
+PROTO_PATH=./src
 SRC = src/authenticate/token.proto src/payment/payment.proto src/escrow/escrow.proto
 
-.PHONY: build
-build:
+GEN_SRC_ROOT = ./gen_src
+GEN_SRC_CSHARP = ./gen_src/csharp
+GEN_SRC_CPP = ./gen_src/cpp
+GEN_SRC_JAVA = ./gen_src/java
+GEN_SRC_JS = ./gen_src/js
+GEN_SRC_TS = ./gen_src/ts
+GEN_SRC_PHP = ./gen_src/php
+GEN_SRC_PYTHON = ./gen_src/python
+GEN_SRC_DART = ./gen_src/dart
+GEN_SRC_GO = ./gen_src/go
+GEN_SRC_RUST = ./gen_src/rust
+
+.PHONY: gen_src
+gen_src:
 	make clean
-	mkdir ./build ./build/csharp ./build/go ./build/java ./build/js ./build/php ./build/python ./build/ts ./build/dart ./build/cpp ./build/rust
-	protoc --proto_path=src --csharp_out=build/csharp $(SRC)
-	protoc --proto_path=src --go_out=build/go --go_opt=paths=source_relative $(SRC)
-	protoc --proto_path=src --java_out=build/java $(SRC)
-	protoc --proto_path=src --js_out=import_style=commonjs,binary:build/js --ts_out=build/ts $(SRC)
-	protoc --proto_path=src --php_out=build/php $(SRC)
-	protoc --proto_path=src --python_out=build/python $(SRC)
-	protoc --proto_path=src --dart_out=build/dart $(SRC)
-	protoc --proto_path=src --cpp_out=build/cpp $(SRC)
-	protoc --proto_path=src --rust_out=build/rust $(SRC)
+	mkdir -p $(GEN_SRC_CSHARP) $(GEN_SRC_CPP) $(GEN_SRC_JAVA) $(GEN_SRC_JS) $(GEN_SRC_TS) $(GEN_SRC_PHP) $(GEN_SRC_PYTHON) $(GEN_SRC_DART) $(GEN_SRC_GO) $(GEN_SRC_RUST)
+	protoc --proto_path=$(PROTO_PATH) --csharp_out=$(GEN_SRC_CSHARP) $(SRC)
+	protoc --proto_path=$(PROTO_PATH) --cpp_out=$(GEN_SRC_CPP) $(SRC)
+	protoc --proto_path=$(PROTO_PATH) --java_out=$(GEN_SRC_JAVA) $(SRC)
+	protoc --proto_path=$(PROTO_PATH) --js_out=import_style=commonjs,binary:$(GEN_SRC_JS) --ts_out=$(GEN_SRC_TS) $(SRC)
+	protoc --proto_path=$(PROTO_PATH) --php_out=$(GEN_SRC_PHP) $(SRC)
+	protoc --proto_path=$(PROTO_PATH) --python_out=$(GEN_SRC_PYTHON) $(SRC)
+	protoc --proto_path=$(PROTO_PATH) --dart_out=$(GEN_SRC_DART) $(SRC)
+	protoc --proto_path=$(PROTO_PATH) --go_out=$(GEN_SRC_GO) --go_opt=paths=source_relative $(SRC)
+	protoc --proto_path=$(PROTO_PATH) --rust_out=$(GEN_SRC_RUST) $(SRC)
+
+	cp ./supplements/rust/* $(GEN_SRC_RUST)
+	cp ./supplements/go/go.mod .
 
 .PHONY: clean
 clean:
-	rm -rf ./build
+	rm -rf $(GEN_SRC_ROOT)
+	rm -f go.mod

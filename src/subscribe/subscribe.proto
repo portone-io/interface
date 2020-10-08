@@ -1,0 +1,192 @@
+syntax = "proto3";
+package subscribe;
+
+option go_package = "github.com/iamport/interface/build/go/subscribe";
+
+message CancelHistory {
+    string pg_tid = 1;
+    int32 amount = 2;
+    int32 cancelled_at = 3;
+    string reason = 4;
+    string receipt_url = 5;
+}
+
+message OnetimePaymentRequest {
+    string merchant_uid = 1;
+    double amount = 2;
+    double tax_free = 3;
+    string card_number = 4;
+    string expiry = 5;
+    string birth = 6;
+    string pwd_2digit = 7;
+    string customer_uid = 8;
+    string pg = 9;
+    string name = 10;
+    string buyer_name = 11;
+    string buyer_email = 12;
+    string buyer_tel = 13;
+    string buyer_addr = 14;
+    string buyer_postcode = 15;
+    int32 card_quota = 16;
+    bool interest_free_by_merchant = 17;
+    string custom_data = 18;
+    string notice_url = 19;
+}
+
+message OnetimePaymentResponse {
+   int32 cancel_amount = 1;
+   string bank_code = 2;
+   int32 vbank_date = 3;
+   string card_code = 4;
+   string customer_uid_usage = 5;
+   string pg_id = 6;
+   bool escrow = 7;
+   int32 failed_at = 8;
+   string buyer_addr = 9;
+   string apply_num = 10;
+   string card_name = 11;
+   int32 cancelled_at = 12;
+   string pg_tid = 13;
+   string vbank_holder = 14;
+   string vbank_name = 15;
+   string currency = 16;
+   string buyer_name = 17;
+   string card_number = 18;
+   int32 started_at= 19;
+   string merchant_uid = 20;
+   string vbank_num = 21;
+   string customer_uid= 22;
+   string fail_reason = 23;
+   string imp_uid= 24;
+   string buyer_postcode = 25;
+   int32 paid_at = 26;
+   string pg_provider = 27;
+   string bank_name = 28;
+   int32 vbank_issued_at = 29;
+   string vbank_code = 30;
+   string receipt_url = 31;
+   int32 card_quota = 32;
+   string buyer_email = 33;
+   string user_agent = 34;
+   string status = 35;
+   string cancel_reason= 36;
+   string custom_data = 37;
+   bool cash_receipt_issued = 38;
+   int32 card_type = 39;
+   string buyer_tel = 40;
+   int32 amount = 41;
+   string name = 42;
+   string pay_method = 43;
+   string channel = 44;
+   repeated string cancel_receipt_urls = 45;
+   repeated CancelHistory cancel_history = 46;
+}
+
+message AgainPaymentRequest {
+    string customer_uid = 1;
+    string merchant_uid = 2;
+    double amount = 3;
+    double tax_free = 4;
+    string name = 5;
+    string buyer_name = 6;
+    string buyer_email = 7;
+    string buyer_tel = 8;
+    string buyer_addr = 9;
+    string buyer_postcode = 10;
+    int32 card_quota = 11;
+    bool interest_free_by_merchant = 12;
+    string custom_data = 13;
+    string notice_url = 14;
+}
+
+//message AgainPaymentResponse {
+//    int32 code = 1;
+//    string message = 2;
+//    Payment response = 3;
+//}
+
+message PaymentScheduleParam {
+    string merchant_uid = 1;
+    double schedule_at = 2;
+    int32 amount = 3;
+    int32 tax_free = 4;
+    string name = 5;
+    string buyer_name = 6;
+    string buyer_email = 7;
+    string buyer_tel = 8;
+    string buyer_addr = 9;
+    string buyer_postcode = 10;
+}
+
+message SchedulePayemntRequest {
+    string customer_uid = 1;
+    int32 checking_amount = 2;
+    string card_number = 3;
+    string expiry = 4;
+    string birth = 5;
+    string pwd_2digit = 6;
+    string pg = 7;
+    repeated PaymentScheduleParam schedules = 8;
+}
+
+message ScheduledPaymentResponseInside {
+    string customer_uid = 1;
+    string merchant_uid = 2;
+    string imp_uid = 3;
+    string schedule_at = 4;
+    string executed_at = 5;
+    string revoked_at = 6;
+    int32 amount = 7;
+    string name = 8;
+    string buyer_name = 9;
+    string buyer_email = 10;
+    string buyer_tel = 11;
+    string buyer_addr = 12;
+    string buyer_postcode = 13;
+    string custom_data = 14;
+    string schedule_status = 15;
+    string payment_status = 16;
+    string fail_reason = 17;
+}
+
+message SchedulePaymentResponse {
+    int32 code = 1;
+    string message = 2;
+    repeated ScheduledPaymentResponseInside response = 3;
+}
+
+message UnscheduelPaymentRequest {
+    string customer_uid = 1;
+    repeated string merchant_uid = 2;
+}
+
+message UnschedulePaymentResponse {
+    int32 code = 1;
+    string message = 2;
+    repeated ScheduledPaymentResponseInside response = 3;
+}
+
+message GetPaymentScheduleRequest {
+    string merchant_uid = 1;
+}
+
+message GetPaymentScheduleResponse {
+    int32 code = 1;
+    string message = 2;
+    ScheduledPaymentResponseInside response = 3;
+}
+
+message GetPaymentScheduleByCustomerRequest {
+    string customer_uid = 1;
+    int32 page = 2;
+    int32 from = 3;
+    int32 to = 4;
+    string schedule_status = 5;
+}
+
+message GetPaymentScheduleByCustomerResponse {
+    int32 code = 1;
+    string message = 2;
+    repeated ScheduledPaymentResponseInside response = 3;
+}
+

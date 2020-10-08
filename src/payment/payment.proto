@@ -14,7 +14,7 @@ message Payment {
     string buyer_postcode = 8;
     string buyer_tel = 9;
     int32 cancel_amount = 10;
-    repeated CancleHistory cancel_history = 11;
+    repeated CancelHistory cancel_history = 11;
     string cancel_reason = 12;
     repeated string cancel_receipt_urls = 13;
     int32 cancelled_at = 14;
@@ -52,7 +52,7 @@ message Payment {
     string vbank_num = 46;
 }
 
-message CancleHistory {
+message CancelHistory {
     string pg_tid = 1;
     int32 amount = 2;
     int32 cancelled_at = 3;
@@ -151,7 +151,7 @@ message PaymentMerchantUidResponse{
     Payment response = 3;
 }
 
-message PaymentCancleRequest {
+message PaymentCancelRequest {
     string imp_uid = 1;
     string merchant_uid = 2;
     double amount = 3;
@@ -163,7 +163,7 @@ message PaymentCancleRequest {
     string refund_account = 9;
 }
 
-message PaymentCancleResponse {
+message PaymentCancelResponse {
     int32 code = 1;
     string message = 2;
     Payment response = 3;

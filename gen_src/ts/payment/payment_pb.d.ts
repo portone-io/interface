@@ -35,9 +35,9 @@ export class Payment extends jspb.Message {
   setCancelAmount(value: number): void;
 
   clearCancelHistoryList(): void;
-  getCancelHistoryList(): Array<CancleHistory>;
-  setCancelHistoryList(value: Array<CancleHistory>): void;
-  addCancelHistory(value?: CancleHistory, index?: number): CancleHistory;
+  getCancelHistoryList(): Array<CancelHistory>;
+  setCancelHistoryList(value: Array<CancelHistory>): void;
+  addCancelHistory(value?: CancelHistory, index?: number): CancelHistory;
 
   getCancelReason(): string;
   setCancelReason(value: string): void;
@@ -168,7 +168,7 @@ export namespace Payment {
     buyerPostcode: string,
     buyerTel: string,
     cancelAmount: number,
-    cancelHistoryList: Array<CancleHistory.AsObject>,
+    cancelHistoryList: Array<CancelHistory.AsObject>,
     cancelReason: string,
     cancelReceiptUrlsList: Array<string>,
     cancelledAt: number,
@@ -207,7 +207,7 @@ export namespace Payment {
   }
 }
 
-export class CancleHistory extends jspb.Message {
+export class CancelHistory extends jspb.Message {
   getPgTid(): string;
   setPgTid(value: string): void;
 
@@ -224,16 +224,16 @@ export class CancleHistory extends jspb.Message {
   setReceiptUrl(value: string): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): CancleHistory.AsObject;
-  static toObject(includeInstance: boolean, msg: CancleHistory): CancleHistory.AsObject;
+  toObject(includeInstance?: boolean): CancelHistory.AsObject;
+  static toObject(includeInstance: boolean, msg: CancelHistory): CancelHistory.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: CancleHistory, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): CancleHistory;
-  static deserializeBinaryFromReader(message: CancleHistory, reader: jspb.BinaryReader): CancleHistory;
+  static serializeBinaryToWriter(message: CancelHistory, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CancelHistory;
+  static deserializeBinaryFromReader(message: CancelHistory, reader: jspb.BinaryReader): CancelHistory;
 }
 
-export namespace CancleHistory {
+export namespace CancelHistory {
   export type AsObject = {
     pgTid: string,
     amount: number,
@@ -695,7 +695,7 @@ export namespace PaymentMerchantUidResponse {
   }
 }
 
-export class PaymentCancleRequest extends jspb.Message {
+export class PaymentCancelRequest extends jspb.Message {
   getImpUid(): string;
   setImpUid(value: string): void;
 
@@ -724,16 +724,16 @@ export class PaymentCancleRequest extends jspb.Message {
   setRefundAccount(value: string): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): PaymentCancleRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: PaymentCancleRequest): PaymentCancleRequest.AsObject;
+  toObject(includeInstance?: boolean): PaymentCancelRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: PaymentCancelRequest): PaymentCancelRequest.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: PaymentCancleRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): PaymentCancleRequest;
-  static deserializeBinaryFromReader(message: PaymentCancleRequest, reader: jspb.BinaryReader): PaymentCancleRequest;
+  static serializeBinaryToWriter(message: PaymentCancelRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PaymentCancelRequest;
+  static deserializeBinaryFromReader(message: PaymentCancelRequest, reader: jspb.BinaryReader): PaymentCancelRequest;
 }
 
-export namespace PaymentCancleRequest {
+export namespace PaymentCancelRequest {
   export type AsObject = {
     impUid: string,
     merchantUid: string,
@@ -747,7 +747,7 @@ export namespace PaymentCancleRequest {
   }
 }
 
-export class PaymentCancleResponse extends jspb.Message {
+export class PaymentCancelResponse extends jspb.Message {
   getCode(): number;
   setCode(value: number): void;
 
@@ -760,16 +760,16 @@ export class PaymentCancleResponse extends jspb.Message {
   setResponse(value?: Payment): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): PaymentCancleResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: PaymentCancleResponse): PaymentCancleResponse.AsObject;
+  toObject(includeInstance?: boolean): PaymentCancelResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: PaymentCancelResponse): PaymentCancelResponse.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: PaymentCancleResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): PaymentCancleResponse;
-  static deserializeBinaryFromReader(message: PaymentCancleResponse, reader: jspb.BinaryReader): PaymentCancleResponse;
+  static serializeBinaryToWriter(message: PaymentCancelResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PaymentCancelResponse;
+  static deserializeBinaryFromReader(message: PaymentCancelResponse, reader: jspb.BinaryReader): PaymentCancelResponse;
 }
 
-export namespace PaymentCancleResponse {
+export namespace PaymentCancelResponse {
   export type AsObject = {
     code: number,
     message: string,

@@ -21,7 +21,7 @@ class Payment extends $pb.GeneratedMessage {
     ..aOS(8, 'buyerPostcode')
     ..aOS(9, 'buyerTel')
     ..a<$core.int>(10, 'cancelAmount', $pb.PbFieldType.O3)
-    ..pc<CancleHistory>(11, 'cancelHistory', $pb.PbFieldType.PM, subBuilder: CancleHistory.create)
+    ..pc<CancelHistory>(11, 'cancelHistory', $pb.PbFieldType.PM, subBuilder: CancelHistory.create)
     ..aOS(12, 'cancelReason')
     ..pPS(13, 'cancelReceiptUrls')
     ..a<$core.int>(14, 'cancelledAt', $pb.PbFieldType.O3)
@@ -166,7 +166,7 @@ class Payment extends $pb.GeneratedMessage {
   void clearCancelAmount() => clearField(10);
 
   @$pb.TagNumber(11)
-  $core.List<CancleHistory> get cancelHistory => $_getList(10);
+  $core.List<CancelHistory> get cancelHistory => $_getList(10);
 
   @$pb.TagNumber(12)
   $core.String get cancelReason => $_getSZ(11);
@@ -478,8 +478,8 @@ class Payment extends $pb.GeneratedMessage {
   void clearVbankNum() => clearField(46);
 }
 
-class CancleHistory extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CancleHistory', package: const $pb.PackageName('payment'), createEmptyInstance: create)
+class CancelHistory extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CancelHistory', package: const $pb.PackageName('payment'), createEmptyInstance: create)
     ..aOS(1, 'pgTid')
     ..a<$core.int>(2, 'amount', $pb.PbFieldType.O3)
     ..a<$core.int>(3, 'cancelledAt', $pb.PbFieldType.O3)
@@ -488,20 +488,20 @@ class CancleHistory extends $pb.GeneratedMessage {
     ..hasRequiredFields = false
   ;
 
-  CancleHistory._() : super();
-  factory CancleHistory() => create();
-  factory CancleHistory.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CancleHistory.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  CancleHistory clone() => CancleHistory()..mergeFromMessage(this);
-  CancleHistory copyWith(void Function(CancleHistory) updates) => super.copyWith((message) => updates(message as CancleHistory));
+  CancelHistory._() : super();
+  factory CancelHistory() => create();
+  factory CancelHistory.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CancelHistory.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  CancelHistory clone() => CancelHistory()..mergeFromMessage(this);
+  CancelHistory copyWith(void Function(CancelHistory) updates) => super.copyWith((message) => updates(message as CancelHistory));
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static CancleHistory create() => CancleHistory._();
-  CancleHistory createEmptyInstance() => create();
-  static $pb.PbList<CancleHistory> createRepeated() => $pb.PbList<CancleHistory>();
+  static CancelHistory create() => CancelHistory._();
+  CancelHistory createEmptyInstance() => create();
+  static $pb.PbList<CancelHistory> createRepeated() => $pb.PbList<CancelHistory>();
   @$core.pragma('dart2js:noInline')
-  static CancleHistory getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CancleHistory>(create);
-  static CancleHistory _defaultInstance;
+  static CancelHistory getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CancelHistory>(create);
+  static CancelHistory _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get pgTid => $_getSZ(0);
@@ -1333,8 +1333,8 @@ class PaymentMerchantUidResponse extends $pb.GeneratedMessage {
   Payment ensureResponse() => $_ensure(2);
 }
 
-class PaymentCancleRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PaymentCancleRequest', package: const $pb.PackageName('payment'), createEmptyInstance: create)
+class PaymentCancelRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PaymentCancelRequest', package: const $pb.PackageName('payment'), createEmptyInstance: create)
     ..aOS(1, 'impUid')
     ..aOS(2, 'merchantUid')
     ..a<$core.double>(3, 'amount', $pb.PbFieldType.OD)
@@ -1347,20 +1347,20 @@ class PaymentCancleRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false
   ;
 
-  PaymentCancleRequest._() : super();
-  factory PaymentCancleRequest() => create();
-  factory PaymentCancleRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PaymentCancleRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  PaymentCancleRequest clone() => PaymentCancleRequest()..mergeFromMessage(this);
-  PaymentCancleRequest copyWith(void Function(PaymentCancleRequest) updates) => super.copyWith((message) => updates(message as PaymentCancleRequest));
+  PaymentCancelRequest._() : super();
+  factory PaymentCancelRequest() => create();
+  factory PaymentCancelRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PaymentCancelRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  PaymentCancelRequest clone() => PaymentCancelRequest()..mergeFromMessage(this);
+  PaymentCancelRequest copyWith(void Function(PaymentCancelRequest) updates) => super.copyWith((message) => updates(message as PaymentCancelRequest));
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static PaymentCancleRequest create() => PaymentCancleRequest._();
-  PaymentCancleRequest createEmptyInstance() => create();
-  static $pb.PbList<PaymentCancleRequest> createRepeated() => $pb.PbList<PaymentCancleRequest>();
+  static PaymentCancelRequest create() => PaymentCancelRequest._();
+  PaymentCancelRequest createEmptyInstance() => create();
+  static $pb.PbList<PaymentCancelRequest> createRepeated() => $pb.PbList<PaymentCancelRequest>();
   @$core.pragma('dart2js:noInline')
-  static PaymentCancleRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PaymentCancleRequest>(create);
-  static PaymentCancleRequest _defaultInstance;
+  static PaymentCancelRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PaymentCancelRequest>(create);
+  static PaymentCancelRequest _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get impUid => $_getSZ(0);
@@ -1444,28 +1444,28 @@ class PaymentCancleRequest extends $pb.GeneratedMessage {
   void clearRefundAccount() => clearField(9);
 }
 
-class PaymentCancleResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PaymentCancleResponse', package: const $pb.PackageName('payment'), createEmptyInstance: create)
+class PaymentCancelResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PaymentCancelResponse', package: const $pb.PackageName('payment'), createEmptyInstance: create)
     ..a<$core.int>(1, 'code', $pb.PbFieldType.O3)
     ..aOS(2, 'message')
     ..aOM<Payment>(3, 'response', subBuilder: Payment.create)
     ..hasRequiredFields = false
   ;
 
-  PaymentCancleResponse._() : super();
-  factory PaymentCancleResponse() => create();
-  factory PaymentCancleResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PaymentCancleResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  PaymentCancleResponse clone() => PaymentCancleResponse()..mergeFromMessage(this);
-  PaymentCancleResponse copyWith(void Function(PaymentCancleResponse) updates) => super.copyWith((message) => updates(message as PaymentCancleResponse));
+  PaymentCancelResponse._() : super();
+  factory PaymentCancelResponse() => create();
+  factory PaymentCancelResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PaymentCancelResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  PaymentCancelResponse clone() => PaymentCancelResponse()..mergeFromMessage(this);
+  PaymentCancelResponse copyWith(void Function(PaymentCancelResponse) updates) => super.copyWith((message) => updates(message as PaymentCancelResponse));
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static PaymentCancleResponse create() => PaymentCancleResponse._();
-  PaymentCancleResponse createEmptyInstance() => create();
-  static $pb.PbList<PaymentCancleResponse> createRepeated() => $pb.PbList<PaymentCancleResponse>();
+  static PaymentCancelResponse create() => PaymentCancelResponse._();
+  PaymentCancelResponse createEmptyInstance() => create();
+  static $pb.PbList<PaymentCancelResponse> createRepeated() => $pb.PbList<PaymentCancelResponse>();
   @$core.pragma('dart2js:noInline')
-  static PaymentCancleResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PaymentCancleResponse>(create);
-  static PaymentCancleResponse _defaultInstance;
+  static PaymentCancelResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PaymentCancelResponse>(create);
+  static PaymentCancelResponse _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get code => $_getIZ(0);

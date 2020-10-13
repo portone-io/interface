@@ -54,7 +54,7 @@ class Payment extends \Google\Protobuf\Internal\Message
      */
     protected $cancel_amount = 0;
     /**
-     * Generated from protobuf field <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+     * Generated from protobuf field <code>repeated .payment.CancelHistory cancel_history = 11;</code>
      */
     private $cancel_history;
     /**
@@ -214,7 +214,7 @@ class Payment extends \Google\Protobuf\Internal\Message
      *     @type string $buyer_postcode
      *     @type string $buyer_tel
      *     @type int $cancel_amount
-     *     @type \Payment\CancleHistory[]|\Google\Protobuf\Internal\RepeatedField $cancel_history
+     *     @type \Payment\CancelHistory[]|\Google\Protobuf\Internal\RepeatedField $cancel_history
      *     @type string $cancel_reason
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $cancel_receipt_urls
      *     @type int $cancelled_at
@@ -478,7 +478,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+     * Generated from protobuf field <code>repeated .payment.CancelHistory cancel_history = 11;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getCancelHistory()
@@ -487,13 +487,13 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .payment.CancleHistory cancel_history = 11;</code>
-     * @param \Payment\CancleHistory[]|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>repeated .payment.CancelHistory cancel_history = 11;</code>
+     * @param \Payment\CancelHistory[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCancelHistory($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Payment\CancleHistory::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Payment\CancelHistory::class);
         $this->cancel_history = $arr;
 
         return $this;

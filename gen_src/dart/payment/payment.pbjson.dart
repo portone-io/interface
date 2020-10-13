@@ -18,7 +18,7 @@ const Payment$json = const {
     const {'1': 'buyer_postcode', '3': 8, '4': 1, '5': 9, '10': 'buyerPostcode'},
     const {'1': 'buyer_tel', '3': 9, '4': 1, '5': 9, '10': 'buyerTel'},
     const {'1': 'cancel_amount', '3': 10, '4': 1, '5': 5, '10': 'cancelAmount'},
-    const {'1': 'cancel_history', '3': 11, '4': 3, '5': 11, '6': '.payment.CancleHistory', '10': 'cancelHistory'},
+    const {'1': 'cancel_history', '3': 11, '4': 3, '5': 11, '6': '.payment.CancelHistory', '10': 'cancelHistory'},
     const {'1': 'cancel_reason', '3': 12, '4': 1, '5': 9, '10': 'cancelReason'},
     const {'1': 'cancel_receipt_urls', '3': 13, '4': 3, '5': 9, '10': 'cancelReceiptUrls'},
     const {'1': 'cancelled_at', '3': 14, '4': 1, '5': 5, '10': 'cancelledAt'},
@@ -57,8 +57,8 @@ const Payment$json = const {
   ],
 };
 
-const CancleHistory$json = const {
-  '1': 'CancleHistory',
+const CancelHistory$json = const {
+  '1': 'CancelHistory',
   '2': const [
     const {'1': 'pg_tid', '3': 1, '4': 1, '5': 9, '10': 'pgTid'},
     const {'1': 'amount', '3': 2, '4': 1, '5': 5, '10': 'amount'},
@@ -201,8 +201,8 @@ const PaymentMerchantUidResponse$json = const {
   ],
 };
 
-const PaymentCancleRequest$json = const {
-  '1': 'PaymentCancleRequest',
+const PaymentCancelRequest$json = const {
+  '1': 'PaymentCancelRequest',
   '2': const [
     const {'1': 'imp_uid', '3': 1, '4': 1, '5': 9, '10': 'impUid'},
     const {'1': 'merchant_uid', '3': 2, '4': 1, '5': 9, '10': 'merchantUid'},
@@ -216,8 +216,8 @@ const PaymentCancleRequest$json = const {
   ],
 };
 
-const PaymentCancleResponse$json = const {
-  '1': 'PaymentCancleResponse',
+const PaymentCancelResponse$json = const {
+  '1': 'PaymentCancelResponse',
   '2': const [
     const {'1': 'code', '3': 1, '4': 1, '5': 5, '10': 'code'},
     const {'1': 'message', '3': 2, '4': 1, '5': 9, '10': 'message'},

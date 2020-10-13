@@ -14,7 +14,7 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_payment_2fpayment_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CancleHistory_payment_2fpayment_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_payment_2fpayment_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CancelHistory_payment_2fpayment_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_payment_2fpayment_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Payment_payment_2fpayment_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_payment_2fpayment_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PaymentBalance_payment_2fpayment_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_payment_2fpayment_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentBalanceDetail_payment_2fpayment_2eproto;
@@ -26,10 +26,10 @@ class PaymentDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Payment> _instance;
 } _Payment_default_instance_;
-class CancleHistoryDefaultTypeInternal {
+class CancelHistoryDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CancleHistory> _instance;
-} _CancleHistory_default_instance_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CancelHistory> _instance;
+} _CancelHistory_default_instance_;
 class PaymentPageDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PaymentPage> _instance;
@@ -86,14 +86,14 @@ class PaymentMerchantUidResponseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PaymentMerchantUidResponse> _instance;
 } _PaymentMerchantUidResponse_default_instance_;
-class PaymentCancleRequestDefaultTypeInternal {
+class PaymentCancelRequestDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PaymentCancleRequest> _instance;
-} _PaymentCancleRequest_default_instance_;
-class PaymentCancleResponseDefaultTypeInternal {
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PaymentCancelRequest> _instance;
+} _PaymentCancelRequest_default_instance_;
+class PaymentCancelResponseDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PaymentCancleResponse> _instance;
-} _PaymentCancleResponse_default_instance_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PaymentCancelResponse> _instance;
+} _PaymentCancelResponse_default_instance_;
 class PaymentBalanceRequestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PaymentBalanceRequest> _instance;
@@ -115,19 +115,19 @@ class PaymentPrepareResponseDefaultTypeInternal {
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PaymentPrepareResponse> _instance;
 } _PaymentPrepareResponse_default_instance_;
 }  // namespace payment
-static void InitDefaultsscc_info_CancleHistory_payment_2fpayment_2eproto() {
+static void InitDefaultsscc_info_CancelHistory_payment_2fpayment_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::payment::_CancleHistory_default_instance_;
-    new (ptr) ::payment::CancleHistory();
+    void* ptr = &::payment::_CancelHistory_default_instance_;
+    new (ptr) ::payment::CancelHistory();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::CancleHistory::InitAsDefaultInstance();
+  ::payment::CancelHistory::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CancleHistory_payment_2fpayment_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CancleHistory_payment_2fpayment_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CancelHistory_payment_2fpayment_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CancelHistory_payment_2fpayment_2eproto}, {}};
 
 static void InitDefaultsscc_info_Payment_payment_2fpayment_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -142,7 +142,7 @@ static void InitDefaultsscc_info_Payment_payment_2fpayment_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Payment_payment_2fpayment_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Payment_payment_2fpayment_2eproto}, {
-      &scc_info_CancleHistory_payment_2fpayment_2eproto.base,}};
+      &scc_info_CancelHistory_payment_2fpayment_2eproto.base,}};
 
 static void InitDefaultsscc_info_PaymentBalance_payment_2fpayment_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -218,33 +218,33 @@ static void InitDefaultsscc_info_PaymentBalanceResponse_payment_2fpayment_2eprot
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_PaymentBalanceResponse_payment_2fpayment_2eproto}, {
       &scc_info_PaymentBalance_payment_2fpayment_2eproto.base,}};
 
-static void InitDefaultsscc_info_PaymentCancleRequest_payment_2fpayment_2eproto() {
+static void InitDefaultsscc_info_PaymentCancelRequest_payment_2fpayment_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::payment::_PaymentCancleRequest_default_instance_;
-    new (ptr) ::payment::PaymentCancleRequest();
+    void* ptr = &::payment::_PaymentCancelRequest_default_instance_;
+    new (ptr) ::payment::PaymentCancelRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentCancleRequest::InitAsDefaultInstance();
+  ::payment::PaymentCancelRequest::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentCancleRequest_payment_2fpayment_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PaymentCancleRequest_payment_2fpayment_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentCancelRequest_payment_2fpayment_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PaymentCancelRequest_payment_2fpayment_2eproto}, {}};
 
-static void InitDefaultsscc_info_PaymentCancleResponse_payment_2fpayment_2eproto() {
+static void InitDefaultsscc_info_PaymentCancelResponse_payment_2fpayment_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::payment::_PaymentCancleResponse_default_instance_;
-    new (ptr) ::payment::PaymentCancleResponse();
+    void* ptr = &::payment::_PaymentCancelResponse_default_instance_;
+    new (ptr) ::payment::PaymentCancelResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentCancleResponse::InitAsDefaultInstance();
+  ::payment::PaymentCancelResponse::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentCancleResponse_payment_2fpayment_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_PaymentCancleResponse_payment_2fpayment_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentCancelResponse_payment_2fpayment_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_PaymentCancelResponse_payment_2fpayment_2eproto}, {
       &scc_info_Payment_payment_2fpayment_2eproto.base,}};
 
 static void InitDefaultsscc_info_PaymentMerchantUidRequest_payment_2fpayment_2eproto() {
@@ -507,15 +507,15 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_payment_2fpayment_2eproto::off
   PROTOBUF_FIELD_OFFSET(::payment::Payment, vbank_name_),
   PROTOBUF_FIELD_OFFSET(::payment::Payment, vbank_num_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::payment::CancleHistory, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::payment::CancelHistory, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::payment::CancleHistory, pg_tid_),
-  PROTOBUF_FIELD_OFFSET(::payment::CancleHistory, amount_),
-  PROTOBUF_FIELD_OFFSET(::payment::CancleHistory, cancelled_at_),
-  PROTOBUF_FIELD_OFFSET(::payment::CancleHistory, reason_),
-  PROTOBUF_FIELD_OFFSET(::payment::CancleHistory, receipt_url_),
+  PROTOBUF_FIELD_OFFSET(::payment::CancelHistory, pg_tid_),
+  PROTOBUF_FIELD_OFFSET(::payment::CancelHistory, amount_),
+  PROTOBUF_FIELD_OFFSET(::payment::CancelHistory, cancelled_at_),
+  PROTOBUF_FIELD_OFFSET(::payment::CancelHistory, reason_),
+  PROTOBUF_FIELD_OFFSET(::payment::CancelHistory, receipt_url_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::payment::PaymentPage, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -636,27 +636,27 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_payment_2fpayment_2eproto::off
   PROTOBUF_FIELD_OFFSET(::payment::PaymentMerchantUidResponse, message_),
   PROTOBUF_FIELD_OFFSET(::payment::PaymentMerchantUidResponse, response_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleRequest, imp_uid_),
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleRequest, merchant_uid_),
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleRequest, amount_),
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleRequest, tax_free_),
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleRequest, checksum_),
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleRequest, reason_),
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleRequest, refund_holder_),
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleRequest, refund_bank_),
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleRequest, refund_account_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelRequest, imp_uid_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelRequest, merchant_uid_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelRequest, amount_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelRequest, tax_free_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelRequest, checksum_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelRequest, reason_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelRequest, refund_holder_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelRequest, refund_bank_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelRequest, refund_account_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleResponse, code_),
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleResponse, message_),
-  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancleResponse, response_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelResponse, code_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelResponse, message_),
+  PROTOBUF_FIELD_OFFSET(::payment::PaymentCancelResponse, response_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::payment::PaymentBalanceRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -696,7 +696,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_payment_2fpayment_2eproto::off
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::payment::Payment)},
-  { 51, -1, sizeof(::payment::CancleHistory)},
+  { 51, -1, sizeof(::payment::CancelHistory)},
   { 61, -1, sizeof(::payment::PaymentPage)},
   { 70, -1, sizeof(::payment::PaymentBalanceDetail)},
   { 79, -1, sizeof(::payment::PaymentBalance)},
@@ -711,8 +711,8 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 156, -1, sizeof(::payment::PaymentStatusResponse)},
   { 164, -1, sizeof(::payment::PaymentMerchantUidRequest)},
   { 172, -1, sizeof(::payment::PaymentMerchantUidResponse)},
-  { 180, -1, sizeof(::payment::PaymentCancleRequest)},
-  { 194, -1, sizeof(::payment::PaymentCancleResponse)},
+  { 180, -1, sizeof(::payment::PaymentCancelRequest)},
+  { 194, -1, sizeof(::payment::PaymentCancelResponse)},
   { 202, -1, sizeof(::payment::PaymentBalanceRequest)},
   { 208, -1, sizeof(::payment::PaymentBalanceResponse)},
   { 216, -1, sizeof(::payment::Prepare)},
@@ -722,7 +722,7 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_Payment_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_CancleHistory_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_CancelHistory_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentPage_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentBalanceDetail_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentBalance_default_instance_),
@@ -737,8 +737,8 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentStatusResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentMerchantUidRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentMerchantUidResponse_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentCancleRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentCancleResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentCancelRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentCancelResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentBalanceRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_PaymentBalanceResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::payment::_Prepare_default_instance_),
@@ -754,7 +754,7 @@ const char descriptor_table_protodef_payment_2fpayment_2eproto[] PROTOBUF_SECTIO
   "\n\nbuyer_name\030\007 \001(\t\022\026\n\016buyer_postcode\030\010 \001"
   "(\t\022\021\n\tbuyer_tel\030\t \001(\t\022\025\n\rcancel_amount\030\n"
   " \001(\005\022.\n\016cancel_history\030\013 \003(\0132\026.payment.C"
-  "ancleHistory\022\025\n\rcancel_reason\030\014 \001(\t\022\033\n\023c"
+  "ancelHistory\022\025\n\rcancel_reason\030\014 \001(\t\022\033\n\023c"
   "ancel_receipt_urls\030\r \003(\t\022\024\n\014cancelled_at"
   "\030\016 \001(\005\022\021\n\tcard_code\030\017 \001(\t\022\021\n\tcard_name\030\020"
   " \001(\t\022\023\n\013card_number\030\021 \001(\t\022\022\n\ncard_quota\030"
@@ -772,7 +772,7 @@ const char descriptor_table_protodef_payment_2fpayment_2eproto[] PROTOBUF_SECTIO
   "ank_code\030) \001(\t\022\022\n\nvbank_date\030* \001(\005\022\024\n\014vb"
   "ank_holder\030+ \001(\t\022\027\n\017vbank_issued_at\030, \001("
   "\005\022\022\n\nvbank_name\030- \001(\t\022\021\n\tvbank_num\030. \001(\t"
-  "\"j\n\rCancleHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amo"
+  "\"j\n\rCancelHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amo"
   "unt\030\002 \001(\005\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reaso"
   "n\030\004 \001(\t\022\023\n\013receipt_url\030\005 \001(\t\"\\\n\013PaymentP"
   "age\022\r\n\005total\030\001 \001(\005\022\020\n\010previous\030\002 \001(\005\022\014\n\004"
@@ -813,12 +813,12 @@ const char descriptor_table_protodef_payment_2fpayment_2eproto[] PROTOBUF_SECTIO
   "\001(\t\022\016\n\006status\030\002 \001(\t\022\017\n\007sorting\030\003 \001(\t\"_\n\032"
   "PaymentMerchantUidResponse\022\014\n\004code\030\001 \001(\005"
   "\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.pa"
-  "yment.Payment\"\305\001\n\024PaymentCancleRequest\022\017"
+  "yment.Payment\"\305\001\n\024PaymentCancelRequest\022\017"
   "\n\007imp_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n"
   "\006amount\030\003 \001(\001\022\020\n\010tax_free\030\004 \001(\001\022\020\n\010check"
   "sum\030\005 \001(\001\022\016\n\006reason\030\006 \001(\t\022\025\n\rrefund_hold"
   "er\030\007 \001(\t\022\023\n\013refund_bank\030\010 \001(\t\022\026\n\016refund_"
-  "account\030\t \001(\t\"Z\n\025PaymentCancleResponse\022\014"
+  "account\030\t \001(\t\"Z\n\025PaymentCancelResponse\022\014"
   "\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010respons"
   "e\030\003 \001(\0132\020.payment.Payment\"(\n\025PaymentBala"
   "nceRequest\022\017\n\007imp_uid\030\001 \001(\t\"b\n\026PaymentBa"
@@ -835,15 +835,15 @@ const char descriptor_table_protodef_payment_2fpayment_2eproto[] PROTOBUF_SECTIO
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_payment_2fpayment_2eproto_deps[1] = {
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_payment_2fpayment_2eproto_sccs[23] = {
-  &scc_info_CancleHistory_payment_2fpayment_2eproto.base,
+  &scc_info_CancelHistory_payment_2fpayment_2eproto.base,
   &scc_info_Payment_payment_2fpayment_2eproto.base,
   &scc_info_PaymentBalance_payment_2fpayment_2eproto.base,
   &scc_info_PaymentBalanceDetail_payment_2fpayment_2eproto.base,
   &scc_info_PaymentBalanceHistory_payment_2fpayment_2eproto.base,
   &scc_info_PaymentBalanceRequest_payment_2fpayment_2eproto.base,
   &scc_info_PaymentBalanceResponse_payment_2fpayment_2eproto.base,
-  &scc_info_PaymentCancleRequest_payment_2fpayment_2eproto.base,
-  &scc_info_PaymentCancleResponse_payment_2fpayment_2eproto.base,
+  &scc_info_PaymentCancelRequest_payment_2fpayment_2eproto.base,
+  &scc_info_PaymentCancelResponse_payment_2fpayment_2eproto.base,
   &scc_info_PaymentMerchantUidRequest_payment_2fpayment_2eproto.base,
   &scc_info_PaymentMerchantUidResponse_payment_2fpayment_2eproto.base,
   &scc_info_PaymentPage_payment_2fpayment_2eproto.base,
@@ -1284,7 +1284,7 @@ const char* Payment::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated .payment.CancleHistory cancel_history = 11;
+      // repeated .payment.CancelHistory cancel_history = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
           ptr -= 1;
@@ -1712,7 +1712,7 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(10, this->_internal_cancel_amount(), target);
   }
 
-  // repeated .payment.CancleHistory cancel_history = 11;
+  // repeated .payment.CancelHistory cancel_history = 11;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_cancel_history_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -2046,7 +2046,7 @@ size_t Payment::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .payment.CancleHistory cancel_history = 11;
+  // repeated .payment.CancelHistory cancel_history = 11;
   total_size += 1UL * this->_internal_cancel_history_size();
   for (const auto& msg : this->cancel_history_) {
     total_size +=
@@ -2601,19 +2601,19 @@ void Payment::InternalSwap(Payment* other) {
 
 // ===================================================================
 
-void CancleHistory::InitAsDefaultInstance() {
+void CancelHistory::InitAsDefaultInstance() {
 }
-class CancleHistory::_Internal {
+class CancelHistory::_Internal {
  public:
 };
 
-CancleHistory::CancleHistory(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+CancelHistory::CancelHistory(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:payment.CancleHistory)
+  // @@protoc_insertion_point(arena_constructor:payment.CancelHistory)
 }
-CancleHistory::CancleHistory(const CancleHistory& from)
+CancelHistory::CancelHistory(const CancelHistory& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -2634,11 +2634,11 @@ CancleHistory::CancleHistory(const CancleHistory& from)
   ::memcpy(&amount_, &from.amount_,
     static_cast<size_t>(reinterpret_cast<char*>(&cancelled_at_) -
     reinterpret_cast<char*>(&amount_)) + sizeof(cancelled_at_));
-  // @@protoc_insertion_point(copy_constructor:payment.CancleHistory)
+  // @@protoc_insertion_point(copy_constructor:payment.CancelHistory)
 }
 
-void CancleHistory::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CancleHistory_payment_2fpayment_2eproto.base);
+void CancelHistory::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CancelHistory_payment_2fpayment_2eproto.base);
   pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -2647,36 +2647,36 @@ void CancleHistory::SharedCtor() {
       reinterpret_cast<char*>(&amount_)) + sizeof(cancelled_at_));
 }
 
-CancleHistory::~CancleHistory() {
-  // @@protoc_insertion_point(destructor:payment.CancleHistory)
+CancelHistory::~CancelHistory() {
+  // @@protoc_insertion_point(destructor:payment.CancelHistory)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CancleHistory::SharedDtor() {
+void CancelHistory::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   pg_tid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   reason_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   receipt_url_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void CancleHistory::ArenaDtor(void* object) {
-  CancleHistory* _this = reinterpret_cast< CancleHistory* >(object);
+void CancelHistory::ArenaDtor(void* object) {
+  CancelHistory* _this = reinterpret_cast< CancelHistory* >(object);
   (void)_this;
 }
-void CancleHistory::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void CancelHistory::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void CancleHistory::SetCachedSize(int size) const {
+void CancelHistory::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CancleHistory& CancleHistory::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CancleHistory_payment_2fpayment_2eproto.base);
+const CancelHistory& CancelHistory::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CancelHistory_payment_2fpayment_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void CancleHistory::Clear() {
-// @@protoc_insertion_point(message_clear_start:payment.CancleHistory)
+void CancelHistory::Clear() {
+// @@protoc_insertion_point(message_clear_start:payment.CancelHistory)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2690,7 +2690,7 @@ void CancleHistory::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CancleHistory::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CancelHistory::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
@@ -2703,7 +2703,7 @@ const char* CancleHistory::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_pg_tid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.CancleHistory.pg_tid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.CancelHistory.pg_tid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2726,7 +2726,7 @@ const char* CancleHistory::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_reason();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.CancleHistory.reason"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.CancelHistory.reason"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2735,7 +2735,7 @@ const char* CancleHistory::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           auto str = _internal_mutable_receipt_url();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.CancleHistory.receipt_url"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.CancelHistory.receipt_url"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2761,9 +2761,9 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CancleHistory::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* CancelHistory::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:payment.CancleHistory)
+  // @@protoc_insertion_point(serialize_to_array_start:payment.CancelHistory)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2772,7 +2772,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg_tid().data(), static_cast<int>(this->_internal_pg_tid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "payment.CancleHistory.pg_tid");
+      "payment.CancelHistory.pg_tid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_pg_tid(), target);
   }
@@ -2794,7 +2794,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "payment.CancleHistory.reason");
+      "payment.CancelHistory.reason");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_reason(), target);
   }
@@ -2804,7 +2804,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_receipt_url().data(), static_cast<int>(this->_internal_receipt_url().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "payment.CancleHistory.receipt_url");
+      "payment.CancelHistory.receipt_url");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_receipt_url(), target);
   }
@@ -2813,12 +2813,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:payment.CancleHistory)
+  // @@protoc_insertion_point(serialize_to_array_end:payment.CancelHistory)
   return target;
 }
 
-size_t CancleHistory::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:payment.CancleHistory)
+size_t CancelHistory::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:payment.CancelHistory)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2869,23 +2869,23 @@ size_t CancleHistory::ByteSizeLong() const {
   return total_size;
 }
 
-void CancleHistory::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:payment.CancleHistory)
+void CancelHistory::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:payment.CancelHistory)
   GOOGLE_DCHECK_NE(&from, this);
-  const CancleHistory* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CancleHistory>(
+  const CancelHistory* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CancelHistory>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:payment.CancleHistory)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:payment.CancelHistory)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:payment.CancleHistory)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:payment.CancelHistory)
     MergeFrom(*source);
   }
 }
 
-void CancleHistory::MergeFrom(const CancleHistory& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:payment.CancleHistory)
+void CancelHistory::MergeFrom(const CancelHistory& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:payment.CancelHistory)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2908,39 +2908,39 @@ void CancleHistory::MergeFrom(const CancleHistory& from) {
   }
 }
 
-void CancleHistory::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:payment.CancleHistory)
+void CancelHistory::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:payment.CancelHistory)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void CancleHistory::CopyFrom(const CancleHistory& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:payment.CancleHistory)
+void CancelHistory::CopyFrom(const CancelHistory& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:payment.CancelHistory)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool CancleHistory::IsInitialized() const {
+bool CancelHistory::IsInitialized() const {
   return true;
 }
 
-void CancleHistory::InternalSwap(CancleHistory* other) {
+void CancelHistory::InternalSwap(CancelHistory* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   pg_tid_.Swap(&other->pg_tid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   reason_.Swap(&other->reason_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   receipt_url_.Swap(&other->receipt_url_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CancleHistory, cancelled_at_)
-      + sizeof(CancleHistory::cancelled_at_)
-      - PROTOBUF_FIELD_OFFSET(CancleHistory, amount_)>(
+      PROTOBUF_FIELD_OFFSET(CancelHistory, cancelled_at_)
+      + sizeof(CancelHistory::cancelled_at_)
+      - PROTOBUF_FIELD_OFFSET(CancelHistory, amount_)>(
           reinterpret_cast<char*>(&amount_),
           reinterpret_cast<char*>(&other->amount_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata CancleHistory::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata CancelHistory::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -7065,19 +7065,19 @@ void PaymentMerchantUidResponse::InternalSwap(PaymentMerchantUidResponse* other)
 
 // ===================================================================
 
-void PaymentCancleRequest::InitAsDefaultInstance() {
+void PaymentCancelRequest::InitAsDefaultInstance() {
 }
-class PaymentCancleRequest::_Internal {
+class PaymentCancelRequest::_Internal {
  public:
 };
 
-PaymentCancleRequest::PaymentCancleRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+PaymentCancelRequest::PaymentCancelRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:payment.PaymentCancleRequest)
+  // @@protoc_insertion_point(arena_constructor:payment.PaymentCancelRequest)
 }
-PaymentCancleRequest::PaymentCancleRequest(const PaymentCancleRequest& from)
+PaymentCancelRequest::PaymentCancelRequest(const PaymentCancelRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -7113,11 +7113,11 @@ PaymentCancleRequest::PaymentCancleRequest(const PaymentCancleRequest& from)
   ::memcpy(&amount_, &from.amount_,
     static_cast<size_t>(reinterpret_cast<char*>(&checksum_) -
     reinterpret_cast<char*>(&amount_)) + sizeof(checksum_));
-  // @@protoc_insertion_point(copy_constructor:payment.PaymentCancleRequest)
+  // @@protoc_insertion_point(copy_constructor:payment.PaymentCancelRequest)
 }
 
-void PaymentCancleRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentCancleRequest_payment_2fpayment_2eproto.base);
+void PaymentCancelRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentCancelRequest_payment_2fpayment_2eproto.base);
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -7129,13 +7129,13 @@ void PaymentCancleRequest::SharedCtor() {
       reinterpret_cast<char*>(&amount_)) + sizeof(checksum_));
 }
 
-PaymentCancleRequest::~PaymentCancleRequest() {
-  // @@protoc_insertion_point(destructor:payment.PaymentCancleRequest)
+PaymentCancelRequest::~PaymentCancelRequest() {
+  // @@protoc_insertion_point(destructor:payment.PaymentCancelRequest)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void PaymentCancleRequest::SharedDtor() {
+void PaymentCancelRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   imp_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   merchant_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -7145,23 +7145,23 @@ void PaymentCancleRequest::SharedDtor() {
   refund_account_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void PaymentCancleRequest::ArenaDtor(void* object) {
-  PaymentCancleRequest* _this = reinterpret_cast< PaymentCancleRequest* >(object);
+void PaymentCancelRequest::ArenaDtor(void* object) {
+  PaymentCancelRequest* _this = reinterpret_cast< PaymentCancelRequest* >(object);
   (void)_this;
 }
-void PaymentCancleRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void PaymentCancelRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void PaymentCancleRequest::SetCachedSize(int size) const {
+void PaymentCancelRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const PaymentCancleRequest& PaymentCancleRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PaymentCancleRequest_payment_2fpayment_2eproto.base);
+const PaymentCancelRequest& PaymentCancelRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PaymentCancelRequest_payment_2fpayment_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void PaymentCancleRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:payment.PaymentCancleRequest)
+void PaymentCancelRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:payment.PaymentCancelRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7178,7 +7178,7 @@ void PaymentCancleRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* PaymentCancleRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* PaymentCancelRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
@@ -7191,7 +7191,7 @@ const char* PaymentCancleRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_imp_uid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancleRequest.imp_uid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancelRequest.imp_uid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7200,7 +7200,7 @@ const char* PaymentCancleRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_merchant_uid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancleRequest.merchant_uid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancelRequest.merchant_uid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7230,7 +7230,7 @@ const char* PaymentCancleRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           auto str = _internal_mutable_reason();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancleRequest.reason"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancelRequest.reason"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7239,7 +7239,7 @@ const char* PaymentCancleRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
           auto str = _internal_mutable_refund_holder();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancleRequest.refund_holder"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancelRequest.refund_holder"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7248,7 +7248,7 @@ const char* PaymentCancleRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
           auto str = _internal_mutable_refund_bank();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancleRequest.refund_bank"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancelRequest.refund_bank"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7257,7 +7257,7 @@ const char* PaymentCancleRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
           auto str = _internal_mutable_refund_account();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancleRequest.refund_account"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancelRequest.refund_account"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7283,9 +7283,9 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* PaymentCancleRequest::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* PaymentCancelRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:payment.PaymentCancleRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:payment.PaymentCancelRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -7294,7 +7294,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_imp_uid().data(), static_cast<int>(this->_internal_imp_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "payment.PaymentCancleRequest.imp_uid");
+      "payment.PaymentCancelRequest.imp_uid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_imp_uid(), target);
   }
@@ -7304,7 +7304,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_merchant_uid().data(), static_cast<int>(this->_internal_merchant_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "payment.PaymentCancleRequest.merchant_uid");
+      "payment.PaymentCancelRequest.merchant_uid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_merchant_uid(), target);
   }
@@ -7332,7 +7332,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "payment.PaymentCancleRequest.reason");
+      "payment.PaymentCancelRequest.reason");
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_reason(), target);
   }
@@ -7342,7 +7342,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_refund_holder().data(), static_cast<int>(this->_internal_refund_holder().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "payment.PaymentCancleRequest.refund_holder");
+      "payment.PaymentCancelRequest.refund_holder");
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_refund_holder(), target);
   }
@@ -7352,7 +7352,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_refund_bank().data(), static_cast<int>(this->_internal_refund_bank().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "payment.PaymentCancleRequest.refund_bank");
+      "payment.PaymentCancelRequest.refund_bank");
     target = stream->WriteStringMaybeAliased(
         8, this->_internal_refund_bank(), target);
   }
@@ -7362,7 +7362,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_refund_account().data(), static_cast<int>(this->_internal_refund_account().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "payment.PaymentCancleRequest.refund_account");
+      "payment.PaymentCancelRequest.refund_account");
     target = stream->WriteStringMaybeAliased(
         9, this->_internal_refund_account(), target);
   }
@@ -7371,12 +7371,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:payment.PaymentCancleRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:payment.PaymentCancelRequest)
   return target;
 }
 
-size_t PaymentCancleRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:payment.PaymentCancleRequest)
+size_t PaymentCancelRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:payment.PaymentCancelRequest)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -7449,23 +7449,23 @@ size_t PaymentCancleRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void PaymentCancleRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:payment.PaymentCancleRequest)
+void PaymentCancelRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:payment.PaymentCancelRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  const PaymentCancleRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PaymentCancleRequest>(
+  const PaymentCancelRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PaymentCancelRequest>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:payment.PaymentCancleRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:payment.PaymentCancelRequest)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:payment.PaymentCancleRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:payment.PaymentCancelRequest)
     MergeFrom(*source);
   }
 }
 
-void PaymentCancleRequest::MergeFrom(const PaymentCancleRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:payment.PaymentCancleRequest)
+void PaymentCancelRequest::MergeFrom(const PaymentCancelRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:payment.PaymentCancelRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -7500,25 +7500,25 @@ void PaymentCancleRequest::MergeFrom(const PaymentCancleRequest& from) {
   }
 }
 
-void PaymentCancleRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:payment.PaymentCancleRequest)
+void PaymentCancelRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:payment.PaymentCancelRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void PaymentCancleRequest::CopyFrom(const PaymentCancleRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:payment.PaymentCancleRequest)
+void PaymentCancelRequest::CopyFrom(const PaymentCancelRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:payment.PaymentCancelRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool PaymentCancleRequest::IsInitialized() const {
+bool PaymentCancelRequest::IsInitialized() const {
   return true;
 }
 
-void PaymentCancleRequest::InternalSwap(PaymentCancleRequest* other) {
+void PaymentCancelRequest::InternalSwap(PaymentCancelRequest* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   imp_uid_.Swap(&other->imp_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -7528,40 +7528,40 @@ void PaymentCancleRequest::InternalSwap(PaymentCancleRequest* other) {
   refund_bank_.Swap(&other->refund_bank_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   refund_account_.Swap(&other->refund_account_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(PaymentCancleRequest, checksum_)
-      + sizeof(PaymentCancleRequest::checksum_)
-      - PROTOBUF_FIELD_OFFSET(PaymentCancleRequest, amount_)>(
+      PROTOBUF_FIELD_OFFSET(PaymentCancelRequest, checksum_)
+      + sizeof(PaymentCancelRequest::checksum_)
+      - PROTOBUF_FIELD_OFFSET(PaymentCancelRequest, amount_)>(
           reinterpret_cast<char*>(&amount_),
           reinterpret_cast<char*>(&other->amount_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata PaymentCancleRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata PaymentCancelRequest::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void PaymentCancleResponse::InitAsDefaultInstance() {
-  ::payment::_PaymentCancleResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::payment::Payment*>(
+void PaymentCancelResponse::InitAsDefaultInstance() {
+  ::payment::_PaymentCancelResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::payment::Payment*>(
       ::payment::Payment::internal_default_instance());
 }
-class PaymentCancleResponse::_Internal {
+class PaymentCancelResponse::_Internal {
  public:
-  static const ::payment::Payment& response(const PaymentCancleResponse* msg);
+  static const ::payment::Payment& response(const PaymentCancelResponse* msg);
 };
 
 const ::payment::Payment&
-PaymentCancleResponse::_Internal::response(const PaymentCancleResponse* msg) {
+PaymentCancelResponse::_Internal::response(const PaymentCancelResponse* msg) {
   return *msg->response_;
 }
-PaymentCancleResponse::PaymentCancleResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+PaymentCancelResponse::PaymentCancelResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:payment.PaymentCancleResponse)
+  // @@protoc_insertion_point(arena_constructor:payment.PaymentCancelResponse)
 }
-PaymentCancleResponse::PaymentCancleResponse(const PaymentCancleResponse& from)
+PaymentCancelResponse::PaymentCancelResponse(const PaymentCancelResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -7575,46 +7575,46 @@ PaymentCancleResponse::PaymentCancleResponse(const PaymentCancleResponse& from)
     response_ = nullptr;
   }
   code_ = from.code_;
-  // @@protoc_insertion_point(copy_constructor:payment.PaymentCancleResponse)
+  // @@protoc_insertion_point(copy_constructor:payment.PaymentCancelResponse)
 }
 
-void PaymentCancleResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentCancleResponse_payment_2fpayment_2eproto.base);
+void PaymentCancelResponse::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentCancelResponse_payment_2fpayment_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&response_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
-PaymentCancleResponse::~PaymentCancleResponse() {
-  // @@protoc_insertion_point(destructor:payment.PaymentCancleResponse)
+PaymentCancelResponse::~PaymentCancelResponse() {
+  // @@protoc_insertion_point(destructor:payment.PaymentCancelResponse)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void PaymentCancleResponse::SharedDtor() {
+void PaymentCancelResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete response_;
 }
 
-void PaymentCancleResponse::ArenaDtor(void* object) {
-  PaymentCancleResponse* _this = reinterpret_cast< PaymentCancleResponse* >(object);
+void PaymentCancelResponse::ArenaDtor(void* object) {
+  PaymentCancelResponse* _this = reinterpret_cast< PaymentCancelResponse* >(object);
   (void)_this;
 }
-void PaymentCancleResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void PaymentCancelResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void PaymentCancleResponse::SetCachedSize(int size) const {
+void PaymentCancelResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const PaymentCancleResponse& PaymentCancleResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PaymentCancleResponse_payment_2fpayment_2eproto.base);
+const PaymentCancelResponse& PaymentCancelResponse::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PaymentCancelResponse_payment_2fpayment_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void PaymentCancleResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:payment.PaymentCancleResponse)
+void PaymentCancelResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:payment.PaymentCancelResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7628,7 +7628,7 @@ void PaymentCancleResponse::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* PaymentCancleResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* PaymentCancelResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
@@ -7648,7 +7648,7 @@ const char* PaymentCancleResponse::_InternalParse(const char* ptr, ::PROTOBUF_NA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_message();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancleResponse.message"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "payment.PaymentCancelResponse.message"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7681,9 +7681,9 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* PaymentCancleResponse::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* PaymentCancelResponse::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:payment.PaymentCancleResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:payment.PaymentCancelResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -7698,7 +7698,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "payment.PaymentCancleResponse.message");
+      "payment.PaymentCancelResponse.message");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_message(), target);
   }
@@ -7715,12 +7715,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:payment.PaymentCancleResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:payment.PaymentCancelResponse)
   return target;
 }
 
-size_t PaymentCancleResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:payment.PaymentCancleResponse)
+size_t PaymentCancelResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:payment.PaymentCancelResponse)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -7757,23 +7757,23 @@ size_t PaymentCancleResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void PaymentCancleResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:payment.PaymentCancleResponse)
+void PaymentCancelResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:payment.PaymentCancelResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  const PaymentCancleResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PaymentCancleResponse>(
+  const PaymentCancelResponse* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PaymentCancelResponse>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:payment.PaymentCancleResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:payment.PaymentCancelResponse)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:payment.PaymentCancleResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:payment.PaymentCancelResponse)
     MergeFrom(*source);
   }
 }
 
-void PaymentCancleResponse::MergeFrom(const PaymentCancleResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:payment.PaymentCancleResponse)
+void PaymentCancelResponse::MergeFrom(const PaymentCancelResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:payment.PaymentCancelResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -7790,37 +7790,37 @@ void PaymentCancleResponse::MergeFrom(const PaymentCancleResponse& from) {
   }
 }
 
-void PaymentCancleResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:payment.PaymentCancleResponse)
+void PaymentCancelResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:payment.PaymentCancelResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void PaymentCancleResponse::CopyFrom(const PaymentCancleResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:payment.PaymentCancleResponse)
+void PaymentCancelResponse::CopyFrom(const PaymentCancelResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:payment.PaymentCancelResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool PaymentCancleResponse::IsInitialized() const {
+bool PaymentCancelResponse::IsInitialized() const {
   return true;
 }
 
-void PaymentCancleResponse::InternalSwap(PaymentCancleResponse* other) {
+void PaymentCancelResponse::InternalSwap(PaymentCancelResponse* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(PaymentCancleResponse, code_)
-      + sizeof(PaymentCancleResponse::code_)
-      - PROTOBUF_FIELD_OFFSET(PaymentCancleResponse, response_)>(
+      PROTOBUF_FIELD_OFFSET(PaymentCancelResponse, code_)
+      + sizeof(PaymentCancelResponse::code_)
+      - PROTOBUF_FIELD_OFFSET(PaymentCancelResponse, response_)>(
           reinterpret_cast<char*>(&response_),
           reinterpret_cast<char*>(&other->response_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata PaymentCancleResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata PaymentCancelResponse::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -9080,8 +9080,8 @@ PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::payment::Payment* Arena::CreateMaybeMessage< ::payment::Payment >(Arena* arena) {
   return Arena::CreateMessageInternal< ::payment::Payment >(arena);
 }
-template<> PROTOBUF_NOINLINE ::payment::CancleHistory* Arena::CreateMaybeMessage< ::payment::CancleHistory >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::payment::CancleHistory >(arena);
+template<> PROTOBUF_NOINLINE ::payment::CancelHistory* Arena::CreateMaybeMessage< ::payment::CancelHistory >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::payment::CancelHistory >(arena);
 }
 template<> PROTOBUF_NOINLINE ::payment::PaymentPage* Arena::CreateMaybeMessage< ::payment::PaymentPage >(Arena* arena) {
   return Arena::CreateMessageInternal< ::payment::PaymentPage >(arena);
@@ -9125,11 +9125,11 @@ template<> PROTOBUF_NOINLINE ::payment::PaymentMerchantUidRequest* Arena::Create
 template<> PROTOBUF_NOINLINE ::payment::PaymentMerchantUidResponse* Arena::CreateMaybeMessage< ::payment::PaymentMerchantUidResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::payment::PaymentMerchantUidResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::payment::PaymentCancleRequest* Arena::CreateMaybeMessage< ::payment::PaymentCancleRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::payment::PaymentCancleRequest >(arena);
+template<> PROTOBUF_NOINLINE ::payment::PaymentCancelRequest* Arena::CreateMaybeMessage< ::payment::PaymentCancelRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::payment::PaymentCancelRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::payment::PaymentCancleResponse* Arena::CreateMaybeMessage< ::payment::PaymentCancleResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::payment::PaymentCancleResponse >(arena);
+template<> PROTOBUF_NOINLINE ::payment::PaymentCancelResponse* Arena::CreateMaybeMessage< ::payment::PaymentCancelResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::payment::PaymentCancelResponse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::payment::PaymentBalanceRequest* Arena::CreateMaybeMessage< ::payment::PaymentBalanceRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::payment::PaymentBalanceRequest >(arena);

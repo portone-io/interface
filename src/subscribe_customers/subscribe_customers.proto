@@ -1,0 +1,154 @@
+syntax = "proto3";
+package subscribe_customers;
+
+option go_package = "github.com/iamport/interface/build/go/subscribe_customers";
+
+message CancelHistory {
+    string pg_tid = 1;
+    int32 amount = 2;
+    int32 cancelled_at = 3;
+    string reason = 4;
+    string receipt_url = 5;
+}
+
+message PaymentResponse {
+   int32 cancel_amount = 1;
+   string bank_code = 2;
+   int32 vbank_date = 3;
+   string card_code = 4;
+   string customer_uid_usage = 5;
+   string pg_id = 6;
+   bool escrow = 7;
+   int32 failed_at = 8;
+   string buyer_addr = 9;
+   string apply_num = 10;
+   string card_name = 11;
+   int32 cancelled_at = 12;
+   string pg_tid = 13;
+   string vbank_holder = 14;
+   string vbank_name = 15;
+   string currency = 16;
+   string buyer_name = 17;
+   string card_number = 18;
+   int32 started_at= 19;
+   string merchant_uid = 20;
+   string vbank_num = 21;
+   string customer_uid= 22;
+   string fail_reason = 23;
+   string imp_uid= 24;
+   string buyer_postcode = 25;
+   int32 paid_at = 26;
+   string pg_provider = 27;
+   string bank_name = 28;
+   int32 vbank_issued_at = 29;
+   string vbank_code = 30;
+   string receipt_url = 31;
+   int32 card_quota = 32;
+   string buyer_email = 33;
+   string user_agent = 34;
+   string status = 35;
+   string cancel_reason= 36;
+   string custom_data = 37;
+   bool cash_receipt_issued = 38;
+   int32 card_type = 39;
+   string buyer_tel = 40;
+   int32 amount = 41;
+   string name = 42;
+   string pay_method = 43;
+   string channel = 44;
+   repeated string cancel_receipt_urls = 45;
+   repeated CancelHistory cancel_history = 46;
+}
+
+message CustomerBillingKey {
+      string card_code = 1;
+      string card_name = 2;
+      string card_number = 3;
+      int32 card_type = 4;
+      string customer_addr = 5;
+      string customer_email = 6;
+      string customer_name = 7;
+      string customer_postcode = 8;
+      string customer_tel = 9;
+      string customer_uid = 10;
+      int32 inserted = 11;
+      string pg_id = 12;
+      string pg_provider = 13;
+      int32 updated = 14;
+}
+
+message GetMultipleCustomerBillingKeyRequest {
+    repeated string customer_uid = 1;
+}
+
+message GetMultipleCustomerBillingKeyResponse {
+    int32 code = 1;
+    string message = 2;
+    repeated CustomerBillingKey response = 3;
+}
+
+message DeleteCustomerBillingKeyRequest {
+    string customer_uid = 1;
+    string reason = 2;
+    string requester = 3;
+}
+
+message DeleteCustomerBillingKeyResponse {
+    int32 code = 1;
+    string message = 2;
+    CustomerBillingKey response = 3;
+}
+
+message GetCustomerBillingKeyRequest {
+    string customer_uid = 1;
+}
+
+message GetCustomerBillingKeyResponse {
+    int32 code = 1;
+    string message = 2;
+    CustomerBillingKey response = 3;
+}
+
+message InsertCustomerBillingKeyRequest {
+    string customer_uid = 1;
+    string pg = 2;
+    string card_number = 3;
+    string expiry = 4;
+    string birth = 5;
+    string pwd_2digit = 6;
+    string customer_name = 7;
+    string customer_tel = 8;
+    string customer_email = 9;
+    string customer_addr = 10;
+    string customer_postcode = 11;
+}
+
+message InsertCustomerBillingKeyResponse {
+    int32 code = 1;
+    string message = 2;
+    CustomerBillingKey response = 3;
+}
+
+message GetPaidByBillingKeyListRequest {
+    string customer_uid = 1;
+    int32 page = 2;
+}
+
+message NestedGetPaidByBillingKeyListResponse {
+    int32 total = 1;
+    int32 previous = 2;
+    int32 next = 3;
+    repeated PaymentResponse list = 4;
+}
+
+message GetPaidByBillingKeyListResponse {
+    int32 code = 1;
+    string message = 2;
+    NestedGetPaidByBillingKeyListResponse response = 3;
+}
+
+/**
+message GetPaymentScheduleByCustomerRequest/Response
+-> Check subscribe.proto -> GetPaymentScheduleByCustomerRequest/Response
+*/
+

@@ -30,7 +30,7 @@ namespace Payment {
             "KAkSEwoLYnV5ZXJfZW1haWwYBiABKAkSEgoKYnV5ZXJfbmFtZRgHIAEoCRIW",
             "Cg5idXllcl9wb3N0Y29kZRgIIAEoCRIRCglidXllcl90ZWwYCSABKAkSFQoN",
             "Y2FuY2VsX2Ftb3VudBgKIAEoBRIuCg5jYW5jZWxfaGlzdG9yeRgLIAMoCzIW",
-            "LnBheW1lbnQuQ2FuY2xlSGlzdG9yeRIVCg1jYW5jZWxfcmVhc29uGAwgASgJ",
+            "LnBheW1lbnQuQ2FuY2VsSGlzdG9yeRIVCg1jYW5jZWxfcmVhc29uGAwgASgJ",
             "EhsKE2NhbmNlbF9yZWNlaXB0X3VybHMYDSADKAkSFAoMY2FuY2VsbGVkX2F0",
             "GA4gASgFEhEKCWNhcmRfY29kZRgPIAEoCRIRCgljYXJkX25hbWUYECABKAkS",
             "EwoLY2FyZF9udW1iZXIYESABKAkSEgoKY2FyZF9xdW90YRgSIAEoBRIRCglj",
@@ -46,7 +46,7 @@ namespace Payment {
             "EgoKdXNlcl9hZ2VudBgoIAEoCRISCgp2YmFua19jb2RlGCkgASgJEhIKCnZi",
             "YW5rX2RhdGUYKiABKAUSFAoMdmJhbmtfaG9sZGVyGCsgASgJEhcKD3ZiYW5r",
             "X2lzc3VlZF9hdBgsIAEoBRISCgp2YmFua19uYW1lGC0gASgJEhEKCXZiYW5r",
-            "X251bRguIAEoCSJqCg1DYW5jbGVIaXN0b3J5Eg4KBnBnX3RpZBgBIAEoCRIO",
+            "X251bRguIAEoCSJqCg1DYW5jZWxIaXN0b3J5Eg4KBnBnX3RpZBgBIAEoCRIO",
             "CgZhbW91bnQYAiABKAUSFAoMY2FuY2VsbGVkX2F0GAMgASgFEg4KBnJlYXNv",
             "bhgEIAEoCRITCgtyZWNlaXB0X3VybBgFIAEoCSJcCgtQYXltZW50UGFnZRIN",
             "CgV0b3RhbBgBIAEoBRIQCghwcmV2aW91cxgCIAEoBRIMCgRuZXh0GAMgASgF",
@@ -83,11 +83,11 @@ namespace Payment {
             "ASgJEg4KBnN0YXR1cxgCIAEoCRIPCgdzb3J0aW5nGAMgASgJIl8KGlBheW1l",
             "bnRNZXJjaGFudFVpZFJlc3BvbnNlEgwKBGNvZGUYASABKAUSDwoHbWVzc2Fn",
             "ZRgCIAEoCRIiCghyZXNwb25zZRgDIAEoCzIQLnBheW1lbnQuUGF5bWVudCLF",
-            "AQoUUGF5bWVudENhbmNsZVJlcXVlc3QSDwoHaW1wX3VpZBgBIAEoCRIUCgxt",
+            "AQoUUGF5bWVudENhbmNlbFJlcXVlc3QSDwoHaW1wX3VpZBgBIAEoCRIUCgxt",
             "ZXJjaGFudF91aWQYAiABKAkSDgoGYW1vdW50GAMgASgBEhAKCHRheF9mcmVl",
             "GAQgASgBEhAKCGNoZWNrc3VtGAUgASgBEg4KBnJlYXNvbhgGIAEoCRIVCg1y",
             "ZWZ1bmRfaG9sZGVyGAcgASgJEhMKC3JlZnVuZF9iYW5rGAggASgJEhYKDnJl",
-            "ZnVuZF9hY2NvdW50GAkgASgJIloKFVBheW1lbnRDYW5jbGVSZXNwb25zZRIM",
+            "ZnVuZF9hY2NvdW50GAkgASgJIloKFVBheW1lbnRDYW5jZWxSZXNwb25zZRIM",
             "CgRjb2RlGAEgASgFEg8KB21lc3NhZ2UYAiABKAkSIgoIcmVzcG9uc2UYAyAB",
             "KAsyEC5wYXltZW50LlBheW1lbnQiKAoVUGF5bWVudEJhbGFuY2VSZXF1ZXN0",
             "Eg8KB2ltcF91aWQYASABKAkiYgoWUGF5bWVudEJhbGFuY2VSZXNwb25zZRIM",
@@ -103,7 +103,7 @@ namespace Payment {
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.Payment), global::Payment.Payment.Parser, new[]{ "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "CardNumber", "CardQuota", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CustomerUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "Name", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Payment.CancleHistory), global::Payment.CancleHistory.Parser, new[]{ "PgTid", "Amount", "CancelledAt", "Reason", "ReceiptUrl" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Payment.CancelHistory), global::Payment.CancelHistory.Parser, new[]{ "PgTid", "Amount", "CancelledAt", "Reason", "ReceiptUrl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentPage), global::Payment.PaymentPage.Parser, new[]{ "Total", "Previous", "Next", "List" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentBalanceDetail), global::Payment.PaymentBalanceDetail.Parser, new[]{ "TaxFree", "Supply", "Vat", "Service" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentBalance), global::Payment.PaymentBalance.Parser, new[]{ "Amount", "CashReceipt", "Primary", "Secondary", "Discount", "Histories" }, null, null, null, null),
@@ -118,8 +118,8 @@ namespace Payment {
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentStatusResponse), global::Payment.PaymentStatusResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentMerchantUidRequest), global::Payment.PaymentMerchantUidRequest.Parser, new[]{ "MerchantUid", "Status", "Sorting" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentMerchantUidResponse), global::Payment.PaymentMerchantUidResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentCancleRequest), global::Payment.PaymentCancleRequest.Parser, new[]{ "ImpUid", "MerchantUid", "Amount", "TaxFree", "Checksum", "Reason", "RefundHolder", "RefundBank", "RefundAccount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentCancleResponse), global::Payment.PaymentCancleResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentCancelRequest), global::Payment.PaymentCancelRequest.Parser, new[]{ "ImpUid", "MerchantUid", "Amount", "TaxFree", "Checksum", "Reason", "RefundHolder", "RefundBank", "RefundAccount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentCancelResponse), global::Payment.PaymentCancelResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentBalanceRequest), global::Payment.PaymentBalanceRequest.Parser, new[]{ "ImpUid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.PaymentBalanceResponse), global::Payment.PaymentBalanceResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Payment.Prepare), global::Payment.Prepare.Parser, new[]{ "MerchantUid", "Amount" }, null, null, null, null),
@@ -326,11 +326,11 @@ namespace Payment {
 
     /// <summary>Field number for the "cancel_history" field.</summary>
     public const int CancelHistoryFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::Payment.CancleHistory> _repeated_cancelHistory_codec
-        = pb::FieldCodec.ForMessage(90, global::Payment.CancleHistory.Parser);
-    private readonly pbc::RepeatedField<global::Payment.CancleHistory> cancelHistory_ = new pbc::RepeatedField<global::Payment.CancleHistory>();
+    private static readonly pb::FieldCodec<global::Payment.CancelHistory> _repeated_cancelHistory_codec
+        = pb::FieldCodec.ForMessage(90, global::Payment.CancelHistory.Parser);
+    private readonly pbc::RepeatedField<global::Payment.CancelHistory> cancelHistory_ = new pbc::RepeatedField<global::Payment.CancelHistory>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Payment.CancleHistory> CancelHistory {
+    public pbc::RepeatedField<global::Payment.CancelHistory> CancelHistory {
       get { return cancelHistory_; }
     }
 
@@ -1901,15 +1901,15 @@ namespace Payment {
 
   }
 
-  public sealed partial class CancleHistory : pb::IMessage<CancleHistory>
+  public sealed partial class CancelHistory : pb::IMessage<CancelHistory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CancleHistory> _parser = new pb::MessageParser<CancleHistory>(() => new CancleHistory());
+    private static readonly pb::MessageParser<CancelHistory> _parser = new pb::MessageParser<CancelHistory>(() => new CancelHistory());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<CancleHistory> Parser { get { return _parser; } }
+    public static pb::MessageParser<CancelHistory> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1922,14 +1922,14 @@ namespace Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CancleHistory() {
+    public CancelHistory() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CancleHistory(CancleHistory other) : this() {
+    public CancelHistory(CancelHistory other) : this() {
       pgTid_ = other.pgTid_;
       amount_ = other.amount_;
       cancelledAt_ = other.cancelledAt_;
@@ -1939,8 +1939,8 @@ namespace Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CancleHistory Clone() {
-      return new CancleHistory(this);
+    public CancelHistory Clone() {
+      return new CancelHistory(this);
     }
 
     /// <summary>Field number for the "pg_tid" field.</summary>
@@ -2000,11 +2000,11 @@ namespace Payment {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as CancleHistory);
+      return Equals(other as CancelHistory);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(CancleHistory other) {
+    public bool Equals(CancelHistory other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -2123,7 +2123,7 @@ namespace Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(CancleHistory other) {
+    public void MergeFrom(CancelHistory other) {
       if (other == null) {
         return;
       }
@@ -5949,15 +5949,15 @@ namespace Payment {
 
   }
 
-  public sealed partial class PaymentCancleRequest : pb::IMessage<PaymentCancleRequest>
+  public sealed partial class PaymentCancelRequest : pb::IMessage<PaymentCancelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<PaymentCancleRequest> _parser = new pb::MessageParser<PaymentCancleRequest>(() => new PaymentCancleRequest());
+    private static readonly pb::MessageParser<PaymentCancelRequest> _parser = new pb::MessageParser<PaymentCancelRequest>(() => new PaymentCancelRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<PaymentCancleRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<PaymentCancelRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -5970,14 +5970,14 @@ namespace Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PaymentCancleRequest() {
+    public PaymentCancelRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PaymentCancleRequest(PaymentCancleRequest other) : this() {
+    public PaymentCancelRequest(PaymentCancelRequest other) : this() {
       impUid_ = other.impUid_;
       merchantUid_ = other.merchantUid_;
       amount_ = other.amount_;
@@ -5991,8 +5991,8 @@ namespace Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PaymentCancleRequest Clone() {
-      return new PaymentCancleRequest(this);
+    public PaymentCancelRequest Clone() {
+      return new PaymentCancelRequest(this);
     }
 
     /// <summary>Field number for the "imp_uid" field.</summary>
@@ -6096,11 +6096,11 @@ namespace Payment {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as PaymentCancleRequest);
+      return Equals(other as PaymentCancelRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PaymentCancleRequest other) {
+    public bool Equals(PaymentCancelRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -6271,7 +6271,7 @@ namespace Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PaymentCancleRequest other) {
+    public void MergeFrom(PaymentCancelRequest other) {
       if (other == null) {
         return;
       }
@@ -6409,15 +6409,15 @@ namespace Payment {
 
   }
 
-  public sealed partial class PaymentCancleResponse : pb::IMessage<PaymentCancleResponse>
+  public sealed partial class PaymentCancelResponse : pb::IMessage<PaymentCancelResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<PaymentCancleResponse> _parser = new pb::MessageParser<PaymentCancleResponse>(() => new PaymentCancleResponse());
+    private static readonly pb::MessageParser<PaymentCancelResponse> _parser = new pb::MessageParser<PaymentCancelResponse>(() => new PaymentCancelResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<PaymentCancleResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<PaymentCancelResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -6430,14 +6430,14 @@ namespace Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PaymentCancleResponse() {
+    public PaymentCancelResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PaymentCancleResponse(PaymentCancleResponse other) : this() {
+    public PaymentCancelResponse(PaymentCancelResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
       response_ = other.response_ != null ? other.response_.Clone() : null;
@@ -6445,8 +6445,8 @@ namespace Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PaymentCancleResponse Clone() {
-      return new PaymentCancleResponse(this);
+    public PaymentCancelResponse Clone() {
+      return new PaymentCancelResponse(this);
     }
 
     /// <summary>Field number for the "code" field.</summary>
@@ -6484,11 +6484,11 @@ namespace Payment {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as PaymentCancleResponse);
+      return Equals(other as PaymentCancelResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PaymentCancleResponse other) {
+    public bool Equals(PaymentCancelResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -6581,7 +6581,7 @@ namespace Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PaymentCancleResponse other) {
+    public void MergeFrom(PaymentCancelResponse other) {
       if (other == null) {
         return;
       }

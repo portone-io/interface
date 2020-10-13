@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>payment.CancleHistory</code>
+ * Generated from protobuf message <code>payment.CancelHistory</code>
  */
-class CancleHistory extends \Google\Protobuf\Internal\Message
+class CancelHistory extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string pg_tid = 1;</code>

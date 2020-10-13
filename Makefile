@@ -1,5 +1,5 @@
 PROTO_PATH=./src
-SRC = src/authenticate/token.proto src/payment/payment.proto src/escrow/escrow.proto
+SRC = src/authenticate/token.proto src/payment/payment.proto src/escrow/escrow.proto src/subscribe/subscribe.proto src/subscribe_customers/subscribe_customers.proto
 
 GEN_SRC_ROOT = ./gen_src
 GEN_SRC_CSHARP = $(GEN_SRC_ROOT)/csharp

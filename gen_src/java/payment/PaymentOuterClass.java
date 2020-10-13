@@ -121,27 +121,27 @@ public final class PaymentOuterClass {
     int getCancelAmount();
 
     /**
-     * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+     * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
      */
-    java.util.List<payment.PaymentOuterClass.CancleHistory> 
+    java.util.List<payment.PaymentOuterClass.CancelHistory> 
         getCancelHistoryList();
     /**
-     * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+     * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
      */
-    payment.PaymentOuterClass.CancleHistory getCancelHistory(int index);
+    payment.PaymentOuterClass.CancelHistory getCancelHistory(int index);
     /**
-     * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+     * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
      */
     int getCancelHistoryCount();
     /**
-     * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+     * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
      */
-    java.util.List<? extends payment.PaymentOuterClass.CancleHistoryOrBuilder> 
+    java.util.List<? extends payment.PaymentOuterClass.CancelHistoryOrBuilder> 
         getCancelHistoryOrBuilderList();
     /**
-     * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+     * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
      */
-    payment.PaymentOuterClass.CancleHistoryOrBuilder getCancelHistoryOrBuilder(
+    payment.PaymentOuterClass.CancelHistoryOrBuilder getCancelHistoryOrBuilder(
         int index);
 
     /**
@@ -655,11 +655,11 @@ public final class PaymentOuterClass {
             }
             case 90: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                cancelHistory_ = new java.util.ArrayList<payment.PaymentOuterClass.CancleHistory>();
+                cancelHistory_ = new java.util.ArrayList<payment.PaymentOuterClass.CancelHistory>();
                 mutable_bitField0_ |= 0x00000001;
               }
               cancelHistory_.add(
-                  input.readMessage(payment.PaymentOuterClass.CancleHistory.parser(), extensionRegistry));
+                  input.readMessage(payment.PaymentOuterClass.CancelHistory.parser(), extensionRegistry));
               break;
             }
             case 98: {
@@ -1203,41 +1203,41 @@ public final class PaymentOuterClass {
     }
 
     public static final int CANCEL_HISTORY_FIELD_NUMBER = 11;
-    private java.util.List<payment.PaymentOuterClass.CancleHistory> cancelHistory_;
+    private java.util.List<payment.PaymentOuterClass.CancelHistory> cancelHistory_;
     /**
-     * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+     * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
      */
     @java.lang.Override
-    public java.util.List<payment.PaymentOuterClass.CancleHistory> getCancelHistoryList() {
+    public java.util.List<payment.PaymentOuterClass.CancelHistory> getCancelHistoryList() {
       return cancelHistory_;
     }
     /**
-     * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+     * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends payment.PaymentOuterClass.CancleHistoryOrBuilder> 
+    public java.util.List<? extends payment.PaymentOuterClass.CancelHistoryOrBuilder> 
         getCancelHistoryOrBuilderList() {
       return cancelHistory_;
     }
     /**
-     * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+     * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
      */
     @java.lang.Override
     public int getCancelHistoryCount() {
       return cancelHistory_.size();
     }
     /**
-     * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+     * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
      */
     @java.lang.Override
-    public payment.PaymentOuterClass.CancleHistory getCancelHistory(int index) {
+    public payment.PaymentOuterClass.CancelHistory getCancelHistory(int index) {
       return cancelHistory_.get(index);
     }
     /**
-     * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+     * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
      */
     @java.lang.Override
-    public payment.PaymentOuterClass.CancleHistoryOrBuilder getCancelHistoryOrBuilder(
+    public payment.PaymentOuterClass.CancelHistoryOrBuilder getCancelHistoryOrBuilder(
         int index) {
       return cancelHistory_.get(index);
     }
@@ -4050,22 +4050,22 @@ public final class PaymentOuterClass {
         return this;
       }
 
-      private java.util.List<payment.PaymentOuterClass.CancleHistory> cancelHistory_ =
+      private java.util.List<payment.PaymentOuterClass.CancelHistory> cancelHistory_ =
         java.util.Collections.emptyList();
       private void ensureCancelHistoryIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          cancelHistory_ = new java.util.ArrayList<payment.PaymentOuterClass.CancleHistory>(cancelHistory_);
+          cancelHistory_ = new java.util.ArrayList<payment.PaymentOuterClass.CancelHistory>(cancelHistory_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          payment.PaymentOuterClass.CancleHistory, payment.PaymentOuterClass.CancleHistory.Builder, payment.PaymentOuterClass.CancleHistoryOrBuilder> cancelHistoryBuilder_;
+          payment.PaymentOuterClass.CancelHistory, payment.PaymentOuterClass.CancelHistory.Builder, payment.PaymentOuterClass.CancelHistoryOrBuilder> cancelHistoryBuilder_;
 
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
-      public java.util.List<payment.PaymentOuterClass.CancleHistory> getCancelHistoryList() {
+      public java.util.List<payment.PaymentOuterClass.CancelHistory> getCancelHistoryList() {
         if (cancelHistoryBuilder_ == null) {
           return java.util.Collections.unmodifiableList(cancelHistory_);
         } else {
@@ -4073,7 +4073,7 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
       public int getCancelHistoryCount() {
         if (cancelHistoryBuilder_ == null) {
@@ -4083,9 +4083,9 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
-      public payment.PaymentOuterClass.CancleHistory getCancelHistory(int index) {
+      public payment.PaymentOuterClass.CancelHistory getCancelHistory(int index) {
         if (cancelHistoryBuilder_ == null) {
           return cancelHistory_.get(index);
         } else {
@@ -4093,10 +4093,10 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
       public Builder setCancelHistory(
-          int index, payment.PaymentOuterClass.CancleHistory value) {
+          int index, payment.PaymentOuterClass.CancelHistory value) {
         if (cancelHistoryBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4110,10 +4110,10 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
       public Builder setCancelHistory(
-          int index, payment.PaymentOuterClass.CancleHistory.Builder builderForValue) {
+          int index, payment.PaymentOuterClass.CancelHistory.Builder builderForValue) {
         if (cancelHistoryBuilder_ == null) {
           ensureCancelHistoryIsMutable();
           cancelHistory_.set(index, builderForValue.build());
@@ -4124,9 +4124,9 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
-      public Builder addCancelHistory(payment.PaymentOuterClass.CancleHistory value) {
+      public Builder addCancelHistory(payment.PaymentOuterClass.CancelHistory value) {
         if (cancelHistoryBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4140,10 +4140,10 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
       public Builder addCancelHistory(
-          int index, payment.PaymentOuterClass.CancleHistory value) {
+          int index, payment.PaymentOuterClass.CancelHistory value) {
         if (cancelHistoryBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4157,10 +4157,10 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
       public Builder addCancelHistory(
-          payment.PaymentOuterClass.CancleHistory.Builder builderForValue) {
+          payment.PaymentOuterClass.CancelHistory.Builder builderForValue) {
         if (cancelHistoryBuilder_ == null) {
           ensureCancelHistoryIsMutable();
           cancelHistory_.add(builderForValue.build());
@@ -4171,10 +4171,10 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
       public Builder addCancelHistory(
-          int index, payment.PaymentOuterClass.CancleHistory.Builder builderForValue) {
+          int index, payment.PaymentOuterClass.CancelHistory.Builder builderForValue) {
         if (cancelHistoryBuilder_ == null) {
           ensureCancelHistoryIsMutable();
           cancelHistory_.add(index, builderForValue.build());
@@ -4185,10 +4185,10 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
       public Builder addAllCancelHistory(
-          java.lang.Iterable<? extends payment.PaymentOuterClass.CancleHistory> values) {
+          java.lang.Iterable<? extends payment.PaymentOuterClass.CancelHistory> values) {
         if (cancelHistoryBuilder_ == null) {
           ensureCancelHistoryIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -4200,7 +4200,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
       public Builder clearCancelHistory() {
         if (cancelHistoryBuilder_ == null) {
@@ -4213,7 +4213,7 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
       public Builder removeCancelHistory(int index) {
         if (cancelHistoryBuilder_ == null) {
@@ -4226,16 +4226,16 @@ public final class PaymentOuterClass {
         return this;
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
-      public payment.PaymentOuterClass.CancleHistory.Builder getCancelHistoryBuilder(
+      public payment.PaymentOuterClass.CancelHistory.Builder getCancelHistoryBuilder(
           int index) {
         return getCancelHistoryFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
-      public payment.PaymentOuterClass.CancleHistoryOrBuilder getCancelHistoryOrBuilder(
+      public payment.PaymentOuterClass.CancelHistoryOrBuilder getCancelHistoryOrBuilder(
           int index) {
         if (cancelHistoryBuilder_ == null) {
           return cancelHistory_.get(index);  } else {
@@ -4243,9 +4243,9 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
-      public java.util.List<? extends payment.PaymentOuterClass.CancleHistoryOrBuilder> 
+      public java.util.List<? extends payment.PaymentOuterClass.CancelHistoryOrBuilder> 
            getCancelHistoryOrBuilderList() {
         if (cancelHistoryBuilder_ != null) {
           return cancelHistoryBuilder_.getMessageOrBuilderList();
@@ -4254,33 +4254,33 @@ public final class PaymentOuterClass {
         }
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
-      public payment.PaymentOuterClass.CancleHistory.Builder addCancelHistoryBuilder() {
+      public payment.PaymentOuterClass.CancelHistory.Builder addCancelHistoryBuilder() {
         return getCancelHistoryFieldBuilder().addBuilder(
-            payment.PaymentOuterClass.CancleHistory.getDefaultInstance());
+            payment.PaymentOuterClass.CancelHistory.getDefaultInstance());
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
-      public payment.PaymentOuterClass.CancleHistory.Builder addCancelHistoryBuilder(
+      public payment.PaymentOuterClass.CancelHistory.Builder addCancelHistoryBuilder(
           int index) {
         return getCancelHistoryFieldBuilder().addBuilder(
-            index, payment.PaymentOuterClass.CancleHistory.getDefaultInstance());
+            index, payment.PaymentOuterClass.CancelHistory.getDefaultInstance());
       }
       /**
-       * <code>repeated .payment.CancleHistory cancel_history = 11;</code>
+       * <code>repeated .payment.CancelHistory cancel_history = 11;</code>
        */
-      public java.util.List<payment.PaymentOuterClass.CancleHistory.Builder> 
+      public java.util.List<payment.PaymentOuterClass.CancelHistory.Builder> 
            getCancelHistoryBuilderList() {
         return getCancelHistoryFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          payment.PaymentOuterClass.CancleHistory, payment.PaymentOuterClass.CancleHistory.Builder, payment.PaymentOuterClass.CancleHistoryOrBuilder> 
+          payment.PaymentOuterClass.CancelHistory, payment.PaymentOuterClass.CancelHistory.Builder, payment.PaymentOuterClass.CancelHistoryOrBuilder> 
           getCancelHistoryFieldBuilder() {
         if (cancelHistoryBuilder_ == null) {
           cancelHistoryBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              payment.PaymentOuterClass.CancleHistory, payment.PaymentOuterClass.CancleHistory.Builder, payment.PaymentOuterClass.CancleHistoryOrBuilder>(
+              payment.PaymentOuterClass.CancelHistory, payment.PaymentOuterClass.CancelHistory.Builder, payment.PaymentOuterClass.CancelHistoryOrBuilder>(
                   cancelHistory_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -6586,8 +6586,8 @@ public final class PaymentOuterClass {
 
   }
 
-  public interface CancleHistoryOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:payment.CancleHistory)
+  public interface CancelHistoryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payment.CancelHistory)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6639,18 +6639,18 @@ public final class PaymentOuterClass {
         getReceiptUrlBytes();
   }
   /**
-   * Protobuf type {@code payment.CancleHistory}
+   * Protobuf type {@code payment.CancelHistory}
    */
-  public static final class CancleHistory extends
+  public static final class CancelHistory extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:payment.CancleHistory)
-      CancleHistoryOrBuilder {
+      // @@protoc_insertion_point(message_implements:payment.CancelHistory)
+      CancelHistoryOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CancleHistory.newBuilder() to construct.
-    private CancleHistory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CancelHistory.newBuilder() to construct.
+    private CancelHistory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CancleHistory() {
+    private CancelHistory() {
       pgTid_ = "";
       reason_ = "";
       receiptUrl_ = "";
@@ -6660,7 +6660,7 @@ public final class PaymentOuterClass {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CancleHistory();
+      return new CancelHistory();
     }
 
     @java.lang.Override
@@ -6668,7 +6668,7 @@ public final class PaymentOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CancleHistory(
+    private CancelHistory(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -6735,15 +6735,15 @@ public final class PaymentOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return payment.PaymentOuterClass.internal_static_payment_CancleHistory_descriptor;
+      return payment.PaymentOuterClass.internal_static_payment_CancelHistory_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return payment.PaymentOuterClass.internal_static_payment_CancleHistory_fieldAccessorTable
+      return payment.PaymentOuterClass.internal_static_payment_CancelHistory_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              payment.PaymentOuterClass.CancleHistory.class, payment.PaymentOuterClass.CancleHistory.Builder.class);
+              payment.PaymentOuterClass.CancelHistory.class, payment.PaymentOuterClass.CancelHistory.Builder.class);
     }
 
     public static final int PG_TID_FIELD_NUMBER = 1;
@@ -6947,10 +6947,10 @@ public final class PaymentOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof payment.PaymentOuterClass.CancleHistory)) {
+      if (!(obj instanceof payment.PaymentOuterClass.CancelHistory)) {
         return super.equals(obj);
       }
-      payment.PaymentOuterClass.CancleHistory other = (payment.PaymentOuterClass.CancleHistory) obj;
+      payment.PaymentOuterClass.CancelHistory other = (payment.PaymentOuterClass.CancelHistory) obj;
 
       if (!getPgTid()
           .equals(other.getPgTid())) return false;
@@ -6988,69 +6988,69 @@ public final class PaymentOuterClass {
       return hash;
     }
 
-    public static payment.PaymentOuterClass.CancleHistory parseFrom(
+    public static payment.PaymentOuterClass.CancelHistory parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static payment.PaymentOuterClass.CancleHistory parseFrom(
+    public static payment.PaymentOuterClass.CancelHistory parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.CancleHistory parseFrom(
+    public static payment.PaymentOuterClass.CancelHistory parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static payment.PaymentOuterClass.CancleHistory parseFrom(
+    public static payment.PaymentOuterClass.CancelHistory parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.CancleHistory parseFrom(byte[] data)
+    public static payment.PaymentOuterClass.CancelHistory parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static payment.PaymentOuterClass.CancleHistory parseFrom(
+    public static payment.PaymentOuterClass.CancelHistory parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.CancleHistory parseFrom(java.io.InputStream input)
+    public static payment.PaymentOuterClass.CancelHistory parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static payment.PaymentOuterClass.CancleHistory parseFrom(
+    public static payment.PaymentOuterClass.CancelHistory parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.CancleHistory parseDelimitedFrom(java.io.InputStream input)
+    public static payment.PaymentOuterClass.CancelHistory parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static payment.PaymentOuterClass.CancleHistory parseDelimitedFrom(
+    public static payment.PaymentOuterClass.CancelHistory parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.CancleHistory parseFrom(
+    public static payment.PaymentOuterClass.CancelHistory parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static payment.PaymentOuterClass.CancleHistory parseFrom(
+    public static payment.PaymentOuterClass.CancelHistory parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7063,7 +7063,7 @@ public final class PaymentOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(payment.PaymentOuterClass.CancleHistory prototype) {
+    public static Builder newBuilder(payment.PaymentOuterClass.CancelHistory prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7079,26 +7079,26 @@ public final class PaymentOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code payment.CancleHistory}
+     * Protobuf type {@code payment.CancelHistory}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:payment.CancleHistory)
-        payment.PaymentOuterClass.CancleHistoryOrBuilder {
+        // @@protoc_insertion_point(builder_implements:payment.CancelHistory)
+        payment.PaymentOuterClass.CancelHistoryOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return payment.PaymentOuterClass.internal_static_payment_CancleHistory_descriptor;
+        return payment.PaymentOuterClass.internal_static_payment_CancelHistory_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return payment.PaymentOuterClass.internal_static_payment_CancleHistory_fieldAccessorTable
+        return payment.PaymentOuterClass.internal_static_payment_CancelHistory_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                payment.PaymentOuterClass.CancleHistory.class, payment.PaymentOuterClass.CancleHistory.Builder.class);
+                payment.PaymentOuterClass.CancelHistory.class, payment.PaymentOuterClass.CancelHistory.Builder.class);
       }
 
-      // Construct using payment.PaymentOuterClass.CancleHistory.newBuilder()
+      // Construct using payment.PaymentOuterClass.CancelHistory.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7132,17 +7132,17 @@ public final class PaymentOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return payment.PaymentOuterClass.internal_static_payment_CancleHistory_descriptor;
+        return payment.PaymentOuterClass.internal_static_payment_CancelHistory_descriptor;
       }
 
       @java.lang.Override
-      public payment.PaymentOuterClass.CancleHistory getDefaultInstanceForType() {
-        return payment.PaymentOuterClass.CancleHistory.getDefaultInstance();
+      public payment.PaymentOuterClass.CancelHistory getDefaultInstanceForType() {
+        return payment.PaymentOuterClass.CancelHistory.getDefaultInstance();
       }
 
       @java.lang.Override
-      public payment.PaymentOuterClass.CancleHistory build() {
-        payment.PaymentOuterClass.CancleHistory result = buildPartial();
+      public payment.PaymentOuterClass.CancelHistory build() {
+        payment.PaymentOuterClass.CancelHistory result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7150,8 +7150,8 @@ public final class PaymentOuterClass {
       }
 
       @java.lang.Override
-      public payment.PaymentOuterClass.CancleHistory buildPartial() {
-        payment.PaymentOuterClass.CancleHistory result = new payment.PaymentOuterClass.CancleHistory(this);
+      public payment.PaymentOuterClass.CancelHistory buildPartial() {
+        payment.PaymentOuterClass.CancelHistory result = new payment.PaymentOuterClass.CancelHistory(this);
         result.pgTid_ = pgTid_;
         result.amount_ = amount_;
         result.cancelledAt_ = cancelledAt_;
@@ -7195,16 +7195,16 @@ public final class PaymentOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof payment.PaymentOuterClass.CancleHistory) {
-          return mergeFrom((payment.PaymentOuterClass.CancleHistory)other);
+        if (other instanceof payment.PaymentOuterClass.CancelHistory) {
+          return mergeFrom((payment.PaymentOuterClass.CancelHistory)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(payment.PaymentOuterClass.CancleHistory other) {
-        if (other == payment.PaymentOuterClass.CancleHistory.getDefaultInstance()) return this;
+      public Builder mergeFrom(payment.PaymentOuterClass.CancelHistory other) {
+        if (other == payment.PaymentOuterClass.CancelHistory.getDefaultInstance()) return this;
         if (!other.getPgTid().isEmpty()) {
           pgTid_ = other.pgTid_;
           onChanged();
@@ -7238,11 +7238,11 @@ public final class PaymentOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        payment.PaymentOuterClass.CancleHistory parsedMessage = null;
+        payment.PaymentOuterClass.CancelHistory parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (payment.PaymentOuterClass.CancleHistory) e.getUnfinishedMessage();
+          parsedMessage = (payment.PaymentOuterClass.CancelHistory) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7554,41 +7554,41 @@ public final class PaymentOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:payment.CancleHistory)
+      // @@protoc_insertion_point(builder_scope:payment.CancelHistory)
     }
 
-    // @@protoc_insertion_point(class_scope:payment.CancleHistory)
-    private static final payment.PaymentOuterClass.CancleHistory DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:payment.CancelHistory)
+    private static final payment.PaymentOuterClass.CancelHistory DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new payment.PaymentOuterClass.CancleHistory();
+      DEFAULT_INSTANCE = new payment.PaymentOuterClass.CancelHistory();
     }
 
-    public static payment.PaymentOuterClass.CancleHistory getDefaultInstance() {
+    public static payment.PaymentOuterClass.CancelHistory getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CancleHistory>
-        PARSER = new com.google.protobuf.AbstractParser<CancleHistory>() {
+    private static final com.google.protobuf.Parser<CancelHistory>
+        PARSER = new com.google.protobuf.AbstractParser<CancelHistory>() {
       @java.lang.Override
-      public CancleHistory parsePartialFrom(
+      public CancelHistory parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CancleHistory(input, extensionRegistry);
+        return new CancelHistory(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CancleHistory> parser() {
+    public static com.google.protobuf.Parser<CancelHistory> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CancleHistory> getParserForType() {
+    public com.google.protobuf.Parser<CancelHistory> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public payment.PaymentOuterClass.CancleHistory getDefaultInstanceForType() {
+    public payment.PaymentOuterClass.CancelHistory getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -20657,8 +20657,8 @@ public final class PaymentOuterClass {
 
   }
 
-  public interface PaymentCancleRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:payment.PaymentCancleRequest)
+  public interface PaymentCancelRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payment.PaymentCancelRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -20752,18 +20752,18 @@ public final class PaymentOuterClass {
         getRefundAccountBytes();
   }
   /**
-   * Protobuf type {@code payment.PaymentCancleRequest}
+   * Protobuf type {@code payment.PaymentCancelRequest}
    */
-  public static final class PaymentCancleRequest extends
+  public static final class PaymentCancelRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:payment.PaymentCancleRequest)
-      PaymentCancleRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:payment.PaymentCancelRequest)
+      PaymentCancelRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PaymentCancleRequest.newBuilder() to construct.
-    private PaymentCancleRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PaymentCancelRequest.newBuilder() to construct.
+    private PaymentCancelRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PaymentCancleRequest() {
+    private PaymentCancelRequest() {
       impUid_ = "";
       merchantUid_ = "";
       reason_ = "";
@@ -20776,7 +20776,7 @@ public final class PaymentOuterClass {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PaymentCancleRequest();
+      return new PaymentCancelRequest();
     }
 
     @java.lang.Override
@@ -20784,7 +20784,7 @@ public final class PaymentOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PaymentCancleRequest(
+    private PaymentCancelRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -20874,15 +20874,15 @@ public final class PaymentOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return payment.PaymentOuterClass.internal_static_payment_PaymentCancleRequest_descriptor;
+      return payment.PaymentOuterClass.internal_static_payment_PaymentCancelRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return payment.PaymentOuterClass.internal_static_payment_PaymentCancleRequest_fieldAccessorTable
+      return payment.PaymentOuterClass.internal_static_payment_PaymentCancelRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              payment.PaymentOuterClass.PaymentCancleRequest.class, payment.PaymentOuterClass.PaymentCancleRequest.Builder.class);
+              payment.PaymentOuterClass.PaymentCancelRequest.class, payment.PaymentOuterClass.PaymentCancelRequest.Builder.class);
     }
 
     public static final int IMP_UID_FIELD_NUMBER = 1;
@@ -21236,10 +21236,10 @@ public final class PaymentOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof payment.PaymentOuterClass.PaymentCancleRequest)) {
+      if (!(obj instanceof payment.PaymentOuterClass.PaymentCancelRequest)) {
         return super.equals(obj);
       }
-      payment.PaymentOuterClass.PaymentCancleRequest other = (payment.PaymentOuterClass.PaymentCancleRequest) obj;
+      payment.PaymentOuterClass.PaymentCancelRequest other = (payment.PaymentOuterClass.PaymentCancelRequest) obj;
 
       if (!getImpUid()
           .equals(other.getImpUid())) return false;
@@ -21299,69 +21299,69 @@ public final class PaymentOuterClass {
       return hash;
     }
 
-    public static payment.PaymentOuterClass.PaymentCancleRequest parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static payment.PaymentOuterClass.PaymentCancleRequest parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.PaymentCancleRequest parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static payment.PaymentOuterClass.PaymentCancleRequest parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.PaymentCancleRequest parseFrom(byte[] data)
+    public static payment.PaymentOuterClass.PaymentCancelRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static payment.PaymentOuterClass.PaymentCancleRequest parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.PaymentCancleRequest parseFrom(java.io.InputStream input)
+    public static payment.PaymentOuterClass.PaymentCancelRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static payment.PaymentOuterClass.PaymentCancleRequest parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.PaymentCancleRequest parseDelimitedFrom(java.io.InputStream input)
+    public static payment.PaymentOuterClass.PaymentCancelRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static payment.PaymentOuterClass.PaymentCancleRequest parseDelimitedFrom(
+    public static payment.PaymentOuterClass.PaymentCancelRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.PaymentCancleRequest parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static payment.PaymentOuterClass.PaymentCancleRequest parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -21374,7 +21374,7 @@ public final class PaymentOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(payment.PaymentOuterClass.PaymentCancleRequest prototype) {
+    public static Builder newBuilder(payment.PaymentOuterClass.PaymentCancelRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -21390,26 +21390,26 @@ public final class PaymentOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code payment.PaymentCancleRequest}
+     * Protobuf type {@code payment.PaymentCancelRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:payment.PaymentCancleRequest)
-        payment.PaymentOuterClass.PaymentCancleRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:payment.PaymentCancelRequest)
+        payment.PaymentOuterClass.PaymentCancelRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return payment.PaymentOuterClass.internal_static_payment_PaymentCancleRequest_descriptor;
+        return payment.PaymentOuterClass.internal_static_payment_PaymentCancelRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return payment.PaymentOuterClass.internal_static_payment_PaymentCancleRequest_fieldAccessorTable
+        return payment.PaymentOuterClass.internal_static_payment_PaymentCancelRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                payment.PaymentOuterClass.PaymentCancleRequest.class, payment.PaymentOuterClass.PaymentCancleRequest.Builder.class);
+                payment.PaymentOuterClass.PaymentCancelRequest.class, payment.PaymentOuterClass.PaymentCancelRequest.Builder.class);
       }
 
-      // Construct using payment.PaymentOuterClass.PaymentCancleRequest.newBuilder()
+      // Construct using payment.PaymentOuterClass.PaymentCancelRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -21451,17 +21451,17 @@ public final class PaymentOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return payment.PaymentOuterClass.internal_static_payment_PaymentCancleRequest_descriptor;
+        return payment.PaymentOuterClass.internal_static_payment_PaymentCancelRequest_descriptor;
       }
 
       @java.lang.Override
-      public payment.PaymentOuterClass.PaymentCancleRequest getDefaultInstanceForType() {
-        return payment.PaymentOuterClass.PaymentCancleRequest.getDefaultInstance();
+      public payment.PaymentOuterClass.PaymentCancelRequest getDefaultInstanceForType() {
+        return payment.PaymentOuterClass.PaymentCancelRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public payment.PaymentOuterClass.PaymentCancleRequest build() {
-        payment.PaymentOuterClass.PaymentCancleRequest result = buildPartial();
+      public payment.PaymentOuterClass.PaymentCancelRequest build() {
+        payment.PaymentOuterClass.PaymentCancelRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -21469,8 +21469,8 @@ public final class PaymentOuterClass {
       }
 
       @java.lang.Override
-      public payment.PaymentOuterClass.PaymentCancleRequest buildPartial() {
-        payment.PaymentOuterClass.PaymentCancleRequest result = new payment.PaymentOuterClass.PaymentCancleRequest(this);
+      public payment.PaymentOuterClass.PaymentCancelRequest buildPartial() {
+        payment.PaymentOuterClass.PaymentCancelRequest result = new payment.PaymentOuterClass.PaymentCancelRequest(this);
         result.impUid_ = impUid_;
         result.merchantUid_ = merchantUid_;
         result.amount_ = amount_;
@@ -21518,16 +21518,16 @@ public final class PaymentOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof payment.PaymentOuterClass.PaymentCancleRequest) {
-          return mergeFrom((payment.PaymentOuterClass.PaymentCancleRequest)other);
+        if (other instanceof payment.PaymentOuterClass.PaymentCancelRequest) {
+          return mergeFrom((payment.PaymentOuterClass.PaymentCancelRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(payment.PaymentOuterClass.PaymentCancleRequest other) {
-        if (other == payment.PaymentOuterClass.PaymentCancleRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(payment.PaymentOuterClass.PaymentCancelRequest other) {
+        if (other == payment.PaymentOuterClass.PaymentCancelRequest.getDefaultInstance()) return this;
         if (!other.getImpUid().isEmpty()) {
           impUid_ = other.impUid_;
           onChanged();
@@ -21576,11 +21576,11 @@ public final class PaymentOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        payment.PaymentOuterClass.PaymentCancleRequest parsedMessage = null;
+        payment.PaymentOuterClass.PaymentCancelRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (payment.PaymentOuterClass.PaymentCancleRequest) e.getUnfinishedMessage();
+          parsedMessage = (payment.PaymentOuterClass.PaymentCancelRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -22151,48 +22151,48 @@ public final class PaymentOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:payment.PaymentCancleRequest)
+      // @@protoc_insertion_point(builder_scope:payment.PaymentCancelRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:payment.PaymentCancleRequest)
-    private static final payment.PaymentOuterClass.PaymentCancleRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:payment.PaymentCancelRequest)
+    private static final payment.PaymentOuterClass.PaymentCancelRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new payment.PaymentOuterClass.PaymentCancleRequest();
+      DEFAULT_INSTANCE = new payment.PaymentOuterClass.PaymentCancelRequest();
     }
 
-    public static payment.PaymentOuterClass.PaymentCancleRequest getDefaultInstance() {
+    public static payment.PaymentOuterClass.PaymentCancelRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PaymentCancleRequest>
-        PARSER = new com.google.protobuf.AbstractParser<PaymentCancleRequest>() {
+    private static final com.google.protobuf.Parser<PaymentCancelRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PaymentCancelRequest>() {
       @java.lang.Override
-      public PaymentCancleRequest parsePartialFrom(
+      public PaymentCancelRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PaymentCancleRequest(input, extensionRegistry);
+        return new PaymentCancelRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PaymentCancleRequest> parser() {
+    public static com.google.protobuf.Parser<PaymentCancelRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PaymentCancleRequest> getParserForType() {
+    public com.google.protobuf.Parser<PaymentCancelRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public payment.PaymentOuterClass.PaymentCancleRequest getDefaultInstanceForType() {
+    public payment.PaymentOuterClass.PaymentCancelRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PaymentCancleResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:payment.PaymentCancleResponse)
+  public interface PaymentCancelResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payment.PaymentCancelResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -22229,18 +22229,18 @@ public final class PaymentOuterClass {
     payment.PaymentOuterClass.PaymentOrBuilder getResponseOrBuilder();
   }
   /**
-   * Protobuf type {@code payment.PaymentCancleResponse}
+   * Protobuf type {@code payment.PaymentCancelResponse}
    */
-  public static final class PaymentCancleResponse extends
+  public static final class PaymentCancelResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:payment.PaymentCancleResponse)
-      PaymentCancleResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:payment.PaymentCancelResponse)
+      PaymentCancelResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PaymentCancleResponse.newBuilder() to construct.
-    private PaymentCancleResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PaymentCancelResponse.newBuilder() to construct.
+    private PaymentCancelResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PaymentCancleResponse() {
+    private PaymentCancelResponse() {
       message_ = "";
     }
 
@@ -22248,7 +22248,7 @@ public final class PaymentOuterClass {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PaymentCancleResponse();
+      return new PaymentCancelResponse();
     }
 
     @java.lang.Override
@@ -22256,7 +22256,7 @@ public final class PaymentOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PaymentCancleResponse(
+    private PaymentCancelResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -22319,15 +22319,15 @@ public final class PaymentOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return payment.PaymentOuterClass.internal_static_payment_PaymentCancleResponse_descriptor;
+      return payment.PaymentOuterClass.internal_static_payment_PaymentCancelResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return payment.PaymentOuterClass.internal_static_payment_PaymentCancleResponse_fieldAccessorTable
+      return payment.PaymentOuterClass.internal_static_payment_PaymentCancelResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              payment.PaymentOuterClass.PaymentCancleResponse.class, payment.PaymentOuterClass.PaymentCancleResponse.Builder.class);
+              payment.PaymentOuterClass.PaymentCancelResponse.class, payment.PaymentOuterClass.PaymentCancelResponse.Builder.class);
     }
 
     public static final int CODE_FIELD_NUMBER = 1;
@@ -22458,10 +22458,10 @@ public final class PaymentOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof payment.PaymentOuterClass.PaymentCancleResponse)) {
+      if (!(obj instanceof payment.PaymentOuterClass.PaymentCancelResponse)) {
         return super.equals(obj);
       }
-      payment.PaymentOuterClass.PaymentCancleResponse other = (payment.PaymentOuterClass.PaymentCancleResponse) obj;
+      payment.PaymentOuterClass.PaymentCancelResponse other = (payment.PaymentOuterClass.PaymentCancelResponse) obj;
 
       if (getCode()
           != other.getCode()) return false;
@@ -22496,69 +22496,69 @@ public final class PaymentOuterClass {
       return hash;
     }
 
-    public static payment.PaymentOuterClass.PaymentCancleResponse parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static payment.PaymentOuterClass.PaymentCancleResponse parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.PaymentCancleResponse parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static payment.PaymentOuterClass.PaymentCancleResponse parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.PaymentCancleResponse parseFrom(byte[] data)
+    public static payment.PaymentOuterClass.PaymentCancelResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static payment.PaymentOuterClass.PaymentCancleResponse parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.PaymentCancleResponse parseFrom(java.io.InputStream input)
+    public static payment.PaymentOuterClass.PaymentCancelResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static payment.PaymentOuterClass.PaymentCancleResponse parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.PaymentCancleResponse parseDelimitedFrom(java.io.InputStream input)
+    public static payment.PaymentOuterClass.PaymentCancelResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static payment.PaymentOuterClass.PaymentCancleResponse parseDelimitedFrom(
+    public static payment.PaymentOuterClass.PaymentCancelResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static payment.PaymentOuterClass.PaymentCancleResponse parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static payment.PaymentOuterClass.PaymentCancleResponse parseFrom(
+    public static payment.PaymentOuterClass.PaymentCancelResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -22571,7 +22571,7 @@ public final class PaymentOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(payment.PaymentOuterClass.PaymentCancleResponse prototype) {
+    public static Builder newBuilder(payment.PaymentOuterClass.PaymentCancelResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -22587,26 +22587,26 @@ public final class PaymentOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code payment.PaymentCancleResponse}
+     * Protobuf type {@code payment.PaymentCancelResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:payment.PaymentCancleResponse)
-        payment.PaymentOuterClass.PaymentCancleResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:payment.PaymentCancelResponse)
+        payment.PaymentOuterClass.PaymentCancelResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return payment.PaymentOuterClass.internal_static_payment_PaymentCancleResponse_descriptor;
+        return payment.PaymentOuterClass.internal_static_payment_PaymentCancelResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return payment.PaymentOuterClass.internal_static_payment_PaymentCancleResponse_fieldAccessorTable
+        return payment.PaymentOuterClass.internal_static_payment_PaymentCancelResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                payment.PaymentOuterClass.PaymentCancleResponse.class, payment.PaymentOuterClass.PaymentCancleResponse.Builder.class);
+                payment.PaymentOuterClass.PaymentCancelResponse.class, payment.PaymentOuterClass.PaymentCancelResponse.Builder.class);
       }
 
-      // Construct using payment.PaymentOuterClass.PaymentCancleResponse.newBuilder()
+      // Construct using payment.PaymentOuterClass.PaymentCancelResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -22640,17 +22640,17 @@ public final class PaymentOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return payment.PaymentOuterClass.internal_static_payment_PaymentCancleResponse_descriptor;
+        return payment.PaymentOuterClass.internal_static_payment_PaymentCancelResponse_descriptor;
       }
 
       @java.lang.Override
-      public payment.PaymentOuterClass.PaymentCancleResponse getDefaultInstanceForType() {
-        return payment.PaymentOuterClass.PaymentCancleResponse.getDefaultInstance();
+      public payment.PaymentOuterClass.PaymentCancelResponse getDefaultInstanceForType() {
+        return payment.PaymentOuterClass.PaymentCancelResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public payment.PaymentOuterClass.PaymentCancleResponse build() {
-        payment.PaymentOuterClass.PaymentCancleResponse result = buildPartial();
+      public payment.PaymentOuterClass.PaymentCancelResponse build() {
+        payment.PaymentOuterClass.PaymentCancelResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -22658,8 +22658,8 @@ public final class PaymentOuterClass {
       }
 
       @java.lang.Override
-      public payment.PaymentOuterClass.PaymentCancleResponse buildPartial() {
-        payment.PaymentOuterClass.PaymentCancleResponse result = new payment.PaymentOuterClass.PaymentCancleResponse(this);
+      public payment.PaymentOuterClass.PaymentCancelResponse buildPartial() {
+        payment.PaymentOuterClass.PaymentCancelResponse result = new payment.PaymentOuterClass.PaymentCancelResponse(this);
         result.code_ = code_;
         result.message_ = message_;
         if (responseBuilder_ == null) {
@@ -22705,16 +22705,16 @@ public final class PaymentOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof payment.PaymentOuterClass.PaymentCancleResponse) {
-          return mergeFrom((payment.PaymentOuterClass.PaymentCancleResponse)other);
+        if (other instanceof payment.PaymentOuterClass.PaymentCancelResponse) {
+          return mergeFrom((payment.PaymentOuterClass.PaymentCancelResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(payment.PaymentOuterClass.PaymentCancleResponse other) {
-        if (other == payment.PaymentOuterClass.PaymentCancleResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(payment.PaymentOuterClass.PaymentCancelResponse other) {
+        if (other == payment.PaymentOuterClass.PaymentCancelResponse.getDefaultInstance()) return this;
         if (other.getCode() != 0) {
           setCode(other.getCode());
         }
@@ -22740,11 +22740,11 @@ public final class PaymentOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        payment.PaymentOuterClass.PaymentCancleResponse parsedMessage = null;
+        payment.PaymentOuterClass.PaymentCancelResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (payment.PaymentOuterClass.PaymentCancleResponse) e.getUnfinishedMessage();
+          parsedMessage = (payment.PaymentOuterClass.PaymentCancelResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -22992,41 +22992,41 @@ public final class PaymentOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:payment.PaymentCancleResponse)
+      // @@protoc_insertion_point(builder_scope:payment.PaymentCancelResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:payment.PaymentCancleResponse)
-    private static final payment.PaymentOuterClass.PaymentCancleResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:payment.PaymentCancelResponse)
+    private static final payment.PaymentOuterClass.PaymentCancelResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new payment.PaymentOuterClass.PaymentCancleResponse();
+      DEFAULT_INSTANCE = new payment.PaymentOuterClass.PaymentCancelResponse();
     }
 
-    public static payment.PaymentOuterClass.PaymentCancleResponse getDefaultInstance() {
+    public static payment.PaymentOuterClass.PaymentCancelResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PaymentCancleResponse>
-        PARSER = new com.google.protobuf.AbstractParser<PaymentCancleResponse>() {
+    private static final com.google.protobuf.Parser<PaymentCancelResponse>
+        PARSER = new com.google.protobuf.AbstractParser<PaymentCancelResponse>() {
       @java.lang.Override
-      public PaymentCancleResponse parsePartialFrom(
+      public PaymentCancelResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PaymentCancleResponse(input, extensionRegistry);
+        return new PaymentCancelResponse(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PaymentCancleResponse> parser() {
+    public static com.google.protobuf.Parser<PaymentCancelResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PaymentCancleResponse> getParserForType() {
+    public com.google.protobuf.Parser<PaymentCancelResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public payment.PaymentOuterClass.PaymentCancleResponse getDefaultInstanceForType() {
+    public payment.PaymentOuterClass.PaymentCancelResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -26566,10 +26566,10 @@ public final class PaymentOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payment_Payment_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_payment_CancleHistory_descriptor;
+    internal_static_payment_CancelHistory_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_payment_CancleHistory_fieldAccessorTable;
+      internal_static_payment_CancelHistory_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payment_PaymentPage_descriptor;
   private static final 
@@ -26641,15 +26641,15 @@ public final class PaymentOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payment_PaymentMerchantUidResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_payment_PaymentCancleRequest_descriptor;
+    internal_static_payment_PaymentCancelRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_payment_PaymentCancleRequest_fieldAccessorTable;
+      internal_static_payment_PaymentCancelRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_payment_PaymentCancleResponse_descriptor;
+    internal_static_payment_PaymentCancelResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_payment_PaymentCancleResponse_fieldAccessorTable;
+      internal_static_payment_PaymentCancelResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payment_PaymentBalanceRequest_descriptor;
   private static final 
@@ -26691,7 +26691,7 @@ public final class PaymentOuterClass {
       "\n\nbuyer_name\030\007 \001(\t\022\026\n\016buyer_postcode\030\010 \001" +
       "(\t\022\021\n\tbuyer_tel\030\t \001(\t\022\025\n\rcancel_amount\030\n" +
       " \001(\005\022.\n\016cancel_history\030\013 \003(\0132\026.payment.C" +
-      "ancleHistory\022\025\n\rcancel_reason\030\014 \001(\t\022\033\n\023c" +
+      "ancelHistory\022\025\n\rcancel_reason\030\014 \001(\t\022\033\n\023c" +
       "ancel_receipt_urls\030\r \003(\t\022\024\n\014cancelled_at" +
       "\030\016 \001(\005\022\021\n\tcard_code\030\017 \001(\t\022\021\n\tcard_name\030\020" +
       " \001(\t\022\023\n\013card_number\030\021 \001(\t\022\022\n\ncard_quota\030" +
@@ -26709,7 +26709,7 @@ public final class PaymentOuterClass {
       "ank_code\030) \001(\t\022\022\n\nvbank_date\030* \001(\005\022\024\n\014vb" +
       "ank_holder\030+ \001(\t\022\027\n\017vbank_issued_at\030, \001(" +
       "\005\022\022\n\nvbank_name\030- \001(\t\022\021\n\tvbank_num\030. \001(\t" +
-      "\"j\n\rCancleHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amo" +
+      "\"j\n\rCancelHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amo" +
       "unt\030\002 \001(\005\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reaso" +
       "n\030\004 \001(\t\022\023\n\013receipt_url\030\005 \001(\t\"\\\n\013PaymentP" +
       "age\022\r\n\005total\030\001 \001(\005\022\020\n\010previous\030\002 \001(\005\022\014\n\004" +
@@ -26750,12 +26750,12 @@ public final class PaymentOuterClass {
       "\001(\t\022\016\n\006status\030\002 \001(\t\022\017\n\007sorting\030\003 \001(\t\"_\n\032" +
       "PaymentMerchantUidResponse\022\014\n\004code\030\001 \001(\005" +
       "\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.pa" +
-      "yment.Payment\"\305\001\n\024PaymentCancleRequest\022\017" +
+      "yment.Payment\"\305\001\n\024PaymentCancelRequest\022\017" +
       "\n\007imp_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n" +
       "\006amount\030\003 \001(\001\022\020\n\010tax_free\030\004 \001(\001\022\020\n\010check" +
       "sum\030\005 \001(\001\022\016\n\006reason\030\006 \001(\t\022\025\n\rrefund_hold" +
       "er\030\007 \001(\t\022\023\n\013refund_bank\030\010 \001(\t\022\026\n\016refund_" +
-      "account\030\t \001(\t\"Z\n\025PaymentCancleResponse\022\014" +
+      "account\030\t \001(\t\"Z\n\025PaymentCancelResponse\022\014" +
       "\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010respons" +
       "e\030\003 \001(\0132\020.payment.Payment\"(\n\025PaymentBala" +
       "nceRequest\022\017\n\007imp_uid\030\001 \001(\t\"b\n\026PaymentBa" +
@@ -26779,11 +26779,11 @@ public final class PaymentOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payment_Payment_descriptor,
         new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "CardNumber", "CardQuota", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CustomerUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "Name", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", });
-    internal_static_payment_CancleHistory_descriptor =
+    internal_static_payment_CancelHistory_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_payment_CancleHistory_fieldAccessorTable = new
+    internal_static_payment_CancelHistory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_payment_CancleHistory_descriptor,
+        internal_static_payment_CancelHistory_descriptor,
         new java.lang.String[] { "PgTid", "Amount", "CancelledAt", "Reason", "ReceiptUrl", });
     internal_static_payment_PaymentPage_descriptor =
       getDescriptor().getMessageTypes().get(2);
@@ -26869,17 +26869,17 @@ public final class PaymentOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payment_PaymentMerchantUidResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
-    internal_static_payment_PaymentCancleRequest_descriptor =
+    internal_static_payment_PaymentCancelRequest_descriptor =
       getDescriptor().getMessageTypes().get(16);
-    internal_static_payment_PaymentCancleRequest_fieldAccessorTable = new
+    internal_static_payment_PaymentCancelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_payment_PaymentCancleRequest_descriptor,
+        internal_static_payment_PaymentCancelRequest_descriptor,
         new java.lang.String[] { "ImpUid", "MerchantUid", "Amount", "TaxFree", "Checksum", "Reason", "RefundHolder", "RefundBank", "RefundAccount", });
-    internal_static_payment_PaymentCancleResponse_descriptor =
+    internal_static_payment_PaymentCancelResponse_descriptor =
       getDescriptor().getMessageTypes().get(17);
-    internal_static_payment_PaymentCancleResponse_fieldAccessorTable = new
+    internal_static_payment_PaymentCancelResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_payment_PaymentCancleResponse_descriptor,
+        internal_static_payment_PaymentCancelResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
     internal_static_payment_PaymentBalanceRequest_descriptor =
       getDescriptor().getMessageTypes().get(18);

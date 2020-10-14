@@ -22,7 +22,7 @@ class GetPaymentScheduleByCustomerResponse extends \Google\Protobuf\Internal\Mes
      */
     protected $message = '';
     /**
-     * Generated from protobuf field <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+     * Generated from protobuf field <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
      */
     protected $response = null;
 
@@ -34,7 +34,7 @@ class GetPaymentScheduleByCustomerResponse extends \Google\Protobuf\Internal\Mes
      *
      *     @type int $code
      *     @type string $message
-     *     @type \Subscribe\NestedGetPaymentScheduleByCustomerResponse $response
+     *     @type \Subscribe\NestedGetPaymentScheduleByCustomerData $response
      * }
      */
     public function __construct($data = NULL) {
@@ -87,8 +87,8 @@ class GetPaymentScheduleByCustomerResponse extends \Google\Protobuf\Internal\Mes
     }
 
     /**
-     * Generated from protobuf field <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
-     * @return \Subscribe\NestedGetPaymentScheduleByCustomerResponse
+     * Generated from protobuf field <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
+     * @return \Subscribe\NestedGetPaymentScheduleByCustomerData
      */
     public function getResponse()
     {
@@ -106,13 +106,13 @@ class GetPaymentScheduleByCustomerResponse extends \Google\Protobuf\Internal\Mes
     }
 
     /**
-     * Generated from protobuf field <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
-     * @param \Subscribe\NestedGetPaymentScheduleByCustomerResponse $var
+     * Generated from protobuf field <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
+     * @param \Subscribe\NestedGetPaymentScheduleByCustomerData $var
      * @return $this
      */
     public function setResponse($var)
     {
-        GPBUtil::checkMessage($var, \Subscribe\NestedGetPaymentScheduleByCustomerResponse::class);
+        GPBUtil::checkMessage($var, \Subscribe\NestedGetPaymentScheduleByCustomerData::class);
         $this->response = $var;
 
         return $this;

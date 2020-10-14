@@ -25,74 +25,48 @@ namespace SubscribeCustomers {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1zdWJzY3JpYmVfY3VzdG9tZXJzL3N1YnNjcmliZV9jdXN0b21lcnMucHJv",
-            "dG8SE3N1YnNjcmliZV9jdXN0b21lcnMiagoNQ2FuY2VsSGlzdG9yeRIOCgZw",
-            "Z190aWQYASABKAkSDgoGYW1vdW50GAIgASgFEhQKDGNhbmNlbGxlZF9hdBgD",
-            "IAEoBRIOCgZyZWFzb24YBCABKAkSEwoLcmVjZWlwdF91cmwYBSABKAki2QcK",
-            "D1BheW1lbnRSZXNwb25zZRIVCg1jYW5jZWxfYW1vdW50GAEgASgFEhEKCWJh",
-            "bmtfY29kZRgCIAEoCRISCgp2YmFua19kYXRlGAMgASgFEhEKCWNhcmRfY29k",
-            "ZRgEIAEoCRIaChJjdXN0b21lcl91aWRfdXNhZ2UYBSABKAkSDQoFcGdfaWQY",
-            "BiABKAkSDgoGZXNjcm93GAcgASgIEhEKCWZhaWxlZF9hdBgIIAEoBRISCgpi",
-            "dXllcl9hZGRyGAkgASgJEhEKCWFwcGx5X251bRgKIAEoCRIRCgljYXJkX25h",
-            "bWUYCyABKAkSFAoMY2FuY2VsbGVkX2F0GAwgASgFEg4KBnBnX3RpZBgNIAEo",
-            "CRIUCgx2YmFua19ob2xkZXIYDiABKAkSEgoKdmJhbmtfbmFtZRgPIAEoCRIQ",
-            "CghjdXJyZW5jeRgQIAEoCRISCgpidXllcl9uYW1lGBEgASgJEhMKC2NhcmRf",
-            "bnVtYmVyGBIgASgJEhIKCnN0YXJ0ZWRfYXQYEyABKAUSFAoMbWVyY2hhbnRf",
-            "dWlkGBQgASgJEhEKCXZiYW5rX251bRgVIAEoCRIUCgxjdXN0b21lcl91aWQY",
-            "FiABKAkSEwoLZmFpbF9yZWFzb24YFyABKAkSDwoHaW1wX3VpZBgYIAEoCRIW",
-            "Cg5idXllcl9wb3N0Y29kZRgZIAEoCRIPCgdwYWlkX2F0GBogASgFEhMKC3Bn",
-            "X3Byb3ZpZGVyGBsgASgJEhEKCWJhbmtfbmFtZRgcIAEoCRIXCg92YmFua19p",
-            "c3N1ZWRfYXQYHSABKAUSEgoKdmJhbmtfY29kZRgeIAEoCRITCgtyZWNlaXB0",
-            "X3VybBgfIAEoCRISCgpjYXJkX3F1b3RhGCAgASgFEhMKC2J1eWVyX2VtYWls",
-            "GCEgASgJEhIKCnVzZXJfYWdlbnQYIiABKAkSDgoGc3RhdHVzGCMgASgJEhUK",
-            "DWNhbmNlbF9yZWFzb24YJCABKAkSEwoLY3VzdG9tX2RhdGEYJSABKAkSGwoT",
-            "Y2FzaF9yZWNlaXB0X2lzc3VlZBgmIAEoCBIRCgljYXJkX3R5cGUYJyABKAUS",
-            "EQoJYnV5ZXJfdGVsGCggASgJEg4KBmFtb3VudBgpIAEoBRIMCgRuYW1lGCog",
-            "ASgJEhIKCnBheV9tZXRob2QYKyABKAkSDwoHY2hhbm5lbBgsIAEoCRIbChNj",
-            "YW5jZWxfcmVjZWlwdF91cmxzGC0gAygJEjoKDmNhbmNlbF9oaXN0b3J5GC4g",
-            "AygLMiIuc3Vic2NyaWJlX2N1c3RvbWVycy5DYW5jZWxIaXN0b3J5IrYCChJD",
-            "dXN0b21lckJpbGxpbmdLZXkSEQoJY2FyZF9jb2RlGAEgASgJEhEKCWNhcmRf",
-            "bmFtZRgCIAEoCRITCgtjYXJkX251bWJlchgDIAEoCRIRCgljYXJkX3R5cGUY",
-            "BCABKAUSFQoNY3VzdG9tZXJfYWRkchgFIAEoCRIWCg5jdXN0b21lcl9lbWFp",
-            "bBgGIAEoCRIVCg1jdXN0b21lcl9uYW1lGAcgASgJEhkKEWN1c3RvbWVyX3Bv",
-            "c3Rjb2RlGAggASgJEhQKDGN1c3RvbWVyX3RlbBgJIAEoCRIUCgxjdXN0b21l",
-            "cl91aWQYCiABKAkSEAoIaW5zZXJ0ZWQYCyABKAUSDQoFcGdfaWQYDCABKAkS",
-            "EwoLcGdfcHJvdmlkZXIYDSABKAkSDwoHdXBkYXRlZBgOIAEoBSI8CiRHZXRN",
-            "dWx0aXBsZUN1c3RvbWVyQmlsbGluZ0tleVJlcXVlc3QSFAoMY3VzdG9tZXJf",
-            "dWlkGAEgAygJIoEBCiVHZXRNdWx0aXBsZUN1c3RvbWVyQmlsbGluZ0tleVJl",
+            "dG8SE3N1YnNjcmliZV9jdXN0b21lcnMaFXBheW1lbnQvcGF5bWVudC5wcm90",
+            "byK2AgoSQ3VzdG9tZXJCaWxsaW5nS2V5EhEKCWNhcmRfY29kZRgBIAEoCRIR",
+            "CgljYXJkX25hbWUYAiABKAkSEwoLY2FyZF9udW1iZXIYAyABKAkSEQoJY2Fy",
+            "ZF90eXBlGAQgASgFEhUKDWN1c3RvbWVyX2FkZHIYBSABKAkSFgoOY3VzdG9t",
+            "ZXJfZW1haWwYBiABKAkSFQoNY3VzdG9tZXJfbmFtZRgHIAEoCRIZChFjdXN0",
+            "b21lcl9wb3N0Y29kZRgIIAEoCRIUCgxjdXN0b21lcl90ZWwYCSABKAkSFAoM",
+            "Y3VzdG9tZXJfdWlkGAogASgJEhAKCGluc2VydGVkGAsgASgFEg0KBXBnX2lk",
+            "GAwgASgJEhMKC3BnX3Byb3ZpZGVyGA0gASgJEg8KB3VwZGF0ZWQYDiABKAUi",
+            "PAokR2V0TXVsdGlwbGVDdXN0b21lckJpbGxpbmdLZXlSZXF1ZXN0EhQKDGN1",
+            "c3RvbWVyX3VpZBgBIAMoCSKBAQolR2V0TXVsdGlwbGVDdXN0b21lckJpbGxp",
+            "bmdLZXlSZXNwb25zZRIMCgRjb2RlGAEgASgFEg8KB21lc3NhZ2UYAiABKAkS",
+            "OQoIcmVzcG9uc2UYAyADKAsyJy5zdWJzY3JpYmVfY3VzdG9tZXJzLkN1c3Rv",
+            "bWVyQmlsbGluZ0tleSJaCh9EZWxldGVDdXN0b21lckJpbGxpbmdLZXlSZXF1",
+            "ZXN0EhQKDGN1c3RvbWVyX3VpZBgBIAEoCRIOCgZyZWFzb24YAiABKAkSEQoJ",
+            "cmVxdWVzdGVyGAMgASgJInwKIERlbGV0ZUN1c3RvbWVyQmlsbGluZ0tleVJl",
             "c3BvbnNlEgwKBGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRI5CghyZXNw",
-            "b25zZRgDIAMoCzInLnN1YnNjcmliZV9jdXN0b21lcnMuQ3VzdG9tZXJCaWxs",
-            "aW5nS2V5IloKH0RlbGV0ZUN1c3RvbWVyQmlsbGluZ0tleVJlcXVlc3QSFAoM",
-            "Y3VzdG9tZXJfdWlkGAEgASgJEg4KBnJlYXNvbhgCIAEoCRIRCglyZXF1ZXN0",
-            "ZXIYAyABKAkifAogRGVsZXRlQ3VzdG9tZXJCaWxsaW5nS2V5UmVzcG9uc2US",
-            "DAoEY29kZRgBIAEoBRIPCgdtZXNzYWdlGAIgASgJEjkKCHJlc3BvbnNlGAMg",
-            "ASgLMicuc3Vic2NyaWJlX2N1c3RvbWVycy5DdXN0b21lckJpbGxpbmdLZXki",
-            "NAocR2V0Q3VzdG9tZXJCaWxsaW5nS2V5UmVxdWVzdBIUCgxjdXN0b21lcl91",
-            "aWQYASABKAkieQodR2V0Q3VzdG9tZXJCaWxsaW5nS2V5UmVzcG9uc2USDAoE",
-            "Y29kZRgBIAEoBRIPCgdtZXNzYWdlGAIgASgJEjkKCHJlc3BvbnNlGAMgASgL",
-            "Micuc3Vic2NyaWJlX2N1c3RvbWVycy5DdXN0b21lckJpbGxpbmdLZXkiggIK",
-            "H0luc2VydEN1c3RvbWVyQmlsbGluZ0tleVJlcXVlc3QSFAoMY3VzdG9tZXJf",
-            "dWlkGAEgASgJEgoKAnBnGAIgASgJEhMKC2NhcmRfbnVtYmVyGAMgASgJEg4K",
-            "BmV4cGlyeRgEIAEoCRINCgViaXJ0aBgFIAEoCRISCgpwd2RfMmRpZ2l0GAYg",
-            "ASgJEhUKDWN1c3RvbWVyX25hbWUYByABKAkSFAoMY3VzdG9tZXJfdGVsGAgg",
-            "ASgJEhYKDmN1c3RvbWVyX2VtYWlsGAkgASgJEhUKDWN1c3RvbWVyX2FkZHIY",
-            "CiABKAkSGQoRY3VzdG9tZXJfcG9zdGNvZGUYCyABKAkifAogSW5zZXJ0Q3Vz",
-            "dG9tZXJCaWxsaW5nS2V5UmVzcG9uc2USDAoEY29kZRgBIAEoBRIPCgdtZXNz",
-            "YWdlGAIgASgJEjkKCHJlc3BvbnNlGAMgASgLMicuc3Vic2NyaWJlX2N1c3Rv",
-            "bWVycy5DdXN0b21lckJpbGxpbmdLZXkiRAoeR2V0UGFpZEJ5QmlsbGluZ0tl",
-            "eUxpc3RSZXF1ZXN0EhQKDGN1c3RvbWVyX3VpZBgBIAEoCRIMCgRwYWdlGAIg",
-            "ASgFIooBCiVOZXN0ZWRHZXRQYWlkQnlCaWxsaW5nS2V5TGlzdFJlc3BvbnNl",
-            "Eg0KBXRvdGFsGAEgASgFEhAKCHByZXZpb3VzGAIgASgFEgwKBG5leHQYAyAB",
-            "KAUSMgoEbGlzdBgEIAMoCzIkLnN1YnNjcmliZV9jdXN0b21lcnMuUGF5bWVu",
-            "dFJlc3BvbnNlIo4BCh9HZXRQYWlkQnlCaWxsaW5nS2V5TGlzdFJlc3BvbnNl",
-            "EgwKBGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRJMCghyZXNwb25zZRgD",
-            "IAEoCzI6LnN1YnNjcmliZV9jdXN0b21lcnMuTmVzdGVkR2V0UGFpZEJ5Qmls",
-            "bGluZ0tleUxpc3RSZXNwb25zZUI7WjlnaXRodWIuY29tL2lhbXBvcnQvaW50",
-            "ZXJmYWNlL2J1aWxkL2dvL3N1YnNjcmliZV9jdXN0b21lcnNiBnByb3RvMw=="));
+            "b25zZRgDIAEoCzInLnN1YnNjcmliZV9jdXN0b21lcnMuQ3VzdG9tZXJCaWxs",
+            "aW5nS2V5IjQKHEdldEN1c3RvbWVyQmlsbGluZ0tleVJlcXVlc3QSFAoMY3Vz",
+            "dG9tZXJfdWlkGAEgASgJInkKHUdldEN1c3RvbWVyQmlsbGluZ0tleVJlc3Bv",
+            "bnNlEgwKBGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRI5CghyZXNwb25z",
+            "ZRgDIAEoCzInLnN1YnNjcmliZV9jdXN0b21lcnMuQ3VzdG9tZXJCaWxsaW5n",
+            "S2V5IoICCh9JbnNlcnRDdXN0b21lckJpbGxpbmdLZXlSZXF1ZXN0EhQKDGN1",
+            "c3RvbWVyX3VpZBgBIAEoCRIKCgJwZxgCIAEoCRITCgtjYXJkX251bWJlchgD",
+            "IAEoCRIOCgZleHBpcnkYBCABKAkSDQoFYmlydGgYBSABKAkSEgoKcHdkXzJk",
+            "aWdpdBgGIAEoCRIVCg1jdXN0b21lcl9uYW1lGAcgASgJEhQKDGN1c3RvbWVy",
+            "X3RlbBgIIAEoCRIWCg5jdXN0b21lcl9lbWFpbBgJIAEoCRIVCg1jdXN0b21l",
+            "cl9hZGRyGAogASgJEhkKEWN1c3RvbWVyX3Bvc3Rjb2RlGAsgASgJInwKIElu",
+            "c2VydEN1c3RvbWVyQmlsbGluZ0tleVJlc3BvbnNlEgwKBGNvZGUYASABKAUS",
+            "DwoHbWVzc2FnZRgCIAEoCRI5CghyZXNwb25zZRgDIAEoCzInLnN1YnNjcmli",
+            "ZV9jdXN0b21lcnMuQ3VzdG9tZXJCaWxsaW5nS2V5IkQKHkdldFBhaWRCeUJp",
+            "bGxpbmdLZXlMaXN0UmVxdWVzdBIUCgxjdXN0b21lcl91aWQYASABKAkSDAoE",
+            "cGFnZRgCIAEoBSJyCiFOZXN0ZWRHZXRQYWlkQnlCaWxsaW5nS2V5TGlzdERh",
+            "dGESDQoFdG90YWwYASABKAUSEAoIcHJldmlvdXMYAiABKAUSDAoEbmV4dBgD",
+            "IAEoBRIeCgRsaXN0GAQgAygLMhAucGF5bWVudC5QYXltZW50IooBCh9HZXRQ",
+            "YWlkQnlCaWxsaW5nS2V5TGlzdFJlc3BvbnNlEgwKBGNvZGUYASABKAUSDwoH",
+            "bWVzc2FnZRgCIAEoCRJICghyZXNwb25zZRgDIAEoCzI2LnN1YnNjcmliZV9j",
+            "dXN0b21lcnMuTmVzdGVkR2V0UGFpZEJ5QmlsbGluZ0tleUxpc3REYXRhQjta",
+            "OWdpdGh1Yi5jb20vaWFtcG9ydC9pbnRlcmZhY2UvYnVpbGQvZ28vc3Vic2Ny",
+            "aWJlX2N1c3RvbWVyc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Payment.PaymentReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SubscribeCustomers.CancelHistory), global::SubscribeCustomers.CancelHistory.Parser, new[]{ "PgTid", "Amount", "CancelledAt", "Reason", "ReceiptUrl" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SubscribeCustomers.PaymentResponse), global::SubscribeCustomers.PaymentResponse.Parser, new[]{ "CancelAmount", "BankCode", "VbankDate", "CardCode", "CustomerUidUsage", "PgId", "Escrow", "FailedAt", "BuyerAddr", "ApplyNum", "CardName", "CancelledAt", "PgTid", "VbankHolder", "VbankName", "Currency", "BuyerName", "CardNumber", "StartedAt", "MerchantUid", "VbankNum", "CustomerUid", "FailReason", "ImpUid", "BuyerPostcode", "PaidAt", "PgProvider", "BankName", "VbankIssuedAt", "VbankCode", "ReceiptUrl", "CardQuota", "BuyerEmail", "UserAgent", "Status", "CancelReason", "CustomData", "CashReceiptIssued", "CardType", "BuyerTel", "Amount", "Name", "PayMethod", "Channel", "CancelReceiptUrls", "CancelHistory" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SubscribeCustomers.CustomerBillingKey), global::SubscribeCustomers.CustomerBillingKey.Parser, new[]{ "CardCode", "CardName", "CardNumber", "CardType", "CustomerAddr", "CustomerEmail", "CustomerName", "CustomerPostcode", "CustomerTel", "CustomerUid", "Inserted", "PgId", "PgProvider", "Updated" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SubscribeCustomers.GetMultipleCustomerBillingKeyRequest), global::SubscribeCustomers.GetMultipleCustomerBillingKeyRequest.Parser, new[]{ "CustomerUid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SubscribeCustomers.GetMultipleCustomerBillingKeyResponse), global::SubscribeCustomers.GetMultipleCustomerBillingKeyResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
@@ -103,7 +77,7 @@ namespace SubscribeCustomers {
             new pbr::GeneratedClrTypeInfo(typeof(global::SubscribeCustomers.InsertCustomerBillingKeyRequest), global::SubscribeCustomers.InsertCustomerBillingKeyRequest.Parser, new[]{ "CustomerUid", "Pg", "CardNumber", "Expiry", "Birth", "Pwd2Digit", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SubscribeCustomers.InsertCustomerBillingKeyResponse), global::SubscribeCustomers.InsertCustomerBillingKeyResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SubscribeCustomers.GetPaidByBillingKeyListRequest), global::SubscribeCustomers.GetPaidByBillingKeyListRequest.Parser, new[]{ "CustomerUid", "Page" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SubscribeCustomers.NestedGetPaidByBillingKeyListResponse), global::SubscribeCustomers.NestedGetPaidByBillingKeyListResponse.Parser, new[]{ "Total", "Previous", "Next", "List" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SubscribeCustomers.NestedGetPaidByBillingKeyListData), global::SubscribeCustomers.NestedGetPaidByBillingKeyListData.Parser, new[]{ "Total", "Previous", "Next", "List" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SubscribeCustomers.GetPaidByBillingKeyListResponse), global::SubscribeCustomers.GetPaidByBillingKeyListResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null)
           }));
     }
@@ -111,2092 +85,6 @@ namespace SubscribeCustomers {
 
   }
   #region Messages
-  public sealed partial class CancelHistory : pb::IMessage<CancelHistory>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<CancelHistory> _parser = new pb::MessageParser<CancelHistory>(() => new CancelHistory());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<CancelHistory> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CancelHistory() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CancelHistory(CancelHistory other) : this() {
-      pgTid_ = other.pgTid_;
-      amount_ = other.amount_;
-      cancelledAt_ = other.cancelledAt_;
-      reason_ = other.reason_;
-      receiptUrl_ = other.receiptUrl_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CancelHistory Clone() {
-      return new CancelHistory(this);
-    }
-
-    /// <summary>Field number for the "pg_tid" field.</summary>
-    public const int PgTidFieldNumber = 1;
-    private string pgTid_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PgTid {
-      get { return pgTid_; }
-      set {
-        pgTid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 2;
-    private int amount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Amount {
-      get { return amount_; }
-      set {
-        amount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "cancelled_at" field.</summary>
-    public const int CancelledAtFieldNumber = 3;
-    private int cancelledAt_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CancelledAt {
-      get { return cancelledAt_; }
-      set {
-        cancelledAt_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 4;
-    private string reason_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Reason {
-      get { return reason_; }
-      set {
-        reason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "receipt_url" field.</summary>
-    public const int ReceiptUrlFieldNumber = 5;
-    private string receiptUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ReceiptUrl {
-      get { return receiptUrl_; }
-      set {
-        receiptUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as CancelHistory);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(CancelHistory other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (PgTid != other.PgTid) return false;
-      if (Amount != other.Amount) return false;
-      if (CancelledAt != other.CancelledAt) return false;
-      if (Reason != other.Reason) return false;
-      if (ReceiptUrl != other.ReceiptUrl) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (PgTid.Length != 0) hash ^= PgTid.GetHashCode();
-      if (Amount != 0) hash ^= Amount.GetHashCode();
-      if (CancelledAt != 0) hash ^= CancelledAt.GetHashCode();
-      if (Reason.Length != 0) hash ^= Reason.GetHashCode();
-      if (ReceiptUrl.Length != 0) hash ^= ReceiptUrl.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (PgTid.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PgTid);
-      }
-      if (Amount != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Amount);
-      }
-      if (CancelledAt != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(CancelledAt);
-      }
-      if (Reason.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Reason);
-      }
-      if (ReceiptUrl.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(ReceiptUrl);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PgTid.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PgTid);
-      }
-      if (Amount != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Amount);
-      }
-      if (CancelledAt != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(CancelledAt);
-      }
-      if (Reason.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Reason);
-      }
-      if (ReceiptUrl.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(ReceiptUrl);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (PgTid.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PgTid);
-      }
-      if (Amount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Amount);
-      }
-      if (CancelledAt != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CancelledAt);
-      }
-      if (Reason.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Reason);
-      }
-      if (ReceiptUrl.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReceiptUrl);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(CancelHistory other) {
-      if (other == null) {
-        return;
-      }
-      if (other.PgTid.Length != 0) {
-        PgTid = other.PgTid;
-      }
-      if (other.Amount != 0) {
-        Amount = other.Amount;
-      }
-      if (other.CancelledAt != 0) {
-        CancelledAt = other.CancelledAt;
-      }
-      if (other.Reason.Length != 0) {
-        Reason = other.Reason;
-      }
-      if (other.ReceiptUrl.Length != 0) {
-        ReceiptUrl = other.ReceiptUrl;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            PgTid = input.ReadString();
-            break;
-          }
-          case 16: {
-            Amount = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            CancelledAt = input.ReadInt32();
-            break;
-          }
-          case 34: {
-            Reason = input.ReadString();
-            break;
-          }
-          case 42: {
-            ReceiptUrl = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            PgTid = input.ReadString();
-            break;
-          }
-          case 16: {
-            Amount = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            CancelledAt = input.ReadInt32();
-            break;
-          }
-          case 34: {
-            Reason = input.ReadString();
-            break;
-          }
-          case 42: {
-            ReceiptUrl = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class PaymentResponse : pb::IMessage<PaymentResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<PaymentResponse> _parser = new pb::MessageParser<PaymentResponse>(() => new PaymentResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<PaymentResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PaymentResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PaymentResponse(PaymentResponse other) : this() {
-      cancelAmount_ = other.cancelAmount_;
-      bankCode_ = other.bankCode_;
-      vbankDate_ = other.vbankDate_;
-      cardCode_ = other.cardCode_;
-      customerUidUsage_ = other.customerUidUsage_;
-      pgId_ = other.pgId_;
-      escrow_ = other.escrow_;
-      failedAt_ = other.failedAt_;
-      buyerAddr_ = other.buyerAddr_;
-      applyNum_ = other.applyNum_;
-      cardName_ = other.cardName_;
-      cancelledAt_ = other.cancelledAt_;
-      pgTid_ = other.pgTid_;
-      vbankHolder_ = other.vbankHolder_;
-      vbankName_ = other.vbankName_;
-      currency_ = other.currency_;
-      buyerName_ = other.buyerName_;
-      cardNumber_ = other.cardNumber_;
-      startedAt_ = other.startedAt_;
-      merchantUid_ = other.merchantUid_;
-      vbankNum_ = other.vbankNum_;
-      customerUid_ = other.customerUid_;
-      failReason_ = other.failReason_;
-      impUid_ = other.impUid_;
-      buyerPostcode_ = other.buyerPostcode_;
-      paidAt_ = other.paidAt_;
-      pgProvider_ = other.pgProvider_;
-      bankName_ = other.bankName_;
-      vbankIssuedAt_ = other.vbankIssuedAt_;
-      vbankCode_ = other.vbankCode_;
-      receiptUrl_ = other.receiptUrl_;
-      cardQuota_ = other.cardQuota_;
-      buyerEmail_ = other.buyerEmail_;
-      userAgent_ = other.userAgent_;
-      status_ = other.status_;
-      cancelReason_ = other.cancelReason_;
-      customData_ = other.customData_;
-      cashReceiptIssued_ = other.cashReceiptIssued_;
-      cardType_ = other.cardType_;
-      buyerTel_ = other.buyerTel_;
-      amount_ = other.amount_;
-      name_ = other.name_;
-      payMethod_ = other.payMethod_;
-      channel_ = other.channel_;
-      cancelReceiptUrls_ = other.cancelReceiptUrls_.Clone();
-      cancelHistory_ = other.cancelHistory_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PaymentResponse Clone() {
-      return new PaymentResponse(this);
-    }
-
-    /// <summary>Field number for the "cancel_amount" field.</summary>
-    public const int CancelAmountFieldNumber = 1;
-    private int cancelAmount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CancelAmount {
-      get { return cancelAmount_; }
-      set {
-        cancelAmount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "bank_code" field.</summary>
-    public const int BankCodeFieldNumber = 2;
-    private string bankCode_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BankCode {
-      get { return bankCode_; }
-      set {
-        bankCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "vbank_date" field.</summary>
-    public const int VbankDateFieldNumber = 3;
-    private int vbankDate_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int VbankDate {
-      get { return vbankDate_; }
-      set {
-        vbankDate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "card_code" field.</summary>
-    public const int CardCodeFieldNumber = 4;
-    private string cardCode_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CardCode {
-      get { return cardCode_; }
-      set {
-        cardCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "customer_uid_usage" field.</summary>
-    public const int CustomerUidUsageFieldNumber = 5;
-    private string customerUidUsage_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CustomerUidUsage {
-      get { return customerUidUsage_; }
-      set {
-        customerUidUsage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "pg_id" field.</summary>
-    public const int PgIdFieldNumber = 6;
-    private string pgId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PgId {
-      get { return pgId_; }
-      set {
-        pgId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "escrow" field.</summary>
-    public const int EscrowFieldNumber = 7;
-    private bool escrow_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Escrow {
-      get { return escrow_; }
-      set {
-        escrow_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "failed_at" field.</summary>
-    public const int FailedAtFieldNumber = 8;
-    private int failedAt_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int FailedAt {
-      get { return failedAt_; }
-      set {
-        failedAt_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "buyer_addr" field.</summary>
-    public const int BuyerAddrFieldNumber = 9;
-    private string buyerAddr_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BuyerAddr {
-      get { return buyerAddr_; }
-      set {
-        buyerAddr_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "apply_num" field.</summary>
-    public const int ApplyNumFieldNumber = 10;
-    private string applyNum_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ApplyNum {
-      get { return applyNum_; }
-      set {
-        applyNum_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "card_name" field.</summary>
-    public const int CardNameFieldNumber = 11;
-    private string cardName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CardName {
-      get { return cardName_; }
-      set {
-        cardName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "cancelled_at" field.</summary>
-    public const int CancelledAtFieldNumber = 12;
-    private int cancelledAt_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CancelledAt {
-      get { return cancelledAt_; }
-      set {
-        cancelledAt_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "pg_tid" field.</summary>
-    public const int PgTidFieldNumber = 13;
-    private string pgTid_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PgTid {
-      get { return pgTid_; }
-      set {
-        pgTid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "vbank_holder" field.</summary>
-    public const int VbankHolderFieldNumber = 14;
-    private string vbankHolder_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string VbankHolder {
-      get { return vbankHolder_; }
-      set {
-        vbankHolder_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "vbank_name" field.</summary>
-    public const int VbankNameFieldNumber = 15;
-    private string vbankName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string VbankName {
-      get { return vbankName_; }
-      set {
-        vbankName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "currency" field.</summary>
-    public const int CurrencyFieldNumber = 16;
-    private string currency_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Currency {
-      get { return currency_; }
-      set {
-        currency_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "buyer_name" field.</summary>
-    public const int BuyerNameFieldNumber = 17;
-    private string buyerName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BuyerName {
-      get { return buyerName_; }
-      set {
-        buyerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "card_number" field.</summary>
-    public const int CardNumberFieldNumber = 18;
-    private string cardNumber_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CardNumber {
-      get { return cardNumber_; }
-      set {
-        cardNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "started_at" field.</summary>
-    public const int StartedAtFieldNumber = 19;
-    private int startedAt_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int StartedAt {
-      get { return startedAt_; }
-      set {
-        startedAt_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "merchant_uid" field.</summary>
-    public const int MerchantUidFieldNumber = 20;
-    private string merchantUid_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string MerchantUid {
-      get { return merchantUid_; }
-      set {
-        merchantUid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "vbank_num" field.</summary>
-    public const int VbankNumFieldNumber = 21;
-    private string vbankNum_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string VbankNum {
-      get { return vbankNum_; }
-      set {
-        vbankNum_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "customer_uid" field.</summary>
-    public const int CustomerUidFieldNumber = 22;
-    private string customerUid_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CustomerUid {
-      get { return customerUid_; }
-      set {
-        customerUid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "fail_reason" field.</summary>
-    public const int FailReasonFieldNumber = 23;
-    private string failReason_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FailReason {
-      get { return failReason_; }
-      set {
-        failReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "imp_uid" field.</summary>
-    public const int ImpUidFieldNumber = 24;
-    private string impUid_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ImpUid {
-      get { return impUid_; }
-      set {
-        impUid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "buyer_postcode" field.</summary>
-    public const int BuyerPostcodeFieldNumber = 25;
-    private string buyerPostcode_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BuyerPostcode {
-      get { return buyerPostcode_; }
-      set {
-        buyerPostcode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "paid_at" field.</summary>
-    public const int PaidAtFieldNumber = 26;
-    private int paidAt_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int PaidAt {
-      get { return paidAt_; }
-      set {
-        paidAt_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "pg_provider" field.</summary>
-    public const int PgProviderFieldNumber = 27;
-    private string pgProvider_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PgProvider {
-      get { return pgProvider_; }
-      set {
-        pgProvider_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "bank_name" field.</summary>
-    public const int BankNameFieldNumber = 28;
-    private string bankName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BankName {
-      get { return bankName_; }
-      set {
-        bankName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "vbank_issued_at" field.</summary>
-    public const int VbankIssuedAtFieldNumber = 29;
-    private int vbankIssuedAt_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int VbankIssuedAt {
-      get { return vbankIssuedAt_; }
-      set {
-        vbankIssuedAt_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "vbank_code" field.</summary>
-    public const int VbankCodeFieldNumber = 30;
-    private string vbankCode_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string VbankCode {
-      get { return vbankCode_; }
-      set {
-        vbankCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "receipt_url" field.</summary>
-    public const int ReceiptUrlFieldNumber = 31;
-    private string receiptUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ReceiptUrl {
-      get { return receiptUrl_; }
-      set {
-        receiptUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "card_quota" field.</summary>
-    public const int CardQuotaFieldNumber = 32;
-    private int cardQuota_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CardQuota {
-      get { return cardQuota_; }
-      set {
-        cardQuota_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "buyer_email" field.</summary>
-    public const int BuyerEmailFieldNumber = 33;
-    private string buyerEmail_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BuyerEmail {
-      get { return buyerEmail_; }
-      set {
-        buyerEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "user_agent" field.</summary>
-    public const int UserAgentFieldNumber = 34;
-    private string userAgent_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string UserAgent {
-      get { return userAgent_; }
-      set {
-        userAgent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 35;
-    private string status_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Status {
-      get { return status_; }
-      set {
-        status_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "cancel_reason" field.</summary>
-    public const int CancelReasonFieldNumber = 36;
-    private string cancelReason_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CancelReason {
-      get { return cancelReason_; }
-      set {
-        cancelReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "custom_data" field.</summary>
-    public const int CustomDataFieldNumber = 37;
-    private string customData_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CustomData {
-      get { return customData_; }
-      set {
-        customData_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "cash_receipt_issued" field.</summary>
-    public const int CashReceiptIssuedFieldNumber = 38;
-    private bool cashReceiptIssued_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool CashReceiptIssued {
-      get { return cashReceiptIssued_; }
-      set {
-        cashReceiptIssued_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "card_type" field.</summary>
-    public const int CardTypeFieldNumber = 39;
-    private int cardType_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CardType {
-      get { return cardType_; }
-      set {
-        cardType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "buyer_tel" field.</summary>
-    public const int BuyerTelFieldNumber = 40;
-    private string buyerTel_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BuyerTel {
-      get { return buyerTel_; }
-      set {
-        buyerTel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 41;
-    private int amount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Amount {
-      get { return amount_; }
-      set {
-        amount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 42;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "pay_method" field.</summary>
-    public const int PayMethodFieldNumber = 43;
-    private string payMethod_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PayMethod {
-      get { return payMethod_; }
-      set {
-        payMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "channel" field.</summary>
-    public const int ChannelFieldNumber = 44;
-    private string channel_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Channel {
-      get { return channel_; }
-      set {
-        channel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "cancel_receipt_urls" field.</summary>
-    public const int CancelReceiptUrlsFieldNumber = 45;
-    private static readonly pb::FieldCodec<string> _repeated_cancelReceiptUrls_codec
-        = pb::FieldCodec.ForString(362);
-    private readonly pbc::RepeatedField<string> cancelReceiptUrls_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> CancelReceiptUrls {
-      get { return cancelReceiptUrls_; }
-    }
-
-    /// <summary>Field number for the "cancel_history" field.</summary>
-    public const int CancelHistoryFieldNumber = 46;
-    private static readonly pb::FieldCodec<global::SubscribeCustomers.CancelHistory> _repeated_cancelHistory_codec
-        = pb::FieldCodec.ForMessage(370, global::SubscribeCustomers.CancelHistory.Parser);
-    private readonly pbc::RepeatedField<global::SubscribeCustomers.CancelHistory> cancelHistory_ = new pbc::RepeatedField<global::SubscribeCustomers.CancelHistory>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SubscribeCustomers.CancelHistory> CancelHistory {
-      get { return cancelHistory_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as PaymentResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PaymentResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (CancelAmount != other.CancelAmount) return false;
-      if (BankCode != other.BankCode) return false;
-      if (VbankDate != other.VbankDate) return false;
-      if (CardCode != other.CardCode) return false;
-      if (CustomerUidUsage != other.CustomerUidUsage) return false;
-      if (PgId != other.PgId) return false;
-      if (Escrow != other.Escrow) return false;
-      if (FailedAt != other.FailedAt) return false;
-      if (BuyerAddr != other.BuyerAddr) return false;
-      if (ApplyNum != other.ApplyNum) return false;
-      if (CardName != other.CardName) return false;
-      if (CancelledAt != other.CancelledAt) return false;
-      if (PgTid != other.PgTid) return false;
-      if (VbankHolder != other.VbankHolder) return false;
-      if (VbankName != other.VbankName) return false;
-      if (Currency != other.Currency) return false;
-      if (BuyerName != other.BuyerName) return false;
-      if (CardNumber != other.CardNumber) return false;
-      if (StartedAt != other.StartedAt) return false;
-      if (MerchantUid != other.MerchantUid) return false;
-      if (VbankNum != other.VbankNum) return false;
-      if (CustomerUid != other.CustomerUid) return false;
-      if (FailReason != other.FailReason) return false;
-      if (ImpUid != other.ImpUid) return false;
-      if (BuyerPostcode != other.BuyerPostcode) return false;
-      if (PaidAt != other.PaidAt) return false;
-      if (PgProvider != other.PgProvider) return false;
-      if (BankName != other.BankName) return false;
-      if (VbankIssuedAt != other.VbankIssuedAt) return false;
-      if (VbankCode != other.VbankCode) return false;
-      if (ReceiptUrl != other.ReceiptUrl) return false;
-      if (CardQuota != other.CardQuota) return false;
-      if (BuyerEmail != other.BuyerEmail) return false;
-      if (UserAgent != other.UserAgent) return false;
-      if (Status != other.Status) return false;
-      if (CancelReason != other.CancelReason) return false;
-      if (CustomData != other.CustomData) return false;
-      if (CashReceiptIssued != other.CashReceiptIssued) return false;
-      if (CardType != other.CardType) return false;
-      if (BuyerTel != other.BuyerTel) return false;
-      if (Amount != other.Amount) return false;
-      if (Name != other.Name) return false;
-      if (PayMethod != other.PayMethod) return false;
-      if (Channel != other.Channel) return false;
-      if(!cancelReceiptUrls_.Equals(other.cancelReceiptUrls_)) return false;
-      if(!cancelHistory_.Equals(other.cancelHistory_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (CancelAmount != 0) hash ^= CancelAmount.GetHashCode();
-      if (BankCode.Length != 0) hash ^= BankCode.GetHashCode();
-      if (VbankDate != 0) hash ^= VbankDate.GetHashCode();
-      if (CardCode.Length != 0) hash ^= CardCode.GetHashCode();
-      if (CustomerUidUsage.Length != 0) hash ^= CustomerUidUsage.GetHashCode();
-      if (PgId.Length != 0) hash ^= PgId.GetHashCode();
-      if (Escrow != false) hash ^= Escrow.GetHashCode();
-      if (FailedAt != 0) hash ^= FailedAt.GetHashCode();
-      if (BuyerAddr.Length != 0) hash ^= BuyerAddr.GetHashCode();
-      if (ApplyNum.Length != 0) hash ^= ApplyNum.GetHashCode();
-      if (CardName.Length != 0) hash ^= CardName.GetHashCode();
-      if (CancelledAt != 0) hash ^= CancelledAt.GetHashCode();
-      if (PgTid.Length != 0) hash ^= PgTid.GetHashCode();
-      if (VbankHolder.Length != 0) hash ^= VbankHolder.GetHashCode();
-      if (VbankName.Length != 0) hash ^= VbankName.GetHashCode();
-      if (Currency.Length != 0) hash ^= Currency.GetHashCode();
-      if (BuyerName.Length != 0) hash ^= BuyerName.GetHashCode();
-      if (CardNumber.Length != 0) hash ^= CardNumber.GetHashCode();
-      if (StartedAt != 0) hash ^= StartedAt.GetHashCode();
-      if (MerchantUid.Length != 0) hash ^= MerchantUid.GetHashCode();
-      if (VbankNum.Length != 0) hash ^= VbankNum.GetHashCode();
-      if (CustomerUid.Length != 0) hash ^= CustomerUid.GetHashCode();
-      if (FailReason.Length != 0) hash ^= FailReason.GetHashCode();
-      if (ImpUid.Length != 0) hash ^= ImpUid.GetHashCode();
-      if (BuyerPostcode.Length != 0) hash ^= BuyerPostcode.GetHashCode();
-      if (PaidAt != 0) hash ^= PaidAt.GetHashCode();
-      if (PgProvider.Length != 0) hash ^= PgProvider.GetHashCode();
-      if (BankName.Length != 0) hash ^= BankName.GetHashCode();
-      if (VbankIssuedAt != 0) hash ^= VbankIssuedAt.GetHashCode();
-      if (VbankCode.Length != 0) hash ^= VbankCode.GetHashCode();
-      if (ReceiptUrl.Length != 0) hash ^= ReceiptUrl.GetHashCode();
-      if (CardQuota != 0) hash ^= CardQuota.GetHashCode();
-      if (BuyerEmail.Length != 0) hash ^= BuyerEmail.GetHashCode();
-      if (UserAgent.Length != 0) hash ^= UserAgent.GetHashCode();
-      if (Status.Length != 0) hash ^= Status.GetHashCode();
-      if (CancelReason.Length != 0) hash ^= CancelReason.GetHashCode();
-      if (CustomData.Length != 0) hash ^= CustomData.GetHashCode();
-      if (CashReceiptIssued != false) hash ^= CashReceiptIssued.GetHashCode();
-      if (CardType != 0) hash ^= CardType.GetHashCode();
-      if (BuyerTel.Length != 0) hash ^= BuyerTel.GetHashCode();
-      if (Amount != 0) hash ^= Amount.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (PayMethod.Length != 0) hash ^= PayMethod.GetHashCode();
-      if (Channel.Length != 0) hash ^= Channel.GetHashCode();
-      hash ^= cancelReceiptUrls_.GetHashCode();
-      hash ^= cancelHistory_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (CancelAmount != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(CancelAmount);
-      }
-      if (BankCode.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(BankCode);
-      }
-      if (VbankDate != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(VbankDate);
-      }
-      if (CardCode.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(CardCode);
-      }
-      if (CustomerUidUsage.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(CustomerUidUsage);
-      }
-      if (PgId.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(PgId);
-      }
-      if (Escrow != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(Escrow);
-      }
-      if (FailedAt != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(FailedAt);
-      }
-      if (BuyerAddr.Length != 0) {
-        output.WriteRawTag(74);
-        output.WriteString(BuyerAddr);
-      }
-      if (ApplyNum.Length != 0) {
-        output.WriteRawTag(82);
-        output.WriteString(ApplyNum);
-      }
-      if (CardName.Length != 0) {
-        output.WriteRawTag(90);
-        output.WriteString(CardName);
-      }
-      if (CancelledAt != 0) {
-        output.WriteRawTag(96);
-        output.WriteInt32(CancelledAt);
-      }
-      if (PgTid.Length != 0) {
-        output.WriteRawTag(106);
-        output.WriteString(PgTid);
-      }
-      if (VbankHolder.Length != 0) {
-        output.WriteRawTag(114);
-        output.WriteString(VbankHolder);
-      }
-      if (VbankName.Length != 0) {
-        output.WriteRawTag(122);
-        output.WriteString(VbankName);
-      }
-      if (Currency.Length != 0) {
-        output.WriteRawTag(130, 1);
-        output.WriteString(Currency);
-      }
-      if (BuyerName.Length != 0) {
-        output.WriteRawTag(138, 1);
-        output.WriteString(BuyerName);
-      }
-      if (CardNumber.Length != 0) {
-        output.WriteRawTag(146, 1);
-        output.WriteString(CardNumber);
-      }
-      if (StartedAt != 0) {
-        output.WriteRawTag(152, 1);
-        output.WriteInt32(StartedAt);
-      }
-      if (MerchantUid.Length != 0) {
-        output.WriteRawTag(162, 1);
-        output.WriteString(MerchantUid);
-      }
-      if (VbankNum.Length != 0) {
-        output.WriteRawTag(170, 1);
-        output.WriteString(VbankNum);
-      }
-      if (CustomerUid.Length != 0) {
-        output.WriteRawTag(178, 1);
-        output.WriteString(CustomerUid);
-      }
-      if (FailReason.Length != 0) {
-        output.WriteRawTag(186, 1);
-        output.WriteString(FailReason);
-      }
-      if (ImpUid.Length != 0) {
-        output.WriteRawTag(194, 1);
-        output.WriteString(ImpUid);
-      }
-      if (BuyerPostcode.Length != 0) {
-        output.WriteRawTag(202, 1);
-        output.WriteString(BuyerPostcode);
-      }
-      if (PaidAt != 0) {
-        output.WriteRawTag(208, 1);
-        output.WriteInt32(PaidAt);
-      }
-      if (PgProvider.Length != 0) {
-        output.WriteRawTag(218, 1);
-        output.WriteString(PgProvider);
-      }
-      if (BankName.Length != 0) {
-        output.WriteRawTag(226, 1);
-        output.WriteString(BankName);
-      }
-      if (VbankIssuedAt != 0) {
-        output.WriteRawTag(232, 1);
-        output.WriteInt32(VbankIssuedAt);
-      }
-      if (VbankCode.Length != 0) {
-        output.WriteRawTag(242, 1);
-        output.WriteString(VbankCode);
-      }
-      if (ReceiptUrl.Length != 0) {
-        output.WriteRawTag(250, 1);
-        output.WriteString(ReceiptUrl);
-      }
-      if (CardQuota != 0) {
-        output.WriteRawTag(128, 2);
-        output.WriteInt32(CardQuota);
-      }
-      if (BuyerEmail.Length != 0) {
-        output.WriteRawTag(138, 2);
-        output.WriteString(BuyerEmail);
-      }
-      if (UserAgent.Length != 0) {
-        output.WriteRawTag(146, 2);
-        output.WriteString(UserAgent);
-      }
-      if (Status.Length != 0) {
-        output.WriteRawTag(154, 2);
-        output.WriteString(Status);
-      }
-      if (CancelReason.Length != 0) {
-        output.WriteRawTag(162, 2);
-        output.WriteString(CancelReason);
-      }
-      if (CustomData.Length != 0) {
-        output.WriteRawTag(170, 2);
-        output.WriteString(CustomData);
-      }
-      if (CashReceiptIssued != false) {
-        output.WriteRawTag(176, 2);
-        output.WriteBool(CashReceiptIssued);
-      }
-      if (CardType != 0) {
-        output.WriteRawTag(184, 2);
-        output.WriteInt32(CardType);
-      }
-      if (BuyerTel.Length != 0) {
-        output.WriteRawTag(194, 2);
-        output.WriteString(BuyerTel);
-      }
-      if (Amount != 0) {
-        output.WriteRawTag(200, 2);
-        output.WriteInt32(Amount);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(210, 2);
-        output.WriteString(Name);
-      }
-      if (PayMethod.Length != 0) {
-        output.WriteRawTag(218, 2);
-        output.WriteString(PayMethod);
-      }
-      if (Channel.Length != 0) {
-        output.WriteRawTag(226, 2);
-        output.WriteString(Channel);
-      }
-      cancelReceiptUrls_.WriteTo(output, _repeated_cancelReceiptUrls_codec);
-      cancelHistory_.WriteTo(output, _repeated_cancelHistory_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CancelAmount != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(CancelAmount);
-      }
-      if (BankCode.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(BankCode);
-      }
-      if (VbankDate != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(VbankDate);
-      }
-      if (CardCode.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(CardCode);
-      }
-      if (CustomerUidUsage.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(CustomerUidUsage);
-      }
-      if (PgId.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(PgId);
-      }
-      if (Escrow != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(Escrow);
-      }
-      if (FailedAt != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(FailedAt);
-      }
-      if (BuyerAddr.Length != 0) {
-        output.WriteRawTag(74);
-        output.WriteString(BuyerAddr);
-      }
-      if (ApplyNum.Length != 0) {
-        output.WriteRawTag(82);
-        output.WriteString(ApplyNum);
-      }
-      if (CardName.Length != 0) {
-        output.WriteRawTag(90);
-        output.WriteString(CardName);
-      }
-      if (CancelledAt != 0) {
-        output.WriteRawTag(96);
-        output.WriteInt32(CancelledAt);
-      }
-      if (PgTid.Length != 0) {
-        output.WriteRawTag(106);
-        output.WriteString(PgTid);
-      }
-      if (VbankHolder.Length != 0) {
-        output.WriteRawTag(114);
-        output.WriteString(VbankHolder);
-      }
-      if (VbankName.Length != 0) {
-        output.WriteRawTag(122);
-        output.WriteString(VbankName);
-      }
-      if (Currency.Length != 0) {
-        output.WriteRawTag(130, 1);
-        output.WriteString(Currency);
-      }
-      if (BuyerName.Length != 0) {
-        output.WriteRawTag(138, 1);
-        output.WriteString(BuyerName);
-      }
-      if (CardNumber.Length != 0) {
-        output.WriteRawTag(146, 1);
-        output.WriteString(CardNumber);
-      }
-      if (StartedAt != 0) {
-        output.WriteRawTag(152, 1);
-        output.WriteInt32(StartedAt);
-      }
-      if (MerchantUid.Length != 0) {
-        output.WriteRawTag(162, 1);
-        output.WriteString(MerchantUid);
-      }
-      if (VbankNum.Length != 0) {
-        output.WriteRawTag(170, 1);
-        output.WriteString(VbankNum);
-      }
-      if (CustomerUid.Length != 0) {
-        output.WriteRawTag(178, 1);
-        output.WriteString(CustomerUid);
-      }
-      if (FailReason.Length != 0) {
-        output.WriteRawTag(186, 1);
-        output.WriteString(FailReason);
-      }
-      if (ImpUid.Length != 0) {
-        output.WriteRawTag(194, 1);
-        output.WriteString(ImpUid);
-      }
-      if (BuyerPostcode.Length != 0) {
-        output.WriteRawTag(202, 1);
-        output.WriteString(BuyerPostcode);
-      }
-      if (PaidAt != 0) {
-        output.WriteRawTag(208, 1);
-        output.WriteInt32(PaidAt);
-      }
-      if (PgProvider.Length != 0) {
-        output.WriteRawTag(218, 1);
-        output.WriteString(PgProvider);
-      }
-      if (BankName.Length != 0) {
-        output.WriteRawTag(226, 1);
-        output.WriteString(BankName);
-      }
-      if (VbankIssuedAt != 0) {
-        output.WriteRawTag(232, 1);
-        output.WriteInt32(VbankIssuedAt);
-      }
-      if (VbankCode.Length != 0) {
-        output.WriteRawTag(242, 1);
-        output.WriteString(VbankCode);
-      }
-      if (ReceiptUrl.Length != 0) {
-        output.WriteRawTag(250, 1);
-        output.WriteString(ReceiptUrl);
-      }
-      if (CardQuota != 0) {
-        output.WriteRawTag(128, 2);
-        output.WriteInt32(CardQuota);
-      }
-      if (BuyerEmail.Length != 0) {
-        output.WriteRawTag(138, 2);
-        output.WriteString(BuyerEmail);
-      }
-      if (UserAgent.Length != 0) {
-        output.WriteRawTag(146, 2);
-        output.WriteString(UserAgent);
-      }
-      if (Status.Length != 0) {
-        output.WriteRawTag(154, 2);
-        output.WriteString(Status);
-      }
-      if (CancelReason.Length != 0) {
-        output.WriteRawTag(162, 2);
-        output.WriteString(CancelReason);
-      }
-      if (CustomData.Length != 0) {
-        output.WriteRawTag(170, 2);
-        output.WriteString(CustomData);
-      }
-      if (CashReceiptIssued != false) {
-        output.WriteRawTag(176, 2);
-        output.WriteBool(CashReceiptIssued);
-      }
-      if (CardType != 0) {
-        output.WriteRawTag(184, 2);
-        output.WriteInt32(CardType);
-      }
-      if (BuyerTel.Length != 0) {
-        output.WriteRawTag(194, 2);
-        output.WriteString(BuyerTel);
-      }
-      if (Amount != 0) {
-        output.WriteRawTag(200, 2);
-        output.WriteInt32(Amount);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(210, 2);
-        output.WriteString(Name);
-      }
-      if (PayMethod.Length != 0) {
-        output.WriteRawTag(218, 2);
-        output.WriteString(PayMethod);
-      }
-      if (Channel.Length != 0) {
-        output.WriteRawTag(226, 2);
-        output.WriteString(Channel);
-      }
-      cancelReceiptUrls_.WriteTo(ref output, _repeated_cancelReceiptUrls_codec);
-      cancelHistory_.WriteTo(ref output, _repeated_cancelHistory_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (CancelAmount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CancelAmount);
-      }
-      if (BankCode.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BankCode);
-      }
-      if (VbankDate != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(VbankDate);
-      }
-      if (CardCode.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CardCode);
-      }
-      if (CustomerUidUsage.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerUidUsage);
-      }
-      if (PgId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PgId);
-      }
-      if (Escrow != false) {
-        size += 1 + 1;
-      }
-      if (FailedAt != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FailedAt);
-      }
-      if (BuyerAddr.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BuyerAddr);
-      }
-      if (ApplyNum.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ApplyNum);
-      }
-      if (CardName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CardName);
-      }
-      if (CancelledAt != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CancelledAt);
-      }
-      if (PgTid.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PgTid);
-      }
-      if (VbankHolder.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(VbankHolder);
-      }
-      if (VbankName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(VbankName);
-      }
-      if (Currency.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(Currency);
-      }
-      if (BuyerName.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(BuyerName);
-      }
-      if (CardNumber.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(CardNumber);
-      }
-      if (StartedAt != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(StartedAt);
-      }
-      if (MerchantUid.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(MerchantUid);
-      }
-      if (VbankNum.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(VbankNum);
-      }
-      if (CustomerUid.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(CustomerUid);
-      }
-      if (FailReason.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(FailReason);
-      }
-      if (ImpUid.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(ImpUid);
-      }
-      if (BuyerPostcode.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(BuyerPostcode);
-      }
-      if (PaidAt != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(PaidAt);
-      }
-      if (PgProvider.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(PgProvider);
-      }
-      if (BankName.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(BankName);
-      }
-      if (VbankIssuedAt != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(VbankIssuedAt);
-      }
-      if (VbankCode.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(VbankCode);
-      }
-      if (ReceiptUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(ReceiptUrl);
-      }
-      if (CardQuota != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(CardQuota);
-      }
-      if (BuyerEmail.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(BuyerEmail);
-      }
-      if (UserAgent.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(UserAgent);
-      }
-      if (Status.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(Status);
-      }
-      if (CancelReason.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(CancelReason);
-      }
-      if (CustomData.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(CustomData);
-      }
-      if (CashReceiptIssued != false) {
-        size += 2 + 1;
-      }
-      if (CardType != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(CardType);
-      }
-      if (BuyerTel.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(BuyerTel);
-      }
-      if (Amount != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(Amount);
-      }
-      if (Name.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (PayMethod.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(PayMethod);
-      }
-      if (Channel.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(Channel);
-      }
-      size += cancelReceiptUrls_.CalculateSize(_repeated_cancelReceiptUrls_codec);
-      size += cancelHistory_.CalculateSize(_repeated_cancelHistory_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PaymentResponse other) {
-      if (other == null) {
-        return;
-      }
-      if (other.CancelAmount != 0) {
-        CancelAmount = other.CancelAmount;
-      }
-      if (other.BankCode.Length != 0) {
-        BankCode = other.BankCode;
-      }
-      if (other.VbankDate != 0) {
-        VbankDate = other.VbankDate;
-      }
-      if (other.CardCode.Length != 0) {
-        CardCode = other.CardCode;
-      }
-      if (other.CustomerUidUsage.Length != 0) {
-        CustomerUidUsage = other.CustomerUidUsage;
-      }
-      if (other.PgId.Length != 0) {
-        PgId = other.PgId;
-      }
-      if (other.Escrow != false) {
-        Escrow = other.Escrow;
-      }
-      if (other.FailedAt != 0) {
-        FailedAt = other.FailedAt;
-      }
-      if (other.BuyerAddr.Length != 0) {
-        BuyerAddr = other.BuyerAddr;
-      }
-      if (other.ApplyNum.Length != 0) {
-        ApplyNum = other.ApplyNum;
-      }
-      if (other.CardName.Length != 0) {
-        CardName = other.CardName;
-      }
-      if (other.CancelledAt != 0) {
-        CancelledAt = other.CancelledAt;
-      }
-      if (other.PgTid.Length != 0) {
-        PgTid = other.PgTid;
-      }
-      if (other.VbankHolder.Length != 0) {
-        VbankHolder = other.VbankHolder;
-      }
-      if (other.VbankName.Length != 0) {
-        VbankName = other.VbankName;
-      }
-      if (other.Currency.Length != 0) {
-        Currency = other.Currency;
-      }
-      if (other.BuyerName.Length != 0) {
-        BuyerName = other.BuyerName;
-      }
-      if (other.CardNumber.Length != 0) {
-        CardNumber = other.CardNumber;
-      }
-      if (other.StartedAt != 0) {
-        StartedAt = other.StartedAt;
-      }
-      if (other.MerchantUid.Length != 0) {
-        MerchantUid = other.MerchantUid;
-      }
-      if (other.VbankNum.Length != 0) {
-        VbankNum = other.VbankNum;
-      }
-      if (other.CustomerUid.Length != 0) {
-        CustomerUid = other.CustomerUid;
-      }
-      if (other.FailReason.Length != 0) {
-        FailReason = other.FailReason;
-      }
-      if (other.ImpUid.Length != 0) {
-        ImpUid = other.ImpUid;
-      }
-      if (other.BuyerPostcode.Length != 0) {
-        BuyerPostcode = other.BuyerPostcode;
-      }
-      if (other.PaidAt != 0) {
-        PaidAt = other.PaidAt;
-      }
-      if (other.PgProvider.Length != 0) {
-        PgProvider = other.PgProvider;
-      }
-      if (other.BankName.Length != 0) {
-        BankName = other.BankName;
-      }
-      if (other.VbankIssuedAt != 0) {
-        VbankIssuedAt = other.VbankIssuedAt;
-      }
-      if (other.VbankCode.Length != 0) {
-        VbankCode = other.VbankCode;
-      }
-      if (other.ReceiptUrl.Length != 0) {
-        ReceiptUrl = other.ReceiptUrl;
-      }
-      if (other.CardQuota != 0) {
-        CardQuota = other.CardQuota;
-      }
-      if (other.BuyerEmail.Length != 0) {
-        BuyerEmail = other.BuyerEmail;
-      }
-      if (other.UserAgent.Length != 0) {
-        UserAgent = other.UserAgent;
-      }
-      if (other.Status.Length != 0) {
-        Status = other.Status;
-      }
-      if (other.CancelReason.Length != 0) {
-        CancelReason = other.CancelReason;
-      }
-      if (other.CustomData.Length != 0) {
-        CustomData = other.CustomData;
-      }
-      if (other.CashReceiptIssued != false) {
-        CashReceiptIssued = other.CashReceiptIssued;
-      }
-      if (other.CardType != 0) {
-        CardType = other.CardType;
-      }
-      if (other.BuyerTel.Length != 0) {
-        BuyerTel = other.BuyerTel;
-      }
-      if (other.Amount != 0) {
-        Amount = other.Amount;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.PayMethod.Length != 0) {
-        PayMethod = other.PayMethod;
-      }
-      if (other.Channel.Length != 0) {
-        Channel = other.Channel;
-      }
-      cancelReceiptUrls_.Add(other.cancelReceiptUrls_);
-      cancelHistory_.Add(other.cancelHistory_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            CancelAmount = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            BankCode = input.ReadString();
-            break;
-          }
-          case 24: {
-            VbankDate = input.ReadInt32();
-            break;
-          }
-          case 34: {
-            CardCode = input.ReadString();
-            break;
-          }
-          case 42: {
-            CustomerUidUsage = input.ReadString();
-            break;
-          }
-          case 50: {
-            PgId = input.ReadString();
-            break;
-          }
-          case 56: {
-            Escrow = input.ReadBool();
-            break;
-          }
-          case 64: {
-            FailedAt = input.ReadInt32();
-            break;
-          }
-          case 74: {
-            BuyerAddr = input.ReadString();
-            break;
-          }
-          case 82: {
-            ApplyNum = input.ReadString();
-            break;
-          }
-          case 90: {
-            CardName = input.ReadString();
-            break;
-          }
-          case 96: {
-            CancelledAt = input.ReadInt32();
-            break;
-          }
-          case 106: {
-            PgTid = input.ReadString();
-            break;
-          }
-          case 114: {
-            VbankHolder = input.ReadString();
-            break;
-          }
-          case 122: {
-            VbankName = input.ReadString();
-            break;
-          }
-          case 130: {
-            Currency = input.ReadString();
-            break;
-          }
-          case 138: {
-            BuyerName = input.ReadString();
-            break;
-          }
-          case 146: {
-            CardNumber = input.ReadString();
-            break;
-          }
-          case 152: {
-            StartedAt = input.ReadInt32();
-            break;
-          }
-          case 162: {
-            MerchantUid = input.ReadString();
-            break;
-          }
-          case 170: {
-            VbankNum = input.ReadString();
-            break;
-          }
-          case 178: {
-            CustomerUid = input.ReadString();
-            break;
-          }
-          case 186: {
-            FailReason = input.ReadString();
-            break;
-          }
-          case 194: {
-            ImpUid = input.ReadString();
-            break;
-          }
-          case 202: {
-            BuyerPostcode = input.ReadString();
-            break;
-          }
-          case 208: {
-            PaidAt = input.ReadInt32();
-            break;
-          }
-          case 218: {
-            PgProvider = input.ReadString();
-            break;
-          }
-          case 226: {
-            BankName = input.ReadString();
-            break;
-          }
-          case 232: {
-            VbankIssuedAt = input.ReadInt32();
-            break;
-          }
-          case 242: {
-            VbankCode = input.ReadString();
-            break;
-          }
-          case 250: {
-            ReceiptUrl = input.ReadString();
-            break;
-          }
-          case 256: {
-            CardQuota = input.ReadInt32();
-            break;
-          }
-          case 266: {
-            BuyerEmail = input.ReadString();
-            break;
-          }
-          case 274: {
-            UserAgent = input.ReadString();
-            break;
-          }
-          case 282: {
-            Status = input.ReadString();
-            break;
-          }
-          case 290: {
-            CancelReason = input.ReadString();
-            break;
-          }
-          case 298: {
-            CustomData = input.ReadString();
-            break;
-          }
-          case 304: {
-            CashReceiptIssued = input.ReadBool();
-            break;
-          }
-          case 312: {
-            CardType = input.ReadInt32();
-            break;
-          }
-          case 322: {
-            BuyerTel = input.ReadString();
-            break;
-          }
-          case 328: {
-            Amount = input.ReadInt32();
-            break;
-          }
-          case 338: {
-            Name = input.ReadString();
-            break;
-          }
-          case 346: {
-            PayMethod = input.ReadString();
-            break;
-          }
-          case 354: {
-            Channel = input.ReadString();
-            break;
-          }
-          case 362: {
-            cancelReceiptUrls_.AddEntriesFrom(input, _repeated_cancelReceiptUrls_codec);
-            break;
-          }
-          case 370: {
-            cancelHistory_.AddEntriesFrom(input, _repeated_cancelHistory_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            CancelAmount = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            BankCode = input.ReadString();
-            break;
-          }
-          case 24: {
-            VbankDate = input.ReadInt32();
-            break;
-          }
-          case 34: {
-            CardCode = input.ReadString();
-            break;
-          }
-          case 42: {
-            CustomerUidUsage = input.ReadString();
-            break;
-          }
-          case 50: {
-            PgId = input.ReadString();
-            break;
-          }
-          case 56: {
-            Escrow = input.ReadBool();
-            break;
-          }
-          case 64: {
-            FailedAt = input.ReadInt32();
-            break;
-          }
-          case 74: {
-            BuyerAddr = input.ReadString();
-            break;
-          }
-          case 82: {
-            ApplyNum = input.ReadString();
-            break;
-          }
-          case 90: {
-            CardName = input.ReadString();
-            break;
-          }
-          case 96: {
-            CancelledAt = input.ReadInt32();
-            break;
-          }
-          case 106: {
-            PgTid = input.ReadString();
-            break;
-          }
-          case 114: {
-            VbankHolder = input.ReadString();
-            break;
-          }
-          case 122: {
-            VbankName = input.ReadString();
-            break;
-          }
-          case 130: {
-            Currency = input.ReadString();
-            break;
-          }
-          case 138: {
-            BuyerName = input.ReadString();
-            break;
-          }
-          case 146: {
-            CardNumber = input.ReadString();
-            break;
-          }
-          case 152: {
-            StartedAt = input.ReadInt32();
-            break;
-          }
-          case 162: {
-            MerchantUid = input.ReadString();
-            break;
-          }
-          case 170: {
-            VbankNum = input.ReadString();
-            break;
-          }
-          case 178: {
-            CustomerUid = input.ReadString();
-            break;
-          }
-          case 186: {
-            FailReason = input.ReadString();
-            break;
-          }
-          case 194: {
-            ImpUid = input.ReadString();
-            break;
-          }
-          case 202: {
-            BuyerPostcode = input.ReadString();
-            break;
-          }
-          case 208: {
-            PaidAt = input.ReadInt32();
-            break;
-          }
-          case 218: {
-            PgProvider = input.ReadString();
-            break;
-          }
-          case 226: {
-            BankName = input.ReadString();
-            break;
-          }
-          case 232: {
-            VbankIssuedAt = input.ReadInt32();
-            break;
-          }
-          case 242: {
-            VbankCode = input.ReadString();
-            break;
-          }
-          case 250: {
-            ReceiptUrl = input.ReadString();
-            break;
-          }
-          case 256: {
-            CardQuota = input.ReadInt32();
-            break;
-          }
-          case 266: {
-            BuyerEmail = input.ReadString();
-            break;
-          }
-          case 274: {
-            UserAgent = input.ReadString();
-            break;
-          }
-          case 282: {
-            Status = input.ReadString();
-            break;
-          }
-          case 290: {
-            CancelReason = input.ReadString();
-            break;
-          }
-          case 298: {
-            CustomData = input.ReadString();
-            break;
-          }
-          case 304: {
-            CashReceiptIssued = input.ReadBool();
-            break;
-          }
-          case 312: {
-            CardType = input.ReadInt32();
-            break;
-          }
-          case 322: {
-            BuyerTel = input.ReadString();
-            break;
-          }
-          case 328: {
-            Amount = input.ReadInt32();
-            break;
-          }
-          case 338: {
-            Name = input.ReadString();
-            break;
-          }
-          case 346: {
-            PayMethod = input.ReadString();
-            break;
-          }
-          case 354: {
-            Channel = input.ReadString();
-            break;
-          }
-          case 362: {
-            cancelReceiptUrls_.AddEntriesFrom(ref input, _repeated_cancelReceiptUrls_codec);
-            break;
-          }
-          case 370: {
-            cancelHistory_.AddEntriesFrom(ref input, _repeated_cancelHistory_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class CustomerBillingKey : pb::IMessage<CustomerBillingKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2209,7 +97,7 @@ namespace SubscribeCustomers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[2]; }
+      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2849,7 +737,7 @@ namespace SubscribeCustomers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[3]; }
+      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3010,7 +898,7 @@ namespace SubscribeCustomers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[4]; }
+      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3243,7 +1131,7 @@ namespace SubscribeCustomers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[5]; }
+      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3487,7 +1375,7 @@ namespace SubscribeCustomers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[6]; }
+      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3740,7 +1628,7 @@ namespace SubscribeCustomers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[7]; }
+      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3912,7 +1800,7 @@ namespace SubscribeCustomers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[8]; }
+      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4165,7 +2053,7 @@ namespace SubscribeCustomers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[9]; }
+      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4697,7 +2585,7 @@ namespace SubscribeCustomers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[10]; }
+      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4950,7 +2838,7 @@ namespace SubscribeCustomers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[11]; }
+      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5146,19 +3034,19 @@ namespace SubscribeCustomers {
 
   }
 
-  public sealed partial class NestedGetPaidByBillingKeyListResponse : pb::IMessage<NestedGetPaidByBillingKeyListResponse>
+  public sealed partial class NestedGetPaidByBillingKeyListData : pb::IMessage<NestedGetPaidByBillingKeyListData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<NestedGetPaidByBillingKeyListResponse> _parser = new pb::MessageParser<NestedGetPaidByBillingKeyListResponse>(() => new NestedGetPaidByBillingKeyListResponse());
+    private static readonly pb::MessageParser<NestedGetPaidByBillingKeyListData> _parser = new pb::MessageParser<NestedGetPaidByBillingKeyListData>(() => new NestedGetPaidByBillingKeyListData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<NestedGetPaidByBillingKeyListResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<NestedGetPaidByBillingKeyListData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[12]; }
+      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5167,14 +3055,14 @@ namespace SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NestedGetPaidByBillingKeyListResponse() {
+    public NestedGetPaidByBillingKeyListData() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NestedGetPaidByBillingKeyListResponse(NestedGetPaidByBillingKeyListResponse other) : this() {
+    public NestedGetPaidByBillingKeyListData(NestedGetPaidByBillingKeyListData other) : this() {
       total_ = other.total_;
       previous_ = other.previous_;
       next_ = other.next_;
@@ -5183,8 +3071,8 @@ namespace SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NestedGetPaidByBillingKeyListResponse Clone() {
-      return new NestedGetPaidByBillingKeyListResponse(this);
+    public NestedGetPaidByBillingKeyListData Clone() {
+      return new NestedGetPaidByBillingKeyListData(this);
     }
 
     /// <summary>Field number for the "total" field.</summary>
@@ -5222,21 +3110,21 @@ namespace SubscribeCustomers {
 
     /// <summary>Field number for the "list" field.</summary>
     public const int ListFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::SubscribeCustomers.PaymentResponse> _repeated_list_codec
-        = pb::FieldCodec.ForMessage(34, global::SubscribeCustomers.PaymentResponse.Parser);
-    private readonly pbc::RepeatedField<global::SubscribeCustomers.PaymentResponse> list_ = new pbc::RepeatedField<global::SubscribeCustomers.PaymentResponse>();
+    private static readonly pb::FieldCodec<global::Payment.Payment> _repeated_list_codec
+        = pb::FieldCodec.ForMessage(34, global::Payment.Payment.Parser);
+    private readonly pbc::RepeatedField<global::Payment.Payment> list_ = new pbc::RepeatedField<global::Payment.Payment>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SubscribeCustomers.PaymentResponse> List {
+    public pbc::RepeatedField<global::Payment.Payment> List {
       get { return list_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as NestedGetPaidByBillingKeyListResponse);
+      return Equals(other as NestedGetPaidByBillingKeyListData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(NestedGetPaidByBillingKeyListResponse other) {
+    public bool Equals(NestedGetPaidByBillingKeyListData other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -5334,7 +3222,7 @@ namespace SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(NestedGetPaidByBillingKeyListResponse other) {
+    public void MergeFrom(NestedGetPaidByBillingKeyListData other) {
       if (other == null) {
         return;
       }
@@ -5427,7 +3315,7 @@ namespace SubscribeCustomers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[13]; }
+      get { return global::SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5479,9 +3367,9 @@ namespace SubscribeCustomers {
 
     /// <summary>Field number for the "response" field.</summary>
     public const int ResponseFieldNumber = 3;
-    private global::SubscribeCustomers.NestedGetPaidByBillingKeyListResponse response_;
+    private global::SubscribeCustomers.NestedGetPaidByBillingKeyListData response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SubscribeCustomers.NestedGetPaidByBillingKeyListResponse Response {
+    public global::SubscribeCustomers.NestedGetPaidByBillingKeyListData Response {
       get { return response_; }
       set {
         response_ = value;
@@ -5599,7 +3487,7 @@ namespace SubscribeCustomers {
       }
       if (other.response_ != null) {
         if (response_ == null) {
-          Response = new global::SubscribeCustomers.NestedGetPaidByBillingKeyListResponse();
+          Response = new global::SubscribeCustomers.NestedGetPaidByBillingKeyListData();
         }
         Response.MergeFrom(other.Response);
       }
@@ -5627,7 +3515,7 @@ namespace SubscribeCustomers {
           }
           case 26: {
             if (response_ == null) {
-              Response = new global::SubscribeCustomers.NestedGetPaidByBillingKeyListResponse();
+              Response = new global::SubscribeCustomers.NestedGetPaidByBillingKeyListData();
             }
             input.ReadMessage(Response);
             break;
@@ -5656,7 +3544,7 @@ namespace SubscribeCustomers {
           }
           case 26: {
             if (response_ == null) {
-              Response = new global::SubscribeCustomers.NestedGetPaidByBillingKeyListResponse();
+              Response = new global::SubscribeCustomers.NestedGetPaidByBillingKeyListData();
             }
             input.ReadMessage(Response);
             break;

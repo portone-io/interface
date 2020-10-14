@@ -2,246 +2,7 @@
 // file: subscribe/subscribe.proto
 
 import * as jspb from "google-protobuf";
-
-export class CancelHistory extends jspb.Message {
-  getPgTid(): string;
-  setPgTid(value: string): void;
-
-  getAmount(): number;
-  setAmount(value: number): void;
-
-  getCancelledAt(): number;
-  setCancelledAt(value: number): void;
-
-  getReason(): string;
-  setReason(value: string): void;
-
-  getReceiptUrl(): string;
-  setReceiptUrl(value: string): void;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): CancelHistory.AsObject;
-  static toObject(includeInstance: boolean, msg: CancelHistory): CancelHistory.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: CancelHistory, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): CancelHistory;
-  static deserializeBinaryFromReader(message: CancelHistory, reader: jspb.BinaryReader): CancelHistory;
-}
-
-export namespace CancelHistory {
-  export type AsObject = {
-    pgTid: string,
-    amount: number,
-    cancelledAt: number,
-    reason: string,
-    receiptUrl: string,
-  }
-}
-
-export class PaymentResponse extends jspb.Message {
-  getCancelAmount(): number;
-  setCancelAmount(value: number): void;
-
-  getBankCode(): string;
-  setBankCode(value: string): void;
-
-  getVbankDate(): number;
-  setVbankDate(value: number): void;
-
-  getCardCode(): string;
-  setCardCode(value: string): void;
-
-  getCustomerUidUsage(): string;
-  setCustomerUidUsage(value: string): void;
-
-  getPgId(): string;
-  setPgId(value: string): void;
-
-  getEscrow(): boolean;
-  setEscrow(value: boolean): void;
-
-  getFailedAt(): number;
-  setFailedAt(value: number): void;
-
-  getBuyerAddr(): string;
-  setBuyerAddr(value: string): void;
-
-  getApplyNum(): string;
-  setApplyNum(value: string): void;
-
-  getCardName(): string;
-  setCardName(value: string): void;
-
-  getCancelledAt(): number;
-  setCancelledAt(value: number): void;
-
-  getPgTid(): string;
-  setPgTid(value: string): void;
-
-  getVbankHolder(): string;
-  setVbankHolder(value: string): void;
-
-  getVbankName(): string;
-  setVbankName(value: string): void;
-
-  getCurrency(): string;
-  setCurrency(value: string): void;
-
-  getBuyerName(): string;
-  setBuyerName(value: string): void;
-
-  getCardNumber(): string;
-  setCardNumber(value: string): void;
-
-  getStartedAt(): number;
-  setStartedAt(value: number): void;
-
-  getMerchantUid(): string;
-  setMerchantUid(value: string): void;
-
-  getVbankNum(): string;
-  setVbankNum(value: string): void;
-
-  getCustomerUid(): string;
-  setCustomerUid(value: string): void;
-
-  getFailReason(): string;
-  setFailReason(value: string): void;
-
-  getImpUid(): string;
-  setImpUid(value: string): void;
-
-  getBuyerPostcode(): string;
-  setBuyerPostcode(value: string): void;
-
-  getPaidAt(): number;
-  setPaidAt(value: number): void;
-
-  getPgProvider(): string;
-  setPgProvider(value: string): void;
-
-  getBankName(): string;
-  setBankName(value: string): void;
-
-  getVbankIssuedAt(): number;
-  setVbankIssuedAt(value: number): void;
-
-  getVbankCode(): string;
-  setVbankCode(value: string): void;
-
-  getReceiptUrl(): string;
-  setReceiptUrl(value: string): void;
-
-  getCardQuota(): number;
-  setCardQuota(value: number): void;
-
-  getBuyerEmail(): string;
-  setBuyerEmail(value: string): void;
-
-  getUserAgent(): string;
-  setUserAgent(value: string): void;
-
-  getStatus(): string;
-  setStatus(value: string): void;
-
-  getCancelReason(): string;
-  setCancelReason(value: string): void;
-
-  getCustomData(): string;
-  setCustomData(value: string): void;
-
-  getCashReceiptIssued(): boolean;
-  setCashReceiptIssued(value: boolean): void;
-
-  getCardType(): number;
-  setCardType(value: number): void;
-
-  getBuyerTel(): string;
-  setBuyerTel(value: string): void;
-
-  getAmount(): number;
-  setAmount(value: number): void;
-
-  getName(): string;
-  setName(value: string): void;
-
-  getPayMethod(): string;
-  setPayMethod(value: string): void;
-
-  getChannel(): string;
-  setChannel(value: string): void;
-
-  clearCancelReceiptUrlsList(): void;
-  getCancelReceiptUrlsList(): Array<string>;
-  setCancelReceiptUrlsList(value: Array<string>): void;
-  addCancelReceiptUrls(value: string, index?: number): string;
-
-  clearCancelHistoryList(): void;
-  getCancelHistoryList(): Array<CancelHistory>;
-  setCancelHistoryList(value: Array<CancelHistory>): void;
-  addCancelHistory(value?: CancelHistory, index?: number): CancelHistory;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): PaymentResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: PaymentResponse): PaymentResponse.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: PaymentResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): PaymentResponse;
-  static deserializeBinaryFromReader(message: PaymentResponse, reader: jspb.BinaryReader): PaymentResponse;
-}
-
-export namespace PaymentResponse {
-  export type AsObject = {
-    cancelAmount: number,
-    bankCode: string,
-    vbankDate: number,
-    cardCode: string,
-    customerUidUsage: string,
-    pgId: string,
-    escrow: boolean,
-    failedAt: number,
-    buyerAddr: string,
-    applyNum: string,
-    cardName: string,
-    cancelledAt: number,
-    pgTid: string,
-    vbankHolder: string,
-    vbankName: string,
-    currency: string,
-    buyerName: string,
-    cardNumber: string,
-    startedAt: number,
-    merchantUid: string,
-    vbankNum: string,
-    customerUid: string,
-    failReason: string,
-    impUid: string,
-    buyerPostcode: string,
-    paidAt: number,
-    pgProvider: string,
-    bankName: string,
-    vbankIssuedAt: number,
-    vbankCode: string,
-    receiptUrl: string,
-    cardQuota: number,
-    buyerEmail: string,
-    userAgent: string,
-    status: string,
-    cancelReason: string,
-    customData: string,
-    cashReceiptIssued: boolean,
-    cardType: number,
-    buyerTel: string,
-    amount: number,
-    name: string,
-    payMethod: string,
-    channel: string,
-    cancelReceiptUrlsList: Array<string>,
-    cancelHistoryList: Array<CancelHistory.AsObject>,
-  }
-}
+import * as payment_payment_pb from "../payment/payment_pb";
 
 export class OnetimePaymentRequest extends jspb.Message {
   getMerchantUid(): string;
@@ -344,8 +105,8 @@ export class OnetimePaymentResponse extends jspb.Message {
 
   hasResponse(): boolean;
   clearResponse(): void;
-  getResponse(): PaymentResponse | undefined;
-  setResponse(value?: PaymentResponse): void;
+  getResponse(): payment_payment_pb.Payment | undefined;
+  setResponse(value?: payment_payment_pb.Payment): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): OnetimePaymentResponse.AsObject;
@@ -361,7 +122,7 @@ export namespace OnetimePaymentResponse {
   export type AsObject = {
     code: number,
     message: string,
-    response?: PaymentResponse.AsObject,
+    response?: payment_payment_pb.Payment.AsObject,
   }
 }
 
@@ -446,8 +207,8 @@ export class AgainPaymentResponse extends jspb.Message {
 
   hasResponse(): boolean;
   clearResponse(): void;
-  getResponse(): PaymentResponse | undefined;
-  setResponse(value?: PaymentResponse): void;
+  getResponse(): payment_payment_pb.Payment | undefined;
+  setResponse(value?: payment_payment_pb.Payment): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AgainPaymentResponse.AsObject;
@@ -463,7 +224,7 @@ export namespace AgainPaymentResponse {
   export type AsObject = {
     code: number,
     message: string,
-    response?: PaymentResponse.AsObject,
+    response?: payment_payment_pb.Payment.AsObject,
   }
 }
 
@@ -829,7 +590,7 @@ export namespace GetPaymentScheduleByCustomerRequest {
   }
 }
 
-export class NestedGetPaymentScheduleByCustomerResponse extends jspb.Message {
+export class NestedGetPaymentScheduleByCustomerData extends jspb.Message {
   getTotal(): number;
   setTotal(value: number): void;
 
@@ -845,16 +606,16 @@ export class NestedGetPaymentScheduleByCustomerResponse extends jspb.Message {
   addList(value?: UnitSchedulePaymentResponse, index?: number): UnitSchedulePaymentResponse;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): NestedGetPaymentScheduleByCustomerResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: NestedGetPaymentScheduleByCustomerResponse): NestedGetPaymentScheduleByCustomerResponse.AsObject;
+  toObject(includeInstance?: boolean): NestedGetPaymentScheduleByCustomerData.AsObject;
+  static toObject(includeInstance: boolean, msg: NestedGetPaymentScheduleByCustomerData): NestedGetPaymentScheduleByCustomerData.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: NestedGetPaymentScheduleByCustomerResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): NestedGetPaymentScheduleByCustomerResponse;
-  static deserializeBinaryFromReader(message: NestedGetPaymentScheduleByCustomerResponse, reader: jspb.BinaryReader): NestedGetPaymentScheduleByCustomerResponse;
+  static serializeBinaryToWriter(message: NestedGetPaymentScheduleByCustomerData, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): NestedGetPaymentScheduleByCustomerData;
+  static deserializeBinaryFromReader(message: NestedGetPaymentScheduleByCustomerData, reader: jspb.BinaryReader): NestedGetPaymentScheduleByCustomerData;
 }
 
-export namespace NestedGetPaymentScheduleByCustomerResponse {
+export namespace NestedGetPaymentScheduleByCustomerData {
   export type AsObject = {
     total: number,
     previous: number,
@@ -872,8 +633,8 @@ export class GetPaymentScheduleByCustomerResponse extends jspb.Message {
 
   hasResponse(): boolean;
   clearResponse(): void;
-  getResponse(): NestedGetPaymentScheduleByCustomerResponse | undefined;
-  setResponse(value?: NestedGetPaymentScheduleByCustomerResponse): void;
+  getResponse(): NestedGetPaymentScheduleByCustomerData | undefined;
+  setResponse(value?: NestedGetPaymentScheduleByCustomerData): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetPaymentScheduleByCustomerResponse.AsObject;
@@ -889,7 +650,7 @@ export namespace GetPaymentScheduleByCustomerResponse {
   export type AsObject = {
     code: number,
     message: string,
-    response?: NestedGetPaymentScheduleByCustomerResponse.AsObject,
+    response?: NestedGetPaymentScheduleByCustomerData.AsObject,
   }
 }
 

@@ -22,7 +22,7 @@ class GetPaidByBillingKeyListResponse extends \Google\Protobuf\Internal\Message
      */
     protected $message = '';
     /**
-     * Generated from protobuf field <code>.subscribe_customers.NestedGetPaidByBillingKeyListResponse response = 3;</code>
+     * Generated from protobuf field <code>.subscribe_customers.NestedGetPaidByBillingKeyListData response = 3;</code>
      */
     protected $response = null;
 
@@ -34,7 +34,7 @@ class GetPaidByBillingKeyListResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type int $code
      *     @type string $message
-     *     @type \Subscribe_customers\NestedGetPaidByBillingKeyListResponse $response
+     *     @type \Subscribe_customers\NestedGetPaidByBillingKeyListData $response
      * }
      */
     public function __construct($data = NULL) {
@@ -87,8 +87,8 @@ class GetPaidByBillingKeyListResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.subscribe_customers.NestedGetPaidByBillingKeyListResponse response = 3;</code>
-     * @return \Subscribe_customers\NestedGetPaidByBillingKeyListResponse
+     * Generated from protobuf field <code>.subscribe_customers.NestedGetPaidByBillingKeyListData response = 3;</code>
+     * @return \Subscribe_customers\NestedGetPaidByBillingKeyListData
      */
     public function getResponse()
     {
@@ -106,13 +106,13 @@ class GetPaidByBillingKeyListResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.subscribe_customers.NestedGetPaidByBillingKeyListResponse response = 3;</code>
-     * @param \Subscribe_customers\NestedGetPaidByBillingKeyListResponse $var
+     * Generated from protobuf field <code>.subscribe_customers.NestedGetPaidByBillingKeyListData response = 3;</code>
+     * @param \Subscribe_customers\NestedGetPaidByBillingKeyListData $var
      * @return $this
      */
     public function setResponse($var)
     {
-        GPBUtil::checkMessage($var, \Subscribe_customers\NestedGetPaidByBillingKeyListResponse::class);
+        GPBUtil::checkMessage($var, \Subscribe_customers\NestedGetPaidByBillingKeyListData::class);
         $this->response = $var;
 
         return $this;

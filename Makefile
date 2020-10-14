@@ -1,5 +1,5 @@
 PROTO_PATH=./src
-SRC = src/authenticate/token.proto src/payment/payment.proto src/escrow/escrow.proto
+SRC = src/authenticate/token.proto src/payment/payment.proto src/escrow/escrow.proto src/subscribe/subscribe.proto src/subscribe_customers/subscribe_customers.proto
 
 GEN_SRC_ROOT = ./gen_src
 GEN_SRC_CSHARP = $(GEN_SRC_ROOT)/csharp
@@ -68,7 +68,7 @@ dart:
 go:
 	rm -rf ${GEN_SRC_GO}
 	mkdir -p $(GEN_SRC_GO)
-	rm ./go.mod
+	rm -f ./go.mod
 	protoc --proto_path=$(PROTO_PATH) --go_out=$(GEN_SRC_GO) --go_opt=paths=source_relative $(SRC)
 	cp ./supplements/go/go.mod .
 

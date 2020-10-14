@@ -14,7666 +14,6 @@ public final class Subscribe {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface CancelHistoryOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:subscribe.CancelHistory)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string pg_tid = 1;</code>
-     * @return The pgTid.
-     */
-    java.lang.String getPgTid();
-    /**
-     * <code>string pg_tid = 1;</code>
-     * @return The bytes for pgTid.
-     */
-    com.google.protobuf.ByteString
-        getPgTidBytes();
-
-    /**
-     * <code>int32 amount = 2;</code>
-     * @return The amount.
-     */
-    int getAmount();
-
-    /**
-     * <code>int32 cancelled_at = 3;</code>
-     * @return The cancelledAt.
-     */
-    int getCancelledAt();
-
-    /**
-     * <code>string reason = 4;</code>
-     * @return The reason.
-     */
-    java.lang.String getReason();
-    /**
-     * <code>string reason = 4;</code>
-     * @return The bytes for reason.
-     */
-    com.google.protobuf.ByteString
-        getReasonBytes();
-
-    /**
-     * <code>string receipt_url = 5;</code>
-     * @return The receiptUrl.
-     */
-    java.lang.String getReceiptUrl();
-    /**
-     * <code>string receipt_url = 5;</code>
-     * @return The bytes for receiptUrl.
-     */
-    com.google.protobuf.ByteString
-        getReceiptUrlBytes();
-  }
-  /**
-   * Protobuf type {@code subscribe.CancelHistory}
-   */
-  public static final class CancelHistory extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:subscribe.CancelHistory)
-      CancelHistoryOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CancelHistory.newBuilder() to construct.
-    private CancelHistory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CancelHistory() {
-      pgTid_ = "";
-      reason_ = "";
-      receiptUrl_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CancelHistory();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CancelHistory(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pgTid_ = s;
-              break;
-            }
-            case 16: {
-
-              amount_ = input.readInt32();
-              break;
-            }
-            case 24: {
-
-              cancelledAt_ = input.readInt32();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              reason_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              receiptUrl_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return subscribe.Subscribe.internal_static_subscribe_CancelHistory_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return subscribe.Subscribe.internal_static_subscribe_CancelHistory_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              subscribe.Subscribe.CancelHistory.class, subscribe.Subscribe.CancelHistory.Builder.class);
-    }
-
-    public static final int PG_TID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object pgTid_;
-    /**
-     * <code>string pg_tid = 1;</code>
-     * @return The pgTid.
-     */
-    @java.lang.Override
-    public java.lang.String getPgTid() {
-      java.lang.Object ref = pgTid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pgTid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string pg_tid = 1;</code>
-     * @return The bytes for pgTid.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPgTidBytes() {
-      java.lang.Object ref = pgTid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pgTid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int AMOUNT_FIELD_NUMBER = 2;
-    private int amount_;
-    /**
-     * <code>int32 amount = 2;</code>
-     * @return The amount.
-     */
-    @java.lang.Override
-    public int getAmount() {
-      return amount_;
-    }
-
-    public static final int CANCELLED_AT_FIELD_NUMBER = 3;
-    private int cancelledAt_;
-    /**
-     * <code>int32 cancelled_at = 3;</code>
-     * @return The cancelledAt.
-     */
-    @java.lang.Override
-    public int getCancelledAt() {
-      return cancelledAt_;
-    }
-
-    public static final int REASON_FIELD_NUMBER = 4;
-    private volatile java.lang.Object reason_;
-    /**
-     * <code>string reason = 4;</code>
-     * @return The reason.
-     */
-    @java.lang.Override
-    public java.lang.String getReason() {
-      java.lang.Object ref = reason_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        reason_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string reason = 4;</code>
-     * @return The bytes for reason.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getReasonBytes() {
-      java.lang.Object ref = reason_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        reason_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int RECEIPT_URL_FIELD_NUMBER = 5;
-    private volatile java.lang.Object receiptUrl_;
-    /**
-     * <code>string receipt_url = 5;</code>
-     * @return The receiptUrl.
-     */
-    @java.lang.Override
-    public java.lang.String getReceiptUrl() {
-      java.lang.Object ref = receiptUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        receiptUrl_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string receipt_url = 5;</code>
-     * @return The bytes for receiptUrl.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getReceiptUrlBytes() {
-      java.lang.Object ref = receiptUrl_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        receiptUrl_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getPgTidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pgTid_);
-      }
-      if (amount_ != 0) {
-        output.writeInt32(2, amount_);
-      }
-      if (cancelledAt_ != 0) {
-        output.writeInt32(3, cancelledAt_);
-      }
-      if (!getReasonBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, reason_);
-      }
-      if (!getReceiptUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, receiptUrl_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getPgTidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pgTid_);
-      }
-      if (amount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, amount_);
-      }
-      if (cancelledAt_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, cancelledAt_);
-      }
-      if (!getReasonBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, reason_);
-      }
-      if (!getReceiptUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, receiptUrl_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof subscribe.Subscribe.CancelHistory)) {
-        return super.equals(obj);
-      }
-      subscribe.Subscribe.CancelHistory other = (subscribe.Subscribe.CancelHistory) obj;
-
-      if (!getPgTid()
-          .equals(other.getPgTid())) return false;
-      if (getAmount()
-          != other.getAmount()) return false;
-      if (getCancelledAt()
-          != other.getCancelledAt()) return false;
-      if (!getReason()
-          .equals(other.getReason())) return false;
-      if (!getReceiptUrl()
-          .equals(other.getReceiptUrl())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PG_TID_FIELD_NUMBER;
-      hash = (53 * hash) + getPgTid().hashCode();
-      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getAmount();
-      hash = (37 * hash) + CANCELLED_AT_FIELD_NUMBER;
-      hash = (53 * hash) + getCancelledAt();
-      hash = (37 * hash) + REASON_FIELD_NUMBER;
-      hash = (53 * hash) + getReason().hashCode();
-      hash = (37 * hash) + RECEIPT_URL_FIELD_NUMBER;
-      hash = (53 * hash) + getReceiptUrl().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static subscribe.Subscribe.CancelHistory parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static subscribe.Subscribe.CancelHistory parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static subscribe.Subscribe.CancelHistory parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static subscribe.Subscribe.CancelHistory parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static subscribe.Subscribe.CancelHistory parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static subscribe.Subscribe.CancelHistory parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static subscribe.Subscribe.CancelHistory parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static subscribe.Subscribe.CancelHistory parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static subscribe.Subscribe.CancelHistory parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static subscribe.Subscribe.CancelHistory parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static subscribe.Subscribe.CancelHistory parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static subscribe.Subscribe.CancelHistory parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(subscribe.Subscribe.CancelHistory prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code subscribe.CancelHistory}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:subscribe.CancelHistory)
-        subscribe.Subscribe.CancelHistoryOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return subscribe.Subscribe.internal_static_subscribe_CancelHistory_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return subscribe.Subscribe.internal_static_subscribe_CancelHistory_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                subscribe.Subscribe.CancelHistory.class, subscribe.Subscribe.CancelHistory.Builder.class);
-      }
-
-      // Construct using subscribe.Subscribe.CancelHistory.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        pgTid_ = "";
-
-        amount_ = 0;
-
-        cancelledAt_ = 0;
-
-        reason_ = "";
-
-        receiptUrl_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return subscribe.Subscribe.internal_static_subscribe_CancelHistory_descriptor;
-      }
-
-      @java.lang.Override
-      public subscribe.Subscribe.CancelHistory getDefaultInstanceForType() {
-        return subscribe.Subscribe.CancelHistory.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public subscribe.Subscribe.CancelHistory build() {
-        subscribe.Subscribe.CancelHistory result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public subscribe.Subscribe.CancelHistory buildPartial() {
-        subscribe.Subscribe.CancelHistory result = new subscribe.Subscribe.CancelHistory(this);
-        result.pgTid_ = pgTid_;
-        result.amount_ = amount_;
-        result.cancelledAt_ = cancelledAt_;
-        result.reason_ = reason_;
-        result.receiptUrl_ = receiptUrl_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof subscribe.Subscribe.CancelHistory) {
-          return mergeFrom((subscribe.Subscribe.CancelHistory)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(subscribe.Subscribe.CancelHistory other) {
-        if (other == subscribe.Subscribe.CancelHistory.getDefaultInstance()) return this;
-        if (!other.getPgTid().isEmpty()) {
-          pgTid_ = other.pgTid_;
-          onChanged();
-        }
-        if (other.getAmount() != 0) {
-          setAmount(other.getAmount());
-        }
-        if (other.getCancelledAt() != 0) {
-          setCancelledAt(other.getCancelledAt());
-        }
-        if (!other.getReason().isEmpty()) {
-          reason_ = other.reason_;
-          onChanged();
-        }
-        if (!other.getReceiptUrl().isEmpty()) {
-          receiptUrl_ = other.receiptUrl_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        subscribe.Subscribe.CancelHistory parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (subscribe.Subscribe.CancelHistory) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object pgTid_ = "";
-      /**
-       * <code>string pg_tid = 1;</code>
-       * @return The pgTid.
-       */
-      public java.lang.String getPgTid() {
-        java.lang.Object ref = pgTid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          pgTid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string pg_tid = 1;</code>
-       * @return The bytes for pgTid.
-       */
-      public com.google.protobuf.ByteString
-          getPgTidBytes() {
-        java.lang.Object ref = pgTid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pgTid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string pg_tid = 1;</code>
-       * @param value The pgTid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPgTid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        pgTid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pg_tid = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPgTid() {
-        
-        pgTid_ = getDefaultInstance().getPgTid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pg_tid = 1;</code>
-       * @param value The bytes for pgTid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPgTidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        pgTid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int amount_ ;
-      /**
-       * <code>int32 amount = 2;</code>
-       * @return The amount.
-       */
-      @java.lang.Override
-      public int getAmount() {
-        return amount_;
-      }
-      /**
-       * <code>int32 amount = 2;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAmount(int value) {
-        
-        amount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 amount = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAmount() {
-        
-        amount_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int cancelledAt_ ;
-      /**
-       * <code>int32 cancelled_at = 3;</code>
-       * @return The cancelledAt.
-       */
-      @java.lang.Override
-      public int getCancelledAt() {
-        return cancelledAt_;
-      }
-      /**
-       * <code>int32 cancelled_at = 3;</code>
-       * @param value The cancelledAt to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCancelledAt(int value) {
-        
-        cancelledAt_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 cancelled_at = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCancelledAt() {
-        
-        cancelledAt_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object reason_ = "";
-      /**
-       * <code>string reason = 4;</code>
-       * @return The reason.
-       */
-      public java.lang.String getReason() {
-        java.lang.Object ref = reason_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          reason_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string reason = 4;</code>
-       * @return The bytes for reason.
-       */
-      public com.google.protobuf.ByteString
-          getReasonBytes() {
-        java.lang.Object ref = reason_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          reason_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string reason = 4;</code>
-       * @param value The reason to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReason(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        reason_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string reason = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearReason() {
-        
-        reason_ = getDefaultInstance().getReason();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string reason = 4;</code>
-       * @param value The bytes for reason to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReasonBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        reason_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object receiptUrl_ = "";
-      /**
-       * <code>string receipt_url = 5;</code>
-       * @return The receiptUrl.
-       */
-      public java.lang.String getReceiptUrl() {
-        java.lang.Object ref = receiptUrl_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          receiptUrl_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string receipt_url = 5;</code>
-       * @return The bytes for receiptUrl.
-       */
-      public com.google.protobuf.ByteString
-          getReceiptUrlBytes() {
-        java.lang.Object ref = receiptUrl_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          receiptUrl_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string receipt_url = 5;</code>
-       * @param value The receiptUrl to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReceiptUrl(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        receiptUrl_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string receipt_url = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearReceiptUrl() {
-        
-        receiptUrl_ = getDefaultInstance().getReceiptUrl();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string receipt_url = 5;</code>
-       * @param value The bytes for receiptUrl to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReceiptUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        receiptUrl_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:subscribe.CancelHistory)
-    }
-
-    // @@protoc_insertion_point(class_scope:subscribe.CancelHistory)
-    private static final subscribe.Subscribe.CancelHistory DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new subscribe.Subscribe.CancelHistory();
-    }
-
-    public static subscribe.Subscribe.CancelHistory getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<CancelHistory>
-        PARSER = new com.google.protobuf.AbstractParser<CancelHistory>() {
-      @java.lang.Override
-      public CancelHistory parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CancelHistory(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CancelHistory> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CancelHistory> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public subscribe.Subscribe.CancelHistory getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PaymentResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:subscribe.PaymentResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int32 cancel_amount = 1;</code>
-     * @return The cancelAmount.
-     */
-    int getCancelAmount();
-
-    /**
-     * <code>string bank_code = 2;</code>
-     * @return The bankCode.
-     */
-    java.lang.String getBankCode();
-    /**
-     * <code>string bank_code = 2;</code>
-     * @return The bytes for bankCode.
-     */
-    com.google.protobuf.ByteString
-        getBankCodeBytes();
-
-    /**
-     * <code>int32 vbank_date = 3;</code>
-     * @return The vbankDate.
-     */
-    int getVbankDate();
-
-    /**
-     * <code>string card_code = 4;</code>
-     * @return The cardCode.
-     */
-    java.lang.String getCardCode();
-    /**
-     * <code>string card_code = 4;</code>
-     * @return The bytes for cardCode.
-     */
-    com.google.protobuf.ByteString
-        getCardCodeBytes();
-
-    /**
-     * <code>string customer_uid_usage = 5;</code>
-     * @return The customerUidUsage.
-     */
-    java.lang.String getCustomerUidUsage();
-    /**
-     * <code>string customer_uid_usage = 5;</code>
-     * @return The bytes for customerUidUsage.
-     */
-    com.google.protobuf.ByteString
-        getCustomerUidUsageBytes();
-
-    /**
-     * <code>string pg_id = 6;</code>
-     * @return The pgId.
-     */
-    java.lang.String getPgId();
-    /**
-     * <code>string pg_id = 6;</code>
-     * @return The bytes for pgId.
-     */
-    com.google.protobuf.ByteString
-        getPgIdBytes();
-
-    /**
-     * <code>bool escrow = 7;</code>
-     * @return The escrow.
-     */
-    boolean getEscrow();
-
-    /**
-     * <code>int32 failed_at = 8;</code>
-     * @return The failedAt.
-     */
-    int getFailedAt();
-
-    /**
-     * <code>string buyer_addr = 9;</code>
-     * @return The buyerAddr.
-     */
-    java.lang.String getBuyerAddr();
-    /**
-     * <code>string buyer_addr = 9;</code>
-     * @return The bytes for buyerAddr.
-     */
-    com.google.protobuf.ByteString
-        getBuyerAddrBytes();
-
-    /**
-     * <code>string apply_num = 10;</code>
-     * @return The applyNum.
-     */
-    java.lang.String getApplyNum();
-    /**
-     * <code>string apply_num = 10;</code>
-     * @return The bytes for applyNum.
-     */
-    com.google.protobuf.ByteString
-        getApplyNumBytes();
-
-    /**
-     * <code>string card_name = 11;</code>
-     * @return The cardName.
-     */
-    java.lang.String getCardName();
-    /**
-     * <code>string card_name = 11;</code>
-     * @return The bytes for cardName.
-     */
-    com.google.protobuf.ByteString
-        getCardNameBytes();
-
-    /**
-     * <code>int32 cancelled_at = 12;</code>
-     * @return The cancelledAt.
-     */
-    int getCancelledAt();
-
-    /**
-     * <code>string pg_tid = 13;</code>
-     * @return The pgTid.
-     */
-    java.lang.String getPgTid();
-    /**
-     * <code>string pg_tid = 13;</code>
-     * @return The bytes for pgTid.
-     */
-    com.google.protobuf.ByteString
-        getPgTidBytes();
-
-    /**
-     * <code>string vbank_holder = 14;</code>
-     * @return The vbankHolder.
-     */
-    java.lang.String getVbankHolder();
-    /**
-     * <code>string vbank_holder = 14;</code>
-     * @return The bytes for vbankHolder.
-     */
-    com.google.protobuf.ByteString
-        getVbankHolderBytes();
-
-    /**
-     * <code>string vbank_name = 15;</code>
-     * @return The vbankName.
-     */
-    java.lang.String getVbankName();
-    /**
-     * <code>string vbank_name = 15;</code>
-     * @return The bytes for vbankName.
-     */
-    com.google.protobuf.ByteString
-        getVbankNameBytes();
-
-    /**
-     * <code>string currency = 16;</code>
-     * @return The currency.
-     */
-    java.lang.String getCurrency();
-    /**
-     * <code>string currency = 16;</code>
-     * @return The bytes for currency.
-     */
-    com.google.protobuf.ByteString
-        getCurrencyBytes();
-
-    /**
-     * <code>string buyer_name = 17;</code>
-     * @return The buyerName.
-     */
-    java.lang.String getBuyerName();
-    /**
-     * <code>string buyer_name = 17;</code>
-     * @return The bytes for buyerName.
-     */
-    com.google.protobuf.ByteString
-        getBuyerNameBytes();
-
-    /**
-     * <code>string card_number = 18;</code>
-     * @return The cardNumber.
-     */
-    java.lang.String getCardNumber();
-    /**
-     * <code>string card_number = 18;</code>
-     * @return The bytes for cardNumber.
-     */
-    com.google.protobuf.ByteString
-        getCardNumberBytes();
-
-    /**
-     * <code>int32 started_at = 19;</code>
-     * @return The startedAt.
-     */
-    int getStartedAt();
-
-    /**
-     * <code>string merchant_uid = 20;</code>
-     * @return The merchantUid.
-     */
-    java.lang.String getMerchantUid();
-    /**
-     * <code>string merchant_uid = 20;</code>
-     * @return The bytes for merchantUid.
-     */
-    com.google.protobuf.ByteString
-        getMerchantUidBytes();
-
-    /**
-     * <code>string vbank_num = 21;</code>
-     * @return The vbankNum.
-     */
-    java.lang.String getVbankNum();
-    /**
-     * <code>string vbank_num = 21;</code>
-     * @return The bytes for vbankNum.
-     */
-    com.google.protobuf.ByteString
-        getVbankNumBytes();
-
-    /**
-     * <code>string customer_uid = 22;</code>
-     * @return The customerUid.
-     */
-    java.lang.String getCustomerUid();
-    /**
-     * <code>string customer_uid = 22;</code>
-     * @return The bytes for customerUid.
-     */
-    com.google.protobuf.ByteString
-        getCustomerUidBytes();
-
-    /**
-     * <code>string fail_reason = 23;</code>
-     * @return The failReason.
-     */
-    java.lang.String getFailReason();
-    /**
-     * <code>string fail_reason = 23;</code>
-     * @return The bytes for failReason.
-     */
-    com.google.protobuf.ByteString
-        getFailReasonBytes();
-
-    /**
-     * <code>string imp_uid = 24;</code>
-     * @return The impUid.
-     */
-    java.lang.String getImpUid();
-    /**
-     * <code>string imp_uid = 24;</code>
-     * @return The bytes for impUid.
-     */
-    com.google.protobuf.ByteString
-        getImpUidBytes();
-
-    /**
-     * <code>string buyer_postcode = 25;</code>
-     * @return The buyerPostcode.
-     */
-    java.lang.String getBuyerPostcode();
-    /**
-     * <code>string buyer_postcode = 25;</code>
-     * @return The bytes for buyerPostcode.
-     */
-    com.google.protobuf.ByteString
-        getBuyerPostcodeBytes();
-
-    /**
-     * <code>int32 paid_at = 26;</code>
-     * @return The paidAt.
-     */
-    int getPaidAt();
-
-    /**
-     * <code>string pg_provider = 27;</code>
-     * @return The pgProvider.
-     */
-    java.lang.String getPgProvider();
-    /**
-     * <code>string pg_provider = 27;</code>
-     * @return The bytes for pgProvider.
-     */
-    com.google.protobuf.ByteString
-        getPgProviderBytes();
-
-    /**
-     * <code>string bank_name = 28;</code>
-     * @return The bankName.
-     */
-    java.lang.String getBankName();
-    /**
-     * <code>string bank_name = 28;</code>
-     * @return The bytes for bankName.
-     */
-    com.google.protobuf.ByteString
-        getBankNameBytes();
-
-    /**
-     * <code>int32 vbank_issued_at = 29;</code>
-     * @return The vbankIssuedAt.
-     */
-    int getVbankIssuedAt();
-
-    /**
-     * <code>string vbank_code = 30;</code>
-     * @return The vbankCode.
-     */
-    java.lang.String getVbankCode();
-    /**
-     * <code>string vbank_code = 30;</code>
-     * @return The bytes for vbankCode.
-     */
-    com.google.protobuf.ByteString
-        getVbankCodeBytes();
-
-    /**
-     * <code>string receipt_url = 31;</code>
-     * @return The receiptUrl.
-     */
-    java.lang.String getReceiptUrl();
-    /**
-     * <code>string receipt_url = 31;</code>
-     * @return The bytes for receiptUrl.
-     */
-    com.google.protobuf.ByteString
-        getReceiptUrlBytes();
-
-    /**
-     * <code>int32 card_quota = 32;</code>
-     * @return The cardQuota.
-     */
-    int getCardQuota();
-
-    /**
-     * <code>string buyer_email = 33;</code>
-     * @return The buyerEmail.
-     */
-    java.lang.String getBuyerEmail();
-    /**
-     * <code>string buyer_email = 33;</code>
-     * @return The bytes for buyerEmail.
-     */
-    com.google.protobuf.ByteString
-        getBuyerEmailBytes();
-
-    /**
-     * <code>string user_agent = 34;</code>
-     * @return The userAgent.
-     */
-    java.lang.String getUserAgent();
-    /**
-     * <code>string user_agent = 34;</code>
-     * @return The bytes for userAgent.
-     */
-    com.google.protobuf.ByteString
-        getUserAgentBytes();
-
-    /**
-     * <code>string status = 35;</code>
-     * @return The status.
-     */
-    java.lang.String getStatus();
-    /**
-     * <code>string status = 35;</code>
-     * @return The bytes for status.
-     */
-    com.google.protobuf.ByteString
-        getStatusBytes();
-
-    /**
-     * <code>string cancel_reason = 36;</code>
-     * @return The cancelReason.
-     */
-    java.lang.String getCancelReason();
-    /**
-     * <code>string cancel_reason = 36;</code>
-     * @return The bytes for cancelReason.
-     */
-    com.google.protobuf.ByteString
-        getCancelReasonBytes();
-
-    /**
-     * <code>string custom_data = 37;</code>
-     * @return The customData.
-     */
-    java.lang.String getCustomData();
-    /**
-     * <code>string custom_data = 37;</code>
-     * @return The bytes for customData.
-     */
-    com.google.protobuf.ByteString
-        getCustomDataBytes();
-
-    /**
-     * <code>bool cash_receipt_issued = 38;</code>
-     * @return The cashReceiptIssued.
-     */
-    boolean getCashReceiptIssued();
-
-    /**
-     * <code>int32 card_type = 39;</code>
-     * @return The cardType.
-     */
-    int getCardType();
-
-    /**
-     * <code>string buyer_tel = 40;</code>
-     * @return The buyerTel.
-     */
-    java.lang.String getBuyerTel();
-    /**
-     * <code>string buyer_tel = 40;</code>
-     * @return The bytes for buyerTel.
-     */
-    com.google.protobuf.ByteString
-        getBuyerTelBytes();
-
-    /**
-     * <code>int32 amount = 41;</code>
-     * @return The amount.
-     */
-    int getAmount();
-
-    /**
-     * <code>string name = 42;</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 42;</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>string pay_method = 43;</code>
-     * @return The payMethod.
-     */
-    java.lang.String getPayMethod();
-    /**
-     * <code>string pay_method = 43;</code>
-     * @return The bytes for payMethod.
-     */
-    com.google.protobuf.ByteString
-        getPayMethodBytes();
-
-    /**
-     * <code>string channel = 44;</code>
-     * @return The channel.
-     */
-    java.lang.String getChannel();
-    /**
-     * <code>string channel = 44;</code>
-     * @return The bytes for channel.
-     */
-    com.google.protobuf.ByteString
-        getChannelBytes();
-
-    /**
-     * <code>repeated string cancel_receipt_urls = 45;</code>
-     * @return A list containing the cancelReceiptUrls.
-     */
-    java.util.List<java.lang.String>
-        getCancelReceiptUrlsList();
-    /**
-     * <code>repeated string cancel_receipt_urls = 45;</code>
-     * @return The count of cancelReceiptUrls.
-     */
-    int getCancelReceiptUrlsCount();
-    /**
-     * <code>repeated string cancel_receipt_urls = 45;</code>
-     * @param index The index of the element to return.
-     * @return The cancelReceiptUrls at the given index.
-     */
-    java.lang.String getCancelReceiptUrls(int index);
-    /**
-     * <code>repeated string cancel_receipt_urls = 45;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the cancelReceiptUrls at the given index.
-     */
-    com.google.protobuf.ByteString
-        getCancelReceiptUrlsBytes(int index);
-
-    /**
-     * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-     */
-    java.util.List<subscribe.Subscribe.CancelHistory> 
-        getCancelHistoryList();
-    /**
-     * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-     */
-    subscribe.Subscribe.CancelHistory getCancelHistory(int index);
-    /**
-     * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-     */
-    int getCancelHistoryCount();
-    /**
-     * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-     */
-    java.util.List<? extends subscribe.Subscribe.CancelHistoryOrBuilder> 
-        getCancelHistoryOrBuilderList();
-    /**
-     * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-     */
-    subscribe.Subscribe.CancelHistoryOrBuilder getCancelHistoryOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code subscribe.PaymentResponse}
-   */
-  public static final class PaymentResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:subscribe.PaymentResponse)
-      PaymentResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use PaymentResponse.newBuilder() to construct.
-    private PaymentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private PaymentResponse() {
-      bankCode_ = "";
-      cardCode_ = "";
-      customerUidUsage_ = "";
-      pgId_ = "";
-      buyerAddr_ = "";
-      applyNum_ = "";
-      cardName_ = "";
-      pgTid_ = "";
-      vbankHolder_ = "";
-      vbankName_ = "";
-      currency_ = "";
-      buyerName_ = "";
-      cardNumber_ = "";
-      merchantUid_ = "";
-      vbankNum_ = "";
-      customerUid_ = "";
-      failReason_ = "";
-      impUid_ = "";
-      buyerPostcode_ = "";
-      pgProvider_ = "";
-      bankName_ = "";
-      vbankCode_ = "";
-      receiptUrl_ = "";
-      buyerEmail_ = "";
-      userAgent_ = "";
-      status_ = "";
-      cancelReason_ = "";
-      customData_ = "";
-      buyerTel_ = "";
-      name_ = "";
-      payMethod_ = "";
-      channel_ = "";
-      cancelReceiptUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      cancelHistory_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new PaymentResponse();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PaymentResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              cancelAmount_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              bankCode_ = s;
-              break;
-            }
-            case 24: {
-
-              vbankDate_ = input.readInt32();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cardCode_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              customerUidUsage_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pgId_ = s;
-              break;
-            }
-            case 56: {
-
-              escrow_ = input.readBool();
-              break;
-            }
-            case 64: {
-
-              failedAt_ = input.readInt32();
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              buyerAddr_ = s;
-              break;
-            }
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              applyNum_ = s;
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cardName_ = s;
-              break;
-            }
-            case 96: {
-
-              cancelledAt_ = input.readInt32();
-              break;
-            }
-            case 106: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pgTid_ = s;
-              break;
-            }
-            case 114: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              vbankHolder_ = s;
-              break;
-            }
-            case 122: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              vbankName_ = s;
-              break;
-            }
-            case 130: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              currency_ = s;
-              break;
-            }
-            case 138: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              buyerName_ = s;
-              break;
-            }
-            case 146: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cardNumber_ = s;
-              break;
-            }
-            case 152: {
-
-              startedAt_ = input.readInt32();
-              break;
-            }
-            case 162: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              merchantUid_ = s;
-              break;
-            }
-            case 170: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              vbankNum_ = s;
-              break;
-            }
-            case 178: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              customerUid_ = s;
-              break;
-            }
-            case 186: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              failReason_ = s;
-              break;
-            }
-            case 194: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              impUid_ = s;
-              break;
-            }
-            case 202: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              buyerPostcode_ = s;
-              break;
-            }
-            case 208: {
-
-              paidAt_ = input.readInt32();
-              break;
-            }
-            case 218: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pgProvider_ = s;
-              break;
-            }
-            case 226: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              bankName_ = s;
-              break;
-            }
-            case 232: {
-
-              vbankIssuedAt_ = input.readInt32();
-              break;
-            }
-            case 242: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              vbankCode_ = s;
-              break;
-            }
-            case 250: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              receiptUrl_ = s;
-              break;
-            }
-            case 256: {
-
-              cardQuota_ = input.readInt32();
-              break;
-            }
-            case 266: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              buyerEmail_ = s;
-              break;
-            }
-            case 274: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              userAgent_ = s;
-              break;
-            }
-            case 282: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              status_ = s;
-              break;
-            }
-            case 290: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cancelReason_ = s;
-              break;
-            }
-            case 298: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              customData_ = s;
-              break;
-            }
-            case 304: {
-
-              cashReceiptIssued_ = input.readBool();
-              break;
-            }
-            case 312: {
-
-              cardType_ = input.readInt32();
-              break;
-            }
-            case 322: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              buyerTel_ = s;
-              break;
-            }
-            case 328: {
-
-              amount_ = input.readInt32();
-              break;
-            }
-            case 338: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 346: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              payMethod_ = s;
-              break;
-            }
-            case 354: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              channel_ = s;
-              break;
-            }
-            case 362: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                cancelReceiptUrls_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              cancelReceiptUrls_.add(s);
-              break;
-            }
-            case 370: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                cancelHistory_ = new java.util.ArrayList<subscribe.Subscribe.CancelHistory>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              cancelHistory_.add(
-                  input.readMessage(subscribe.Subscribe.CancelHistory.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          cancelReceiptUrls_ = cancelReceiptUrls_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          cancelHistory_ = java.util.Collections.unmodifiableList(cancelHistory_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return subscribe.Subscribe.internal_static_subscribe_PaymentResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return subscribe.Subscribe.internal_static_subscribe_PaymentResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              subscribe.Subscribe.PaymentResponse.class, subscribe.Subscribe.PaymentResponse.Builder.class);
-    }
-
-    public static final int CANCEL_AMOUNT_FIELD_NUMBER = 1;
-    private int cancelAmount_;
-    /**
-     * <code>int32 cancel_amount = 1;</code>
-     * @return The cancelAmount.
-     */
-    @java.lang.Override
-    public int getCancelAmount() {
-      return cancelAmount_;
-    }
-
-    public static final int BANK_CODE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object bankCode_;
-    /**
-     * <code>string bank_code = 2;</code>
-     * @return The bankCode.
-     */
-    @java.lang.Override
-    public java.lang.String getBankCode() {
-      java.lang.Object ref = bankCode_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        bankCode_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string bank_code = 2;</code>
-     * @return The bytes for bankCode.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBankCodeBytes() {
-      java.lang.Object ref = bankCode_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        bankCode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int VBANK_DATE_FIELD_NUMBER = 3;
-    private int vbankDate_;
-    /**
-     * <code>int32 vbank_date = 3;</code>
-     * @return The vbankDate.
-     */
-    @java.lang.Override
-    public int getVbankDate() {
-      return vbankDate_;
-    }
-
-    public static final int CARD_CODE_FIELD_NUMBER = 4;
-    private volatile java.lang.Object cardCode_;
-    /**
-     * <code>string card_code = 4;</code>
-     * @return The cardCode.
-     */
-    @java.lang.Override
-    public java.lang.String getCardCode() {
-      java.lang.Object ref = cardCode_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cardCode_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string card_code = 4;</code>
-     * @return The bytes for cardCode.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCardCodeBytes() {
-      java.lang.Object ref = cardCode_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cardCode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CUSTOMER_UID_USAGE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object customerUidUsage_;
-    /**
-     * <code>string customer_uid_usage = 5;</code>
-     * @return The customerUidUsage.
-     */
-    @java.lang.Override
-    public java.lang.String getCustomerUidUsage() {
-      java.lang.Object ref = customerUidUsage_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        customerUidUsage_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string customer_uid_usage = 5;</code>
-     * @return The bytes for customerUidUsage.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomerUidUsageBytes() {
-      java.lang.Object ref = customerUidUsage_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        customerUidUsage_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PG_ID_FIELD_NUMBER = 6;
-    private volatile java.lang.Object pgId_;
-    /**
-     * <code>string pg_id = 6;</code>
-     * @return The pgId.
-     */
-    @java.lang.Override
-    public java.lang.String getPgId() {
-      java.lang.Object ref = pgId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pgId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string pg_id = 6;</code>
-     * @return The bytes for pgId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPgIdBytes() {
-      java.lang.Object ref = pgId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ESCROW_FIELD_NUMBER = 7;
-    private boolean escrow_;
-    /**
-     * <code>bool escrow = 7;</code>
-     * @return The escrow.
-     */
-    @java.lang.Override
-    public boolean getEscrow() {
-      return escrow_;
-    }
-
-    public static final int FAILED_AT_FIELD_NUMBER = 8;
-    private int failedAt_;
-    /**
-     * <code>int32 failed_at = 8;</code>
-     * @return The failedAt.
-     */
-    @java.lang.Override
-    public int getFailedAt() {
-      return failedAt_;
-    }
-
-    public static final int BUYER_ADDR_FIELD_NUMBER = 9;
-    private volatile java.lang.Object buyerAddr_;
-    /**
-     * <code>string buyer_addr = 9;</code>
-     * @return The buyerAddr.
-     */
-    @java.lang.Override
-    public java.lang.String getBuyerAddr() {
-      java.lang.Object ref = buyerAddr_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        buyerAddr_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string buyer_addr = 9;</code>
-     * @return The bytes for buyerAddr.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBuyerAddrBytes() {
-      java.lang.Object ref = buyerAddr_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        buyerAddr_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int APPLY_NUM_FIELD_NUMBER = 10;
-    private volatile java.lang.Object applyNum_;
-    /**
-     * <code>string apply_num = 10;</code>
-     * @return The applyNum.
-     */
-    @java.lang.Override
-    public java.lang.String getApplyNum() {
-      java.lang.Object ref = applyNum_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        applyNum_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string apply_num = 10;</code>
-     * @return The bytes for applyNum.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getApplyNumBytes() {
-      java.lang.Object ref = applyNum_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        applyNum_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CARD_NAME_FIELD_NUMBER = 11;
-    private volatile java.lang.Object cardName_;
-    /**
-     * <code>string card_name = 11;</code>
-     * @return The cardName.
-     */
-    @java.lang.Override
-    public java.lang.String getCardName() {
-      java.lang.Object ref = cardName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cardName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string card_name = 11;</code>
-     * @return The bytes for cardName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCardNameBytes() {
-      java.lang.Object ref = cardName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cardName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CANCELLED_AT_FIELD_NUMBER = 12;
-    private int cancelledAt_;
-    /**
-     * <code>int32 cancelled_at = 12;</code>
-     * @return The cancelledAt.
-     */
-    @java.lang.Override
-    public int getCancelledAt() {
-      return cancelledAt_;
-    }
-
-    public static final int PG_TID_FIELD_NUMBER = 13;
-    private volatile java.lang.Object pgTid_;
-    /**
-     * <code>string pg_tid = 13;</code>
-     * @return The pgTid.
-     */
-    @java.lang.Override
-    public java.lang.String getPgTid() {
-      java.lang.Object ref = pgTid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pgTid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string pg_tid = 13;</code>
-     * @return The bytes for pgTid.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPgTidBytes() {
-      java.lang.Object ref = pgTid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pgTid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int VBANK_HOLDER_FIELD_NUMBER = 14;
-    private volatile java.lang.Object vbankHolder_;
-    /**
-     * <code>string vbank_holder = 14;</code>
-     * @return The vbankHolder.
-     */
-    @java.lang.Override
-    public java.lang.String getVbankHolder() {
-      java.lang.Object ref = vbankHolder_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        vbankHolder_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string vbank_holder = 14;</code>
-     * @return The bytes for vbankHolder.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getVbankHolderBytes() {
-      java.lang.Object ref = vbankHolder_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        vbankHolder_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int VBANK_NAME_FIELD_NUMBER = 15;
-    private volatile java.lang.Object vbankName_;
-    /**
-     * <code>string vbank_name = 15;</code>
-     * @return The vbankName.
-     */
-    @java.lang.Override
-    public java.lang.String getVbankName() {
-      java.lang.Object ref = vbankName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        vbankName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string vbank_name = 15;</code>
-     * @return The bytes for vbankName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getVbankNameBytes() {
-      java.lang.Object ref = vbankName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        vbankName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CURRENCY_FIELD_NUMBER = 16;
-    private volatile java.lang.Object currency_;
-    /**
-     * <code>string currency = 16;</code>
-     * @return The currency.
-     */
-    @java.lang.Override
-    public java.lang.String getCurrency() {
-      java.lang.Object ref = currency_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        currency_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string currency = 16;</code>
-     * @return The bytes for currency.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCurrencyBytes() {
-      java.lang.Object ref = currency_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        currency_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int BUYER_NAME_FIELD_NUMBER = 17;
-    private volatile java.lang.Object buyerName_;
-    /**
-     * <code>string buyer_name = 17;</code>
-     * @return The buyerName.
-     */
-    @java.lang.Override
-    public java.lang.String getBuyerName() {
-      java.lang.Object ref = buyerName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        buyerName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string buyer_name = 17;</code>
-     * @return The bytes for buyerName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBuyerNameBytes() {
-      java.lang.Object ref = buyerName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        buyerName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CARD_NUMBER_FIELD_NUMBER = 18;
-    private volatile java.lang.Object cardNumber_;
-    /**
-     * <code>string card_number = 18;</code>
-     * @return The cardNumber.
-     */
-    @java.lang.Override
-    public java.lang.String getCardNumber() {
-      java.lang.Object ref = cardNumber_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cardNumber_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string card_number = 18;</code>
-     * @return The bytes for cardNumber.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCardNumberBytes() {
-      java.lang.Object ref = cardNumber_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cardNumber_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int STARTED_AT_FIELD_NUMBER = 19;
-    private int startedAt_;
-    /**
-     * <code>int32 started_at = 19;</code>
-     * @return The startedAt.
-     */
-    @java.lang.Override
-    public int getStartedAt() {
-      return startedAt_;
-    }
-
-    public static final int MERCHANT_UID_FIELD_NUMBER = 20;
-    private volatile java.lang.Object merchantUid_;
-    /**
-     * <code>string merchant_uid = 20;</code>
-     * @return The merchantUid.
-     */
-    @java.lang.Override
-    public java.lang.String getMerchantUid() {
-      java.lang.Object ref = merchantUid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        merchantUid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string merchant_uid = 20;</code>
-     * @return The bytes for merchantUid.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getMerchantUidBytes() {
-      java.lang.Object ref = merchantUid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        merchantUid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int VBANK_NUM_FIELD_NUMBER = 21;
-    private volatile java.lang.Object vbankNum_;
-    /**
-     * <code>string vbank_num = 21;</code>
-     * @return The vbankNum.
-     */
-    @java.lang.Override
-    public java.lang.String getVbankNum() {
-      java.lang.Object ref = vbankNum_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        vbankNum_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string vbank_num = 21;</code>
-     * @return The bytes for vbankNum.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getVbankNumBytes() {
-      java.lang.Object ref = vbankNum_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        vbankNum_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CUSTOMER_UID_FIELD_NUMBER = 22;
-    private volatile java.lang.Object customerUid_;
-    /**
-     * <code>string customer_uid = 22;</code>
-     * @return The customerUid.
-     */
-    @java.lang.Override
-    public java.lang.String getCustomerUid() {
-      java.lang.Object ref = customerUid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        customerUid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string customer_uid = 22;</code>
-     * @return The bytes for customerUid.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomerUidBytes() {
-      java.lang.Object ref = customerUid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        customerUid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int FAIL_REASON_FIELD_NUMBER = 23;
-    private volatile java.lang.Object failReason_;
-    /**
-     * <code>string fail_reason = 23;</code>
-     * @return The failReason.
-     */
-    @java.lang.Override
-    public java.lang.String getFailReason() {
-      java.lang.Object ref = failReason_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        failReason_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string fail_reason = 23;</code>
-     * @return The bytes for failReason.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getFailReasonBytes() {
-      java.lang.Object ref = failReason_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        failReason_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int IMP_UID_FIELD_NUMBER = 24;
-    private volatile java.lang.Object impUid_;
-    /**
-     * <code>string imp_uid = 24;</code>
-     * @return The impUid.
-     */
-    @java.lang.Override
-    public java.lang.String getImpUid() {
-      java.lang.Object ref = impUid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        impUid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string imp_uid = 24;</code>
-     * @return The bytes for impUid.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getImpUidBytes() {
-      java.lang.Object ref = impUid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        impUid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int BUYER_POSTCODE_FIELD_NUMBER = 25;
-    private volatile java.lang.Object buyerPostcode_;
-    /**
-     * <code>string buyer_postcode = 25;</code>
-     * @return The buyerPostcode.
-     */
-    @java.lang.Override
-    public java.lang.String getBuyerPostcode() {
-      java.lang.Object ref = buyerPostcode_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        buyerPostcode_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string buyer_postcode = 25;</code>
-     * @return The bytes for buyerPostcode.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBuyerPostcodeBytes() {
-      java.lang.Object ref = buyerPostcode_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        buyerPostcode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PAID_AT_FIELD_NUMBER = 26;
-    private int paidAt_;
-    /**
-     * <code>int32 paid_at = 26;</code>
-     * @return The paidAt.
-     */
-    @java.lang.Override
-    public int getPaidAt() {
-      return paidAt_;
-    }
-
-    public static final int PG_PROVIDER_FIELD_NUMBER = 27;
-    private volatile java.lang.Object pgProvider_;
-    /**
-     * <code>string pg_provider = 27;</code>
-     * @return The pgProvider.
-     */
-    @java.lang.Override
-    public java.lang.String getPgProvider() {
-      java.lang.Object ref = pgProvider_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pgProvider_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string pg_provider = 27;</code>
-     * @return The bytes for pgProvider.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPgProviderBytes() {
-      java.lang.Object ref = pgProvider_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pgProvider_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int BANK_NAME_FIELD_NUMBER = 28;
-    private volatile java.lang.Object bankName_;
-    /**
-     * <code>string bank_name = 28;</code>
-     * @return The bankName.
-     */
-    @java.lang.Override
-    public java.lang.String getBankName() {
-      java.lang.Object ref = bankName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        bankName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string bank_name = 28;</code>
-     * @return The bytes for bankName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBankNameBytes() {
-      java.lang.Object ref = bankName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        bankName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int VBANK_ISSUED_AT_FIELD_NUMBER = 29;
-    private int vbankIssuedAt_;
-    /**
-     * <code>int32 vbank_issued_at = 29;</code>
-     * @return The vbankIssuedAt.
-     */
-    @java.lang.Override
-    public int getVbankIssuedAt() {
-      return vbankIssuedAt_;
-    }
-
-    public static final int VBANK_CODE_FIELD_NUMBER = 30;
-    private volatile java.lang.Object vbankCode_;
-    /**
-     * <code>string vbank_code = 30;</code>
-     * @return The vbankCode.
-     */
-    @java.lang.Override
-    public java.lang.String getVbankCode() {
-      java.lang.Object ref = vbankCode_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        vbankCode_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string vbank_code = 30;</code>
-     * @return The bytes for vbankCode.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getVbankCodeBytes() {
-      java.lang.Object ref = vbankCode_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        vbankCode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int RECEIPT_URL_FIELD_NUMBER = 31;
-    private volatile java.lang.Object receiptUrl_;
-    /**
-     * <code>string receipt_url = 31;</code>
-     * @return The receiptUrl.
-     */
-    @java.lang.Override
-    public java.lang.String getReceiptUrl() {
-      java.lang.Object ref = receiptUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        receiptUrl_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string receipt_url = 31;</code>
-     * @return The bytes for receiptUrl.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getReceiptUrlBytes() {
-      java.lang.Object ref = receiptUrl_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        receiptUrl_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CARD_QUOTA_FIELD_NUMBER = 32;
-    private int cardQuota_;
-    /**
-     * <code>int32 card_quota = 32;</code>
-     * @return The cardQuota.
-     */
-    @java.lang.Override
-    public int getCardQuota() {
-      return cardQuota_;
-    }
-
-    public static final int BUYER_EMAIL_FIELD_NUMBER = 33;
-    private volatile java.lang.Object buyerEmail_;
-    /**
-     * <code>string buyer_email = 33;</code>
-     * @return The buyerEmail.
-     */
-    @java.lang.Override
-    public java.lang.String getBuyerEmail() {
-      java.lang.Object ref = buyerEmail_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        buyerEmail_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string buyer_email = 33;</code>
-     * @return The bytes for buyerEmail.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBuyerEmailBytes() {
-      java.lang.Object ref = buyerEmail_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        buyerEmail_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int USER_AGENT_FIELD_NUMBER = 34;
-    private volatile java.lang.Object userAgent_;
-    /**
-     * <code>string user_agent = 34;</code>
-     * @return The userAgent.
-     */
-    @java.lang.Override
-    public java.lang.String getUserAgent() {
-      java.lang.Object ref = userAgent_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userAgent_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string user_agent = 34;</code>
-     * @return The bytes for userAgent.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUserAgentBytes() {
-      java.lang.Object ref = userAgent_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userAgent_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 35;
-    private volatile java.lang.Object status_;
-    /**
-     * <code>string status = 35;</code>
-     * @return The status.
-     */
-    @java.lang.Override
-    public java.lang.String getStatus() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        status_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string status = 35;</code>
-     * @return The bytes for status.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getStatusBytes() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        status_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CANCEL_REASON_FIELD_NUMBER = 36;
-    private volatile java.lang.Object cancelReason_;
-    /**
-     * <code>string cancel_reason = 36;</code>
-     * @return The cancelReason.
-     */
-    @java.lang.Override
-    public java.lang.String getCancelReason() {
-      java.lang.Object ref = cancelReason_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cancelReason_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string cancel_reason = 36;</code>
-     * @return The bytes for cancelReason.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCancelReasonBytes() {
-      java.lang.Object ref = cancelReason_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cancelReason_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CUSTOM_DATA_FIELD_NUMBER = 37;
-    private volatile java.lang.Object customData_;
-    /**
-     * <code>string custom_data = 37;</code>
-     * @return The customData.
-     */
-    @java.lang.Override
-    public java.lang.String getCustomData() {
-      java.lang.Object ref = customData_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        customData_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string custom_data = 37;</code>
-     * @return The bytes for customData.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomDataBytes() {
-      java.lang.Object ref = customData_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        customData_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CASH_RECEIPT_ISSUED_FIELD_NUMBER = 38;
-    private boolean cashReceiptIssued_;
-    /**
-     * <code>bool cash_receipt_issued = 38;</code>
-     * @return The cashReceiptIssued.
-     */
-    @java.lang.Override
-    public boolean getCashReceiptIssued() {
-      return cashReceiptIssued_;
-    }
-
-    public static final int CARD_TYPE_FIELD_NUMBER = 39;
-    private int cardType_;
-    /**
-     * <code>int32 card_type = 39;</code>
-     * @return The cardType.
-     */
-    @java.lang.Override
-    public int getCardType() {
-      return cardType_;
-    }
-
-    public static final int BUYER_TEL_FIELD_NUMBER = 40;
-    private volatile java.lang.Object buyerTel_;
-    /**
-     * <code>string buyer_tel = 40;</code>
-     * @return The buyerTel.
-     */
-    @java.lang.Override
-    public java.lang.String getBuyerTel() {
-      java.lang.Object ref = buyerTel_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        buyerTel_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string buyer_tel = 40;</code>
-     * @return The bytes for buyerTel.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBuyerTelBytes() {
-      java.lang.Object ref = buyerTel_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        buyerTel_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int AMOUNT_FIELD_NUMBER = 41;
-    private int amount_;
-    /**
-     * <code>int32 amount = 41;</code>
-     * @return The amount.
-     */
-    @java.lang.Override
-    public int getAmount() {
-      return amount_;
-    }
-
-    public static final int NAME_FIELD_NUMBER = 42;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 42;</code>
-     * @return The name.
-     */
-    @java.lang.Override
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 42;</code>
-     * @return The bytes for name.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PAY_METHOD_FIELD_NUMBER = 43;
-    private volatile java.lang.Object payMethod_;
-    /**
-     * <code>string pay_method = 43;</code>
-     * @return The payMethod.
-     */
-    @java.lang.Override
-    public java.lang.String getPayMethod() {
-      java.lang.Object ref = payMethod_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        payMethod_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string pay_method = 43;</code>
-     * @return The bytes for payMethod.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPayMethodBytes() {
-      java.lang.Object ref = payMethod_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        payMethod_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CHANNEL_FIELD_NUMBER = 44;
-    private volatile java.lang.Object channel_;
-    /**
-     * <code>string channel = 44;</code>
-     * @return The channel.
-     */
-    @java.lang.Override
-    public java.lang.String getChannel() {
-      java.lang.Object ref = channel_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        channel_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string channel = 44;</code>
-     * @return The bytes for channel.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getChannelBytes() {
-      java.lang.Object ref = channel_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        channel_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CANCEL_RECEIPT_URLS_FIELD_NUMBER = 45;
-    private com.google.protobuf.LazyStringList cancelReceiptUrls_;
-    /**
-     * <code>repeated string cancel_receipt_urls = 45;</code>
-     * @return A list containing the cancelReceiptUrls.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getCancelReceiptUrlsList() {
-      return cancelReceiptUrls_;
-    }
-    /**
-     * <code>repeated string cancel_receipt_urls = 45;</code>
-     * @return The count of cancelReceiptUrls.
-     */
-    public int getCancelReceiptUrlsCount() {
-      return cancelReceiptUrls_.size();
-    }
-    /**
-     * <code>repeated string cancel_receipt_urls = 45;</code>
-     * @param index The index of the element to return.
-     * @return The cancelReceiptUrls at the given index.
-     */
-    public java.lang.String getCancelReceiptUrls(int index) {
-      return cancelReceiptUrls_.get(index);
-    }
-    /**
-     * <code>repeated string cancel_receipt_urls = 45;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the cancelReceiptUrls at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getCancelReceiptUrlsBytes(int index) {
-      return cancelReceiptUrls_.getByteString(index);
-    }
-
-    public static final int CANCEL_HISTORY_FIELD_NUMBER = 46;
-    private java.util.List<subscribe.Subscribe.CancelHistory> cancelHistory_;
-    /**
-     * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-     */
-    @java.lang.Override
-    public java.util.List<subscribe.Subscribe.CancelHistory> getCancelHistoryList() {
-      return cancelHistory_;
-    }
-    /**
-     * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends subscribe.Subscribe.CancelHistoryOrBuilder> 
-        getCancelHistoryOrBuilderList() {
-      return cancelHistory_;
-    }
-    /**
-     * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-     */
-    @java.lang.Override
-    public int getCancelHistoryCount() {
-      return cancelHistory_.size();
-    }
-    /**
-     * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-     */
-    @java.lang.Override
-    public subscribe.Subscribe.CancelHistory getCancelHistory(int index) {
-      return cancelHistory_.get(index);
-    }
-    /**
-     * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-     */
-    @java.lang.Override
-    public subscribe.Subscribe.CancelHistoryOrBuilder getCancelHistoryOrBuilder(
-        int index) {
-      return cancelHistory_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (cancelAmount_ != 0) {
-        output.writeInt32(1, cancelAmount_);
-      }
-      if (!getBankCodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bankCode_);
-      }
-      if (vbankDate_ != 0) {
-        output.writeInt32(3, vbankDate_);
-      }
-      if (!getCardCodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, cardCode_);
-      }
-      if (!getCustomerUidUsageBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, customerUidUsage_);
-      }
-      if (!getPgIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, pgId_);
-      }
-      if (escrow_ != false) {
-        output.writeBool(7, escrow_);
-      }
-      if (failedAt_ != 0) {
-        output.writeInt32(8, failedAt_);
-      }
-      if (!getBuyerAddrBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, buyerAddr_);
-      }
-      if (!getApplyNumBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, applyNum_);
-      }
-      if (!getCardNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, cardName_);
-      }
-      if (cancelledAt_ != 0) {
-        output.writeInt32(12, cancelledAt_);
-      }
-      if (!getPgTidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, pgTid_);
-      }
-      if (!getVbankHolderBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, vbankHolder_);
-      }
-      if (!getVbankNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, vbankName_);
-      }
-      if (!getCurrencyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, currency_);
-      }
-      if (!getBuyerNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, buyerName_);
-      }
-      if (!getCardNumberBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, cardNumber_);
-      }
-      if (startedAt_ != 0) {
-        output.writeInt32(19, startedAt_);
-      }
-      if (!getMerchantUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, merchantUid_);
-      }
-      if (!getVbankNumBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 21, vbankNum_);
-      }
-      if (!getCustomerUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 22, customerUid_);
-      }
-      if (!getFailReasonBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 23, failReason_);
-      }
-      if (!getImpUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 24, impUid_);
-      }
-      if (!getBuyerPostcodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, buyerPostcode_);
-      }
-      if (paidAt_ != 0) {
-        output.writeInt32(26, paidAt_);
-      }
-      if (!getPgProviderBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, pgProvider_);
-      }
-      if (!getBankNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 28, bankName_);
-      }
-      if (vbankIssuedAt_ != 0) {
-        output.writeInt32(29, vbankIssuedAt_);
-      }
-      if (!getVbankCodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 30, vbankCode_);
-      }
-      if (!getReceiptUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 31, receiptUrl_);
-      }
-      if (cardQuota_ != 0) {
-        output.writeInt32(32, cardQuota_);
-      }
-      if (!getBuyerEmailBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 33, buyerEmail_);
-      }
-      if (!getUserAgentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 34, userAgent_);
-      }
-      if (!getStatusBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 35, status_);
-      }
-      if (!getCancelReasonBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 36, cancelReason_);
-      }
-      if (!getCustomDataBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 37, customData_);
-      }
-      if (cashReceiptIssued_ != false) {
-        output.writeBool(38, cashReceiptIssued_);
-      }
-      if (cardType_ != 0) {
-        output.writeInt32(39, cardType_);
-      }
-      if (!getBuyerTelBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 40, buyerTel_);
-      }
-      if (amount_ != 0) {
-        output.writeInt32(41, amount_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 42, name_);
-      }
-      if (!getPayMethodBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 43, payMethod_);
-      }
-      if (!getChannelBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 44, channel_);
-      }
-      for (int i = 0; i < cancelReceiptUrls_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 45, cancelReceiptUrls_.getRaw(i));
-      }
-      for (int i = 0; i < cancelHistory_.size(); i++) {
-        output.writeMessage(46, cancelHistory_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (cancelAmount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, cancelAmount_);
-      }
-      if (!getBankCodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bankCode_);
-      }
-      if (vbankDate_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, vbankDate_);
-      }
-      if (!getCardCodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, cardCode_);
-      }
-      if (!getCustomerUidUsageBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, customerUidUsage_);
-      }
-      if (!getPgIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, pgId_);
-      }
-      if (escrow_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, escrow_);
-      }
-      if (failedAt_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, failedAt_);
-      }
-      if (!getBuyerAddrBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, buyerAddr_);
-      }
-      if (!getApplyNumBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, applyNum_);
-      }
-      if (!getCardNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, cardName_);
-      }
-      if (cancelledAt_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, cancelledAt_);
-      }
-      if (!getPgTidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, pgTid_);
-      }
-      if (!getVbankHolderBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, vbankHolder_);
-      }
-      if (!getVbankNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, vbankName_);
-      }
-      if (!getCurrencyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, currency_);
-      }
-      if (!getBuyerNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, buyerName_);
-      }
-      if (!getCardNumberBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, cardNumber_);
-      }
-      if (startedAt_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(19, startedAt_);
-      }
-      if (!getMerchantUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, merchantUid_);
-      }
-      if (!getVbankNumBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, vbankNum_);
-      }
-      if (!getCustomerUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, customerUid_);
-      }
-      if (!getFailReasonBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, failReason_);
-      }
-      if (!getImpUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, impUid_);
-      }
-      if (!getBuyerPostcodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, buyerPostcode_);
-      }
-      if (paidAt_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(26, paidAt_);
-      }
-      if (!getPgProviderBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, pgProvider_);
-      }
-      if (!getBankNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(28, bankName_);
-      }
-      if (vbankIssuedAt_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(29, vbankIssuedAt_);
-      }
-      if (!getVbankCodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, vbankCode_);
-      }
-      if (!getReceiptUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, receiptUrl_);
-      }
-      if (cardQuota_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(32, cardQuota_);
-      }
-      if (!getBuyerEmailBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, buyerEmail_);
-      }
-      if (!getUserAgentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, userAgent_);
-      }
-      if (!getStatusBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, status_);
-      }
-      if (!getCancelReasonBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, cancelReason_);
-      }
-      if (!getCustomDataBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, customData_);
-      }
-      if (cashReceiptIssued_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(38, cashReceiptIssued_);
-      }
-      if (cardType_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(39, cardType_);
-      }
-      if (!getBuyerTelBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, buyerTel_);
-      }
-      if (amount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(41, amount_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(42, name_);
-      }
-      if (!getPayMethodBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(43, payMethod_);
-      }
-      if (!getChannelBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(44, channel_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < cancelReceiptUrls_.size(); i++) {
-          dataSize += computeStringSizeNoTag(cancelReceiptUrls_.getRaw(i));
-        }
-        size += dataSize;
-        size += 2 * getCancelReceiptUrlsList().size();
-      }
-      for (int i = 0; i < cancelHistory_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(46, cancelHistory_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof subscribe.Subscribe.PaymentResponse)) {
-        return super.equals(obj);
-      }
-      subscribe.Subscribe.PaymentResponse other = (subscribe.Subscribe.PaymentResponse) obj;
-
-      if (getCancelAmount()
-          != other.getCancelAmount()) return false;
-      if (!getBankCode()
-          .equals(other.getBankCode())) return false;
-      if (getVbankDate()
-          != other.getVbankDate()) return false;
-      if (!getCardCode()
-          .equals(other.getCardCode())) return false;
-      if (!getCustomerUidUsage()
-          .equals(other.getCustomerUidUsage())) return false;
-      if (!getPgId()
-          .equals(other.getPgId())) return false;
-      if (getEscrow()
-          != other.getEscrow()) return false;
-      if (getFailedAt()
-          != other.getFailedAt()) return false;
-      if (!getBuyerAddr()
-          .equals(other.getBuyerAddr())) return false;
-      if (!getApplyNum()
-          .equals(other.getApplyNum())) return false;
-      if (!getCardName()
-          .equals(other.getCardName())) return false;
-      if (getCancelledAt()
-          != other.getCancelledAt()) return false;
-      if (!getPgTid()
-          .equals(other.getPgTid())) return false;
-      if (!getVbankHolder()
-          .equals(other.getVbankHolder())) return false;
-      if (!getVbankName()
-          .equals(other.getVbankName())) return false;
-      if (!getCurrency()
-          .equals(other.getCurrency())) return false;
-      if (!getBuyerName()
-          .equals(other.getBuyerName())) return false;
-      if (!getCardNumber()
-          .equals(other.getCardNumber())) return false;
-      if (getStartedAt()
-          != other.getStartedAt()) return false;
-      if (!getMerchantUid()
-          .equals(other.getMerchantUid())) return false;
-      if (!getVbankNum()
-          .equals(other.getVbankNum())) return false;
-      if (!getCustomerUid()
-          .equals(other.getCustomerUid())) return false;
-      if (!getFailReason()
-          .equals(other.getFailReason())) return false;
-      if (!getImpUid()
-          .equals(other.getImpUid())) return false;
-      if (!getBuyerPostcode()
-          .equals(other.getBuyerPostcode())) return false;
-      if (getPaidAt()
-          != other.getPaidAt()) return false;
-      if (!getPgProvider()
-          .equals(other.getPgProvider())) return false;
-      if (!getBankName()
-          .equals(other.getBankName())) return false;
-      if (getVbankIssuedAt()
-          != other.getVbankIssuedAt()) return false;
-      if (!getVbankCode()
-          .equals(other.getVbankCode())) return false;
-      if (!getReceiptUrl()
-          .equals(other.getReceiptUrl())) return false;
-      if (getCardQuota()
-          != other.getCardQuota()) return false;
-      if (!getBuyerEmail()
-          .equals(other.getBuyerEmail())) return false;
-      if (!getUserAgent()
-          .equals(other.getUserAgent())) return false;
-      if (!getStatus()
-          .equals(other.getStatus())) return false;
-      if (!getCancelReason()
-          .equals(other.getCancelReason())) return false;
-      if (!getCustomData()
-          .equals(other.getCustomData())) return false;
-      if (getCashReceiptIssued()
-          != other.getCashReceiptIssued()) return false;
-      if (getCardType()
-          != other.getCardType()) return false;
-      if (!getBuyerTel()
-          .equals(other.getBuyerTel())) return false;
-      if (getAmount()
-          != other.getAmount()) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getPayMethod()
-          .equals(other.getPayMethod())) return false;
-      if (!getChannel()
-          .equals(other.getChannel())) return false;
-      if (!getCancelReceiptUrlsList()
-          .equals(other.getCancelReceiptUrlsList())) return false;
-      if (!getCancelHistoryList()
-          .equals(other.getCancelHistoryList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CANCEL_AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getCancelAmount();
-      hash = (37 * hash) + BANK_CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getBankCode().hashCode();
-      hash = (37 * hash) + VBANK_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getVbankDate();
-      hash = (37 * hash) + CARD_CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getCardCode().hashCode();
-      hash = (37 * hash) + CUSTOMER_UID_USAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomerUidUsage().hashCode();
-      hash = (37 * hash) + PG_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPgId().hashCode();
-      hash = (37 * hash) + ESCROW_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getEscrow());
-      hash = (37 * hash) + FAILED_AT_FIELD_NUMBER;
-      hash = (53 * hash) + getFailedAt();
-      hash = (37 * hash) + BUYER_ADDR_FIELD_NUMBER;
-      hash = (53 * hash) + getBuyerAddr().hashCode();
-      hash = (37 * hash) + APPLY_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getApplyNum().hashCode();
-      hash = (37 * hash) + CARD_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getCardName().hashCode();
-      hash = (37 * hash) + CANCELLED_AT_FIELD_NUMBER;
-      hash = (53 * hash) + getCancelledAt();
-      hash = (37 * hash) + PG_TID_FIELD_NUMBER;
-      hash = (53 * hash) + getPgTid().hashCode();
-      hash = (37 * hash) + VBANK_HOLDER_FIELD_NUMBER;
-      hash = (53 * hash) + getVbankHolder().hashCode();
-      hash = (37 * hash) + VBANK_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getVbankName().hashCode();
-      hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
-      hash = (53 * hash) + getCurrency().hashCode();
-      hash = (37 * hash) + BUYER_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getBuyerName().hashCode();
-      hash = (37 * hash) + CARD_NUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + getCardNumber().hashCode();
-      hash = (37 * hash) + STARTED_AT_FIELD_NUMBER;
-      hash = (53 * hash) + getStartedAt();
-      hash = (37 * hash) + MERCHANT_UID_FIELD_NUMBER;
-      hash = (53 * hash) + getMerchantUid().hashCode();
-      hash = (37 * hash) + VBANK_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getVbankNum().hashCode();
-      hash = (37 * hash) + CUSTOMER_UID_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomerUid().hashCode();
-      hash = (37 * hash) + FAIL_REASON_FIELD_NUMBER;
-      hash = (53 * hash) + getFailReason().hashCode();
-      hash = (37 * hash) + IMP_UID_FIELD_NUMBER;
-      hash = (53 * hash) + getImpUid().hashCode();
-      hash = (37 * hash) + BUYER_POSTCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getBuyerPostcode().hashCode();
-      hash = (37 * hash) + PAID_AT_FIELD_NUMBER;
-      hash = (53 * hash) + getPaidAt();
-      hash = (37 * hash) + PG_PROVIDER_FIELD_NUMBER;
-      hash = (53 * hash) + getPgProvider().hashCode();
-      hash = (37 * hash) + BANK_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getBankName().hashCode();
-      hash = (37 * hash) + VBANK_ISSUED_AT_FIELD_NUMBER;
-      hash = (53 * hash) + getVbankIssuedAt();
-      hash = (37 * hash) + VBANK_CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getVbankCode().hashCode();
-      hash = (37 * hash) + RECEIPT_URL_FIELD_NUMBER;
-      hash = (53 * hash) + getReceiptUrl().hashCode();
-      hash = (37 * hash) + CARD_QUOTA_FIELD_NUMBER;
-      hash = (53 * hash) + getCardQuota();
-      hash = (37 * hash) + BUYER_EMAIL_FIELD_NUMBER;
-      hash = (53 * hash) + getBuyerEmail().hashCode();
-      hash = (37 * hash) + USER_AGENT_FIELD_NUMBER;
-      hash = (53 * hash) + getUserAgent().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + getStatus().hashCode();
-      hash = (37 * hash) + CANCEL_REASON_FIELD_NUMBER;
-      hash = (53 * hash) + getCancelReason().hashCode();
-      hash = (37 * hash) + CUSTOM_DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomData().hashCode();
-      hash = (37 * hash) + CASH_RECEIPT_ISSUED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getCashReceiptIssued());
-      hash = (37 * hash) + CARD_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getCardType();
-      hash = (37 * hash) + BUYER_TEL_FIELD_NUMBER;
-      hash = (53 * hash) + getBuyerTel().hashCode();
-      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getAmount();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + PAY_METHOD_FIELD_NUMBER;
-      hash = (53 * hash) + getPayMethod().hashCode();
-      hash = (37 * hash) + CHANNEL_FIELD_NUMBER;
-      hash = (53 * hash) + getChannel().hashCode();
-      if (getCancelReceiptUrlsCount() > 0) {
-        hash = (37 * hash) + CANCEL_RECEIPT_URLS_FIELD_NUMBER;
-        hash = (53 * hash) + getCancelReceiptUrlsList().hashCode();
-      }
-      if (getCancelHistoryCount() > 0) {
-        hash = (37 * hash) + CANCEL_HISTORY_FIELD_NUMBER;
-        hash = (53 * hash) + getCancelHistoryList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static subscribe.Subscribe.PaymentResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static subscribe.Subscribe.PaymentResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static subscribe.Subscribe.PaymentResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static subscribe.Subscribe.PaymentResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static subscribe.Subscribe.PaymentResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static subscribe.Subscribe.PaymentResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static subscribe.Subscribe.PaymentResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static subscribe.Subscribe.PaymentResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static subscribe.Subscribe.PaymentResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static subscribe.Subscribe.PaymentResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static subscribe.Subscribe.PaymentResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static subscribe.Subscribe.PaymentResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(subscribe.Subscribe.PaymentResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code subscribe.PaymentResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:subscribe.PaymentResponse)
-        subscribe.Subscribe.PaymentResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return subscribe.Subscribe.internal_static_subscribe_PaymentResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return subscribe.Subscribe.internal_static_subscribe_PaymentResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                subscribe.Subscribe.PaymentResponse.class, subscribe.Subscribe.PaymentResponse.Builder.class);
-      }
-
-      // Construct using subscribe.Subscribe.PaymentResponse.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCancelHistoryFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        cancelAmount_ = 0;
-
-        bankCode_ = "";
-
-        vbankDate_ = 0;
-
-        cardCode_ = "";
-
-        customerUidUsage_ = "";
-
-        pgId_ = "";
-
-        escrow_ = false;
-
-        failedAt_ = 0;
-
-        buyerAddr_ = "";
-
-        applyNum_ = "";
-
-        cardName_ = "";
-
-        cancelledAt_ = 0;
-
-        pgTid_ = "";
-
-        vbankHolder_ = "";
-
-        vbankName_ = "";
-
-        currency_ = "";
-
-        buyerName_ = "";
-
-        cardNumber_ = "";
-
-        startedAt_ = 0;
-
-        merchantUid_ = "";
-
-        vbankNum_ = "";
-
-        customerUid_ = "";
-
-        failReason_ = "";
-
-        impUid_ = "";
-
-        buyerPostcode_ = "";
-
-        paidAt_ = 0;
-
-        pgProvider_ = "";
-
-        bankName_ = "";
-
-        vbankIssuedAt_ = 0;
-
-        vbankCode_ = "";
-
-        receiptUrl_ = "";
-
-        cardQuota_ = 0;
-
-        buyerEmail_ = "";
-
-        userAgent_ = "";
-
-        status_ = "";
-
-        cancelReason_ = "";
-
-        customData_ = "";
-
-        cashReceiptIssued_ = false;
-
-        cardType_ = 0;
-
-        buyerTel_ = "";
-
-        amount_ = 0;
-
-        name_ = "";
-
-        payMethod_ = "";
-
-        channel_ = "";
-
-        cancelReceiptUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (cancelHistoryBuilder_ == null) {
-          cancelHistory_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          cancelHistoryBuilder_.clear();
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return subscribe.Subscribe.internal_static_subscribe_PaymentResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public subscribe.Subscribe.PaymentResponse getDefaultInstanceForType() {
-        return subscribe.Subscribe.PaymentResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public subscribe.Subscribe.PaymentResponse build() {
-        subscribe.Subscribe.PaymentResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public subscribe.Subscribe.PaymentResponse buildPartial() {
-        subscribe.Subscribe.PaymentResponse result = new subscribe.Subscribe.PaymentResponse(this);
-        int from_bitField0_ = bitField0_;
-        result.cancelAmount_ = cancelAmount_;
-        result.bankCode_ = bankCode_;
-        result.vbankDate_ = vbankDate_;
-        result.cardCode_ = cardCode_;
-        result.customerUidUsage_ = customerUidUsage_;
-        result.pgId_ = pgId_;
-        result.escrow_ = escrow_;
-        result.failedAt_ = failedAt_;
-        result.buyerAddr_ = buyerAddr_;
-        result.applyNum_ = applyNum_;
-        result.cardName_ = cardName_;
-        result.cancelledAt_ = cancelledAt_;
-        result.pgTid_ = pgTid_;
-        result.vbankHolder_ = vbankHolder_;
-        result.vbankName_ = vbankName_;
-        result.currency_ = currency_;
-        result.buyerName_ = buyerName_;
-        result.cardNumber_ = cardNumber_;
-        result.startedAt_ = startedAt_;
-        result.merchantUid_ = merchantUid_;
-        result.vbankNum_ = vbankNum_;
-        result.customerUid_ = customerUid_;
-        result.failReason_ = failReason_;
-        result.impUid_ = impUid_;
-        result.buyerPostcode_ = buyerPostcode_;
-        result.paidAt_ = paidAt_;
-        result.pgProvider_ = pgProvider_;
-        result.bankName_ = bankName_;
-        result.vbankIssuedAt_ = vbankIssuedAt_;
-        result.vbankCode_ = vbankCode_;
-        result.receiptUrl_ = receiptUrl_;
-        result.cardQuota_ = cardQuota_;
-        result.buyerEmail_ = buyerEmail_;
-        result.userAgent_ = userAgent_;
-        result.status_ = status_;
-        result.cancelReason_ = cancelReason_;
-        result.customData_ = customData_;
-        result.cashReceiptIssued_ = cashReceiptIssued_;
-        result.cardType_ = cardType_;
-        result.buyerTel_ = buyerTel_;
-        result.amount_ = amount_;
-        result.name_ = name_;
-        result.payMethod_ = payMethod_;
-        result.channel_ = channel_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          cancelReceiptUrls_ = cancelReceiptUrls_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.cancelReceiptUrls_ = cancelReceiptUrls_;
-        if (cancelHistoryBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            cancelHistory_ = java.util.Collections.unmodifiableList(cancelHistory_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.cancelHistory_ = cancelHistory_;
-        } else {
-          result.cancelHistory_ = cancelHistoryBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof subscribe.Subscribe.PaymentResponse) {
-          return mergeFrom((subscribe.Subscribe.PaymentResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(subscribe.Subscribe.PaymentResponse other) {
-        if (other == subscribe.Subscribe.PaymentResponse.getDefaultInstance()) return this;
-        if (other.getCancelAmount() != 0) {
-          setCancelAmount(other.getCancelAmount());
-        }
-        if (!other.getBankCode().isEmpty()) {
-          bankCode_ = other.bankCode_;
-          onChanged();
-        }
-        if (other.getVbankDate() != 0) {
-          setVbankDate(other.getVbankDate());
-        }
-        if (!other.getCardCode().isEmpty()) {
-          cardCode_ = other.cardCode_;
-          onChanged();
-        }
-        if (!other.getCustomerUidUsage().isEmpty()) {
-          customerUidUsage_ = other.customerUidUsage_;
-          onChanged();
-        }
-        if (!other.getPgId().isEmpty()) {
-          pgId_ = other.pgId_;
-          onChanged();
-        }
-        if (other.getEscrow() != false) {
-          setEscrow(other.getEscrow());
-        }
-        if (other.getFailedAt() != 0) {
-          setFailedAt(other.getFailedAt());
-        }
-        if (!other.getBuyerAddr().isEmpty()) {
-          buyerAddr_ = other.buyerAddr_;
-          onChanged();
-        }
-        if (!other.getApplyNum().isEmpty()) {
-          applyNum_ = other.applyNum_;
-          onChanged();
-        }
-        if (!other.getCardName().isEmpty()) {
-          cardName_ = other.cardName_;
-          onChanged();
-        }
-        if (other.getCancelledAt() != 0) {
-          setCancelledAt(other.getCancelledAt());
-        }
-        if (!other.getPgTid().isEmpty()) {
-          pgTid_ = other.pgTid_;
-          onChanged();
-        }
-        if (!other.getVbankHolder().isEmpty()) {
-          vbankHolder_ = other.vbankHolder_;
-          onChanged();
-        }
-        if (!other.getVbankName().isEmpty()) {
-          vbankName_ = other.vbankName_;
-          onChanged();
-        }
-        if (!other.getCurrency().isEmpty()) {
-          currency_ = other.currency_;
-          onChanged();
-        }
-        if (!other.getBuyerName().isEmpty()) {
-          buyerName_ = other.buyerName_;
-          onChanged();
-        }
-        if (!other.getCardNumber().isEmpty()) {
-          cardNumber_ = other.cardNumber_;
-          onChanged();
-        }
-        if (other.getStartedAt() != 0) {
-          setStartedAt(other.getStartedAt());
-        }
-        if (!other.getMerchantUid().isEmpty()) {
-          merchantUid_ = other.merchantUid_;
-          onChanged();
-        }
-        if (!other.getVbankNum().isEmpty()) {
-          vbankNum_ = other.vbankNum_;
-          onChanged();
-        }
-        if (!other.getCustomerUid().isEmpty()) {
-          customerUid_ = other.customerUid_;
-          onChanged();
-        }
-        if (!other.getFailReason().isEmpty()) {
-          failReason_ = other.failReason_;
-          onChanged();
-        }
-        if (!other.getImpUid().isEmpty()) {
-          impUid_ = other.impUid_;
-          onChanged();
-        }
-        if (!other.getBuyerPostcode().isEmpty()) {
-          buyerPostcode_ = other.buyerPostcode_;
-          onChanged();
-        }
-        if (other.getPaidAt() != 0) {
-          setPaidAt(other.getPaidAt());
-        }
-        if (!other.getPgProvider().isEmpty()) {
-          pgProvider_ = other.pgProvider_;
-          onChanged();
-        }
-        if (!other.getBankName().isEmpty()) {
-          bankName_ = other.bankName_;
-          onChanged();
-        }
-        if (other.getVbankIssuedAt() != 0) {
-          setVbankIssuedAt(other.getVbankIssuedAt());
-        }
-        if (!other.getVbankCode().isEmpty()) {
-          vbankCode_ = other.vbankCode_;
-          onChanged();
-        }
-        if (!other.getReceiptUrl().isEmpty()) {
-          receiptUrl_ = other.receiptUrl_;
-          onChanged();
-        }
-        if (other.getCardQuota() != 0) {
-          setCardQuota(other.getCardQuota());
-        }
-        if (!other.getBuyerEmail().isEmpty()) {
-          buyerEmail_ = other.buyerEmail_;
-          onChanged();
-        }
-        if (!other.getUserAgent().isEmpty()) {
-          userAgent_ = other.userAgent_;
-          onChanged();
-        }
-        if (!other.getStatus().isEmpty()) {
-          status_ = other.status_;
-          onChanged();
-        }
-        if (!other.getCancelReason().isEmpty()) {
-          cancelReason_ = other.cancelReason_;
-          onChanged();
-        }
-        if (!other.getCustomData().isEmpty()) {
-          customData_ = other.customData_;
-          onChanged();
-        }
-        if (other.getCashReceiptIssued() != false) {
-          setCashReceiptIssued(other.getCashReceiptIssued());
-        }
-        if (other.getCardType() != 0) {
-          setCardType(other.getCardType());
-        }
-        if (!other.getBuyerTel().isEmpty()) {
-          buyerTel_ = other.buyerTel_;
-          onChanged();
-        }
-        if (other.getAmount() != 0) {
-          setAmount(other.getAmount());
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (!other.getPayMethod().isEmpty()) {
-          payMethod_ = other.payMethod_;
-          onChanged();
-        }
-        if (!other.getChannel().isEmpty()) {
-          channel_ = other.channel_;
-          onChanged();
-        }
-        if (!other.cancelReceiptUrls_.isEmpty()) {
-          if (cancelReceiptUrls_.isEmpty()) {
-            cancelReceiptUrls_ = other.cancelReceiptUrls_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureCancelReceiptUrlsIsMutable();
-            cancelReceiptUrls_.addAll(other.cancelReceiptUrls_);
-          }
-          onChanged();
-        }
-        if (cancelHistoryBuilder_ == null) {
-          if (!other.cancelHistory_.isEmpty()) {
-            if (cancelHistory_.isEmpty()) {
-              cancelHistory_ = other.cancelHistory_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureCancelHistoryIsMutable();
-              cancelHistory_.addAll(other.cancelHistory_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.cancelHistory_.isEmpty()) {
-            if (cancelHistoryBuilder_.isEmpty()) {
-              cancelHistoryBuilder_.dispose();
-              cancelHistoryBuilder_ = null;
-              cancelHistory_ = other.cancelHistory_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              cancelHistoryBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getCancelHistoryFieldBuilder() : null;
-            } else {
-              cancelHistoryBuilder_.addAllMessages(other.cancelHistory_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        subscribe.Subscribe.PaymentResponse parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (subscribe.Subscribe.PaymentResponse) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private int cancelAmount_ ;
-      /**
-       * <code>int32 cancel_amount = 1;</code>
-       * @return The cancelAmount.
-       */
-      @java.lang.Override
-      public int getCancelAmount() {
-        return cancelAmount_;
-      }
-      /**
-       * <code>int32 cancel_amount = 1;</code>
-       * @param value The cancelAmount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCancelAmount(int value) {
-        
-        cancelAmount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 cancel_amount = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCancelAmount() {
-        
-        cancelAmount_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object bankCode_ = "";
-      /**
-       * <code>string bank_code = 2;</code>
-       * @return The bankCode.
-       */
-      public java.lang.String getBankCode() {
-        java.lang.Object ref = bankCode_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          bankCode_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string bank_code = 2;</code>
-       * @return The bytes for bankCode.
-       */
-      public com.google.protobuf.ByteString
-          getBankCodeBytes() {
-        java.lang.Object ref = bankCode_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          bankCode_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string bank_code = 2;</code>
-       * @param value The bankCode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBankCode(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        bankCode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string bank_code = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBankCode() {
-        
-        bankCode_ = getDefaultInstance().getBankCode();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string bank_code = 2;</code>
-       * @param value The bytes for bankCode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBankCodeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        bankCode_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int vbankDate_ ;
-      /**
-       * <code>int32 vbank_date = 3;</code>
-       * @return The vbankDate.
-       */
-      @java.lang.Override
-      public int getVbankDate() {
-        return vbankDate_;
-      }
-      /**
-       * <code>int32 vbank_date = 3;</code>
-       * @param value The vbankDate to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVbankDate(int value) {
-        
-        vbankDate_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 vbank_date = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVbankDate() {
-        
-        vbankDate_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object cardCode_ = "";
-      /**
-       * <code>string card_code = 4;</code>
-       * @return The cardCode.
-       */
-      public java.lang.String getCardCode() {
-        java.lang.Object ref = cardCode_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cardCode_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string card_code = 4;</code>
-       * @return The bytes for cardCode.
-       */
-      public com.google.protobuf.ByteString
-          getCardCodeBytes() {
-        java.lang.Object ref = cardCode_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cardCode_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string card_code = 4;</code>
-       * @param value The cardCode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardCode(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cardCode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string card_code = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCardCode() {
-        
-        cardCode_ = getDefaultInstance().getCardCode();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string card_code = 4;</code>
-       * @param value The bytes for cardCode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardCodeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cardCode_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object customerUidUsage_ = "";
-      /**
-       * <code>string customer_uid_usage = 5;</code>
-       * @return The customerUidUsage.
-       */
-      public java.lang.String getCustomerUidUsage() {
-        java.lang.Object ref = customerUidUsage_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          customerUidUsage_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string customer_uid_usage = 5;</code>
-       * @return The bytes for customerUidUsage.
-       */
-      public com.google.protobuf.ByteString
-          getCustomerUidUsageBytes() {
-        java.lang.Object ref = customerUidUsage_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          customerUidUsage_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string customer_uid_usage = 5;</code>
-       * @param value The customerUidUsage to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerUidUsage(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        customerUidUsage_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string customer_uid_usage = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCustomerUidUsage() {
-        
-        customerUidUsage_ = getDefaultInstance().getCustomerUidUsage();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string customer_uid_usage = 5;</code>
-       * @param value The bytes for customerUidUsage to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerUidUsageBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        customerUidUsage_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object pgId_ = "";
-      /**
-       * <code>string pg_id = 6;</code>
-       * @return The pgId.
-       */
-      public java.lang.String getPgId() {
-        java.lang.Object ref = pgId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          pgId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string pg_id = 6;</code>
-       * @return The bytes for pgId.
-       */
-      public com.google.protobuf.ByteString
-          getPgIdBytes() {
-        java.lang.Object ref = pgId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pgId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string pg_id = 6;</code>
-       * @param value The pgId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPgId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        pgId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pg_id = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPgId() {
-        
-        pgId_ = getDefaultInstance().getPgId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pg_id = 6;</code>
-       * @param value The bytes for pgId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPgIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        pgId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private boolean escrow_ ;
-      /**
-       * <code>bool escrow = 7;</code>
-       * @return The escrow.
-       */
-      @java.lang.Override
-      public boolean getEscrow() {
-        return escrow_;
-      }
-      /**
-       * <code>bool escrow = 7;</code>
-       * @param value The escrow to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEscrow(boolean value) {
-        
-        escrow_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool escrow = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEscrow() {
-        
-        escrow_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int failedAt_ ;
-      /**
-       * <code>int32 failed_at = 8;</code>
-       * @return The failedAt.
-       */
-      @java.lang.Override
-      public int getFailedAt() {
-        return failedAt_;
-      }
-      /**
-       * <code>int32 failed_at = 8;</code>
-       * @param value The failedAt to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFailedAt(int value) {
-        
-        failedAt_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 failed_at = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFailedAt() {
-        
-        failedAt_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object buyerAddr_ = "";
-      /**
-       * <code>string buyer_addr = 9;</code>
-       * @return The buyerAddr.
-       */
-      public java.lang.String getBuyerAddr() {
-        java.lang.Object ref = buyerAddr_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          buyerAddr_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string buyer_addr = 9;</code>
-       * @return The bytes for buyerAddr.
-       */
-      public com.google.protobuf.ByteString
-          getBuyerAddrBytes() {
-        java.lang.Object ref = buyerAddr_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          buyerAddr_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string buyer_addr = 9;</code>
-       * @param value The buyerAddr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBuyerAddr(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        buyerAddr_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string buyer_addr = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBuyerAddr() {
-        
-        buyerAddr_ = getDefaultInstance().getBuyerAddr();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string buyer_addr = 9;</code>
-       * @param value The bytes for buyerAddr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBuyerAddrBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        buyerAddr_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object applyNum_ = "";
-      /**
-       * <code>string apply_num = 10;</code>
-       * @return The applyNum.
-       */
-      public java.lang.String getApplyNum() {
-        java.lang.Object ref = applyNum_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          applyNum_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string apply_num = 10;</code>
-       * @return The bytes for applyNum.
-       */
-      public com.google.protobuf.ByteString
-          getApplyNumBytes() {
-        java.lang.Object ref = applyNum_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          applyNum_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string apply_num = 10;</code>
-       * @param value The applyNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setApplyNum(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        applyNum_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string apply_num = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearApplyNum() {
-        
-        applyNum_ = getDefaultInstance().getApplyNum();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string apply_num = 10;</code>
-       * @param value The bytes for applyNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setApplyNumBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        applyNum_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object cardName_ = "";
-      /**
-       * <code>string card_name = 11;</code>
-       * @return The cardName.
-       */
-      public java.lang.String getCardName() {
-        java.lang.Object ref = cardName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cardName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string card_name = 11;</code>
-       * @return The bytes for cardName.
-       */
-      public com.google.protobuf.ByteString
-          getCardNameBytes() {
-        java.lang.Object ref = cardName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cardName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string card_name = 11;</code>
-       * @param value The cardName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cardName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string card_name = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCardName() {
-        
-        cardName_ = getDefaultInstance().getCardName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string card_name = 11;</code>
-       * @param value The bytes for cardName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cardName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int cancelledAt_ ;
-      /**
-       * <code>int32 cancelled_at = 12;</code>
-       * @return The cancelledAt.
-       */
-      @java.lang.Override
-      public int getCancelledAt() {
-        return cancelledAt_;
-      }
-      /**
-       * <code>int32 cancelled_at = 12;</code>
-       * @param value The cancelledAt to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCancelledAt(int value) {
-        
-        cancelledAt_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 cancelled_at = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCancelledAt() {
-        
-        cancelledAt_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object pgTid_ = "";
-      /**
-       * <code>string pg_tid = 13;</code>
-       * @return The pgTid.
-       */
-      public java.lang.String getPgTid() {
-        java.lang.Object ref = pgTid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          pgTid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string pg_tid = 13;</code>
-       * @return The bytes for pgTid.
-       */
-      public com.google.protobuf.ByteString
-          getPgTidBytes() {
-        java.lang.Object ref = pgTid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pgTid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string pg_tid = 13;</code>
-       * @param value The pgTid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPgTid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        pgTid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pg_tid = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPgTid() {
-        
-        pgTid_ = getDefaultInstance().getPgTid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pg_tid = 13;</code>
-       * @param value The bytes for pgTid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPgTidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        pgTid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object vbankHolder_ = "";
-      /**
-       * <code>string vbank_holder = 14;</code>
-       * @return The vbankHolder.
-       */
-      public java.lang.String getVbankHolder() {
-        java.lang.Object ref = vbankHolder_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          vbankHolder_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string vbank_holder = 14;</code>
-       * @return The bytes for vbankHolder.
-       */
-      public com.google.protobuf.ByteString
-          getVbankHolderBytes() {
-        java.lang.Object ref = vbankHolder_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          vbankHolder_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string vbank_holder = 14;</code>
-       * @param value The vbankHolder to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVbankHolder(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        vbankHolder_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string vbank_holder = 14;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVbankHolder() {
-        
-        vbankHolder_ = getDefaultInstance().getVbankHolder();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string vbank_holder = 14;</code>
-       * @param value The bytes for vbankHolder to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVbankHolderBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        vbankHolder_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object vbankName_ = "";
-      /**
-       * <code>string vbank_name = 15;</code>
-       * @return The vbankName.
-       */
-      public java.lang.String getVbankName() {
-        java.lang.Object ref = vbankName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          vbankName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string vbank_name = 15;</code>
-       * @return The bytes for vbankName.
-       */
-      public com.google.protobuf.ByteString
-          getVbankNameBytes() {
-        java.lang.Object ref = vbankName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          vbankName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string vbank_name = 15;</code>
-       * @param value The vbankName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVbankName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        vbankName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string vbank_name = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVbankName() {
-        
-        vbankName_ = getDefaultInstance().getVbankName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string vbank_name = 15;</code>
-       * @param value The bytes for vbankName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVbankNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        vbankName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object currency_ = "";
-      /**
-       * <code>string currency = 16;</code>
-       * @return The currency.
-       */
-      public java.lang.String getCurrency() {
-        java.lang.Object ref = currency_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          currency_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string currency = 16;</code>
-       * @return The bytes for currency.
-       */
-      public com.google.protobuf.ByteString
-          getCurrencyBytes() {
-        java.lang.Object ref = currency_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          currency_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string currency = 16;</code>
-       * @param value The currency to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurrency(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        currency_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string currency = 16;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCurrency() {
-        
-        currency_ = getDefaultInstance().getCurrency();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string currency = 16;</code>
-       * @param value The bytes for currency to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurrencyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        currency_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object buyerName_ = "";
-      /**
-       * <code>string buyer_name = 17;</code>
-       * @return The buyerName.
-       */
-      public java.lang.String getBuyerName() {
-        java.lang.Object ref = buyerName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          buyerName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string buyer_name = 17;</code>
-       * @return The bytes for buyerName.
-       */
-      public com.google.protobuf.ByteString
-          getBuyerNameBytes() {
-        java.lang.Object ref = buyerName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          buyerName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string buyer_name = 17;</code>
-       * @param value The buyerName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBuyerName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        buyerName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string buyer_name = 17;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBuyerName() {
-        
-        buyerName_ = getDefaultInstance().getBuyerName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string buyer_name = 17;</code>
-       * @param value The bytes for buyerName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBuyerNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        buyerName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object cardNumber_ = "";
-      /**
-       * <code>string card_number = 18;</code>
-       * @return The cardNumber.
-       */
-      public java.lang.String getCardNumber() {
-        java.lang.Object ref = cardNumber_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cardNumber_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string card_number = 18;</code>
-       * @return The bytes for cardNumber.
-       */
-      public com.google.protobuf.ByteString
-          getCardNumberBytes() {
-        java.lang.Object ref = cardNumber_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cardNumber_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string card_number = 18;</code>
-       * @param value The cardNumber to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardNumber(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cardNumber_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string card_number = 18;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCardNumber() {
-        
-        cardNumber_ = getDefaultInstance().getCardNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string card_number = 18;</code>
-       * @param value The bytes for cardNumber to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardNumberBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cardNumber_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int startedAt_ ;
-      /**
-       * <code>int32 started_at = 19;</code>
-       * @return The startedAt.
-       */
-      @java.lang.Override
-      public int getStartedAt() {
-        return startedAt_;
-      }
-      /**
-       * <code>int32 started_at = 19;</code>
-       * @param value The startedAt to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStartedAt(int value) {
-        
-        startedAt_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 started_at = 19;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStartedAt() {
-        
-        startedAt_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object merchantUid_ = "";
-      /**
-       * <code>string merchant_uid = 20;</code>
-       * @return The merchantUid.
-       */
-      public java.lang.String getMerchantUid() {
-        java.lang.Object ref = merchantUid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          merchantUid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string merchant_uid = 20;</code>
-       * @return The bytes for merchantUid.
-       */
-      public com.google.protobuf.ByteString
-          getMerchantUidBytes() {
-        java.lang.Object ref = merchantUid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          merchantUid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string merchant_uid = 20;</code>
-       * @param value The merchantUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMerchantUid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        merchantUid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string merchant_uid = 20;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMerchantUid() {
-        
-        merchantUid_ = getDefaultInstance().getMerchantUid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string merchant_uid = 20;</code>
-       * @param value The bytes for merchantUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMerchantUidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        merchantUid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object vbankNum_ = "";
-      /**
-       * <code>string vbank_num = 21;</code>
-       * @return The vbankNum.
-       */
-      public java.lang.String getVbankNum() {
-        java.lang.Object ref = vbankNum_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          vbankNum_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string vbank_num = 21;</code>
-       * @return The bytes for vbankNum.
-       */
-      public com.google.protobuf.ByteString
-          getVbankNumBytes() {
-        java.lang.Object ref = vbankNum_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          vbankNum_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string vbank_num = 21;</code>
-       * @param value The vbankNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVbankNum(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        vbankNum_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string vbank_num = 21;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVbankNum() {
-        
-        vbankNum_ = getDefaultInstance().getVbankNum();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string vbank_num = 21;</code>
-       * @param value The bytes for vbankNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVbankNumBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        vbankNum_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object customerUid_ = "";
-      /**
-       * <code>string customer_uid = 22;</code>
-       * @return The customerUid.
-       */
-      public java.lang.String getCustomerUid() {
-        java.lang.Object ref = customerUid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          customerUid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string customer_uid = 22;</code>
-       * @return The bytes for customerUid.
-       */
-      public com.google.protobuf.ByteString
-          getCustomerUidBytes() {
-        java.lang.Object ref = customerUid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          customerUid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string customer_uid = 22;</code>
-       * @param value The customerUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerUid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        customerUid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string customer_uid = 22;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCustomerUid() {
-        
-        customerUid_ = getDefaultInstance().getCustomerUid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string customer_uid = 22;</code>
-       * @param value The bytes for customerUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerUidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        customerUid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object failReason_ = "";
-      /**
-       * <code>string fail_reason = 23;</code>
-       * @return The failReason.
-       */
-      public java.lang.String getFailReason() {
-        java.lang.Object ref = failReason_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          failReason_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string fail_reason = 23;</code>
-       * @return The bytes for failReason.
-       */
-      public com.google.protobuf.ByteString
-          getFailReasonBytes() {
-        java.lang.Object ref = failReason_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          failReason_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string fail_reason = 23;</code>
-       * @param value The failReason to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFailReason(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        failReason_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string fail_reason = 23;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFailReason() {
-        
-        failReason_ = getDefaultInstance().getFailReason();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string fail_reason = 23;</code>
-       * @param value The bytes for failReason to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFailReasonBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        failReason_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object impUid_ = "";
-      /**
-       * <code>string imp_uid = 24;</code>
-       * @return The impUid.
-       */
-      public java.lang.String getImpUid() {
-        java.lang.Object ref = impUid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          impUid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string imp_uid = 24;</code>
-       * @return The bytes for impUid.
-       */
-      public com.google.protobuf.ByteString
-          getImpUidBytes() {
-        java.lang.Object ref = impUid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          impUid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string imp_uid = 24;</code>
-       * @param value The impUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setImpUid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        impUid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string imp_uid = 24;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearImpUid() {
-        
-        impUid_ = getDefaultInstance().getImpUid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string imp_uid = 24;</code>
-       * @param value The bytes for impUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setImpUidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        impUid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object buyerPostcode_ = "";
-      /**
-       * <code>string buyer_postcode = 25;</code>
-       * @return The buyerPostcode.
-       */
-      public java.lang.String getBuyerPostcode() {
-        java.lang.Object ref = buyerPostcode_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          buyerPostcode_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string buyer_postcode = 25;</code>
-       * @return The bytes for buyerPostcode.
-       */
-      public com.google.protobuf.ByteString
-          getBuyerPostcodeBytes() {
-        java.lang.Object ref = buyerPostcode_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          buyerPostcode_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string buyer_postcode = 25;</code>
-       * @param value The buyerPostcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBuyerPostcode(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        buyerPostcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string buyer_postcode = 25;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBuyerPostcode() {
-        
-        buyerPostcode_ = getDefaultInstance().getBuyerPostcode();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string buyer_postcode = 25;</code>
-       * @param value The bytes for buyerPostcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBuyerPostcodeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        buyerPostcode_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int paidAt_ ;
-      /**
-       * <code>int32 paid_at = 26;</code>
-       * @return The paidAt.
-       */
-      @java.lang.Override
-      public int getPaidAt() {
-        return paidAt_;
-      }
-      /**
-       * <code>int32 paid_at = 26;</code>
-       * @param value The paidAt to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPaidAt(int value) {
-        
-        paidAt_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 paid_at = 26;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPaidAt() {
-        
-        paidAt_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object pgProvider_ = "";
-      /**
-       * <code>string pg_provider = 27;</code>
-       * @return The pgProvider.
-       */
-      public java.lang.String getPgProvider() {
-        java.lang.Object ref = pgProvider_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          pgProvider_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string pg_provider = 27;</code>
-       * @return The bytes for pgProvider.
-       */
-      public com.google.protobuf.ByteString
-          getPgProviderBytes() {
-        java.lang.Object ref = pgProvider_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pgProvider_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string pg_provider = 27;</code>
-       * @param value The pgProvider to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPgProvider(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        pgProvider_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pg_provider = 27;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPgProvider() {
-        
-        pgProvider_ = getDefaultInstance().getPgProvider();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pg_provider = 27;</code>
-       * @param value The bytes for pgProvider to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPgProviderBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        pgProvider_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object bankName_ = "";
-      /**
-       * <code>string bank_name = 28;</code>
-       * @return The bankName.
-       */
-      public java.lang.String getBankName() {
-        java.lang.Object ref = bankName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          bankName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string bank_name = 28;</code>
-       * @return The bytes for bankName.
-       */
-      public com.google.protobuf.ByteString
-          getBankNameBytes() {
-        java.lang.Object ref = bankName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          bankName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string bank_name = 28;</code>
-       * @param value The bankName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBankName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        bankName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string bank_name = 28;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBankName() {
-        
-        bankName_ = getDefaultInstance().getBankName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string bank_name = 28;</code>
-       * @param value The bytes for bankName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBankNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        bankName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int vbankIssuedAt_ ;
-      /**
-       * <code>int32 vbank_issued_at = 29;</code>
-       * @return The vbankIssuedAt.
-       */
-      @java.lang.Override
-      public int getVbankIssuedAt() {
-        return vbankIssuedAt_;
-      }
-      /**
-       * <code>int32 vbank_issued_at = 29;</code>
-       * @param value The vbankIssuedAt to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVbankIssuedAt(int value) {
-        
-        vbankIssuedAt_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 vbank_issued_at = 29;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVbankIssuedAt() {
-        
-        vbankIssuedAt_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object vbankCode_ = "";
-      /**
-       * <code>string vbank_code = 30;</code>
-       * @return The vbankCode.
-       */
-      public java.lang.String getVbankCode() {
-        java.lang.Object ref = vbankCode_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          vbankCode_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string vbank_code = 30;</code>
-       * @return The bytes for vbankCode.
-       */
-      public com.google.protobuf.ByteString
-          getVbankCodeBytes() {
-        java.lang.Object ref = vbankCode_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          vbankCode_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string vbank_code = 30;</code>
-       * @param value The vbankCode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVbankCode(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        vbankCode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string vbank_code = 30;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVbankCode() {
-        
-        vbankCode_ = getDefaultInstance().getVbankCode();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string vbank_code = 30;</code>
-       * @param value The bytes for vbankCode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVbankCodeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        vbankCode_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object receiptUrl_ = "";
-      /**
-       * <code>string receipt_url = 31;</code>
-       * @return The receiptUrl.
-       */
-      public java.lang.String getReceiptUrl() {
-        java.lang.Object ref = receiptUrl_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          receiptUrl_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string receipt_url = 31;</code>
-       * @return The bytes for receiptUrl.
-       */
-      public com.google.protobuf.ByteString
-          getReceiptUrlBytes() {
-        java.lang.Object ref = receiptUrl_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          receiptUrl_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string receipt_url = 31;</code>
-       * @param value The receiptUrl to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReceiptUrl(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        receiptUrl_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string receipt_url = 31;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearReceiptUrl() {
-        
-        receiptUrl_ = getDefaultInstance().getReceiptUrl();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string receipt_url = 31;</code>
-       * @param value The bytes for receiptUrl to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReceiptUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        receiptUrl_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int cardQuota_ ;
-      /**
-       * <code>int32 card_quota = 32;</code>
-       * @return The cardQuota.
-       */
-      @java.lang.Override
-      public int getCardQuota() {
-        return cardQuota_;
-      }
-      /**
-       * <code>int32 card_quota = 32;</code>
-       * @param value The cardQuota to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardQuota(int value) {
-        
-        cardQuota_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 card_quota = 32;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCardQuota() {
-        
-        cardQuota_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object buyerEmail_ = "";
-      /**
-       * <code>string buyer_email = 33;</code>
-       * @return The buyerEmail.
-       */
-      public java.lang.String getBuyerEmail() {
-        java.lang.Object ref = buyerEmail_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          buyerEmail_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string buyer_email = 33;</code>
-       * @return The bytes for buyerEmail.
-       */
-      public com.google.protobuf.ByteString
-          getBuyerEmailBytes() {
-        java.lang.Object ref = buyerEmail_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          buyerEmail_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string buyer_email = 33;</code>
-       * @param value The buyerEmail to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBuyerEmail(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        buyerEmail_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string buyer_email = 33;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBuyerEmail() {
-        
-        buyerEmail_ = getDefaultInstance().getBuyerEmail();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string buyer_email = 33;</code>
-       * @param value The bytes for buyerEmail to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBuyerEmailBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        buyerEmail_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object userAgent_ = "";
-      /**
-       * <code>string user_agent = 34;</code>
-       * @return The userAgent.
-       */
-      public java.lang.String getUserAgent() {
-        java.lang.Object ref = userAgent_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userAgent_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string user_agent = 34;</code>
-       * @return The bytes for userAgent.
-       */
-      public com.google.protobuf.ByteString
-          getUserAgentBytes() {
-        java.lang.Object ref = userAgent_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userAgent_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string user_agent = 34;</code>
-       * @param value The userAgent to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserAgent(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        userAgent_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string user_agent = 34;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUserAgent() {
-        
-        userAgent_ = getDefaultInstance().getUserAgent();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string user_agent = 34;</code>
-       * @param value The bytes for userAgent to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserAgentBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        userAgent_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object status_ = "";
-      /**
-       * <code>string status = 35;</code>
-       * @return The status.
-       */
-      public java.lang.String getStatus() {
-        java.lang.Object ref = status_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          status_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string status = 35;</code>
-       * @return The bytes for status.
-       */
-      public com.google.protobuf.ByteString
-          getStatusBytes() {
-        java.lang.Object ref = status_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          status_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string status = 35;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatus(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        status_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string status = 35;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStatus() {
-        
-        status_ = getDefaultInstance().getStatus();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string status = 35;</code>
-       * @param value The bytes for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        status_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object cancelReason_ = "";
-      /**
-       * <code>string cancel_reason = 36;</code>
-       * @return The cancelReason.
-       */
-      public java.lang.String getCancelReason() {
-        java.lang.Object ref = cancelReason_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cancelReason_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string cancel_reason = 36;</code>
-       * @return The bytes for cancelReason.
-       */
-      public com.google.protobuf.ByteString
-          getCancelReasonBytes() {
-        java.lang.Object ref = cancelReason_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cancelReason_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string cancel_reason = 36;</code>
-       * @param value The cancelReason to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCancelReason(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cancelReason_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cancel_reason = 36;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCancelReason() {
-        
-        cancelReason_ = getDefaultInstance().getCancelReason();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cancel_reason = 36;</code>
-       * @param value The bytes for cancelReason to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCancelReasonBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cancelReason_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object customData_ = "";
-      /**
-       * <code>string custom_data = 37;</code>
-       * @return The customData.
-       */
-      public java.lang.String getCustomData() {
-        java.lang.Object ref = customData_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          customData_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string custom_data = 37;</code>
-       * @return The bytes for customData.
-       */
-      public com.google.protobuf.ByteString
-          getCustomDataBytes() {
-        java.lang.Object ref = customData_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          customData_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string custom_data = 37;</code>
-       * @param value The customData to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomData(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        customData_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string custom_data = 37;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCustomData() {
-        
-        customData_ = getDefaultInstance().getCustomData();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string custom_data = 37;</code>
-       * @param value The bytes for customData to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomDataBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        customData_ = value;
-        onChanged();
-        return this;
-      }
-
-      private boolean cashReceiptIssued_ ;
-      /**
-       * <code>bool cash_receipt_issued = 38;</code>
-       * @return The cashReceiptIssued.
-       */
-      @java.lang.Override
-      public boolean getCashReceiptIssued() {
-        return cashReceiptIssued_;
-      }
-      /**
-       * <code>bool cash_receipt_issued = 38;</code>
-       * @param value The cashReceiptIssued to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCashReceiptIssued(boolean value) {
-        
-        cashReceiptIssued_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool cash_receipt_issued = 38;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCashReceiptIssued() {
-        
-        cashReceiptIssued_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int cardType_ ;
-      /**
-       * <code>int32 card_type = 39;</code>
-       * @return The cardType.
-       */
-      @java.lang.Override
-      public int getCardType() {
-        return cardType_;
-      }
-      /**
-       * <code>int32 card_type = 39;</code>
-       * @param value The cardType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardType(int value) {
-        
-        cardType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 card_type = 39;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCardType() {
-        
-        cardType_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object buyerTel_ = "";
-      /**
-       * <code>string buyer_tel = 40;</code>
-       * @return The buyerTel.
-       */
-      public java.lang.String getBuyerTel() {
-        java.lang.Object ref = buyerTel_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          buyerTel_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string buyer_tel = 40;</code>
-       * @return The bytes for buyerTel.
-       */
-      public com.google.protobuf.ByteString
-          getBuyerTelBytes() {
-        java.lang.Object ref = buyerTel_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          buyerTel_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string buyer_tel = 40;</code>
-       * @param value The buyerTel to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBuyerTel(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        buyerTel_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string buyer_tel = 40;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBuyerTel() {
-        
-        buyerTel_ = getDefaultInstance().getBuyerTel();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string buyer_tel = 40;</code>
-       * @param value The bytes for buyerTel to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBuyerTelBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        buyerTel_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int amount_ ;
-      /**
-       * <code>int32 amount = 41;</code>
-       * @return The amount.
-       */
-      @java.lang.Override
-      public int getAmount() {
-        return amount_;
-      }
-      /**
-       * <code>int32 amount = 41;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAmount(int value) {
-        
-        amount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 amount = 41;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAmount() {
-        
-        amount_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 42;</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 42;</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 42;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 42;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 42;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object payMethod_ = "";
-      /**
-       * <code>string pay_method = 43;</code>
-       * @return The payMethod.
-       */
-      public java.lang.String getPayMethod() {
-        java.lang.Object ref = payMethod_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          payMethod_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string pay_method = 43;</code>
-       * @return The bytes for payMethod.
-       */
-      public com.google.protobuf.ByteString
-          getPayMethodBytes() {
-        java.lang.Object ref = payMethod_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          payMethod_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string pay_method = 43;</code>
-       * @param value The payMethod to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPayMethod(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        payMethod_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pay_method = 43;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPayMethod() {
-        
-        payMethod_ = getDefaultInstance().getPayMethod();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pay_method = 43;</code>
-       * @param value The bytes for payMethod to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPayMethodBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        payMethod_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object channel_ = "";
-      /**
-       * <code>string channel = 44;</code>
-       * @return The channel.
-       */
-      public java.lang.String getChannel() {
-        java.lang.Object ref = channel_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          channel_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string channel = 44;</code>
-       * @return The bytes for channel.
-       */
-      public com.google.protobuf.ByteString
-          getChannelBytes() {
-        java.lang.Object ref = channel_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          channel_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string channel = 44;</code>
-       * @param value The channel to set.
-       * @return This builder for chaining.
-       */
-      public Builder setChannel(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        channel_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string channel = 44;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearChannel() {
-        
-        channel_ = getDefaultInstance().getChannel();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string channel = 44;</code>
-       * @param value The bytes for channel to set.
-       * @return This builder for chaining.
-       */
-      public Builder setChannelBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        channel_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList cancelReceiptUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureCancelReceiptUrlsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          cancelReceiptUrls_ = new com.google.protobuf.LazyStringArrayList(cancelReceiptUrls_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string cancel_receipt_urls = 45;</code>
-       * @return A list containing the cancelReceiptUrls.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getCancelReceiptUrlsList() {
-        return cancelReceiptUrls_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string cancel_receipt_urls = 45;</code>
-       * @return The count of cancelReceiptUrls.
-       */
-      public int getCancelReceiptUrlsCount() {
-        return cancelReceiptUrls_.size();
-      }
-      /**
-       * <code>repeated string cancel_receipt_urls = 45;</code>
-       * @param index The index of the element to return.
-       * @return The cancelReceiptUrls at the given index.
-       */
-      public java.lang.String getCancelReceiptUrls(int index) {
-        return cancelReceiptUrls_.get(index);
-      }
-      /**
-       * <code>repeated string cancel_receipt_urls = 45;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the cancelReceiptUrls at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getCancelReceiptUrlsBytes(int index) {
-        return cancelReceiptUrls_.getByteString(index);
-      }
-      /**
-       * <code>repeated string cancel_receipt_urls = 45;</code>
-       * @param index The index to set the value at.
-       * @param value The cancelReceiptUrls to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCancelReceiptUrls(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCancelReceiptUrlsIsMutable();
-        cancelReceiptUrls_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string cancel_receipt_urls = 45;</code>
-       * @param value The cancelReceiptUrls to add.
-       * @return This builder for chaining.
-       */
-      public Builder addCancelReceiptUrls(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCancelReceiptUrlsIsMutable();
-        cancelReceiptUrls_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string cancel_receipt_urls = 45;</code>
-       * @param values The cancelReceiptUrls to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllCancelReceiptUrls(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureCancelReceiptUrlsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, cancelReceiptUrls_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string cancel_receipt_urls = 45;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCancelReceiptUrls() {
-        cancelReceiptUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string cancel_receipt_urls = 45;</code>
-       * @param value The bytes of the cancelReceiptUrls to add.
-       * @return This builder for chaining.
-       */
-      public Builder addCancelReceiptUrlsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureCancelReceiptUrlsIsMutable();
-        cancelReceiptUrls_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<subscribe.Subscribe.CancelHistory> cancelHistory_ =
-        java.util.Collections.emptyList();
-      private void ensureCancelHistoryIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          cancelHistory_ = new java.util.ArrayList<subscribe.Subscribe.CancelHistory>(cancelHistory_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          subscribe.Subscribe.CancelHistory, subscribe.Subscribe.CancelHistory.Builder, subscribe.Subscribe.CancelHistoryOrBuilder> cancelHistoryBuilder_;
-
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public java.util.List<subscribe.Subscribe.CancelHistory> getCancelHistoryList() {
-        if (cancelHistoryBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(cancelHistory_);
-        } else {
-          return cancelHistoryBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public int getCancelHistoryCount() {
-        if (cancelHistoryBuilder_ == null) {
-          return cancelHistory_.size();
-        } else {
-          return cancelHistoryBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public subscribe.Subscribe.CancelHistory getCancelHistory(int index) {
-        if (cancelHistoryBuilder_ == null) {
-          return cancelHistory_.get(index);
-        } else {
-          return cancelHistoryBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public Builder setCancelHistory(
-          int index, subscribe.Subscribe.CancelHistory value) {
-        if (cancelHistoryBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCancelHistoryIsMutable();
-          cancelHistory_.set(index, value);
-          onChanged();
-        } else {
-          cancelHistoryBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public Builder setCancelHistory(
-          int index, subscribe.Subscribe.CancelHistory.Builder builderForValue) {
-        if (cancelHistoryBuilder_ == null) {
-          ensureCancelHistoryIsMutable();
-          cancelHistory_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          cancelHistoryBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public Builder addCancelHistory(subscribe.Subscribe.CancelHistory value) {
-        if (cancelHistoryBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCancelHistoryIsMutable();
-          cancelHistory_.add(value);
-          onChanged();
-        } else {
-          cancelHistoryBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public Builder addCancelHistory(
-          int index, subscribe.Subscribe.CancelHistory value) {
-        if (cancelHistoryBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCancelHistoryIsMutable();
-          cancelHistory_.add(index, value);
-          onChanged();
-        } else {
-          cancelHistoryBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public Builder addCancelHistory(
-          subscribe.Subscribe.CancelHistory.Builder builderForValue) {
-        if (cancelHistoryBuilder_ == null) {
-          ensureCancelHistoryIsMutable();
-          cancelHistory_.add(builderForValue.build());
-          onChanged();
-        } else {
-          cancelHistoryBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public Builder addCancelHistory(
-          int index, subscribe.Subscribe.CancelHistory.Builder builderForValue) {
-        if (cancelHistoryBuilder_ == null) {
-          ensureCancelHistoryIsMutable();
-          cancelHistory_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          cancelHistoryBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public Builder addAllCancelHistory(
-          java.lang.Iterable<? extends subscribe.Subscribe.CancelHistory> values) {
-        if (cancelHistoryBuilder_ == null) {
-          ensureCancelHistoryIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, cancelHistory_);
-          onChanged();
-        } else {
-          cancelHistoryBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public Builder clearCancelHistory() {
-        if (cancelHistoryBuilder_ == null) {
-          cancelHistory_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          cancelHistoryBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public Builder removeCancelHistory(int index) {
-        if (cancelHistoryBuilder_ == null) {
-          ensureCancelHistoryIsMutable();
-          cancelHistory_.remove(index);
-          onChanged();
-        } else {
-          cancelHistoryBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public subscribe.Subscribe.CancelHistory.Builder getCancelHistoryBuilder(
-          int index) {
-        return getCancelHistoryFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public subscribe.Subscribe.CancelHistoryOrBuilder getCancelHistoryOrBuilder(
-          int index) {
-        if (cancelHistoryBuilder_ == null) {
-          return cancelHistory_.get(index);  } else {
-          return cancelHistoryBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public java.util.List<? extends subscribe.Subscribe.CancelHistoryOrBuilder> 
-           getCancelHistoryOrBuilderList() {
-        if (cancelHistoryBuilder_ != null) {
-          return cancelHistoryBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(cancelHistory_);
-        }
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public subscribe.Subscribe.CancelHistory.Builder addCancelHistoryBuilder() {
-        return getCancelHistoryFieldBuilder().addBuilder(
-            subscribe.Subscribe.CancelHistory.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public subscribe.Subscribe.CancelHistory.Builder addCancelHistoryBuilder(
-          int index) {
-        return getCancelHistoryFieldBuilder().addBuilder(
-            index, subscribe.Subscribe.CancelHistory.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .subscribe.CancelHistory cancel_history = 46;</code>
-       */
-      public java.util.List<subscribe.Subscribe.CancelHistory.Builder> 
-           getCancelHistoryBuilderList() {
-        return getCancelHistoryFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          subscribe.Subscribe.CancelHistory, subscribe.Subscribe.CancelHistory.Builder, subscribe.Subscribe.CancelHistoryOrBuilder> 
-          getCancelHistoryFieldBuilder() {
-        if (cancelHistoryBuilder_ == null) {
-          cancelHistoryBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              subscribe.Subscribe.CancelHistory, subscribe.Subscribe.CancelHistory.Builder, subscribe.Subscribe.CancelHistoryOrBuilder>(
-                  cancelHistory_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          cancelHistory_ = null;
-        }
-        return cancelHistoryBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:subscribe.PaymentResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:subscribe.PaymentResponse)
-    private static final subscribe.Subscribe.PaymentResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new subscribe.Subscribe.PaymentResponse();
-    }
-
-    public static subscribe.Subscribe.PaymentResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PaymentResponse>
-        PARSER = new com.google.protobuf.AbstractParser<PaymentResponse>() {
-      @java.lang.Override
-      public PaymentResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PaymentResponse(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<PaymentResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PaymentResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public subscribe.Subscribe.PaymentResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface OnetimePaymentRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:subscribe.OnetimePaymentRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -10650,19 +2990,19 @@ public final class Subscribe {
         getMessageBytes();
 
     /**
-     * <code>.subscribe.PaymentResponse response = 3;</code>
+     * <code>.payment.Payment response = 3;</code>
      * @return Whether the response field is set.
      */
     boolean hasResponse();
     /**
-     * <code>.subscribe.PaymentResponse response = 3;</code>
+     * <code>.payment.Payment response = 3;</code>
      * @return The response.
      */
-    subscribe.Subscribe.PaymentResponse getResponse();
+    payment.PaymentOuterClass.Payment getResponse();
     /**
-     * <code>.subscribe.PaymentResponse response = 3;</code>
+     * <code>.payment.Payment response = 3;</code>
      */
-    subscribe.Subscribe.PaymentResponseOrBuilder getResponseOrBuilder();
+    payment.PaymentOuterClass.PaymentOrBuilder getResponseOrBuilder();
   }
   /**
    * Protobuf type {@code subscribe.OnetimePaymentResponse}
@@ -10722,11 +3062,11 @@ public final class Subscribe {
               break;
             }
             case 26: {
-              subscribe.Subscribe.PaymentResponse.Builder subBuilder = null;
+              payment.PaymentOuterClass.Payment.Builder subBuilder = null;
               if (response_ != null) {
                 subBuilder = response_.toBuilder();
               }
-              response_ = input.readMessage(subscribe.Subscribe.PaymentResponse.parser(), extensionRegistry);
+              response_ = input.readMessage(payment.PaymentOuterClass.Payment.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(response_);
                 response_ = subBuilder.buildPartial();
@@ -10816,9 +3156,9 @@ public final class Subscribe {
     }
 
     public static final int RESPONSE_FIELD_NUMBER = 3;
-    private subscribe.Subscribe.PaymentResponse response_;
+    private payment.PaymentOuterClass.Payment response_;
     /**
-     * <code>.subscribe.PaymentResponse response = 3;</code>
+     * <code>.payment.Payment response = 3;</code>
      * @return Whether the response field is set.
      */
     @java.lang.Override
@@ -10826,18 +3166,18 @@ public final class Subscribe {
       return response_ != null;
     }
     /**
-     * <code>.subscribe.PaymentResponse response = 3;</code>
+     * <code>.payment.Payment response = 3;</code>
      * @return The response.
      */
     @java.lang.Override
-    public subscribe.Subscribe.PaymentResponse getResponse() {
-      return response_ == null ? subscribe.Subscribe.PaymentResponse.getDefaultInstance() : response_;
+    public payment.PaymentOuterClass.Payment getResponse() {
+      return response_ == null ? payment.PaymentOuterClass.Payment.getDefaultInstance() : response_;
     }
     /**
-     * <code>.subscribe.PaymentResponse response = 3;</code>
+     * <code>.payment.Payment response = 3;</code>
      */
     @java.lang.Override
-    public subscribe.Subscribe.PaymentResponseOrBuilder getResponseOrBuilder() {
+    public payment.PaymentOuterClass.PaymentOrBuilder getResponseOrBuilder() {
       return getResponse();
     }
 
@@ -11297,31 +3637,31 @@ public final class Subscribe {
         return this;
       }
 
-      private subscribe.Subscribe.PaymentResponse response_;
+      private payment.PaymentOuterClass.Payment response_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          subscribe.Subscribe.PaymentResponse, subscribe.Subscribe.PaymentResponse.Builder, subscribe.Subscribe.PaymentResponseOrBuilder> responseBuilder_;
+          payment.PaymentOuterClass.Payment, payment.PaymentOuterClass.Payment.Builder, payment.PaymentOuterClass.PaymentOrBuilder> responseBuilder_;
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        * @return Whether the response field is set.
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        * @return The response.
        */
-      public subscribe.Subscribe.PaymentResponse getResponse() {
+      public payment.PaymentOuterClass.Payment getResponse() {
         if (responseBuilder_ == null) {
-          return response_ == null ? subscribe.Subscribe.PaymentResponse.getDefaultInstance() : response_;
+          return response_ == null ? payment.PaymentOuterClass.Payment.getDefaultInstance() : response_;
         } else {
           return responseBuilder_.getMessage();
         }
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
-      public Builder setResponse(subscribe.Subscribe.PaymentResponse value) {
+      public Builder setResponse(payment.PaymentOuterClass.Payment value) {
         if (responseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11335,10 +3675,10 @@ public final class Subscribe {
         return this;
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
       public Builder setResponse(
-          subscribe.Subscribe.PaymentResponse.Builder builderForValue) {
+          payment.PaymentOuterClass.Payment.Builder builderForValue) {
         if (responseBuilder_ == null) {
           response_ = builderForValue.build();
           onChanged();
@@ -11349,13 +3689,13 @@ public final class Subscribe {
         return this;
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
-      public Builder mergeResponse(subscribe.Subscribe.PaymentResponse value) {
+      public Builder mergeResponse(payment.PaymentOuterClass.Payment value) {
         if (responseBuilder_ == null) {
           if (response_ != null) {
             response_ =
-              subscribe.Subscribe.PaymentResponse.newBuilder(response_).mergeFrom(value).buildPartial();
+              payment.PaymentOuterClass.Payment.newBuilder(response_).mergeFrom(value).buildPartial();
           } else {
             response_ = value;
           }
@@ -11367,7 +3707,7 @@ public final class Subscribe {
         return this;
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -11381,33 +3721,33 @@ public final class Subscribe {
         return this;
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
-      public subscribe.Subscribe.PaymentResponse.Builder getResponseBuilder() {
+      public payment.PaymentOuterClass.Payment.Builder getResponseBuilder() {
         
         onChanged();
         return getResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
-      public subscribe.Subscribe.PaymentResponseOrBuilder getResponseOrBuilder() {
+      public payment.PaymentOuterClass.PaymentOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
           return responseBuilder_.getMessageOrBuilder();
         } else {
           return response_ == null ?
-              subscribe.Subscribe.PaymentResponse.getDefaultInstance() : response_;
+              payment.PaymentOuterClass.Payment.getDefaultInstance() : response_;
         }
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          subscribe.Subscribe.PaymentResponse, subscribe.Subscribe.PaymentResponse.Builder, subscribe.Subscribe.PaymentResponseOrBuilder> 
+          payment.PaymentOuterClass.Payment, payment.PaymentOuterClass.Payment.Builder, payment.PaymentOuterClass.PaymentOrBuilder> 
           getResponseFieldBuilder() {
         if (responseBuilder_ == null) {
           responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              subscribe.Subscribe.PaymentResponse, subscribe.Subscribe.PaymentResponse.Builder, subscribe.Subscribe.PaymentResponseOrBuilder>(
+              payment.PaymentOuterClass.Payment, payment.PaymentOuterClass.Payment.Builder, payment.PaymentOuterClass.PaymentOrBuilder>(
                   getResponse(),
                   getParentForChildren(),
                   isClean());
@@ -13694,19 +6034,19 @@ public final class Subscribe {
         getMessageBytes();
 
     /**
-     * <code>.subscribe.PaymentResponse response = 3;</code>
+     * <code>.payment.Payment response = 3;</code>
      * @return Whether the response field is set.
      */
     boolean hasResponse();
     /**
-     * <code>.subscribe.PaymentResponse response = 3;</code>
+     * <code>.payment.Payment response = 3;</code>
      * @return The response.
      */
-    subscribe.Subscribe.PaymentResponse getResponse();
+    payment.PaymentOuterClass.Payment getResponse();
     /**
-     * <code>.subscribe.PaymentResponse response = 3;</code>
+     * <code>.payment.Payment response = 3;</code>
      */
-    subscribe.Subscribe.PaymentResponseOrBuilder getResponseOrBuilder();
+    payment.PaymentOuterClass.PaymentOrBuilder getResponseOrBuilder();
   }
   /**
    * Protobuf type {@code subscribe.AgainPaymentResponse}
@@ -13766,11 +6106,11 @@ public final class Subscribe {
               break;
             }
             case 26: {
-              subscribe.Subscribe.PaymentResponse.Builder subBuilder = null;
+              payment.PaymentOuterClass.Payment.Builder subBuilder = null;
               if (response_ != null) {
                 subBuilder = response_.toBuilder();
               }
-              response_ = input.readMessage(subscribe.Subscribe.PaymentResponse.parser(), extensionRegistry);
+              response_ = input.readMessage(payment.PaymentOuterClass.Payment.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(response_);
                 response_ = subBuilder.buildPartial();
@@ -13860,9 +6200,9 @@ public final class Subscribe {
     }
 
     public static final int RESPONSE_FIELD_NUMBER = 3;
-    private subscribe.Subscribe.PaymentResponse response_;
+    private payment.PaymentOuterClass.Payment response_;
     /**
-     * <code>.subscribe.PaymentResponse response = 3;</code>
+     * <code>.payment.Payment response = 3;</code>
      * @return Whether the response field is set.
      */
     @java.lang.Override
@@ -13870,18 +6210,18 @@ public final class Subscribe {
       return response_ != null;
     }
     /**
-     * <code>.subscribe.PaymentResponse response = 3;</code>
+     * <code>.payment.Payment response = 3;</code>
      * @return The response.
      */
     @java.lang.Override
-    public subscribe.Subscribe.PaymentResponse getResponse() {
-      return response_ == null ? subscribe.Subscribe.PaymentResponse.getDefaultInstance() : response_;
+    public payment.PaymentOuterClass.Payment getResponse() {
+      return response_ == null ? payment.PaymentOuterClass.Payment.getDefaultInstance() : response_;
     }
     /**
-     * <code>.subscribe.PaymentResponse response = 3;</code>
+     * <code>.payment.Payment response = 3;</code>
      */
     @java.lang.Override
-    public subscribe.Subscribe.PaymentResponseOrBuilder getResponseOrBuilder() {
+    public payment.PaymentOuterClass.PaymentOrBuilder getResponseOrBuilder() {
       return getResponse();
     }
 
@@ -14341,31 +6681,31 @@ public final class Subscribe {
         return this;
       }
 
-      private subscribe.Subscribe.PaymentResponse response_;
+      private payment.PaymentOuterClass.Payment response_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          subscribe.Subscribe.PaymentResponse, subscribe.Subscribe.PaymentResponse.Builder, subscribe.Subscribe.PaymentResponseOrBuilder> responseBuilder_;
+          payment.PaymentOuterClass.Payment, payment.PaymentOuterClass.Payment.Builder, payment.PaymentOuterClass.PaymentOrBuilder> responseBuilder_;
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        * @return Whether the response field is set.
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        * @return The response.
        */
-      public subscribe.Subscribe.PaymentResponse getResponse() {
+      public payment.PaymentOuterClass.Payment getResponse() {
         if (responseBuilder_ == null) {
-          return response_ == null ? subscribe.Subscribe.PaymentResponse.getDefaultInstance() : response_;
+          return response_ == null ? payment.PaymentOuterClass.Payment.getDefaultInstance() : response_;
         } else {
           return responseBuilder_.getMessage();
         }
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
-      public Builder setResponse(subscribe.Subscribe.PaymentResponse value) {
+      public Builder setResponse(payment.PaymentOuterClass.Payment value) {
         if (responseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -14379,10 +6719,10 @@ public final class Subscribe {
         return this;
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
       public Builder setResponse(
-          subscribe.Subscribe.PaymentResponse.Builder builderForValue) {
+          payment.PaymentOuterClass.Payment.Builder builderForValue) {
         if (responseBuilder_ == null) {
           response_ = builderForValue.build();
           onChanged();
@@ -14393,13 +6733,13 @@ public final class Subscribe {
         return this;
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
-      public Builder mergeResponse(subscribe.Subscribe.PaymentResponse value) {
+      public Builder mergeResponse(payment.PaymentOuterClass.Payment value) {
         if (responseBuilder_ == null) {
           if (response_ != null) {
             response_ =
-              subscribe.Subscribe.PaymentResponse.newBuilder(response_).mergeFrom(value).buildPartial();
+              payment.PaymentOuterClass.Payment.newBuilder(response_).mergeFrom(value).buildPartial();
           } else {
             response_ = value;
           }
@@ -14411,7 +6751,7 @@ public final class Subscribe {
         return this;
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -14425,33 +6765,33 @@ public final class Subscribe {
         return this;
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
-      public subscribe.Subscribe.PaymentResponse.Builder getResponseBuilder() {
+      public payment.PaymentOuterClass.Payment.Builder getResponseBuilder() {
         
         onChanged();
         return getResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
-      public subscribe.Subscribe.PaymentResponseOrBuilder getResponseOrBuilder() {
+      public payment.PaymentOuterClass.PaymentOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
           return responseBuilder_.getMessageOrBuilder();
         } else {
           return response_ == null ?
-              subscribe.Subscribe.PaymentResponse.getDefaultInstance() : response_;
+              payment.PaymentOuterClass.Payment.getDefaultInstance() : response_;
         }
       }
       /**
-       * <code>.subscribe.PaymentResponse response = 3;</code>
+       * <code>.payment.Payment response = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          subscribe.Subscribe.PaymentResponse, subscribe.Subscribe.PaymentResponse.Builder, subscribe.Subscribe.PaymentResponseOrBuilder> 
+          payment.PaymentOuterClass.Payment, payment.PaymentOuterClass.Payment.Builder, payment.PaymentOuterClass.PaymentOrBuilder> 
           getResponseFieldBuilder() {
         if (responseBuilder_ == null) {
           responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              subscribe.Subscribe.PaymentResponse, subscribe.Subscribe.PaymentResponse.Builder, subscribe.Subscribe.PaymentResponseOrBuilder>(
+              payment.PaymentOuterClass.Payment, payment.PaymentOuterClass.Payment.Builder, payment.PaymentOuterClass.PaymentOrBuilder>(
                   getResponse(),
                   getParentForChildren(),
                   isClean());
@@ -25754,8 +18094,8 @@ public final class Subscribe {
 
   }
 
-  public interface NestedGetPaymentScheduleByCustomerResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:subscribe.NestedGetPaymentScheduleByCustomerResponse)
+  public interface NestedGetPaymentScheduleByCustomerDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:subscribe.NestedGetPaymentScheduleByCustomerData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -25801,18 +18141,18 @@ public final class Subscribe {
         int index);
   }
   /**
-   * Protobuf type {@code subscribe.NestedGetPaymentScheduleByCustomerResponse}
+   * Protobuf type {@code subscribe.NestedGetPaymentScheduleByCustomerData}
    */
-  public static final class NestedGetPaymentScheduleByCustomerResponse extends
+  public static final class NestedGetPaymentScheduleByCustomerData extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:subscribe.NestedGetPaymentScheduleByCustomerResponse)
-      NestedGetPaymentScheduleByCustomerResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:subscribe.NestedGetPaymentScheduleByCustomerData)
+      NestedGetPaymentScheduleByCustomerDataOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use NestedGetPaymentScheduleByCustomerResponse.newBuilder() to construct.
-    private NestedGetPaymentScheduleByCustomerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use NestedGetPaymentScheduleByCustomerData.newBuilder() to construct.
+    private NestedGetPaymentScheduleByCustomerData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private NestedGetPaymentScheduleByCustomerResponse() {
+    private NestedGetPaymentScheduleByCustomerData() {
       list_ = java.util.Collections.emptyList();
     }
 
@@ -25820,7 +18160,7 @@ public final class Subscribe {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new NestedGetPaymentScheduleByCustomerResponse();
+      return new NestedGetPaymentScheduleByCustomerData();
     }
 
     @java.lang.Override
@@ -25828,7 +18168,7 @@ public final class Subscribe {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private NestedGetPaymentScheduleByCustomerResponse(
+    private NestedGetPaymentScheduleByCustomerData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -25895,15 +18235,15 @@ public final class Subscribe {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return subscribe.Subscribe.internal_static_subscribe_NestedGetPaymentScheduleByCustomerResponse_descriptor;
+      return subscribe.Subscribe.internal_static_subscribe_NestedGetPaymentScheduleByCustomerData_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return subscribe.Subscribe.internal_static_subscribe_NestedGetPaymentScheduleByCustomerResponse_fieldAccessorTable
+      return subscribe.Subscribe.internal_static_subscribe_NestedGetPaymentScheduleByCustomerData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.class, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.Builder.class);
+              subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.class, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.Builder.class);
     }
 
     public static final int TOTAL_FIELD_NUMBER = 1;
@@ -26040,10 +18380,10 @@ public final class Subscribe {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse)) {
+      if (!(obj instanceof subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData)) {
         return super.equals(obj);
       }
-      subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse other = (subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse) obj;
+      subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData other = (subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData) obj;
 
       if (getTotal()
           != other.getTotal()) return false;
@@ -26079,69 +18419,69 @@ public final class Subscribe {
       return hash;
     }
 
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parseFrom(
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parseFrom(
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parseFrom(
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parseFrom(
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parseFrom(byte[] data)
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parseFrom(
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parseFrom(java.io.InputStream input)
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parseFrom(
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parseDelimitedFrom(java.io.InputStream input)
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parseDelimitedFrom(
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parseFrom(
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parseFrom(
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -26154,7 +18494,7 @@ public final class Subscribe {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse prototype) {
+    public static Builder newBuilder(subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -26170,26 +18510,26 @@ public final class Subscribe {
       return builder;
     }
     /**
-     * Protobuf type {@code subscribe.NestedGetPaymentScheduleByCustomerResponse}
+     * Protobuf type {@code subscribe.NestedGetPaymentScheduleByCustomerData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:subscribe.NestedGetPaymentScheduleByCustomerResponse)
-        subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:subscribe.NestedGetPaymentScheduleByCustomerData)
+        subscribe.Subscribe.NestedGetPaymentScheduleByCustomerDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return subscribe.Subscribe.internal_static_subscribe_NestedGetPaymentScheduleByCustomerResponse_descriptor;
+        return subscribe.Subscribe.internal_static_subscribe_NestedGetPaymentScheduleByCustomerData_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return subscribe.Subscribe.internal_static_subscribe_NestedGetPaymentScheduleByCustomerResponse_fieldAccessorTable
+        return subscribe.Subscribe.internal_static_subscribe_NestedGetPaymentScheduleByCustomerData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.class, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.Builder.class);
+                subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.class, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.Builder.class);
       }
 
-      // Construct using subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.newBuilder()
+      // Construct using subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -26226,17 +18566,17 @@ public final class Subscribe {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return subscribe.Subscribe.internal_static_subscribe_NestedGetPaymentScheduleByCustomerResponse_descriptor;
+        return subscribe.Subscribe.internal_static_subscribe_NestedGetPaymentScheduleByCustomerData_descriptor;
       }
 
       @java.lang.Override
-      public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse getDefaultInstanceForType() {
-        return subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.getDefaultInstance();
+      public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData getDefaultInstanceForType() {
+        return subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.getDefaultInstance();
       }
 
       @java.lang.Override
-      public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse build() {
-        subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse result = buildPartial();
+      public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData build() {
+        subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -26244,8 +18584,8 @@ public final class Subscribe {
       }
 
       @java.lang.Override
-      public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse buildPartial() {
-        subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse result = new subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse(this);
+      public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData buildPartial() {
+        subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData result = new subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData(this);
         int from_bitField0_ = bitField0_;
         result.total_ = total_;
         result.previous_ = previous_;
@@ -26297,16 +18637,16 @@ public final class Subscribe {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse) {
-          return mergeFrom((subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse)other);
+        if (other instanceof subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData) {
+          return mergeFrom((subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse other) {
-        if (other == subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData other) {
+        if (other == subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.getDefaultInstance()) return this;
         if (other.getTotal() != 0) {
           setTotal(other.getTotal());
         }
@@ -26357,11 +18697,11 @@ public final class Subscribe {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse parsedMessage = null;
+        subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse) e.getUnfinishedMessage();
+          parsedMessage = (subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -26717,41 +19057,41 @@ public final class Subscribe {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:subscribe.NestedGetPaymentScheduleByCustomerResponse)
+      // @@protoc_insertion_point(builder_scope:subscribe.NestedGetPaymentScheduleByCustomerData)
     }
 
-    // @@protoc_insertion_point(class_scope:subscribe.NestedGetPaymentScheduleByCustomerResponse)
-    private static final subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:subscribe.NestedGetPaymentScheduleByCustomerData)
+    private static final subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse();
+      DEFAULT_INSTANCE = new subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData();
     }
 
-    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse getDefaultInstance() {
+    public static subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NestedGetPaymentScheduleByCustomerResponse>
-        PARSER = new com.google.protobuf.AbstractParser<NestedGetPaymentScheduleByCustomerResponse>() {
+    private static final com.google.protobuf.Parser<NestedGetPaymentScheduleByCustomerData>
+        PARSER = new com.google.protobuf.AbstractParser<NestedGetPaymentScheduleByCustomerData>() {
       @java.lang.Override
-      public NestedGetPaymentScheduleByCustomerResponse parsePartialFrom(
+      public NestedGetPaymentScheduleByCustomerData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new NestedGetPaymentScheduleByCustomerResponse(input, extensionRegistry);
+        return new NestedGetPaymentScheduleByCustomerData(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<NestedGetPaymentScheduleByCustomerResponse> parser() {
+    public static com.google.protobuf.Parser<NestedGetPaymentScheduleByCustomerData> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<NestedGetPaymentScheduleByCustomerResponse> getParserForType() {
+    public com.google.protobuf.Parser<NestedGetPaymentScheduleByCustomerData> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse getDefaultInstanceForType() {
+    public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -26780,19 +19120,19 @@ public final class Subscribe {
         getMessageBytes();
 
     /**
-     * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+     * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
      * @return Whether the response field is set.
      */
     boolean hasResponse();
     /**
-     * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+     * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
      * @return The response.
      */
-    subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse getResponse();
+    subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData getResponse();
     /**
-     * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+     * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
      */
-    subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponseOrBuilder getResponseOrBuilder();
+    subscribe.Subscribe.NestedGetPaymentScheduleByCustomerDataOrBuilder getResponseOrBuilder();
   }
   /**
    * Protobuf type {@code subscribe.GetPaymentScheduleByCustomerResponse}
@@ -26852,11 +19192,11 @@ public final class Subscribe {
               break;
             }
             case 26: {
-              subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.Builder subBuilder = null;
+              subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.Builder subBuilder = null;
               if (response_ != null) {
                 subBuilder = response_.toBuilder();
               }
-              response_ = input.readMessage(subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.parser(), extensionRegistry);
+              response_ = input.readMessage(subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(response_);
                 response_ = subBuilder.buildPartial();
@@ -26946,9 +19286,9 @@ public final class Subscribe {
     }
 
     public static final int RESPONSE_FIELD_NUMBER = 3;
-    private subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse response_;
+    private subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData response_;
     /**
-     * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+     * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
      * @return Whether the response field is set.
      */
     @java.lang.Override
@@ -26956,18 +19296,18 @@ public final class Subscribe {
       return response_ != null;
     }
     /**
-     * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+     * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
      * @return The response.
      */
     @java.lang.Override
-    public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse getResponse() {
-      return response_ == null ? subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.getDefaultInstance() : response_;
+    public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData getResponse() {
+      return response_ == null ? subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.getDefaultInstance() : response_;
     }
     /**
-     * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+     * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
      */
     @java.lang.Override
-    public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponseOrBuilder getResponseOrBuilder() {
+    public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerDataOrBuilder getResponseOrBuilder() {
       return getResponse();
     }
 
@@ -27427,31 +19767,31 @@ public final class Subscribe {
         return this;
       }
 
-      private subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse response_;
+      private subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData response_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.Builder, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponseOrBuilder> responseBuilder_;
+          subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.Builder, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerDataOrBuilder> responseBuilder_;
       /**
-       * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+       * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
        * @return Whether the response field is set.
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
       }
       /**
-       * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+       * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
        * @return The response.
        */
-      public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse getResponse() {
+      public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData getResponse() {
         if (responseBuilder_ == null) {
-          return response_ == null ? subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.getDefaultInstance() : response_;
+          return response_ == null ? subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.getDefaultInstance() : response_;
         } else {
           return responseBuilder_.getMessage();
         }
       }
       /**
-       * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+       * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
        */
-      public Builder setResponse(subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse value) {
+      public Builder setResponse(subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData value) {
         if (responseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -27465,10 +19805,10 @@ public final class Subscribe {
         return this;
       }
       /**
-       * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+       * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
        */
       public Builder setResponse(
-          subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.Builder builderForValue) {
+          subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.Builder builderForValue) {
         if (responseBuilder_ == null) {
           response_ = builderForValue.build();
           onChanged();
@@ -27479,13 +19819,13 @@ public final class Subscribe {
         return this;
       }
       /**
-       * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+       * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
        */
-      public Builder mergeResponse(subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse value) {
+      public Builder mergeResponse(subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData value) {
         if (responseBuilder_ == null) {
           if (response_ != null) {
             response_ =
-              subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.newBuilder(response_).mergeFrom(value).buildPartial();
+              subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.newBuilder(response_).mergeFrom(value).buildPartial();
           } else {
             response_ = value;
           }
@@ -27497,7 +19837,7 @@ public final class Subscribe {
         return this;
       }
       /**
-       * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+       * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -27511,33 +19851,33 @@ public final class Subscribe {
         return this;
       }
       /**
-       * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+       * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
        */
-      public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.Builder getResponseBuilder() {
+      public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.Builder getResponseBuilder() {
         
         onChanged();
         return getResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+       * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
        */
-      public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponseOrBuilder getResponseOrBuilder() {
+      public subscribe.Subscribe.NestedGetPaymentScheduleByCustomerDataOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
           return responseBuilder_.getMessageOrBuilder();
         } else {
           return response_ == null ?
-              subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.getDefaultInstance() : response_;
+              subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.getDefaultInstance() : response_;
         }
       }
       /**
-       * <code>.subscribe.NestedGetPaymentScheduleByCustomerResponse response = 3;</code>
+       * <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.Builder, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponseOrBuilder> 
+          subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.Builder, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerDataOrBuilder> 
           getResponseFieldBuilder() {
         if (responseBuilder_ == null) {
           responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponse.Builder, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerResponseOrBuilder>(
+              subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerData.Builder, subscribe.Subscribe.NestedGetPaymentScheduleByCustomerDataOrBuilder>(
                   getResponse(),
                   getParentForChildren(),
                   isClean());
@@ -27598,16 +19938,6 @@ public final class Subscribe {
 
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_subscribe_CancelHistory_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_subscribe_CancelHistory_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_subscribe_PaymentResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_subscribe_PaymentResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_subscribe_OnetimePaymentRequest_descriptor;
   private static final 
@@ -27674,10 +20004,10 @@ public final class Subscribe {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_subscribe_GetPaymentScheduleByCustomerRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_subscribe_NestedGetPaymentScheduleByCustomerResponse_descriptor;
+    internal_static_subscribe_NestedGetPaymentScheduleByCustomerData_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_subscribe_NestedGetPaymentScheduleByCustomerResponse_fieldAccessorTable;
+      internal_static_subscribe_NestedGetPaymentScheduleByCustomerData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_subscribe_GetPaymentScheduleByCustomerResponse_descriptor;
   private static final 
@@ -27692,209 +20022,171 @@ public final class Subscribe {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031subscribe/subscribe.proto\022\tsubscribe\"j" +
-      "\n\rCancelHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amoun" +
-      "t\030\002 \001(\005\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030" +
-      "\004 \001(\t\022\023\n\013receipt_url\030\005 \001(\t\"\317\007\n\017PaymentRe" +
-      "sponse\022\025\n\rcancel_amount\030\001 \001(\005\022\021\n\tbank_co" +
-      "de\030\002 \001(\t\022\022\n\nvbank_date\030\003 \001(\005\022\021\n\tcard_cod" +
-      "e\030\004 \001(\t\022\032\n\022customer_uid_usage\030\005 \001(\t\022\r\n\005p" +
-      "g_id\030\006 \001(\t\022\016\n\006escrow\030\007 \001(\010\022\021\n\tfailed_at\030" +
-      "\010 \001(\005\022\022\n\nbuyer_addr\030\t \001(\t\022\021\n\tapply_num\030\n" +
-      " \001(\t\022\021\n\tcard_name\030\013 \001(\t\022\024\n\014cancelled_at\030" +
-      "\014 \001(\005\022\016\n\006pg_tid\030\r \001(\t\022\024\n\014vbank_holder\030\016 " +
-      "\001(\t\022\022\n\nvbank_name\030\017 \001(\t\022\020\n\010currency\030\020 \001(" +
-      "\t\022\022\n\nbuyer_name\030\021 \001(\t\022\023\n\013card_number\030\022 \001" +
-      "(\t\022\022\n\nstarted_at\030\023 \001(\005\022\024\n\014merchant_uid\030\024" +
-      " \001(\t\022\021\n\tvbank_num\030\025 \001(\t\022\024\n\014customer_uid\030" +
-      "\026 \001(\t\022\023\n\013fail_reason\030\027 \001(\t\022\017\n\007imp_uid\030\030 " +
-      "\001(\t\022\026\n\016buyer_postcode\030\031 \001(\t\022\017\n\007paid_at\030\032" +
-      " \001(\005\022\023\n\013pg_provider\030\033 \001(\t\022\021\n\tbank_name\030\034" +
-      " \001(\t\022\027\n\017vbank_issued_at\030\035 \001(\005\022\022\n\nvbank_c" +
-      "ode\030\036 \001(\t\022\023\n\013receipt_url\030\037 \001(\t\022\022\n\ncard_q" +
-      "uota\030  \001(\005\022\023\n\013buyer_email\030! \001(\t\022\022\n\nuser_" +
-      "agent\030\" \001(\t\022\016\n\006status\030# \001(\t\022\025\n\rcancel_re" +
-      "ason\030$ \001(\t\022\023\n\013custom_data\030% \001(\t\022\033\n\023cash_" +
-      "receipt_issued\030& \001(\010\022\021\n\tcard_type\030\' \001(\005\022" +
-      "\021\n\tbuyer_tel\030( \001(\t\022\016\n\006amount\030) \001(\005\022\014\n\004na" +
-      "me\030* \001(\t\022\022\n\npay_method\030+ \001(\t\022\017\n\007channel\030" +
-      ", \001(\t\022\033\n\023cancel_receipt_urls\030- \003(\t\0220\n\016ca" +
-      "ncel_history\030. \003(\0132\030.subscribe.CancelHis" +
-      "tory\"\217\003\n\025OnetimePaymentRequest\022\024\n\014mercha" +
-      "nt_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\022\020\n\010tax_free" +
-      "\030\003 \001(\001\022\023\n\013card_number\030\004 \001(\t\022\016\n\006expiry\030\005 " +
-      "\001(\t\022\r\n\005birth\030\006 \001(\t\022\022\n\npwd_2digit\030\007 \001(\t\022\024" +
-      "\n\014customer_uid\030\010 \001(\t\022\n\n\002pg\030\t \001(\t\022\014\n\004name" +
-      "\030\n \001(\t\022\022\n\nbuyer_name\030\013 \001(\t\022\023\n\013buyer_emai" +
-      "l\030\014 \001(\t\022\021\n\tbuyer_tel\030\r \001(\t\022\022\n\nbuyer_addr" +
-      "\030\016 \001(\t\022\026\n\016buyer_postcode\030\017 \001(\t\022\022\n\ncard_q" +
-      "uota\030\020 \001(\005\022!\n\031interest_free_by_merchant\030" +
-      "\021 \001(\010\022\023\n\013custom_data\030\022 \001(\t\022\022\n\nnotice_url" +
-      "\030\023 \001(\t\"e\n\026OnetimePaymentResponse\022\014\n\004code" +
-      "\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022,\n\010response\030\003 \001(" +
-      "\0132\032.subscribe.PaymentResponse\"\271\002\n\023AgainP" +
-      "aymentRequest\022\024\n\014customer_uid\030\001 \001(\t\022\024\n\014m" +
-      "erchant_uid\030\002 \001(\t\022\016\n\006amount\030\003 \001(\001\022\020\n\010tax" +
-      "_free\030\004 \001(\001\022\014\n\004name\030\005 \001(\t\022\022\n\nbuyer_name\030" +
-      "\006 \001(\t\022\023\n\013buyer_email\030\007 \001(\t\022\021\n\tbuyer_tel\030" +
-      "\010 \001(\t\022\022\n\nbuyer_addr\030\t \001(\t\022\026\n\016buyer_postc" +
-      "ode\030\n \001(\t\022\022\n\ncard_quota\030\013 \001(\005\022!\n\031interes" +
-      "t_free_by_merchant\030\014 \001(\010\022\023\n\013custom_data\030" +
-      "\r \001(\t\022\022\n\nnotice_url\030\016 \001(\t\"c\n\024AgainPaymen" +
+      "\n\031subscribe/subscribe.proto\022\tsubscribe\032\025" +
+      "payment/payment.proto\"\217\003\n\025OnetimePayment" +
+      "Request\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006amount\030" +
+      "\002 \001(\001\022\020\n\010tax_free\030\003 \001(\001\022\023\n\013card_number\030\004" +
+      " \001(\t\022\016\n\006expiry\030\005 \001(\t\022\r\n\005birth\030\006 \001(\t\022\022\n\np" +
+      "wd_2digit\030\007 \001(\t\022\024\n\014customer_uid\030\010 \001(\t\022\n\n" +
+      "\002pg\030\t \001(\t\022\014\n\004name\030\n \001(\t\022\022\n\nbuyer_name\030\013 " +
+      "\001(\t\022\023\n\013buyer_email\030\014 \001(\t\022\021\n\tbuyer_tel\030\r " +
+      "\001(\t\022\022\n\nbuyer_addr\030\016 \001(\t\022\026\n\016buyer_postcod" +
+      "e\030\017 \001(\t\022\022\n\ncard_quota\030\020 \001(\005\022!\n\031interest_" +
+      "free_by_merchant\030\021 \001(\010\022\023\n\013custom_data\030\022 " +
+      "\001(\t\022\022\n\nnotice_url\030\023 \001(\t\"[\n\026OnetimePaymen" +
       "tResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t" +
-      "\022,\n\010response\030\003 \001(\0132\032.subscribe.PaymentRe" +
-      "sponse\"\331\001\n\024PaymentScheduleParam\022\024\n\014merch" +
-      "ant_uid\030\001 \001(\t\022\023\n\013schedule_at\030\002 \001(\001\022\016\n\006am" +
-      "ount\030\003 \001(\005\022\020\n\010tax_free\030\004 \001(\005\022\014\n\004name\030\005 \001" +
-      "(\t\022\022\n\nbuyer_name\030\006 \001(\t\022\023\n\013buyer_email\030\007 " +
-      "\001(\t\022\021\n\tbuyer_tel\030\010 \001(\t\022\022\n\nbuyer_addr\030\t \001" +
-      "(\t\022\026\n\016buyer_postcode\030\n \001(\t\"\371\002\n\033UnitSched" +
-      "ulePaymentResponse\022\024\n\014customer_uid\030\001 \001(\t" +
-      "\022\024\n\014merchant_uid\030\002 \001(\t\022\017\n\007imp_uid\030\003 \001(\t\022" +
-      "\023\n\013schedule_at\030\004 \001(\005\022\023\n\013executed_at\030\005 \001(" +
-      "\005\022\022\n\nrevoked_at\030\006 \001(\005\022\016\n\006amount\030\007 \001(\005\022\014\n" +
-      "\004name\030\010 \001(\t\022\022\n\nbuyer_name\030\t \001(\t\022\023\n\013buyer" +
-      "_email\030\n \001(\t\022\021\n\tbuyer_tel\030\013 \001(\t\022\022\n\nbuyer" +
-      "_addr\030\014 \001(\t\022\026\n\016buyer_postcode\030\r \001(\t\022\023\n\013c" +
-      "ustom_data\030\016 \001(\t\022\027\n\017schedule_status\030\017 \001(" +
-      "\t\022\026\n\016payment_status\030\020 \001(\t\022\023\n\013fail_reason" +
-      "\030\021 \001(\t\"\317\001\n\026SchedulePayemntRequest\022\024\n\014cus" +
-      "tomer_uid\030\001 \001(\t\022\027\n\017checking_amount\030\002 \001(\005" +
-      "\022\023\n\013card_number\030\003 \001(\t\022\016\n\006expiry\030\004 \001(\t\022\r\n" +
-      "\005birth\030\005 \001(\t\022\022\n\npwd_2digit\030\006 \001(\t\022\n\n\002pg\030\007" +
-      " \001(\t\0222\n\tschedules\030\010 \003(\0132\037.subscribe.Paym" +
-      "entScheduleParam\"r\n\027SchedulePaymentRespo" +
-      "nse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0228\n\010re" +
-      "sponse\030\003 \003(\0132&.subscribe.UnitSchedulePay" +
-      "mentResponse\"F\n\030UnscheduelPaymentRequest" +
-      "\022\024\n\014customer_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002" +
-      " \003(\t\"t\n\031UnschedulePaymentResponse\022\014\n\004cod" +
-      "e\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0228\n\010response\030\003 \003" +
-      "(\0132&.subscribe.UnitSchedulePaymentRespon" +
-      "se\"1\n\031GetPaymentScheduleRequest\022\024\n\014merch" +
-      "ant_uid\030\001 \001(\t\"u\n\032GetPaymentScheduleRespo" +
-      "nse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0228\n\010re" +
-      "sponse\030\003 \001(\0132&.subscribe.UnitSchedulePay" +
-      "mentResponse\"|\n#GetPaymentScheduleByCust" +
-      "omerRequest\022\024\n\014customer_uid\030\001 \001(\t\022\014\n\004pag" +
-      "e\030\002 \001(\005\022\014\n\004from\030\003 \001(\005\022\n\n\002to\030\004 \001(\005\022\027\n\017sch" +
-      "edule_status\030\005 \001(\t\"\221\001\n*NestedGetPaymentS" +
-      "cheduleByCustomerResponse\022\r\n\005total\030\001 \001(\005" +
-      "\022\020\n\010previous\030\002 \001(\005\022\014\n\004next\030\003 \001(\005\0224\n\004list" +
-      "\030\004 \003(\0132&.subscribe.UnitSchedulePaymentRe" +
-      "sponse\"\216\001\n$GetPaymentScheduleByCustomerR" +
-      "esponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022G" +
-      "\n\010response\030\003 \001(\01325.subscribe.NestedGetPa" +
-      "ymentScheduleByCustomerResponseB1Z/githu" +
-      "b.com/iamport/interface/build/go/subscri" +
-      "beb\006proto3"
+      "\022\"\n\010response\030\003 \001(\0132\020.payment.Payment\"\271\002\n" +
+      "\023AgainPaymentRequest\022\024\n\014customer_uid\030\001 \001" +
+      "(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount\030\003 \001(\001" +
+      "\022\020\n\010tax_free\030\004 \001(\001\022\014\n\004name\030\005 \001(\t\022\022\n\nbuye" +
+      "r_name\030\006 \001(\t\022\023\n\013buyer_email\030\007 \001(\t\022\021\n\tbuy" +
+      "er_tel\030\010 \001(\t\022\022\n\nbuyer_addr\030\t \001(\t\022\026\n\016buye" +
+      "r_postcode\030\n \001(\t\022\022\n\ncard_quota\030\013 \001(\005\022!\n\031" +
+      "interest_free_by_merchant\030\014 \001(\010\022\023\n\013custo" +
+      "m_data\030\r \001(\t\022\022\n\nnotice_url\030\016 \001(\t\"Y\n\024Agai" +
+      "nPaymentResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messag" +
+      "e\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.Paym" +
+      "ent\"\331\001\n\024PaymentScheduleParam\022\024\n\014merchant" +
+      "_uid\030\001 \001(\t\022\023\n\013schedule_at\030\002 \001(\001\022\016\n\006amoun" +
+      "t\030\003 \001(\005\022\020\n\010tax_free\030\004 \001(\005\022\014\n\004name\030\005 \001(\t\022" +
+      "\022\n\nbuyer_name\030\006 \001(\t\022\023\n\013buyer_email\030\007 \001(\t" +
+      "\022\021\n\tbuyer_tel\030\010 \001(\t\022\022\n\nbuyer_addr\030\t \001(\t\022" +
+      "\026\n\016buyer_postcode\030\n \001(\t\"\371\002\n\033UnitSchedule" +
+      "PaymentResponse\022\024\n\014customer_uid\030\001 \001(\t\022\024\n" +
+      "\014merchant_uid\030\002 \001(\t\022\017\n\007imp_uid\030\003 \001(\t\022\023\n\013" +
+      "schedule_at\030\004 \001(\005\022\023\n\013executed_at\030\005 \001(\005\022\022" +
+      "\n\nrevoked_at\030\006 \001(\005\022\016\n\006amount\030\007 \001(\005\022\014\n\004na" +
+      "me\030\010 \001(\t\022\022\n\nbuyer_name\030\t \001(\t\022\023\n\013buyer_em" +
+      "ail\030\n \001(\t\022\021\n\tbuyer_tel\030\013 \001(\t\022\022\n\nbuyer_ad" +
+      "dr\030\014 \001(\t\022\026\n\016buyer_postcode\030\r \001(\t\022\023\n\013cust" +
+      "om_data\030\016 \001(\t\022\027\n\017schedule_status\030\017 \001(\t\022\026" +
+      "\n\016payment_status\030\020 \001(\t\022\023\n\013fail_reason\030\021 " +
+      "\001(\t\"\317\001\n\026SchedulePayemntRequest\022\024\n\014custom" +
+      "er_uid\030\001 \001(\t\022\027\n\017checking_amount\030\002 \001(\005\022\023\n" +
+      "\013card_number\030\003 \001(\t\022\016\n\006expiry\030\004 \001(\t\022\r\n\005bi" +
+      "rth\030\005 \001(\t\022\022\n\npwd_2digit\030\006 \001(\t\022\n\n\002pg\030\007 \001(" +
+      "\t\0222\n\tschedules\030\010 \003(\0132\037.subscribe.Payment" +
+      "ScheduleParam\"r\n\027SchedulePaymentResponse" +
+      "\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0228\n\010respo" +
+      "nse\030\003 \003(\0132&.subscribe.UnitSchedulePaymen" +
+      "tResponse\"F\n\030UnscheduelPaymentRequest\022\024\n" +
+      "\014customer_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \003(" +
+      "\t\"t\n\031UnschedulePaymentResponse\022\014\n\004code\030\001" +
+      " \001(\005\022\017\n\007message\030\002 \001(\t\0228\n\010response\030\003 \003(\0132" +
+      "&.subscribe.UnitSchedulePaymentResponse\"" +
+      "1\n\031GetPaymentScheduleRequest\022\024\n\014merchant" +
+      "_uid\030\001 \001(\t\"u\n\032GetPaymentScheduleResponse" +
+      "\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0228\n\010respo" +
+      "nse\030\003 \001(\0132&.subscribe.UnitSchedulePaymen" +
+      "tResponse\"|\n#GetPaymentScheduleByCustome" +
+      "rRequest\022\024\n\014customer_uid\030\001 \001(\t\022\014\n\004page\030\002" +
+      " \001(\005\022\014\n\004from\030\003 \001(\005\022\n\n\002to\030\004 \001(\005\022\027\n\017schedu" +
+      "le_status\030\005 \001(\t\"\215\001\n&NestedGetPaymentSche" +
+      "duleByCustomerData\022\r\n\005total\030\001 \001(\005\022\020\n\010pre" +
+      "vious\030\002 \001(\005\022\014\n\004next\030\003 \001(\005\0224\n\004list\030\004 \003(\0132" +
+      "&.subscribe.UnitSchedulePaymentResponse\"" +
+      "\212\001\n$GetPaymentScheduleByCustomerResponse" +
+      "\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022C\n\010respo" +
+      "nse\030\003 \001(\01321.subscribe.NestedGetPaymentSc" +
+      "heduleByCustomerDataB1Z/github.com/iampo" +
+      "rt/interface/build/go/subscribeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          payment.PaymentOuterClass.getDescriptor(),
         });
-    internal_static_subscribe_CancelHistory_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_subscribe_CancelHistory_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_subscribe_CancelHistory_descriptor,
-        new java.lang.String[] { "PgTid", "Amount", "CancelledAt", "Reason", "ReceiptUrl", });
-    internal_static_subscribe_PaymentResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_subscribe_PaymentResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_subscribe_PaymentResponse_descriptor,
-        new java.lang.String[] { "CancelAmount", "BankCode", "VbankDate", "CardCode", "CustomerUidUsage", "PgId", "Escrow", "FailedAt", "BuyerAddr", "ApplyNum", "CardName", "CancelledAt", "PgTid", "VbankHolder", "VbankName", "Currency", "BuyerName", "CardNumber", "StartedAt", "MerchantUid", "VbankNum", "CustomerUid", "FailReason", "ImpUid", "BuyerPostcode", "PaidAt", "PgProvider", "BankName", "VbankIssuedAt", "VbankCode", "ReceiptUrl", "CardQuota", "BuyerEmail", "UserAgent", "Status", "CancelReason", "CustomData", "CashReceiptIssued", "CardType", "BuyerTel", "Amount", "Name", "PayMethod", "Channel", "CancelReceiptUrls", "CancelHistory", });
     internal_static_subscribe_OnetimePaymentRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_subscribe_OnetimePaymentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_OnetimePaymentRequest_descriptor,
         new java.lang.String[] { "MerchantUid", "Amount", "TaxFree", "CardNumber", "Expiry", "Birth", "Pwd2Digit", "CustomerUid", "Pg", "Name", "BuyerName", "BuyerEmail", "BuyerTel", "BuyerAddr", "BuyerPostcode", "CardQuota", "InterestFreeByMerchant", "CustomData", "NoticeUrl", });
     internal_static_subscribe_OnetimePaymentResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_subscribe_OnetimePaymentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_OnetimePaymentResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
     internal_static_subscribe_AgainPaymentRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_subscribe_AgainPaymentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_AgainPaymentRequest_descriptor,
         new java.lang.String[] { "CustomerUid", "MerchantUid", "Amount", "TaxFree", "Name", "BuyerName", "BuyerEmail", "BuyerTel", "BuyerAddr", "BuyerPostcode", "CardQuota", "InterestFreeByMerchant", "CustomData", "NoticeUrl", });
     internal_static_subscribe_AgainPaymentResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_subscribe_AgainPaymentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_AgainPaymentResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
     internal_static_subscribe_PaymentScheduleParam_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_subscribe_PaymentScheduleParam_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_PaymentScheduleParam_descriptor,
         new java.lang.String[] { "MerchantUid", "ScheduleAt", "Amount", "TaxFree", "Name", "BuyerName", "BuyerEmail", "BuyerTel", "BuyerAddr", "BuyerPostcode", });
     internal_static_subscribe_UnitSchedulePaymentResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_subscribe_UnitSchedulePaymentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_UnitSchedulePaymentResponse_descriptor,
         new java.lang.String[] { "CustomerUid", "MerchantUid", "ImpUid", "ScheduleAt", "ExecutedAt", "RevokedAt", "Amount", "Name", "BuyerName", "BuyerEmail", "BuyerTel", "BuyerAddr", "BuyerPostcode", "CustomData", "ScheduleStatus", "PaymentStatus", "FailReason", });
     internal_static_subscribe_SchedulePayemntRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_subscribe_SchedulePayemntRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_SchedulePayemntRequest_descriptor,
         new java.lang.String[] { "CustomerUid", "CheckingAmount", "CardNumber", "Expiry", "Birth", "Pwd2Digit", "Pg", "Schedules", });
     internal_static_subscribe_SchedulePaymentResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_subscribe_SchedulePaymentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_SchedulePaymentResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
     internal_static_subscribe_UnscheduelPaymentRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_subscribe_UnscheduelPaymentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_UnscheduelPaymentRequest_descriptor,
         new java.lang.String[] { "CustomerUid", "MerchantUid", });
     internal_static_subscribe_UnschedulePaymentResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_subscribe_UnschedulePaymentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_UnschedulePaymentResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
     internal_static_subscribe_GetPaymentScheduleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_subscribe_GetPaymentScheduleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_GetPaymentScheduleRequest_descriptor,
         new java.lang.String[] { "MerchantUid", });
     internal_static_subscribe_GetPaymentScheduleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_subscribe_GetPaymentScheduleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_GetPaymentScheduleResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
     internal_static_subscribe_GetPaymentScheduleByCustomerRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_subscribe_GetPaymentScheduleByCustomerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_GetPaymentScheduleByCustomerRequest_descriptor,
         new java.lang.String[] { "CustomerUid", "Page", "From", "To", "ScheduleStatus", });
-    internal_static_subscribe_NestedGetPaymentScheduleByCustomerResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_subscribe_NestedGetPaymentScheduleByCustomerResponse_fieldAccessorTable = new
+    internal_static_subscribe_NestedGetPaymentScheduleByCustomerData_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_subscribe_NestedGetPaymentScheduleByCustomerData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_subscribe_NestedGetPaymentScheduleByCustomerResponse_descriptor,
+        internal_static_subscribe_NestedGetPaymentScheduleByCustomerData_descriptor,
         new java.lang.String[] { "Total", "Previous", "Next", "List", });
     internal_static_subscribe_GetPaymentScheduleByCustomerResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_subscribe_GetPaymentScheduleByCustomerResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_GetPaymentScheduleByCustomerResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
+    payment.PaymentOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

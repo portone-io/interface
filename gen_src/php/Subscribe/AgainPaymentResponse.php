@@ -22,7 +22,7 @@ class AgainPaymentResponse extends \Google\Protobuf\Internal\Message
      */
     protected $message = '';
     /**
-     * Generated from protobuf field <code>.subscribe.PaymentResponse response = 3;</code>
+     * Generated from protobuf field <code>.payment.Payment response = 3;</code>
      */
     protected $response = null;
 
@@ -34,7 +34,7 @@ class AgainPaymentResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type int $code
      *     @type string $message
-     *     @type \Subscribe\PaymentResponse $response
+     *     @type \Payment\Payment $response
      * }
      */
     public function __construct($data = NULL) {
@@ -87,8 +87,8 @@ class AgainPaymentResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.subscribe.PaymentResponse response = 3;</code>
-     * @return \Subscribe\PaymentResponse
+     * Generated from protobuf field <code>.payment.Payment response = 3;</code>
+     * @return \Payment\Payment
      */
     public function getResponse()
     {
@@ -106,13 +106,13 @@ class AgainPaymentResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.subscribe.PaymentResponse response = 3;</code>
-     * @param \Subscribe\PaymentResponse $var
+     * Generated from protobuf field <code>.payment.Payment response = 3;</code>
+     * @param \Payment\Payment $var
      * @return $this
      */
     public function setResponse($var)
     {
-        GPBUtil::checkMessage($var, \Subscribe\PaymentResponse::class);
+        GPBUtil::checkMessage($var, \Payment\Payment::class);
         $this->response = $var;
 
         return $this;

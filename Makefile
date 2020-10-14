@@ -68,7 +68,7 @@ dart:
 go:
 	rm -rf ${GEN_SRC_GO}
 	mkdir -p $(GEN_SRC_GO)
-	rm ./go.mod
+	rm -f ./go.mod
 	protoc --proto_path=$(PROTO_PATH) --go_out=$(GEN_SRC_GO) --go_opt=paths=source_relative $(SRC)
 	cp ./supplements/go/go.mod .
 

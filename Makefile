@@ -57,6 +57,14 @@ python:
 	rm -rf ${GEN_SRC_PYTHON}
 	mkdir -p $(GEN_SRC_PYTHON)
 	protoc --proto_path=$(PROTO_PATH) --python_out=$(GEN_SRC_PYTHON) $(SRC)
+	@echo ""
+	@echo "#####################################################################################################"
+	@echo "TODO for python protobuf"
+	@echo "0. Copy the generated python protobuf files to your repository"
+	@echo "1. Copy 'protobuf_importpath_change.py' to root of your repository"
+	@echo "2. Execute 'python protobuf_importpath_change.py -p [package_path]'. (Like iamport.protobuf_messages)"
+	@echo "#####################################################################################################"
+	@echo ""
 
 .PHONY: dart
 dart:

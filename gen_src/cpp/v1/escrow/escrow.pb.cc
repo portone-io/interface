@@ -121,6 +121,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_v1_2fescrow_2fescrow_2eproto::
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::escrow::EscrowRequest, imp_uid_),
   PROTOBUF_FIELD_OFFSET(::escrow::EscrowRequest, sender_),
   PROTOBUF_FIELD_OFFSET(::escrow::EscrowRequest, receiver_),
   PROTOBUF_FIELD_OFFSET(::escrow::EscrowRequest, logis_),
@@ -137,7 +138,7 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 0, -1, sizeof(::escrow::Info)},
   { 9, -1, sizeof(::escrow::Logis)},
   { 18, -1, sizeof(::escrow::EscrowRequest)},
-  { 26, -1, sizeof(::escrow::EscrowResponse)},
+  { 27, -1, sizeof(::escrow::EscrowResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -148,19 +149,27 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_v1_2fescrow_2fescrow_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\026v1/escrow/escrow.proto\022\006escrow\"A\n\004Info"
-  "\022\014\n\004name\030\001 \001(\t\022\013\n\003tel\030\002 \001(\t\022\014\n\004addr\030\003 \001("
-  "\t\022\020\n\010postcode\030\004 \001(\t\"N\n\005Logis\022\017\n\007company\030"
-  "\001 \001(\t\022\017\n\007invoice\030\002 \001(\t\022\017\n\007sent_at\030\003 \001(\005\022"
-  "\022\n\napplied_at\030\004 \001(\005\"k\n\rEscrowRequest\022\034\n\006"
-  "sender\030\001 \001(\0132\014.escrow.Info\022\036\n\010receiver\030\002"
-  " \001(\0132\014.escrow.Info\022\034\n\005logis\030\003 \001(\0132\r.escr"
-  "ow.Logis\"P\n\016EscrowResponse\022\014\n\004code\030\001 \001(\005"
-  "\022\017\n\007message\030\002 \001(\t\022\037\n\010response\030\003 \001(\0132\r.es"
-  "crow.LogisB3Z1github.com/iamport/interfa"
+  "\n\026v1/escrow/escrow.proto\022\006escrow\032\034google"
+  "/api/annotations.proto\"A\n\004Info\022\014\n\004name\030\001"
+  " \001(\t\022\013\n\003tel\030\002 \001(\t\022\014\n\004addr\030\003 \001(\t\022\020\n\010postc"
+  "ode\030\004 \001(\t\"N\n\005Logis\022\017\n\007company\030\001 \001(\t\022\017\n\007i"
+  "nvoice\030\002 \001(\t\022\017\n\007sent_at\030\003 \001(\005\022\022\n\napplied"
+  "_at\030\004 \001(\005\"|\n\rEscrowRequest\022\017\n\007imp_uid\030\001 "
+  "\001(\t\022\034\n\006sender\030\002 \001(\0132\014.escrow.Info\022\036\n\010rec"
+  "eiver\030\003 \001(\0132\014.escrow.Info\022\034\n\005logis\030\004 \001(\013"
+  "2\r.escrow.Logis\"P\n\016EscrowResponse\022\014\n\004cod"
+  "e\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\037\n\010response\030\003 \001"
+  "(\0132\r.escrow.Logis2\346\001\n\rEscrowService\022j\n\rE"
+  "scrowPostRPC\022\025.escrow.EscrowRequest\032\026.es"
+  "crow.EscrowResponse\"*\202\323\344\223\002$\"\037/api/v1/esc"
+  "rows/logis/{imp_uid}:\001*\022i\n\014EscrowPutRPC\022"
+  "\025.escrow.EscrowRequest\032\026.escrow.EscrowRe"
+  "sponse\"*\202\323\344\223\002$\032\037/api/v1/escrows/logis/{i"
+  "mp_uid}:\001*B3Z1github.com/iamport/interfa"
   "ce/gen_src/go/v1/escrowb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v1_2fescrow_2fescrow_2eproto_deps[1] = {
+  &::descriptor_table_google_2fapi_2fannotations_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_2fescrow_2fescrow_2eproto_sccs[4] = {
   &scc_info_EscrowRequest_v1_2fescrow_2fescrow_2eproto.base,
@@ -170,8 +179,8 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v1_2fescrow_2fescrow_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v1_2fescrow_2fescrow_2eproto = {
-  false, false, descriptor_table_protodef_v1_2fescrow_2fescrow_2eproto, "v1/escrow/escrow.proto", 431,
-  &descriptor_table_v1_2fescrow_2fescrow_2eproto_once, descriptor_table_v1_2fescrow_2fescrow_2eproto_sccs, descriptor_table_v1_2fescrow_2fescrow_2eproto_deps, 4, 0,
+  false, false, descriptor_table_protodef_v1_2fescrow_2fescrow_2eproto, "v1/escrow/escrow.proto", 711,
+  &descriptor_table_v1_2fescrow_2fescrow_2eproto_once, descriptor_table_v1_2fescrow_2fescrow_2eproto_sccs, descriptor_table_v1_2fescrow_2fescrow_2eproto_deps, 4, 1,
   schemas, file_default_instances, TableStruct_v1_2fescrow_2fescrow_2eproto::offsets,
   file_level_metadata_v1_2fescrow_2fescrow_2eproto, 4, file_level_enum_descriptors_v1_2fescrow_2fescrow_2eproto, file_level_service_descriptors_v1_2fescrow_2fescrow_2eproto,
 };
@@ -849,6 +858,11 @@ EscrowRequest::EscrowRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 EscrowRequest::EscrowRequest(const EscrowRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_imp_uid().empty()) {
+    imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_imp_uid(),
+      GetArena());
+  }
   if (from._internal_has_sender()) {
     sender_ = new ::escrow::Info(*from.sender_);
   } else {
@@ -869,6 +883,7 @@ EscrowRequest::EscrowRequest(const EscrowRequest& from)
 
 void EscrowRequest::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_EscrowRequest_v1_2fescrow_2fescrow_2eproto.base);
+  imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&sender_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&logis_) -
       reinterpret_cast<char*>(&sender_)) + sizeof(logis_));
@@ -882,6 +897,7 @@ EscrowRequest::~EscrowRequest() {
 
 void EscrowRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
+  imp_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete sender_;
   if (this != internal_default_instance()) delete receiver_;
   if (this != internal_default_instance()) delete logis_;
@@ -908,6 +924,7 @@ void EscrowRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  imp_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   if (GetArena() == nullptr && sender_ != nullptr) {
     delete sender_;
   }
@@ -931,23 +948,32 @@ const char* EscrowRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .escrow.Info sender = 1;
+      // string imp_uid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_imp_uid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "escrow.EscrowRequest.imp_uid"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .escrow.Info sender = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_sender(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .escrow.Info receiver = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+      // .escrow.Info receiver = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_receiver(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .escrow.Logis logis = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+      // .escrow.Logis logis = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_logis(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
@@ -980,28 +1006,38 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .escrow.Info sender = 1;
+  // string imp_uid = 1;
+  if (this->imp_uid().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_imp_uid().data(), static_cast<int>(this->_internal_imp_uid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "escrow.EscrowRequest.imp_uid");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_imp_uid(), target);
+  }
+
+  // .escrow.Info sender = 2;
   if (this->has_sender()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        1, _Internal::sender(this), target, stream);
+        2, _Internal::sender(this), target, stream);
   }
 
-  // .escrow.Info receiver = 2;
+  // .escrow.Info receiver = 3;
   if (this->has_receiver()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        2, _Internal::receiver(this), target, stream);
+        3, _Internal::receiver(this), target, stream);
   }
 
-  // .escrow.Logis logis = 3;
+  // .escrow.Logis logis = 4;
   if (this->has_logis()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        3, _Internal::logis(this), target, stream);
+        4, _Internal::logis(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1020,21 +1056,28 @@ size_t EscrowRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .escrow.Info sender = 1;
+  // string imp_uid = 1;
+  if (this->imp_uid().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_imp_uid());
+  }
+
+  // .escrow.Info sender = 2;
   if (this->has_sender()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *sender_);
   }
 
-  // .escrow.Info receiver = 2;
+  // .escrow.Info receiver = 3;
   if (this->has_receiver()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *receiver_);
   }
 
-  // .escrow.Logis logis = 3;
+  // .escrow.Logis logis = 4;
   if (this->has_logis()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -1072,6 +1115,9 @@ void EscrowRequest::MergeFrom(const EscrowRequest& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (from.imp_uid().size() > 0) {
+    _internal_set_imp_uid(from._internal_imp_uid());
+  }
   if (from.has_sender()) {
     _internal_mutable_sender()->::escrow::Info::MergeFrom(from._internal_sender());
   }
@@ -1104,6 +1150,7 @@ bool EscrowRequest::IsInitialized() const {
 void EscrowRequest::InternalSwap(EscrowRequest* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  imp_uid_.Swap(&other->imp_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(EscrowRequest, logis_)
       + sizeof(EscrowRequest::logis_)

@@ -1,8 +1,55 @@
 syntax = "proto3";
 package subscribe;
 
-option go_package = "github.com/iamport/interface/gen_src/go/v1/subscribe";
+import "google/api/annotations.proto";
 import "v1/payment/payment.proto";
+
+option go_package = "github.com/iamport/interface/gen_src/go/v1/subscribe";
+
+service SubscribeService {
+    rpc OnetimePaymentRPC(OnetimePaymentRequest) returns (OnetimePaymentResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/subscribe/payments/onetime"
+            body: "*"
+        };
+    }
+
+    rpc AgainPaymentRPC(AgainPaymentRequest) returns (AgainPaymentResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/subscribe/payments/again"
+            body: "*"
+        };
+    }
+
+    rpc SchedulePaymentRPC(SchedulePayemntRequest) returns (SchedulePaymentResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/subscribe/payments/schedule"
+            body: "*"
+        };
+    }
+
+    rpc UnschedulePaymentRPC(UnscheduelPaymentRequest) returns (UnschedulePaymentResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/subscribe/payments/unschedule"
+            body: "*"
+        };
+    }
+
+    rpc GetScheduledPaymentRPC(GetPaymentScheduleRequest) returns (GetPaymentScheduleResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/subscribe/payments/schedule/{merchant_uid}"
+            body: "*"
+        };
+    }
+
+    rpc GetScheduledPaymentByCustomerUidRPC(GetPaymentScheduleByCustomerRequest) returns (GetPaymentScheduleByCustomerResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/subscribe/payments/schedule/customers/{customer_uid}"
+            body: "*"
+        };
+    }
+
+}
 
 message OnetimePaymentRequest {
     string merchant_uid = 1;

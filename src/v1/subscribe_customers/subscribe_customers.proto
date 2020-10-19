@@ -1,8 +1,50 @@
 syntax = "proto3";
 package subscribe_customers;
 
-option go_package = "github.com/iamport/interface/gen_src/go/v1/subscribe_customers";
+import "google/api/annotations.proto";
 import "v1/payment/payment.proto";
+import "v1/subscribe/subscribe.proto";
+
+option go_package = "github.com/iamport/interface/gen_src/go/v1/subscribe_customers";
+
+service SubscribeCustomersService {
+    rpc GetMultipleCustomerBillingKeyRPC(GetMultipleCustomerBillingKeyRequest) returns (GetMultipleCustomerBillingKeyResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/subscribe/customers"
+        };
+    }
+
+    rpc DeleteCustomerBillingKeyRPC(DeleteCustomerBillingKeyRequest) returns (DeleteCustomerBillingKeyResponse) {
+        option (google.api.http) = {
+            delete: "/api/v1/subscribe/customers/{customer_uid}"
+        };
+    }
+
+    rpc GetCustomerBillingKeyRPC(GetCustomerBillingKeyRequest) returns (GetCustomerBillingKeyResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/subscribe/customers/{customer_uid}"
+        };
+    }
+
+    rpc InsertCustomerBillingKeyRPC(InsertCustomerBillingKeyRequest) returns (InsertCustomerBillingKeyResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/subscribe/customers/{customer_uid}"
+            body: "*"
+        };
+    }
+
+    rpc GetPaidByBillingKeyListRPC(GetPaidByBillingKeyListRequest) returns (GetPaidByBillingKeyListResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/subscribe/customers/{customer_uid}/payments"
+        };
+    }
+
+    rpc GetPaymentScheduleByCustomerRPC(subscribe.GetPaymentScheduleByCustomerRequest) returns (subscribe.GetPaymentScheduleByCustomerResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/subscribe/customers/{customer_uid}/schedules"
+        };
+    }
+}
 
 message CustomerBillingKey {
       string card_code = 1;

@@ -179,10 +179,11 @@ const CancelHistory$json = const {
 const CancelCardPaymentRequest$json = const {
   '1': 'CancelCardPaymentRequest',
   '2': const [
-    const {'1': 'amount', '3': 1, '4': 1, '5': 9, '10': 'amount'},
-    const {'1': 'merchant_uid', '3': 2, '4': 1, '5': 9, '10': 'merchantUid'},
-    const {'1': 'duty_free_amount', '3': 3, '4': 1, '5': 9, '10': 'dutyFreeAmount'},
-    const {'1': 'reason', '3': 4, '4': 1, '5': 9, '10': 'reason'},
+    const {'1': 'imp_uid', '3': 1, '4': 1, '5': 9, '10': 'impUid'},
+    const {'1': 'amount', '3': 2, '4': 1, '5': 9, '10': 'amount'},
+    const {'1': 'merchant_uid', '3': 3, '4': 1, '5': 9, '10': 'merchantUid'},
+    const {'1': 'duty_free_amount', '3': 4, '4': 1, '5': 9, '10': 'dutyFreeAmount'},
+    const {'1': 'reason', '3': 5, '4': 1, '5': 9, '10': 'reason'},
   ],
 };
 
@@ -193,5 +194,33 @@ const CancelCardPaymenttResponse$json = const {
     const {'1': 'message', '3': 2, '4': 1, '5': 9, '10': 'message'},
     const {'1': 'response', '3': 3, '4': 1, '5': 11, '6': '.card_v2.PayByRegisteredCardData', '10': 'response'},
   ],
+};
+
+const PaymentCardServiceBase$json = const {
+  '1': 'PaymentCardService',
+  '2': const [
+    const {'1': 'CardRegisterRPC', '2': '.card_v2.CardRegisterRequest', '3': '.card_v2.CardRegisterResponse', '4': const {}},
+    const {'1': 'GetCardInfoRPC', '2': '.card_v2.GetCardInfoRequest', '3': '.card_v2.GetCardInfoResponse', '4': const {}},
+    const {'1': 'DeleteCardInfoRPC', '2': '.card_v2.DeleteCardInfoRequest', '3': '.card_v2.DeleteCardInfoResponse', '4': const {}},
+    const {'1': 'PayByRegiseteredCardRPC', '2': '.card_v2.PayByRegisteredCardRequest', '3': '.card_v2.PayByRegisteredCardResponse', '4': const {}},
+    const {'1': 'CancelRegiseteredCardRPC', '2': '.card_v2.CancelCardPaymentRequest', '3': '.card_v2.CancelCardPaymenttResponse', '4': const {}},
+  ],
+};
+
+const PaymentCardServiceBase$messageJson = const {
+  '.card_v2.CardRegisterRequest': CardRegisterRequest$json,
+  '.card_v2.CardRegisterResponse': CardRegisterResponse$json,
+  '.card_v2.CardRegisterResultData': CardRegisterResultData$json,
+  '.card_v2.GetCardInfoRequest': GetCardInfoRequest$json,
+  '.card_v2.GetCardInfoResponse': GetCardInfoResponse$json,
+  '.card_v2.GetCardInfoData': GetCardInfoData$json,
+  '.card_v2.DeleteCardInfoRequest': DeleteCardInfoRequest$json,
+  '.card_v2.DeleteCardInfoResponse': DeleteCardInfoResponse$json,
+  '.card_v2.PayByRegisteredCardRequest': PayByRegisteredCardRequest$json,
+  '.card_v2.PayByRegisteredCardResponse': PayByRegisteredCardResponse$json,
+  '.card_v2.PayByRegisteredCardData': PayByRegisteredCardData$json,
+  '.card_v2.CancelHistory': CancelHistory$json,
+  '.card_v2.CancelCardPaymentRequest': CancelCardPaymentRequest$json,
+  '.card_v2.CancelCardPaymenttResponse': CancelCardPaymenttResponse$json,
 };
 

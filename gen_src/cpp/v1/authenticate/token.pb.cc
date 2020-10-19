@@ -115,15 +115,20 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_v1_2fauthenticate_2ftoken_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\033v1/authenticate/token.proto\022\014authentic"
-  "ate\">\n\005Token\022\024\n\014access_token\030\001 \001(\t\022\013\n\003no"
-  "w\030\002 \001(\005\022\022\n\nexpired_at\030\003 \001(\005\"3\n\014TokenRequ"
-  "est\022\017\n\007imp_key\030\001 \001(\t\022\022\n\nimp_secret\030\002 \001(\t"
-  "\"U\n\rTokenResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messa"
-  "ge\030\002 \001(\t\022%\n\010response\030\003 \001(\0132\023.authenticat"
-  "e.TokenB9Z7github.com/iamport/interface/"
-  "gen_src/go/v1/authenticateb\006proto3"
+  "ate\032\034google/api/annotations.proto\">\n\005Tok"
+  "en\022\024\n\014access_token\030\001 \001(\t\022\013\n\003now\030\002 \001(\005\022\022\n"
+  "\nexpired_at\030\003 \001(\005\"3\n\014TokenRequest\022\017\n\007imp"
+  "_key\030\001 \001(\t\022\022\n\nimp_secret\030\002 \001(\t\"U\n\rTokenR"
+  "esponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022%"
+  "\n\010response\030\003 \001(\0132\023.authenticate.Token2v\n"
+  "\014TokenService\022f\n\010TokenRPC\022\032.authenticate"
+  ".TokenRequest\032\033.authenticate.TokenRespon"
+  "se\"!\202\323\344\223\002\033\"\026/api/v1/users/getToken:\001*B9Z"
+  "7github.com/iamport/interface/gen_src/go"
+  "/v1/authenticateb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v1_2fauthenticate_2ftoken_2eproto_deps[1] = {
+  &::descriptor_table_google_2fapi_2fannotations_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_2fauthenticate_2ftoken_2eproto_sccs[3] = {
   &scc_info_Token_v1_2fauthenticate_2ftoken_2eproto.base,
@@ -132,8 +137,8 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v1_2fauthenticate_2ftoken_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v1_2fauthenticate_2ftoken_2eproto = {
-  false, false, descriptor_table_protodef_v1_2fauthenticate_2ftoken_2eproto, "v1/authenticate/token.proto", 314,
-  &descriptor_table_v1_2fauthenticate_2ftoken_2eproto_once, descriptor_table_v1_2fauthenticate_2ftoken_2eproto_sccs, descriptor_table_v1_2fauthenticate_2ftoken_2eproto_deps, 3, 0,
+  false, false, descriptor_table_protodef_v1_2fauthenticate_2ftoken_2eproto, "v1/authenticate/token.proto", 464,
+  &descriptor_table_v1_2fauthenticate_2ftoken_2eproto_once, descriptor_table_v1_2fauthenticate_2ftoken_2eproto_sccs, descriptor_table_v1_2fauthenticate_2ftoken_2eproto_deps, 3, 1,
   schemas, file_default_instances, TableStruct_v1_2fauthenticate_2ftoken_2eproto::offsets,
   file_level_metadata_v1_2fauthenticate_2ftoken_2eproto, 3, file_level_enum_descriptors_v1_2fauthenticate_2ftoken_2eproto, file_level_service_descriptors_v1_2fauthenticate_2ftoken_2eproto,
 };

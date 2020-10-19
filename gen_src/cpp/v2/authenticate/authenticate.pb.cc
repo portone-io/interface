@@ -170,19 +170,28 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_v2_2fauthenticate_2fauthenticate_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\"v2/authenticate/authenticate.proto\022\017au"
-  "thenticate_v2\"3\n\014TokenRequest\022\017\n\007imp_key"
-  "\030\001 \001(\t\022\022\n\nimp_secret\030\002 \001(\t\"B\n\tTokenData\022"
-  "\024\n\014access_token\030\001 \001(\t\022\022\n\nexpired_at\030\002 \001("
-  "\005\022\013\n\003now\030\003 \001(\005\"\\\n\rTokenResponse\022\014\n\004code\030"
-  "\001 \001(\005\022\017\n\007message\030\002 \001(\t\022,\n\010response\030\003 \001(\013"
-  "2\032.authenticate_v2.TokenData\"N\n\025PubKeyRe"
-  "gisterRequest\022\017\n\007imp_key\030\001 \001(\t\022\022\n\npublic"
-  "_key\030\002 \001(\t\022\020\n\010password\030\003 \001(\t\"7\n\026PubKeyRe"
-  "gisterResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030"
-  "\002 \001(\tB9Z7github.com/iamport/interface/ge"
-  "n_src/go/v2/authenticateb\006proto3"
+  "thenticate_v2\032\034google/api/annotations.pr"
+  "oto\"3\n\014TokenRequest\022\017\n\007imp_key\030\001 \001(\t\022\022\n\n"
+  "imp_secret\030\002 \001(\t\"B\n\tTokenData\022\024\n\014access_"
+  "token\030\001 \001(\t\022\022\n\nexpired_at\030\002 \001(\005\022\013\n\003now\030\003"
+  " \001(\005\"\\\n\rTokenResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007m"
+  "essage\030\002 \001(\t\022,\n\010response\030\003 \001(\0132\032.authent"
+  "icate_v2.TokenData\"N\n\025PubKeyRegisterRequ"
+  "est\022\017\n\007imp_key\030\001 \001(\t\022\022\n\npublic_key\030\002 \001(\t"
+  "\022\020\n\010password\030\003 \001(\t\"7\n\026PubKeyRegisterResp"
+  "onse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t2\217\002\n\023"
+  "AuthenticateService\022l\n\010TokenRPC\022\035.authen"
+  "ticate_v2.TokenRequest\032\036.authenticate_v2"
+  ".TokenResponse\"!\202\323\344\223\002\033\"\026/api/v2/users/ge"
+  "tToken:\001*\022\211\001\n\021RegisterPubKeyRPC\022&.authen"
+  "ticate_v2.PubKeyRegisterRequest\032\'.authen"
+  "ticate_v2.PubKeyRegisterResponse\"#\202\323\344\223\002\035"
+  "\"\030/api/v2/users/public_key:\001*B9Z7github."
+  "com/iamport/interface/gen_src/go/v2/auth"
+  "enticateb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_deps[1] = {
+  &::descriptor_table_google_2fapi_2fannotations_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_sccs[5] = {
   &scc_info_PubKeyRegisterRequest_v2_2fauthenticate_2fauthenticate_2eproto.base,
@@ -193,8 +202,8 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v2_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto = {
-  false, false, descriptor_table_protodef_v2_2fauthenticate_2fauthenticate_2eproto, "v2/authenticate/authenticate.proto", 472,
-  &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_once, descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_sccs, descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_deps, 5, 0,
+  false, false, descriptor_table_protodef_v2_2fauthenticate_2fauthenticate_2eproto, "v2/authenticate/authenticate.proto", 776,
+  &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_once, descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_sccs, descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_deps, 5, 1,
   schemas, file_default_instances, TableStruct_v2_2fauthenticate_2fauthenticate_2eproto::offsets,
   file_level_metadata_v2_2fauthenticate_2fauthenticate_2eproto, 5, file_level_enum_descriptors_v2_2fauthenticate_2fauthenticate_2eproto, file_level_service_descriptors_v2_2fauthenticate_2fauthenticate_2eproto,
 };

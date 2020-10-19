@@ -2,6 +2,7 @@
 // file: v2/authenticate/authenticate.proto
 
 import * as jspb from "google-protobuf";
+import * as google_api_annotations_pb from "../../google/api/annotations_pb";
 
 export class TokenRequest extends jspb.Message {
   getImpKey(): string;

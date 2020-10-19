@@ -31,3 +31,16 @@ const TokenResponse$json = const {
   ],
 };
 
+const TokenServiceBase$json = const {
+  '1': 'TokenService',
+  '2': const [
+    const {'1': 'TokenRPC', '2': '.authenticate.TokenRequest', '3': '.authenticate.TokenResponse', '4': const {}},
+  ],
+};
+
+const TokenServiceBase$messageJson = const {
+  '.authenticate.TokenRequest': TokenRequest$json,
+  '.authenticate.TokenResponse': TokenResponse$json,
+  '.authenticate.Token': Token$json,
+};
+

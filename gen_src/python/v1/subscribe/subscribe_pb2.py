@@ -11,6 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from v1.payment import payment_pb2 as v1_dot_payment_dot_payment__pb2
 
 
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z4github.com/iamport/interface/gen_src/go/v1/subscribe',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1cv1/subscribe/subscribe.proto\x12\tsubscribe\x1a\x18v1/payment/payment.proto\"\x8f\x03\n\x15OnetimePaymentRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x01\x12\x10\n\x08tax_free\x18\x03 \x01(\x01\x12\x13\n\x0b\x63\x61rd_number\x18\x04 \x01(\t\x12\x0e\n\x06\x65xpiry\x18\x05 \x01(\t\x12\r\n\x05\x62irth\x18\x06 \x01(\t\x12\x12\n\npwd_2digit\x18\x07 \x01(\t\x12\x14\n\x0c\x63ustomer_uid\x18\x08 \x01(\t\x12\n\n\x02pg\x18\t \x01(\t\x12\x0c\n\x04name\x18\n \x01(\t\x12\x12\n\nbuyer_name\x18\x0b \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x0c \x01(\t\x12\x11\n\tbuyer_tel\x18\r \x01(\t\x12\x12\n\nbuyer_addr\x18\x0e \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\x0f \x01(\t\x12\x12\n\ncard_quota\x18\x10 \x01(\x05\x12!\n\x19interest_free_by_merchant\x18\x11 \x01(\x08\x12\x13\n\x0b\x63ustom_data\x18\x12 \x01(\t\x12\x12\n\nnotice_url\x18\x13 \x01(\t\"[\n\x16OnetimePaymentResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"\xb9\x02\n\x13\x41gainPaymentRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x01\x12\x10\n\x08tax_free\x18\x04 \x01(\x01\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x12\n\nbuyer_name\x18\x06 \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x07 \x01(\t\x12\x11\n\tbuyer_tel\x18\x08 \x01(\t\x12\x12\n\nbuyer_addr\x18\t \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\n \x01(\t\x12\x12\n\ncard_quota\x18\x0b \x01(\x05\x12!\n\x19interest_free_by_merchant\x18\x0c \x01(\x08\x12\x13\n\x0b\x63ustom_data\x18\r \x01(\t\x12\x12\n\nnotice_url\x18\x0e \x01(\t\"Y\n\x14\x41gainPaymentResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"\xd9\x01\n\x14PaymentScheduleParam\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x13\n\x0bschedule_at\x18\x02 \x01(\x01\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x05\x12\x10\n\x08tax_free\x18\x04 \x01(\x05\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x12\n\nbuyer_name\x18\x06 \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x07 \x01(\t\x12\x11\n\tbuyer_tel\x18\x08 \x01(\t\x12\x12\n\nbuyer_addr\x18\t \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\n \x01(\t\"\xf9\x02\n\x1bUnitSchedulePaymentResponse\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x01(\t\x12\x0f\n\x07imp_uid\x18\x03 \x01(\t\x12\x13\n\x0bschedule_at\x18\x04 \x01(\x05\x12\x13\n\x0b\x65xecuted_at\x18\x05 \x01(\x05\x12\x12\n\nrevoked_at\x18\x06 \x01(\x05\x12\x0e\n\x06\x61mount\x18\x07 \x01(\x05\x12\x0c\n\x04name\x18\x08 \x01(\t\x12\x12\n\nbuyer_name\x18\t \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\n \x01(\t\x12\x11\n\tbuyer_tel\x18\x0b \x01(\t\x12\x12\n\nbuyer_addr\x18\x0c \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\r \x01(\t\x12\x13\n\x0b\x63ustom_data\x18\x0e \x01(\t\x12\x17\n\x0fschedule_status\x18\x0f \x01(\t\x12\x16\n\x0epayment_status\x18\x10 \x01(\t\x12\x13\n\x0b\x66\x61il_reason\x18\x11 \x01(\t\"\xcf\x01\n\x16SchedulePayemntRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x17\n\x0f\x63hecking_amount\x18\x02 \x01(\x05\x12\x13\n\x0b\x63\x61rd_number\x18\x03 \x01(\t\x12\x0e\n\x06\x65xpiry\x18\x04 \x01(\t\x12\r\n\x05\x62irth\x18\x05 \x01(\t\x12\x12\n\npwd_2digit\x18\x06 \x01(\t\x12\n\n\x02pg\x18\x07 \x01(\t\x12\x32\n\tschedules\x18\x08 \x03(\x0b\x32\x1f.subscribe.PaymentScheduleParam\"r\n\x17SchedulePaymentResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x38\n\x08response\x18\x03 \x03(\x0b\x32&.subscribe.UnitSchedulePaymentResponse\"F\n\x18UnscheduelPaymentRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x03(\t\"t\n\x19UnschedulePaymentResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x38\n\x08response\x18\x03 \x03(\x0b\x32&.subscribe.UnitSchedulePaymentResponse\"1\n\x19GetPaymentScheduleRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\"u\n\x1aGetPaymentScheduleResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x38\n\x08response\x18\x03 \x01(\x0b\x32&.subscribe.UnitSchedulePaymentResponse\"|\n#GetPaymentScheduleByCustomerRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\x12\x0c\n\x04\x66rom\x18\x03 \x01(\x05\x12\n\n\x02to\x18\x04 \x01(\x05\x12\x17\n\x0fschedule_status\x18\x05 \x01(\t\"\x8d\x01\n&NestedGetPaymentScheduleByCustomerData\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x10\n\x08previous\x18\x02 \x01(\x05\x12\x0c\n\x04next\x18\x03 \x01(\x05\x12\x34\n\x04list\x18\x04 \x03(\x0b\x32&.subscribe.UnitSchedulePaymentResponse\"\x8a\x01\n$GetPaymentScheduleByCustomerResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x43\n\x08response\x18\x03 \x01(\x0b\x32\x31.subscribe.NestedGetPaymentScheduleByCustomerDataB6Z4github.com/iamport/interface/gen_src/go/v1/subscribeb\x06proto3'
+  serialized_pb=b'\n\x1cv1/subscribe/subscribe.proto\x12\tsubscribe\x1a\x1cgoogle/api/annotations.proto\x1a\x18v1/payment/payment.proto\"\x8f\x03\n\x15OnetimePaymentRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x01\x12\x10\n\x08tax_free\x18\x03 \x01(\x01\x12\x13\n\x0b\x63\x61rd_number\x18\x04 \x01(\t\x12\x0e\n\x06\x65xpiry\x18\x05 \x01(\t\x12\r\n\x05\x62irth\x18\x06 \x01(\t\x12\x12\n\npwd_2digit\x18\x07 \x01(\t\x12\x14\n\x0c\x63ustomer_uid\x18\x08 \x01(\t\x12\n\n\x02pg\x18\t \x01(\t\x12\x0c\n\x04name\x18\n \x01(\t\x12\x12\n\nbuyer_name\x18\x0b \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x0c \x01(\t\x12\x11\n\tbuyer_tel\x18\r \x01(\t\x12\x12\n\nbuyer_addr\x18\x0e \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\x0f \x01(\t\x12\x12\n\ncard_quota\x18\x10 \x01(\x05\x12!\n\x19interest_free_by_merchant\x18\x11 \x01(\x08\x12\x13\n\x0b\x63ustom_data\x18\x12 \x01(\t\x12\x12\n\nnotice_url\x18\x13 \x01(\t\"[\n\x16OnetimePaymentResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"\xb9\x02\n\x13\x41gainPaymentRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x01\x12\x10\n\x08tax_free\x18\x04 \x01(\x01\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x12\n\nbuyer_name\x18\x06 \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x07 \x01(\t\x12\x11\n\tbuyer_tel\x18\x08 \x01(\t\x12\x12\n\nbuyer_addr\x18\t \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\n \x01(\t\x12\x12\n\ncard_quota\x18\x0b \x01(\x05\x12!\n\x19interest_free_by_merchant\x18\x0c \x01(\x08\x12\x13\n\x0b\x63ustom_data\x18\r \x01(\t\x12\x12\n\nnotice_url\x18\x0e \x01(\t\"Y\n\x14\x41gainPaymentResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"\xd9\x01\n\x14PaymentScheduleParam\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x13\n\x0bschedule_at\x18\x02 \x01(\x01\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x05\x12\x10\n\x08tax_free\x18\x04 \x01(\x05\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x12\n\nbuyer_name\x18\x06 \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x07 \x01(\t\x12\x11\n\tbuyer_tel\x18\x08 \x01(\t\x12\x12\n\nbuyer_addr\x18\t \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\n \x01(\t\"\xf9\x02\n\x1bUnitSchedulePaymentResponse\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x01(\t\x12\x0f\n\x07imp_uid\x18\x03 \x01(\t\x12\x13\n\x0bschedule_at\x18\x04 \x01(\x05\x12\x13\n\x0b\x65xecuted_at\x18\x05 \x01(\x05\x12\x12\n\nrevoked_at\x18\x06 \x01(\x05\x12\x0e\n\x06\x61mount\x18\x07 \x01(\x05\x12\x0c\n\x04name\x18\x08 \x01(\t\x12\x12\n\nbuyer_name\x18\t \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\n \x01(\t\x12\x11\n\tbuyer_tel\x18\x0b \x01(\t\x12\x12\n\nbuyer_addr\x18\x0c \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\r \x01(\t\x12\x13\n\x0b\x63ustom_data\x18\x0e \x01(\t\x12\x17\n\x0fschedule_status\x18\x0f \x01(\t\x12\x16\n\x0epayment_status\x18\x10 \x01(\t\x12\x13\n\x0b\x66\x61il_reason\x18\x11 \x01(\t\"\xcf\x01\n\x16SchedulePayemntRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x17\n\x0f\x63hecking_amount\x18\x02 \x01(\x05\x12\x13\n\x0b\x63\x61rd_number\x18\x03 \x01(\t\x12\x0e\n\x06\x65xpiry\x18\x04 \x01(\t\x12\r\n\x05\x62irth\x18\x05 \x01(\t\x12\x12\n\npwd_2digit\x18\x06 \x01(\t\x12\n\n\x02pg\x18\x07 \x01(\t\x12\x32\n\tschedules\x18\x08 \x03(\x0b\x32\x1f.subscribe.PaymentScheduleParam\"r\n\x17SchedulePaymentResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x38\n\x08response\x18\x03 \x03(\x0b\x32&.subscribe.UnitSchedulePaymentResponse\"F\n\x18UnscheduelPaymentRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x03(\t\"t\n\x19UnschedulePaymentResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x38\n\x08response\x18\x03 \x03(\x0b\x32&.subscribe.UnitSchedulePaymentResponse\"1\n\x19GetPaymentScheduleRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\"u\n\x1aGetPaymentScheduleResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x38\n\x08response\x18\x03 \x01(\x0b\x32&.subscribe.UnitSchedulePaymentResponse\"|\n#GetPaymentScheduleByCustomerRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\x12\x0c\n\x04\x66rom\x18\x03 \x01(\x05\x12\n\n\x02to\x18\x04 \x01(\x05\x12\x17\n\x0fschedule_status\x18\x05 \x01(\t\"\x8d\x01\n&NestedGetPaymentScheduleByCustomerData\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x10\n\x08previous\x18\x02 \x01(\x05\x12\x0c\n\x04next\x18\x03 \x01(\x05\x12\x34\n\x04list\x18\x04 \x03(\x0b\x32&.subscribe.UnitSchedulePaymentResponse\"\x8a\x01\n$GetPaymentScheduleByCustomerResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x43\n\x08response\x18\x03 \x01(\x0b\x32\x31.subscribe.NestedGetPaymentScheduleByCustomerData2\xba\x07\n\x10SubscribeService\x12\x87\x01\n\x11OnetimePaymentRPC\x12 .subscribe.OnetimePaymentRequest\x1a!.subscribe.OnetimePaymentResponse\"-\x82\xd3\xe4\x93\x02\'\"\"/api/v1/subscribe/payments/onetime:\x01*\x12\x7f\n\x0f\x41gainPaymentRPC\x12\x1e.subscribe.AgainPaymentRequest\x1a\x1f.subscribe.AgainPaymentResponse\"+\x82\xd3\xe4\x93\x02%\" /api/v1/subscribe/payments/again:\x01*\x12\x8b\x01\n\x12SchedulePaymentRPC\x12!.subscribe.SchedulePayemntRequest\x1a\".subscribe.SchedulePaymentResponse\".\x82\xd3\xe4\x93\x02(\"#/api/v1/subscribe/payments/schedule:\x01*\x12\x93\x01\n\x14UnschedulePaymentRPC\x12#.subscribe.UnscheduelPaymentRequest\x1a$.subscribe.UnschedulePaymentResponse\"0\x82\xd3\xe4\x93\x02*\"%/api/v1/subscribe/payments/unschedule:\x01*\x12\xa4\x01\n\x16GetScheduledPaymentRPC\x12$.subscribe.GetPaymentScheduleRequest\x1a%.subscribe.GetPaymentScheduleResponse\"=\x82\xd3\xe4\x93\x02\x37\"2/api/v1/subscribe/payments/schedule/{merchant_uid}:\x01*\x12\xcf\x01\n#GetScheduledPaymentByCustomerUidRPC\x12..subscribe.GetPaymentScheduleByCustomerRequest\x1a/.subscribe.GetPaymentScheduleByCustomerResponse\"G\x82\xd3\xe4\x93\x02\x41\"</api/v1/subscribe/payments/schedule/customers/{customer_uid}:\x01*B6Z4github.com/iamport/interface/gen_src/go/v1/subscribeb\x06proto3'
   ,
-  dependencies=[v1_dot_payment_dot_payment__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,v1_dot_payment_dot_payment__pb2.DESCRIPTOR,])
 
 
 
@@ -180,8 +181,8 @@ _ONETIMEPAYMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=70,
-  serialized_end=469,
+  serialized_start=100,
+  serialized_end=499,
 )
 
 
@@ -226,8 +227,8 @@ _ONETIMEPAYMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=471,
-  serialized_end=562,
+  serialized_start=501,
+  serialized_end=592,
 )
 
 
@@ -349,8 +350,8 @@ _AGAINPAYMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=565,
-  serialized_end=878,
+  serialized_start=595,
+  serialized_end=908,
 )
 
 
@@ -395,8 +396,8 @@ _AGAINPAYMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=880,
-  serialized_end=969,
+  serialized_start=910,
+  serialized_end=999,
 )
 
 
@@ -490,8 +491,8 @@ _PAYMENTSCHEDULEPARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=972,
-  serialized_end=1189,
+  serialized_start=1002,
+  serialized_end=1219,
 )
 
 
@@ -634,8 +635,8 @@ _UNITSCHEDULEPAYMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1192,
-  serialized_end=1569,
+  serialized_start=1222,
+  serialized_end=1599,
 )
 
 
@@ -715,8 +716,8 @@ _SCHEDULEPAYEMNTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1572,
-  serialized_end=1779,
+  serialized_start=1602,
+  serialized_end=1809,
 )
 
 
@@ -761,8 +762,8 @@ _SCHEDULEPAYMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1781,
-  serialized_end=1895,
+  serialized_start=1811,
+  serialized_end=1925,
 )
 
 
@@ -800,8 +801,8 @@ _UNSCHEDUELPAYMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1897,
-  serialized_end=1967,
+  serialized_start=1927,
+  serialized_end=1997,
 )
 
 
@@ -846,8 +847,8 @@ _UNSCHEDULEPAYMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1969,
-  serialized_end=2085,
+  serialized_start=1999,
+  serialized_end=2115,
 )
 
 
@@ -878,8 +879,8 @@ _GETPAYMENTSCHEDULEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2087,
-  serialized_end=2136,
+  serialized_start=2117,
+  serialized_end=2166,
 )
 
 
@@ -924,8 +925,8 @@ _GETPAYMENTSCHEDULERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2138,
-  serialized_end=2255,
+  serialized_start=2168,
+  serialized_end=2285,
 )
 
 
@@ -984,8 +985,8 @@ _GETPAYMENTSCHEDULEBYCUSTOMERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2257,
-  serialized_end=2381,
+  serialized_start=2287,
+  serialized_end=2411,
 )
 
 
@@ -1037,8 +1038,8 @@ _NESTEDGETPAYMENTSCHEDULEBYCUSTOMERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2384,
-  serialized_end=2525,
+  serialized_start=2414,
+  serialized_end=2555,
 )
 
 
@@ -1083,8 +1084,8 @@ _GETPAYMENTSCHEDULEBYCUSTOMERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2528,
-  serialized_end=2666,
+  serialized_start=2558,
+  serialized_end=2696,
 )
 
 _ONETIMEPAYMENTRESPONSE.fields_by_name['response'].message_type = v1_dot_payment_dot_payment__pb2._PAYMENT
@@ -1219,4 +1220,80 @@ _sym_db.RegisterMessage(GetPaymentScheduleByCustomerResponse)
 
 
 DESCRIPTOR._options = None
+
+_SUBSCRIBESERVICE = _descriptor.ServiceDescriptor(
+  name='SubscribeService',
+  full_name='subscribe.SubscribeService',
+  file=DESCRIPTOR,
+  index=0,
+  serialized_options=None,
+  create_key=_descriptor._internal_create_key,
+  serialized_start=2699,
+  serialized_end=3653,
+  methods=[
+  _descriptor.MethodDescriptor(
+    name='OnetimePaymentRPC',
+    full_name='subscribe.SubscribeService.OnetimePaymentRPC',
+    index=0,
+    containing_service=None,
+    input_type=_ONETIMEPAYMENTREQUEST,
+    output_type=_ONETIMEPAYMENTRESPONSE,
+    serialized_options=b'\202\323\344\223\002\'\"\"/api/v1/subscribe/payments/onetime:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='AgainPaymentRPC',
+    full_name='subscribe.SubscribeService.AgainPaymentRPC',
+    index=1,
+    containing_service=None,
+    input_type=_AGAINPAYMENTREQUEST,
+    output_type=_AGAINPAYMENTRESPONSE,
+    serialized_options=b'\202\323\344\223\002%\" /api/v1/subscribe/payments/again:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='SchedulePaymentRPC',
+    full_name='subscribe.SubscribeService.SchedulePaymentRPC',
+    index=2,
+    containing_service=None,
+    input_type=_SCHEDULEPAYEMNTREQUEST,
+    output_type=_SCHEDULEPAYMENTRESPONSE,
+    serialized_options=b'\202\323\344\223\002(\"#/api/v1/subscribe/payments/schedule:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='UnschedulePaymentRPC',
+    full_name='subscribe.SubscribeService.UnschedulePaymentRPC',
+    index=3,
+    containing_service=None,
+    input_type=_UNSCHEDUELPAYMENTREQUEST,
+    output_type=_UNSCHEDULEPAYMENTRESPONSE,
+    serialized_options=b'\202\323\344\223\002*\"%/api/v1/subscribe/payments/unschedule:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetScheduledPaymentRPC',
+    full_name='subscribe.SubscribeService.GetScheduledPaymentRPC',
+    index=4,
+    containing_service=None,
+    input_type=_GETPAYMENTSCHEDULEREQUEST,
+    output_type=_GETPAYMENTSCHEDULERESPONSE,
+    serialized_options=b'\202\323\344\223\0027\"2/api/v1/subscribe/payments/schedule/{merchant_uid}:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetScheduledPaymentByCustomerUidRPC',
+    full_name='subscribe.SubscribeService.GetScheduledPaymentByCustomerUidRPC',
+    index=5,
+    containing_service=None,
+    input_type=_GETPAYMENTSCHEDULEBYCUSTOMERREQUEST,
+    output_type=_GETPAYMENTSCHEDULEBYCUSTOMERRESPONSE,
+    serialized_options=b'\202\323\344\223\002A\"</api/v1/subscribe/payments/schedule/customers/{customer_uid}:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+])
+_sym_db.RegisterServiceDescriptor(_SUBSCRIBESERVICE)
+
+DESCRIPTOR.services_by_name['SubscribeService'] = _SUBSCRIBESERVICE
+
 # @@protoc_insertion_point(module_scope)

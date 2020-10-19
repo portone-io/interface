@@ -5,6 +5,8 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
+import '../payment/payment.pbjson.dart' as $2;
+
 const OnetimePaymentRequest$json = const {
   '1': 'OnetimePaymentRequest',
   '2': const [
@@ -191,5 +193,37 @@ const GetPaymentScheduleByCustomerResponse$json = const {
     const {'1': 'message', '3': 2, '4': 1, '5': 9, '10': 'message'},
     const {'1': 'response', '3': 3, '4': 1, '5': 11, '6': '.subscribe.NestedGetPaymentScheduleByCustomerData', '10': 'response'},
   ],
+};
+
+const SubscribeServiceBase$json = const {
+  '1': 'SubscribeService',
+  '2': const [
+    const {'1': 'OnetimePaymentRPC', '2': '.subscribe.OnetimePaymentRequest', '3': '.subscribe.OnetimePaymentResponse', '4': const {}},
+    const {'1': 'AgainPaymentRPC', '2': '.subscribe.AgainPaymentRequest', '3': '.subscribe.AgainPaymentResponse', '4': const {}},
+    const {'1': 'SchedulePaymentRPC', '2': '.subscribe.SchedulePayemntRequest', '3': '.subscribe.SchedulePaymentResponse', '4': const {}},
+    const {'1': 'UnschedulePaymentRPC', '2': '.subscribe.UnscheduelPaymentRequest', '3': '.subscribe.UnschedulePaymentResponse', '4': const {}},
+    const {'1': 'GetScheduledPaymentRPC', '2': '.subscribe.GetPaymentScheduleRequest', '3': '.subscribe.GetPaymentScheduleResponse', '4': const {}},
+    const {'1': 'GetScheduledPaymentByCustomerUidRPC', '2': '.subscribe.GetPaymentScheduleByCustomerRequest', '3': '.subscribe.GetPaymentScheduleByCustomerResponse', '4': const {}},
+  ],
+};
+
+const SubscribeServiceBase$messageJson = const {
+  '.subscribe.OnetimePaymentRequest': OnetimePaymentRequest$json,
+  '.subscribe.OnetimePaymentResponse': OnetimePaymentResponse$json,
+  '.payment.Payment': $2.Payment$json,
+  '.payment.CancelHistory': $2.CancelHistory$json,
+  '.subscribe.AgainPaymentRequest': AgainPaymentRequest$json,
+  '.subscribe.AgainPaymentResponse': AgainPaymentResponse$json,
+  '.subscribe.SchedulePayemntRequest': SchedulePayemntRequest$json,
+  '.subscribe.PaymentScheduleParam': PaymentScheduleParam$json,
+  '.subscribe.SchedulePaymentResponse': SchedulePaymentResponse$json,
+  '.subscribe.UnitSchedulePaymentResponse': UnitSchedulePaymentResponse$json,
+  '.subscribe.UnscheduelPaymentRequest': UnscheduelPaymentRequest$json,
+  '.subscribe.UnschedulePaymentResponse': UnschedulePaymentResponse$json,
+  '.subscribe.GetPaymentScheduleRequest': GetPaymentScheduleRequest$json,
+  '.subscribe.GetPaymentScheduleResponse': GetPaymentScheduleResponse$json,
+  '.subscribe.GetPaymentScheduleByCustomerRequest': GetPaymentScheduleByCustomerRequest$json,
+  '.subscribe.GetPaymentScheduleByCustomerResponse': GetPaymentScheduleByCustomerResponse$json,
+  '.subscribe.NestedGetPaymentScheduleByCustomerData': NestedGetPaymentScheduleByCustomerData$json,
 };
 

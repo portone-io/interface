@@ -11,6 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,8 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z2github.com/iamport/interface/gen_src/go/v1/payment',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x18v1/payment/payment.proto\x12\x07payment\"\xc5\x07\n\x07Payment\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x05\x12\x11\n\tapply_num\x18\x02 \x01(\t\x12\x11\n\tbank_code\x18\x03 \x01(\x05\x12\x11\n\tbank_name\x18\x04 \x01(\t\x12\x12\n\nbuyer_addr\x18\x05 \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x06 \x01(\t\x12\x12\n\nbuyer_name\x18\x07 \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\x08 \x01(\t\x12\x11\n\tbuyer_tel\x18\t \x01(\t\x12\x15\n\rcancel_amount\x18\n \x01(\x05\x12.\n\x0e\x63\x61ncel_history\x18\x0b \x03(\x0b\x32\x16.payment.CancelHistory\x12\x15\n\rcancel_reason\x18\x0c \x01(\t\x12\x1b\n\x13\x63\x61ncel_receipt_urls\x18\r \x03(\t\x12\x14\n\x0c\x63\x61ncelled_at\x18\x0e \x01(\x05\x12\x11\n\tcard_code\x18\x0f \x01(\t\x12\x11\n\tcard_name\x18\x10 \x01(\t\x12\x13\n\x0b\x63\x61rd_number\x18\x11 \x01(\t\x12\x12\n\ncard_quota\x18\x12 \x01(\x05\x12\x11\n\tcard_type\x18\x13 \x01(\x05\x12\x1b\n\x13\x63\x61sh_receipt_issued\x18\x14 \x01(\x08\x12\x0f\n\x07\x63hannel\x18\x15 \x01(\t\x12\x10\n\x08\x63urrency\x18\x16 \x01(\t\x12\x13\n\x0b\x63ustom_data\x18\x17 \x01(\t\x12\x14\n\x0c\x63ustomer_uid\x18\x18 \x01(\t\x12\x1a\n\x12\x63ustomer_uid_usage\x18\x19 \x01(\t\x12\x0e\n\x06\x65scrow\x18\x1a \x01(\x08\x12\x13\n\x0b\x66\x61il_reason\x18\x1b \x01(\t\x12\x11\n\tfailed_at\x18\x1c \x01(\x05\x12\x0f\n\x07imp_uid\x18\x1d \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x1e \x01(\t\x12\x0c\n\x04name\x18\x1f \x01(\t\x12\x0f\n\x07paid_at\x18  \x01(\x05\x12\x12\n\npay_method\x18! \x01(\t\x12\r\n\x05pg_id\x18\" \x01(\t\x12\x13\n\x0bpg_provider\x18# \x01(\t\x12\x0e\n\x06pg_tid\x18$ \x01(\t\x12\x13\n\x0breceipt_url\x18% \x01(\t\x12\x12\n\nstarted_at\x18& \x01(\x05\x12\x0e\n\x06status\x18\' \x01(\t\x12\x12\n\nuser_agent\x18( \x01(\t\x12\x12\n\nvbank_code\x18) \x01(\t\x12\x12\n\nvbank_date\x18* \x01(\x05\x12\x14\n\x0cvbank_holder\x18+ \x01(\t\x12\x17\n\x0fvbank_issued_at\x18, \x01(\x05\x12\x12\n\nvbank_name\x18- \x01(\t\x12\x11\n\tvbank_num\x18. \x01(\t\"j\n\rCancelHistory\x12\x0e\n\x06pg_tid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x05\x12\x14\n\x0c\x63\x61ncelled_at\x18\x03 \x01(\x05\x12\x0e\n\x06reason\x18\x04 \x01(\t\x12\x13\n\x0breceipt_url\x18\x05 \x01(\t\"\\\n\x0bPaymentPage\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x10\n\x08previous\x18\x02 \x01(\x05\x12\x0c\n\x04next\x18\x03 \x01(\x05\x12\x1e\n\x04list\x18\x04 \x03(\x0b\x32\x10.payment.Payment\"V\n\x14PaymentBalanceDetail\x12\x10\n\x08tax_free\x18\x01 \x01(\x05\x12\x0e\n\x06supply\x18\x02 \x01(\x05\x12\x0b\n\x03vat\x18\x03 \x01(\x05\x12\x0f\n\x07service\x18\x04 \x01(\x05\"\x9b\x02\n\x0ePaymentBalance\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x05\x12\x33\n\x0c\x63\x61sh_receipt\x18\x02 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12.\n\x07primary\x18\x03 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x30\n\tsecondary\x18\x04 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12/\n\x08\x64iscount\x18\x05 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x31\n\thistories\x18\x06 \x03(\x0b\x32\x1e.payment.PaymentBalanceHistory\"\xf0\x01\n\x15PaymentBalanceHistory\x12\x33\n\x0c\x63\x61sh_receipt\x18\x01 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12.\n\x07primary\x18\x02 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x30\n\tsecondary\x18\x03 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12/\n\x08\x64iscount\x18\x04 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x0f\n\x07\x63reated\x18\x05 \x01(\x05\"!\n\x0ePaymentRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\"T\n\x0fPaymentResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"\"\n\x0fPaymentsRequest\x12\x0f\n\x07imp_uid\x18\x01 \x03(\t\"U\n\x10PaymentsResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x03(\x0b\x32\x10.payment.Payment\"a\n\x1aPaymentsMerchantUidRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x0c\n\x04page\x18\x03 \x01(\x05\x12\x0f\n\x07sorting\x18\x04 \x01(\t\"d\n\x1bPaymentsMerchantUidResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12&\n\x08response\x18\x03 \x01(\x0b\x32\x14.payment.PaymentPage\"n\n\x14PaymentStatusRequest\x12\x0e\n\x06status\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x0c\n\x04\x66rom\x18\x04 \x01(\x05\x12\n\n\x02to\x18\x05 \x01(\x05\x12\x0f\n\x07sorting\x18\x06 \x01(\t\"^\n\x15PaymentStatusResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12&\n\x08response\x18\x03 \x01(\x0b\x32\x14.payment.PaymentPage\"R\n\x19PaymentMerchantUidRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x0f\n\x07sorting\x18\x03 \x01(\t\"_\n\x1aPaymentMerchantUidResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"\xc5\x01\n\x14PaymentCancelRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x01\x12\x10\n\x08tax_free\x18\x04 \x01(\x01\x12\x10\n\x08\x63hecksum\x18\x05 \x01(\x01\x12\x0e\n\x06reason\x18\x06 \x01(\t\x12\x15\n\rrefund_holder\x18\x07 \x01(\t\x12\x13\n\x0brefund_bank\x18\x08 \x01(\t\x12\x16\n\x0erefund_account\x18\t \x01(\t\"Z\n\x15PaymentCancelResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"(\n\x15PaymentBalanceRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\"b\n\x16PaymentBalanceResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12)\n\x08response\x18\x03 \x01(\x0b\x32\x17.payment.PaymentBalance\"/\n\x07Prepare\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x05\"=\n\x15PaymentPrepareRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x01\"[\n\x16PaymentPrepareResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.PrepareB4Z2github.com/iamport/interface/gen_src/go/v1/paymentb\x06proto3'
-)
+  serialized_pb=b'\n\x18v1/payment/payment.proto\x12\x07payment\x1a\x1cgoogle/api/annotations.proto\"\xc5\x07\n\x07Payment\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x05\x12\x11\n\tapply_num\x18\x02 \x01(\t\x12\x11\n\tbank_code\x18\x03 \x01(\x05\x12\x11\n\tbank_name\x18\x04 \x01(\t\x12\x12\n\nbuyer_addr\x18\x05 \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x06 \x01(\t\x12\x12\n\nbuyer_name\x18\x07 \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\x08 \x01(\t\x12\x11\n\tbuyer_tel\x18\t \x01(\t\x12\x15\n\rcancel_amount\x18\n \x01(\x05\x12.\n\x0e\x63\x61ncel_history\x18\x0b \x03(\x0b\x32\x16.payment.CancelHistory\x12\x15\n\rcancel_reason\x18\x0c \x01(\t\x12\x1b\n\x13\x63\x61ncel_receipt_urls\x18\r \x03(\t\x12\x14\n\x0c\x63\x61ncelled_at\x18\x0e \x01(\x05\x12\x11\n\tcard_code\x18\x0f \x01(\t\x12\x11\n\tcard_name\x18\x10 \x01(\t\x12\x13\n\x0b\x63\x61rd_number\x18\x11 \x01(\t\x12\x12\n\ncard_quota\x18\x12 \x01(\x05\x12\x11\n\tcard_type\x18\x13 \x01(\x05\x12\x1b\n\x13\x63\x61sh_receipt_issued\x18\x14 \x01(\x08\x12\x0f\n\x07\x63hannel\x18\x15 \x01(\t\x12\x10\n\x08\x63urrency\x18\x16 \x01(\t\x12\x13\n\x0b\x63ustom_data\x18\x17 \x01(\t\x12\x14\n\x0c\x63ustomer_uid\x18\x18 \x01(\t\x12\x1a\n\x12\x63ustomer_uid_usage\x18\x19 \x01(\t\x12\x0e\n\x06\x65scrow\x18\x1a \x01(\x08\x12\x13\n\x0b\x66\x61il_reason\x18\x1b \x01(\t\x12\x11\n\tfailed_at\x18\x1c \x01(\x05\x12\x0f\n\x07imp_uid\x18\x1d \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x1e \x01(\t\x12\x0c\n\x04name\x18\x1f \x01(\t\x12\x0f\n\x07paid_at\x18  \x01(\x05\x12\x12\n\npay_method\x18! \x01(\t\x12\r\n\x05pg_id\x18\" \x01(\t\x12\x13\n\x0bpg_provider\x18# \x01(\t\x12\x0e\n\x06pg_tid\x18$ \x01(\t\x12\x13\n\x0breceipt_url\x18% \x01(\t\x12\x12\n\nstarted_at\x18& \x01(\x05\x12\x0e\n\x06status\x18\' \x01(\t\x12\x12\n\nuser_agent\x18( \x01(\t\x12\x12\n\nvbank_code\x18) \x01(\t\x12\x12\n\nvbank_date\x18* \x01(\x05\x12\x14\n\x0cvbank_holder\x18+ \x01(\t\x12\x17\n\x0fvbank_issued_at\x18, \x01(\x05\x12\x12\n\nvbank_name\x18- \x01(\t\x12\x11\n\tvbank_num\x18. \x01(\t\"j\n\rCancelHistory\x12\x0e\n\x06pg_tid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x05\x12\x14\n\x0c\x63\x61ncelled_at\x18\x03 \x01(\x05\x12\x0e\n\x06reason\x18\x04 \x01(\t\x12\x13\n\x0breceipt_url\x18\x05 \x01(\t\"\\\n\x0bPaymentPage\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x10\n\x08previous\x18\x02 \x01(\x05\x12\x0c\n\x04next\x18\x03 \x01(\x05\x12\x1e\n\x04list\x18\x04 \x03(\x0b\x32\x10.payment.Payment\"V\n\x14PaymentBalanceDetail\x12\x10\n\x08tax_free\x18\x01 \x01(\x05\x12\x0e\n\x06supply\x18\x02 \x01(\x05\x12\x0b\n\x03vat\x18\x03 \x01(\x05\x12\x0f\n\x07service\x18\x04 \x01(\x05\"\x9b\x02\n\x0ePaymentBalance\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x05\x12\x33\n\x0c\x63\x61sh_receipt\x18\x02 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12.\n\x07primary\x18\x03 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x30\n\tsecondary\x18\x04 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12/\n\x08\x64iscount\x18\x05 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x31\n\thistories\x18\x06 \x03(\x0b\x32\x1e.payment.PaymentBalanceHistory\"\xf0\x01\n\x15PaymentBalanceHistory\x12\x33\n\x0c\x63\x61sh_receipt\x18\x01 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12.\n\x07primary\x18\x02 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x30\n\tsecondary\x18\x03 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12/\n\x08\x64iscount\x18\x04 \x01(\x0b\x32\x1d.payment.PaymentBalanceDetail\x12\x0f\n\x07\x63reated\x18\x05 \x01(\x05\"!\n\x0ePaymentRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\"T\n\x0fPaymentResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"\"\n\x0fPaymentsRequest\x12\x0f\n\x07imp_uid\x18\x01 \x03(\t\"U\n\x10PaymentsResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x03(\x0b\x32\x10.payment.Payment\"a\n\x1aPaymentsMerchantUidRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x0c\n\x04page\x18\x03 \x01(\x05\x12\x0f\n\x07sorting\x18\x04 \x01(\t\"d\n\x1bPaymentsMerchantUidResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12&\n\x08response\x18\x03 \x01(\x0b\x32\x14.payment.PaymentPage\"n\n\x14PaymentStatusRequest\x12\x0e\n\x06status\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x0c\n\x04\x66rom\x18\x04 \x01(\x05\x12\n\n\x02to\x18\x05 \x01(\x05\x12\x0f\n\x07sorting\x18\x06 \x01(\t\"^\n\x15PaymentStatusResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12&\n\x08response\x18\x03 \x01(\x0b\x32\x14.payment.PaymentPage\"R\n\x19PaymentMerchantUidRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x0f\n\x07sorting\x18\x03 \x01(\t\"_\n\x1aPaymentMerchantUidResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"\xc5\x01\n\x14PaymentCancelRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x01\x12\x10\n\x08tax_free\x18\x04 \x01(\x01\x12\x10\n\x08\x63hecksum\x18\x05 \x01(\x01\x12\x0e\n\x06reason\x18\x06 \x01(\t\x12\x15\n\rrefund_holder\x18\x07 \x01(\t\x12\x13\n\x0brefund_bank\x18\x08 \x01(\t\x12\x16\n\x0erefund_account\x18\t \x01(\t\"Z\n\x15PaymentCancelResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Payment\"(\n\x15PaymentBalanceRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\"b\n\x16PaymentBalanceResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12)\n\x08response\x18\x03 \x01(\x0b\x32\x17.payment.PaymentBalance\"/\n\x07Prepare\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x05\"=\n\x15PaymentPrepareRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x01\"[\n\x16PaymentPrepareResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x01(\x0b\x32\x10.payment.Prepare\"0\n\x18PaymentGetPrepareRequest\x12\x14\n\x0cmerchant_uid\x18\x01 \x01(\t2\x8e\t\n\x0ePaymentService\x12\x80\x01\n\x11PaymentBalanceRPC\x12\x1e.payment.PaymentBalanceRequest\x1a\x1f.payment.PaymentBalanceResponse\"*\x82\xd3\xe4\x93\x02$\x12\"/api/v1/payments/{imp_uid}/balance\x12\x63\n\nPaymentRPC\x12\x17.payment.PaymentRequest\x1a\x18.payment.PaymentResponse\"\"\x82\xd3\xe4\x93\x02\x1c\x12\x1a/api/v1/payments/{imp_uid}\x12\\\n\x0bPaymentsRPC\x12\x18.payment.PaymentsRequest\x1a\x19.payment.PaymentsResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/api/v1/payments\x12\x97\x01\n\x15PaymentMerchantUidRPC\x12\".payment.PaymentMerchantUidRequest\x1a#.payment.PaymentMerchantUidResponse\"5\x82\xd3\xe4\x93\x02/\x12-/api/v1/payments/find/{merchant_uid}/{status}\x12\x9d\x01\n\x16PaymentsMerchantUidRPC\x12#.payment.PaymentsMerchantUidRequest\x1a$.payment.PaymentsMerchantUidResponse\"8\x82\xd3\xe4\x93\x02\x32\x12\x30/api/v1/payments/findAll/{merchant_uid}/{status}\x12|\n\x11PaymentsStatusRPC\x12\x1d.payment.PaymentStatusRequest\x1a\x1e.payment.PaymentStatusResponse\"(\x82\xd3\xe4\x93\x02\"\x12 /api/v1/payments/status/{status}\x12u\n\x10PaymentCanselRPC\x12\x1d.payment.PaymentCancelRequest\x1a\x1e.payment.PaymentCancelResponse\"\"\x82\xd3\xe4\x93\x02\x1c\"\x17/api/v1/payments/cancel:\x01*\x12y\n\x11PaymentPrepareRPC\x12\x1e.payment.PaymentPrepareRequest\x1a\x1f.payment.PaymentPrepareResponse\"#\x82\xd3\xe4\x93\x02\x1d\"\x18/api/v1/payments/prepare:\x01*\x12\x8b\x01\n\x14PaymentGetPrepareRPC\x12!.payment.PaymentGetPrepareRequest\x1a\x1f.payment.PaymentPrepareResponse\"/\x82\xd3\xe4\x93\x02)\x12\'/api/v1/payments/prepare/{merchant_uid}B4Z2github.com/iamport/interface/gen_src/go/v1/paymentb\x06proto3'
+  ,
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
 
 
@@ -367,8 +369,8 @@ _PAYMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=38,
-  serialized_end=1003,
+  serialized_start=68,
+  serialized_end=1033,
 )
 
 
@@ -427,8 +429,8 @@ _CANCELHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1005,
-  serialized_end=1111,
+  serialized_start=1035,
+  serialized_end=1141,
 )
 
 
@@ -480,8 +482,8 @@ _PAYMENTPAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1113,
-  serialized_end=1205,
+  serialized_start=1143,
+  serialized_end=1235,
 )
 
 
@@ -533,8 +535,8 @@ _PAYMENTBALANCEDETAIL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1207,
-  serialized_end=1293,
+  serialized_start=1237,
+  serialized_end=1323,
 )
 
 
@@ -600,8 +602,8 @@ _PAYMENTBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1296,
-  serialized_end=1579,
+  serialized_start=1326,
+  serialized_end=1609,
 )
 
 
@@ -660,8 +662,8 @@ _PAYMENTBALANCEHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1582,
-  serialized_end=1822,
+  serialized_start=1612,
+  serialized_end=1852,
 )
 
 
@@ -692,8 +694,8 @@ _PAYMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1824,
-  serialized_end=1857,
+  serialized_start=1854,
+  serialized_end=1887,
 )
 
 
@@ -738,8 +740,8 @@ _PAYMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1859,
-  serialized_end=1943,
+  serialized_start=1889,
+  serialized_end=1973,
 )
 
 
@@ -770,8 +772,8 @@ _PAYMENTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1945,
-  serialized_end=1979,
+  serialized_start=1975,
+  serialized_end=2009,
 )
 
 
@@ -816,8 +818,8 @@ _PAYMENTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1981,
-  serialized_end=2066,
+  serialized_start=2011,
+  serialized_end=2096,
 )
 
 
@@ -869,8 +871,8 @@ _PAYMENTSMERCHANTUIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2068,
-  serialized_end=2165,
+  serialized_start=2098,
+  serialized_end=2195,
 )
 
 
@@ -915,8 +917,8 @@ _PAYMENTSMERCHANTUIDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2167,
-  serialized_end=2267,
+  serialized_start=2197,
+  serialized_end=2297,
 )
 
 
@@ -982,8 +984,8 @@ _PAYMENTSTATUSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2269,
-  serialized_end=2379,
+  serialized_start=2299,
+  serialized_end=2409,
 )
 
 
@@ -1028,8 +1030,8 @@ _PAYMENTSTATUSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2381,
-  serialized_end=2475,
+  serialized_start=2411,
+  serialized_end=2505,
 )
 
 
@@ -1074,8 +1076,8 @@ _PAYMENTMERCHANTUIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2477,
-  serialized_end=2559,
+  serialized_start=2507,
+  serialized_end=2589,
 )
 
 
@@ -1120,8 +1122,8 @@ _PAYMENTMERCHANTUIDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2561,
-  serialized_end=2656,
+  serialized_start=2591,
+  serialized_end=2686,
 )
 
 
@@ -1208,8 +1210,8 @@ _PAYMENTCANCELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2659,
-  serialized_end=2856,
+  serialized_start=2689,
+  serialized_end=2886,
 )
 
 
@@ -1254,8 +1256,8 @@ _PAYMENTCANCELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2858,
-  serialized_end=2948,
+  serialized_start=2888,
+  serialized_end=2978,
 )
 
 
@@ -1286,8 +1288,8 @@ _PAYMENTBALANCEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2950,
-  serialized_end=2990,
+  serialized_start=2980,
+  serialized_end=3020,
 )
 
 
@@ -1332,8 +1334,8 @@ _PAYMENTBALANCERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2992,
-  serialized_end=3090,
+  serialized_start=3022,
+  serialized_end=3120,
 )
 
 
@@ -1371,8 +1373,8 @@ _PREPARE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3092,
-  serialized_end=3139,
+  serialized_start=3122,
+  serialized_end=3169,
 )
 
 
@@ -1410,8 +1412,8 @@ _PAYMENTPREPAREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3141,
-  serialized_end=3202,
+  serialized_start=3171,
+  serialized_end=3232,
 )
 
 
@@ -1456,8 +1458,40 @@ _PAYMENTPREPARERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3204,
-  serialized_end=3295,
+  serialized_start=3234,
+  serialized_end=3325,
+)
+
+
+_PAYMENTGETPREPAREREQUEST = _descriptor.Descriptor(
+  name='PaymentGetPrepareRequest',
+  full_name='payment.PaymentGetPrepareRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='merchant_uid', full_name='payment.PaymentGetPrepareRequest.merchant_uid', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3327,
+  serialized_end=3375,
 )
 
 _PAYMENT.fields_by_name['cancel_history'].message_type = _CANCELHISTORY
@@ -1502,6 +1536,7 @@ DESCRIPTOR.message_types_by_name['PaymentBalanceResponse'] = _PAYMENTBALANCERESP
 DESCRIPTOR.message_types_by_name['Prepare'] = _PREPARE
 DESCRIPTOR.message_types_by_name['PaymentPrepareRequest'] = _PAYMENTPREPAREREQUEST
 DESCRIPTOR.message_types_by_name['PaymentPrepareResponse'] = _PAYMENTPREPARERESPONSE
+DESCRIPTOR.message_types_by_name['PaymentGetPrepareRequest'] = _PAYMENTGETPREPAREREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Payment = _reflection.GeneratedProtocolMessageType('Payment', (_message.Message,), {
@@ -1665,6 +1700,119 @@ PaymentPrepareResponse = _reflection.GeneratedProtocolMessageType('PaymentPrepar
   })
 _sym_db.RegisterMessage(PaymentPrepareResponse)
 
+PaymentGetPrepareRequest = _reflection.GeneratedProtocolMessageType('PaymentGetPrepareRequest', (_message.Message,), {
+  'DESCRIPTOR' : _PAYMENTGETPREPAREREQUEST,
+  '__module__' : 'v1.payment.payment_pb2'
+  # @@protoc_insertion_point(class_scope:payment.PaymentGetPrepareRequest)
+  })
+_sym_db.RegisterMessage(PaymentGetPrepareRequest)
+
 
 DESCRIPTOR._options = None
+
+_PAYMENTSERVICE = _descriptor.ServiceDescriptor(
+  name='PaymentService',
+  full_name='payment.PaymentService',
+  file=DESCRIPTOR,
+  index=0,
+  serialized_options=None,
+  create_key=_descriptor._internal_create_key,
+  serialized_start=3378,
+  serialized_end=4544,
+  methods=[
+  _descriptor.MethodDescriptor(
+    name='PaymentBalanceRPC',
+    full_name='payment.PaymentService.PaymentBalanceRPC',
+    index=0,
+    containing_service=None,
+    input_type=_PAYMENTBALANCEREQUEST,
+    output_type=_PAYMENTBALANCERESPONSE,
+    serialized_options=b'\202\323\344\223\002$\022\"/api/v1/payments/{imp_uid}/balance',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='PaymentRPC',
+    full_name='payment.PaymentService.PaymentRPC',
+    index=1,
+    containing_service=None,
+    input_type=_PAYMENTREQUEST,
+    output_type=_PAYMENTRESPONSE,
+    serialized_options=b'\202\323\344\223\002\034\022\032/api/v1/payments/{imp_uid}',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='PaymentsRPC',
+    full_name='payment.PaymentService.PaymentsRPC',
+    index=2,
+    containing_service=None,
+    input_type=_PAYMENTSREQUEST,
+    output_type=_PAYMENTSRESPONSE,
+    serialized_options=b'\202\323\344\223\002\022\022\020/api/v1/payments',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='PaymentMerchantUidRPC',
+    full_name='payment.PaymentService.PaymentMerchantUidRPC',
+    index=3,
+    containing_service=None,
+    input_type=_PAYMENTMERCHANTUIDREQUEST,
+    output_type=_PAYMENTMERCHANTUIDRESPONSE,
+    serialized_options=b'\202\323\344\223\002/\022-/api/v1/payments/find/{merchant_uid}/{status}',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='PaymentsMerchantUidRPC',
+    full_name='payment.PaymentService.PaymentsMerchantUidRPC',
+    index=4,
+    containing_service=None,
+    input_type=_PAYMENTSMERCHANTUIDREQUEST,
+    output_type=_PAYMENTSMERCHANTUIDRESPONSE,
+    serialized_options=b'\202\323\344\223\0022\0220/api/v1/payments/findAll/{merchant_uid}/{status}',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='PaymentsStatusRPC',
+    full_name='payment.PaymentService.PaymentsStatusRPC',
+    index=5,
+    containing_service=None,
+    input_type=_PAYMENTSTATUSREQUEST,
+    output_type=_PAYMENTSTATUSRESPONSE,
+    serialized_options=b'\202\323\344\223\002\"\022 /api/v1/payments/status/{status}',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='PaymentCanselRPC',
+    full_name='payment.PaymentService.PaymentCanselRPC',
+    index=6,
+    containing_service=None,
+    input_type=_PAYMENTCANCELREQUEST,
+    output_type=_PAYMENTCANCELRESPONSE,
+    serialized_options=b'\202\323\344\223\002\034\"\027/api/v1/payments/cancel:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='PaymentPrepareRPC',
+    full_name='payment.PaymentService.PaymentPrepareRPC',
+    index=7,
+    containing_service=None,
+    input_type=_PAYMENTPREPAREREQUEST,
+    output_type=_PAYMENTPREPARERESPONSE,
+    serialized_options=b'\202\323\344\223\002\035\"\030/api/v1/payments/prepare:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='PaymentGetPrepareRPC',
+    full_name='payment.PaymentService.PaymentGetPrepareRPC',
+    index=8,
+    containing_service=None,
+    input_type=_PAYMENTGETPREPAREREQUEST,
+    output_type=_PAYMENTPREPARERESPONSE,
+    serialized_options=b'\202\323\344\223\002)\022\'/api/v1/payments/prepare/{merchant_uid}',
+    create_key=_descriptor._internal_create_key,
+  ),
+])
+_sym_db.RegisterServiceDescriptor(_PAYMENTSERVICE)
+
+DESCRIPTOR.services_by_name['PaymentService'] = _PAYMENTSERVICE
+
 # @@protoc_insertion_point(module_scope)

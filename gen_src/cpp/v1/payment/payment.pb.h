@@ -32,6 +32,7 @@
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
+#include "google/api/annotations.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_v1_2fpayment_2fpayment_2eproto
@@ -47,7 +48,7 @@ struct TableStruct_v1_2fpayment_2fpayment_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[23]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[24]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -82,6 +83,9 @@ extern PaymentCancelRequestDefaultTypeInternal _PaymentCancelRequest_default_ins
 class PaymentCancelResponse;
 class PaymentCancelResponseDefaultTypeInternal;
 extern PaymentCancelResponseDefaultTypeInternal _PaymentCancelResponse_default_instance_;
+class PaymentGetPrepareRequest;
+class PaymentGetPrepareRequestDefaultTypeInternal;
+extern PaymentGetPrepareRequestDefaultTypeInternal _PaymentGetPrepareRequest_default_instance_;
 class PaymentMerchantUidRequest;
 class PaymentMerchantUidRequestDefaultTypeInternal;
 extern PaymentMerchantUidRequestDefaultTypeInternal _PaymentMerchantUidRequest_default_instance_;
@@ -135,6 +139,7 @@ template<> ::payment::PaymentBalanceRequest* Arena::CreateMaybeMessage<::payment
 template<> ::payment::PaymentBalanceResponse* Arena::CreateMaybeMessage<::payment::PaymentBalanceResponse>(Arena*);
 template<> ::payment::PaymentCancelRequest* Arena::CreateMaybeMessage<::payment::PaymentCancelRequest>(Arena*);
 template<> ::payment::PaymentCancelResponse* Arena::CreateMaybeMessage<::payment::PaymentCancelResponse>(Arena*);
+template<> ::payment::PaymentGetPrepareRequest* Arena::CreateMaybeMessage<::payment::PaymentGetPrepareRequest>(Arena*);
 template<> ::payment::PaymentMerchantUidRequest* Arena::CreateMaybeMessage<::payment::PaymentMerchantUidRequest>(Arena*);
 template<> ::payment::PaymentMerchantUidResponse* Arena::CreateMaybeMessage<::payment::PaymentMerchantUidResponse>(Arena*);
 template<> ::payment::PaymentPage* Arena::CreateMaybeMessage<::payment::PaymentPage>(Arena*);
@@ -5021,6 +5026,150 @@ class PaymentPrepareResponse PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
   ::payment::Prepare* response_;
   ::PROTOBUF_NAMESPACE_ID::int32 code_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_v1_2fpayment_2fpayment_2eproto;
+};
+// -------------------------------------------------------------------
+
+class PaymentGetPrepareRequest PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:payment.PaymentGetPrepareRequest) */ {
+ public:
+  inline PaymentGetPrepareRequest() : PaymentGetPrepareRequest(nullptr) {}
+  virtual ~PaymentGetPrepareRequest();
+
+  PaymentGetPrepareRequest(const PaymentGetPrepareRequest& from);
+  PaymentGetPrepareRequest(PaymentGetPrepareRequest&& from) noexcept
+    : PaymentGetPrepareRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline PaymentGetPrepareRequest& operator=(const PaymentGetPrepareRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PaymentGetPrepareRequest& operator=(PaymentGetPrepareRequest&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const PaymentGetPrepareRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PaymentGetPrepareRequest* internal_default_instance() {
+    return reinterpret_cast<const PaymentGetPrepareRequest*>(
+               &_PaymentGetPrepareRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    23;
+
+  friend void swap(PaymentGetPrepareRequest& a, PaymentGetPrepareRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PaymentGetPrepareRequest* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(PaymentGetPrepareRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline PaymentGetPrepareRequest* New() const final {
+    return CreateMaybeMessage<PaymentGetPrepareRequest>(nullptr);
+  }
+
+  PaymentGetPrepareRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<PaymentGetPrepareRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const PaymentGetPrepareRequest& from);
+  void MergeFrom(const PaymentGetPrepareRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(PaymentGetPrepareRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "payment.PaymentGetPrepareRequest";
+  }
+  protected:
+  explicit PaymentGetPrepareRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_v1_2fpayment_2fpayment_2eproto);
+    return ::descriptor_table_v1_2fpayment_2fpayment_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMerchantUidFieldNumber = 1,
+  };
+  // string merchant_uid = 1;
+  void clear_merchant_uid();
+  const std::string& merchant_uid() const;
+  void set_merchant_uid(const std::string& value);
+  void set_merchant_uid(std::string&& value);
+  void set_merchant_uid(const char* value);
+  void set_merchant_uid(const char* value, size_t size);
+  std::string* mutable_merchant_uid();
+  std::string* release_merchant_uid();
+  void set_allocated_merchant_uid(std::string* merchant_uid);
+  private:
+  const std::string& _internal_merchant_uid() const;
+  void _internal_set_merchant_uid(const std::string& value);
+  std::string* _internal_mutable_merchant_uid();
+  public:
+
+  // @@protoc_insertion_point(class_scope:payment.PaymentGetPrepareRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr merchant_uid_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_v1_2fpayment_2fpayment_2eproto;
 };
@@ -11232,9 +11381,77 @@ inline void PaymentPrepareResponse::set_allocated_response(::payment::Prepare* r
   // @@protoc_insertion_point(field_set_allocated:payment.PaymentPrepareResponse.response)
 }
 
+// -------------------------------------------------------------------
+
+// PaymentGetPrepareRequest
+
+// string merchant_uid = 1;
+inline void PaymentGetPrepareRequest::clear_merchant_uid() {
+  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& PaymentGetPrepareRequest::merchant_uid() const {
+  // @@protoc_insertion_point(field_get:payment.PaymentGetPrepareRequest.merchant_uid)
+  return _internal_merchant_uid();
+}
+inline void PaymentGetPrepareRequest::set_merchant_uid(const std::string& value) {
+  _internal_set_merchant_uid(value);
+  // @@protoc_insertion_point(field_set:payment.PaymentGetPrepareRequest.merchant_uid)
+}
+inline std::string* PaymentGetPrepareRequest::mutable_merchant_uid() {
+  // @@protoc_insertion_point(field_mutable:payment.PaymentGetPrepareRequest.merchant_uid)
+  return _internal_mutable_merchant_uid();
+}
+inline const std::string& PaymentGetPrepareRequest::_internal_merchant_uid() const {
+  return merchant_uid_.Get();
+}
+inline void PaymentGetPrepareRequest::_internal_set_merchant_uid(const std::string& value) {
+  
+  merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void PaymentGetPrepareRequest::set_merchant_uid(std::string&& value) {
+  
+  merchant_uid_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:payment.PaymentGetPrepareRequest.merchant_uid)
+}
+inline void PaymentGetPrepareRequest::set_merchant_uid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:payment.PaymentGetPrepareRequest.merchant_uid)
+}
+inline void PaymentGetPrepareRequest::set_merchant_uid(const char* value,
+    size_t size) {
+  
+  merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:payment.PaymentGetPrepareRequest.merchant_uid)
+}
+inline std::string* PaymentGetPrepareRequest::_internal_mutable_merchant_uid() {
+  
+  return merchant_uid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* PaymentGetPrepareRequest::release_merchant_uid() {
+  // @@protoc_insertion_point(field_release:payment.PaymentGetPrepareRequest.merchant_uid)
+  return merchant_uid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void PaymentGetPrepareRequest::set_allocated_merchant_uid(std::string* merchant_uid) {
+  if (merchant_uid != nullptr) {
+    
+  } else {
+    
+  }
+  merchant_uid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), merchant_uid,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:payment.PaymentGetPrepareRequest.merchant_uid)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

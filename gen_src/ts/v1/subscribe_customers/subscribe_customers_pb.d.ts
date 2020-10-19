@@ -2,7 +2,9 @@
 // file: v1/subscribe_customers/subscribe_customers.proto
 
 import * as jspb from "google-protobuf";
+import * as google_api_annotations_pb from "../../google/api/annotations_pb";
 import * as v1_payment_payment_pb from "../../v1/payment/payment_pb";
+import * as v1_subscribe_subscribe_pb from "../../v1/subscribe/subscribe_pb";
 
 export class CustomerBillingKey extends jspb.Message {
   getCardCode(): string;

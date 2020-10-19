@@ -11,6 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,8 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z7github.com/iamport/interface/gen_src/go/v2/authenticate',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\"v2/authenticate/authenticate.proto\x12\x0f\x61uthenticate_v2\"3\n\x0cTokenRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\nimp_secret\x18\x02 \x01(\t\"B\n\tTokenData\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x12\n\nexpired_at\x18\x02 \x01(\x05\x12\x0b\n\x03now\x18\x03 \x01(\x05\"\\\n\rTokenResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12,\n\x08response\x18\x03 \x01(\x0b\x32\x1a.authenticate_v2.TokenData\"N\n\x15PubKeyRegisterRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\npublic_key\x18\x02 \x01(\t\x12\x10\n\x08password\x18\x03 \x01(\t\"7\n\x16PubKeyRegisterResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\tB9Z7github.com/iamport/interface/gen_src/go/v2/authenticateb\x06proto3'
-)
+  serialized_pb=b'\n\"v2/authenticate/authenticate.proto\x12\x0f\x61uthenticate_v2\x1a\x1cgoogle/api/annotations.proto\"3\n\x0cTokenRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\nimp_secret\x18\x02 \x01(\t\"B\n\tTokenData\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x12\n\nexpired_at\x18\x02 \x01(\x05\x12\x0b\n\x03now\x18\x03 \x01(\x05\"\\\n\rTokenResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12,\n\x08response\x18\x03 \x01(\x0b\x32\x1a.authenticate_v2.TokenData\"N\n\x15PubKeyRegisterRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\npublic_key\x18\x02 \x01(\t\x12\x10\n\x08password\x18\x03 \x01(\t\"7\n\x16PubKeyRegisterResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t2\x8f\x02\n\x13\x41uthenticateService\x12l\n\x08TokenRPC\x12\x1d.authenticate_v2.TokenRequest\x1a\x1e.authenticate_v2.TokenResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x16/api/v2/users/getToken:\x01*\x12\x89\x01\n\x11RegisterPubKeyRPC\x12&.authenticate_v2.PubKeyRegisterRequest\x1a\'.authenticate_v2.PubKeyRegisterResponse\"#\x82\xd3\xe4\x93\x02\x1d\"\x18/api/v2/users/public_key:\x01*B9Z7github.com/iamport/interface/gen_src/go/v2/authenticateb\x06proto3'
+  ,
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
 
 
@@ -59,8 +61,8 @@ _TOKENREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55,
-  serialized_end=106,
+  serialized_start=85,
+  serialized_end=136,
 )
 
 
@@ -105,8 +107,8 @@ _TOKENDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=108,
-  serialized_end=174,
+  serialized_start=138,
+  serialized_end=204,
 )
 
 
@@ -151,8 +153,8 @@ _TOKENRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=176,
-  serialized_end=268,
+  serialized_start=206,
+  serialized_end=298,
 )
 
 
@@ -197,8 +199,8 @@ _PUBKEYREGISTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=270,
-  serialized_end=348,
+  serialized_start=300,
+  serialized_end=378,
 )
 
 
@@ -236,8 +238,8 @@ _PUBKEYREGISTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=350,
-  serialized_end=405,
+  serialized_start=380,
+  serialized_end=435,
 )
 
 _TOKENRESPONSE.fields_by_name['response'].message_type = _TOKENDATA
@@ -285,4 +287,40 @@ _sym_db.RegisterMessage(PubKeyRegisterResponse)
 
 
 DESCRIPTOR._options = None
+
+_AUTHENTICATESERVICE = _descriptor.ServiceDescriptor(
+  name='AuthenticateService',
+  full_name='authenticate_v2.AuthenticateService',
+  file=DESCRIPTOR,
+  index=0,
+  serialized_options=None,
+  create_key=_descriptor._internal_create_key,
+  serialized_start=438,
+  serialized_end=709,
+  methods=[
+  _descriptor.MethodDescriptor(
+    name='TokenRPC',
+    full_name='authenticate_v2.AuthenticateService.TokenRPC',
+    index=0,
+    containing_service=None,
+    input_type=_TOKENREQUEST,
+    output_type=_TOKENRESPONSE,
+    serialized_options=b'\202\323\344\223\002\033\"\026/api/v2/users/getToken:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='RegisterPubKeyRPC',
+    full_name='authenticate_v2.AuthenticateService.RegisterPubKeyRPC',
+    index=1,
+    containing_service=None,
+    input_type=_PUBKEYREGISTERREQUEST,
+    output_type=_PUBKEYREGISTERRESPONSE,
+    serialized_options=b'\202\323\344\223\002\035\"\030/api/v2/users/public_key:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+])
+_sym_db.RegisterServiceDescriptor(_AUTHENTICATESERVICE)
+
+DESCRIPTOR.services_by_name['AuthenticateService'] = _AUTHENTICATESERVICE
+
 # @@protoc_insertion_point(module_scope)

@@ -2,6 +2,7 @@
 // file: v1/payment/payment.proto
 
 import * as jspb from "google-protobuf";
+import * as google_api_annotations_pb from "../../google/api/annotations_pb";
 
 export class Payment extends jspb.Message {
   getAmount(): number;
@@ -902,6 +903,26 @@ export namespace PaymentPrepareResponse {
     code: number,
     message: string,
     response?: Prepare.AsObject,
+  }
+}
+
+export class PaymentGetPrepareRequest extends jspb.Message {
+  getMerchantUid(): string;
+  setMerchantUid(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PaymentGetPrepareRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: PaymentGetPrepareRequest): PaymentGetPrepareRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: PaymentGetPrepareRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PaymentGetPrepareRequest;
+  static deserializeBinaryFromReader(message: PaymentGetPrepareRequest, reader: jspb.BinaryReader): PaymentGetPrepareRequest;
+}
+
+export namespace PaymentGetPrepareRequest {
+  export type AsObject = {
+    merchantUid: string,
   }
 }
 

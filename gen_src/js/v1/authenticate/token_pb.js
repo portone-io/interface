@@ -12,6 +12,8 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var google_api_annotations_pb = require('../../google/api/annotations_pb.js');
+goog.object.extend(proto, google_api_annotations_pb);
 goog.exportSymbol('proto.authenticate.Token', null, global);
 goog.exportSymbol('proto.authenticate.TokenRequest', null, global);
 goog.exportSymbol('proto.authenticate.TokenResponse', null, global);

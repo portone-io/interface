@@ -5,6 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
+import '../payment/payment.pbjson.dart' as $2;
+import '../subscribe/subscribe.pbjson.dart' as $4;
+
 const CustomerBillingKey$json = const {
   '1': 'CustomerBillingKey',
   '2': const [
@@ -126,5 +129,38 @@ const GetPaidByBillingKeyListResponse$json = const {
     const {'1': 'message', '3': 2, '4': 1, '5': 9, '10': 'message'},
     const {'1': 'response', '3': 3, '4': 1, '5': 11, '6': '.subscribe_customers.NestedGetPaidByBillingKeyListData', '10': 'response'},
   ],
+};
+
+const SubscribeCustomersServiceBase$json = const {
+  '1': 'SubscribeCustomersService',
+  '2': const [
+    const {'1': 'GetMultipleCustomerBillingKeyRPC', '2': '.subscribe_customers.GetMultipleCustomerBillingKeyRequest', '3': '.subscribe_customers.GetMultipleCustomerBillingKeyResponse', '4': const {}},
+    const {'1': 'DeleteCustomerBillingKeyRPC', '2': '.subscribe_customers.DeleteCustomerBillingKeyRequest', '3': '.subscribe_customers.DeleteCustomerBillingKeyResponse', '4': const {}},
+    const {'1': 'GetCustomerBillingKeyRPC', '2': '.subscribe_customers.GetCustomerBillingKeyRequest', '3': '.subscribe_customers.GetCustomerBillingKeyResponse', '4': const {}},
+    const {'1': 'InsertCustomerBillingKeyRPC', '2': '.subscribe_customers.InsertCustomerBillingKeyRequest', '3': '.subscribe_customers.InsertCustomerBillingKeyResponse', '4': const {}},
+    const {'1': 'GetPaidByBillingKeyListRPC', '2': '.subscribe_customers.GetPaidByBillingKeyListRequest', '3': '.subscribe_customers.GetPaidByBillingKeyListResponse', '4': const {}},
+    const {'1': 'GetPaymentScheduleByCustomerRPC', '2': '.subscribe.GetPaymentScheduleByCustomerRequest', '3': '.subscribe.GetPaymentScheduleByCustomerResponse', '4': const {}},
+  ],
+};
+
+const SubscribeCustomersServiceBase$messageJson = const {
+  '.subscribe_customers.GetMultipleCustomerBillingKeyRequest': GetMultipleCustomerBillingKeyRequest$json,
+  '.subscribe_customers.GetMultipleCustomerBillingKeyResponse': GetMultipleCustomerBillingKeyResponse$json,
+  '.subscribe_customers.CustomerBillingKey': CustomerBillingKey$json,
+  '.subscribe_customers.DeleteCustomerBillingKeyRequest': DeleteCustomerBillingKeyRequest$json,
+  '.subscribe_customers.DeleteCustomerBillingKeyResponse': DeleteCustomerBillingKeyResponse$json,
+  '.subscribe_customers.GetCustomerBillingKeyRequest': GetCustomerBillingKeyRequest$json,
+  '.subscribe_customers.GetCustomerBillingKeyResponse': GetCustomerBillingKeyResponse$json,
+  '.subscribe_customers.InsertCustomerBillingKeyRequest': InsertCustomerBillingKeyRequest$json,
+  '.subscribe_customers.InsertCustomerBillingKeyResponse': InsertCustomerBillingKeyResponse$json,
+  '.subscribe_customers.GetPaidByBillingKeyListRequest': GetPaidByBillingKeyListRequest$json,
+  '.subscribe_customers.GetPaidByBillingKeyListResponse': GetPaidByBillingKeyListResponse$json,
+  '.subscribe_customers.NestedGetPaidByBillingKeyListData': NestedGetPaidByBillingKeyListData$json,
+  '.payment.Payment': $2.Payment$json,
+  '.payment.CancelHistory': $2.CancelHistory$json,
+  '.subscribe.GetPaymentScheduleByCustomerRequest': $4.GetPaymentScheduleByCustomerRequest$json,
+  '.subscribe.GetPaymentScheduleByCustomerResponse': $4.GetPaymentScheduleByCustomerResponse$json,
+  '.subscribe.NestedGetPaymentScheduleByCustomerData': $4.NestedGetPaymentScheduleByCustomerData$json,
+  '.subscribe.UnitSchedulePaymentResponse': $4.UnitSchedulePaymentResponse$json,
 };
 

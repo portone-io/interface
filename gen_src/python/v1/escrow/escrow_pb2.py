@@ -11,6 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,8 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z1github.com/iamport/interface/gen_src/go/v1/escrow',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x16v1/escrow/escrow.proto\x12\x06\x65scrow\"A\n\x04Info\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03tel\x18\x02 \x01(\t\x12\x0c\n\x04\x61\x64\x64r\x18\x03 \x01(\t\x12\x10\n\x08postcode\x18\x04 \x01(\t\"N\n\x05Logis\x12\x0f\n\x07\x63ompany\x18\x01 \x01(\t\x12\x0f\n\x07invoice\x18\x02 \x01(\t\x12\x0f\n\x07sent_at\x18\x03 \x01(\x05\x12\x12\n\napplied_at\x18\x04 \x01(\x05\"k\n\rEscrowRequest\x12\x1c\n\x06sender\x18\x01 \x01(\x0b\x32\x0c.escrow.Info\x12\x1e\n\x08receiver\x18\x02 \x01(\x0b\x32\x0c.escrow.Info\x12\x1c\n\x05logis\x18\x03 \x01(\x0b\x32\r.escrow.Logis\"P\n\x0e\x45scrowResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x1f\n\x08response\x18\x03 \x01(\x0b\x32\r.escrow.LogisB3Z1github.com/iamport/interface/gen_src/go/v1/escrowb\x06proto3'
-)
+  serialized_pb=b'\n\x16v1/escrow/escrow.proto\x12\x06\x65scrow\x1a\x1cgoogle/api/annotations.proto\"A\n\x04Info\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03tel\x18\x02 \x01(\t\x12\x0c\n\x04\x61\x64\x64r\x18\x03 \x01(\t\x12\x10\n\x08postcode\x18\x04 \x01(\t\"N\n\x05Logis\x12\x0f\n\x07\x63ompany\x18\x01 \x01(\t\x12\x0f\n\x07invoice\x18\x02 \x01(\t\x12\x0f\n\x07sent_at\x18\x03 \x01(\x05\x12\x12\n\napplied_at\x18\x04 \x01(\x05\"|\n\rEscrowRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x1c\n\x06sender\x18\x02 \x01(\x0b\x32\x0c.escrow.Info\x12\x1e\n\x08receiver\x18\x03 \x01(\x0b\x32\x0c.escrow.Info\x12\x1c\n\x05logis\x18\x04 \x01(\x0b\x32\r.escrow.Logis\"P\n\x0e\x45scrowResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x1f\n\x08response\x18\x03 \x01(\x0b\x32\r.escrow.Logis2\xe6\x01\n\rEscrowService\x12j\n\rEscrowPostRPC\x12\x15.escrow.EscrowRequest\x1a\x16.escrow.EscrowResponse\"*\x82\xd3\xe4\x93\x02$\"\x1f/api/v1/escrows/logis/{imp_uid}:\x01*\x12i\n\x0c\x45scrowPutRPC\x12\x15.escrow.EscrowRequest\x1a\x16.escrow.EscrowResponse\"*\x82\xd3\xe4\x93\x02$\x1a\x1f/api/v1/escrows/logis/{imp_uid}:\x01*B3Z1github.com/iamport/interface/gen_src/go/v1/escrowb\x06proto3'
+  ,
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
 
 
@@ -73,8 +75,8 @@ _INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34,
-  serialized_end=99,
+  serialized_start=64,
+  serialized_end=129,
 )
 
 
@@ -126,8 +128,8 @@ _LOGIS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=101,
-  serialized_end=179,
+  serialized_start=131,
+  serialized_end=209,
 )
 
 
@@ -140,22 +142,29 @@ _ESCROWREQUEST = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sender', full_name='escrow.EscrowRequest.sender', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='imp_uid', full_name='escrow.EscrowRequest.imp_uid', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='receiver', full_name='escrow.EscrowRequest.receiver', index=1,
+      name='sender', full_name='escrow.EscrowRequest.sender', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='logis', full_name='escrow.EscrowRequest.logis', index=2,
+      name='receiver', full_name='escrow.EscrowRequest.receiver', index=2,
       number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='logis', full_name='escrow.EscrowRequest.logis', index=3,
+      number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -172,8 +181,8 @@ _ESCROWREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=181,
-  serialized_end=288,
+  serialized_start=211,
+  serialized_end=335,
 )
 
 
@@ -218,8 +227,8 @@ _ESCROWRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=290,
-  serialized_end=370,
+  serialized_start=337,
+  serialized_end=417,
 )
 
 _ESCROWREQUEST.fields_by_name['sender'].message_type = _INFO
@@ -262,4 +271,40 @@ _sym_db.RegisterMessage(EscrowResponse)
 
 
 DESCRIPTOR._options = None
+
+_ESCROWSERVICE = _descriptor.ServiceDescriptor(
+  name='EscrowService',
+  full_name='escrow.EscrowService',
+  file=DESCRIPTOR,
+  index=0,
+  serialized_options=None,
+  create_key=_descriptor._internal_create_key,
+  serialized_start=420,
+  serialized_end=650,
+  methods=[
+  _descriptor.MethodDescriptor(
+    name='EscrowPostRPC',
+    full_name='escrow.EscrowService.EscrowPostRPC',
+    index=0,
+    containing_service=None,
+    input_type=_ESCROWREQUEST,
+    output_type=_ESCROWRESPONSE,
+    serialized_options=b'\202\323\344\223\002$\"\037/api/v1/escrows/logis/{imp_uid}:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='EscrowPutRPC',
+    full_name='escrow.EscrowService.EscrowPutRPC',
+    index=1,
+    containing_service=None,
+    input_type=_ESCROWREQUEST,
+    output_type=_ESCROWRESPONSE,
+    serialized_options=b'\202\323\344\223\002$\032\037/api/v1/escrows/logis/{imp_uid}:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+])
+_sym_db.RegisterServiceDescriptor(_ESCROWSERVICE)
+
+DESCRIPTOR.services_by_name['EscrowService'] = _ESCROWSERVICE
+
 # @@protoc_insertion_point(module_scope)

@@ -1,7 +1,18 @@
 syntax = "proto3";
 package authenticate;
 
+import "google/api/annotations.proto";
+
 option go_package = "github.com/iamport/interface/gen_src/go/v1/authenticate";
+
+service TokenService {
+    rpc TokenRPC(TokenRequest) returns (TokenResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/users/getToken"
+            body: "*"
+        };
+    }
+}
 
 message Token {
     string access_token = 1;
@@ -19,3 +30,4 @@ message TokenResponse {
     string message = 2;
     Token response = 3;
 }
+

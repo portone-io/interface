@@ -2,6 +2,7 @@
 // file: v1/subscribe/subscribe.proto
 
 import * as jspb from "google-protobuf";
+import * as google_api_annotations_pb from "../../google/api/annotations_pb";
 import * as v1_payment_payment_pb from "../../v1/payment/payment_pb";
 
 export class OnetimePaymentRequest extends jspb.Message {

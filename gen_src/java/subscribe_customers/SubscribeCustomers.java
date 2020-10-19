@@ -12522,55 +12522,88 @@ public final class SubscribeCustomers {
   static {
     java.lang.String[] descriptorData = {
       "\n0v1/subscribe_customers/subscribe_custo" +
-      "mers.proto\022\023subscribe_customers\032\030v1/paym" +
-      "ent/payment.proto\"\266\002\n\022CustomerBillingKey" +
-      "\022\021\n\tcard_code\030\001 \001(\t\022\021\n\tcard_name\030\002 \001(\t\022\023" +
-      "\n\013card_number\030\003 \001(\t\022\021\n\tcard_type\030\004 \001(\005\022\025" +
-      "\n\rcustomer_addr\030\005 \001(\t\022\026\n\016customer_email\030" +
-      "\006 \001(\t\022\025\n\rcustomer_name\030\007 \001(\t\022\031\n\021customer" +
-      "_postcode\030\010 \001(\t\022\024\n\014customer_tel\030\t \001(\t\022\024\n" +
-      "\014customer_uid\030\n \001(\t\022\020\n\010inserted\030\013 \001(\005\022\r\n" +
-      "\005pg_id\030\014 \001(\t\022\023\n\013pg_provider\030\r \001(\t\022\017\n\007upd" +
-      "ated\030\016 \001(\005\"<\n$GetMultipleCustomerBilling" +
-      "KeyRequest\022\024\n\014customer_uid\030\001 \003(\t\"\201\001\n%Get" +
-      "MultipleCustomerBillingKeyResponse\022\014\n\004co" +
-      "de\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0229\n\010response\030\003 " +
-      "\003(\0132\'.subscribe_customers.CustomerBillin" +
-      "gKey\"Z\n\037DeleteCustomerBillingKeyRequest\022" +
-      "\024\n\014customer_uid\030\001 \001(\t\022\016\n\006reason\030\002 \001(\t\022\021\n" +
-      "\trequester\030\003 \001(\t\"|\n DeleteCustomerBillin" +
-      "gKeyResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 " +
-      "\001(\t\0229\n\010response\030\003 \001(\0132\'.subscribe_custom" +
-      "ers.CustomerBillingKey\"4\n\034GetCustomerBil" +
-      "lingKeyRequest\022\024\n\014customer_uid\030\001 \001(\t\"y\n\035" +
-      "GetCustomerBillingKeyResponse\022\014\n\004code\030\001 " +
-      "\001(\005\022\017\n\007message\030\002 \001(\t\0229\n\010response\030\003 \001(\0132\'" +
-      ".subscribe_customers.CustomerBillingKey\"" +
-      "\202\002\n\037InsertCustomerBillingKeyRequest\022\024\n\014c" +
-      "ustomer_uid\030\001 \001(\t\022\n\n\002pg\030\002 \001(\t\022\023\n\013card_nu" +
-      "mber\030\003 \001(\t\022\016\n\006expiry\030\004 \001(\t\022\r\n\005birth\030\005 \001(" +
-      "\t\022\022\n\npwd_2digit\030\006 \001(\t\022\025\n\rcustomer_name\030\007" +
-      " \001(\t\022\024\n\014customer_tel\030\010 \001(\t\022\026\n\016customer_e" +
-      "mail\030\t \001(\t\022\025\n\rcustomer_addr\030\n \001(\t\022\031\n\021cus" +
-      "tomer_postcode\030\013 \001(\t\"|\n InsertCustomerBi" +
-      "llingKeyResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messag" +
-      "e\030\002 \001(\t\0229\n\010response\030\003 \001(\0132\'.subscribe_cu" +
-      "stomers.CustomerBillingKey\"D\n\036GetPaidByB" +
-      "illingKeyListRequest\022\024\n\014customer_uid\030\001 \001" +
-      "(\t\022\014\n\004page\030\002 \001(\005\"r\n!NestedGetPaidByBilli" +
-      "ngKeyListData\022\r\n\005total\030\001 \001(\005\022\020\n\010previous" +
-      "\030\002 \001(\005\022\014\n\004next\030\003 \001(\005\022\036\n\004list\030\004 \003(\0132\020.pay" +
-      "ment.Payment\"\212\001\n\037GetPaidByBillingKeyList" +
-      "Response\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022" +
-      "H\n\010response\030\003 \001(\01326.subscribe_customers." +
-      "NestedGetPaidByBillingKeyListDataB@Z>git" +
-      "hub.com/iamport/interface/gen_src/go/v1/" +
-      "subscribe_customersb\006proto3"
+      "mers.proto\022\023subscribe_customers\032\034google/" +
+      "api/annotations.proto\032\030v1/payment/paymen" +
+      "t.proto\032\034v1/subscribe/subscribe.proto\"\266\002" +
+      "\n\022CustomerBillingKey\022\021\n\tcard_code\030\001 \001(\t\022" +
+      "\021\n\tcard_name\030\002 \001(\t\022\023\n\013card_number\030\003 \001(\t\022" +
+      "\021\n\tcard_type\030\004 \001(\005\022\025\n\rcustomer_addr\030\005 \001(" +
+      "\t\022\026\n\016customer_email\030\006 \001(\t\022\025\n\rcustomer_na" +
+      "me\030\007 \001(\t\022\031\n\021customer_postcode\030\010 \001(\t\022\024\n\014c" +
+      "ustomer_tel\030\t \001(\t\022\024\n\014customer_uid\030\n \001(\t\022" +
+      "\020\n\010inserted\030\013 \001(\005\022\r\n\005pg_id\030\014 \001(\t\022\023\n\013pg_p" +
+      "rovider\030\r \001(\t\022\017\n\007updated\030\016 \001(\005\"<\n$GetMul" +
+      "tipleCustomerBillingKeyRequest\022\024\n\014custom" +
+      "er_uid\030\001 \003(\t\"\201\001\n%GetMultipleCustomerBill" +
+      "ingKeyResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030" +
+      "\002 \001(\t\0229\n\010response\030\003 \003(\0132\'.subscribe_cust" +
+      "omers.CustomerBillingKey\"Z\n\037DeleteCustom" +
+      "erBillingKeyRequest\022\024\n\014customer_uid\030\001 \001(" +
+      "\t\022\016\n\006reason\030\002 \001(\t\022\021\n\trequester\030\003 \001(\t\"|\n " +
+      "DeleteCustomerBillingKeyResponse\022\014\n\004code" +
+      "\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0229\n\010response\030\003 \001(" +
+      "\0132\'.subscribe_customers.CustomerBillingK" +
+      "ey\"4\n\034GetCustomerBillingKeyRequest\022\024\n\014cu" +
+      "stomer_uid\030\001 \001(\t\"y\n\035GetCustomerBillingKe" +
+      "yResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t" +
+      "\0229\n\010response\030\003 \001(\0132\'.subscribe_customers" +
+      ".CustomerBillingKey\"\202\002\n\037InsertCustomerBi" +
+      "llingKeyRequest\022\024\n\014customer_uid\030\001 \001(\t\022\n\n" +
+      "\002pg\030\002 \001(\t\022\023\n\013card_number\030\003 \001(\t\022\016\n\006expiry" +
+      "\030\004 \001(\t\022\r\n\005birth\030\005 \001(\t\022\022\n\npwd_2digit\030\006 \001(" +
+      "\t\022\025\n\rcustomer_name\030\007 \001(\t\022\024\n\014customer_tel" +
+      "\030\010 \001(\t\022\026\n\016customer_email\030\t \001(\t\022\025\n\rcustom" +
+      "er_addr\030\n \001(\t\022\031\n\021customer_postcode\030\013 \001(\t" +
+      "\"|\n InsertCustomerBillingKeyResponse\022\014\n\004" +
+      "code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0229\n\010response\030" +
+      "\003 \001(\0132\'.subscribe_customers.CustomerBill" +
+      "ingKey\"D\n\036GetPaidByBillingKeyListRequest" +
+      "\022\024\n\014customer_uid\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\"r\n!" +
+      "NestedGetPaidByBillingKeyListData\022\r\n\005tot" +
+      "al\030\001 \001(\005\022\020\n\010previous\030\002 \001(\005\022\014\n\004next\030\003 \001(\005" +
+      "\022\036\n\004list\030\004 \003(\0132\020.payment.Payment\"\212\001\n\037Get" +
+      "PaidByBillingKeyListResponse\022\014\n\004code\030\001 \001" +
+      "(\005\022\017\n\007message\030\002 \001(\t\022H\n\010response\030\003 \001(\01326." +
+      "subscribe_customers.NestedGetPaidByBilli" +
+      "ngKeyListData2\243\t\n\031SubscribeCustomersServ" +
+      "ice\022\276\001\n GetMultipleCustomerBillingKeyRPC" +
+      "\0229.subscribe_customers.GetMultipleCustom" +
+      "erBillingKeyRequest\032:.subscribe_customer" +
+      "s.GetMultipleCustomerBillingKeyResponse\"" +
+      "#\202\323\344\223\002\035\022\033/api/v1/subscribe/customers\022\276\001\n" +
+      "\033DeleteCustomerBillingKeyRPC\0224.subscribe" +
+      "_customers.DeleteCustomerBillingKeyReque" +
+      "st\0325.subscribe_customers.DeleteCustomerB" +
+      "illingKeyResponse\"2\202\323\344\223\002,**/api/v1/subsc" +
+      "ribe/customers/{customer_uid}\022\265\001\n\030GetCus" +
+      "tomerBillingKeyRPC\0221.subscribe_customers" +
+      ".GetCustomerBillingKeyRequest\0322.subscrib" +
+      "e_customers.GetCustomerBillingKeyRespons" +
+      "e\"2\202\323\344\223\002,\022*/api/v1/subscribe/customers/{" +
+      "customer_uid}\022\301\001\n\033InsertCustomerBillingK" +
+      "eyRPC\0224.subscribe_customers.InsertCustom" +
+      "erBillingKeyRequest\0325.subscribe_customer" +
+      "s.InsertCustomerBillingKeyResponse\"5\202\323\344\223" +
+      "\002/\"*/api/v1/subscribe/customers/{custome" +
+      "r_uid}:\001*\022\304\001\n\032GetPaidByBillingKeyListRPC" +
+      "\0223.subscribe_customers.GetPaidByBillingK" +
+      "eyListRequest\0324.subscribe_customers.GetP" +
+      "aidByBillingKeyListResponse\";\202\323\344\223\0025\0223/ap" +
+      "i/v1/subscribe/customers/{customer_uid}/" +
+      "payments\022\300\001\n\037GetPaymentScheduleByCustome" +
+      "rRPC\022..subscribe.GetPaymentScheduleByCus" +
+      "tomerRequest\032/.subscribe.GetPaymentSched" +
+      "uleByCustomerResponse\"<\202\323\344\223\0026\0224/api/v1/s" +
+      "ubscribe/customers/{customer_uid}/schedu" +
+      "lesB@Z>github.com/iamport/interface/gen_" +
+      "src/go/v1/subscribe_customersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           payment.PaymentOuterClass.getDescriptor(),
+          subscribe.Subscribe.getDescriptor(),
         });
     internal_static_subscribe_customers_CustomerBillingKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -12644,7 +12677,14 @@ public final class SubscribeCustomers {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_customers_GetPaidByBillingKeyListResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     payment.PaymentOuterClass.getDescriptor();
+    subscribe.Subscribe.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

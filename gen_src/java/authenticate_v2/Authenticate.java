@@ -3858,21 +3858,30 @@ public final class Authenticate {
   static {
     java.lang.String[] descriptorData = {
       "\n\"v2/authenticate/authenticate.proto\022\017au" +
-      "thenticate_v2\"3\n\014TokenRequest\022\017\n\007imp_key" +
-      "\030\001 \001(\t\022\022\n\nimp_secret\030\002 \001(\t\"B\n\tTokenData\022" +
-      "\024\n\014access_token\030\001 \001(\t\022\022\n\nexpired_at\030\002 \001(" +
-      "\005\022\013\n\003now\030\003 \001(\005\"\\\n\rTokenResponse\022\014\n\004code\030" +
-      "\001 \001(\005\022\017\n\007message\030\002 \001(\t\022,\n\010response\030\003 \001(\013" +
-      "2\032.authenticate_v2.TokenData\"N\n\025PubKeyRe" +
-      "gisterRequest\022\017\n\007imp_key\030\001 \001(\t\022\022\n\npublic" +
-      "_key\030\002 \001(\t\022\020\n\010password\030\003 \001(\t\"7\n\026PubKeyRe" +
-      "gisterResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030" +
-      "\002 \001(\tB9Z7github.com/iamport/interface/ge" +
-      "n_src/go/v2/authenticateb\006proto3"
+      "thenticate_v2\032\034google/api/annotations.pr" +
+      "oto\"3\n\014TokenRequest\022\017\n\007imp_key\030\001 \001(\t\022\022\n\n" +
+      "imp_secret\030\002 \001(\t\"B\n\tTokenData\022\024\n\014access_" +
+      "token\030\001 \001(\t\022\022\n\nexpired_at\030\002 \001(\005\022\013\n\003now\030\003" +
+      " \001(\005\"\\\n\rTokenResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007m" +
+      "essage\030\002 \001(\t\022,\n\010response\030\003 \001(\0132\032.authent" +
+      "icate_v2.TokenData\"N\n\025PubKeyRegisterRequ" +
+      "est\022\017\n\007imp_key\030\001 \001(\t\022\022\n\npublic_key\030\002 \001(\t" +
+      "\022\020\n\010password\030\003 \001(\t\"7\n\026PubKeyRegisterResp" +
+      "onse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t2\217\002\n\023" +
+      "AuthenticateService\022l\n\010TokenRPC\022\035.authen" +
+      "ticate_v2.TokenRequest\032\036.authenticate_v2" +
+      ".TokenResponse\"!\202\323\344\223\002\033\"\026/api/v2/users/ge" +
+      "tToken:\001*\022\211\001\n\021RegisterPubKeyRPC\022&.authen" +
+      "ticate_v2.PubKeyRegisterRequest\032\'.authen" +
+      "ticate_v2.PubKeyRegisterResponse\"#\202\323\344\223\002\035" +
+      "\"\030/api/v2/users/public_key:\001*B9Z7github." +
+      "com/iamport/interface/gen_src/go/v2/auth" +
+      "enticateb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_authenticate_v2_TokenRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3904,6 +3913,12 @@ public final class Authenticate {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_authenticate_v2_PubKeyRegisterResponse_descriptor,
         new java.lang.String[] { "Code", "Message", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

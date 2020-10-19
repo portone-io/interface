@@ -5,11 +5,12 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
+import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../payment/payment.pb.dart' as $0;
+import '../payment/payment.pb.dart' as $2;
 
 class OnetimePaymentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OnetimePaymentRequest', package: const $pb.PackageName('subscribe'), createEmptyInstance: create)
@@ -226,7 +227,7 @@ class OnetimePaymentResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OnetimePaymentResponse', package: const $pb.PackageName('subscribe'), createEmptyInstance: create)
     ..a<$core.int>(1, 'code', $pb.PbFieldType.O3)
     ..aOS(2, 'message')
-    ..aOM<$0.Payment>(3, 'response', subBuilder: $0.Payment.create)
+    ..aOM<$2.Payment>(3, 'response', subBuilder: $2.Payment.create)
     ..hasRequiredFields = false
   ;
 
@@ -264,15 +265,15 @@ class OnetimePaymentResponse extends $pb.GeneratedMessage {
   void clearMessage() => clearField(2);
 
   @$pb.TagNumber(3)
-  $0.Payment get response => $_getN(2);
+  $2.Payment get response => $_getN(2);
   @$pb.TagNumber(3)
-  set response($0.Payment v) { setField(3, v); }
+  set response($2.Payment v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasResponse() => $_has(2);
   @$pb.TagNumber(3)
   void clearResponse() => clearField(3);
   @$pb.TagNumber(3)
-  $0.Payment ensureResponse() => $_ensure(2);
+  $2.Payment ensureResponse() => $_ensure(2);
 }
 
 class AgainPaymentRequest extends $pb.GeneratedMessage {
@@ -440,7 +441,7 @@ class AgainPaymentResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AgainPaymentResponse', package: const $pb.PackageName('subscribe'), createEmptyInstance: create)
     ..a<$core.int>(1, 'code', $pb.PbFieldType.O3)
     ..aOS(2, 'message')
-    ..aOM<$0.Payment>(3, 'response', subBuilder: $0.Payment.create)
+    ..aOM<$2.Payment>(3, 'response', subBuilder: $2.Payment.create)
     ..hasRequiredFields = false
   ;
 
@@ -478,15 +479,15 @@ class AgainPaymentResponse extends $pb.GeneratedMessage {
   void clearMessage() => clearField(2);
 
   @$pb.TagNumber(3)
-  $0.Payment get response => $_getN(2);
+  $2.Payment get response => $_getN(2);
   @$pb.TagNumber(3)
-  set response($0.Payment v) { setField(3, v); }
+  set response($2.Payment v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasResponse() => $_has(2);
   @$pb.TagNumber(3)
   void clearResponse() => clearField(3);
   @$pb.TagNumber(3)
-  $0.Payment ensureResponse() => $_ensure(2);
+  $2.Payment ensureResponse() => $_ensure(2);
 }
 
 class PaymentScheduleParam extends $pb.GeneratedMessage {
@@ -1282,5 +1283,35 @@ class GetPaymentScheduleByCustomerResponse extends $pb.GeneratedMessage {
   void clearResponse() => clearField(3);
   @$pb.TagNumber(3)
   NestedGetPaymentScheduleByCustomerData ensureResponse() => $_ensure(2);
+}
+
+class SubscribeServiceApi {
+  $pb.RpcClient _client;
+  SubscribeServiceApi(this._client);
+
+  $async.Future<OnetimePaymentResponse> onetimePaymentRPC($pb.ClientContext ctx, OnetimePaymentRequest request) {
+    var emptyResponse = OnetimePaymentResponse();
+    return _client.invoke<OnetimePaymentResponse>(ctx, 'SubscribeService', 'OnetimePaymentRPC', request, emptyResponse);
+  }
+  $async.Future<AgainPaymentResponse> againPaymentRPC($pb.ClientContext ctx, AgainPaymentRequest request) {
+    var emptyResponse = AgainPaymentResponse();
+    return _client.invoke<AgainPaymentResponse>(ctx, 'SubscribeService', 'AgainPaymentRPC', request, emptyResponse);
+  }
+  $async.Future<SchedulePaymentResponse> schedulePaymentRPC($pb.ClientContext ctx, SchedulePayemntRequest request) {
+    var emptyResponse = SchedulePaymentResponse();
+    return _client.invoke<SchedulePaymentResponse>(ctx, 'SubscribeService', 'SchedulePaymentRPC', request, emptyResponse);
+  }
+  $async.Future<UnschedulePaymentResponse> unschedulePaymentRPC($pb.ClientContext ctx, UnscheduelPaymentRequest request) {
+    var emptyResponse = UnschedulePaymentResponse();
+    return _client.invoke<UnschedulePaymentResponse>(ctx, 'SubscribeService', 'UnschedulePaymentRPC', request, emptyResponse);
+  }
+  $async.Future<GetPaymentScheduleResponse> getScheduledPaymentRPC($pb.ClientContext ctx, GetPaymentScheduleRequest request) {
+    var emptyResponse = GetPaymentScheduleResponse();
+    return _client.invoke<GetPaymentScheduleResponse>(ctx, 'SubscribeService', 'GetScheduledPaymentRPC', request, emptyResponse);
+  }
+  $async.Future<GetPaymentScheduleByCustomerResponse> getScheduledPaymentByCustomerUidRPC($pb.ClientContext ctx, GetPaymentScheduleByCustomerRequest request) {
+    var emptyResponse = GetPaymentScheduleByCustomerResponse();
+    return _client.invoke<GetPaymentScheduleByCustomerResponse>(ctx, 'SubscribeService', 'GetScheduledPaymentByCustomerUidRPC', request, emptyResponse);
+  }
 }
 

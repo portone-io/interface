@@ -11,6 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,8 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z7github.com/iamport/interface/gen_src/go/v1/authenticate',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1bv1/authenticate/token.proto\x12\x0c\x61uthenticate\">\n\x05Token\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x0b\n\x03now\x18\x02 \x01(\x05\x12\x12\n\nexpired_at\x18\x03 \x01(\x05\"3\n\x0cTokenRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\nimp_secret\x18\x02 \x01(\t\"U\n\rTokenResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12%\n\x08response\x18\x03 \x01(\x0b\x32\x13.authenticate.TokenB9Z7github.com/iamport/interface/gen_src/go/v1/authenticateb\x06proto3'
-)
+  serialized_pb=b'\n\x1bv1/authenticate/token.proto\x12\x0c\x61uthenticate\x1a\x1cgoogle/api/annotations.proto\">\n\x05Token\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x0b\n\x03now\x18\x02 \x01(\x05\x12\x12\n\nexpired_at\x18\x03 \x01(\x05\"3\n\x0cTokenRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\nimp_secret\x18\x02 \x01(\t\"U\n\rTokenResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12%\n\x08response\x18\x03 \x01(\x0b\x32\x13.authenticate.Token2v\n\x0cTokenService\x12\x66\n\x08TokenRPC\x12\x1a.authenticate.TokenRequest\x1a\x1b.authenticate.TokenResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x16/api/v1/users/getToken:\x01*B9Z7github.com/iamport/interface/gen_src/go/v1/authenticateb\x06proto3'
+  ,
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
 
 
@@ -66,8 +68,8 @@ _TOKEN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45,
-  serialized_end=107,
+  serialized_start=75,
+  serialized_end=137,
 )
 
 
@@ -105,8 +107,8 @@ _TOKENREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=109,
-  serialized_end=160,
+  serialized_start=139,
+  serialized_end=190,
 )
 
 
@@ -151,8 +153,8 @@ _TOKENRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=162,
-  serialized_end=247,
+  serialized_start=192,
+  serialized_end=277,
 )
 
 _TOKENRESPONSE.fields_by_name['response'].message_type = _TOKEN
@@ -184,4 +186,30 @@ _sym_db.RegisterMessage(TokenResponse)
 
 
 DESCRIPTOR._options = None
+
+_TOKENSERVICE = _descriptor.ServiceDescriptor(
+  name='TokenService',
+  full_name='authenticate.TokenService',
+  file=DESCRIPTOR,
+  index=0,
+  serialized_options=None,
+  create_key=_descriptor._internal_create_key,
+  serialized_start=279,
+  serialized_end=397,
+  methods=[
+  _descriptor.MethodDescriptor(
+    name='TokenRPC',
+    full_name='authenticate.TokenService.TokenRPC',
+    index=0,
+    containing_service=None,
+    input_type=_TOKENREQUEST,
+    output_type=_TOKENRESPONSE,
+    serialized_options=b'\202\323\344\223\002\033\"\026/api/v1/users/getToken:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+])
+_sym_db.RegisterServiceDescriptor(_TOKENSERVICE)
+
+DESCRIPTOR.services_by_name['TokenService'] = _TOKENSERVICE
+
 # @@protoc_insertion_point(module_scope)

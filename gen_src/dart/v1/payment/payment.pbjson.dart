@@ -266,3 +266,52 @@ const PaymentPrepareResponse$json = const {
   ],
 };
 
+const PaymentGetPrepareRequest$json = const {
+  '1': 'PaymentGetPrepareRequest',
+  '2': const [
+    const {'1': 'merchant_uid', '3': 1, '4': 1, '5': 9, '10': 'merchantUid'},
+  ],
+};
+
+const PaymentServiceBase$json = const {
+  '1': 'PaymentService',
+  '2': const [
+    const {'1': 'PaymentBalanceRPC', '2': '.payment.PaymentBalanceRequest', '3': '.payment.PaymentBalanceResponse', '4': const {}},
+    const {'1': 'PaymentRPC', '2': '.payment.PaymentRequest', '3': '.payment.PaymentResponse', '4': const {}},
+    const {'1': 'PaymentsRPC', '2': '.payment.PaymentsRequest', '3': '.payment.PaymentsResponse', '4': const {}},
+    const {'1': 'PaymentMerchantUidRPC', '2': '.payment.PaymentMerchantUidRequest', '3': '.payment.PaymentMerchantUidResponse', '4': const {}},
+    const {'1': 'PaymentsMerchantUidRPC', '2': '.payment.PaymentsMerchantUidRequest', '3': '.payment.PaymentsMerchantUidResponse', '4': const {}},
+    const {'1': 'PaymentsStatusRPC', '2': '.payment.PaymentStatusRequest', '3': '.payment.PaymentStatusResponse', '4': const {}},
+    const {'1': 'PaymentCanselRPC', '2': '.payment.PaymentCancelRequest', '3': '.payment.PaymentCancelResponse', '4': const {}},
+    const {'1': 'PaymentPrepareRPC', '2': '.payment.PaymentPrepareRequest', '3': '.payment.PaymentPrepareResponse', '4': const {}},
+    const {'1': 'PaymentGetPrepareRPC', '2': '.payment.PaymentGetPrepareRequest', '3': '.payment.PaymentPrepareResponse', '4': const {}},
+  ],
+};
+
+const PaymentServiceBase$messageJson = const {
+  '.payment.PaymentBalanceRequest': PaymentBalanceRequest$json,
+  '.payment.PaymentBalanceResponse': PaymentBalanceResponse$json,
+  '.payment.PaymentBalance': PaymentBalance$json,
+  '.payment.PaymentBalanceDetail': PaymentBalanceDetail$json,
+  '.payment.PaymentBalanceHistory': PaymentBalanceHistory$json,
+  '.payment.PaymentRequest': PaymentRequest$json,
+  '.payment.PaymentResponse': PaymentResponse$json,
+  '.payment.Payment': Payment$json,
+  '.payment.CancelHistory': CancelHistory$json,
+  '.payment.PaymentsRequest': PaymentsRequest$json,
+  '.payment.PaymentsResponse': PaymentsResponse$json,
+  '.payment.PaymentMerchantUidRequest': PaymentMerchantUidRequest$json,
+  '.payment.PaymentMerchantUidResponse': PaymentMerchantUidResponse$json,
+  '.payment.PaymentsMerchantUidRequest': PaymentsMerchantUidRequest$json,
+  '.payment.PaymentsMerchantUidResponse': PaymentsMerchantUidResponse$json,
+  '.payment.PaymentPage': PaymentPage$json,
+  '.payment.PaymentStatusRequest': PaymentStatusRequest$json,
+  '.payment.PaymentStatusResponse': PaymentStatusResponse$json,
+  '.payment.PaymentCancelRequest': PaymentCancelRequest$json,
+  '.payment.PaymentCancelResponse': PaymentCancelResponse$json,
+  '.payment.PaymentPrepareRequest': PaymentPrepareRequest$json,
+  '.payment.PaymentPrepareResponse': PaymentPrepareResponse$json,
+  '.payment.Prepare': Prepare$json,
+  '.payment.PaymentGetPrepareRequest': PaymentGetPrepareRequest$json,
+};
+

@@ -20023,78 +20023,103 @@ public final class Subscribe {
   static {
     java.lang.String[] descriptorData = {
       "\n\034v1/subscribe/subscribe.proto\022\tsubscrib" +
-      "e\032\030v1/payment/payment.proto\"\217\003\n\025OnetimeP" +
-      "aymentRequest\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006a" +
-      "mount\030\002 \001(\001\022\020\n\010tax_free\030\003 \001(\001\022\023\n\013card_nu" +
-      "mber\030\004 \001(\t\022\016\n\006expiry\030\005 \001(\t\022\r\n\005birth\030\006 \001(" +
-      "\t\022\022\n\npwd_2digit\030\007 \001(\t\022\024\n\014customer_uid\030\010 " +
-      "\001(\t\022\n\n\002pg\030\t \001(\t\022\014\n\004name\030\n \001(\t\022\022\n\nbuyer_n" +
-      "ame\030\013 \001(\t\022\023\n\013buyer_email\030\014 \001(\t\022\021\n\tbuyer_" +
-      "tel\030\r \001(\t\022\022\n\nbuyer_addr\030\016 \001(\t\022\026\n\016buyer_p" +
-      "ostcode\030\017 \001(\t\022\022\n\ncard_quota\030\020 \001(\005\022!\n\031int" +
-      "erest_free_by_merchant\030\021 \001(\010\022\023\n\013custom_d" +
-      "ata\030\022 \001(\t\022\022\n\nnotice_url\030\023 \001(\t\"[\n\026Onetime" +
-      "PaymentResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message" +
-      "\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.Payme" +
-      "nt\"\271\002\n\023AgainPaymentRequest\022\024\n\014customer_u" +
-      "id\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount" +
-      "\030\003 \001(\001\022\020\n\010tax_free\030\004 \001(\001\022\014\n\004name\030\005 \001(\t\022\022" +
-      "\n\nbuyer_name\030\006 \001(\t\022\023\n\013buyer_email\030\007 \001(\t\022" +
-      "\021\n\tbuyer_tel\030\010 \001(\t\022\022\n\nbuyer_addr\030\t \001(\t\022\026" +
-      "\n\016buyer_postcode\030\n \001(\t\022\022\n\ncard_quota\030\013 \001" +
-      "(\005\022!\n\031interest_free_by_merchant\030\014 \001(\010\022\023\n" +
-      "\013custom_data\030\r \001(\t\022\022\n\nnotice_url\030\016 \001(\t\"Y" +
-      "\n\024AgainPaymentResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007" +
-      "message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.paymen" +
-      "t.Payment\"\331\001\n\024PaymentScheduleParam\022\024\n\014me" +
-      "rchant_uid\030\001 \001(\t\022\023\n\013schedule_at\030\002 \001(\001\022\016\n" +
-      "\006amount\030\003 \001(\005\022\020\n\010tax_free\030\004 \001(\005\022\014\n\004name\030" +
-      "\005 \001(\t\022\022\n\nbuyer_name\030\006 \001(\t\022\023\n\013buyer_email" +
-      "\030\007 \001(\t\022\021\n\tbuyer_tel\030\010 \001(\t\022\022\n\nbuyer_addr\030" +
-      "\t \001(\t\022\026\n\016buyer_postcode\030\n \001(\t\"\371\002\n\033UnitSc" +
-      "hedulePaymentResponse\022\024\n\014customer_uid\030\001 " +
-      "\001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\017\n\007imp_uid\030\003 \001" +
-      "(\t\022\023\n\013schedule_at\030\004 \001(\005\022\023\n\013executed_at\030\005" +
-      " \001(\005\022\022\n\nrevoked_at\030\006 \001(\005\022\016\n\006amount\030\007 \001(\005" +
-      "\022\014\n\004name\030\010 \001(\t\022\022\n\nbuyer_name\030\t \001(\t\022\023\n\013bu" +
-      "yer_email\030\n \001(\t\022\021\n\tbuyer_tel\030\013 \001(\t\022\022\n\nbu" +
-      "yer_addr\030\014 \001(\t\022\026\n\016buyer_postcode\030\r \001(\t\022\023" +
-      "\n\013custom_data\030\016 \001(\t\022\027\n\017schedule_status\030\017" +
-      " \001(\t\022\026\n\016payment_status\030\020 \001(\t\022\023\n\013fail_rea" +
-      "son\030\021 \001(\t\"\317\001\n\026SchedulePayemntRequest\022\024\n\014" +
-      "customer_uid\030\001 \001(\t\022\027\n\017checking_amount\030\002 " +
-      "\001(\005\022\023\n\013card_number\030\003 \001(\t\022\016\n\006expiry\030\004 \001(\t" +
-      "\022\r\n\005birth\030\005 \001(\t\022\022\n\npwd_2digit\030\006 \001(\t\022\n\n\002p" +
-      "g\030\007 \001(\t\0222\n\tschedules\030\010 \003(\0132\037.subscribe.P" +
-      "aymentScheduleParam\"r\n\027SchedulePaymentRe" +
-      "sponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0228\n" +
-      "\010response\030\003 \003(\0132&.subscribe.UnitSchedule" +
-      "PaymentResponse\"F\n\030UnscheduelPaymentRequ" +
-      "est\022\024\n\014customer_uid\030\001 \001(\t\022\024\n\014merchant_ui" +
-      "d\030\002 \003(\t\"t\n\031UnschedulePaymentResponse\022\014\n\004" +
+      "e\032\034google/api/annotations.proto\032\030v1/paym" +
+      "ent/payment.proto\"\217\003\n\025OnetimePaymentRequ" +
+      "est\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(" +
+      "\001\022\020\n\010tax_free\030\003 \001(\001\022\023\n\013card_number\030\004 \001(\t" +
+      "\022\016\n\006expiry\030\005 \001(\t\022\r\n\005birth\030\006 \001(\t\022\022\n\npwd_2" +
+      "digit\030\007 \001(\t\022\024\n\014customer_uid\030\010 \001(\t\022\n\n\002pg\030" +
+      "\t \001(\t\022\014\n\004name\030\n \001(\t\022\022\n\nbuyer_name\030\013 \001(\t\022" +
+      "\023\n\013buyer_email\030\014 \001(\t\022\021\n\tbuyer_tel\030\r \001(\t\022" +
+      "\022\n\nbuyer_addr\030\016 \001(\t\022\026\n\016buyer_postcode\030\017 " +
+      "\001(\t\022\022\n\ncard_quota\030\020 \001(\005\022!\n\031interest_free" +
+      "_by_merchant\030\021 \001(\010\022\023\n\013custom_data\030\022 \001(\t\022" +
+      "\022\n\nnotice_url\030\023 \001(\t\"[\n\026OnetimePaymentRes" +
+      "ponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010" +
+      "response\030\003 \001(\0132\020.payment.Payment\"\271\002\n\023Aga" +
+      "inPaymentRequest\022\024\n\014customer_uid\030\001 \001(\t\022\024" +
+      "\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount\030\003 \001(\001\022\020\n\010" +
+      "tax_free\030\004 \001(\001\022\014\n\004name\030\005 \001(\t\022\022\n\nbuyer_na" +
+      "me\030\006 \001(\t\022\023\n\013buyer_email\030\007 \001(\t\022\021\n\tbuyer_t" +
+      "el\030\010 \001(\t\022\022\n\nbuyer_addr\030\t \001(\t\022\026\n\016buyer_po" +
+      "stcode\030\n \001(\t\022\022\n\ncard_quota\030\013 \001(\005\022!\n\031inte" +
+      "rest_free_by_merchant\030\014 \001(\010\022\023\n\013custom_da" +
+      "ta\030\r \001(\t\022\022\n\nnotice_url\030\016 \001(\t\"Y\n\024AgainPay" +
+      "mentResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 " +
+      "\001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.Payment\"" +
+      "\331\001\n\024PaymentScheduleParam\022\024\n\014merchant_uid" +
+      "\030\001 \001(\t\022\023\n\013schedule_at\030\002 \001(\001\022\016\n\006amount\030\003 " +
+      "\001(\005\022\020\n\010tax_free\030\004 \001(\005\022\014\n\004name\030\005 \001(\t\022\022\n\nb" +
+      "uyer_name\030\006 \001(\t\022\023\n\013buyer_email\030\007 \001(\t\022\021\n\t" +
+      "buyer_tel\030\010 \001(\t\022\022\n\nbuyer_addr\030\t \001(\t\022\026\n\016b" +
+      "uyer_postcode\030\n \001(\t\"\371\002\n\033UnitSchedulePaym" +
+      "entResponse\022\024\n\014customer_uid\030\001 \001(\t\022\024\n\014mer" +
+      "chant_uid\030\002 \001(\t\022\017\n\007imp_uid\030\003 \001(\t\022\023\n\013sche" +
+      "dule_at\030\004 \001(\005\022\023\n\013executed_at\030\005 \001(\005\022\022\n\nre" +
+      "voked_at\030\006 \001(\005\022\016\n\006amount\030\007 \001(\005\022\014\n\004name\030\010" +
+      " \001(\t\022\022\n\nbuyer_name\030\t \001(\t\022\023\n\013buyer_email\030" +
+      "\n \001(\t\022\021\n\tbuyer_tel\030\013 \001(\t\022\022\n\nbuyer_addr\030\014" +
+      " \001(\t\022\026\n\016buyer_postcode\030\r \001(\t\022\023\n\013custom_d" +
+      "ata\030\016 \001(\t\022\027\n\017schedule_status\030\017 \001(\t\022\026\n\016pa" +
+      "yment_status\030\020 \001(\t\022\023\n\013fail_reason\030\021 \001(\t\"" +
+      "\317\001\n\026SchedulePayemntRequest\022\024\n\014customer_u" +
+      "id\030\001 \001(\t\022\027\n\017checking_amount\030\002 \001(\005\022\023\n\013car" +
+      "d_number\030\003 \001(\t\022\016\n\006expiry\030\004 \001(\t\022\r\n\005birth\030" +
+      "\005 \001(\t\022\022\n\npwd_2digit\030\006 \001(\t\022\n\n\002pg\030\007 \001(\t\0222\n" +
+      "\tschedules\030\010 \003(\0132\037.subscribe.PaymentSche" +
+      "duleParam\"r\n\027SchedulePaymentResponse\022\014\n\004" +
       "code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0228\n\010response\030" +
       "\003 \003(\0132&.subscribe.UnitSchedulePaymentRes" +
-      "ponse\"1\n\031GetPaymentScheduleRequest\022\024\n\014me" +
-      "rchant_uid\030\001 \001(\t\"u\n\032GetPaymentScheduleRe" +
-      "sponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0228\n" +
-      "\010response\030\003 \001(\0132&.subscribe.UnitSchedule" +
-      "PaymentResponse\"|\n#GetPaymentScheduleByC" +
-      "ustomerRequest\022\024\n\014customer_uid\030\001 \001(\t\022\014\n\004" +
-      "page\030\002 \001(\005\022\014\n\004from\030\003 \001(\005\022\n\n\002to\030\004 \001(\005\022\027\n\017" +
-      "schedule_status\030\005 \001(\t\"\215\001\n&NestedGetPayme" +
-      "ntScheduleByCustomerData\022\r\n\005total\030\001 \001(\005\022" +
-      "\020\n\010previous\030\002 \001(\005\022\014\n\004next\030\003 \001(\005\0224\n\004list\030" +
-      "\004 \003(\0132&.subscribe.UnitSchedulePaymentRes" +
-      "ponse\"\212\001\n$GetPaymentScheduleByCustomerRe" +
-      "sponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022C\n" +
-      "\010response\030\003 \001(\01321.subscribe.NestedGetPay" +
-      "mentScheduleByCustomerDataB6Z4github.com" +
-      "/iamport/interface/gen_src/go/v1/subscri" +
-      "beb\006proto3"
+      "ponse\"F\n\030UnscheduelPaymentRequest\022\024\n\014cus" +
+      "tomer_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \003(\t\"t\n" +
+      "\031UnschedulePaymentResponse\022\014\n\004code\030\001 \001(\005" +
+      "\022\017\n\007message\030\002 \001(\t\0228\n\010response\030\003 \003(\0132&.su" +
+      "bscribe.UnitSchedulePaymentResponse\"1\n\031G" +
+      "etPaymentScheduleRequest\022\024\n\014merchant_uid" +
+      "\030\001 \001(\t\"u\n\032GetPaymentScheduleResponse\022\014\n\004" +
+      "code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0228\n\010response\030" +
+      "\003 \001(\0132&.subscribe.UnitSchedulePaymentRes" +
+      "ponse\"|\n#GetPaymentScheduleByCustomerReq" +
+      "uest\022\024\n\014customer_uid\030\001 \001(\t\022\014\n\004page\030\002 \001(\005" +
+      "\022\014\n\004from\030\003 \001(\005\022\n\n\002to\030\004 \001(\005\022\027\n\017schedule_s" +
+      "tatus\030\005 \001(\t\"\215\001\n&NestedGetPaymentSchedule" +
+      "ByCustomerData\022\r\n\005total\030\001 \001(\005\022\020\n\010previou" +
+      "s\030\002 \001(\005\022\014\n\004next\030\003 \001(\005\0224\n\004list\030\004 \003(\0132&.su" +
+      "bscribe.UnitSchedulePaymentResponse\"\212\001\n$" +
+      "GetPaymentScheduleByCustomerResponse\022\014\n\004" +
+      "code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022C\n\010response\030" +
+      "\003 \001(\01321.subscribe.NestedGetPaymentSchedu" +
+      "leByCustomerData2\272\007\n\020SubscribeService\022\207\001" +
+      "\n\021OnetimePaymentRPC\022 .subscribe.OnetimeP" +
+      "aymentRequest\032!.subscribe.OnetimePayment" +
+      "Response\"-\202\323\344\223\002\'\"\"/api/v1/subscribe/paym" +
+      "ents/onetime:\001*\022\177\n\017AgainPaymentRPC\022\036.sub" +
+      "scribe.AgainPaymentRequest\032\037.subscribe.A" +
+      "gainPaymentResponse\"+\202\323\344\223\002%\" /api/v1/sub" +
+      "scribe/payments/again:\001*\022\213\001\n\022SchedulePay" +
+      "mentRPC\022!.subscribe.SchedulePayemntReque" +
+      "st\032\".subscribe.SchedulePaymentResponse\"." +
+      "\202\323\344\223\002(\"#/api/v1/subscribe/payments/sched" +
+      "ule:\001*\022\223\001\n\024UnschedulePaymentRPC\022#.subscr" +
+      "ibe.UnscheduelPaymentRequest\032$.subscribe" +
+      ".UnschedulePaymentResponse\"0\202\323\344\223\002*\"%/api" +
+      "/v1/subscribe/payments/unschedule:\001*\022\244\001\n" +
+      "\026GetScheduledPaymentRPC\022$.subscribe.GetP" +
+      "aymentScheduleRequest\032%.subscribe.GetPay" +
+      "mentScheduleResponse\"=\202\323\344\223\0027\"2/api/v1/su" +
+      "bscribe/payments/schedule/{merchant_uid}" +
+      ":\001*\022\317\001\n#GetScheduledPaymentByCustomerUid" +
+      "RPC\022..subscribe.GetPaymentScheduleByCust" +
+      "omerRequest\032/.subscribe.GetPaymentSchedu" +
+      "leByCustomerResponse\"G\202\323\344\223\002A\"</api/v1/su" +
+      "bscribe/payments/schedule/customers/{cus" +
+      "tomer_uid}:\001*B6Z4github.com/iamport/inte" +
+      "rface/gen_src/go/v1/subscribeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           payment.PaymentOuterClass.getDescriptor(),
         });
     internal_static_subscribe_OnetimePaymentRequest_descriptor =
@@ -20187,6 +20212,12 @@ public final class Subscribe {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_GetPaymentScheduleByCustomerResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     payment.PaymentOuterClass.getDescriptor();
   }
 

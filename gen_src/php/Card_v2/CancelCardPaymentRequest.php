@@ -14,19 +14,23 @@ use Google\Protobuf\Internal\GPBUtil;
 class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string amount = 1;</code>
+     * Generated from protobuf field <code>string imp_uid = 1;</code>
+     */
+    protected $imp_uid = '';
+    /**
+     * Generated from protobuf field <code>string amount = 2;</code>
      */
     protected $amount = '';
     /**
-     * Generated from protobuf field <code>string merchant_uid = 2;</code>
+     * Generated from protobuf field <code>string merchant_uid = 3;</code>
      */
     protected $merchant_uid = '';
     /**
-     * Generated from protobuf field <code>string duty_free_amount = 3;</code>
+     * Generated from protobuf field <code>string duty_free_amount = 4;</code>
      */
     protected $duty_free_amount = '';
     /**
-     * Generated from protobuf field <code>string reason = 4;</code>
+     * Generated from protobuf field <code>string reason = 5;</code>
      */
     protected $reason = '';
 
@@ -36,6 +40,7 @@ class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string $imp_uid
      *     @type string $amount
      *     @type string $merchant_uid
      *     @type string $duty_free_amount
@@ -48,7 +53,29 @@ class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string amount = 1;</code>
+     * Generated from protobuf field <code>string imp_uid = 1;</code>
+     * @return string
+     */
+    public function getImpUid()
+    {
+        return $this->imp_uid;
+    }
+
+    /**
+     * Generated from protobuf field <code>string imp_uid = 1;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setImpUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->imp_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string amount = 2;</code>
      * @return string
      */
     public function getAmount()
@@ -57,7 +84,7 @@ class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string amount = 1;</code>
+     * Generated from protobuf field <code>string amount = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -70,7 +97,7 @@ class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string merchant_uid = 2;</code>
+     * Generated from protobuf field <code>string merchant_uid = 3;</code>
      * @return string
      */
     public function getMerchantUid()
@@ -79,7 +106,7 @@ class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string merchant_uid = 2;</code>
+     * Generated from protobuf field <code>string merchant_uid = 3;</code>
      * @param string $var
      * @return $this
      */
@@ -92,7 +119,7 @@ class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string duty_free_amount = 3;</code>
+     * Generated from protobuf field <code>string duty_free_amount = 4;</code>
      * @return string
      */
     public function getDutyFreeAmount()
@@ -101,7 +128,7 @@ class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string duty_free_amount = 3;</code>
+     * Generated from protobuf field <code>string duty_free_amount = 4;</code>
      * @param string $var
      * @return $this
      */
@@ -114,7 +141,7 @@ class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string reason = 4;</code>
+     * Generated from protobuf field <code>string reason = 5;</code>
      * @return string
      */
     public function getReason()
@@ -123,7 +150,7 @@ class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string reason = 4;</code>
+     * Generated from protobuf field <code>string reason = 5;</code>
      * @param string $var
      * @return $this
      */

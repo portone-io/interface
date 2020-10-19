@@ -2,6 +2,7 @@
 // file: v1/escrow/escrow.proto
 
 import * as jspb from "google-protobuf";
+import * as google_api_annotations_pb from "../../google/api/annotations_pb";
 
 export class Info extends jspb.Message {
   getName(): string;
@@ -68,6 +69,9 @@ export namespace Logis {
 }
 
 export class EscrowRequest extends jspb.Message {
+  getImpUid(): string;
+  setImpUid(value: string): void;
+
   hasSender(): boolean;
   clearSender(): void;
   getSender(): Info | undefined;
@@ -95,6 +99,7 @@ export class EscrowRequest extends jspb.Message {
 
 export namespace EscrowRequest {
   export type AsObject = {
+    impUid: string,
     sender?: Info.AsObject,
     receiver?: Info.AsObject,
     logis?: Logis.AsObject,

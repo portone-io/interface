@@ -5,6 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
+import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -244,5 +245,19 @@ class PubKeyRegisterResponse extends $pb.GeneratedMessage {
   $core.bool hasMessage() => $_has(1);
   @$pb.TagNumber(2)
   void clearMessage() => clearField(2);
+}
+
+class AuthenticateServiceApi {
+  $pb.RpcClient _client;
+  AuthenticateServiceApi(this._client);
+
+  $async.Future<TokenResponse> tokenRPC($pb.ClientContext ctx, TokenRequest request) {
+    var emptyResponse = TokenResponse();
+    return _client.invoke<TokenResponse>(ctx, 'AuthenticateService', 'TokenRPC', request, emptyResponse);
+  }
+  $async.Future<PubKeyRegisterResponse> registerPubKeyRPC($pb.ClientContext ctx, PubKeyRegisterRequest request) {
+    var emptyResponse = PubKeyRegisterResponse();
+    return _client.invoke<PubKeyRegisterResponse>(ctx, 'AuthenticateService', 'RegisterPubKeyRPC', request, emptyResponse);
+  }
 }
 

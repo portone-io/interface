@@ -5,6 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
+import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -133,9 +134,10 @@ class Logis extends $pb.GeneratedMessage {
 
 class EscrowRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EscrowRequest', package: const $pb.PackageName('escrow'), createEmptyInstance: create)
-    ..aOM<Info>(1, 'sender', subBuilder: Info.create)
-    ..aOM<Info>(2, 'receiver', subBuilder: Info.create)
-    ..aOM<Logis>(3, 'logis', subBuilder: Logis.create)
+    ..aOS(1, 'impUid')
+    ..aOM<Info>(2, 'sender', subBuilder: Info.create)
+    ..aOM<Info>(3, 'receiver', subBuilder: Info.create)
+    ..aOM<Logis>(4, 'logis', subBuilder: Logis.create)
     ..hasRequiredFields = false
   ;
 
@@ -155,37 +157,46 @@ class EscrowRequest extends $pb.GeneratedMessage {
   static EscrowRequest _defaultInstance;
 
   @$pb.TagNumber(1)
-  Info get sender => $_getN(0);
+  $core.String get impUid => $_getSZ(0);
   @$pb.TagNumber(1)
-  set sender(Info v) { setField(1, v); }
+  set impUid($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasSender() => $_has(0);
+  $core.bool hasImpUid() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSender() => clearField(1);
-  @$pb.TagNumber(1)
-  Info ensureSender() => $_ensure(0);
+  void clearImpUid() => clearField(1);
 
   @$pb.TagNumber(2)
-  Info get receiver => $_getN(1);
+  Info get sender => $_getN(1);
   @$pb.TagNumber(2)
-  set receiver(Info v) { setField(2, v); }
+  set sender(Info v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasReceiver() => $_has(1);
+  $core.bool hasSender() => $_has(1);
   @$pb.TagNumber(2)
-  void clearReceiver() => clearField(2);
+  void clearSender() => clearField(2);
   @$pb.TagNumber(2)
-  Info ensureReceiver() => $_ensure(1);
+  Info ensureSender() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  Logis get logis => $_getN(2);
+  Info get receiver => $_getN(2);
   @$pb.TagNumber(3)
-  set logis(Logis v) { setField(3, v); }
+  set receiver(Info v) { setField(3, v); }
   @$pb.TagNumber(3)
-  $core.bool hasLogis() => $_has(2);
+  $core.bool hasReceiver() => $_has(2);
   @$pb.TagNumber(3)
-  void clearLogis() => clearField(3);
+  void clearReceiver() => clearField(3);
   @$pb.TagNumber(3)
-  Logis ensureLogis() => $_ensure(2);
+  Info ensureReceiver() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  Logis get logis => $_getN(3);
+  @$pb.TagNumber(4)
+  set logis(Logis v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasLogis() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearLogis() => clearField(4);
+  @$pb.TagNumber(4)
+  Logis ensureLogis() => $_ensure(3);
 }
 
 class EscrowResponse extends $pb.GeneratedMessage {
@@ -239,5 +250,19 @@ class EscrowResponse extends $pb.GeneratedMessage {
   void clearResponse() => clearField(3);
   @$pb.TagNumber(3)
   Logis ensureResponse() => $_ensure(2);
+}
+
+class EscrowServiceApi {
+  $pb.RpcClient _client;
+  EscrowServiceApi(this._client);
+
+  $async.Future<EscrowResponse> escrowPostRPC($pb.ClientContext ctx, EscrowRequest request) {
+    var emptyResponse = EscrowResponse();
+    return _client.invoke<EscrowResponse>(ctx, 'EscrowService', 'EscrowPostRPC', request, emptyResponse);
+  }
+  $async.Future<EscrowResponse> escrowPutRPC($pb.ClientContext ctx, EscrowRequest request) {
+    var emptyResponse = EscrowResponse();
+    return _client.invoke<EscrowResponse>(ctx, 'EscrowService', 'EscrowPutRPC', request, emptyResponse);
+  }
 }
 

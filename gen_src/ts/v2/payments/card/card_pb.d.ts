@@ -2,6 +2,7 @@
 // file: v2/payments/card/card.proto
 
 import * as jspb from "google-protobuf";
+import * as google_api_annotations_pb from "../../../google/api/annotations_pb";
 
 export class CardRegisterRequest extends jspb.Message {
   getCardUid(): string;
@@ -602,6 +603,9 @@ export namespace CancelHistory {
 }
 
 export class CancelCardPaymentRequest extends jspb.Message {
+  getImpUid(): string;
+  setImpUid(value: string): void;
+
   getAmount(): string;
   setAmount(value: string): void;
 
@@ -626,6 +630,7 @@ export class CancelCardPaymentRequest extends jspb.Message {
 
 export namespace CancelCardPaymentRequest {
   export type AsObject = {
+    impUid: string,
     amount: string,
     merchantUid: string,
     dutyFreeAmount: string,

@@ -28,9 +28,10 @@ const Logis$json = const {
 const EscrowRequest$json = const {
   '1': 'EscrowRequest',
   '2': const [
-    const {'1': 'sender', '3': 1, '4': 1, '5': 11, '6': '.escrow.Info', '10': 'sender'},
-    const {'1': 'receiver', '3': 2, '4': 1, '5': 11, '6': '.escrow.Info', '10': 'receiver'},
-    const {'1': 'logis', '3': 3, '4': 1, '5': 11, '6': '.escrow.Logis', '10': 'logis'},
+    const {'1': 'imp_uid', '3': 1, '4': 1, '5': 9, '10': 'impUid'},
+    const {'1': 'sender', '3': 2, '4': 1, '5': 11, '6': '.escrow.Info', '10': 'sender'},
+    const {'1': 'receiver', '3': 3, '4': 1, '5': 11, '6': '.escrow.Info', '10': 'receiver'},
+    const {'1': 'logis', '3': 4, '4': 1, '5': 11, '6': '.escrow.Logis', '10': 'logis'},
   ],
 };
 
@@ -41,5 +42,20 @@ const EscrowResponse$json = const {
     const {'1': 'message', '3': 2, '4': 1, '5': 9, '10': 'message'},
     const {'1': 'response', '3': 3, '4': 1, '5': 11, '6': '.escrow.Logis', '10': 'response'},
   ],
+};
+
+const EscrowServiceBase$json = const {
+  '1': 'EscrowService',
+  '2': const [
+    const {'1': 'EscrowPostRPC', '2': '.escrow.EscrowRequest', '3': '.escrow.EscrowResponse', '4': const {}},
+    const {'1': 'EscrowPutRPC', '2': '.escrow.EscrowRequest', '3': '.escrow.EscrowResponse', '4': const {}},
+  ],
+};
+
+const EscrowServiceBase$messageJson = const {
+  '.escrow.EscrowRequest': EscrowRequest$json,
+  '.escrow.Info': Info$json,
+  '.escrow.Logis': Logis$json,
+  '.escrow.EscrowResponse': EscrowResponse$json,
 };
 

@@ -12,6 +12,8 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var google_api_annotations_pb = require('../../google/api/annotations_pb.js');
+goog.object.extend(proto, google_api_annotations_pb);
 goog.exportSymbol('proto.escrow.EscrowRequest', null, global);
 goog.exportSymbol('proto.escrow.EscrowResponse', null, global);
 goog.exportSymbol('proto.escrow.Info', null, global);
@@ -572,6 +574,7 @@ proto.escrow.EscrowRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.escrow.EscrowRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
+    impUid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     sender: (f = msg.getSender()) && proto.escrow.Info.toObject(includeInstance, f),
     receiver: (f = msg.getReceiver()) && proto.escrow.Info.toObject(includeInstance, f),
     logis: (f = msg.getLogis()) && proto.escrow.Logis.toObject(includeInstance, f)
@@ -612,16 +615,20 @@ proto.escrow.EscrowRequest.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.escrow.Info;
-      reader.readMessage(value,proto.escrow.Info.deserializeBinaryFromReader);
-      msg.setSender(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setImpUid(value);
       break;
     case 2:
       var value = new proto.escrow.Info;
       reader.readMessage(value,proto.escrow.Info.deserializeBinaryFromReader);
-      msg.setReceiver(value);
+      msg.setSender(value);
       break;
     case 3:
+      var value = new proto.escrow.Info;
+      reader.readMessage(value,proto.escrow.Info.deserializeBinaryFromReader);
+      msg.setReceiver(value);
+      break;
+    case 4:
       var value = new proto.escrow.Logis;
       reader.readMessage(value,proto.escrow.Logis.deserializeBinaryFromReader);
       msg.setLogis(value);
@@ -655,15 +662,14 @@ proto.escrow.EscrowRequest.prototype.serializeBinary = function() {
  */
 proto.escrow.EscrowRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getSender();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getImpUid();
+  if (f.length > 0) {
+    writer.writeString(
       1,
-      f,
-      proto.escrow.Info.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getReceiver();
+  f = message.getSender();
   if (f != null) {
     writer.writeMessage(
       2,
@@ -671,10 +677,18 @@ proto.escrow.EscrowRequest.serializeBinaryToWriter = function(message, writer) {
       proto.escrow.Info.serializeBinaryToWriter
     );
   }
-  f = message.getLogis();
+  f = message.getReceiver();
   if (f != null) {
     writer.writeMessage(
       3,
+      f,
+      proto.escrow.Info.serializeBinaryToWriter
+    );
+  }
+  f = message.getLogis();
+  if (f != null) {
+    writer.writeMessage(
+      4,
       f,
       proto.escrow.Logis.serializeBinaryToWriter
     );
@@ -683,12 +697,30 @@ proto.escrow.EscrowRequest.serializeBinaryToWriter = function(message, writer) {
 
 
 /**
- * optional Info sender = 1;
+ * optional string imp_uid = 1;
+ * @return {string}
+ */
+proto.escrow.EscrowRequest.prototype.getImpUid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.escrow.EscrowRequest} returns this
+ */
+proto.escrow.EscrowRequest.prototype.setImpUid = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional Info sender = 2;
  * @return {?proto.escrow.Info}
  */
 proto.escrow.EscrowRequest.prototype.getSender = function() {
   return /** @type{?proto.escrow.Info} */ (
-    jspb.Message.getWrapperField(this, proto.escrow.Info, 1));
+    jspb.Message.getWrapperField(this, proto.escrow.Info, 2));
 };
 
 
@@ -697,7 +729,7 @@ proto.escrow.EscrowRequest.prototype.getSender = function() {
  * @return {!proto.escrow.EscrowRequest} returns this
 */
 proto.escrow.EscrowRequest.prototype.setSender = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+  return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
@@ -715,17 +747,17 @@ proto.escrow.EscrowRequest.prototype.clearSender = function() {
  * @return {boolean}
  */
 proto.escrow.EscrowRequest.prototype.hasSender = function() {
-  return jspb.Message.getField(this, 1) != null;
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
- * optional Info receiver = 2;
+ * optional Info receiver = 3;
  * @return {?proto.escrow.Info}
  */
 proto.escrow.EscrowRequest.prototype.getReceiver = function() {
   return /** @type{?proto.escrow.Info} */ (
-    jspb.Message.getWrapperField(this, proto.escrow.Info, 2));
+    jspb.Message.getWrapperField(this, proto.escrow.Info, 3));
 };
 
 
@@ -734,7 +766,7 @@ proto.escrow.EscrowRequest.prototype.getReceiver = function() {
  * @return {!proto.escrow.EscrowRequest} returns this
 */
 proto.escrow.EscrowRequest.prototype.setReceiver = function(value) {
-  return jspb.Message.setWrapperField(this, 2, value);
+  return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
@@ -752,17 +784,17 @@ proto.escrow.EscrowRequest.prototype.clearReceiver = function() {
  * @return {boolean}
  */
 proto.escrow.EscrowRequest.prototype.hasReceiver = function() {
-  return jspb.Message.getField(this, 2) != null;
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
 /**
- * optional Logis logis = 3;
+ * optional Logis logis = 4;
  * @return {?proto.escrow.Logis}
  */
 proto.escrow.EscrowRequest.prototype.getLogis = function() {
   return /** @type{?proto.escrow.Logis} */ (
-    jspb.Message.getWrapperField(this, proto.escrow.Logis, 3));
+    jspb.Message.getWrapperField(this, proto.escrow.Logis, 4));
 };
 
 
@@ -771,7 +803,7 @@ proto.escrow.EscrowRequest.prototype.getLogis = function() {
  * @return {!proto.escrow.EscrowRequest} returns this
 */
 proto.escrow.EscrowRequest.prototype.setLogis = function(value) {
-  return jspb.Message.setWrapperField(this, 3, value);
+  return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
@@ -789,7 +821,7 @@ proto.escrow.EscrowRequest.prototype.clearLogis = function() {
  * @return {boolean}
  */
 proto.escrow.EscrowRequest.prototype.hasLogis = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return jspb.Message.getField(this, 4) != null;
 };
 
 

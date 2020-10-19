@@ -1,7 +1,24 @@
 syntax = "proto3";
 package escrow;
 
+import "google/api/annotations.proto";
 option go_package = "github.com/iamport/interface/gen_src/go/v1/escrow";
+
+service EscrowService {
+    rpc EscrowPostRPC(EscrowRequest) returns (EscrowResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/escrows/logis/{imp_uid}"
+            body: "*"
+        };
+    }
+
+    rpc EscrowPutRPC(EscrowRequest) returns (EscrowResponse) {
+        option (google.api.http) = {
+            put: "/api/v1/escrows/logis/{imp_uid}"
+            body: "*"
+        };
+    }
+}
 
 message Info {
     string name = 1;
@@ -18,9 +35,10 @@ message Logis {
 }
 
 message EscrowRequest {
-    Info sender = 1;
-    Info receiver = 2;
-    Logis logis = 3;
+    string imp_uid = 1;
+    Info sender = 2;
+    Info receiver = 3;
+    Logis logis = 4;
 }
 
 message EscrowResponse {
@@ -28,3 +46,4 @@ message EscrowResponse {
     string message = 2;
     Logis response = 3;
 }
+

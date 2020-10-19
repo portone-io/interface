@@ -26560,6 +26560,574 @@ public final class PaymentOuterClass {
 
   }
 
+  public interface PaymentGetPrepareRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payment.PaymentGetPrepareRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string merchant_uid = 1;</code>
+     * @return The merchantUid.
+     */
+    java.lang.String getMerchantUid();
+    /**
+     * <code>string merchant_uid = 1;</code>
+     * @return The bytes for merchantUid.
+     */
+    com.google.protobuf.ByteString
+        getMerchantUidBytes();
+  }
+  /**
+   * Protobuf type {@code payment.PaymentGetPrepareRequest}
+   */
+  public static final class PaymentGetPrepareRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payment.PaymentGetPrepareRequest)
+      PaymentGetPrepareRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PaymentGetPrepareRequest.newBuilder() to construct.
+    private PaymentGetPrepareRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PaymentGetPrepareRequest() {
+      merchantUid_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PaymentGetPrepareRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PaymentGetPrepareRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              merchantUid_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return payment.PaymentOuterClass.internal_static_payment_PaymentGetPrepareRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return payment.PaymentOuterClass.internal_static_payment_PaymentGetPrepareRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              payment.PaymentOuterClass.PaymentGetPrepareRequest.class, payment.PaymentOuterClass.PaymentGetPrepareRequest.Builder.class);
+    }
+
+    public static final int MERCHANT_UID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object merchantUid_;
+    /**
+     * <code>string merchant_uid = 1;</code>
+     * @return The merchantUid.
+     */
+    @java.lang.Override
+    public java.lang.String getMerchantUid() {
+      java.lang.Object ref = merchantUid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        merchantUid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string merchant_uid = 1;</code>
+     * @return The bytes for merchantUid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMerchantUidBytes() {
+      java.lang.Object ref = merchantUid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        merchantUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getMerchantUidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, merchantUid_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getMerchantUidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, merchantUid_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof payment.PaymentOuterClass.PaymentGetPrepareRequest)) {
+        return super.equals(obj);
+      }
+      payment.PaymentOuterClass.PaymentGetPrepareRequest other = (payment.PaymentOuterClass.PaymentGetPrepareRequest) obj;
+
+      if (!getMerchantUid()
+          .equals(other.getMerchantUid())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MERCHANT_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getMerchantUid().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(payment.PaymentOuterClass.PaymentGetPrepareRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payment.PaymentGetPrepareRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payment.PaymentGetPrepareRequest)
+        payment.PaymentOuterClass.PaymentGetPrepareRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return payment.PaymentOuterClass.internal_static_payment_PaymentGetPrepareRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return payment.PaymentOuterClass.internal_static_payment_PaymentGetPrepareRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                payment.PaymentOuterClass.PaymentGetPrepareRequest.class, payment.PaymentOuterClass.PaymentGetPrepareRequest.Builder.class);
+      }
+
+      // Construct using payment.PaymentOuterClass.PaymentGetPrepareRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        merchantUid_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return payment.PaymentOuterClass.internal_static_payment_PaymentGetPrepareRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.PaymentGetPrepareRequest getDefaultInstanceForType() {
+        return payment.PaymentOuterClass.PaymentGetPrepareRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.PaymentGetPrepareRequest build() {
+        payment.PaymentOuterClass.PaymentGetPrepareRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.PaymentGetPrepareRequest buildPartial() {
+        payment.PaymentOuterClass.PaymentGetPrepareRequest result = new payment.PaymentOuterClass.PaymentGetPrepareRequest(this);
+        result.merchantUid_ = merchantUid_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof payment.PaymentOuterClass.PaymentGetPrepareRequest) {
+          return mergeFrom((payment.PaymentOuterClass.PaymentGetPrepareRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(payment.PaymentOuterClass.PaymentGetPrepareRequest other) {
+        if (other == payment.PaymentOuterClass.PaymentGetPrepareRequest.getDefaultInstance()) return this;
+        if (!other.getMerchantUid().isEmpty()) {
+          merchantUid_ = other.merchantUid_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        payment.PaymentOuterClass.PaymentGetPrepareRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (payment.PaymentOuterClass.PaymentGetPrepareRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object merchantUid_ = "";
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @return The merchantUid.
+       */
+      public java.lang.String getMerchantUid() {
+        java.lang.Object ref = merchantUid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          merchantUid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @return The bytes for merchantUid.
+       */
+      public com.google.protobuf.ByteString
+          getMerchantUidBytes() {
+        java.lang.Object ref = merchantUid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          merchantUid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @param value The merchantUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMerchantUid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        merchantUid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMerchantUid() {
+        
+        merchantUid_ = getDefaultInstance().getMerchantUid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string merchant_uid = 1;</code>
+       * @param value The bytes for merchantUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMerchantUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        merchantUid_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payment.PaymentGetPrepareRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:payment.PaymentGetPrepareRequest)
+    private static final payment.PaymentOuterClass.PaymentGetPrepareRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new payment.PaymentOuterClass.PaymentGetPrepareRequest();
+    }
+
+    public static payment.PaymentOuterClass.PaymentGetPrepareRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PaymentGetPrepareRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PaymentGetPrepareRequest>() {
+      @java.lang.Override
+      public PaymentGetPrepareRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PaymentGetPrepareRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PaymentGetPrepareRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PaymentGetPrepareRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public payment.PaymentOuterClass.PaymentGetPrepareRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payment_Payment_descriptor;
   private static final 
@@ -26675,6 +27243,11 @@ public final class PaymentOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payment_PaymentPrepareResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payment_PaymentGetPrepareRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payment_PaymentGetPrepareRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -26684,94 +27257,127 @@ public final class PaymentOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030v1/payment/payment.proto\022\007payment\"\305\007\n\007" +
-      "Payment\022\016\n\006amount\030\001 \001(\005\022\021\n\tapply_num\030\002 \001" +
-      "(\t\022\021\n\tbank_code\030\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t" +
-      "\022\022\n\nbuyer_addr\030\005 \001(\t\022\023\n\013buyer_email\030\006 \001(" +
-      "\t\022\022\n\nbuyer_name\030\007 \001(\t\022\026\n\016buyer_postcode\030" +
-      "\010 \001(\t\022\021\n\tbuyer_tel\030\t \001(\t\022\025\n\rcancel_amoun" +
-      "t\030\n \001(\005\022.\n\016cancel_history\030\013 \003(\0132\026.paymen" +
-      "t.CancelHistory\022\025\n\rcancel_reason\030\014 \001(\t\022\033" +
-      "\n\023cancel_receipt_urls\030\r \003(\t\022\024\n\014cancelled" +
-      "_at\030\016 \001(\005\022\021\n\tcard_code\030\017 \001(\t\022\021\n\tcard_nam" +
-      "e\030\020 \001(\t\022\023\n\013card_number\030\021 \001(\t\022\022\n\ncard_quo" +
-      "ta\030\022 \001(\005\022\021\n\tcard_type\030\023 \001(\005\022\033\n\023cash_rece" +
-      "ipt_issued\030\024 \001(\010\022\017\n\007channel\030\025 \001(\t\022\020\n\010cur" +
-      "rency\030\026 \001(\t\022\023\n\013custom_data\030\027 \001(\t\022\024\n\014cust" +
-      "omer_uid\030\030 \001(\t\022\032\n\022customer_uid_usage\030\031 \001" +
-      "(\t\022\016\n\006escrow\030\032 \001(\010\022\023\n\013fail_reason\030\033 \001(\t\022" +
-      "\021\n\tfailed_at\030\034 \001(\005\022\017\n\007imp_uid\030\035 \001(\t\022\024\n\014m" +
-      "erchant_uid\030\036 \001(\t\022\014\n\004name\030\037 \001(\t\022\017\n\007paid_" +
-      "at\030  \001(\005\022\022\n\npay_method\030! \001(\t\022\r\n\005pg_id\030\" " +
-      "\001(\t\022\023\n\013pg_provider\030# \001(\t\022\016\n\006pg_tid\030$ \001(\t" +
-      "\022\023\n\013receipt_url\030% \001(\t\022\022\n\nstarted_at\030& \001(" +
-      "\005\022\016\n\006status\030\' \001(\t\022\022\n\nuser_agent\030( \001(\t\022\022\n" +
-      "\nvbank_code\030) \001(\t\022\022\n\nvbank_date\030* \001(\005\022\024\n" +
-      "\014vbank_holder\030+ \001(\t\022\027\n\017vbank_issued_at\030," +
-      " \001(\005\022\022\n\nvbank_name\030- \001(\t\022\021\n\tvbank_num\030. " +
-      "\001(\t\"j\n\rCancelHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006" +
-      "amount\030\002 \001(\005\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006re" +
-      "ason\030\004 \001(\t\022\023\n\013receipt_url\030\005 \001(\t\"\\\n\013Payme" +
-      "ntPage\022\r\n\005total\030\001 \001(\005\022\020\n\010previous\030\002 \001(\005\022" +
-      "\014\n\004next\030\003 \001(\005\022\036\n\004list\030\004 \003(\0132\020.payment.Pa" +
-      "yment\"V\n\024PaymentBalanceDetail\022\020\n\010tax_fre" +
-      "e\030\001 \001(\005\022\016\n\006supply\030\002 \001(\005\022\013\n\003vat\030\003 \001(\005\022\017\n\007" +
-      "service\030\004 \001(\005\"\233\002\n\016PaymentBalance\022\016\n\006amou" +
-      "nt\030\001 \001(\005\0223\n\014cash_receipt\030\002 \001(\0132\035.payment" +
-      ".PaymentBalanceDetail\022.\n\007primary\030\003 \001(\0132\035" +
-      ".payment.PaymentBalanceDetail\0220\n\tseconda" +
-      "ry\030\004 \001(\0132\035.payment.PaymentBalanceDetail\022" +
-      "/\n\010discount\030\005 \001(\0132\035.payment.PaymentBalan" +
-      "ceDetail\0221\n\thistories\030\006 \003(\0132\036.payment.Pa" +
-      "ymentBalanceHistory\"\360\001\n\025PaymentBalanceHi" +
-      "story\0223\n\014cash_receipt\030\001 \001(\0132\035.payment.Pa" +
-      "ymentBalanceDetail\022.\n\007primary\030\002 \001(\0132\035.pa" +
-      "yment.PaymentBalanceDetail\0220\n\tsecondary\030" +
-      "\003 \001(\0132\035.payment.PaymentBalanceDetail\022/\n\010" +
-      "discount\030\004 \001(\0132\035.payment.PaymentBalanceD" +
-      "etail\022\017\n\007created\030\005 \001(\005\"!\n\016PaymentRequest" +
-      "\022\017\n\007imp_uid\030\001 \001(\t\"T\n\017PaymentResponse\022\014\n\004" +
-      "code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030" +
-      "\003 \001(\0132\020.payment.Payment\"\"\n\017PaymentsReque" +
-      "st\022\017\n\007imp_uid\030\001 \003(\t\"U\n\020PaymentsResponse\022" +
-      "\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010respon" +
-      "se\030\003 \003(\0132\020.payment.Payment\"a\n\032PaymentsMe" +
-      "rchantUidRequest\022\024\n\014merchant_uid\030\001 \001(\t\022\016" +
-      "\n\006status\030\002 \001(\t\022\014\n\004page\030\003 \001(\005\022\017\n\007sorting\030" +
-      "\004 \001(\t\"d\n\033PaymentsMerchantUidResponse\022\014\n\004" +
-      "code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022&\n\010response\030" +
-      "\003 \001(\0132\024.payment.PaymentPage\"n\n\024PaymentSt" +
-      "atusRequest\022\016\n\006status\030\001 \001(\t\022\014\n\004page\030\002 \001(" +
-      "\005\022\r\n\005limit\030\003 \001(\005\022\014\n\004from\030\004 \001(\005\022\n\n\002to\030\005 \001" +
-      "(\005\022\017\n\007sorting\030\006 \001(\t\"^\n\025PaymentStatusResp" +
-      "onse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022&\n\010r" +
-      "esponse\030\003 \001(\0132\024.payment.PaymentPage\"R\n\031P" +
-      "aymentMerchantUidRequest\022\024\n\014merchant_uid" +
-      "\030\001 \001(\t\022\016\n\006status\030\002 \001(\t\022\017\n\007sorting\030\003 \001(\t\"" +
-      "_\n\032PaymentMerchantUidResponse\022\014\n\004code\030\001 " +
-      "\001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020" +
-      ".payment.Payment\"\305\001\n\024PaymentCancelReques" +
-      "t\022\017\n\007imp_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t" +
-      "\022\016\n\006amount\030\003 \001(\001\022\020\n\010tax_free\030\004 \001(\001\022\020\n\010ch" +
-      "ecksum\030\005 \001(\001\022\016\n\006reason\030\006 \001(\t\022\025\n\rrefund_h" +
-      "older\030\007 \001(\t\022\023\n\013refund_bank\030\010 \001(\t\022\026\n\016refu" +
-      "nd_account\030\t \001(\t\"Z\n\025PaymentCancelRespons" +
-      "e\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010resp" +
-      "onse\030\003 \001(\0132\020.payment.Payment\"(\n\025PaymentB" +
-      "alanceRequest\022\017\n\007imp_uid\030\001 \001(\t\"b\n\026Paymen" +
-      "tBalanceResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messag" +
-      "e\030\002 \001(\t\022)\n\010response\030\003 \001(\0132\027.payment.Paym" +
-      "entBalance\"/\n\007Prepare\022\024\n\014merchant_uid\030\001 " +
-      "\001(\t\022\016\n\006amount\030\002 \001(\005\"=\n\025PaymentPrepareReq" +
-      "uest\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001" +
-      "(\001\"[\n\026PaymentPrepareResponse\022\014\n\004code\030\001 \001" +
-      "(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020." +
-      "payment.PrepareB4Z2github.com/iamport/in" +
-      "terface/gen_src/go/v1/paymentb\006proto3"
+      "\n\030v1/payment/payment.proto\022\007payment\032\034goo" +
+      "gle/api/annotations.proto\"\305\007\n\007Payment\022\016\n" +
+      "\006amount\030\001 \001(\005\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank" +
+      "_code\030\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_" +
+      "addr\030\005 \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer" +
+      "_name\030\007 \001(\t\022\026\n\016buyer_postcode\030\010 \001(\t\022\021\n\tb" +
+      "uyer_tel\030\t \001(\t\022\025\n\rcancel_amount\030\n \001(\005\022.\n" +
+      "\016cancel_history\030\013 \003(\0132\026.payment.CancelHi" +
+      "story\022\025\n\rcancel_reason\030\014 \001(\t\022\033\n\023cancel_r" +
+      "eceipt_urls\030\r \003(\t\022\024\n\014cancelled_at\030\016 \001(\005\022" +
+      "\021\n\tcard_code\030\017 \001(\t\022\021\n\tcard_name\030\020 \001(\t\022\023\n" +
+      "\013card_number\030\021 \001(\t\022\022\n\ncard_quota\030\022 \001(\005\022\021" +
+      "\n\tcard_type\030\023 \001(\005\022\033\n\023cash_receipt_issued" +
+      "\030\024 \001(\010\022\017\n\007channel\030\025 \001(\t\022\020\n\010currency\030\026 \001(" +
+      "\t\022\023\n\013custom_data\030\027 \001(\t\022\024\n\014customer_uid\030\030" +
+      " \001(\t\022\032\n\022customer_uid_usage\030\031 \001(\t\022\016\n\006escr" +
+      "ow\030\032 \001(\010\022\023\n\013fail_reason\030\033 \001(\t\022\021\n\tfailed_" +
+      "at\030\034 \001(\005\022\017\n\007imp_uid\030\035 \001(\t\022\024\n\014merchant_ui" +
+      "d\030\036 \001(\t\022\014\n\004name\030\037 \001(\t\022\017\n\007paid_at\030  \001(\005\022\022" +
+      "\n\npay_method\030! \001(\t\022\r\n\005pg_id\030\" \001(\t\022\023\n\013pg_" +
+      "provider\030# \001(\t\022\016\n\006pg_tid\030$ \001(\t\022\023\n\013receip" +
+      "t_url\030% \001(\t\022\022\n\nstarted_at\030& \001(\005\022\016\n\006statu" +
+      "s\030\' \001(\t\022\022\n\nuser_agent\030( \001(\t\022\022\n\nvbank_cod" +
+      "e\030) \001(\t\022\022\n\nvbank_date\030* \001(\005\022\024\n\014vbank_hol" +
+      "der\030+ \001(\t\022\027\n\017vbank_issued_at\030, \001(\005\022\022\n\nvb" +
+      "ank_name\030- \001(\t\022\021\n\tvbank_num\030. \001(\t\"j\n\rCan" +
+      "celHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001" +
+      "(\005\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t" +
+      "\022\023\n\013receipt_url\030\005 \001(\t\"\\\n\013PaymentPage\022\r\n\005" +
+      "total\030\001 \001(\005\022\020\n\010previous\030\002 \001(\005\022\014\n\004next\030\003 " +
+      "\001(\005\022\036\n\004list\030\004 \003(\0132\020.payment.Payment\"V\n\024P" +
+      "aymentBalanceDetail\022\020\n\010tax_free\030\001 \001(\005\022\016\n" +
+      "\006supply\030\002 \001(\005\022\013\n\003vat\030\003 \001(\005\022\017\n\007service\030\004 " +
+      "\001(\005\"\233\002\n\016PaymentBalance\022\016\n\006amount\030\001 \001(\005\0223" +
+      "\n\014cash_receipt\030\002 \001(\0132\035.payment.PaymentBa" +
+      "lanceDetail\022.\n\007primary\030\003 \001(\0132\035.payment.P" +
+      "aymentBalanceDetail\0220\n\tsecondary\030\004 \001(\0132\035" +
+      ".payment.PaymentBalanceDetail\022/\n\010discoun" +
+      "t\030\005 \001(\0132\035.payment.PaymentBalanceDetail\0221" +
+      "\n\thistories\030\006 \003(\0132\036.payment.PaymentBalan" +
+      "ceHistory\"\360\001\n\025PaymentBalanceHistory\0223\n\014c" +
+      "ash_receipt\030\001 \001(\0132\035.payment.PaymentBalan" +
+      "ceDetail\022.\n\007primary\030\002 \001(\0132\035.payment.Paym" +
+      "entBalanceDetail\0220\n\tsecondary\030\003 \001(\0132\035.pa" +
+      "yment.PaymentBalanceDetail\022/\n\010discount\030\004" +
+      " \001(\0132\035.payment.PaymentBalanceDetail\022\017\n\007c" +
+      "reated\030\005 \001(\005\"!\n\016PaymentRequest\022\017\n\007imp_ui" +
+      "d\030\001 \001(\t\"T\n\017PaymentResponse\022\014\n\004code\030\001 \001(\005" +
+      "\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.pa" +
+      "yment.Payment\"\"\n\017PaymentsRequest\022\017\n\007imp_" +
+      "uid\030\001 \003(\t\"U\n\020PaymentsResponse\022\014\n\004code\030\001 " +
+      "\001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \003(\0132\020" +
+      ".payment.Payment\"a\n\032PaymentsMerchantUidR" +
+      "equest\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006status\030\002" +
+      " \001(\t\022\014\n\004page\030\003 \001(\005\022\017\n\007sorting\030\004 \001(\t\"d\n\033P" +
+      "aymentsMerchantUidResponse\022\014\n\004code\030\001 \001(\005" +
+      "\022\017\n\007message\030\002 \001(\t\022&\n\010response\030\003 \001(\0132\024.pa" +
+      "yment.PaymentPage\"n\n\024PaymentStatusReques" +
+      "t\022\016\n\006status\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit" +
+      "\030\003 \001(\005\022\014\n\004from\030\004 \001(\005\022\n\n\002to\030\005 \001(\005\022\017\n\007sort" +
+      "ing\030\006 \001(\t\"^\n\025PaymentStatusResponse\022\014\n\004co" +
+      "de\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022&\n\010response\030\003 " +
+      "\001(\0132\024.payment.PaymentPage\"R\n\031PaymentMerc" +
+      "hantUidRequest\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006" +
+      "status\030\002 \001(\t\022\017\n\007sorting\030\003 \001(\t\"_\n\032Payment" +
+      "MerchantUidResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007mes" +
+      "sage\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.P" +
+      "ayment\"\305\001\n\024PaymentCancelRequest\022\017\n\007imp_u" +
+      "id\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount" +
+      "\030\003 \001(\001\022\020\n\010tax_free\030\004 \001(\001\022\020\n\010checksum\030\005 \001" +
+      "(\001\022\016\n\006reason\030\006 \001(\t\022\025\n\rrefund_holder\030\007 \001(" +
+      "\t\022\023\n\013refund_bank\030\010 \001(\t\022\026\n\016refund_account" +
+      "\030\t \001(\t\"Z\n\025PaymentCancelResponse\022\014\n\004code\030" +
+      "\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\013" +
+      "2\020.payment.Payment\"(\n\025PaymentBalanceRequ" +
+      "est\022\017\n\007imp_uid\030\001 \001(\t\"b\n\026PaymentBalanceRe" +
+      "sponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022)\n" +
+      "\010response\030\003 \001(\0132\027.payment.PaymentBalance" +
+      "\"/\n\007Prepare\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006amo" +
+      "unt\030\002 \001(\005\"=\n\025PaymentPrepareRequest\022\024\n\014me" +
+      "rchant_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\"[\n\026Paym" +
+      "entPrepareResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007mess" +
+      "age\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.Pr" +
+      "epare\"0\n\030PaymentGetPrepareRequest\022\024\n\014mer" +
+      "chant_uid\030\001 \001(\t2\216\t\n\016PaymentService\022\200\001\n\021P" +
+      "aymentBalanceRPC\022\036.payment.PaymentBalanc" +
+      "eRequest\032\037.payment.PaymentBalanceRespons" +
+      "e\"*\202\323\344\223\002$\022\"/api/v1/payments/{imp_uid}/ba" +
+      "lance\022c\n\nPaymentRPC\022\027.payment.PaymentReq" +
+      "uest\032\030.payment.PaymentResponse\"\"\202\323\344\223\002\034\022\032" +
+      "/api/v1/payments/{imp_uid}\022\\\n\013PaymentsRP" +
+      "C\022\030.payment.PaymentsRequest\032\031.payment.Pa" +
+      "ymentsResponse\"\030\202\323\344\223\002\022\022\020/api/v1/payments" +
+      "\022\227\001\n\025PaymentMerchantUidRPC\022\".payment.Pay" +
+      "mentMerchantUidRequest\032#.payment.Payment" +
+      "MerchantUidResponse\"5\202\323\344\223\002/\022-/api/v1/pay" +
+      "ments/find/{merchant_uid}/{status}\022\235\001\n\026P" +
+      "aymentsMerchantUidRPC\022#.payment.Payments" +
+      "MerchantUidRequest\032$.payment.PaymentsMer" +
+      "chantUidResponse\"8\202\323\344\223\0022\0220/api/v1/paymen" +
+      "ts/findAll/{merchant_uid}/{status}\022|\n\021Pa" +
+      "ymentsStatusRPC\022\035.payment.PaymentStatusR" +
+      "equest\032\036.payment.PaymentStatusResponse\"(" +
+      "\202\323\344\223\002\"\022 /api/v1/payments/status/{status}" +
+      "\022u\n\020PaymentCanselRPC\022\035.payment.PaymentCa" +
+      "ncelRequest\032\036.payment.PaymentCancelRespo" +
+      "nse\"\"\202\323\344\223\002\034\"\027/api/v1/payments/cancel:\001*\022" +
+      "y\n\021PaymentPrepareRPC\022\036.payment.PaymentPr" +
+      "epareRequest\032\037.payment.PaymentPrepareRes" +
+      "ponse\"#\202\323\344\223\002\035\"\030/api/v1/payments/prepare:" +
+      "\001*\022\213\001\n\024PaymentGetPrepareRPC\022!.payment.Pa" +
+      "ymentGetPrepareRequest\032\037.payment.Payment" +
+      "PrepareResponse\"/\202\323\344\223\002)\022\'/api/v1/payment" +
+      "s/prepare/{merchant_uid}B4Z2github.com/i" +
+      "amport/interface/gen_src/go/v1/paymentb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_payment_Payment_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -26911,6 +27517,18 @@ public final class PaymentOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payment_PaymentPrepareResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
+    internal_static_payment_PaymentGetPrepareRequest_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_payment_PaymentGetPrepareRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payment_PaymentGetPrepareRequest_descriptor,
+        new java.lang.String[] { "MerchantUid", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

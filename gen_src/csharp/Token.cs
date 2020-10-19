@@ -24,15 +24,19 @@ namespace Authenticate {
     static TokenReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cht2MS9hdXRoZW50aWNhdGUvdG9rZW4ucHJvdG8SDGF1dGhlbnRpY2F0ZSI+",
-            "CgVUb2tlbhIUCgxhY2Nlc3NfdG9rZW4YASABKAkSCwoDbm93GAIgASgFEhIK",
-            "CmV4cGlyZWRfYXQYAyABKAUiMwoMVG9rZW5SZXF1ZXN0Eg8KB2ltcF9rZXkY",
-            "ASABKAkSEgoKaW1wX3NlY3JldBgCIAEoCSJVCg1Ub2tlblJlc3BvbnNlEgwK",
-            "BGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRIlCghyZXNwb25zZRgDIAEo",
-            "CzITLmF1dGhlbnRpY2F0ZS5Ub2tlbkI5WjdnaXRodWIuY29tL2lhbXBvcnQv",
-            "aW50ZXJmYWNlL2dlbl9zcmMvZ28vdjEvYXV0aGVudGljYXRlYgZwcm90bzM="));
+            "Cht2MS9hdXRoZW50aWNhdGUvdG9rZW4ucHJvdG8SDGF1dGhlbnRpY2F0ZRoc",
+            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byI+CgVUb2tlbhIUCgxhY2Nl",
+            "c3NfdG9rZW4YASABKAkSCwoDbm93GAIgASgFEhIKCmV4cGlyZWRfYXQYAyAB",
+            "KAUiMwoMVG9rZW5SZXF1ZXN0Eg8KB2ltcF9rZXkYASABKAkSEgoKaW1wX3Nl",
+            "Y3JldBgCIAEoCSJVCg1Ub2tlblJlc3BvbnNlEgwKBGNvZGUYASABKAUSDwoH",
+            "bWVzc2FnZRgCIAEoCRIlCghyZXNwb25zZRgDIAEoCzITLmF1dGhlbnRpY2F0",
+            "ZS5Ub2tlbjJ2CgxUb2tlblNlcnZpY2USZgoIVG9rZW5SUEMSGi5hdXRoZW50",
+            "aWNhdGUuVG9rZW5SZXF1ZXN0GhsuYXV0aGVudGljYXRlLlRva2VuUmVzcG9u",
+            "c2UiIYLT5JMCGyIWL2FwaS92MS91c2Vycy9nZXRUb2tlbjoBKkI5WjdnaXRo",
+            "dWIuY29tL2lhbXBvcnQvaW50ZXJmYWNlL2dlbl9zcmMvZ28vdjEvYXV0aGVu",
+            "dGljYXRlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Authenticate.Token), global::Authenticate.Token.Parser, new[]{ "AccessToken", "Now", "ExpiredAt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Authenticate.TokenRequest), global::Authenticate.TokenRequest.Parser, new[]{ "ImpKey", "ImpSecret" }, null, null, null, null),

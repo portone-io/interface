@@ -12,6 +12,8 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var google_api_annotations_pb = require('../../google/api/annotations_pb.js');
+goog.object.extend(proto, google_api_annotations_pb);
 var v1_payment_payment_pb = require('../../v1/payment/payment_pb.js');
 goog.object.extend(proto, v1_payment_payment_pb);
 goog.exportSymbol('proto.subscribe.AgainPaymentRequest', null, global);

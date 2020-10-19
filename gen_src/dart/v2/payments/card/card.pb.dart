@@ -5,6 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
+import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -1247,10 +1248,11 @@ class CancelHistory extends $pb.GeneratedMessage {
 
 class CancelCardPaymentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CancelCardPaymentRequest', package: const $pb.PackageName('card_v2'), createEmptyInstance: create)
-    ..aOS(1, 'amount')
-    ..aOS(2, 'merchantUid')
-    ..aOS(3, 'dutyFreeAmount')
-    ..aOS(4, 'reason')
+    ..aOS(1, 'impUid')
+    ..aOS(2, 'amount')
+    ..aOS(3, 'merchantUid')
+    ..aOS(4, 'dutyFreeAmount')
+    ..aOS(5, 'reason')
     ..hasRequiredFields = false
   ;
 
@@ -1270,40 +1272,49 @@ class CancelCardPaymentRequest extends $pb.GeneratedMessage {
   static CancelCardPaymentRequest _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get amount => $_getSZ(0);
+  $core.String get impUid => $_getSZ(0);
   @$pb.TagNumber(1)
-  set amount($core.String v) { $_setString(0, v); }
+  set impUid($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasAmount() => $_has(0);
+  $core.bool hasImpUid() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAmount() => clearField(1);
+  void clearImpUid() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get merchantUid => $_getSZ(1);
+  $core.String get amount => $_getSZ(1);
   @$pb.TagNumber(2)
-  set merchantUid($core.String v) { $_setString(1, v); }
+  set amount($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasMerchantUid() => $_has(1);
+  $core.bool hasAmount() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMerchantUid() => clearField(2);
+  void clearAmount() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get dutyFreeAmount => $_getSZ(2);
+  $core.String get merchantUid => $_getSZ(2);
   @$pb.TagNumber(3)
-  set dutyFreeAmount($core.String v) { $_setString(2, v); }
+  set merchantUid($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasDutyFreeAmount() => $_has(2);
+  $core.bool hasMerchantUid() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDutyFreeAmount() => clearField(3);
+  void clearMerchantUid() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get reason => $_getSZ(3);
+  $core.String get dutyFreeAmount => $_getSZ(3);
   @$pb.TagNumber(4)
-  set reason($core.String v) { $_setString(3, v); }
+  set dutyFreeAmount($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasReason() => $_has(3);
+  $core.bool hasDutyFreeAmount() => $_has(3);
   @$pb.TagNumber(4)
-  void clearReason() => clearField(4);
+  void clearDutyFreeAmount() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get reason => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set reason($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasReason() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearReason() => clearField(5);
 }
 
 class CancelCardPaymenttResponse extends $pb.GeneratedMessage {
@@ -1357,5 +1368,31 @@ class CancelCardPaymenttResponse extends $pb.GeneratedMessage {
   void clearResponse() => clearField(3);
   @$pb.TagNumber(3)
   PayByRegisteredCardData ensureResponse() => $_ensure(2);
+}
+
+class PaymentCardServiceApi {
+  $pb.RpcClient _client;
+  PaymentCardServiceApi(this._client);
+
+  $async.Future<CardRegisterResponse> cardRegisterRPC($pb.ClientContext ctx, CardRegisterRequest request) {
+    var emptyResponse = CardRegisterResponse();
+    return _client.invoke<CardRegisterResponse>(ctx, 'PaymentCardService', 'CardRegisterRPC', request, emptyResponse);
+  }
+  $async.Future<GetCardInfoResponse> getCardInfoRPC($pb.ClientContext ctx, GetCardInfoRequest request) {
+    var emptyResponse = GetCardInfoResponse();
+    return _client.invoke<GetCardInfoResponse>(ctx, 'PaymentCardService', 'GetCardInfoRPC', request, emptyResponse);
+  }
+  $async.Future<DeleteCardInfoResponse> deleteCardInfoRPC($pb.ClientContext ctx, DeleteCardInfoRequest request) {
+    var emptyResponse = DeleteCardInfoResponse();
+    return _client.invoke<DeleteCardInfoResponse>(ctx, 'PaymentCardService', 'DeleteCardInfoRPC', request, emptyResponse);
+  }
+  $async.Future<PayByRegisteredCardResponse> payByRegiseteredCardRPC($pb.ClientContext ctx, PayByRegisteredCardRequest request) {
+    var emptyResponse = PayByRegisteredCardResponse();
+    return _client.invoke<PayByRegisteredCardResponse>(ctx, 'PaymentCardService', 'PayByRegiseteredCardRPC', request, emptyResponse);
+  }
+  $async.Future<CancelCardPaymenttResponse> cancelRegiseteredCardRPC($pb.ClientContext ctx, CancelCardPaymentRequest request) {
+    var emptyResponse = CancelCardPaymenttResponse();
+    return _client.invoke<CancelCardPaymenttResponse>(ctx, 'PaymentCardService', 'CancelRegiseteredCardRPC', request, emptyResponse);
+  }
 }
 

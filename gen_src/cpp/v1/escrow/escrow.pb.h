@@ -32,6 +32,7 @@
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
+#include "google/api/annotations.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_v1_2fescrow_2fescrow_2eproto
@@ -573,11 +574,28 @@ class EscrowRequest PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSenderFieldNumber = 1,
-    kReceiverFieldNumber = 2,
-    kLogisFieldNumber = 3,
+    kImpUidFieldNumber = 1,
+    kSenderFieldNumber = 2,
+    kReceiverFieldNumber = 3,
+    kLogisFieldNumber = 4,
   };
-  // .escrow.Info sender = 1;
+  // string imp_uid = 1;
+  void clear_imp_uid();
+  const std::string& imp_uid() const;
+  void set_imp_uid(const std::string& value);
+  void set_imp_uid(std::string&& value);
+  void set_imp_uid(const char* value);
+  void set_imp_uid(const char* value, size_t size);
+  std::string* mutable_imp_uid();
+  std::string* release_imp_uid();
+  void set_allocated_imp_uid(std::string* imp_uid);
+  private:
+  const std::string& _internal_imp_uid() const;
+  void _internal_set_imp_uid(const std::string& value);
+  std::string* _internal_mutable_imp_uid();
+  public:
+
+  // .escrow.Info sender = 2;
   bool has_sender() const;
   private:
   bool _internal_has_sender() const;
@@ -595,7 +613,7 @@ class EscrowRequest PROTOBUF_FINAL :
       ::escrow::Info* sender);
   ::escrow::Info* unsafe_arena_release_sender();
 
-  // .escrow.Info receiver = 2;
+  // .escrow.Info receiver = 3;
   bool has_receiver() const;
   private:
   bool _internal_has_receiver() const;
@@ -613,7 +631,7 @@ class EscrowRequest PROTOBUF_FINAL :
       ::escrow::Info* receiver);
   ::escrow::Info* unsafe_arena_release_receiver();
 
-  // .escrow.Logis logis = 3;
+  // .escrow.Logis logis = 4;
   bool has_logis() const;
   private:
   bool _internal_has_logis() const;
@@ -638,6 +656,7 @@ class EscrowRequest PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr imp_uid_;
   ::escrow::Info* sender_;
   ::escrow::Info* receiver_;
   ::escrow::Logis* logis_;
@@ -1250,7 +1269,69 @@ inline void Logis::set_applied_at(::PROTOBUF_NAMESPACE_ID::int32 value) {
 
 // EscrowRequest
 
-// .escrow.Info sender = 1;
+// string imp_uid = 1;
+inline void EscrowRequest::clear_imp_uid() {
+  imp_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& EscrowRequest::imp_uid() const {
+  // @@protoc_insertion_point(field_get:escrow.EscrowRequest.imp_uid)
+  return _internal_imp_uid();
+}
+inline void EscrowRequest::set_imp_uid(const std::string& value) {
+  _internal_set_imp_uid(value);
+  // @@protoc_insertion_point(field_set:escrow.EscrowRequest.imp_uid)
+}
+inline std::string* EscrowRequest::mutable_imp_uid() {
+  // @@protoc_insertion_point(field_mutable:escrow.EscrowRequest.imp_uid)
+  return _internal_mutable_imp_uid();
+}
+inline const std::string& EscrowRequest::_internal_imp_uid() const {
+  return imp_uid_.Get();
+}
+inline void EscrowRequest::_internal_set_imp_uid(const std::string& value) {
+  
+  imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void EscrowRequest::set_imp_uid(std::string&& value) {
+  
+  imp_uid_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:escrow.EscrowRequest.imp_uid)
+}
+inline void EscrowRequest::set_imp_uid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:escrow.EscrowRequest.imp_uid)
+}
+inline void EscrowRequest::set_imp_uid(const char* value,
+    size_t size) {
+  
+  imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:escrow.EscrowRequest.imp_uid)
+}
+inline std::string* EscrowRequest::_internal_mutable_imp_uid() {
+  
+  return imp_uid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* EscrowRequest::release_imp_uid() {
+  // @@protoc_insertion_point(field_release:escrow.EscrowRequest.imp_uid)
+  return imp_uid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void EscrowRequest::set_allocated_imp_uid(std::string* imp_uid) {
+  if (imp_uid != nullptr) {
+    
+  } else {
+    
+  }
+  imp_uid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), imp_uid,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:escrow.EscrowRequest.imp_uid)
+}
+
+// .escrow.Info sender = 2;
 inline bool EscrowRequest::_internal_has_sender() const {
   return this != internal_default_instance() && sender_ != nullptr;
 }
@@ -1333,7 +1414,7 @@ inline void EscrowRequest::set_allocated_sender(::escrow::Info* sender) {
   // @@protoc_insertion_point(field_set_allocated:escrow.EscrowRequest.sender)
 }
 
-// .escrow.Info receiver = 2;
+// .escrow.Info receiver = 3;
 inline bool EscrowRequest::_internal_has_receiver() const {
   return this != internal_default_instance() && receiver_ != nullptr;
 }
@@ -1416,7 +1497,7 @@ inline void EscrowRequest::set_allocated_receiver(::escrow::Info* receiver) {
   // @@protoc_insertion_point(field_set_allocated:escrow.EscrowRequest.receiver)
 }
 
-// .escrow.Logis logis = 3;
+// .escrow.Logis logis = 4;
 inline bool EscrowRequest::_internal_has_logis() const {
   return this != internal_default_instance() && logis_ != nullptr;
 }

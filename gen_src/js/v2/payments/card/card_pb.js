@@ -12,6 +12,8 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
+goog.object.extend(proto, google_api_annotations_pb);
 goog.exportSymbol('proto.card_v2.CancelCardPaymentRequest', null, global);
 goog.exportSymbol('proto.card_v2.CancelCardPaymenttResponse', null, global);
 goog.exportSymbol('proto.card_v2.CancelHistory', null, global);
@@ -4634,10 +4636,11 @@ proto.card_v2.CancelCardPaymentRequest.prototype.toObject = function(opt_include
  */
 proto.card_v2.CancelCardPaymentRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    amount: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    merchantUid: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    dutyFreeAmount: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    reason: jspb.Message.getFieldWithDefault(msg, 4, "")
+    impUid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    amount: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    merchantUid: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    dutyFreeAmount: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    reason: jspb.Message.getFieldWithDefault(msg, 5, "")
   };
 
   if (includeInstance) {
@@ -4676,17 +4679,21 @@ proto.card_v2.CancelCardPaymentRequest.deserializeBinaryFromReader = function(ms
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setAmount(value);
+      msg.setImpUid(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setMerchantUid(value);
+      msg.setAmount(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDutyFreeAmount(value);
+      msg.setMerchantUid(value);
       break;
     case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDutyFreeAmount(value);
+      break;
+    case 5:
       var value = /** @type {string} */ (reader.readString());
       msg.setReason(value);
       break;
@@ -4719,31 +4726,38 @@ proto.card_v2.CancelCardPaymentRequest.prototype.serializeBinary = function() {
  */
 proto.card_v2.CancelCardPaymentRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getAmount();
+  f = message.getImpUid();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getMerchantUid();
+  f = message.getAmount();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getDutyFreeAmount();
+  f = message.getMerchantUid();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
     );
   }
-  f = message.getReason();
+  f = message.getDutyFreeAmount();
   if (f.length > 0) {
     writer.writeString(
       4,
+      f
+    );
+  }
+  f = message.getReason();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
       f
     );
   }
@@ -4751,10 +4765,10 @@ proto.card_v2.CancelCardPaymentRequest.serializeBinaryToWriter = function(messag
 
 
 /**
- * optional string amount = 1;
+ * optional string imp_uid = 1;
  * @return {string}
  */
-proto.card_v2.CancelCardPaymentRequest.prototype.getAmount = function() {
+proto.card_v2.CancelCardPaymentRequest.prototype.getImpUid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -4763,16 +4777,16 @@ proto.card_v2.CancelCardPaymentRequest.prototype.getAmount = function() {
  * @param {string} value
  * @return {!proto.card_v2.CancelCardPaymentRequest} returns this
  */
-proto.card_v2.CancelCardPaymentRequest.prototype.setAmount = function(value) {
+proto.card_v2.CancelCardPaymentRequest.prototype.setImpUid = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string merchant_uid = 2;
+ * optional string amount = 2;
  * @return {string}
  */
-proto.card_v2.CancelCardPaymentRequest.prototype.getMerchantUid = function() {
+proto.card_v2.CancelCardPaymentRequest.prototype.getAmount = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -4781,16 +4795,16 @@ proto.card_v2.CancelCardPaymentRequest.prototype.getMerchantUid = function() {
  * @param {string} value
  * @return {!proto.card_v2.CancelCardPaymentRequest} returns this
  */
-proto.card_v2.CancelCardPaymentRequest.prototype.setMerchantUid = function(value) {
+proto.card_v2.CancelCardPaymentRequest.prototype.setAmount = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional string duty_free_amount = 3;
+ * optional string merchant_uid = 3;
  * @return {string}
  */
-proto.card_v2.CancelCardPaymentRequest.prototype.getDutyFreeAmount = function() {
+proto.card_v2.CancelCardPaymentRequest.prototype.getMerchantUid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -4799,16 +4813,16 @@ proto.card_v2.CancelCardPaymentRequest.prototype.getDutyFreeAmount = function() 
  * @param {string} value
  * @return {!proto.card_v2.CancelCardPaymentRequest} returns this
  */
-proto.card_v2.CancelCardPaymentRequest.prototype.setDutyFreeAmount = function(value) {
+proto.card_v2.CancelCardPaymentRequest.prototype.setMerchantUid = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * optional string reason = 4;
+ * optional string duty_free_amount = 4;
  * @return {string}
  */
-proto.card_v2.CancelCardPaymentRequest.prototype.getReason = function() {
+proto.card_v2.CancelCardPaymentRequest.prototype.getDutyFreeAmount = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
@@ -4817,8 +4831,26 @@ proto.card_v2.CancelCardPaymentRequest.prototype.getReason = function() {
  * @param {string} value
  * @return {!proto.card_v2.CancelCardPaymentRequest} returns this
  */
-proto.card_v2.CancelCardPaymentRequest.prototype.setReason = function(value) {
+proto.card_v2.CancelCardPaymentRequest.prototype.setDutyFreeAmount = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional string reason = 5;
+ * @return {string}
+ */
+proto.card_v2.CancelCardPaymentRequest.prototype.getReason = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.card_v2.CancelCardPaymentRequest} returns this
+ */
+proto.card_v2.CancelCardPaymentRequest.prototype.setReason = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 

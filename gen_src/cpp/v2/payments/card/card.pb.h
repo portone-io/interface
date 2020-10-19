@@ -32,6 +32,7 @@
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
+#include "google/api/annotations.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_v2_2fpayments_2fcard_2fcard_2eproto
@@ -3415,12 +3416,29 @@ class CancelCardPaymentRequest PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAmountFieldNumber = 1,
-    kMerchantUidFieldNumber = 2,
-    kDutyFreeAmountFieldNumber = 3,
-    kReasonFieldNumber = 4,
+    kImpUidFieldNumber = 1,
+    kAmountFieldNumber = 2,
+    kMerchantUidFieldNumber = 3,
+    kDutyFreeAmountFieldNumber = 4,
+    kReasonFieldNumber = 5,
   };
-  // string amount = 1;
+  // string imp_uid = 1;
+  void clear_imp_uid();
+  const std::string& imp_uid() const;
+  void set_imp_uid(const std::string& value);
+  void set_imp_uid(std::string&& value);
+  void set_imp_uid(const char* value);
+  void set_imp_uid(const char* value, size_t size);
+  std::string* mutable_imp_uid();
+  std::string* release_imp_uid();
+  void set_allocated_imp_uid(std::string* imp_uid);
+  private:
+  const std::string& _internal_imp_uid() const;
+  void _internal_set_imp_uid(const std::string& value);
+  std::string* _internal_mutable_imp_uid();
+  public:
+
+  // string amount = 2;
   void clear_amount();
   const std::string& amount() const;
   void set_amount(const std::string& value);
@@ -3436,7 +3454,7 @@ class CancelCardPaymentRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_amount();
   public:
 
-  // string merchant_uid = 2;
+  // string merchant_uid = 3;
   void clear_merchant_uid();
   const std::string& merchant_uid() const;
   void set_merchant_uid(const std::string& value);
@@ -3452,7 +3470,7 @@ class CancelCardPaymentRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_merchant_uid();
   public:
 
-  // string duty_free_amount = 3;
+  // string duty_free_amount = 4;
   void clear_duty_free_amount();
   const std::string& duty_free_amount() const;
   void set_duty_free_amount(const std::string& value);
@@ -3468,7 +3486,7 @@ class CancelCardPaymentRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_duty_free_amount();
   public:
 
-  // string reason = 4;
+  // string reason = 5;
   void clear_reason();
   const std::string& reason() const;
   void set_reason(const std::string& value);
@@ -3491,6 +3509,7 @@ class CancelCardPaymentRequest PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr imp_uid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr amount_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr merchant_uid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr duty_free_amount_;
@@ -9166,7 +9185,69 @@ inline void CancelHistory::set_allocated_receipt_url(std::string* receipt_url) {
 
 // CancelCardPaymentRequest
 
-// string amount = 1;
+// string imp_uid = 1;
+inline void CancelCardPaymentRequest::clear_imp_uid() {
+  imp_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CancelCardPaymentRequest::imp_uid() const {
+  // @@protoc_insertion_point(field_get:card_v2.CancelCardPaymentRequest.imp_uid)
+  return _internal_imp_uid();
+}
+inline void CancelCardPaymentRequest::set_imp_uid(const std::string& value) {
+  _internal_set_imp_uid(value);
+  // @@protoc_insertion_point(field_set:card_v2.CancelCardPaymentRequest.imp_uid)
+}
+inline std::string* CancelCardPaymentRequest::mutable_imp_uid() {
+  // @@protoc_insertion_point(field_mutable:card_v2.CancelCardPaymentRequest.imp_uid)
+  return _internal_mutable_imp_uid();
+}
+inline const std::string& CancelCardPaymentRequest::_internal_imp_uid() const {
+  return imp_uid_.Get();
+}
+inline void CancelCardPaymentRequest::_internal_set_imp_uid(const std::string& value) {
+  
+  imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CancelCardPaymentRequest::set_imp_uid(std::string&& value) {
+  
+  imp_uid_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:card_v2.CancelCardPaymentRequest.imp_uid)
+}
+inline void CancelCardPaymentRequest::set_imp_uid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:card_v2.CancelCardPaymentRequest.imp_uid)
+}
+inline void CancelCardPaymentRequest::set_imp_uid(const char* value,
+    size_t size) {
+  
+  imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:card_v2.CancelCardPaymentRequest.imp_uid)
+}
+inline std::string* CancelCardPaymentRequest::_internal_mutable_imp_uid() {
+  
+  return imp_uid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CancelCardPaymentRequest::release_imp_uid() {
+  // @@protoc_insertion_point(field_release:card_v2.CancelCardPaymentRequest.imp_uid)
+  return imp_uid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CancelCardPaymentRequest::set_allocated_imp_uid(std::string* imp_uid) {
+  if (imp_uid != nullptr) {
+    
+  } else {
+    
+  }
+  imp_uid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), imp_uid,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:card_v2.CancelCardPaymentRequest.imp_uid)
+}
+
+// string amount = 2;
 inline void CancelCardPaymentRequest::clear_amount() {
   amount_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -9228,7 +9309,7 @@ inline void CancelCardPaymentRequest::set_allocated_amount(std::string* amount) 
   // @@protoc_insertion_point(field_set_allocated:card_v2.CancelCardPaymentRequest.amount)
 }
 
-// string merchant_uid = 2;
+// string merchant_uid = 3;
 inline void CancelCardPaymentRequest::clear_merchant_uid() {
   merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -9290,7 +9371,7 @@ inline void CancelCardPaymentRequest::set_allocated_merchant_uid(std::string* me
   // @@protoc_insertion_point(field_set_allocated:card_v2.CancelCardPaymentRequest.merchant_uid)
 }
 
-// string duty_free_amount = 3;
+// string duty_free_amount = 4;
 inline void CancelCardPaymentRequest::clear_duty_free_amount() {
   duty_free_amount_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -9352,7 +9433,7 @@ inline void CancelCardPaymentRequest::set_allocated_duty_free_amount(std::string
   // @@protoc_insertion_point(field_set_allocated:card_v2.CancelCardPaymentRequest.duty_free_amount)
 }
 
-// string reason = 4;
+// string reason = 5;
 inline void CancelCardPaymentRequest::clear_reason() {
   reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }

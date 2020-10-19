@@ -1,7 +1,66 @@
 syntax = "proto3";
 package payment;
 
+import "google/api/annotations.proto";
 option go_package = "github.com/iamport/interface/gen_src/go/v1/payment";
+
+service PaymentService {
+    rpc PaymentBalanceRPC(PaymentBalanceRequest) returns (PaymentBalanceResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/payments/{imp_uid}/balance"
+        };
+    }
+
+    rpc PaymentRPC(PaymentRequest) returns (PaymentResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/payments/{imp_uid}"
+        };
+    }
+
+    rpc PaymentsRPC(PaymentsRequest) returns (PaymentsResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/payments"
+        };
+    }
+
+    rpc PaymentMerchantUidRPC(PaymentMerchantUidRequest) returns (PaymentMerchantUidResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/payments/find/{merchant_uid}/{status}"
+        };
+    }
+
+    rpc PaymentsMerchantUidRPC(PaymentsMerchantUidRequest) returns (PaymentsMerchantUidResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/payments/findAll/{merchant_uid}/{status}"
+        };
+    }
+
+    rpc PaymentsStatusRPC(PaymentStatusRequest) returns (PaymentStatusResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/payments/status/{status}"
+        };
+    }
+
+    rpc PaymentCanselRPC(PaymentCancelRequest) returns (PaymentCancelResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/payments/cancel"
+            body: "*"
+        };
+    }
+
+    rpc PaymentPrepareRPC(PaymentPrepareRequest) returns (PaymentPrepareResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/payments/prepare"
+            body: "*"
+        };
+    }
+
+    rpc PaymentGetPrepareRPC(PaymentGetPrepareRequest) returns (PaymentPrepareResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/payments/prepare/{merchant_uid}"
+        };
+    }
+}
 
 message Payment {
     int32 amount = 1;
@@ -194,3 +253,9 @@ message PaymentPrepareResponse {
     string message = 2;
     Prepare response = 3;
 }
+
+message PaymentGetPrepareRequest {
+    string merchant_uid = 1;
+}
+
+

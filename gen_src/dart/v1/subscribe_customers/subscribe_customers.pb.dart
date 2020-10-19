@@ -5,11 +5,13 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
+import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../payment/payment.pb.dart' as $0;
+import '../payment/payment.pb.dart' as $2;
+import '../subscribe/subscribe.pb.dart' as $4;
 
 class CustomerBillingKey extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CustomerBillingKey', package: const $pb.PackageName('subscribe_customers'), createEmptyInstance: create)
@@ -660,7 +662,7 @@ class NestedGetPaidByBillingKeyListData extends $pb.GeneratedMessage {
     ..a<$core.int>(1, 'total', $pb.PbFieldType.O3)
     ..a<$core.int>(2, 'previous', $pb.PbFieldType.O3)
     ..a<$core.int>(3, 'next', $pb.PbFieldType.O3)
-    ..pc<$0.Payment>(4, 'list', $pb.PbFieldType.PM, subBuilder: $0.Payment.create)
+    ..pc<$2.Payment>(4, 'list', $pb.PbFieldType.PM, subBuilder: $2.Payment.create)
     ..hasRequiredFields = false
   ;
 
@@ -707,7 +709,7 @@ class NestedGetPaidByBillingKeyListData extends $pb.GeneratedMessage {
   void clearNext() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.List<$0.Payment> get list => $_getList(3);
+  $core.List<$2.Payment> get list => $_getList(3);
 }
 
 class GetPaidByBillingKeyListResponse extends $pb.GeneratedMessage {
@@ -761,5 +763,35 @@ class GetPaidByBillingKeyListResponse extends $pb.GeneratedMessage {
   void clearResponse() => clearField(3);
   @$pb.TagNumber(3)
   NestedGetPaidByBillingKeyListData ensureResponse() => $_ensure(2);
+}
+
+class SubscribeCustomersServiceApi {
+  $pb.RpcClient _client;
+  SubscribeCustomersServiceApi(this._client);
+
+  $async.Future<GetMultipleCustomerBillingKeyResponse> getMultipleCustomerBillingKeyRPC($pb.ClientContext ctx, GetMultipleCustomerBillingKeyRequest request) {
+    var emptyResponse = GetMultipleCustomerBillingKeyResponse();
+    return _client.invoke<GetMultipleCustomerBillingKeyResponse>(ctx, 'SubscribeCustomersService', 'GetMultipleCustomerBillingKeyRPC', request, emptyResponse);
+  }
+  $async.Future<DeleteCustomerBillingKeyResponse> deleteCustomerBillingKeyRPC($pb.ClientContext ctx, DeleteCustomerBillingKeyRequest request) {
+    var emptyResponse = DeleteCustomerBillingKeyResponse();
+    return _client.invoke<DeleteCustomerBillingKeyResponse>(ctx, 'SubscribeCustomersService', 'DeleteCustomerBillingKeyRPC', request, emptyResponse);
+  }
+  $async.Future<GetCustomerBillingKeyResponse> getCustomerBillingKeyRPC($pb.ClientContext ctx, GetCustomerBillingKeyRequest request) {
+    var emptyResponse = GetCustomerBillingKeyResponse();
+    return _client.invoke<GetCustomerBillingKeyResponse>(ctx, 'SubscribeCustomersService', 'GetCustomerBillingKeyRPC', request, emptyResponse);
+  }
+  $async.Future<InsertCustomerBillingKeyResponse> insertCustomerBillingKeyRPC($pb.ClientContext ctx, InsertCustomerBillingKeyRequest request) {
+    var emptyResponse = InsertCustomerBillingKeyResponse();
+    return _client.invoke<InsertCustomerBillingKeyResponse>(ctx, 'SubscribeCustomersService', 'InsertCustomerBillingKeyRPC', request, emptyResponse);
+  }
+  $async.Future<GetPaidByBillingKeyListResponse> getPaidByBillingKeyListRPC($pb.ClientContext ctx, GetPaidByBillingKeyListRequest request) {
+    var emptyResponse = GetPaidByBillingKeyListResponse();
+    return _client.invoke<GetPaidByBillingKeyListResponse>(ctx, 'SubscribeCustomersService', 'GetPaidByBillingKeyListRPC', request, emptyResponse);
+  }
+  $async.Future<$4.GetPaymentScheduleByCustomerResponse> getPaymentScheduleByCustomerRPC($pb.ClientContext ctx, $4.GetPaymentScheduleByCustomerRequest request) {
+    var emptyResponse = $4.GetPaymentScheduleByCustomerResponse();
+    return _client.invoke<$4.GetPaymentScheduleByCustomerResponse>(ctx, 'SubscribeCustomersService', 'GetPaymentScheduleByCustomerRPC', request, emptyResponse);
+  }
 }
 

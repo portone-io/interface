@@ -5,6 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
+import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -152,5 +153,15 @@ class TokenResponse extends $pb.GeneratedMessage {
   void clearResponse() => clearField(3);
   @$pb.TagNumber(3)
   Token ensureResponse() => $_ensure(2);
+}
+
+class TokenServiceApi {
+  $pb.RpcClient _client;
+  TokenServiceApi(this._client);
+
+  $async.Future<TokenResponse> tokenRPC($pb.ClientContext ctx, TokenRequest request) {
+    var emptyResponse = TokenResponse();
+    return _client.invoke<TokenResponse>(ctx, 'TokenService', 'TokenRPC', request, emptyResponse);
+  }
 }
 

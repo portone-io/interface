@@ -5,6 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
+import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -1714,5 +1715,78 @@ class PaymentPrepareResponse extends $pb.GeneratedMessage {
   void clearResponse() => clearField(3);
   @$pb.TagNumber(3)
   Prepare ensureResponse() => $_ensure(2);
+}
+
+class PaymentGetPrepareRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PaymentGetPrepareRequest', package: const $pb.PackageName('payment'), createEmptyInstance: create)
+    ..aOS(1, 'merchantUid')
+    ..hasRequiredFields = false
+  ;
+
+  PaymentGetPrepareRequest._() : super();
+  factory PaymentGetPrepareRequest() => create();
+  factory PaymentGetPrepareRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PaymentGetPrepareRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  PaymentGetPrepareRequest clone() => PaymentGetPrepareRequest()..mergeFromMessage(this);
+  PaymentGetPrepareRequest copyWith(void Function(PaymentGetPrepareRequest) updates) => super.copyWith((message) => updates(message as PaymentGetPrepareRequest));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PaymentGetPrepareRequest create() => PaymentGetPrepareRequest._();
+  PaymentGetPrepareRequest createEmptyInstance() => create();
+  static $pb.PbList<PaymentGetPrepareRequest> createRepeated() => $pb.PbList<PaymentGetPrepareRequest>();
+  @$core.pragma('dart2js:noInline')
+  static PaymentGetPrepareRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PaymentGetPrepareRequest>(create);
+  static PaymentGetPrepareRequest _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get merchantUid => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set merchantUid($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasMerchantUid() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMerchantUid() => clearField(1);
+}
+
+class PaymentServiceApi {
+  $pb.RpcClient _client;
+  PaymentServiceApi(this._client);
+
+  $async.Future<PaymentBalanceResponse> paymentBalanceRPC($pb.ClientContext ctx, PaymentBalanceRequest request) {
+    var emptyResponse = PaymentBalanceResponse();
+    return _client.invoke<PaymentBalanceResponse>(ctx, 'PaymentService', 'PaymentBalanceRPC', request, emptyResponse);
+  }
+  $async.Future<PaymentResponse> paymentRPC($pb.ClientContext ctx, PaymentRequest request) {
+    var emptyResponse = PaymentResponse();
+    return _client.invoke<PaymentResponse>(ctx, 'PaymentService', 'PaymentRPC', request, emptyResponse);
+  }
+  $async.Future<PaymentsResponse> paymentsRPC($pb.ClientContext ctx, PaymentsRequest request) {
+    var emptyResponse = PaymentsResponse();
+    return _client.invoke<PaymentsResponse>(ctx, 'PaymentService', 'PaymentsRPC', request, emptyResponse);
+  }
+  $async.Future<PaymentMerchantUidResponse> paymentMerchantUidRPC($pb.ClientContext ctx, PaymentMerchantUidRequest request) {
+    var emptyResponse = PaymentMerchantUidResponse();
+    return _client.invoke<PaymentMerchantUidResponse>(ctx, 'PaymentService', 'PaymentMerchantUidRPC', request, emptyResponse);
+  }
+  $async.Future<PaymentsMerchantUidResponse> paymentsMerchantUidRPC($pb.ClientContext ctx, PaymentsMerchantUidRequest request) {
+    var emptyResponse = PaymentsMerchantUidResponse();
+    return _client.invoke<PaymentsMerchantUidResponse>(ctx, 'PaymentService', 'PaymentsMerchantUidRPC', request, emptyResponse);
+  }
+  $async.Future<PaymentStatusResponse> paymentsStatusRPC($pb.ClientContext ctx, PaymentStatusRequest request) {
+    var emptyResponse = PaymentStatusResponse();
+    return _client.invoke<PaymentStatusResponse>(ctx, 'PaymentService', 'PaymentsStatusRPC', request, emptyResponse);
+  }
+  $async.Future<PaymentCancelResponse> paymentCanselRPC($pb.ClientContext ctx, PaymentCancelRequest request) {
+    var emptyResponse = PaymentCancelResponse();
+    return _client.invoke<PaymentCancelResponse>(ctx, 'PaymentService', 'PaymentCanselRPC', request, emptyResponse);
+  }
+  $async.Future<PaymentPrepareResponse> paymentPrepareRPC($pb.ClientContext ctx, PaymentPrepareRequest request) {
+    var emptyResponse = PaymentPrepareResponse();
+    return _client.invoke<PaymentPrepareResponse>(ctx, 'PaymentService', 'PaymentPrepareRPC', request, emptyResponse);
+  }
+  $async.Future<PaymentPrepareResponse> paymentGetPrepareRPC($pb.ClientContext ctx, PaymentGetPrepareRequest request) {
+    var emptyResponse = PaymentPrepareResponse();
+    return _client.invoke<PaymentPrepareResponse>(ctx, 'PaymentService', 'PaymentGetPrepareRPC', request, emptyResponse);
+  }
 }
 

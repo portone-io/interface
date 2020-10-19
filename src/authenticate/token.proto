@@ -1,7 +1,7 @@
 syntax = "proto3";
 package authenticate;
 
-option go_package = "github.com/iamport/interface/build/go/authenticate";
+option go_package = "github.com/iamport/interface/gen_src/go/authenticate";
 message Token {
     string access_token = 1;
     int32 now = 2;

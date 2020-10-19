@@ -1,7 +1,7 @@
 syntax = "proto3";
 package payment;
 
-option go_package = "github.com/iamport/interface/build/go/payment";
+option go_package = "github.com/iamport/interface/gen_src/go/payment";
 
 message Payment {
     int32 amount = 1;

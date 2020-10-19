@@ -1,0 +1,33 @@
+syntax = "proto3";
+package authenticate_v2;
+
+option go_package = "github.com/iamport/interface/gen_src/go/v2/authenticate";
+
+message TokenRequest {
+    string imp_key = 1;
+    string imp_secret = 2;
+}
+
+message TokenData {
+    string access_token = 1;
+    int32 expired_at = 2;
+    int32 now = 3;
+}
+
+message TokenResponse {
+    int32 code = 1;
+    string message = 2;
+    TokenData response = 3;
+}
+
+message PubKeyRegisterRequest {
+    string imp_key = 1;
+    string public_key = 2;
+    string password = 3; // want to make it work without session dependency
+}
+
+message PubKeyRegisterResponse {
+    int32 code = 1;
+    string message = 2;
+}
+

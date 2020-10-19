@@ -1,0 +1,98 @@
+syntax = "proto3";
+package subscribe_customers;
+
+option go_package = "github.com/iamport/interface/gen_src/go/v1/subscribe_customers";
+import "v1/payment/payment.proto";
+
+message CustomerBillingKey {
+      string card_code = 1;
+      string card_name = 2;
+      string card_number = 3;
+      int32 card_type = 4;
+      string customer_addr = 5;
+      string customer_email = 6;
+      string customer_name = 7;
+      string customer_postcode = 8;
+      string customer_tel = 9;
+      string customer_uid = 10;
+      int32 inserted = 11;
+      string pg_id = 12;
+      string pg_provider = 13;
+      int32 updated = 14;
+}
+
+message GetMultipleCustomerBillingKeyRequest {
+    repeated string customer_uid = 1;
+}
+
+message GetMultipleCustomerBillingKeyResponse {
+    int32 code = 1;
+    string message = 2;
+    repeated CustomerBillingKey response = 3;
+}
+
+message DeleteCustomerBillingKeyRequest {
+    string customer_uid = 1;
+    string reason = 2;
+    string requester = 3;
+}
+
+message DeleteCustomerBillingKeyResponse {
+    int32 code = 1;
+    string message = 2;
+    CustomerBillingKey response = 3;
+}
+
+message GetCustomerBillingKeyRequest {
+    string customer_uid = 1;
+}
+
+message GetCustomerBillingKeyResponse {
+    int32 code = 1;
+    string message = 2;
+    CustomerBillingKey response = 3;
+}
+
+message InsertCustomerBillingKeyRequest {
+    string customer_uid = 1;
+    string pg = 2;
+    string card_number = 3;
+    string expiry = 4;
+    string birth = 5;
+    string pwd_2digit = 6;
+    string customer_name = 7;
+    string customer_tel = 8;
+    string customer_email = 9;
+    string customer_addr = 10;
+    string customer_postcode = 11;
+}
+
+message InsertCustomerBillingKeyResponse {
+    int32 code = 1;
+    string message = 2;
+    CustomerBillingKey response = 3;
+}
+
+message GetPaidByBillingKeyListRequest {
+    string customer_uid = 1;
+    int32 page = 2;
+}
+
+message NestedGetPaidByBillingKeyListData {
+    int32 total = 1;
+    int32 previous = 2;
+    int32 next = 3;
+    repeated payment.Payment list = 4;
+}
+
+message GetPaidByBillingKeyListResponse {
+    int32 code = 1;
+    string message = 2;
+    NestedGetPaidByBillingKeyListData response = 3;
+}
+
+/**
+message GetPaymentScheduleByCustomerRequest/Response
+-> Check subscribe.proto -> GetPaymentScheduleByCustomerRequest/Response
+*/
+

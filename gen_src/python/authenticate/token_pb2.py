@@ -17,9 +17,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='authenticate/token.proto',
   package='authenticate',
   syntax='proto3',
-  serialized_options=b'Z2github.com/iamport/interface/build/go/authenticate',
+  serialized_options=b'Z4github.com/iamport/interface/gen_src/go/authenticate',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x18\x61uthenticate/token.proto\x12\x0c\x61uthenticate\">\n\x05Token\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x0b\n\x03now\x18\x02 \x01(\x05\x12\x12\n\nexpired_at\x18\x03 \x01(\x05\"3\n\x0cTokenRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\nimp_secret\x18\x02 \x01(\t\"U\n\rTokenResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12%\n\x08response\x18\x03 \x01(\x0b\x32\x13.authenticate.TokenB4Z2github.com/iamport/interface/build/go/authenticateb\x06proto3'
+  serialized_pb=b'\n\x18\x61uthenticate/token.proto\x12\x0c\x61uthenticate\">\n\x05Token\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x0b\n\x03now\x18\x02 \x01(\x05\x12\x12\n\nexpired_at\x18\x03 \x01(\x05\"3\n\x0cTokenRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\nimp_secret\x18\x02 \x01(\t\"U\n\rTokenResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12%\n\x08response\x18\x03 \x01(\x0b\x32\x13.authenticate.TokenB6Z4github.com/iamport/interface/gen_src/go/authenticateb\x06proto3'
 )
 
 

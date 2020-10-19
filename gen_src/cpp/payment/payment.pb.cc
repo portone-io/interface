@@ -829,8 +829,8 @@ const char descriptor_table_protodef_payment_2fpayment_2eproto[] PROTOBUF_SECTIO
   "t\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\""
   "[\n\026PaymentPrepareResponse\022\014\n\004code\030\001 \001(\005\022"
   "\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.pay"
-  "ment.PrepareB/Z-github.com/iamport/inter"
-  "face/build/go/paymentb\006proto3"
+  "ment.PrepareB1Z/github.com/iamport/inter"
+  "face/gen_src/go/paymentb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_payment_2fpayment_2eproto_deps[1] = {
 };
@@ -861,7 +861,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pay
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_payment_2fpayment_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_payment_2fpayment_2eproto = {
-  false, false, descriptor_table_protodef_payment_2fpayment_2eproto, "payment/payment.proto", 3349,
+  false, false, descriptor_table_protodef_payment_2fpayment_2eproto, "payment/payment.proto", 3351,
   &descriptor_table_payment_2fpayment_2eproto_once, descriptor_table_payment_2fpayment_2eproto_sccs, descriptor_table_payment_2fpayment_2eproto_deps, 23, 0,
   schemas, file_default_instances, TableStruct_payment_2fpayment_2eproto::offsets,
   file_level_metadata_payment_2fpayment_2eproto, 23, file_level_enum_descriptors_payment_2fpayment_2eproto, file_level_service_descriptors_payment_2fpayment_2eproto,

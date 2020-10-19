@@ -97,8 +97,8 @@ namespace Payment {
             "cGFyZVJlcXVlc3QSFAoMbWVyY2hhbnRfdWlkGAEgASgJEg4KBmFtb3VudBgC",
             "IAEoASJbChZQYXltZW50UHJlcGFyZVJlc3BvbnNlEgwKBGNvZGUYASABKAUS",
             "DwoHbWVzc2FnZRgCIAEoCRIiCghyZXNwb25zZRgDIAEoCzIQLnBheW1lbnQu",
-            "UHJlcGFyZUIvWi1naXRodWIuY29tL2lhbXBvcnQvaW50ZXJmYWNlL2J1aWxk",
-            "L2dvL3BheW1lbnRiBnByb3RvMw=="));
+            "UHJlcGFyZUIxWi9naXRodWIuY29tL2lhbXBvcnQvaW50ZXJmYWNlL2dlbl9z",
+            "cmMvZ28vcGF5bWVudGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

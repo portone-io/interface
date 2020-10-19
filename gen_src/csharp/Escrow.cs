@@ -32,8 +32,8 @@ namespace Escrow {
             "CzIMLmVzY3Jvdy5JbmZvEh4KCHJlY2VpdmVyGAMgASgLMgwuZXNjcm93Lklu",
             "Zm8SHAoFbG9naXMYBCABKAsyDS5lc2Nyb3cuTG9naXMiUAoORXNjcm93UmVz",
             "cG9uc2USDAoEY29kZRgBIAEoBRIPCgdtZXNzYWdlGAIgASgJEh8KCHJlc3Bv",
-            "bnNlGAMgASgLMg0uZXNjcm93LkxvZ2lzQi5aLGdpdGh1Yi5jb20vaWFtcG9y",
-            "dC9pbnRlcmZhY2UvYnVpbGQvZ28vZXNjcm93YgZwcm90bzM="));
+            "bnNlGAMgASgLMg0uZXNjcm93LkxvZ2lzQjBaLmdpdGh1Yi5jb20vaWFtcG9y",
+            "dC9pbnRlcmZhY2UvZ2VuX3NyYy9nby9lc2Nyb3diBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

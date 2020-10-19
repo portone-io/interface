@@ -83,8 +83,8 @@ namespace Subscribe {
             "igEKJEdldFBheW1lbnRTY2hlZHVsZUJ5Q3VzdG9tZXJSZXNwb25zZRIMCgRj",
             "b2RlGAEgASgFEg8KB21lc3NhZ2UYAiABKAkSQwoIcmVzcG9uc2UYAyABKAsy",
             "MS5zdWJzY3JpYmUuTmVzdGVkR2V0UGF5bWVudFNjaGVkdWxlQnlDdXN0b21l",
-            "ckRhdGFCMVovZ2l0aHViLmNvbS9pYW1wb3J0L2ludGVyZmFjZS9idWlsZC9n",
-            "by9zdWJzY3JpYmViBnByb3RvMw=="));
+            "ckRhdGFCM1oxZ2l0aHViLmNvbS9pYW1wb3J0L2ludGVyZmFjZS9nZW5fc3Jj",
+            "L2dvL3N1YnNjcmliZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Payment.PaymentReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

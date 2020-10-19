@@ -158,8 +158,9 @@ const char descriptor_table_protodef_escrow_2fescrow_2eproto[] PROTOBUF_SECTION_
   "\022\036\n\010receiver\030\003 \001(\0132\014.escrow.Info\022\034\n\005logi"
   "s\030\004 \001(\0132\r.escrow.Logis\"P\n\016EscrowResponse"
   "\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\037\n\010respo"
-  "nse\030\003 \001(\0132\r.escrow.LogisB.Z,github.com/i"
-  "amport/interface/build/go/escrowb\006proto3"
+  "nse\030\003 \001(\0132\r.escrow.LogisB0Z.github.com/i"
+  "amport/interface/gen_src/go/escrowb\006prot"
+  "o3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_escrow_2fescrow_2eproto_deps[1] = {
 };
@@ -171,7 +172,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_esc
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_escrow_2fescrow_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_escrow_2fescrow_2eproto = {
-  false, false, descriptor_table_protodef_escrow_2fescrow_2eproto, "escrow/escrow.proto", 440,
+  false, false, descriptor_table_protodef_escrow_2fescrow_2eproto, "escrow/escrow.proto", 442,
   &descriptor_table_escrow_2fescrow_2eproto_once, descriptor_table_escrow_2fescrow_2eproto_sccs, descriptor_table_escrow_2fescrow_2eproto_deps, 4, 0,
   schemas, file_default_instances, TableStruct_escrow_2fescrow_2eproto::offsets,
   file_level_metadata_escrow_2fescrow_2eproto, 4, file_level_enum_descriptors_escrow_2fescrow_2eproto, file_level_service_descriptors_escrow_2fescrow_2eproto,

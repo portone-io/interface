@@ -26766,8 +26766,8 @@ public final class PaymentOuterClass {
       "t\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\"" +
       "[\n\026PaymentPrepareResponse\022\014\n\004code\030\001 \001(\005\022" +
       "\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.pay" +
-      "ment.PrepareB/Z-github.com/iamport/inter" +
-      "face/build/go/paymentb\006proto3"
+      "ment.PrepareB1Z/github.com/iamport/inter" +
+      "face/gen_src/go/paymentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

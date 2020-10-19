@@ -14,19 +14,15 @@ use Google\Protobuf\Internal\GPBUtil;
 class EscrowRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string imp_uid = 1;</code>
-     */
-    protected $imp_uid = '';
-    /**
-     * Generated from protobuf field <code>.escrow.Info sender = 2;</code>
+     * Generated from protobuf field <code>.escrow.Info sender = 1;</code>
      */
     protected $sender = null;
     /**
-     * Generated from protobuf field <code>.escrow.Info receiver = 3;</code>
+     * Generated from protobuf field <code>.escrow.Info receiver = 2;</code>
      */
     protected $receiver = null;
     /**
-     * Generated from protobuf field <code>.escrow.Logis logis = 4;</code>
+     * Generated from protobuf field <code>.escrow.Logis logis = 3;</code>
      */
     protected $logis = null;
 
@@ -36,7 +32,6 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $imp_uid
      *     @type \Escrow\Info $sender
      *     @type \Escrow\Info $receiver
      *     @type \Escrow\Logis $logis
@@ -48,29 +43,7 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string imp_uid = 1;</code>
-     * @return string
-     */
-    public function getImpUid()
-    {
-        return $this->imp_uid;
-    }
-
-    /**
-     * Generated from protobuf field <code>string imp_uid = 1;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setImpUid($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->imp_uid = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.escrow.Info sender = 2;</code>
+     * Generated from protobuf field <code>.escrow.Info sender = 1;</code>
      * @return \Escrow\Info
      */
     public function getSender()
@@ -89,7 +62,7 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.escrow.Info sender = 2;</code>
+     * Generated from protobuf field <code>.escrow.Info sender = 1;</code>
      * @param \Escrow\Info $var
      * @return $this
      */
@@ -102,7 +75,7 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.escrow.Info receiver = 3;</code>
+     * Generated from protobuf field <code>.escrow.Info receiver = 2;</code>
      * @return \Escrow\Info
      */
     public function getReceiver()
@@ -121,7 +94,7 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.escrow.Info receiver = 3;</code>
+     * Generated from protobuf field <code>.escrow.Info receiver = 2;</code>
      * @param \Escrow\Info $var
      * @return $this
      */
@@ -134,7 +107,7 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.escrow.Logis logis = 4;</code>
+     * Generated from protobuf field <code>.escrow.Logis logis = 3;</code>
      * @return \Escrow\Logis
      */
     public function getLogis()
@@ -153,7 +126,7 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.escrow.Logis logis = 4;</code>
+     * Generated from protobuf field <code>.escrow.Logis logis = 3;</code>
      * @param \Escrow\Logis $var
      * @return $this
      */

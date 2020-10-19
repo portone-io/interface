@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z.github.com/iamport/interface/gen_src/go/escrow',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x65scrow/escrow.proto\x12\x06\x65scrow\"A\n\x04Info\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03tel\x18\x02 \x01(\t\x12\x0c\n\x04\x61\x64\x64r\x18\x03 \x01(\t\x12\x10\n\x08postcode\x18\x04 \x01(\t\"N\n\x05Logis\x12\x0f\n\x07\x63ompany\x18\x01 \x01(\t\x12\x0f\n\x07invoice\x18\x02 \x01(\t\x12\x0f\n\x07sent_at\x18\x03 \x01(\x05\x12\x12\n\napplied_at\x18\x04 \x01(\x05\"|\n\rEscrowRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x1c\n\x06sender\x18\x02 \x01(\x0b\x32\x0c.escrow.Info\x12\x1e\n\x08receiver\x18\x03 \x01(\x0b\x32\x0c.escrow.Info\x12\x1c\n\x05logis\x18\x04 \x01(\x0b\x32\r.escrow.Logis\"P\n\x0e\x45scrowResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x1f\n\x08response\x18\x03 \x01(\x0b\x32\r.escrow.LogisB0Z.github.com/iamport/interface/gen_src/go/escrowb\x06proto3'
+  serialized_pb=b'\n\x13\x65scrow/escrow.proto\x12\x06\x65scrow\"A\n\x04Info\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03tel\x18\x02 \x01(\t\x12\x0c\n\x04\x61\x64\x64r\x18\x03 \x01(\t\x12\x10\n\x08postcode\x18\x04 \x01(\t\"N\n\x05Logis\x12\x0f\n\x07\x63ompany\x18\x01 \x01(\t\x12\x0f\n\x07invoice\x18\x02 \x01(\t\x12\x0f\n\x07sent_at\x18\x03 \x01(\x05\x12\x12\n\napplied_at\x18\x04 \x01(\x05\"k\n\rEscrowRequest\x12\x1c\n\x06sender\x18\x01 \x01(\x0b\x32\x0c.escrow.Info\x12\x1e\n\x08receiver\x18\x02 \x01(\x0b\x32\x0c.escrow.Info\x12\x1c\n\x05logis\x18\x03 \x01(\x0b\x32\r.escrow.Logis\"P\n\x0e\x45scrowResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x1f\n\x08response\x18\x03 \x01(\x0b\x32\r.escrow.LogisB0Z.github.com/iamport/interface/gen_src/go/escrowb\x06proto3'
 )
 
 
@@ -140,29 +140,22 @@ _ESCROWREQUEST = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='imp_uid', full_name='escrow.EscrowRequest.imp_uid', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      name='sender', full_name='escrow.EscrowRequest.sender', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='sender', full_name='escrow.EscrowRequest.sender', index=1,
+      name='receiver', full_name='escrow.EscrowRequest.receiver', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='receiver', full_name='escrow.EscrowRequest.receiver', index=2,
+      name='logis', full_name='escrow.EscrowRequest.logis', index=2,
       number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='logis', full_name='escrow.EscrowRequest.logis', index=3,
-      number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -180,7 +173,7 @@ _ESCROWREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=178,
-  serialized_end=302,
+  serialized_end=285,
 )
 
 
@@ -225,8 +218,8 @@ _ESCROWRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=304,
-  serialized_end=384,
+  serialized_start=287,
+  serialized_end=367,
 )
 
 _ESCROWREQUEST.fields_by_name['sender'].message_type = _INFO

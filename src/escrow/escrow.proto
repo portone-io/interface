@@ -18,10 +18,9 @@ message Logis {
 }
 
 message EscrowRequest {
-    string imp_uid = 1;
-    Info sender = 2;
-    Info receiver = 3;
-    Logis logis = 4;
+    Info sender = 1;
+    Info receiver = 2;
+    Logis logis = 3;
 }
 
 message EscrowResponse {

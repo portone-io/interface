@@ -1895,59 +1895,47 @@ public final class Escrow {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string imp_uid = 1;</code>
-     * @return The impUid.
-     */
-    java.lang.String getImpUid();
-    /**
-     * <code>string imp_uid = 1;</code>
-     * @return The bytes for impUid.
-     */
-    com.google.protobuf.ByteString
-        getImpUidBytes();
-
-    /**
-     * <code>.escrow.Info sender = 2;</code>
+     * <code>.escrow.Info sender = 1;</code>
      * @return Whether the sender field is set.
      */
     boolean hasSender();
     /**
-     * <code>.escrow.Info sender = 2;</code>
+     * <code>.escrow.Info sender = 1;</code>
      * @return The sender.
      */
     escrow.Escrow.Info getSender();
     /**
-     * <code>.escrow.Info sender = 2;</code>
+     * <code>.escrow.Info sender = 1;</code>
      */
     escrow.Escrow.InfoOrBuilder getSenderOrBuilder();
 
     /**
-     * <code>.escrow.Info receiver = 3;</code>
+     * <code>.escrow.Info receiver = 2;</code>
      * @return Whether the receiver field is set.
      */
     boolean hasReceiver();
     /**
-     * <code>.escrow.Info receiver = 3;</code>
+     * <code>.escrow.Info receiver = 2;</code>
      * @return The receiver.
      */
     escrow.Escrow.Info getReceiver();
     /**
-     * <code>.escrow.Info receiver = 3;</code>
+     * <code>.escrow.Info receiver = 2;</code>
      */
     escrow.Escrow.InfoOrBuilder getReceiverOrBuilder();
 
     /**
-     * <code>.escrow.Logis logis = 4;</code>
+     * <code>.escrow.Logis logis = 3;</code>
      * @return Whether the logis field is set.
      */
     boolean hasLogis();
     /**
-     * <code>.escrow.Logis logis = 4;</code>
+     * <code>.escrow.Logis logis = 3;</code>
      * @return The logis.
      */
     escrow.Escrow.Logis getLogis();
     /**
-     * <code>.escrow.Logis logis = 4;</code>
+     * <code>.escrow.Logis logis = 3;</code>
      */
     escrow.Escrow.LogisOrBuilder getLogisOrBuilder();
   }
@@ -1964,7 +1952,6 @@ public final class Escrow {
       super(builder);
     }
     private EscrowRequest() {
-      impUid_ = "";
     }
 
     @java.lang.Override
@@ -1998,12 +1985,6 @@ public final class Escrow {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              impUid_ = s;
-              break;
-            }
-            case 18: {
               escrow.Escrow.Info.Builder subBuilder = null;
               if (sender_ != null) {
                 subBuilder = sender_.toBuilder();
@@ -2016,7 +1997,7 @@ public final class Escrow {
 
               break;
             }
-            case 26: {
+            case 18: {
               escrow.Escrow.Info.Builder subBuilder = null;
               if (receiver_ != null) {
                 subBuilder = receiver_.toBuilder();
@@ -2029,7 +2010,7 @@ public final class Escrow {
 
               break;
             }
-            case 34: {
+            case 26: {
               escrow.Escrow.Logis.Builder subBuilder = null;
               if (logis_ != null) {
                 subBuilder = logis_.toBuilder();
@@ -2074,48 +2055,10 @@ public final class Escrow {
               escrow.Escrow.EscrowRequest.class, escrow.Escrow.EscrowRequest.Builder.class);
     }
 
-    public static final int IMP_UID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object impUid_;
-    /**
-     * <code>string imp_uid = 1;</code>
-     * @return The impUid.
-     */
-    @java.lang.Override
-    public java.lang.String getImpUid() {
-      java.lang.Object ref = impUid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        impUid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string imp_uid = 1;</code>
-     * @return The bytes for impUid.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getImpUidBytes() {
-      java.lang.Object ref = impUid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        impUid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SENDER_FIELD_NUMBER = 2;
+    public static final int SENDER_FIELD_NUMBER = 1;
     private escrow.Escrow.Info sender_;
     /**
-     * <code>.escrow.Info sender = 2;</code>
+     * <code>.escrow.Info sender = 1;</code>
      * @return Whether the sender field is set.
      */
     @java.lang.Override
@@ -2123,7 +2066,7 @@ public final class Escrow {
       return sender_ != null;
     }
     /**
-     * <code>.escrow.Info sender = 2;</code>
+     * <code>.escrow.Info sender = 1;</code>
      * @return The sender.
      */
     @java.lang.Override
@@ -2131,17 +2074,17 @@ public final class Escrow {
       return sender_ == null ? escrow.Escrow.Info.getDefaultInstance() : sender_;
     }
     /**
-     * <code>.escrow.Info sender = 2;</code>
+     * <code>.escrow.Info sender = 1;</code>
      */
     @java.lang.Override
     public escrow.Escrow.InfoOrBuilder getSenderOrBuilder() {
       return getSender();
     }
 
-    public static final int RECEIVER_FIELD_NUMBER = 3;
+    public static final int RECEIVER_FIELD_NUMBER = 2;
     private escrow.Escrow.Info receiver_;
     /**
-     * <code>.escrow.Info receiver = 3;</code>
+     * <code>.escrow.Info receiver = 2;</code>
      * @return Whether the receiver field is set.
      */
     @java.lang.Override
@@ -2149,7 +2092,7 @@ public final class Escrow {
       return receiver_ != null;
     }
     /**
-     * <code>.escrow.Info receiver = 3;</code>
+     * <code>.escrow.Info receiver = 2;</code>
      * @return The receiver.
      */
     @java.lang.Override
@@ -2157,17 +2100,17 @@ public final class Escrow {
       return receiver_ == null ? escrow.Escrow.Info.getDefaultInstance() : receiver_;
     }
     /**
-     * <code>.escrow.Info receiver = 3;</code>
+     * <code>.escrow.Info receiver = 2;</code>
      */
     @java.lang.Override
     public escrow.Escrow.InfoOrBuilder getReceiverOrBuilder() {
       return getReceiver();
     }
 
-    public static final int LOGIS_FIELD_NUMBER = 4;
+    public static final int LOGIS_FIELD_NUMBER = 3;
     private escrow.Escrow.Logis logis_;
     /**
-     * <code>.escrow.Logis logis = 4;</code>
+     * <code>.escrow.Logis logis = 3;</code>
      * @return Whether the logis field is set.
      */
     @java.lang.Override
@@ -2175,7 +2118,7 @@ public final class Escrow {
       return logis_ != null;
     }
     /**
-     * <code>.escrow.Logis logis = 4;</code>
+     * <code>.escrow.Logis logis = 3;</code>
      * @return The logis.
      */
     @java.lang.Override
@@ -2183,7 +2126,7 @@ public final class Escrow {
       return logis_ == null ? escrow.Escrow.Logis.getDefaultInstance() : logis_;
     }
     /**
-     * <code>.escrow.Logis logis = 4;</code>
+     * <code>.escrow.Logis logis = 3;</code>
      */
     @java.lang.Override
     public escrow.Escrow.LogisOrBuilder getLogisOrBuilder() {
@@ -2204,17 +2147,14 @@ public final class Escrow {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getImpUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, impUid_);
-      }
       if (sender_ != null) {
-        output.writeMessage(2, getSender());
+        output.writeMessage(1, getSender());
       }
       if (receiver_ != null) {
-        output.writeMessage(3, getReceiver());
+        output.writeMessage(2, getReceiver());
       }
       if (logis_ != null) {
-        output.writeMessage(4, getLogis());
+        output.writeMessage(3, getLogis());
       }
       unknownFields.writeTo(output);
     }
@@ -2225,20 +2165,17 @@ public final class Escrow {
       if (size != -1) return size;
 
       size = 0;
-      if (!getImpUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, impUid_);
-      }
       if (sender_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getSender());
+          .computeMessageSize(1, getSender());
       }
       if (receiver_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getReceiver());
+          .computeMessageSize(2, getReceiver());
       }
       if (logis_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getLogis());
+          .computeMessageSize(3, getLogis());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2255,8 +2192,6 @@ public final class Escrow {
       }
       escrow.Escrow.EscrowRequest other = (escrow.Escrow.EscrowRequest) obj;
 
-      if (!getImpUid()
-          .equals(other.getImpUid())) return false;
       if (hasSender() != other.hasSender()) return false;
       if (hasSender()) {
         if (!getSender()
@@ -2283,8 +2218,6 @@ public final class Escrow {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + IMP_UID_FIELD_NUMBER;
-      hash = (53 * hash) + getImpUid().hashCode();
       if (hasSender()) {
         hash = (37 * hash) + SENDER_FIELD_NUMBER;
         hash = (53 * hash) + getSender().hashCode();
@@ -2430,8 +2363,6 @@ public final class Escrow {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        impUid_ = "";
-
         if (senderBuilder_ == null) {
           sender_ = null;
         } else {
@@ -2476,7 +2407,6 @@ public final class Escrow {
       @java.lang.Override
       public escrow.Escrow.EscrowRequest buildPartial() {
         escrow.Escrow.EscrowRequest result = new escrow.Escrow.EscrowRequest(this);
-        result.impUid_ = impUid_;
         if (senderBuilder_ == null) {
           result.sender_ = sender_;
         } else {
@@ -2540,10 +2470,6 @@ public final class Escrow {
 
       public Builder mergeFrom(escrow.Escrow.EscrowRequest other) {
         if (other == escrow.Escrow.EscrowRequest.getDefaultInstance()) return this;
-        if (!other.getImpUid().isEmpty()) {
-          impUid_ = other.impUid_;
-          onChanged();
-        }
         if (other.hasSender()) {
           mergeSender(other.getSender());
         }
@@ -2582,94 +2508,18 @@ public final class Escrow {
         return this;
       }
 
-      private java.lang.Object impUid_ = "";
-      /**
-       * <code>string imp_uid = 1;</code>
-       * @return The impUid.
-       */
-      public java.lang.String getImpUid() {
-        java.lang.Object ref = impUid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          impUid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string imp_uid = 1;</code>
-       * @return The bytes for impUid.
-       */
-      public com.google.protobuf.ByteString
-          getImpUidBytes() {
-        java.lang.Object ref = impUid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          impUid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string imp_uid = 1;</code>
-       * @param value The impUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setImpUid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        impUid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string imp_uid = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearImpUid() {
-        
-        impUid_ = getDefaultInstance().getImpUid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string imp_uid = 1;</code>
-       * @param value The bytes for impUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setImpUidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        impUid_ = value;
-        onChanged();
-        return this;
-      }
-
       private escrow.Escrow.Info sender_;
       private com.google.protobuf.SingleFieldBuilderV3<
           escrow.Escrow.Info, escrow.Escrow.Info.Builder, escrow.Escrow.InfoOrBuilder> senderBuilder_;
       /**
-       * <code>.escrow.Info sender = 2;</code>
+       * <code>.escrow.Info sender = 1;</code>
        * @return Whether the sender field is set.
        */
       public boolean hasSender() {
         return senderBuilder_ != null || sender_ != null;
       }
       /**
-       * <code>.escrow.Info sender = 2;</code>
+       * <code>.escrow.Info sender = 1;</code>
        * @return The sender.
        */
       public escrow.Escrow.Info getSender() {
@@ -2680,7 +2530,7 @@ public final class Escrow {
         }
       }
       /**
-       * <code>.escrow.Info sender = 2;</code>
+       * <code>.escrow.Info sender = 1;</code>
        */
       public Builder setSender(escrow.Escrow.Info value) {
         if (senderBuilder_ == null) {
@@ -2696,7 +2546,7 @@ public final class Escrow {
         return this;
       }
       /**
-       * <code>.escrow.Info sender = 2;</code>
+       * <code>.escrow.Info sender = 1;</code>
        */
       public Builder setSender(
           escrow.Escrow.Info.Builder builderForValue) {
@@ -2710,7 +2560,7 @@ public final class Escrow {
         return this;
       }
       /**
-       * <code>.escrow.Info sender = 2;</code>
+       * <code>.escrow.Info sender = 1;</code>
        */
       public Builder mergeSender(escrow.Escrow.Info value) {
         if (senderBuilder_ == null) {
@@ -2728,7 +2578,7 @@ public final class Escrow {
         return this;
       }
       /**
-       * <code>.escrow.Info sender = 2;</code>
+       * <code>.escrow.Info sender = 1;</code>
        */
       public Builder clearSender() {
         if (senderBuilder_ == null) {
@@ -2742,7 +2592,7 @@ public final class Escrow {
         return this;
       }
       /**
-       * <code>.escrow.Info sender = 2;</code>
+       * <code>.escrow.Info sender = 1;</code>
        */
       public escrow.Escrow.Info.Builder getSenderBuilder() {
         
@@ -2750,7 +2600,7 @@ public final class Escrow {
         return getSenderFieldBuilder().getBuilder();
       }
       /**
-       * <code>.escrow.Info sender = 2;</code>
+       * <code>.escrow.Info sender = 1;</code>
        */
       public escrow.Escrow.InfoOrBuilder getSenderOrBuilder() {
         if (senderBuilder_ != null) {
@@ -2761,7 +2611,7 @@ public final class Escrow {
         }
       }
       /**
-       * <code>.escrow.Info sender = 2;</code>
+       * <code>.escrow.Info sender = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           escrow.Escrow.Info, escrow.Escrow.Info.Builder, escrow.Escrow.InfoOrBuilder> 
@@ -2781,14 +2631,14 @@ public final class Escrow {
       private com.google.protobuf.SingleFieldBuilderV3<
           escrow.Escrow.Info, escrow.Escrow.Info.Builder, escrow.Escrow.InfoOrBuilder> receiverBuilder_;
       /**
-       * <code>.escrow.Info receiver = 3;</code>
+       * <code>.escrow.Info receiver = 2;</code>
        * @return Whether the receiver field is set.
        */
       public boolean hasReceiver() {
         return receiverBuilder_ != null || receiver_ != null;
       }
       /**
-       * <code>.escrow.Info receiver = 3;</code>
+       * <code>.escrow.Info receiver = 2;</code>
        * @return The receiver.
        */
       public escrow.Escrow.Info getReceiver() {
@@ -2799,7 +2649,7 @@ public final class Escrow {
         }
       }
       /**
-       * <code>.escrow.Info receiver = 3;</code>
+       * <code>.escrow.Info receiver = 2;</code>
        */
       public Builder setReceiver(escrow.Escrow.Info value) {
         if (receiverBuilder_ == null) {
@@ -2815,7 +2665,7 @@ public final class Escrow {
         return this;
       }
       /**
-       * <code>.escrow.Info receiver = 3;</code>
+       * <code>.escrow.Info receiver = 2;</code>
        */
       public Builder setReceiver(
           escrow.Escrow.Info.Builder builderForValue) {
@@ -2829,7 +2679,7 @@ public final class Escrow {
         return this;
       }
       /**
-       * <code>.escrow.Info receiver = 3;</code>
+       * <code>.escrow.Info receiver = 2;</code>
        */
       public Builder mergeReceiver(escrow.Escrow.Info value) {
         if (receiverBuilder_ == null) {
@@ -2847,7 +2697,7 @@ public final class Escrow {
         return this;
       }
       /**
-       * <code>.escrow.Info receiver = 3;</code>
+       * <code>.escrow.Info receiver = 2;</code>
        */
       public Builder clearReceiver() {
         if (receiverBuilder_ == null) {
@@ -2861,7 +2711,7 @@ public final class Escrow {
         return this;
       }
       /**
-       * <code>.escrow.Info receiver = 3;</code>
+       * <code>.escrow.Info receiver = 2;</code>
        */
       public escrow.Escrow.Info.Builder getReceiverBuilder() {
         
@@ -2869,7 +2719,7 @@ public final class Escrow {
         return getReceiverFieldBuilder().getBuilder();
       }
       /**
-       * <code>.escrow.Info receiver = 3;</code>
+       * <code>.escrow.Info receiver = 2;</code>
        */
       public escrow.Escrow.InfoOrBuilder getReceiverOrBuilder() {
         if (receiverBuilder_ != null) {
@@ -2880,7 +2730,7 @@ public final class Escrow {
         }
       }
       /**
-       * <code>.escrow.Info receiver = 3;</code>
+       * <code>.escrow.Info receiver = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           escrow.Escrow.Info, escrow.Escrow.Info.Builder, escrow.Escrow.InfoOrBuilder> 
@@ -2900,14 +2750,14 @@ public final class Escrow {
       private com.google.protobuf.SingleFieldBuilderV3<
           escrow.Escrow.Logis, escrow.Escrow.Logis.Builder, escrow.Escrow.LogisOrBuilder> logisBuilder_;
       /**
-       * <code>.escrow.Logis logis = 4;</code>
+       * <code>.escrow.Logis logis = 3;</code>
        * @return Whether the logis field is set.
        */
       public boolean hasLogis() {
         return logisBuilder_ != null || logis_ != null;
       }
       /**
-       * <code>.escrow.Logis logis = 4;</code>
+       * <code>.escrow.Logis logis = 3;</code>
        * @return The logis.
        */
       public escrow.Escrow.Logis getLogis() {
@@ -2918,7 +2768,7 @@ public final class Escrow {
         }
       }
       /**
-       * <code>.escrow.Logis logis = 4;</code>
+       * <code>.escrow.Logis logis = 3;</code>
        */
       public Builder setLogis(escrow.Escrow.Logis value) {
         if (logisBuilder_ == null) {
@@ -2934,7 +2784,7 @@ public final class Escrow {
         return this;
       }
       /**
-       * <code>.escrow.Logis logis = 4;</code>
+       * <code>.escrow.Logis logis = 3;</code>
        */
       public Builder setLogis(
           escrow.Escrow.Logis.Builder builderForValue) {
@@ -2948,7 +2798,7 @@ public final class Escrow {
         return this;
       }
       /**
-       * <code>.escrow.Logis logis = 4;</code>
+       * <code>.escrow.Logis logis = 3;</code>
        */
       public Builder mergeLogis(escrow.Escrow.Logis value) {
         if (logisBuilder_ == null) {
@@ -2966,7 +2816,7 @@ public final class Escrow {
         return this;
       }
       /**
-       * <code>.escrow.Logis logis = 4;</code>
+       * <code>.escrow.Logis logis = 3;</code>
        */
       public Builder clearLogis() {
         if (logisBuilder_ == null) {
@@ -2980,7 +2830,7 @@ public final class Escrow {
         return this;
       }
       /**
-       * <code>.escrow.Logis logis = 4;</code>
+       * <code>.escrow.Logis logis = 3;</code>
        */
       public escrow.Escrow.Logis.Builder getLogisBuilder() {
         
@@ -2988,7 +2838,7 @@ public final class Escrow {
         return getLogisFieldBuilder().getBuilder();
       }
       /**
-       * <code>.escrow.Logis logis = 4;</code>
+       * <code>.escrow.Logis logis = 3;</code>
        */
       public escrow.Escrow.LogisOrBuilder getLogisOrBuilder() {
         if (logisBuilder_ != null) {
@@ -2999,7 +2849,7 @@ public final class Escrow {
         }
       }
       /**
-       * <code>.escrow.Logis logis = 4;</code>
+       * <code>.escrow.Logis logis = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           escrow.Escrow.Logis, escrow.Escrow.Logis.Builder, escrow.Escrow.LogisOrBuilder> 
@@ -3941,14 +3791,13 @@ public final class Escrow {
       "\004name\030\001 \001(\t\022\013\n\003tel\030\002 \001(\t\022\014\n\004addr\030\003 \001(\t\022\020" +
       "\n\010postcode\030\004 \001(\t\"N\n\005Logis\022\017\n\007company\030\001 \001" +
       "(\t\022\017\n\007invoice\030\002 \001(\t\022\017\n\007sent_at\030\003 \001(\005\022\022\n\n" +
-      "applied_at\030\004 \001(\005\"|\n\rEscrowRequest\022\017\n\007imp" +
-      "_uid\030\001 \001(\t\022\034\n\006sender\030\002 \001(\0132\014.escrow.Info" +
-      "\022\036\n\010receiver\030\003 \001(\0132\014.escrow.Info\022\034\n\005logi" +
-      "s\030\004 \001(\0132\r.escrow.Logis\"P\n\016EscrowResponse" +
-      "\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\037\n\010respo" +
-      "nse\030\003 \001(\0132\r.escrow.LogisB0Z.github.com/i" +
-      "amport/interface/gen_src/go/escrowb\006prot" +
-      "o3"
+      "applied_at\030\004 \001(\005\"k\n\rEscrowRequest\022\034\n\006sen" +
+      "der\030\001 \001(\0132\014.escrow.Info\022\036\n\010receiver\030\002 \001(" +
+      "\0132\014.escrow.Info\022\034\n\005logis\030\003 \001(\0132\r.escrow." +
+      "Logis\"P\n\016EscrowResponse\022\014\n\004code\030\001 \001(\005\022\017\n" +
+      "\007message\030\002 \001(\t\022\037\n\010response\030\003 \001(\0132\r.escro" +
+      "w.LogisB0Z.github.com/iamport/interface/" +
+      "gen_src/go/escrowb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3971,7 +3820,7 @@ public final class Escrow {
     internal_static_escrow_EscrowRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_escrow_EscrowRequest_descriptor,
-        new java.lang.String[] { "ImpUid", "Sender", "Receiver", "Logis", });
+        new java.lang.String[] { "Sender", "Receiver", "Logis", });
     internal_static_escrow_EscrowResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_escrow_EscrowResponse_fieldAccessorTable = new

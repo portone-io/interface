@@ -133,10 +133,9 @@ class Logis extends $pb.GeneratedMessage {
 
 class EscrowRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EscrowRequest', package: const $pb.PackageName('escrow'), createEmptyInstance: create)
-    ..aOS(1, 'impUid')
-    ..aOM<Info>(2, 'sender', subBuilder: Info.create)
-    ..aOM<Info>(3, 'receiver', subBuilder: Info.create)
-    ..aOM<Logis>(4, 'logis', subBuilder: Logis.create)
+    ..aOM<Info>(1, 'sender', subBuilder: Info.create)
+    ..aOM<Info>(2, 'receiver', subBuilder: Info.create)
+    ..aOM<Logis>(3, 'logis', subBuilder: Logis.create)
     ..hasRequiredFields = false
   ;
 
@@ -156,46 +155,37 @@ class EscrowRequest extends $pb.GeneratedMessage {
   static EscrowRequest _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get impUid => $_getSZ(0);
+  Info get sender => $_getN(0);
   @$pb.TagNumber(1)
-  set impUid($core.String v) { $_setString(0, v); }
+  set sender(Info v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasImpUid() => $_has(0);
+  $core.bool hasSender() => $_has(0);
   @$pb.TagNumber(1)
-  void clearImpUid() => clearField(1);
+  void clearSender() => clearField(1);
+  @$pb.TagNumber(1)
+  Info ensureSender() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  Info get sender => $_getN(1);
+  Info get receiver => $_getN(1);
   @$pb.TagNumber(2)
-  set sender(Info v) { setField(2, v); }
+  set receiver(Info v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasSender() => $_has(1);
+  $core.bool hasReceiver() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSender() => clearField(2);
+  void clearReceiver() => clearField(2);
   @$pb.TagNumber(2)
-  Info ensureSender() => $_ensure(1);
+  Info ensureReceiver() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  Info get receiver => $_getN(2);
+  Logis get logis => $_getN(2);
   @$pb.TagNumber(3)
-  set receiver(Info v) { setField(3, v); }
+  set logis(Logis v) { setField(3, v); }
   @$pb.TagNumber(3)
-  $core.bool hasReceiver() => $_has(2);
+  $core.bool hasLogis() => $_has(2);
   @$pb.TagNumber(3)
-  void clearReceiver() => clearField(3);
+  void clearLogis() => clearField(3);
   @$pb.TagNumber(3)
-  Info ensureReceiver() => $_ensure(2);
-
-  @$pb.TagNumber(4)
-  Logis get logis => $_getN(3);
-  @$pb.TagNumber(4)
-  set logis(Logis v) { setField(4, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasLogis() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearLogis() => clearField(4);
-  @$pb.TagNumber(4)
-  Logis ensureLogis() => $_ensure(3);
+  Logis ensureLogis() => $_ensure(2);
 }
 
 class EscrowResponse extends $pb.GeneratedMessage {

@@ -27,19 +27,19 @@ namespace Escrow {
             "ChNlc2Nyb3cvZXNjcm93LnByb3RvEgZlc2Nyb3ciQQoESW5mbxIMCgRuYW1l",
             "GAEgASgJEgsKA3RlbBgCIAEoCRIMCgRhZGRyGAMgASgJEhAKCHBvc3Rjb2Rl",
             "GAQgASgJIk4KBUxvZ2lzEg8KB2NvbXBhbnkYASABKAkSDwoHaW52b2ljZRgC",
-            "IAEoCRIPCgdzZW50X2F0GAMgASgFEhIKCmFwcGxpZWRfYXQYBCABKAUifAoN",
-            "RXNjcm93UmVxdWVzdBIPCgdpbXBfdWlkGAEgASgJEhwKBnNlbmRlchgCIAEo",
-            "CzIMLmVzY3Jvdy5JbmZvEh4KCHJlY2VpdmVyGAMgASgLMgwuZXNjcm93Lklu",
-            "Zm8SHAoFbG9naXMYBCABKAsyDS5lc2Nyb3cuTG9naXMiUAoORXNjcm93UmVz",
-            "cG9uc2USDAoEY29kZRgBIAEoBRIPCgdtZXNzYWdlGAIgASgJEh8KCHJlc3Bv",
-            "bnNlGAMgASgLMg0uZXNjcm93LkxvZ2lzQjBaLmdpdGh1Yi5jb20vaWFtcG9y",
-            "dC9pbnRlcmZhY2UvZ2VuX3NyYy9nby9lc2Nyb3diBnByb3RvMw=="));
+            "IAEoCRIPCgdzZW50X2F0GAMgASgFEhIKCmFwcGxpZWRfYXQYBCABKAUiawoN",
+            "RXNjcm93UmVxdWVzdBIcCgZzZW5kZXIYASABKAsyDC5lc2Nyb3cuSW5mbxIe",
+            "CghyZWNlaXZlchgCIAEoCzIMLmVzY3Jvdy5JbmZvEhwKBWxvZ2lzGAMgASgL",
+            "Mg0uZXNjcm93LkxvZ2lzIlAKDkVzY3Jvd1Jlc3BvbnNlEgwKBGNvZGUYASAB",
+            "KAUSDwoHbWVzc2FnZRgCIAEoCRIfCghyZXNwb25zZRgDIAEoCzINLmVzY3Jv",
+            "dy5Mb2dpc0IwWi5naXRodWIuY29tL2lhbXBvcnQvaW50ZXJmYWNlL2dlbl9z",
+            "cmMvZ28vZXNjcm93YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Escrow.Info), global::Escrow.Info.Parser, new[]{ "Name", "Tel", "Addr", "Postcode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Escrow.Logis), global::Escrow.Logis.Parser, new[]{ "Company", "Invoice", "SentAt", "AppliedAt" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Escrow.EscrowRequest), global::Escrow.EscrowRequest.Parser, new[]{ "ImpUid", "Sender", "Receiver", "Logis" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Escrow.EscrowRequest), global::Escrow.EscrowRequest.Parser, new[]{ "Sender", "Receiver", "Logis" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Escrow.EscrowResponse), global::Escrow.EscrowResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null)
           }));
     }
@@ -636,7 +636,6 @@ namespace Escrow {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EscrowRequest(EscrowRequest other) : this() {
-      impUid_ = other.impUid_;
       sender_ = other.sender_ != null ? other.sender_.Clone() : null;
       receiver_ = other.receiver_ != null ? other.receiver_.Clone() : null;
       logis_ = other.logis_ != null ? other.logis_.Clone() : null;
@@ -648,19 +647,8 @@ namespace Escrow {
       return new EscrowRequest(this);
     }
 
-    /// <summary>Field number for the "imp_uid" field.</summary>
-    public const int ImpUidFieldNumber = 1;
-    private string impUid_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ImpUid {
-      get { return impUid_; }
-      set {
-        impUid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "sender" field.</summary>
-    public const int SenderFieldNumber = 2;
+    public const int SenderFieldNumber = 1;
     private global::Escrow.Info sender_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Escrow.Info Sender {
@@ -671,7 +659,7 @@ namespace Escrow {
     }
 
     /// <summary>Field number for the "receiver" field.</summary>
-    public const int ReceiverFieldNumber = 3;
+    public const int ReceiverFieldNumber = 2;
     private global::Escrow.Info receiver_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Escrow.Info Receiver {
@@ -682,7 +670,7 @@ namespace Escrow {
     }
 
     /// <summary>Field number for the "logis" field.</summary>
-    public const int LogisFieldNumber = 4;
+    public const int LogisFieldNumber = 3;
     private global::Escrow.Logis logis_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Escrow.Logis Logis {
@@ -705,7 +693,6 @@ namespace Escrow {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ImpUid != other.ImpUid) return false;
       if (!object.Equals(Sender, other.Sender)) return false;
       if (!object.Equals(Receiver, other.Receiver)) return false;
       if (!object.Equals(Logis, other.Logis)) return false;
@@ -715,7 +702,6 @@ namespace Escrow {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (ImpUid.Length != 0) hash ^= ImpUid.GetHashCode();
       if (sender_ != null) hash ^= Sender.GetHashCode();
       if (receiver_ != null) hash ^= Receiver.GetHashCode();
       if (logis_ != null) hash ^= Logis.GetHashCode();
@@ -735,20 +721,16 @@ namespace Escrow {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ImpUid.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(ImpUid);
-      }
       if (sender_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Sender);
       }
       if (receiver_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(Receiver);
       }
       if (logis_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(Logis);
       }
       if (_unknownFields != null) {
@@ -760,20 +742,16 @@ namespace Escrow {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ImpUid.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(ImpUid);
-      }
       if (sender_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Sender);
       }
       if (receiver_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(Receiver);
       }
       if (logis_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(Logis);
       }
       if (_unknownFields != null) {
@@ -785,9 +763,6 @@ namespace Escrow {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (ImpUid.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImpUid);
-      }
       if (sender_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Sender);
       }
@@ -807,9 +782,6 @@ namespace Escrow {
     public void MergeFrom(EscrowRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.ImpUid.Length != 0) {
-        ImpUid = other.ImpUid;
       }
       if (other.sender_ != null) {
         if (sender_ == null) {
@@ -844,24 +816,20 @@ namespace Escrow {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            ImpUid = input.ReadString();
-            break;
-          }
-          case 18: {
             if (sender_ == null) {
               Sender = new global::Escrow.Info();
             }
             input.ReadMessage(Sender);
             break;
           }
-          case 26: {
+          case 18: {
             if (receiver_ == null) {
               Receiver = new global::Escrow.Info();
             }
             input.ReadMessage(Receiver);
             break;
           }
-          case 34: {
+          case 26: {
             if (logis_ == null) {
               Logis = new global::Escrow.Logis();
             }
@@ -883,24 +851,20 @@ namespace Escrow {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            ImpUid = input.ReadString();
-            break;
-          }
-          case 18: {
             if (sender_ == null) {
               Sender = new global::Escrow.Info();
             }
             input.ReadMessage(Sender);
             break;
           }
-          case 26: {
+          case 18: {
             if (receiver_ == null) {
               Receiver = new global::Escrow.Info();
             }
             input.ReadMessage(Receiver);
             break;
           }
-          case 34: {
+          case 26: {
             if (logis_ == null) {
               Logis = new global::Escrow.Logis();
             }

@@ -431,9 +431,9 @@ const char descriptor_table_protodef_subscribe_5fcustomers_2fsubscribe_5fcustome
   "ayment\"\212\001\n\037GetPaidByBillingKeyListRespon"
   "se\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022H\n\010res"
   "ponse\030\003 \001(\01326.subscribe_customers.Nested"
-  "GetPaidByBillingKeyListDataB;Z9github.co"
-  "m/iamport/interface/build/go/subscribe_c"
-  "ustomersb\006proto3"
+  "GetPaidByBillingKeyListDataB=Z;github.co"
+  "m/iamport/interface/gen_src/go/subscribe"
+  "_customersb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_subscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_deps[1] = {
   &::descriptor_table_payment_2fpayment_2eproto,
@@ -454,7 +454,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_sub
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_subscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_subscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto = {
-  false, false, descriptor_table_protodef_subscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto, "subscribe_customers/subscribe_customers.proto", 1776,
+  false, false, descriptor_table_protodef_subscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto, "subscribe_customers/subscribe_customers.proto", 1778,
   &descriptor_table_subscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once, descriptor_table_subscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_sccs, descriptor_table_subscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_deps, 12, 1,
   schemas, file_default_instances, TableStruct_subscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto::offsets,
   file_level_metadata_subscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto, 12, file_level_enum_descriptors_subscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto, file_level_service_descriptors_subscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto,

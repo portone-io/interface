@@ -20088,8 +20088,9 @@ public final class Subscribe {
       "\212\001\n$GetPaymentScheduleByCustomerResponse" +
       "\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022C\n\010respo" +
       "nse\030\003 \001(\01321.subscribe.NestedGetPaymentSc" +
-      "heduleByCustomerDataB1Z/github.com/iampo" +
-      "rt/interface/build/go/subscribeb\006proto3"
+      "heduleByCustomerDataB3Z1github.com/iampo" +
+      "rt/interface/gen_src/go/subscribeb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

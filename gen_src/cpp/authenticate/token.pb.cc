@@ -120,8 +120,8 @@ const char descriptor_table_protodef_authenticate_2ftoken_2eproto[] PROTOBUF_SEC
   "\022\017\n\007imp_key\030\001 \001(\t\022\022\n\nimp_secret\030\002 \001(\t\"U\n"
   "\rTokenResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030"
   "\002 \001(\t\022%\n\010response\030\003 \001(\0132\023.authenticate.T"
-  "okenB4Z2github.com/iamport/interface/bui"
-  "ld/go/authenticateb\006proto3"
+  "okenB6Z4github.com/iamport/interface/gen"
+  "_src/go/authenticateb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_authenticate_2ftoken_2eproto_deps[1] = {
 };
@@ -132,7 +132,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_aut
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_authenticate_2ftoken_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_authenticate_2ftoken_2eproto = {
-  false, false, descriptor_table_protodef_authenticate_2ftoken_2eproto, "authenticate/token.proto", 306,
+  false, false, descriptor_table_protodef_authenticate_2ftoken_2eproto, "authenticate/token.proto", 308,
   &descriptor_table_authenticate_2ftoken_2eproto_once, descriptor_table_authenticate_2ftoken_2eproto_sccs, descriptor_table_authenticate_2ftoken_2eproto_deps, 3, 0,
   schemas, file_default_instances, TableStruct_authenticate_2ftoken_2eproto::offsets,
   file_level_metadata_authenticate_2ftoken_2eproto, 3, file_level_enum_descriptors_authenticate_2ftoken_2eproto, file_level_service_descriptors_authenticate_2ftoken_2eproto,

@@ -1,7 +1,7 @@
 syntax = "proto3";
 package subscribe_customers;
 
-option go_package = "github.com/iamport/interface/build/go/subscribe_customers";
+option go_package = "github.com/iamport/interface/gen_src/go/subscribe_customers";
 import "payment/payment.proto";
 
 message CustomerBillingKey {

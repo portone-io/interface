@@ -61,9 +61,9 @@ namespace SubscribeCustomers {
             "IAEoBRIeCgRsaXN0GAQgAygLMhAucGF5bWVudC5QYXltZW50IooBCh9HZXRQ",
             "YWlkQnlCaWxsaW5nS2V5TGlzdFJlc3BvbnNlEgwKBGNvZGUYASABKAUSDwoH",
             "bWVzc2FnZRgCIAEoCRJICghyZXNwb25zZRgDIAEoCzI2LnN1YnNjcmliZV9j",
-            "dXN0b21lcnMuTmVzdGVkR2V0UGFpZEJ5QmlsbGluZ0tleUxpc3REYXRhQjta",
-            "OWdpdGh1Yi5jb20vaWFtcG9ydC9pbnRlcmZhY2UvYnVpbGQvZ28vc3Vic2Ny",
-            "aWJlX2N1c3RvbWVyc2IGcHJvdG8z"));
+            "dXN0b21lcnMuTmVzdGVkR2V0UGFpZEJ5QmlsbGluZ0tleUxpc3REYXRhQj1a",
+            "O2dpdGh1Yi5jb20vaWFtcG9ydC9pbnRlcmZhY2UvZ2VuX3NyYy9nby9zdWJz",
+            "Y3JpYmVfY3VzdG9tZXJzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Payment.PaymentReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

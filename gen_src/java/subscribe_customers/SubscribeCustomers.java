@@ -12563,9 +12563,9 @@ public final class SubscribeCustomers {
       "ayment\"\212\001\n\037GetPaidByBillingKeyListRespon" +
       "se\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022H\n\010res" +
       "ponse\030\003 \001(\01326.subscribe_customers.Nested" +
-      "GetPaidByBillingKeyListDataB;Z9github.co" +
-      "m/iamport/interface/build/go/subscribe_c" +
-      "ustomersb\006proto3"
+      "GetPaidByBillingKeyListDataB=Z;github.co" +
+      "m/iamport/interface/gen_src/go/subscribe" +
+      "_customersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

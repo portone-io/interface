@@ -3946,8 +3946,9 @@ public final class Escrow {
       "\022\036\n\010receiver\030\003 \001(\0132\014.escrow.Info\022\034\n\005logi" +
       "s\030\004 \001(\0132\r.escrow.Logis\"P\n\016EscrowResponse" +
       "\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\037\n\010respo" +
-      "nse\030\003 \001(\0132\r.escrow.LogisB.Z,github.com/i" +
-      "amport/interface/build/go/escrowb\006proto3"
+      "nse\030\003 \001(\0132\r.escrow.LogisB0Z.github.com/i" +
+      "amport/interface/gen_src/go/escrowb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

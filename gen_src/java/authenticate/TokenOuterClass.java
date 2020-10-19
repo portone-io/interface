@@ -2311,8 +2311,8 @@ public final class TokenOuterClass {
       "\022\017\n\007imp_key\030\001 \001(\t\022\022\n\nimp_secret\030\002 \001(\t\"U\n" +
       "\rTokenResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030" +
       "\002 \001(\t\022%\n\010response\030\003 \001(\0132\023.authenticate.T" +
-      "okenB4Z2github.com/iamport/interface/bui" +
-      "ld/go/authenticateb\006proto3"
+      "okenB6Z4github.com/iamport/interface/gen" +
+      "_src/go/authenticateb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -580,8 +580,9 @@ const char descriptor_table_protodef_subscribe_2fsubscribe_2eproto[] PROTOBUF_SE
   "\212\001\n$GetPaymentScheduleByCustomerResponse"
   "\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022C\n\010respo"
   "nse\030\003 \001(\01321.subscribe.NestedGetPaymentSc"
-  "heduleByCustomerDataB1Z/github.com/iampo"
-  "rt/interface/build/go/subscribeb\006proto3"
+  "heduleByCustomerDataB3Z1github.com/iampo"
+  "rt/interface/gen_src/go/subscribeb\006proto"
+  "3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_subscribe_2fsubscribe_2eproto_deps[1] = {
   &::descriptor_table_payment_2fpayment_2eproto,
@@ -605,7 +606,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_sub
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_subscribe_2fsubscribe_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_subscribe_2fsubscribe_2eproto = {
-  false, false, descriptor_table_protodef_subscribe_2fsubscribe_2eproto, "subscribe/subscribe.proto", 2719,
+  false, false, descriptor_table_protodef_subscribe_2fsubscribe_2eproto, "subscribe/subscribe.proto", 2721,
   &descriptor_table_subscribe_2fsubscribe_2eproto_once, descriptor_table_subscribe_2fsubscribe_2eproto_sccs, descriptor_table_subscribe_2fsubscribe_2eproto_deps, 15, 1,
   schemas, file_default_instances, TableStruct_subscribe_2fsubscribe_2eproto::offsets,
   file_level_metadata_subscribe_2fsubscribe_2eproto, 15, file_level_enum_descriptors_subscribe_2fsubscribe_2eproto, file_level_service_descriptors_subscribe_2fsubscribe_2eproto,

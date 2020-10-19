@@ -29,8 +29,8 @@ namespace Authenticate {
             "cGlyZWRfYXQYAyABKAUiMwoMVG9rZW5SZXF1ZXN0Eg8KB2ltcF9rZXkYASAB",
             "KAkSEgoKaW1wX3NlY3JldBgCIAEoCSJVCg1Ub2tlblJlc3BvbnNlEgwKBGNv",
             "ZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRIlCghyZXNwb25zZRgDIAEoCzIT",
-            "LmF1dGhlbnRpY2F0ZS5Ub2tlbkI0WjJnaXRodWIuY29tL2lhbXBvcnQvaW50",
-            "ZXJmYWNlL2J1aWxkL2dvL2F1dGhlbnRpY2F0ZWIGcHJvdG8z"));
+            "LmF1dGhlbnRpY2F0ZS5Ub2tlbkI2WjRnaXRodWIuY29tL2lhbXBvcnQvaW50",
+            "ZXJmYWNlL2dlbl9zcmMvZ28vYXV0aGVudGljYXRlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -79,7 +79,7 @@ go:
 	rm -rf ${GEN_SRC_GO}
 	mkdir -p $(GEN_SRC_GO)
 	rm -f ./go.mod
-	protoc --proto_path=$(PROTO_PATH) --go_out=$(GEN_SRC_GO) --go_opt=paths=source_relative --go-grpc_out=$(GEN_SRC_GO) --go-grpc_opt=paths=source_relative $(SRC)
+	protoc --proto_path=$(PROTO_PATH) --go_out=$(GEN_SRC_GO) --go_opt=paths=source_relative --go-grpc_out=$(GEN_SRC_GO) --go-grpc_opt=paths=source_relative --grpc-gateway_out=$(GEN_SRC_GO) --grpc-gateway_opt=paths=source_relative $(SRC)
 	cp ./supplements/go/go.mod .
 
 .PHONY: rust

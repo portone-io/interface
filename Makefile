@@ -1,5 +1,7 @@
 PROTO_PATH=./src
-SRC = src/authenticate/token.proto src/payment/payment.proto src/escrow/escrow.proto src/subscribe/subscribe.proto src/subscribe_customers/subscribe_customers.proto
+SRC = src/google/api/annotations.proto src/google/api/http.proto \
+      src/v1/authenticate/token.proto src/v1/payment/payment.proto src/v1/escrow/escrow.proto src/v1/subscribe/subscribe.proto src/v1/subscribe_customers/subscribe_customers.proto \
+	  src/v2/authenticate/authenticate.proto src/v2/payments/card/card.proto
 
 GEN_SRC_ROOT = ./gen_src
 GEN_SRC_CSHARP = $(GEN_SRC_ROOT)/csharp
@@ -77,7 +79,7 @@ go:
 	rm -rf ${GEN_SRC_GO}
 	mkdir -p $(GEN_SRC_GO)
 	rm -f ./go.mod
-	protoc --proto_path=$(PROTO_PATH) --go_out=$(GEN_SRC_GO) --go_opt=paths=source_relative $(SRC)
+	protoc --proto_path=$(PROTO_PATH) --go_out=$(GEN_SRC_GO) --go_opt=paths=source_relative --go-grpc_out=$(GEN_SRC_GO) --go-grpc_opt=paths=source_relative --grpc-gateway_out=$(GEN_SRC_GO) --grpc-gateway_opt=paths=source_relative $(SRC)
 	cp ./supplements/go/go.mod .
 
 .PHONY: rust

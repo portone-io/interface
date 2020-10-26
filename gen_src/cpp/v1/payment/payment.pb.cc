@@ -886,9 +886,9 @@ const char descriptor_table_protodef_v1_2fpayment_2fpayment_2eproto[] PROTOBUF_S
   "\001*\022\213\001\n\024PaymentGetPrepareRPC\022!.payment.Pa"
   "ymentGetPrepareRequest\032\037.payment.Payment"
   "PrepareResponse\"/\202\323\344\223\002)\022\'/api/v1/payment"
-  "s/prepare/{merchant_uid}B4Z2github.com/i"
-  "amport/interface/gen_src/go/v1/paymentb\006"
-  "proto3"
+  "s/prepare/{merchant_uid}BAZ2github.com/i"
+  "amport/interface/gen_src/go/v1/payment\252\002"
+  "\nV1.Paymentb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v1_2fpayment_2fpayment_2eproto_deps[1] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
@@ -921,7 +921,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v1_2fpayment_2fpayment_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v1_2fpayment_2fpayment_2eproto = {
-  false, false, descriptor_table_protodef_v1_2fpayment_2fpayment_2eproto, "v1/payment/payment.proto", 4606,
+  false, false, descriptor_table_protodef_v1_2fpayment_2fpayment_2eproto, "v1/payment/payment.proto", 4619,
   &descriptor_table_v1_2fpayment_2fpayment_2eproto_once, descriptor_table_v1_2fpayment_2fpayment_2eproto_sccs, descriptor_table_v1_2fpayment_2fpayment_2eproto_deps, 24, 1,
   schemas, file_default_instances, TableStruct_v1_2fpayment_2fpayment_2eproto::offsets,
   file_level_metadata_v1_2fpayment_2fpayment_2eproto, 24, file_level_enum_descriptors_v1_2fpayment_2fpayment_2eproto, file_level_service_descriptors_v1_2fpayment_2fpayment_2eproto,

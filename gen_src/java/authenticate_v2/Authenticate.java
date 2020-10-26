@@ -3874,9 +3874,9 @@ public final class Authenticate {
       "tToken:\001*\022\211\001\n\021RegisterPubKeyRPC\022&.authen" +
       "ticate_v2.PubKeyRegisterRequest\032\'.authen" +
       "ticate_v2.PubKeyRegisterResponse\"#\202\323\344\223\002\035" +
-      "\"\030/api/v2/users/public_key:\001*B9Z7github." +
+      "\"\030/api/v2/users/public_key:\001*BKZ7github." +
       "com/iamport/interface/gen_src/go/v2/auth" +
-      "enticateb\006proto3"
+      "enticate\252\002\017V2.Authenticateb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

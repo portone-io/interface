@@ -21266,9 +21266,10 @@ public final class Card {
       "ancelRegiseteredCardRPC\022!.card_v2.Cancel" +
       "CardPaymentRequest\032#.card_v2.CancelCardP" +
       "aymenttResponse\"9\202\323\344\223\0023\"1/api/v2/payment" +
-      "s/card/cancel/registered/{imp_uid}B:Z8gi" +
+      "s/card/cancel/registered/{imp_uid}BMZ8gi" +
       "thub.com/iamport/interface/gen_src/go/v2" +
-      "/payments/cardb\006proto3"
+      "/payments/card\252\002\020V2.Payments.Cardb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

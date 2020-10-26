@@ -24,18 +24,10 @@ class UserRegisterRequestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UserRegisterRequest> _instance;
 } _UserRegisterRequest_default_instance_;
-class UserRegisterResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UserRegisterResponse> _instance;
-} _UserRegisterResponse_default_instance_;
 class UserEditRequestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UserEditRequest> _instance;
 } _UserEditRequest_default_instance_;
-class UserEditResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UserEditResponse> _instance;
-} _UserEditResponse_default_instance_;
 class UserRequestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UserRequest> _instance;
@@ -73,21 +65,6 @@ static void InitDefaultsscc_info_UserEditRequest_custompay_2fv1_2fuser_2fuser_2e
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UserEditRequest_custompay_2fv1_2fuser_2fuser_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_UserEditRequest_custompay_2fv1_2fuser_2fuser_2eproto}, {}};
 
-static void InitDefaultsscc_info_UserEditResponse_custompay_2fv1_2fuser_2fuser_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::user_custompay::_UserEditResponse_default_instance_;
-    new (ptr) ::user_custompay::UserEditResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::user_custompay::UserEditResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_UserEditResponse_custompay_2fv1_2fuser_2fuser_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_UserEditResponse_custompay_2fv1_2fuser_2fuser_2eproto}, {
-      &scc_info_User_custompay_2fv1_2fuser_2fuser_2eproto.base,}};
-
 static void InitDefaultsscc_info_UserRegisterRequest_custompay_2fv1_2fuser_2fuser_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -101,21 +78,6 @@ static void InitDefaultsscc_info_UserRegisterRequest_custompay_2fv1_2fuser_2fuse
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UserRegisterRequest_custompay_2fv1_2fuser_2fuser_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_UserRegisterRequest_custompay_2fv1_2fuser_2fuser_2eproto}, {}};
-
-static void InitDefaultsscc_info_UserRegisterResponse_custompay_2fv1_2fuser_2fuser_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::user_custompay::_UserRegisterResponse_default_instance_;
-    new (ptr) ::user_custompay::UserRegisterResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::user_custompay::UserRegisterResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_UserRegisterResponse_custompay_2fv1_2fuser_2fuser_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_UserRegisterResponse_custompay_2fv1_2fuser_2fuser_2eproto}, {
-      &scc_info_User_custompay_2fv1_2fuser_2fuser_2eproto.base,}};
 
 static void InitDefaultsscc_info_UserRequest_custompay_2fv1_2fuser_2fuser_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -146,7 +108,7 @@ static void InitDefaultsscc_info_UserResponse_custompay_2fv1_2fuser_2fuser_2epro
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_UserResponse_custompay_2fv1_2fuser_2fuser_2eproto}, {
       &scc_info_User_custompay_2fv1_2fuser_2fuser_2eproto.base,}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_custompay_2fv1_2fuser_2fuser_2eproto[7];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_custompay_2fv1_2fuser_2fuser_2eproto[5];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_custompay_2fv1_2fuser_2fuser_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_custompay_2fv1_2fuser_2fuser_2eproto = nullptr;
 
@@ -173,14 +135,6 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_custompay_2fv1_2fuser_2fuser_2
   PROTOBUF_FIELD_OFFSET(::user_custompay::UserRegisterRequest, address_),
   PROTOBUF_FIELD_OFFSET(::user_custompay::UserRegisterRequest, postcode_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::user_custompay::UserRegisterResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::user_custompay::UserRegisterResponse, code_),
-  PROTOBUF_FIELD_OFFSET(::user_custompay::UserRegisterResponse, message_),
-  PROTOBUF_FIELD_OFFSET(::user_custompay::UserRegisterResponse, response_),
-  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::user_custompay::UserEditRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -191,14 +145,6 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_custompay_2fv1_2fuser_2fuser_2
   PROTOBUF_FIELD_OFFSET(::user_custompay::UserEditRequest, tel_),
   PROTOBUF_FIELD_OFFSET(::user_custompay::UserEditRequest, address_),
   PROTOBUF_FIELD_OFFSET(::user_custompay::UserEditRequest, postcode_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::user_custompay::UserEditResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::user_custompay::UserEditResponse, code_),
-  PROTOBUF_FIELD_OFFSET(::user_custompay::UserEditResponse, message_),
-  PROTOBUF_FIELD_OFFSET(::user_custompay::UserEditResponse, response_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::user_custompay::UserRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -217,73 +163,64 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_custompay_2fv1_2fuser_2fuser_2
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::user_custompay::User)},
   { 11, -1, sizeof(::user_custompay::UserRegisterRequest)},
-  { 21, -1, sizeof(::user_custompay::UserRegisterResponse)},
-  { 29, -1, sizeof(::user_custompay::UserEditRequest)},
-  { 40, -1, sizeof(::user_custompay::UserEditResponse)},
-  { 48, -1, sizeof(::user_custompay::UserRequest)},
-  { 54, -1, sizeof(::user_custompay::UserResponse)},
+  { 21, -1, sizeof(::user_custompay::UserEditRequest)},
+  { 32, -1, sizeof(::user_custompay::UserRequest)},
+  { 38, -1, sizeof(::user_custompay::UserResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::user_custompay::_User_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::user_custompay::_UserRegisterRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::user_custompay::_UserRegisterResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::user_custompay::_UserEditRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::user_custompay::_UserEditResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::user_custompay::_UserRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::user_custompay::_UserResponse_default_instance_),
 };
 
 const char descriptor_table_protodef_custompay_2fv1_2fuser_2fuser_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\034custompay/v1/user/user.proto\022\016user_cus"
-  "tompay\032\034google/api/annotations.proto\"_\n\004"
-  "User\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030"
+  "tompay\032\034google/api/annotations.proto\032\036cu"
+  "stompay/v1/basic/basic.proto\"_\n\004User\022\n\n\002"
+  "id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\013\n"
+  "\003tel\030\004 \001(\t\022\017\n\007address\030\005 \001(\t\022\020\n\010postcode\030"
+  "\006 \001(\t\"b\n\023UserRegisterRequest\022\014\n\004name\030\001 \001"
+  "(\t\022\r\n\005email\030\002 \001(\t\022\013\n\003tel\030\003 \001(\t\022\017\n\007addres"
+  "s\030\004 \001(\t\022\020\n\010postcode\030\005 \001(\t\"j\n\017UserEditReq"
+  "uest\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030"
   "\003 \001(\t\022\013\n\003tel\030\004 \001(\t\022\017\n\007address\030\005 \001(\t\022\020\n\010p"
-  "ostcode\030\006 \001(\t\"b\n\023UserRegisterRequest\022\014\n\004"
-  "name\030\001 \001(\t\022\r\n\005email\030\002 \001(\t\022\013\n\003tel\030\003 \001(\t\022\017"
-  "\n\007address\030\004 \001(\t\022\020\n\010postcode\030\005 \001(\t\"]\n\024Use"
-  "rRegisterResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messa"
-  "ge\030\002 \001(\t\022&\n\010response\030\003 \001(\0132\024.user_custom"
-  "pay.User\"j\n\017UserEditRequest\022\n\n\002id\030\001 \001(\005\022"
-  "\014\n\004name\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\013\n\003tel\030\004 \001("
-  "\t\022\017\n\007address\030\005 \001(\t\022\020\n\010postcode\030\006 \001(\t\"Y\n\020"
-  "UserEditResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messag"
+  "ostcode\030\006 \001(\t\"\031\n\013UserRequest\022\n\n\002id\030\001 \001(\005"
+  "\"U\n\014UserResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messag"
   "e\030\002 \001(\t\022&\n\010response\030\003 \001(\0132\024.user_customp"
-  "ay.User\"\031\n\013UserRequest\022\n\n\002id\030\001 \001(\005\"U\n\014Us"
-  "erResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001("
-  "\t\022&\n\010response\030\003 \001(\0132\024.user_custompay.Use"
-  "r2\244\003\n\013UserService\022n\n\017UserRegisterRPC\022#.u"
-  "ser_custompay.UserRegisterRequest\032$.user"
-  "_custompay.UserRegisterResponse\"\020\202\323\344\223\002\n\""
-  "\005/user:\001*\022\\\n\013UserInfoRPC\022\033.user_custompa"
-  "y.UserRequest\032\034.user_custompay.UserRespo"
-  "nse\"\022\202\323\344\223\002\014\022\n/user/{id}\022^\n\rUserDeleteRPC"
-  "\022\033.user_custompay.UserRequest\032\034.user_cus"
-  "tompay.UserResponse\"\022\202\323\344\223\002\014*\n/user/{id}\022"
-  "g\n\013UserEditRPC\022\037.user_custompay.UserEdit"
-  "Request\032 .user_custompay.UserEditRespons"
-  "e\"\025\202\323\344\223\002\0172\n/user/{id}:\001*B;Z9github.com/i"
-  "amport/interface/gen_src/go/custompay/v1"
-  "/userb\006proto3"
+  "ay.User2\222\003\n\013UserService\022f\n\017UserRegisterR"
+  "PC\022#.user_custompay.UserRegisterRequest\032"
+  "\034.user_custompay.UserResponse\"\020\202\323\344\223\002\n\"\005/"
+  "user:\001*\022\\\n\013UserInfoRPC\022\033.user_custompay."
+  "UserRequest\032\034.user_custompay.UserRespons"
+  "e\"\022\202\323\344\223\002\014\022\n/user/{id}\022[\n\rUserDeleteRPC\022\033"
+  ".user_custompay.UserRequest\032\031.basic_cust"
+  "ompay.Response\"\022\202\323\344\223\002\014*\n/user/{id}\022`\n\013Us"
+  "erEditRPC\022\037.user_custompay.UserEditReque"
+  "st\032\031.basic_custompay.Response\"\025\202\323\344\223\002\0172\n/"
+  "user/{id}:\001*BOZ9github.com/iamport/inter"
+  "face/gen_src/go/custompay/v1/user\252\002\021Cust"
+  "ompay.V1.Userb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_custompay_2fv1_2fuser_2fuser_2eproto_deps[1] = {
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_custompay_2fv1_2fuser_2fuser_2eproto_deps[2] = {
+  &::descriptor_table_custompay_2fv1_2fbasic_2fbasic_2eproto,
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_custompay_2fv1_2fuser_2fuser_2eproto_sccs[7] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_custompay_2fv1_2fuser_2fuser_2eproto_sccs[5] = {
   &scc_info_User_custompay_2fv1_2fuser_2fuser_2eproto.base,
   &scc_info_UserEditRequest_custompay_2fv1_2fuser_2fuser_2eproto.base,
-  &scc_info_UserEditResponse_custompay_2fv1_2fuser_2fuser_2eproto.base,
   &scc_info_UserRegisterRequest_custompay_2fv1_2fuser_2fuser_2eproto.base,
-  &scc_info_UserRegisterResponse_custompay_2fv1_2fuser_2fuser_2eproto.base,
   &scc_info_UserRequest_custompay_2fv1_2fuser_2fuser_2eproto.base,
   &scc_info_UserResponse_custompay_2fv1_2fuser_2fuser_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_custompay_2fv1_2fuser_2fuser_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_custompay_2fv1_2fuser_2fuser_2eproto = {
-  false, false, descriptor_table_protodef_custompay_2fv1_2fuser_2fuser_2eproto, "custompay/v1/user/user.proto", 1173,
-  &descriptor_table_custompay_2fv1_2fuser_2fuser_2eproto_once, descriptor_table_custompay_2fv1_2fuser_2fuser_2eproto_sccs, descriptor_table_custompay_2fv1_2fuser_2fuser_2eproto_deps, 7, 1,
+  false, false, descriptor_table_protodef_custompay_2fv1_2fuser_2fuser_2eproto, "custompay/v1/user/user.proto", 1021,
+  &descriptor_table_custompay_2fv1_2fuser_2fuser_2eproto_once, descriptor_table_custompay_2fv1_2fuser_2fuser_2eproto_sccs, descriptor_table_custompay_2fv1_2fuser_2fuser_2eproto_deps, 5, 2,
   schemas, file_default_instances, TableStruct_custompay_2fv1_2fuser_2fuser_2eproto::offsets,
-  file_level_metadata_custompay_2fv1_2fuser_2fuser_2eproto, 7, file_level_enum_descriptors_custompay_2fv1_2fuser_2fuser_2eproto, file_level_service_descriptors_custompay_2fv1_2fuser_2fuser_2eproto,
+  file_level_metadata_custompay_2fv1_2fuser_2fuser_2eproto, 5, file_level_enum_descriptors_custompay_2fv1_2fuser_2fuser_2eproto, file_level_service_descriptors_custompay_2fv1_2fuser_2fuser_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -1041,291 +978,6 @@ void UserRegisterRequest::InternalSwap(UserRegisterRequest* other) {
 
 // ===================================================================
 
-void UserRegisterResponse::InitAsDefaultInstance() {
-  ::user_custompay::_UserRegisterResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::user_custompay::User*>(
-      ::user_custompay::User::internal_default_instance());
-}
-class UserRegisterResponse::_Internal {
- public:
-  static const ::user_custompay::User& response(const UserRegisterResponse* msg);
-};
-
-const ::user_custompay::User&
-UserRegisterResponse::_Internal::response(const UserRegisterResponse* msg) {
-  return *msg->response_;
-}
-UserRegisterResponse::UserRegisterResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:user_custompay.UserRegisterResponse)
-}
-UserRegisterResponse::UserRegisterResponse(const UserRegisterResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
-      GetArena());
-  }
-  if (from._internal_has_response()) {
-    response_ = new ::user_custompay::User(*from.response_);
-  } else {
-    response_ = nullptr;
-  }
-  code_ = from.code_;
-  // @@protoc_insertion_point(copy_constructor:user_custompay.UserRegisterResponse)
-}
-
-void UserRegisterResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_UserRegisterResponse_custompay_2fv1_2fuser_2fuser_2eproto.base);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
-      reinterpret_cast<char*>(&response_)) + sizeof(code_));
-}
-
-UserRegisterResponse::~UserRegisterResponse() {
-  // @@protoc_insertion_point(destructor:user_custompay.UserRegisterResponse)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void UserRegisterResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete response_;
-}
-
-void UserRegisterResponse::ArenaDtor(void* object) {
-  UserRegisterResponse* _this = reinterpret_cast< UserRegisterResponse* >(object);
-  (void)_this;
-}
-void UserRegisterResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void UserRegisterResponse::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const UserRegisterResponse& UserRegisterResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UserRegisterResponse_custompay_2fv1_2fuser_2fuser_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void UserRegisterResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:user_custompay.UserRegisterResponse)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  if (GetArena() == nullptr && response_ != nullptr) {
-    delete response_;
-  }
-  response_ = nullptr;
-  code_ = 0;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* UserRegisterResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // int32 code = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string message = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "user_custompay.UserRegisterResponse.message"));
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .user_custompay.User response = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_response(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* UserRegisterResponse::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:user_custompay.UserRegisterResponse)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 code = 1;
-  if (this->code() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
-  }
-
-  // string message = 2;
-  if (this->message().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "user_custompay.UserRegisterResponse.message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .user_custompay.User response = 3;
-  if (this->has_response()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::response(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:user_custompay.UserRegisterResponse)
-  return target;
-}
-
-size_t UserRegisterResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:user_custompay.UserRegisterResponse)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string message = 2;
-  if (this->message().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // .user_custompay.User response = 3;
-  if (this->has_response()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *response_);
-  }
-
-  // int32 code = 1;
-  if (this->code() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_code());
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void UserRegisterResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:user_custompay.UserRegisterResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  const UserRegisterResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<UserRegisterResponse>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:user_custompay.UserRegisterResponse)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:user_custompay.UserRegisterResponse)
-    MergeFrom(*source);
-  }
-}
-
-void UserRegisterResponse::MergeFrom(const UserRegisterResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:user_custompay.UserRegisterResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.message().size() > 0) {
-    _internal_set_message(from._internal_message());
-  }
-  if (from.has_response()) {
-    _internal_mutable_response()->::user_custompay::User::MergeFrom(from._internal_response());
-  }
-  if (from.code() != 0) {
-    _internal_set_code(from._internal_code());
-  }
-}
-
-void UserRegisterResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:user_custompay.UserRegisterResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void UserRegisterResponse::CopyFrom(const UserRegisterResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:user_custompay.UserRegisterResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool UserRegisterResponse::IsInitialized() const {
-  return true;
-}
-
-void UserRegisterResponse::InternalSwap(UserRegisterResponse* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(UserRegisterResponse, code_)
-      + sizeof(UserRegisterResponse::code_)
-      - PROTOBUF_FIELD_OFFSET(UserRegisterResponse, response_)>(
-          reinterpret_cast<char*>(&response_),
-          reinterpret_cast<char*>(&other->response_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata UserRegisterResponse::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
 void UserEditRequest::InitAsDefaultInstance() {
 }
 class UserEditRequest::_Internal {
@@ -1708,291 +1360,6 @@ void UserEditRequest::InternalSwap(UserEditRequest* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UserEditRequest::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-void UserEditResponse::InitAsDefaultInstance() {
-  ::user_custompay::_UserEditResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::user_custompay::User*>(
-      ::user_custompay::User::internal_default_instance());
-}
-class UserEditResponse::_Internal {
- public:
-  static const ::user_custompay::User& response(const UserEditResponse* msg);
-};
-
-const ::user_custompay::User&
-UserEditResponse::_Internal::response(const UserEditResponse* msg) {
-  return *msg->response_;
-}
-UserEditResponse::UserEditResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:user_custompay.UserEditResponse)
-}
-UserEditResponse::UserEditResponse(const UserEditResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
-      GetArena());
-  }
-  if (from._internal_has_response()) {
-    response_ = new ::user_custompay::User(*from.response_);
-  } else {
-    response_ = nullptr;
-  }
-  code_ = from.code_;
-  // @@protoc_insertion_point(copy_constructor:user_custompay.UserEditResponse)
-}
-
-void UserEditResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_UserEditResponse_custompay_2fv1_2fuser_2fuser_2eproto.base);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
-      reinterpret_cast<char*>(&response_)) + sizeof(code_));
-}
-
-UserEditResponse::~UserEditResponse() {
-  // @@protoc_insertion_point(destructor:user_custompay.UserEditResponse)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void UserEditResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete response_;
-}
-
-void UserEditResponse::ArenaDtor(void* object) {
-  UserEditResponse* _this = reinterpret_cast< UserEditResponse* >(object);
-  (void)_this;
-}
-void UserEditResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void UserEditResponse::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const UserEditResponse& UserEditResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UserEditResponse_custompay_2fv1_2fuser_2fuser_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void UserEditResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:user_custompay.UserEditResponse)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  if (GetArena() == nullptr && response_ != nullptr) {
-    delete response_;
-  }
-  response_ = nullptr;
-  code_ = 0;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* UserEditResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // int32 code = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string message = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_message();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "user_custompay.UserEditResponse.message"));
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .user_custompay.User response = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_response(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* UserEditResponse::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:user_custompay.UserEditResponse)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 code = 1;
-  if (this->code() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
-  }
-
-  // string message = 2;
-  if (this->message().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "user_custompay.UserEditResponse.message");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_message(), target);
-  }
-
-  // .user_custompay.User response = 3;
-  if (this->has_response()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::response(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:user_custompay.UserEditResponse)
-  return target;
-}
-
-size_t UserEditResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:user_custompay.UserEditResponse)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string message = 2;
-  if (this->message().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
-  }
-
-  // .user_custompay.User response = 3;
-  if (this->has_response()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *response_);
-  }
-
-  // int32 code = 1;
-  if (this->code() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_code());
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void UserEditResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:user_custompay.UserEditResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  const UserEditResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<UserEditResponse>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:user_custompay.UserEditResponse)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:user_custompay.UserEditResponse)
-    MergeFrom(*source);
-  }
-}
-
-void UserEditResponse::MergeFrom(const UserEditResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:user_custompay.UserEditResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.message().size() > 0) {
-    _internal_set_message(from._internal_message());
-  }
-  if (from.has_response()) {
-    _internal_mutable_response()->::user_custompay::User::MergeFrom(from._internal_response());
-  }
-  if (from.code() != 0) {
-    _internal_set_code(from._internal_code());
-  }
-}
-
-void UserEditResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:user_custompay.UserEditResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void UserEditResponse::CopyFrom(const UserEditResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:user_custompay.UserEditResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool UserEditResponse::IsInitialized() const {
-  return true;
-}
-
-void UserEditResponse::InternalSwap(UserEditResponse* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(UserEditResponse, code_)
-      + sizeof(UserEditResponse::code_)
-      - PROTOBUF_FIELD_OFFSET(UserEditResponse, response_)>(
-          reinterpret_cast<char*>(&response_),
-          reinterpret_cast<char*>(&other->response_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata UserEditResponse::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -2488,14 +1855,8 @@ template<> PROTOBUF_NOINLINE ::user_custompay::User* Arena::CreateMaybeMessage< 
 template<> PROTOBUF_NOINLINE ::user_custompay::UserRegisterRequest* Arena::CreateMaybeMessage< ::user_custompay::UserRegisterRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::user_custompay::UserRegisterRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::user_custompay::UserRegisterResponse* Arena::CreateMaybeMessage< ::user_custompay::UserRegisterResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::user_custompay::UserRegisterResponse >(arena);
-}
 template<> PROTOBUF_NOINLINE ::user_custompay::UserEditRequest* Arena::CreateMaybeMessage< ::user_custompay::UserEditRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::user_custompay::UserEditRequest >(arena);
-}
-template<> PROTOBUF_NOINLINE ::user_custompay::UserEditResponse* Arena::CreateMaybeMessage< ::user_custompay::UserEditResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::user_custompay::UserEditResponse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::user_custompay::UserRequest* Arena::CreateMaybeMessage< ::user_custompay::UserRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::user_custompay::UserRequest >(arena);

@@ -3953,8 +3953,9 @@ public final class Escrow {
       "rows/logis/{imp_uid}:\001*\022i\n\014EscrowPutRPC\022" +
       "\025.escrow.EscrowRequest\032\026.escrow.EscrowRe" +
       "sponse\"*\202\323\344\223\002$\032\037/api/v1/escrows/logis/{i" +
-      "mp_uid}:\001*B3Z1github.com/iamport/interfa" +
-      "ce/gen_src/go/v1/escrowb\006proto3"
+      "mp_uid}:\001*B?Z1github.com/iamport/interfa" +
+      "ce/gen_src/go/v1/escrow\252\002\tV1.Escrowb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

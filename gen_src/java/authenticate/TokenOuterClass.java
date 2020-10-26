@@ -2314,9 +2314,10 @@ public final class TokenOuterClass {
       "\n\010response\030\003 \001(\0132\023.authenticate.Token2v\n" +
       "\014TokenService\022f\n\010TokenRPC\022\032.authenticate" +
       ".TokenRequest\032\033.authenticate.TokenRespon" +
-      "se\"!\202\323\344\223\002\033\"\026/api/v1/users/getToken:\001*B9Z" +
+      "se\"!\202\323\344\223\002\033\"\026/api/v1/users/getToken:\001*BKZ" +
       "7github.com/iamport/interface/gen_src/go" +
-      "/v1/authenticateb\006proto3"
+      "/v1/authenticate\252\002\017V1.Authenticateb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

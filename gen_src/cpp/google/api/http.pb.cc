@@ -141,10 +141,11 @@ const char descriptor_table_protodef_google_2fapi_2fhttp_2eproto[] PROTOBUF_SECT
   "H\000\022\014\n\004body\030\007 \001(\t\022\025\n\rresponse_body\030\014 \001(\t\022"
   "1\n\023additional_bindings\030\013 \003(\0132\024.google.ap"
   "i.HttpRuleB\t\n\007pattern\"/\n\021CustomHttpPatte"
-  "rn\022\014\n\004kind\030\001 \001(\t\022\014\n\004path\030\002 \001(\tBj\n\016com.go"
+  "rn\022\014\n\004kind\030\001 \001(\t\022\014\n\004path\030\002 \001(\tB|\n\016com.go"
   "ogle.apiB\tHttpProtoP\001ZAgoogle.golang.org"
   "/genproto/googleapis/api/annotations;ann"
-  "otations\370\001\001\242\002\004GAPIb\006proto3"
+  "otations\370\001\001\242\002\004GAPI\252\002\017Google.Api.Httpb\006pr"
+  "oto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_google_2fapi_2fhttp_2eproto_deps[1] = {
 };
@@ -155,7 +156,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_goo
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_google_2fapi_2fhttp_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_google_2fapi_2fhttp_2eproto = {
-  false, false, descriptor_table_protodef_google_2fapi_2fhttp_2eproto, "google/api/http.proto", 546,
+  false, false, descriptor_table_protodef_google_2fapi_2fhttp_2eproto, "google/api/http.proto", 564,
   &descriptor_table_google_2fapi_2fhttp_2eproto_once, descriptor_table_google_2fapi_2fhttp_2eproto_sccs, descriptor_table_google_2fapi_2fhttp_2eproto_deps, 3, 0,
   schemas, file_default_instances, TableStruct_google_2fapi_2fhttp_2eproto::offsets,
   file_level_metadata_google_2fapi_2fhttp_2eproto, 3, file_level_enum_descriptors_google_2fapi_2fhttp_2eproto, file_level_service_descriptors_google_2fapi_2fhttp_2eproto,

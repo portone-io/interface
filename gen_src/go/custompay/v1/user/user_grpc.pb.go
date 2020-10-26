@@ -4,6 +4,7 @@ package user
 
 import (
 	context "context"
+	basic "github.com/iamport/interface/gen_src/go/custompay/v1/basic"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -17,10 +18,10 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type UserServiceClient interface {
-	UserRegisterRPC(ctx context.Context, in *UserRegisterRequest, opts ...grpc.CallOption) (*UserRegisterResponse, error)
+	UserRegisterRPC(ctx context.Context, in *UserRegisterRequest, opts ...grpc.CallOption) (*UserResponse, error)
 	UserInfoRPC(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*UserResponse, error)
-	UserDeleteRPC(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*UserResponse, error)
-	UserEditRPC(ctx context.Context, in *UserEditRequest, opts ...grpc.CallOption) (*UserEditResponse, error)
+	UserDeleteRPC(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*basic.Response, error)
+	UserEditRPC(ctx context.Context, in *UserEditRequest, opts ...grpc.CallOption) (*basic.Response, error)
 }
 
 type userServiceClient struct {
@@ -31,8 +32,8 @@ func NewUserServiceClient(cc grpc.ClientConnInterface) UserServiceClient {
 	return &userServiceClient{cc}
 }
 
-func (c *userServiceClient) UserRegisterRPC(ctx context.Context, in *UserRegisterRequest, opts ...grpc.CallOption) (*UserRegisterResponse, error) {
-	out := new(UserRegisterResponse)
+func (c *userServiceClient) UserRegisterRPC(ctx context.Context, in *UserRegisterRequest, opts ...grpc.CallOption) (*UserResponse, error) {
+	out := new(UserResponse)
 	err := c.cc.Invoke(ctx, "/user_custompay.UserService/UserRegisterRPC", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -49,8 +50,8 @@ func (c *userServiceClient) UserInfoRPC(ctx context.Context, in *UserRequest, op
 	return out, nil
 }
 
-func (c *userServiceClient) UserDeleteRPC(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*UserResponse, error) {
-	out := new(UserResponse)
+func (c *userServiceClient) UserDeleteRPC(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*basic.Response, error) {
+	out := new(basic.Response)
 	err := c.cc.Invoke(ctx, "/user_custompay.UserService/UserDeleteRPC", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -58,8 +59,8 @@ func (c *userServiceClient) UserDeleteRPC(ctx context.Context, in *UserRequest, 
 	return out, nil
 }
 
-func (c *userServiceClient) UserEditRPC(ctx context.Context, in *UserEditRequest, opts ...grpc.CallOption) (*UserEditResponse, error) {
-	out := new(UserEditResponse)
+func (c *userServiceClient) UserEditRPC(ctx context.Context, in *UserEditRequest, opts ...grpc.CallOption) (*basic.Response, error) {
+	out := new(basic.Response)
 	err := c.cc.Invoke(ctx, "/user_custompay.UserService/UserEditRPC", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -71,10 +72,10 @@ func (c *userServiceClient) UserEditRPC(ctx context.Context, in *UserEditRequest
 // All implementations must embed UnimplementedUserServiceServer
 // for forward compatibility
 type UserServiceServer interface {
-	UserRegisterRPC(context.Context, *UserRegisterRequest) (*UserRegisterResponse, error)
+	UserRegisterRPC(context.Context, *UserRegisterRequest) (*UserResponse, error)
 	UserInfoRPC(context.Context, *UserRequest) (*UserResponse, error)
-	UserDeleteRPC(context.Context, *UserRequest) (*UserResponse, error)
-	UserEditRPC(context.Context, *UserEditRequest) (*UserEditResponse, error)
+	UserDeleteRPC(context.Context, *UserRequest) (*basic.Response, error)
+	UserEditRPC(context.Context, *UserEditRequest) (*basic.Response, error)
 	mustEmbedUnimplementedUserServiceServer()
 }
 
@@ -82,16 +83,16 @@ type UserServiceServer interface {
 type UnimplementedUserServiceServer struct {
 }
 
-func (UnimplementedUserServiceServer) UserRegisterRPC(context.Context, *UserRegisterRequest) (*UserRegisterResponse, error) {
+func (UnimplementedUserServiceServer) UserRegisterRPC(context.Context, *UserRegisterRequest) (*UserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UserRegisterRPC not implemented")
 }
 func (UnimplementedUserServiceServer) UserInfoRPC(context.Context, *UserRequest) (*UserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UserInfoRPC not implemented")
 }
-func (UnimplementedUserServiceServer) UserDeleteRPC(context.Context, *UserRequest) (*UserResponse, error) {
+func (UnimplementedUserServiceServer) UserDeleteRPC(context.Context, *UserRequest) (*basic.Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UserDeleteRPC not implemented")
 }
-func (UnimplementedUserServiceServer) UserEditRPC(context.Context, *UserEditRequest) (*UserEditResponse, error) {
+func (UnimplementedUserServiceServer) UserEditRPC(context.Context, *UserEditRequest) (*basic.Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UserEditRPC not implemented")
 }
 func (UnimplementedUserServiceServer) mustEmbedUnimplementedUserServiceServer() {}

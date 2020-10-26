@@ -2,10 +2,12 @@ syntax = "proto3";
 package user_custompay;
 
 import "google/api/annotations.proto";
+import "custompay/v1/basic/basic.proto";
 option go_package = "github.com/iamport/interface/gen_src/go/custompay/v1/user";
+option csharp_namespace = "Custompay.V1.User";
 
 service UserService {
-    rpc UserRegisterRPC(UserRegisterRequest) returns (UserRegisterResponse) {
+    rpc UserRegisterRPC(UserRegisterRequest) returns (UserResponse) {
         option (google.api.http) = {
             post: "/user"
             body: "*"
@@ -18,13 +20,13 @@ service UserService {
         };
     }
 
-    rpc UserDeleteRPC(UserRequest) returns (UserResponse) {
+    rpc UserDeleteRPC(UserRequest) returns (basic_custompay.Response) {
         option (google.api.http) = {
             delete: "/user/{id}"
         };
     }
 
-    rpc UserEditRPC(UserEditRequest) returns (UserEditResponse) {
+    rpc UserEditRPC(UserEditRequest) returns (basic_custompay.Response) {
         option (google.api.http) = {
             patch: "/user/{id}"
             body: "*"
@@ -49,12 +51,6 @@ message UserRegisterRequest {
     string postcode = 5;
 }
 
-message UserRegisterResponse {
-    int32 code = 1;
-    string message = 2;
-    User response = 3;
-}
-
 message UserEditRequest {
     int32 id =1;
     string name = 2;
@@ -62,12 +58,6 @@ message UserEditRequest {
     string tel = 4;
     string address = 5;
     string postcode = 6;
-}
-
-message UserEditResponse {
-    int32 code = 1;
-    string message = 2;
-    User response = 3;
 }
 
 message UserRequest {

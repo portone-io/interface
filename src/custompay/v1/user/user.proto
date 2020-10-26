@@ -1,0 +1,81 @@
+syntax = "proto3";
+package user_custompay;
+
+import "google/api/annotations.proto";
+option go_package = "github.com/iamport/interface/gen_src/go/custompay/v1/user";
+
+service UserService {
+    rpc UserRegisterRPC(UserRegisterRequest) returns (UserRegisterResponse) {
+        option (google.api.http) = {
+            post: "/user"
+            body: "*"
+        };
+    }
+
+    rpc UserInfoRPC(UserRequest) returns (UserResponse) {
+        option (google.api.http) = {
+            get: "/user/{id}"
+        };
+    }
+
+    rpc UserDeleteRPC(UserRequest) returns (UserResponse) {
+        option (google.api.http) = {
+            delete: "/user/{id}"
+        };
+    }
+
+    rpc UserEditRPC(UserEditRequest) returns (UserEditResponse) {
+        option (google.api.http) = {
+            patch: "/user/{id}"
+            body: "*"
+        };
+    }
+}
+
+message User {
+    int32 id =1;
+    string name = 2;
+    string email = 3;
+    string tel = 4;
+    string address = 5;
+    string postcode = 6;
+}
+
+message UserRegisterRequest {
+    string name = 1;
+    string email = 2;
+    string tel = 3;
+    string address = 4;
+    string postcode = 5;
+}
+
+message UserRegisterResponse {
+    int32 code = 1;
+    string message = 2;
+    User response = 3;
+}
+
+message UserEditRequest {
+    int32 id =1;
+    string name = 2;
+    string email = 3;
+    string tel = 4;
+    string address = 5;
+    string postcode = 6;
+}
+
+message UserEditResponse {
+    int32 code = 1;
+    string message = 2;
+    User response = 3;
+}
+
+message UserRequest {
+    int32 id = 1;
+}
+
+message UserResponse {
+    int32 code = 1;
+    string message = 2;
+    User response = 3;
+}

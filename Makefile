@@ -15,13 +15,14 @@ GEN_SRC_PYTHON = $(GEN_SRC_ROOT)/python
 GEN_SRC_DART = $(GEN_SRC_ROOT)/dart
 GEN_SRC_GO = $(GEN_SRC_ROOT)/go
 GEN_SRC_RUST = $(GEN_SRC_ROOT)/rust
+GEN_SRC_RUBY = $(GEN_SRC_ROOT)/ruby
 
 .PHONY: disable_default
 disable_default:
 	$(info Please specify target.)
 
 .PHONY: all
-all: clean csharp cpp java js php python dart go rust
+all: clean csharp cpp java js php python dart go rust ruby
 
 .PHONY: csharp
 csharp:
@@ -89,6 +90,12 @@ rust:
 	mkdir -p $(GEN_SRC_RUST)
 	protoc --proto_path=$(PROTO_PATH) --rust_out=$(GEN_SRC_RUST) $(SRC)
 	cp ./supplements/rust/* $(GEN_SRC_RUST)
+
+.PHONY: ruby
+ruby:
+	rm -rf ${GEN_SRC_RUBY}
+	mkdir -p $(GEN_SRC_RUBY)
+	protoc --proto_path=$(PROTO_PATH) --ruby_out=$(GEN_SRC_RUBY) $(SRC)
 
 .PHONY: clean
 clean:

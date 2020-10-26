@@ -5,6 +5,7 @@ import "google/api/annotations.proto";
 import "v1/payment/payment.proto";
 
 option go_package = "github.com/iamport/interface/gen_src/go/v1/subscribe";
+option csharp_namespace = "V1.Subscribe";
 
 service SubscribeService {
     rpc OnetimePaymentRPC(OnetimePaymentRequest) returns (OnetimePaymentResponse) {

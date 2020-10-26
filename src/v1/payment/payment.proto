@@ -3,6 +3,7 @@ package payment;
 
 import "google/api/annotations.proto";
 option go_package = "github.com/iamport/interface/gen_src/go/v1/payment";
+option csharp_namespace = "V1.Payment";
 
 service PaymentService {
     rpc PaymentBalanceRPC(PaymentBalanceRequest) returns (PaymentBalanceResponse) {

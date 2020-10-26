@@ -28,7 +28,7 @@ all: clean csharp cpp java js php python dart go ruby
 csharp:
 	rm -rf ${GEN_SRC_CSHARP}
 	mkdir -p $(GEN_SRC_CSHARP)
-	protoc --proto_path=$(PROTO_PATH) --csharp_out=$(GEN_SRC_CSHARP) $(SRC)
+	protoc --proto_path=$(PROTO_PATH) --csharp_out=$(GEN_SRC_CSHARP) --csharp_opt=base_namespace $(SRC)
 
 .PHONY: cpp
 cpp:

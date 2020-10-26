@@ -18,9 +18,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='v1/authenticate/token.proto',
   package='authenticate',
   syntax='proto3',
-  serialized_options=b'Z7github.com/iamport/interface/gen_src/go/v1/authenticate',
+  serialized_options=b'Z7github.com/iamport/interface/gen_src/go/v1/authenticate\252\002\017V1.Authenticate',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1bv1/authenticate/token.proto\x12\x0c\x61uthenticate\x1a\x1cgoogle/api/annotations.proto\">\n\x05Token\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x0b\n\x03now\x18\x02 \x01(\x05\x12\x12\n\nexpired_at\x18\x03 \x01(\x05\"3\n\x0cTokenRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\nimp_secret\x18\x02 \x01(\t\"U\n\rTokenResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12%\n\x08response\x18\x03 \x01(\x0b\x32\x13.authenticate.Token2v\n\x0cTokenService\x12\x66\n\x08TokenRPC\x12\x1a.authenticate.TokenRequest\x1a\x1b.authenticate.TokenResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x16/api/v1/users/getToken:\x01*B9Z7github.com/iamport/interface/gen_src/go/v1/authenticateb\x06proto3'
+  serialized_pb=b'\n\x1bv1/authenticate/token.proto\x12\x0c\x61uthenticate\x1a\x1cgoogle/api/annotations.proto\">\n\x05Token\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x0b\n\x03now\x18\x02 \x01(\x05\x12\x12\n\nexpired_at\x18\x03 \x01(\x05\"3\n\x0cTokenRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\nimp_secret\x18\x02 \x01(\t\"U\n\rTokenResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12%\n\x08response\x18\x03 \x01(\x0b\x32\x13.authenticate.Token2v\n\x0cTokenService\x12\x66\n\x08TokenRPC\x12\x1a.authenticate.TokenRequest\x1a\x1b.authenticate.TokenResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x16/api/v1/users/getToken:\x01*BKZ7github.com/iamport/interface/gen_src/go/v1/authenticate\xaa\x02\x0fV1.Authenticateb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 

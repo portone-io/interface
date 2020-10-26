@@ -123,9 +123,10 @@ const char descriptor_table_protodef_v1_2fauthenticate_2ftoken_2eproto[] PROTOBU
   "\n\010response\030\003 \001(\0132\023.authenticate.Token2v\n"
   "\014TokenService\022f\n\010TokenRPC\022\032.authenticate"
   ".TokenRequest\032\033.authenticate.TokenRespon"
-  "se\"!\202\323\344\223\002\033\"\026/api/v1/users/getToken:\001*B9Z"
+  "se\"!\202\323\344\223\002\033\"\026/api/v1/users/getToken:\001*BKZ"
   "7github.com/iamport/interface/gen_src/go"
-  "/v1/authenticateb\006proto3"
+  "/v1/authenticate\252\002\017V1.Authenticateb\006prot"
+  "o3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v1_2fauthenticate_2ftoken_2eproto_deps[1] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
@@ -137,7 +138,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v1_2fauthenticate_2ftoken_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v1_2fauthenticate_2ftoken_2eproto = {
-  false, false, descriptor_table_protodef_v1_2fauthenticate_2ftoken_2eproto, "v1/authenticate/token.proto", 464,
+  false, false, descriptor_table_protodef_v1_2fauthenticate_2ftoken_2eproto, "v1/authenticate/token.proto", 482,
   &descriptor_table_v1_2fauthenticate_2ftoken_2eproto_once, descriptor_table_v1_2fauthenticate_2ftoken_2eproto_sccs, descriptor_table_v1_2fauthenticate_2ftoken_2eproto_deps, 3, 1,
   schemas, file_default_instances, TableStruct_v1_2fauthenticate_2ftoken_2eproto::offsets,
   file_level_metadata_v1_2fauthenticate_2ftoken_2eproto, 3, file_level_enum_descriptors_v1_2fauthenticate_2ftoken_2eproto, file_level_service_descriptors_v1_2fauthenticate_2ftoken_2eproto,

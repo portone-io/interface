@@ -3,6 +3,7 @@
 
 import * as jspb from "google-protobuf";
 import * as google_api_annotations_pb from "../../../google/api/annotations_pb";
+import * as custompay_v1_basic_basic_pb from "../../../custompay/v1/basic/basic_pb";
 
 export class User extends jspb.Message {
   getId(): number;
@@ -80,36 +81,6 @@ export namespace UserRegisterRequest {
   }
 }
 
-export class UserRegisterResponse extends jspb.Message {
-  getCode(): number;
-  setCode(value: number): void;
-
-  getMessage(): string;
-  setMessage(value: string): void;
-
-  hasResponse(): boolean;
-  clearResponse(): void;
-  getResponse(): User | undefined;
-  setResponse(value?: User): void;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): UserRegisterResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: UserRegisterResponse): UserRegisterResponse.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: UserRegisterResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): UserRegisterResponse;
-  static deserializeBinaryFromReader(message: UserRegisterResponse, reader: jspb.BinaryReader): UserRegisterResponse;
-}
-
-export namespace UserRegisterResponse {
-  export type AsObject = {
-    code: number,
-    message: string,
-    response?: User.AsObject,
-  }
-}
-
 export class UserEditRequest extends jspb.Message {
   getId(): number;
   setId(value: number): void;
@@ -147,36 +118,6 @@ export namespace UserEditRequest {
     tel: string,
     address: string,
     postcode: string,
-  }
-}
-
-export class UserEditResponse extends jspb.Message {
-  getCode(): number;
-  setCode(value: number): void;
-
-  getMessage(): string;
-  setMessage(value: string): void;
-
-  hasResponse(): boolean;
-  clearResponse(): void;
-  getResponse(): User | undefined;
-  setResponse(value?: User): void;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): UserEditResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: UserEditResponse): UserEditResponse.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: UserEditResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): UserEditResponse;
-  static deserializeBinaryFromReader(message: UserEditResponse, reader: jspb.BinaryReader): UserEditResponse;
-}
-
-export namespace UserEditResponse {
-  export type AsObject = {
-    code: number,
-    message: string,
-    response?: User.AsObject,
   }
 }
 

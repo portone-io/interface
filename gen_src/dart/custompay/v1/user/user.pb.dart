@@ -10,6 +10,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../basic/basic.pb.dart' as $8;
+
 class User extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('User', package: const $pb.PackageName('user_custompay'), createEmptyInstance: create)
     ..a<$core.int>(1, 'id', $pb.PbFieldType.O3)
@@ -162,59 +164,6 @@ class UserRegisterRequest extends $pb.GeneratedMessage {
   void clearPostcode() => clearField(5);
 }
 
-class UserRegisterResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserRegisterResponse', package: const $pb.PackageName('user_custompay'), createEmptyInstance: create)
-    ..a<$core.int>(1, 'code', $pb.PbFieldType.O3)
-    ..aOS(2, 'message')
-    ..aOM<User>(3, 'response', subBuilder: User.create)
-    ..hasRequiredFields = false
-  ;
-
-  UserRegisterResponse._() : super();
-  factory UserRegisterResponse() => create();
-  factory UserRegisterResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory UserRegisterResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  UserRegisterResponse clone() => UserRegisterResponse()..mergeFromMessage(this);
-  UserRegisterResponse copyWith(void Function(UserRegisterResponse) updates) => super.copyWith((message) => updates(message as UserRegisterResponse));
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static UserRegisterResponse create() => UserRegisterResponse._();
-  UserRegisterResponse createEmptyInstance() => create();
-  static $pb.PbList<UserRegisterResponse> createRepeated() => $pb.PbList<UserRegisterResponse>();
-  @$core.pragma('dart2js:noInline')
-  static UserRegisterResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserRegisterResponse>(create);
-  static UserRegisterResponse _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.int get code => $_getIZ(0);
-  @$pb.TagNumber(1)
-  set code($core.int v) { $_setSignedInt32(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasCode() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearCode() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get message => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set message($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasMessage() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearMessage() => clearField(2);
-
-  @$pb.TagNumber(3)
-  User get response => $_getN(2);
-  @$pb.TagNumber(3)
-  set response(User v) { setField(3, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasResponse() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearResponse() => clearField(3);
-  @$pb.TagNumber(3)
-  User ensureResponse() => $_ensure(2);
-}
-
 class UserEditRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserEditRequest', package: const $pb.PackageName('user_custompay'), createEmptyInstance: create)
     ..a<$core.int>(1, 'id', $pb.PbFieldType.O3)
@@ -294,59 +243,6 @@ class UserEditRequest extends $pb.GeneratedMessage {
   $core.bool hasPostcode() => $_has(5);
   @$pb.TagNumber(6)
   void clearPostcode() => clearField(6);
-}
-
-class UserEditResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserEditResponse', package: const $pb.PackageName('user_custompay'), createEmptyInstance: create)
-    ..a<$core.int>(1, 'code', $pb.PbFieldType.O3)
-    ..aOS(2, 'message')
-    ..aOM<User>(3, 'response', subBuilder: User.create)
-    ..hasRequiredFields = false
-  ;
-
-  UserEditResponse._() : super();
-  factory UserEditResponse() => create();
-  factory UserEditResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory UserEditResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  UserEditResponse clone() => UserEditResponse()..mergeFromMessage(this);
-  UserEditResponse copyWith(void Function(UserEditResponse) updates) => super.copyWith((message) => updates(message as UserEditResponse));
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static UserEditResponse create() => UserEditResponse._();
-  UserEditResponse createEmptyInstance() => create();
-  static $pb.PbList<UserEditResponse> createRepeated() => $pb.PbList<UserEditResponse>();
-  @$core.pragma('dart2js:noInline')
-  static UserEditResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserEditResponse>(create);
-  static UserEditResponse _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.int get code => $_getIZ(0);
-  @$pb.TagNumber(1)
-  set code($core.int v) { $_setSignedInt32(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasCode() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearCode() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get message => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set message($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasMessage() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearMessage() => clearField(2);
-
-  @$pb.TagNumber(3)
-  User get response => $_getN(2);
-  @$pb.TagNumber(3)
-  set response(User v) { setField(3, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasResponse() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearResponse() => clearField(3);
-  @$pb.TagNumber(3)
-  User ensureResponse() => $_ensure(2);
 }
 
 class UserRequest extends $pb.GeneratedMessage {
@@ -437,21 +333,21 @@ class UserServiceApi {
   $pb.RpcClient _client;
   UserServiceApi(this._client);
 
-  $async.Future<UserRegisterResponse> userRegisterRPC($pb.ClientContext ctx, UserRegisterRequest request) {
-    var emptyResponse = UserRegisterResponse();
-    return _client.invoke<UserRegisterResponse>(ctx, 'UserService', 'UserRegisterRPC', request, emptyResponse);
+  $async.Future<UserResponse> userRegisterRPC($pb.ClientContext ctx, UserRegisterRequest request) {
+    var emptyResponse = UserResponse();
+    return _client.invoke<UserResponse>(ctx, 'UserService', 'UserRegisterRPC', request, emptyResponse);
   }
   $async.Future<UserResponse> userInfoRPC($pb.ClientContext ctx, UserRequest request) {
     var emptyResponse = UserResponse();
     return _client.invoke<UserResponse>(ctx, 'UserService', 'UserInfoRPC', request, emptyResponse);
   }
-  $async.Future<UserResponse> userDeleteRPC($pb.ClientContext ctx, UserRequest request) {
-    var emptyResponse = UserResponse();
-    return _client.invoke<UserResponse>(ctx, 'UserService', 'UserDeleteRPC', request, emptyResponse);
+  $async.Future<$8.Response> userDeleteRPC($pb.ClientContext ctx, UserRequest request) {
+    var emptyResponse = $8.Response();
+    return _client.invoke<$8.Response>(ctx, 'UserService', 'UserDeleteRPC', request, emptyResponse);
   }
-  $async.Future<UserEditResponse> userEditRPC($pb.ClientContext ctx, UserEditRequest request) {
-    var emptyResponse = UserEditResponse();
-    return _client.invoke<UserEditResponse>(ctx, 'UserService', 'UserEditRPC', request, emptyResponse);
+  $async.Future<$8.Response> userEditRPC($pb.ClientContext ctx, UserEditRequest request) {
+    var emptyResponse = $8.Response();
+    return _client.invoke<$8.Response>(ctx, 'UserService', 'UserEditRPC', request, emptyResponse);
   }
 }
 

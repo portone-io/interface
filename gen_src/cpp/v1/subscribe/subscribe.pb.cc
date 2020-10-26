@@ -605,8 +605,9 @@ const char descriptor_table_protodef_v1_2fsubscribe_2fsubscribe_2eproto[] PROTOB
   "omerRequest\032/.subscribe.GetPaymentSchedu"
   "leByCustomerResponse\"G\202\323\344\223\002A\"</api/v1/su"
   "bscribe/payments/schedule/customers/{cus"
-  "tomer_uid}:\001*B6Z4github.com/iamport/inte"
-  "rface/gen_src/go/v1/subscribeb\006proto3"
+  "tomer_uid}:\001*BEZ4github.com/iamport/inte"
+  "rface/gen_src/go/v1/subscribe\252\002\014V1.Subsc"
+  "ribeb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v1_2fsubscribe_2fsubscribe_2eproto_deps[2] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
@@ -631,7 +632,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v1_2fsubscribe_2fsubscribe_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v1_2fsubscribe_2fsubscribe_2eproto = {
-  false, false, descriptor_table_protodef_v1_2fsubscribe_2fsubscribe_2eproto, "v1/subscribe/subscribe.proto", 3717,
+  false, false, descriptor_table_protodef_v1_2fsubscribe_2fsubscribe_2eproto, "v1/subscribe/subscribe.proto", 3732,
   &descriptor_table_v1_2fsubscribe_2fsubscribe_2eproto_once, descriptor_table_v1_2fsubscribe_2fsubscribe_2eproto_sccs, descriptor_table_v1_2fsubscribe_2fsubscribe_2eproto_deps, 15, 2,
   schemas, file_default_instances, TableStruct_v1_2fsubscribe_2fsubscribe_2eproto::offsets,
   file_level_metadata_v1_2fsubscribe_2fsubscribe_2eproto, 15, file_level_enum_descriptors_v1_2fsubscribe_2fsubscribe_2eproto, file_level_service_descriptors_v1_2fsubscribe_2fsubscribe_2eproto,

@@ -27370,9 +27370,9 @@ public final class PaymentOuterClass {
       "\001*\022\213\001\n\024PaymentGetPrepareRPC\022!.payment.Pa" +
       "ymentGetPrepareRequest\032\037.payment.Payment" +
       "PrepareResponse\"/\202\323\344\223\002)\022\'/api/v1/payment" +
-      "s/prepare/{merchant_uid}B4Z2github.com/i" +
-      "amport/interface/gen_src/go/v1/paymentb\006" +
-      "proto3"
+      "s/prepare/{merchant_uid}BAZ2github.com/i" +
+      "amport/interface/gen_src/go/v1/payment\252\002" +
+      "\nV1.Paymentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

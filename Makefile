@@ -22,7 +22,7 @@ disable_default:
 	$(info Please specify target.)
 
 .PHONY: all
-all: clean csharp cpp java js php python dart go rust ruby
+all: clean csharp cpp java js php python dart go ruby
 
 .PHONY: csharp
 csharp:

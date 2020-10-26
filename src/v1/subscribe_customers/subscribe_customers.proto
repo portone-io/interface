@@ -6,6 +6,7 @@ import "v1/payment/payment.proto";
 import "v1/subscribe/subscribe.proto";
 
 option go_package = "github.com/iamport/interface/gen_src/go/v1/subscribe_customers";
+option csharp_namespace = "V1.SubscribeCustomers";
 
 service SubscribeCustomersService {
     rpc GetMultipleCustomerBillingKeyRPC(GetMultipleCustomerBillingKeyRequest) returns (GetMultipleCustomerBillingKeyResponse) {

@@ -4,6 +4,7 @@ package card_v2;
 import "google/api/annotations.proto";
 
 option go_package = "github.com/iamport/interface/gen_src/go/v2/payments/card";
+option csharp_namespace = "V2.Payments.Card";
 
 service PaymentCardService {
     rpc CardRegisterRPC(CardRegisterRequest) returns (CardRegisterResponse) {

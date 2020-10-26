@@ -21,13 +21,13 @@ disable_default:
 	$(info Please specify target.)
 
 .PHONY: all
-all: clean csharp cpp java js php python dart go rust
+all: clean csharp cpp java js php python dart go
 
 .PHONY: csharp
 csharp:
 	rm -rf ${GEN_SRC_CSHARP}
 	mkdir -p $(GEN_SRC_CSHARP)
-	protoc --proto_path=$(PROTO_PATH) --csharp_out=$(GEN_SRC_CSHARP) $(SRC)
+	protoc --proto_path=$(PROTO_PATH) --csharp_out=$(GEN_SRC_CSHARP) --csharp_opt=base_namespace $(SRC)
 
 .PHONY: cpp
 cpp:

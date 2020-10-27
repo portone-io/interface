@@ -2,6 +2,7 @@ syntax = "proto3";
 package card_custompay;
 
 import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
 import "custompay/v1/basic/basic.proto";
 import "v1/subscribe/subscribe.proto";
 import "v1/payment/payment.proto";
@@ -16,7 +17,7 @@ service UserService {
         };
     }
 
-    rpc CardAllInfoRPC(CardRequest) returns (CardAllInfoResponse) {
+    rpc CardAllInfoRPC(google.protobuf.Empty) returns (CardAllInfoResponse) {
         option (google.api.http) = {
             get: "/card/info"
         };

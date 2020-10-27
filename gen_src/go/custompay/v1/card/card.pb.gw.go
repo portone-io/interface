@@ -13,6 +13,7 @@ import (
 	"io"
 	"net/http"
 
+	"github.com/golang/protobuf/ptypes/empty"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/utilities"
 	"google.golang.org/grpc"
@@ -65,20 +66,9 @@ func local_request_UserService_CardRegisterRPC_0(ctx context.Context, marshaler 
 
 }
 
-var (
-	filter_UserService_CardAllInfoRPC_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
-)
-
 func request_UserService_CardAllInfoRPC_0(ctx context.Context, marshaler runtime.Marshaler, client UserServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq CardRequest
+	var protoReq empty.Empty
 	var metadata runtime.ServerMetadata
-
-	if err := req.ParseForm(); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_UserService_CardAllInfoRPC_0); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
 
 	msg, err := client.CardAllInfoRPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
@@ -86,15 +76,8 @@ func request_UserService_CardAllInfoRPC_0(ctx context.Context, marshaler runtime
 }
 
 func local_request_UserService_CardAllInfoRPC_0(ctx context.Context, marshaler runtime.Marshaler, server UserServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq CardRequest
+	var protoReq empty.Empty
 	var metadata runtime.ServerMetadata
-
-	if err := req.ParseForm(); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_UserService_CardAllInfoRPC_0); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
 
 	msg, err := server.CardAllInfoRPC(ctx, &protoReq)
 	return msg, metadata, err

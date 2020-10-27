@@ -10,6 +10,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../../google/protobuf/empty.pb.dart' as $10;
 import '../basic/basic.pb.dart' as $8;
 import '../../../v1/subscribe/subscribe.pb.dart' as $4;
 import '../../../v1/payment/payment.pb.dart' as $2;
@@ -690,7 +691,7 @@ class UserServiceApi {
     var emptyResponse = CardRegisterResponse();
     return _client.invoke<CardRegisterResponse>(ctx, 'UserService', 'CardRegisterRPC', request, emptyResponse);
   }
-  $async.Future<CardAllInfoResponse> cardAllInfoRPC($pb.ClientContext ctx, CardRequest request) {
+  $async.Future<CardAllInfoResponse> cardAllInfoRPC($pb.ClientContext ctx, $10.Empty request) {
     var emptyResponse = CardAllInfoResponse();
     return _client.invoke<CardAllInfoResponse>(ctx, 'UserService', 'CardAllInfoRPC', request, emptyResponse);
   }

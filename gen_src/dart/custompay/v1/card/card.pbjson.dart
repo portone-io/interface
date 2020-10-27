@@ -5,6 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
+import '../../../google/protobuf/empty.pbjson.dart' as $10;
 import '../basic/basic.pbjson.dart' as $8;
 import '../../../v1/subscribe/subscribe.pbjson.dart' as $4;
 import '../../../v1/payment/payment.pbjson.dart' as $2;
@@ -119,7 +120,7 @@ const UserServiceBase$json = const {
   '1': 'UserService',
   '2': const [
     const {'1': 'CardRegisterRPC', '2': '.card_custompay.CardRegisterRequest', '3': '.card_custompay.CardRegisterResponse', '4': const {}},
-    const {'1': 'CardAllInfoRPC', '2': '.card_custompay.CardRequest', '3': '.card_custompay.CardAllInfoResponse', '4': const {}},
+    const {'1': 'CardAllInfoRPC', '2': '.google.protobuf.Empty', '3': '.card_custompay.CardAllInfoResponse', '4': const {}},
     const {'1': 'CardMainRPC', '2': '.card_custompay.CardRequest', '3': '.basic_custompay.Response', '4': const {}},
     const {'1': 'CardInfoRPC', '2': '.card_custompay.CardRequest', '3': '.card_custompay.CardResponse', '4': const {}},
     const {'1': 'CardDeleteRPC', '2': '.card_custompay.CardRequest', '3': '.basic_custompay.Response', '4': const {}},
@@ -133,9 +134,10 @@ const UserServiceBase$messageJson = const {
   '.card_custompay.CardRegisterRequest': CardRegisterRequest$json,
   '.card_custompay.CardRegisterResponse': CardRegisterResponse$json,
   '.card_custompay.CardIdx': CardIdx$json,
-  '.card_custompay.CardRequest': CardRequest$json,
+  '.google.protobuf.Empty': $10.Empty$json,
   '.card_custompay.CardAllInfoResponse': CardAllInfoResponse$json,
   '.card_custompay.Card': Card$json,
+  '.card_custompay.CardRequest': CardRequest$json,
   '.basic_custompay.Response': $8.Response$json,
   '.card_custompay.CardResponse': CardResponse$json,
   '.card_custompay.CardEditRequest': CardEditRequest$json,

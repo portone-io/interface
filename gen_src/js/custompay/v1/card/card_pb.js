@@ -14,6 +14,8 @@ var global = Function('return this')();
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
+var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
+goog.object.extend(proto, google_protobuf_empty_pb);
 var custompay_v1_basic_basic_pb = require('../../../custompay/v1/basic/basic_pb.js');
 goog.object.extend(proto, custompay_v1_basic_basic_pb);
 var v1_subscribe_subscribe_pb = require('../../../v1/subscribe/subscribe_pb.js');

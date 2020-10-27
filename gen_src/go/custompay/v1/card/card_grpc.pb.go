@@ -4,6 +4,7 @@ package card
 
 import (
 	context "context"
+	empty "github.com/golang/protobuf/ptypes/empty"
 	basic "github.com/iamport/interface/gen_src/go/custompay/v1/basic"
 	payment "github.com/iamport/interface/gen_src/go/v1/payment"
 	subscribe "github.com/iamport/interface/gen_src/go/v1/subscribe"
@@ -21,7 +22,7 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type UserServiceClient interface {
 	CardRegisterRPC(ctx context.Context, in *CardRegisterRequest, opts ...grpc.CallOption) (*CardRegisterResponse, error)
-	CardAllInfoRPC(ctx context.Context, in *CardRequest, opts ...grpc.CallOption) (*CardAllInfoResponse, error)
+	CardAllInfoRPC(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CardAllInfoResponse, error)
 	CardMainRPC(ctx context.Context, in *CardRequest, opts ...grpc.CallOption) (*basic.Response, error)
 	CardInfoRPC(ctx context.Context, in *CardRequest, opts ...grpc.CallOption) (*CardResponse, error)
 	CardDeleteRPC(ctx context.Context, in *CardRequest, opts ...grpc.CallOption) (*basic.Response, error)
@@ -47,7 +48,7 @@ func (c *userServiceClient) CardRegisterRPC(ctx context.Context, in *CardRegiste
 	return out, nil
 }
 
-func (c *userServiceClient) CardAllInfoRPC(ctx context.Context, in *CardRequest, opts ...grpc.CallOption) (*CardAllInfoResponse, error) {
+func (c *userServiceClient) CardAllInfoRPC(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CardAllInfoResponse, error) {
 	out := new(CardAllInfoResponse)
 	err := c.cc.Invoke(ctx, "/card_custompay.UserService/CardAllInfoRPC", in, out, opts...)
 	if err != nil {
@@ -115,7 +116,7 @@ func (c *userServiceClient) CardCancelRPC(ctx context.Context, in *CardCancelReq
 // for forward compatibility
 type UserServiceServer interface {
 	CardRegisterRPC(context.Context, *CardRegisterRequest) (*CardRegisterResponse, error)
-	CardAllInfoRPC(context.Context, *CardRequest) (*CardAllInfoResponse, error)
+	CardAllInfoRPC(context.Context, *empty.Empty) (*CardAllInfoResponse, error)
 	CardMainRPC(context.Context, *CardRequest) (*basic.Response, error)
 	CardInfoRPC(context.Context, *CardRequest) (*CardResponse, error)
 	CardDeleteRPC(context.Context, *CardRequest) (*basic.Response, error)
@@ -132,7 +133,7 @@ type UnimplementedUserServiceServer struct {
 func (UnimplementedUserServiceServer) CardRegisterRPC(context.Context, *CardRegisterRequest) (*CardRegisterResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CardRegisterRPC not implemented")
 }
-func (UnimplementedUserServiceServer) CardAllInfoRPC(context.Context, *CardRequest) (*CardAllInfoResponse, error) {
+func (UnimplementedUserServiceServer) CardAllInfoRPC(context.Context, *empty.Empty) (*CardAllInfoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CardAllInfoRPC not implemented")
 }
 func (UnimplementedUserServiceServer) CardMainRPC(context.Context, *CardRequest) (*basic.Response, error) {
@@ -185,7 +186,7 @@ func _UserService_CardRegisterRPC_Handler(srv interface{}, ctx context.Context, 
 }
 
 func _UserService_CardAllInfoRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CardRequest)
+	in := new(empty.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -197,7 +198,7 @@ func _UserService_CardAllInfoRPC_Handler(srv interface{}, ctx context.Context, d
 		FullMethod: "/card_custompay.UserService/CardAllInfoRPC",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServiceServer).CardAllInfoRPC(ctx, req.(*CardRequest))
+		return srv.(UserServiceServer).CardAllInfoRPC(ctx, req.(*empty.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }

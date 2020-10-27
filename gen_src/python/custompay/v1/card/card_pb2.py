@@ -12,6 +12,7 @@ _sym_db = _symbol_database.Default()
 
 
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from custompay.v1.basic import basic_pb2 as custompay_dot_v1_dot_basic_dot_basic__pb2
 from v1.subscribe import subscribe_pb2 as v1_dot_subscribe_dot_subscribe__pb2
 from v1.payment import payment_pb2 as v1_dot_payment_dot_payment__pb2
@@ -23,9 +24,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z9github.com/iamport/interface/gen_src/go/custompay/v1/card\252\002\021Custompay.V1.Card',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1c\x63ustompay/v1/card/card.proto\x12\x0e\x63\x61rd_custompay\x1a\x1cgoogle/api/annotations.proto\x1a\x1e\x63ustompay/v1/basic/basic.proto\x1a\x1cv1/subscribe/subscribe.proto\x1a\x18v1/payment/payment.proto\"\x16\n\x07\x43\x61rdIdx\x12\x0b\n\x03idx\x18\x01 \x01(\x05\"Z\n\x04\x43\x61rd\x12\x0b\n\x03idx\x18\x01 \x01(\x05\x12\x10\n\x08\x63\x61rd_uid\x18\x02 \x01(\t\x12\x12\n\nbin_number\x18\x03 \x01(\t\x12\x10\n\x08provider\x18\x04 \x01(\t\x12\r\n\x05\x61lias\x18\x05 \x01(\t\"\x82\x02\n\x13\x43\x61rdRegisterRequest\x12\x10\n\x08\x63\x61rd_idx\x18\x01 \x01(\t\x12\r\n\x05\x61lias\x18\x02 \x01(\t\x12\x14\n\x0c\x63ustomer_uid\x18\x03 \x01(\t\x12\n\n\x02pg\x18\x04 \x01(\t\x12\x0e\n\x06\x65xpiry\x18\x05 \x01(\t\x12\r\n\x05\x62irth\x18\x06 \x01(\t\x12\x12\n\npwd_2digit\x18\x07 \x01(\t\x12\x15\n\rcustomer_name\x18\x08 \x01(\t\x12\x14\n\x0c\x63ustomer_tel\x18\t \x01(\t\x12\x16\n\x0e\x63ustomer_email\x18\n \x01(\t\x12\x15\n\rcustomer_addr\x18\x0b \x01(\t\x12\x19\n\x11\x63ustomer_postcode\x18\x0c \x01(\t\"`\n\x14\x43\x61rdRegisterResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12)\n\x08response\x18\x03 \x01(\x0b\x32\x17.card_custompay.CardIdx\"U\n\x0c\x43\x61rdResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12&\n\x08response\x18\x03 \x01(\x0b\x32\x14.card_custompay.Card\"\x1f\n\x0b\x43\x61rdRequest\x12\x10\n\x08\x63\x61rd_idx\x18\x01 \x01(\x05\"\\\n\x13\x43\x61rdAllInfoResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12&\n\x08response\x18\x03 \x03(\x0b\x32\x14.card_custompay.Card\"2\n\x0f\x43\x61rdEditRequest\x12\x10\n\x08\x63\x61rd_idx\x18\x01 \x01(\x05\x12\r\n\x05\x61lias\x18\x02 \x01(\t\"\x84\x02\n\x0e\x43\x61rdPayRequest\x12\x10\n\x08\x63\x61rd_idx\x18\x01 \x01(\x05\x12\x10\n\x08\x63\x61rd_uid\x18\x02 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x03 \x01(\t\x12\x0e\n\x06\x61mount\x18\x04 \x01(\t\x12\x18\n\x10\x64uty_free_amount\x18\x05 \x01(\t\x12\x12\n\norder_name\x18\x06 \x01(\t\x12\x18\n\x10\x63\x61rd_installment\x18\x07 \x01(\x05\x12!\n\x19interest_free_by_merchant\x18\x08 \x01(\x08\x12\x13\n\x0b\x63ustom_data\x18\t \x01(\t\x12\x14\n\x0c\x63\x61llback_url\x18\n \x01(\t\x12\x12\n\nhashed_pin\x18\x0b \x01(\t\"t\n\x11\x43\x61rdCancelRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x03 \x01(\t\x12\x18\n\x10\x64uty_free_amount\x18\x04 \x01(\t\x12\x0e\n\x06reason\x18\x05 \x01(\t2\xed\x06\n\x0bUserService\x12n\n\x0f\x43\x61rdRegisterRPC\x12#.card_custompay.CardRegisterRequest\x1a$.card_custompay.CardRegisterResponse\"\x10\x82\xd3\xe4\x93\x02\n\"\x05/card:\x01*\x12\x66\n\x0e\x43\x61rdAllInfoRPC\x12\x1b.card_custompay.CardRequest\x1a#.card_custompay.CardAllInfoResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\x12\n/card/info\x12\x61\n\x0b\x43\x61rdMainRPC\x12\x1b.card_custompay.CardRequest\x1a\x19.basic_custompay.Response\"\x1a\x82\xd3\xe4\x93\x02\x14\"\x0f/card/info/main:\x01*\x12g\n\x0b\x43\x61rdInfoRPC\x12\x1b.card_custompay.CardRequest\x1a\x1c.card_custompay.CardResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/card/info/{card_idx}\x12\x66\n\rCardDeleteRPC\x12\x1b.card_custompay.CardRequest\x1a\x19.basic_custompay.Response\"\x1d\x82\xd3\xe4\x93\x02\x17*\x15/card/info/{card_idx}\x12k\n\x0b\x43\x61rdEditRPC\x12\x1f.card_custompay.CardEditRequest\x1a\x19.basic_custompay.Response\" \x82\xd3\xe4\x93\x02\x1a\x32\x15/card/info/{card_idx}:\x01*\x12n\n\nCardPayRPC\x12\x1e.card_custompay.CardPayRequest\x1a\x1f.subscribe.AgainPaymentResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\"\x14/card/pay/{card_idx}:\x01*\x12u\n\rCardCancelRPC\x12!.card_custompay.CardCancelRequest\x1a\x1e.payment.PaymentCancelResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x16/card/cancel/{imp_uid}:\x01*BOZ9github.com/iamport/interface/gen_src/go/custompay/v1/card\xaa\x02\x11\x43ustompay.V1.Cardb\x06proto3'
+  serialized_pb=b'\n\x1c\x63ustompay/v1/card/card.proto\x12\x0e\x63\x61rd_custompay\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1e\x63ustompay/v1/basic/basic.proto\x1a\x1cv1/subscribe/subscribe.proto\x1a\x18v1/payment/payment.proto\"\x16\n\x07\x43\x61rdIdx\x12\x0b\n\x03idx\x18\x01 \x01(\x05\"Z\n\x04\x43\x61rd\x12\x0b\n\x03idx\x18\x01 \x01(\x05\x12\x10\n\x08\x63\x61rd_uid\x18\x02 \x01(\t\x12\x12\n\nbin_number\x18\x03 \x01(\t\x12\x10\n\x08provider\x18\x04 \x01(\t\x12\r\n\x05\x61lias\x18\x05 \x01(\t\"\x82\x02\n\x13\x43\x61rdRegisterRequest\x12\x10\n\x08\x63\x61rd_idx\x18\x01 \x01(\t\x12\r\n\x05\x61lias\x18\x02 \x01(\t\x12\x14\n\x0c\x63ustomer_uid\x18\x03 \x01(\t\x12\n\n\x02pg\x18\x04 \x01(\t\x12\x0e\n\x06\x65xpiry\x18\x05 \x01(\t\x12\r\n\x05\x62irth\x18\x06 \x01(\t\x12\x12\n\npwd_2digit\x18\x07 \x01(\t\x12\x15\n\rcustomer_name\x18\x08 \x01(\t\x12\x14\n\x0c\x63ustomer_tel\x18\t \x01(\t\x12\x16\n\x0e\x63ustomer_email\x18\n \x01(\t\x12\x15\n\rcustomer_addr\x18\x0b \x01(\t\x12\x19\n\x11\x63ustomer_postcode\x18\x0c \x01(\t\"`\n\x14\x43\x61rdRegisterResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12)\n\x08response\x18\x03 \x01(\x0b\x32\x17.card_custompay.CardIdx\"U\n\x0c\x43\x61rdResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12&\n\x08response\x18\x03 \x01(\x0b\x32\x14.card_custompay.Card\"\x1f\n\x0b\x43\x61rdRequest\x12\x10\n\x08\x63\x61rd_idx\x18\x01 \x01(\x05\"\\\n\x13\x43\x61rdAllInfoResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12&\n\x08response\x18\x03 \x03(\x0b\x32\x14.card_custompay.Card\"2\n\x0f\x43\x61rdEditRequest\x12\x10\n\x08\x63\x61rd_idx\x18\x01 \x01(\x05\x12\r\n\x05\x61lias\x18\x02 \x01(\t\"\x84\x02\n\x0e\x43\x61rdPayRequest\x12\x10\n\x08\x63\x61rd_idx\x18\x01 \x01(\x05\x12\x10\n\x08\x63\x61rd_uid\x18\x02 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x03 \x01(\t\x12\x0e\n\x06\x61mount\x18\x04 \x01(\t\x12\x18\n\x10\x64uty_free_amount\x18\x05 \x01(\t\x12\x12\n\norder_name\x18\x06 \x01(\t\x12\x18\n\x10\x63\x61rd_installment\x18\x07 \x01(\x05\x12!\n\x19interest_free_by_merchant\x18\x08 \x01(\x08\x12\x13\n\x0b\x63ustom_data\x18\t \x01(\t\x12\x14\n\x0c\x63\x61llback_url\x18\n \x01(\t\x12\x12\n\nhashed_pin\x18\x0b \x01(\t\"t\n\x11\x43\x61rdCancelRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x03 \x01(\t\x12\x18\n\x10\x64uty_free_amount\x18\x04 \x01(\t\x12\x0e\n\x06reason\x18\x05 \x01(\t2\xe8\x06\n\x0bUserService\x12n\n\x0f\x43\x61rdRegisterRPC\x12#.card_custompay.CardRegisterRequest\x1a$.card_custompay.CardRegisterResponse\"\x10\x82\xd3\xe4\x93\x02\n\"\x05/card:\x01*\x12\x61\n\x0e\x43\x61rdAllInfoRPC\x12\x16.google.protobuf.Empty\x1a#.card_custompay.CardAllInfoResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\x12\n/card/info\x12\x61\n\x0b\x43\x61rdMainRPC\x12\x1b.card_custompay.CardRequest\x1a\x19.basic_custompay.Response\"\x1a\x82\xd3\xe4\x93\x02\x14\"\x0f/card/info/main:\x01*\x12g\n\x0b\x43\x61rdInfoRPC\x12\x1b.card_custompay.CardRequest\x1a\x1c.card_custompay.CardResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/card/info/{card_idx}\x12\x66\n\rCardDeleteRPC\x12\x1b.card_custompay.CardRequest\x1a\x19.basic_custompay.Response\"\x1d\x82\xd3\xe4\x93\x02\x17*\x15/card/info/{card_idx}\x12k\n\x0b\x43\x61rdEditRPC\x12\x1f.card_custompay.CardEditRequest\x1a\x19.basic_custompay.Response\" \x82\xd3\xe4\x93\x02\x1a\x32\x15/card/info/{card_idx}:\x01*\x12n\n\nCardPayRPC\x12\x1e.card_custompay.CardPayRequest\x1a\x1f.subscribe.AgainPaymentResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\"\x14/card/pay/{card_idx}:\x01*\x12u\n\rCardCancelRPC\x12!.card_custompay.CardCancelRequest\x1a\x1e.payment.PaymentCancelResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x16/card/cancel/{imp_uid}:\x01*BOZ9github.com/iamport/interface/gen_src/go/custompay/v1/card\xaa\x02\x11\x43ustompay.V1.Cardb\x06proto3'
   ,
-  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,custompay_dot_v1_dot_basic_dot_basic__pb2.DESCRIPTOR,v1_dot_subscribe_dot_subscribe__pb2.DESCRIPTOR,v1_dot_payment_dot_payment__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,custompay_dot_v1_dot_basic_dot_basic__pb2.DESCRIPTOR,v1_dot_subscribe_dot_subscribe__pb2.DESCRIPTOR,v1_dot_payment_dot_payment__pb2.DESCRIPTOR,])
 
 
 
@@ -57,8 +58,8 @@ _CARDIDX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=166,
-  serialized_end=188,
+  serialized_start=195,
+  serialized_end=217,
 )
 
 
@@ -117,8 +118,8 @@ _CARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=190,
-  serialized_end=280,
+  serialized_start=219,
+  serialized_end=309,
 )
 
 
@@ -226,8 +227,8 @@ _CARDREGISTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=283,
-  serialized_end=541,
+  serialized_start=312,
+  serialized_end=570,
 )
 
 
@@ -272,8 +273,8 @@ _CARDREGISTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=543,
-  serialized_end=639,
+  serialized_start=572,
+  serialized_end=668,
 )
 
 
@@ -318,8 +319,8 @@ _CARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=641,
-  serialized_end=726,
+  serialized_start=670,
+  serialized_end=755,
 )
 
 
@@ -350,8 +351,8 @@ _CARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=728,
-  serialized_end=759,
+  serialized_start=757,
+  serialized_end=788,
 )
 
 
@@ -396,8 +397,8 @@ _CARDALLINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=761,
-  serialized_end=853,
+  serialized_start=790,
+  serialized_end=882,
 )
 
 
@@ -435,8 +436,8 @@ _CARDEDITREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=855,
-  serialized_end=905,
+  serialized_start=884,
+  serialized_end=934,
 )
 
 
@@ -537,8 +538,8 @@ _CARDPAYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=908,
-  serialized_end=1168,
+  serialized_start=937,
+  serialized_end=1197,
 )
 
 
@@ -597,8 +598,8 @@ _CARDCANCELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1170,
-  serialized_end=1286,
+  serialized_start=1199,
+  serialized_end=1315,
 )
 
 _CARDREGISTERRESPONSE.fields_by_name['response'].message_type = _CARDIDX
@@ -696,8 +697,8 @@ _USERSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1289,
-  serialized_end=2166,
+  serialized_start=1318,
+  serialized_end=2190,
   methods=[
   _descriptor.MethodDescriptor(
     name='CardRegisterRPC',
@@ -714,7 +715,7 @@ _USERSERVICE = _descriptor.ServiceDescriptor(
     full_name='card_custompay.UserService.CardAllInfoRPC',
     index=1,
     containing_service=None,
-    input_type=_CARDREQUEST,
+    input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
     output_type=_CARDALLINFORESPONSE,
     serialized_options=b'\202\323\344\223\002\014\022\n/card/info',
     create_key=_descriptor._internal_create_key,

@@ -3,6 +3,7 @@
 
 import * as jspb from "google-protobuf";
 import * as google_api_annotations_pb from "../../../google/api/annotations_pb";
+import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty_pb";
 import * as custompay_v1_basic_basic_pb from "../../../custompay/v1/basic/basic_pb";
 import * as v1_subscribe_subscribe_pb from "../../../v1/subscribe/subscribe_pb";
 import * as v1_payment_payment_pb from "../../../v1/payment/payment_pb";

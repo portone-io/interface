@@ -251,9 +251,9 @@ class AuthenticateServiceApi {
   $pb.RpcClient _client;
   AuthenticateServiceApi(this._client);
 
-  $async.Future<TokenResponse> tokenRPC($pb.ClientContext ctx, TokenRequest request) {
+  $async.Future<TokenResponse> tokenV2RPC($pb.ClientContext ctx, TokenRequest request) {
     var emptyResponse = TokenResponse();
-    return _client.invoke<TokenResponse>(ctx, 'AuthenticateService', 'TokenRPC', request, emptyResponse);
+    return _client.invoke<TokenResponse>(ctx, 'AuthenticateService', 'TokenV2RPC', request, emptyResponse);
   }
   $async.Future<PubKeyRegisterResponse> registerPubKeyRPC($pb.ClientContext ctx, PubKeyRegisterRequest request) {
     var emptyResponse = PubKeyRegisterResponse();

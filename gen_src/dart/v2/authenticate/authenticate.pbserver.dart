@@ -16,12 +16,12 @@ import 'authenticate.pbjson.dart';
 export 'authenticate.pb.dart';
 
 abstract class AuthenticateServiceBase extends $pb.GeneratedService {
-  $async.Future<$6.TokenResponse> tokenRPC($pb.ServerContext ctx, $6.TokenRequest request);
+  $async.Future<$6.TokenResponse> tokenV2RPC($pb.ServerContext ctx, $6.TokenRequest request);
   $async.Future<$6.PubKeyRegisterResponse> registerPubKeyRPC($pb.ServerContext ctx, $6.PubKeyRegisterRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'TokenRPC': return $6.TokenRequest();
+      case 'TokenV2RPC': return $6.TokenRequest();
       case 'RegisterPubKeyRPC': return $6.PubKeyRegisterRequest();
       default: throw $core.ArgumentError('Unknown method: $method');
     }
@@ -29,7 +29,7 @@ abstract class AuthenticateServiceBase extends $pb.GeneratedService {
 
   $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'TokenRPC': return this.tokenRPC(ctx, request);
+      case 'TokenV2RPC': return this.tokenV2RPC(ctx, request);
       case 'RegisterPubKeyRPC': return this.registerPubKeyRPC(ctx, request);
       default: throw $core.ArgumentError('Unknown method: $method');
     }

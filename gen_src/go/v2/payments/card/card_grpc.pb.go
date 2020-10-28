@@ -17,11 +17,11 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type PaymentCardServiceClient interface {
-	CardRegisterRPC(ctx context.Context, in *CardRegisterRequest, opts ...grpc.CallOption) (*CardRegisterResponse, error)
-	GetCardInfoRPC(ctx context.Context, in *GetCardInfoRequest, opts ...grpc.CallOption) (*GetCardInfoResponse, error)
-	DeleteCardInfoRPC(ctx context.Context, in *DeleteCardInfoRequest, opts ...grpc.CallOption) (*DeleteCardInfoResponse, error)
-	PayByRegiseteredCardRPC(ctx context.Context, in *PayByRegisteredCardRequest, opts ...grpc.CallOption) (*PayByRegisteredCardResponse, error)
-	CancelRegiseteredCardRPC(ctx context.Context, in *CancelCardPaymentRequest, opts ...grpc.CallOption) (*CancelCardPaymenttResponse, error)
+	CardRegisterV2RPC(ctx context.Context, in *CardRegisterRequest, opts ...grpc.CallOption) (*CardRegisterResponse, error)
+	GetCardInfoV2RPC(ctx context.Context, in *GetCardInfoRequest, opts ...grpc.CallOption) (*GetCardInfoResponse, error)
+	DeleteCardInfoV2RPC(ctx context.Context, in *DeleteCardInfoRequest, opts ...grpc.CallOption) (*DeleteCardInfoResponse, error)
+	PayByRegiseteredCardV2RPC(ctx context.Context, in *PayByRegisteredCardRequest, opts ...grpc.CallOption) (*PayByRegisteredCardResponse, error)
+	CancelRegiseteredCardV2RPC(ctx context.Context, in *CancelCardPaymentRequest, opts ...grpc.CallOption) (*CancelCardPaymenttResponse, error)
 }
 
 type paymentCardServiceClient struct {
@@ -32,45 +32,45 @@ func NewPaymentCardServiceClient(cc grpc.ClientConnInterface) PaymentCardService
 	return &paymentCardServiceClient{cc}
 }
 
-func (c *paymentCardServiceClient) CardRegisterRPC(ctx context.Context, in *CardRegisterRequest, opts ...grpc.CallOption) (*CardRegisterResponse, error) {
+func (c *paymentCardServiceClient) CardRegisterV2RPC(ctx context.Context, in *CardRegisterRequest, opts ...grpc.CallOption) (*CardRegisterResponse, error) {
 	out := new(CardRegisterResponse)
-	err := c.cc.Invoke(ctx, "/card_v2.PaymentCardService/CardRegisterRPC", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/card_v2.PaymentCardService/CardRegisterV2RPC", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *paymentCardServiceClient) GetCardInfoRPC(ctx context.Context, in *GetCardInfoRequest, opts ...grpc.CallOption) (*GetCardInfoResponse, error) {
+func (c *paymentCardServiceClient) GetCardInfoV2RPC(ctx context.Context, in *GetCardInfoRequest, opts ...grpc.CallOption) (*GetCardInfoResponse, error) {
 	out := new(GetCardInfoResponse)
-	err := c.cc.Invoke(ctx, "/card_v2.PaymentCardService/GetCardInfoRPC", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/card_v2.PaymentCardService/GetCardInfoV2RPC", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *paymentCardServiceClient) DeleteCardInfoRPC(ctx context.Context, in *DeleteCardInfoRequest, opts ...grpc.CallOption) (*DeleteCardInfoResponse, error) {
+func (c *paymentCardServiceClient) DeleteCardInfoV2RPC(ctx context.Context, in *DeleteCardInfoRequest, opts ...grpc.CallOption) (*DeleteCardInfoResponse, error) {
 	out := new(DeleteCardInfoResponse)
-	err := c.cc.Invoke(ctx, "/card_v2.PaymentCardService/DeleteCardInfoRPC", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/card_v2.PaymentCardService/DeleteCardInfoV2RPC", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *paymentCardServiceClient) PayByRegiseteredCardRPC(ctx context.Context, in *PayByRegisteredCardRequest, opts ...grpc.CallOption) (*PayByRegisteredCardResponse, error) {
+func (c *paymentCardServiceClient) PayByRegiseteredCardV2RPC(ctx context.Context, in *PayByRegisteredCardRequest, opts ...grpc.CallOption) (*PayByRegisteredCardResponse, error) {
 	out := new(PayByRegisteredCardResponse)
-	err := c.cc.Invoke(ctx, "/card_v2.PaymentCardService/PayByRegiseteredCardRPC", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/card_v2.PaymentCardService/PayByRegiseteredCardV2RPC", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *paymentCardServiceClient) CancelRegiseteredCardRPC(ctx context.Context, in *CancelCardPaymentRequest, opts ...grpc.CallOption) (*CancelCardPaymenttResponse, error) {
+func (c *paymentCardServiceClient) CancelRegiseteredCardV2RPC(ctx context.Context, in *CancelCardPaymentRequest, opts ...grpc.CallOption) (*CancelCardPaymenttResponse, error) {
 	out := new(CancelCardPaymenttResponse)
-	err := c.cc.Invoke(ctx, "/card_v2.PaymentCardService/CancelRegiseteredCardRPC", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/card_v2.PaymentCardService/CancelRegiseteredCardV2RPC", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -81,11 +81,11 @@ func (c *paymentCardServiceClient) CancelRegiseteredCardRPC(ctx context.Context,
 // All implementations must embed UnimplementedPaymentCardServiceServer
 // for forward compatibility
 type PaymentCardServiceServer interface {
-	CardRegisterRPC(context.Context, *CardRegisterRequest) (*CardRegisterResponse, error)
-	GetCardInfoRPC(context.Context, *GetCardInfoRequest) (*GetCardInfoResponse, error)
-	DeleteCardInfoRPC(context.Context, *DeleteCardInfoRequest) (*DeleteCardInfoResponse, error)
-	PayByRegiseteredCardRPC(context.Context, *PayByRegisteredCardRequest) (*PayByRegisteredCardResponse, error)
-	CancelRegiseteredCardRPC(context.Context, *CancelCardPaymentRequest) (*CancelCardPaymenttResponse, error)
+	CardRegisterV2RPC(context.Context, *CardRegisterRequest) (*CardRegisterResponse, error)
+	GetCardInfoV2RPC(context.Context, *GetCardInfoRequest) (*GetCardInfoResponse, error)
+	DeleteCardInfoV2RPC(context.Context, *DeleteCardInfoRequest) (*DeleteCardInfoResponse, error)
+	PayByRegiseteredCardV2RPC(context.Context, *PayByRegisteredCardRequest) (*PayByRegisteredCardResponse, error)
+	CancelRegiseteredCardV2RPC(context.Context, *CancelCardPaymentRequest) (*CancelCardPaymenttResponse, error)
 	mustEmbedUnimplementedPaymentCardServiceServer()
 }
 
@@ -93,20 +93,20 @@ type PaymentCardServiceServer interface {
 type UnimplementedPaymentCardServiceServer struct {
 }
 
-func (UnimplementedPaymentCardServiceServer) CardRegisterRPC(context.Context, *CardRegisterRequest) (*CardRegisterResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CardRegisterRPC not implemented")
+func (UnimplementedPaymentCardServiceServer) CardRegisterV2RPC(context.Context, *CardRegisterRequest) (*CardRegisterResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CardRegisterV2RPC not implemented")
 }
-func (UnimplementedPaymentCardServiceServer) GetCardInfoRPC(context.Context, *GetCardInfoRequest) (*GetCardInfoResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetCardInfoRPC not implemented")
+func (UnimplementedPaymentCardServiceServer) GetCardInfoV2RPC(context.Context, *GetCardInfoRequest) (*GetCardInfoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetCardInfoV2RPC not implemented")
 }
-func (UnimplementedPaymentCardServiceServer) DeleteCardInfoRPC(context.Context, *DeleteCardInfoRequest) (*DeleteCardInfoResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method DeleteCardInfoRPC not implemented")
+func (UnimplementedPaymentCardServiceServer) DeleteCardInfoV2RPC(context.Context, *DeleteCardInfoRequest) (*DeleteCardInfoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteCardInfoV2RPC not implemented")
 }
-func (UnimplementedPaymentCardServiceServer) PayByRegiseteredCardRPC(context.Context, *PayByRegisteredCardRequest) (*PayByRegisteredCardResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method PayByRegiseteredCardRPC not implemented")
+func (UnimplementedPaymentCardServiceServer) PayByRegiseteredCardV2RPC(context.Context, *PayByRegisteredCardRequest) (*PayByRegisteredCardResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PayByRegiseteredCardV2RPC not implemented")
 }
-func (UnimplementedPaymentCardServiceServer) CancelRegiseteredCardRPC(context.Context, *CancelCardPaymentRequest) (*CancelCardPaymenttResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CancelRegiseteredCardRPC not implemented")
+func (UnimplementedPaymentCardServiceServer) CancelRegiseteredCardV2RPC(context.Context, *CancelCardPaymentRequest) (*CancelCardPaymenttResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CancelRegiseteredCardV2RPC not implemented")
 }
 func (UnimplementedPaymentCardServiceServer) mustEmbedUnimplementedPaymentCardServiceServer() {}
 
@@ -117,96 +117,96 @@ type UnsafePaymentCardServiceServer interface {
 	mustEmbedUnimplementedPaymentCardServiceServer()
 }
 
-func RegisterPaymentCardServiceServer(s grpc.ServiceRegistrar, srv PaymentCardServiceServer) {
+func RegisterPaymentCardServiceServer(s *grpc.Server, srv PaymentCardServiceServer) {
 	s.RegisterService(&_PaymentCardService_serviceDesc, srv)
 }
 
-func _PaymentCardService_CardRegisterRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PaymentCardService_CardRegisterV2RPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CardRegisterRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PaymentCardServiceServer).CardRegisterRPC(ctx, in)
+		return srv.(PaymentCardServiceServer).CardRegisterV2RPC(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/card_v2.PaymentCardService/CardRegisterRPC",
+		FullMethod: "/card_v2.PaymentCardService/CardRegisterV2RPC",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PaymentCardServiceServer).CardRegisterRPC(ctx, req.(*CardRegisterRequest))
+		return srv.(PaymentCardServiceServer).CardRegisterV2RPC(ctx, req.(*CardRegisterRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PaymentCardService_GetCardInfoRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PaymentCardService_GetCardInfoV2RPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetCardInfoRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PaymentCardServiceServer).GetCardInfoRPC(ctx, in)
+		return srv.(PaymentCardServiceServer).GetCardInfoV2RPC(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/card_v2.PaymentCardService/GetCardInfoRPC",
+		FullMethod: "/card_v2.PaymentCardService/GetCardInfoV2RPC",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PaymentCardServiceServer).GetCardInfoRPC(ctx, req.(*GetCardInfoRequest))
+		return srv.(PaymentCardServiceServer).GetCardInfoV2RPC(ctx, req.(*GetCardInfoRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PaymentCardService_DeleteCardInfoRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PaymentCardService_DeleteCardInfoV2RPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteCardInfoRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PaymentCardServiceServer).DeleteCardInfoRPC(ctx, in)
+		return srv.(PaymentCardServiceServer).DeleteCardInfoV2RPC(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/card_v2.PaymentCardService/DeleteCardInfoRPC",
+		FullMethod: "/card_v2.PaymentCardService/DeleteCardInfoV2RPC",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PaymentCardServiceServer).DeleteCardInfoRPC(ctx, req.(*DeleteCardInfoRequest))
+		return srv.(PaymentCardServiceServer).DeleteCardInfoV2RPC(ctx, req.(*DeleteCardInfoRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PaymentCardService_PayByRegiseteredCardRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PaymentCardService_PayByRegiseteredCardV2RPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PayByRegisteredCardRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PaymentCardServiceServer).PayByRegiseteredCardRPC(ctx, in)
+		return srv.(PaymentCardServiceServer).PayByRegiseteredCardV2RPC(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/card_v2.PaymentCardService/PayByRegiseteredCardRPC",
+		FullMethod: "/card_v2.PaymentCardService/PayByRegiseteredCardV2RPC",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PaymentCardServiceServer).PayByRegiseteredCardRPC(ctx, req.(*PayByRegisteredCardRequest))
+		return srv.(PaymentCardServiceServer).PayByRegiseteredCardV2RPC(ctx, req.(*PayByRegisteredCardRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PaymentCardService_CancelRegiseteredCardRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PaymentCardService_CancelRegiseteredCardV2RPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CancelCardPaymentRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PaymentCardServiceServer).CancelRegiseteredCardRPC(ctx, in)
+		return srv.(PaymentCardServiceServer).CancelRegiseteredCardV2RPC(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/card_v2.PaymentCardService/CancelRegiseteredCardRPC",
+		FullMethod: "/card_v2.PaymentCardService/CancelRegiseteredCardV2RPC",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PaymentCardServiceServer).CancelRegiseteredCardRPC(ctx, req.(*CancelCardPaymentRequest))
+		return srv.(PaymentCardServiceServer).CancelRegiseteredCardV2RPC(ctx, req.(*CancelCardPaymentRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -216,24 +216,24 @@ var _PaymentCardService_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*PaymentCardServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "CardRegisterRPC",
-			Handler:    _PaymentCardService_CardRegisterRPC_Handler,
+			MethodName: "CardRegisterV2RPC",
+			Handler:    _PaymentCardService_CardRegisterV2RPC_Handler,
 		},
 		{
-			MethodName: "GetCardInfoRPC",
-			Handler:    _PaymentCardService_GetCardInfoRPC_Handler,
+			MethodName: "GetCardInfoV2RPC",
+			Handler:    _PaymentCardService_GetCardInfoV2RPC_Handler,
 		},
 		{
-			MethodName: "DeleteCardInfoRPC",
-			Handler:    _PaymentCardService_DeleteCardInfoRPC_Handler,
+			MethodName: "DeleteCardInfoV2RPC",
+			Handler:    _PaymentCardService_DeleteCardInfoV2RPC_Handler,
 		},
 		{
-			MethodName: "PayByRegiseteredCardRPC",
-			Handler:    _PaymentCardService_PayByRegiseteredCardRPC_Handler,
+			MethodName: "PayByRegiseteredCardV2RPC",
+			Handler:    _PaymentCardService_PayByRegiseteredCardV2RPC_Handler,
 		},
 		{
-			MethodName: "CancelRegiseteredCardRPC",
-			Handler:    _PaymentCardService_CancelRegiseteredCardRPC_Handler,
+			MethodName: "CancelRegiseteredCardV2RPC",
+			Handler:    _PaymentCardService_CancelRegiseteredCardV2RPC_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

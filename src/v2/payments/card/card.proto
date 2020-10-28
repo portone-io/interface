@@ -7,32 +7,32 @@ option go_package = "github.com/iamport/interface/gen_src/go/v2/payments/card";
 option csharp_namespace = "V2.Payments.Card";
 
 service PaymentCardService {
-    rpc CardRegisterRPC(CardRegisterRequest) returns (CardRegisterResponse) {
+    rpc CardRegisterV2RPC(CardRegisterRequest) returns (CardRegisterResponse) {
         option (google.api.http) = {
             post: "/api/v2/payments/card/info"
             body: "*"
         };
     }
 
-    rpc GetCardInfoRPC(GetCardInfoRequest) returns (GetCardInfoResponse) {
+    rpc GetCardInfoV2RPC(GetCardInfoRequest) returns (GetCardInfoResponse) {
         option (google.api.http) = {
             get: "/api/v2/payments/card/info/{card_uid}"
         };
     }
 
-    rpc DeleteCardInfoRPC(DeleteCardInfoRequest) returns (DeleteCardInfoResponse) {
+    rpc DeleteCardInfoV2RPC(DeleteCardInfoRequest) returns (DeleteCardInfoResponse) {
         option (google.api.http) = {
             delete: "/api/v2/payments/card/info/{card_uid}"
         };
     }
 
-    rpc PayByRegiseteredCardRPC(PayByRegisteredCardRequest) returns (PayByRegisteredCardResponse) {
+    rpc PayByRegiseteredCardV2RPC(PayByRegisteredCardRequest) returns (PayByRegisteredCardResponse) {
         option (google.api.http) = {
             post: "/api/v2/payments/card/pay/registered"
         };
     }
 
-    rpc CancelRegiseteredCardRPC(CancelCardPaymentRequest) returns (CancelCardPaymenttResponse) {
+    rpc CancelRegiseteredCardV2RPC(CancelCardPaymentRequest) returns (CancelCardPaymenttResponse) {
         option (google.api.http) = {
             post: "/api/v2/payments/card/cancel/registered/{imp_uid}"
         };

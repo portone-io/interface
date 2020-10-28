@@ -173,7 +173,7 @@ type UnsafePaymentServiceServer interface {
 	mustEmbedUnimplementedPaymentServiceServer()
 }
 
-func RegisterPaymentServiceServer(s grpc.ServiceRegistrar, srv PaymentServiceServer) {
+func RegisterPaymentServiceServer(s *grpc.Server, srv PaymentServiceServer) {
 	s.RegisterService(&_PaymentService_serviceDesc, srv)
 }
 

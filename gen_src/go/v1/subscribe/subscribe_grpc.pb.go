@@ -131,7 +131,7 @@ type UnsafeSubscribeServiceServer interface {
 	mustEmbedUnimplementedSubscribeServiceServer()
 }
 
-func RegisterSubscribeServiceServer(s grpc.ServiceRegistrar, srv SubscribeServiceServer) {
+func RegisterSubscribeServiceServer(s *grpc.Server, srv SubscribeServiceServer) {
 	s.RegisterService(&_SubscribeService_serviceDesc, srv)
 }
 

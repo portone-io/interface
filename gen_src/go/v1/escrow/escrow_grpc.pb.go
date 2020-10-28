@@ -75,7 +75,7 @@ type UnsafeEscrowServiceServer interface {
 	mustEmbedUnimplementedEscrowServiceServer()
 }
 
-func RegisterEscrowServiceServer(s grpc.ServiceRegistrar, srv EscrowServiceServer) {
+func RegisterEscrowServiceServer(s *grpc.Server, srv EscrowServiceServer) {
 	s.RegisterService(&_EscrowService_serviceDesc, srv)
 }
 

@@ -3,6 +3,7 @@ package escrow;
 
 import "google/api/annotations.proto";
 option go_package = "github.com/iamport/interface/gen_src/go/v1/escrow";
+option csharp_namespace = "V1.Escrow";
 
 service EscrowService {
     rpc EscrowPostRPC(EscrowRequest) returns (EscrowResponse) {

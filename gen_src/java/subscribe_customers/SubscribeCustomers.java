@@ -12595,8 +12595,9 @@ public final class SubscribeCustomers {
       "tomerRequest\032/.subscribe.GetPaymentSched" +
       "uleByCustomerResponse\"<\202\323\344\223\0026\0224/api/v1/s" +
       "ubscribe/customers/{customer_uid}/schedu" +
-      "lesB@Z>github.com/iamport/interface/gen_" +
-      "src/go/v1/subscribe_customersb\006proto3"
+      "lesBXZ>github.com/iamport/interface/gen_" +
+      "src/go/v1/subscribe_customers\252\002\025V1.Subsc" +
+      "ribeCustomersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

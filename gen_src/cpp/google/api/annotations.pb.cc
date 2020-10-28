@@ -31,10 +31,10 @@ const char descriptor_table_protodef_google_2fapi_2fannotations_2eproto[] PROTOB
   "pi\032\025google/api/http.proto\032 google/protob"
   "uf/descriptor.proto:E\n\004http\022\036.google.pro"
   "tobuf.MethodOptions\030\260\312\274\" \001(\0132\024.google.ap"
-  "i.HttpRuleBn\n\016com.google.apiB\020Annotation"
-  "sProtoP\001ZAgoogle.golang.org/genproto/goo"
-  "gleapis/api/annotations;annotations\242\002\004GA"
-  "PIb\006proto3"
+  "i.HttpRuleB\207\001\n\016com.google.apiB\020Annotatio"
+  "nsProtoP\001ZAgoogle.golang.org/genproto/go"
+  "ogleapis/api/annotations;annotations\242\002\004G"
+  "API\252\002\026Google.Api.Annotationsb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_google_2fapi_2fannotations_2eproto_deps[2] = {
   &::descriptor_table_google_2fapi_2fhttp_2eproto,
@@ -44,7 +44,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_goo
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_google_2fapi_2fannotations_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_google_2fapi_2fannotations_2eproto = {
-  false, false, descriptor_table_protodef_google_2fapi_2fannotations_2eproto, "google/api/annotations.proto", 290,
+  false, false, descriptor_table_protodef_google_2fapi_2fannotations_2eproto, "google/api/annotations.proto", 316,
   &descriptor_table_google_2fapi_2fannotations_2eproto_once, descriptor_table_google_2fapi_2fannotations_2eproto_sccs, descriptor_table_google_2fapi_2fannotations_2eproto_deps, 0, 2,
   schemas, file_default_instances, TableStruct_google_2fapi_2fannotations_2eproto::offsets,
   file_level_metadata_google_2fapi_2fannotations_2eproto, 0, file_level_enum_descriptors_google_2fapi_2fannotations_2eproto, file_level_service_descriptors_google_2fapi_2fannotations_2eproto,

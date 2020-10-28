@@ -10,23 +10,24 @@ import 'dart:async' as $async;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'dart:core' as $core;
-import 'user.pb.dart' as $8;
+import 'user.pb.dart' as $9;
+import '../basic/basic.pb.dart' as $8;
 import 'user.pbjson.dart';
 
 export 'user.pb.dart';
 
 abstract class UserServiceBase extends $pb.GeneratedService {
-  $async.Future<$8.UserRegisterResponse> userRegisterRPC($pb.ServerContext ctx, $8.UserRegisterRequest request);
-  $async.Future<$8.UserResponse> userInfoRPC($pb.ServerContext ctx, $8.UserRequest request);
-  $async.Future<$8.UserResponse> userDeleteRPC($pb.ServerContext ctx, $8.UserRequest request);
-  $async.Future<$8.UserEditResponse> userEditRPC($pb.ServerContext ctx, $8.UserEditRequest request);
+  $async.Future<$9.UserResponse> userRegisterRPC($pb.ServerContext ctx, $9.UserRegisterRequest request);
+  $async.Future<$9.UserResponse> userInfoRPC($pb.ServerContext ctx, $9.UserRequest request);
+  $async.Future<$8.Response> userDeleteRPC($pb.ServerContext ctx, $9.UserRequest request);
+  $async.Future<$8.Response> userEditRPC($pb.ServerContext ctx, $9.UserEditRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'UserRegisterRPC': return $8.UserRegisterRequest();
-      case 'UserInfoRPC': return $8.UserRequest();
-      case 'UserDeleteRPC': return $8.UserRequest();
-      case 'UserEditRPC': return $8.UserEditRequest();
+      case 'UserRegisterRPC': return $9.UserRegisterRequest();
+      case 'UserInfoRPC': return $9.UserRequest();
+      case 'UserDeleteRPC': return $9.UserRequest();
+      case 'UserEditRPC': return $9.UserEditRequest();
       default: throw $core.ArgumentError('Unknown method: $method');
     }
   }

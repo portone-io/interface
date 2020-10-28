@@ -580,9 +580,10 @@ const char descriptor_table_protodef_v2_2fpayments_2fcard_2fcard_2eproto[] PROTO
   "ancelRegiseteredCardRPC\022!.card_v2.Cancel"
   "CardPaymentRequest\032#.card_v2.CancelCardP"
   "aymenttResponse\"9\202\323\344\223\0023\"1/api/v2/payment"
-  "s/card/cancel/registered/{imp_uid}B:Z8gi"
+  "s/card/cancel/registered/{imp_uid}BMZ8gi"
   "thub.com/iamport/interface/gen_src/go/v2"
-  "/payments/cardb\006proto3"
+  "/payments/card\252\002\020V2.Payments.Cardb\006proto"
+  "3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_deps[1] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
@@ -605,7 +606,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v2_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto = {
-  false, false, descriptor_table_protodef_v2_2fpayments_2fcard_2fcard_2eproto, "v2/payments/card/card.proto", 3502,
+  false, false, descriptor_table_protodef_v2_2fpayments_2fcard_2fcard_2eproto, "v2/payments/card/card.proto", 3521,
   &descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_once, descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_sccs, descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_deps, 14, 1,
   schemas, file_default_instances, TableStruct_v2_2fpayments_2fcard_2fcard_2eproto::offsets,
   file_level_metadata_v2_2fpayments_2fcard_2fcard_2eproto, 14, file_level_enum_descriptors_v2_2fpayments_2fcard_2fcard_2eproto, file_level_service_descriptors_v2_2fpayments_2fcard_2fcard_2eproto,

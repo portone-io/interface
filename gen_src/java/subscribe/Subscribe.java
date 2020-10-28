@@ -20113,8 +20113,9 @@ public final class Subscribe {
       "omerRequest\032/.subscribe.GetPaymentSchedu" +
       "leByCustomerResponse\"G\202\323\344\223\002A\"</api/v1/su" +
       "bscribe/payments/schedule/customers/{cus" +
-      "tomer_uid}:\001*B6Z4github.com/iamport/inte" +
-      "rface/gen_src/go/v1/subscribeb\006proto3"
+      "tomer_uid}:\001*BEZ4github.com/iamport/inte" +
+      "rface/gen_src/go/v1/subscribe\252\002\014V1.Subsc" +
+      "ribeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

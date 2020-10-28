@@ -2294,7 +2294,7 @@ var file_v1_payment_payment_proto_rawDesc = []byte{
 	0x65, 0x22, 0x28, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x22, 0x12, 0x20, 0x2f, 0x61, 0x70, 0x69, 0x2f,
 	0x76, 0x31, 0x2f, 0x70, 0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x2f, 0x73, 0x74, 0x61, 0x74,
 	0x75, 0x73, 0x2f, 0x7b, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x7d, 0x12, 0x75, 0x0a, 0x10, 0x50,
-	0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x43, 0x61, 0x6e, 0x73, 0x65, 0x6c, 0x52, 0x50, 0x43, 0x12,
+	0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x43, 0x61, 0x6e, 0x63, 0x65, 0x6c, 0x52, 0x50, 0x43, 0x12,
 	0x1d, 0x2e, 0x70, 0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x2e, 0x50, 0x61, 0x79, 0x6d, 0x65, 0x6e,
 	0x74, 0x43, 0x61, 0x6e, 0x63, 0x65, 0x6c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1e,
 	0x2e, 0x70, 0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x2e, 0x50, 0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74,
@@ -2390,7 +2390,7 @@ var file_v1_payment_payment_proto_depIdxs = []int32{
 	14, // 22: payment.PaymentService.PaymentMerchantUidRPC:input_type -> payment.PaymentMerchantUidRequest
 	10, // 23: payment.PaymentService.PaymentsMerchantUidRPC:input_type -> payment.PaymentsMerchantUidRequest
 	12, // 24: payment.PaymentService.PaymentsStatusRPC:input_type -> payment.PaymentStatusRequest
-	16, // 25: payment.PaymentService.PaymentCanselRPC:input_type -> payment.PaymentCancelRequest
+	16, // 25: payment.PaymentService.PaymentCancelRPC:input_type -> payment.PaymentCancelRequest
 	21, // 26: payment.PaymentService.PaymentPrepareRPC:input_type -> payment.PaymentPrepareRequest
 	23, // 27: payment.PaymentService.PaymentGetPrepareRPC:input_type -> payment.PaymentGetPrepareRequest
 	19, // 28: payment.PaymentService.PaymentBalanceRPC:output_type -> payment.PaymentBalanceResponse
@@ -2399,7 +2399,7 @@ var file_v1_payment_payment_proto_depIdxs = []int32{
 	15, // 31: payment.PaymentService.PaymentMerchantUidRPC:output_type -> payment.PaymentMerchantUidResponse
 	11, // 32: payment.PaymentService.PaymentsMerchantUidRPC:output_type -> payment.PaymentsMerchantUidResponse
 	13, // 33: payment.PaymentService.PaymentsStatusRPC:output_type -> payment.PaymentStatusResponse
-	17, // 34: payment.PaymentService.PaymentCanselRPC:output_type -> payment.PaymentCancelResponse
+	17, // 34: payment.PaymentService.PaymentCancelRPC:output_type -> payment.PaymentCancelResponse
 	22, // 35: payment.PaymentService.PaymentPrepareRPC:output_type -> payment.PaymentPrepareResponse
 	22, // 36: payment.PaymentService.PaymentGetPrepareRPC:output_type -> payment.PaymentPrepareResponse
 	28, // [28:37] is the sub-list for method output_type

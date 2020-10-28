@@ -23,7 +23,7 @@ type PaymentServiceClient interface {
 	PaymentMerchantUidRPC(ctx context.Context, in *PaymentMerchantUidRequest, opts ...grpc.CallOption) (*PaymentMerchantUidResponse, error)
 	PaymentsMerchantUidRPC(ctx context.Context, in *PaymentsMerchantUidRequest, opts ...grpc.CallOption) (*PaymentsMerchantUidResponse, error)
 	PaymentsStatusRPC(ctx context.Context, in *PaymentStatusRequest, opts ...grpc.CallOption) (*PaymentStatusResponse, error)
-	PaymentCanselRPC(ctx context.Context, in *PaymentCancelRequest, opts ...grpc.CallOption) (*PaymentCancelResponse, error)
+	PaymentCancelRPC(ctx context.Context, in *PaymentCancelRequest, opts ...grpc.CallOption) (*PaymentCancelResponse, error)
 	PaymentPrepareRPC(ctx context.Context, in *PaymentPrepareRequest, opts ...grpc.CallOption) (*PaymentPrepareResponse, error)
 	PaymentGetPrepareRPC(ctx context.Context, in *PaymentGetPrepareRequest, opts ...grpc.CallOption) (*PaymentPrepareResponse, error)
 }
@@ -90,9 +90,9 @@ func (c *paymentServiceClient) PaymentsStatusRPC(ctx context.Context, in *Paymen
 	return out, nil
 }
 
-func (c *paymentServiceClient) PaymentCanselRPC(ctx context.Context, in *PaymentCancelRequest, opts ...grpc.CallOption) (*PaymentCancelResponse, error) {
+func (c *paymentServiceClient) PaymentCancelRPC(ctx context.Context, in *PaymentCancelRequest, opts ...grpc.CallOption) (*PaymentCancelResponse, error) {
 	out := new(PaymentCancelResponse)
-	err := c.cc.Invoke(ctx, "/payment.PaymentService/PaymentCanselRPC", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/payment.PaymentService/PaymentCancelRPC", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -127,7 +127,7 @@ type PaymentServiceServer interface {
 	PaymentMerchantUidRPC(context.Context, *PaymentMerchantUidRequest) (*PaymentMerchantUidResponse, error)
 	PaymentsMerchantUidRPC(context.Context, *PaymentsMerchantUidRequest) (*PaymentsMerchantUidResponse, error)
 	PaymentsStatusRPC(context.Context, *PaymentStatusRequest) (*PaymentStatusResponse, error)
-	PaymentCanselRPC(context.Context, *PaymentCancelRequest) (*PaymentCancelResponse, error)
+	PaymentCancelRPC(context.Context, *PaymentCancelRequest) (*PaymentCancelResponse, error)
 	PaymentPrepareRPC(context.Context, *PaymentPrepareRequest) (*PaymentPrepareResponse, error)
 	PaymentGetPrepareRPC(context.Context, *PaymentGetPrepareRequest) (*PaymentPrepareResponse, error)
 	mustEmbedUnimplementedPaymentServiceServer()
@@ -155,8 +155,8 @@ func (UnimplementedPaymentServiceServer) PaymentsMerchantUidRPC(context.Context,
 func (UnimplementedPaymentServiceServer) PaymentsStatusRPC(context.Context, *PaymentStatusRequest) (*PaymentStatusResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PaymentsStatusRPC not implemented")
 }
-func (UnimplementedPaymentServiceServer) PaymentCanselRPC(context.Context, *PaymentCancelRequest) (*PaymentCancelResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method PaymentCanselRPC not implemented")
+func (UnimplementedPaymentServiceServer) PaymentCancelRPC(context.Context, *PaymentCancelRequest) (*PaymentCancelResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PaymentCancelRPC not implemented")
 }
 func (UnimplementedPaymentServiceServer) PaymentPrepareRPC(context.Context, *PaymentPrepareRequest) (*PaymentPrepareResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PaymentPrepareRPC not implemented")
@@ -285,20 +285,20 @@ func _PaymentService_PaymentsStatusRPC_Handler(srv interface{}, ctx context.Cont
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PaymentService_PaymentCanselRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PaymentService_PaymentCancelRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PaymentCancelRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PaymentServiceServer).PaymentCanselRPC(ctx, in)
+		return srv.(PaymentServiceServer).PaymentCancelRPC(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/payment.PaymentService/PaymentCanselRPC",
+		FullMethod: "/payment.PaymentService/PaymentCancelRPC",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PaymentServiceServer).PaymentCanselRPC(ctx, req.(*PaymentCancelRequest))
+		return srv.(PaymentServiceServer).PaymentCancelRPC(ctx, req.(*PaymentCancelRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -368,8 +368,8 @@ var _PaymentService_serviceDesc = grpc.ServiceDesc{
 			Handler:    _PaymentService_PaymentsStatusRPC_Handler,
 		},
 		{
-			MethodName: "PaymentCanselRPC",
-			Handler:    _PaymentService_PaymentCanselRPC_Handler,
+			MethodName: "PaymentCancelRPC",
+			Handler:    _PaymentService_PaymentCancelRPC_Handler,
 		},
 		{
 			MethodName: "PaymentPrepareRPC",

@@ -52,7 +52,7 @@ const AuthenticateServiceBase$json = const {
   '1': 'AuthenticateService',
   '2': const [
     const {'1': 'TokenV2RPC', '2': '.authenticate_v2.TokenRequest', '3': '.authenticate_v2.TokenResponse', '4': const {}},
-    const {'1': 'RegisterPubKeyRPC', '2': '.authenticate_v2.PubKeyRegisterRequest', '3': '.authenticate_v2.PubKeyRegisterResponse', '4': const {}},
+    const {'1': 'RegisterPubKeyV2RPC', '2': '.authenticate_v2.PubKeyRegisterRequest', '3': '.authenticate_v2.PubKeyRegisterResponse', '4': const {}},
   ],
 };
 

@@ -18,7 +18,7 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type AuthenticateServiceClient interface {
 	TokenV2RPC(ctx context.Context, in *TokenRequest, opts ...grpc.CallOption) (*TokenResponse, error)
-	RegisterPubKeyRPC(ctx context.Context, in *PubKeyRegisterRequest, opts ...grpc.CallOption) (*PubKeyRegisterResponse, error)
+	RegisterPubKeyV2RPC(ctx context.Context, in *PubKeyRegisterRequest, opts ...grpc.CallOption) (*PubKeyRegisterResponse, error)
 }
 
 type authenticateServiceClient struct {
@@ -38,9 +38,9 @@ func (c *authenticateServiceClient) TokenV2RPC(ctx context.Context, in *TokenReq
 	return out, nil
 }
 
-func (c *authenticateServiceClient) RegisterPubKeyRPC(ctx context.Context, in *PubKeyRegisterRequest, opts ...grpc.CallOption) (*PubKeyRegisterResponse, error) {
+func (c *authenticateServiceClient) RegisterPubKeyV2RPC(ctx context.Context, in *PubKeyRegisterRequest, opts ...grpc.CallOption) (*PubKeyRegisterResponse, error) {
 	out := new(PubKeyRegisterResponse)
-	err := c.cc.Invoke(ctx, "/authenticate_v2.AuthenticateService/RegisterPubKeyRPC", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/authenticate_v2.AuthenticateService/RegisterPubKeyV2RPC", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -52,7 +52,7 @@ func (c *authenticateServiceClient) RegisterPubKeyRPC(ctx context.Context, in *P
 // for forward compatibility
 type AuthenticateServiceServer interface {
 	TokenV2RPC(context.Context, *TokenRequest) (*TokenResponse, error)
-	RegisterPubKeyRPC(context.Context, *PubKeyRegisterRequest) (*PubKeyRegisterResponse, error)
+	RegisterPubKeyV2RPC(context.Context, *PubKeyRegisterRequest) (*PubKeyRegisterResponse, error)
 	mustEmbedUnimplementedAuthenticateServiceServer()
 }
 
@@ -63,8 +63,8 @@ type UnimplementedAuthenticateServiceServer struct {
 func (UnimplementedAuthenticateServiceServer) TokenV2RPC(context.Context, *TokenRequest) (*TokenResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method TokenV2RPC not implemented")
 }
-func (UnimplementedAuthenticateServiceServer) RegisterPubKeyRPC(context.Context, *PubKeyRegisterRequest) (*PubKeyRegisterResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method RegisterPubKeyRPC not implemented")
+func (UnimplementedAuthenticateServiceServer) RegisterPubKeyV2RPC(context.Context, *PubKeyRegisterRequest) (*PubKeyRegisterResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RegisterPubKeyV2RPC not implemented")
 }
 func (UnimplementedAuthenticateServiceServer) mustEmbedUnimplementedAuthenticateServiceServer() {}
 
@@ -97,20 +97,20 @@ func _AuthenticateService_TokenV2RPC_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AuthenticateService_RegisterPubKeyRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _AuthenticateService_RegisterPubKeyV2RPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PubKeyRegisterRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthenticateServiceServer).RegisterPubKeyRPC(ctx, in)
+		return srv.(AuthenticateServiceServer).RegisterPubKeyV2RPC(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/authenticate_v2.AuthenticateService/RegisterPubKeyRPC",
+		FullMethod: "/authenticate_v2.AuthenticateService/RegisterPubKeyV2RPC",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthenticateServiceServer).RegisterPubKeyRPC(ctx, req.(*PubKeyRegisterRequest))
+		return srv.(AuthenticateServiceServer).RegisterPubKeyV2RPC(ctx, req.(*PubKeyRegisterRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -124,8 +124,8 @@ var _AuthenticateService_serviceDesc = grpc.ServiceDesc{
 			Handler:    _AuthenticateService_TokenV2RPC_Handler,
 		},
 		{
-			MethodName: "RegisterPubKeyRPC",
-			Handler:    _AuthenticateService_RegisterPubKeyRPC_Handler,
+			MethodName: "RegisterPubKeyV2RPC",
+			Handler:    _AuthenticateService_RegisterPubKeyV2RPC_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

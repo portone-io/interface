@@ -14,7 +14,7 @@ service AuthenticateService {
         };
     }
 
-    rpc RegisterPubKeyRPC(PubKeyRegisterRequest) returns (PubKeyRegisterResponse) {
+    rpc RegisterPubKeyV2RPC(PubKeyRegisterRequest) returns (PubKeyRegisterResponse) {
         option (google.api.http) = {
             post: "/api/v2/users/public_key"
             body: "*"

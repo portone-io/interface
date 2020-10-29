@@ -20,7 +20,7 @@ type SubscribeServiceClient interface {
 	OnetimePaymentRPC(ctx context.Context, in *OnetimePaymentRequest, opts ...grpc.CallOption) (*OnetimePaymentResponse, error)
 	AgainPaymentRPC(ctx context.Context, in *AgainPaymentRequest, opts ...grpc.CallOption) (*AgainPaymentResponse, error)
 	SchedulePaymentRPC(ctx context.Context, in *SchedulePayemntRequest, opts ...grpc.CallOption) (*SchedulePaymentResponse, error)
-	UnschedulePaymentRPC(ctx context.Context, in *UnscheduelPaymentRequest, opts ...grpc.CallOption) (*UnschedulePaymentResponse, error)
+	UnschedulePaymentRPC(ctx context.Context, in *UnschedulePaymentRequest, opts ...grpc.CallOption) (*UnschedulePaymentResponse, error)
 	GetScheduledPaymentRPC(ctx context.Context, in *GetPaymentScheduleRequest, opts ...grpc.CallOption) (*GetPaymentScheduleResponse, error)
 	GetScheduledPaymentByCustomerUidRPC(ctx context.Context, in *GetPaymentScheduleByCustomerRequest, opts ...grpc.CallOption) (*GetPaymentScheduleByCustomerResponse, error)
 }
@@ -60,7 +60,7 @@ func (c *subscribeServiceClient) SchedulePaymentRPC(ctx context.Context, in *Sch
 	return out, nil
 }
 
-func (c *subscribeServiceClient) UnschedulePaymentRPC(ctx context.Context, in *UnscheduelPaymentRequest, opts ...grpc.CallOption) (*UnschedulePaymentResponse, error) {
+func (c *subscribeServiceClient) UnschedulePaymentRPC(ctx context.Context, in *UnschedulePaymentRequest, opts ...grpc.CallOption) (*UnschedulePaymentResponse, error) {
 	out := new(UnschedulePaymentResponse)
 	err := c.cc.Invoke(ctx, "/subscribe.SubscribeService/UnschedulePaymentRPC", in, out, opts...)
 	if err != nil {
@@ -94,7 +94,7 @@ type SubscribeServiceServer interface {
 	OnetimePaymentRPC(context.Context, *OnetimePaymentRequest) (*OnetimePaymentResponse, error)
 	AgainPaymentRPC(context.Context, *AgainPaymentRequest) (*AgainPaymentResponse, error)
 	SchedulePaymentRPC(context.Context, *SchedulePayemntRequest) (*SchedulePaymentResponse, error)
-	UnschedulePaymentRPC(context.Context, *UnscheduelPaymentRequest) (*UnschedulePaymentResponse, error)
+	UnschedulePaymentRPC(context.Context, *UnschedulePaymentRequest) (*UnschedulePaymentResponse, error)
 	GetScheduledPaymentRPC(context.Context, *GetPaymentScheduleRequest) (*GetPaymentScheduleResponse, error)
 	GetScheduledPaymentByCustomerUidRPC(context.Context, *GetPaymentScheduleByCustomerRequest) (*GetPaymentScheduleByCustomerResponse, error)
 	mustEmbedUnimplementedSubscribeServiceServer()
@@ -113,7 +113,7 @@ func (UnimplementedSubscribeServiceServer) AgainPaymentRPC(context.Context, *Aga
 func (UnimplementedSubscribeServiceServer) SchedulePaymentRPC(context.Context, *SchedulePayemntRequest) (*SchedulePaymentResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SchedulePaymentRPC not implemented")
 }
-func (UnimplementedSubscribeServiceServer) UnschedulePaymentRPC(context.Context, *UnscheduelPaymentRequest) (*UnschedulePaymentResponse, error) {
+func (UnimplementedSubscribeServiceServer) UnschedulePaymentRPC(context.Context, *UnschedulePaymentRequest) (*UnschedulePaymentResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnschedulePaymentRPC not implemented")
 }
 func (UnimplementedSubscribeServiceServer) GetScheduledPaymentRPC(context.Context, *GetPaymentScheduleRequest) (*GetPaymentScheduleResponse, error) {
@@ -190,7 +190,7 @@ func _SubscribeService_SchedulePaymentRPC_Handler(srv interface{}, ctx context.C
 }
 
 func _SubscribeService_UnschedulePaymentRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UnscheduelPaymentRequest)
+	in := new(UnschedulePaymentRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -202,7 +202,7 @@ func _SubscribeService_UnschedulePaymentRPC_Handler(srv interface{}, ctx context
 		FullMethod: "/subscribe.SubscribeService/UnschedulePaymentRPC",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SubscribeServiceServer).UnschedulePaymentRPC(ctx, req.(*UnscheduelPaymentRequest))
+		return srv.(SubscribeServiceServer).UnschedulePaymentRPC(ctx, req.(*UnschedulePaymentRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

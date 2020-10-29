@@ -19,7 +19,7 @@ abstract class SubscribeServiceBase extends $pb.GeneratedService {
   $async.Future<$4.OnetimePaymentResponse> onetimePaymentRPC($pb.ServerContext ctx, $4.OnetimePaymentRequest request);
   $async.Future<$4.AgainPaymentResponse> againPaymentRPC($pb.ServerContext ctx, $4.AgainPaymentRequest request);
   $async.Future<$4.SchedulePaymentResponse> schedulePaymentRPC($pb.ServerContext ctx, $4.SchedulePayemntRequest request);
-  $async.Future<$4.UnschedulePaymentResponse> unschedulePaymentRPC($pb.ServerContext ctx, $4.UnscheduelPaymentRequest request);
+  $async.Future<$4.UnschedulePaymentResponse> unschedulePaymentRPC($pb.ServerContext ctx, $4.UnschedulePaymentRequest request);
   $async.Future<$4.GetPaymentScheduleResponse> getScheduledPaymentRPC($pb.ServerContext ctx, $4.GetPaymentScheduleRequest request);
   $async.Future<$4.GetPaymentScheduleByCustomerResponse> getScheduledPaymentByCustomerUidRPC($pb.ServerContext ctx, $4.GetPaymentScheduleByCustomerRequest request);
 
@@ -28,7 +28,7 @@ abstract class SubscribeServiceBase extends $pb.GeneratedService {
       case 'OnetimePaymentRPC': return $4.OnetimePaymentRequest();
       case 'AgainPaymentRPC': return $4.AgainPaymentRequest();
       case 'SchedulePaymentRPC': return $4.SchedulePayemntRequest();
-      case 'UnschedulePaymentRPC': return $4.UnscheduelPaymentRequest();
+      case 'UnschedulePaymentRPC': return $4.UnschedulePaymentRequest();
       case 'GetScheduledPaymentRPC': return $4.GetPaymentScheduleRequest();
       case 'GetScheduledPaymentByCustomerUidRPC': return $4.GetPaymentScheduleByCustomerRequest();
       default: throw $core.ArgumentError('Unknown method: $method');

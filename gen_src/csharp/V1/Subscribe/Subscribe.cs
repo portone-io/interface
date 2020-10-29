@@ -67,7 +67,7 @@ namespace V1.Subscribe {
             "ZHVsZVBhcmFtInIKF1NjaGVkdWxlUGF5bWVudFJlc3BvbnNlEgwKBGNvZGUY",
             "ASABKAUSDwoHbWVzc2FnZRgCIAEoCRI4CghyZXNwb25zZRgDIAMoCzImLnN1",
             "YnNjcmliZS5Vbml0U2NoZWR1bGVQYXltZW50UmVzcG9uc2UiRgoYVW5zY2hl",
-            "ZHVlbFBheW1lbnRSZXF1ZXN0EhQKDGN1c3RvbWVyX3VpZBgBIAEoCRIUCgxt",
+            "ZHVsZVBheW1lbnRSZXF1ZXN0EhQKDGN1c3RvbWVyX3VpZBgBIAEoCRIUCgxt",
             "ZXJjaGFudF91aWQYAiADKAkidAoZVW5zY2hlZHVsZVBheW1lbnRSZXNwb25z",
             "ZRIMCgRjb2RlGAEgASgFEg8KB21lc3NhZ2UYAiABKAkSOAoIcmVzcG9uc2UY",
             "AyADKAsyJi5zdWJzY3JpYmUuVW5pdFNjaGVkdWxlUGF5bWVudFJlc3BvbnNl",
@@ -94,7 +94,7 @@ namespace V1.Subscribe {
             "cmliZS5TY2hlZHVsZVBheWVtbnRSZXF1ZXN0GiIuc3Vic2NyaWJlLlNjaGVk",
             "dWxlUGF5bWVudFJlc3BvbnNlIi6C0+STAigiIy9hcGkvdjEvc3Vic2NyaWJl",
             "L3BheW1lbnRzL3NjaGVkdWxlOgEqEpMBChRVbnNjaGVkdWxlUGF5bWVudFJQ",
-            "QxIjLnN1YnNjcmliZS5VbnNjaGVkdWVsUGF5bWVudFJlcXVlc3QaJC5zdWJz",
+            "QxIjLnN1YnNjcmliZS5VbnNjaGVkdWxlUGF5bWVudFJlcXVlc3QaJC5zdWJz",
             "Y3JpYmUuVW5zY2hlZHVsZVBheW1lbnRSZXNwb25zZSIwgtPkkwIqIiUvYXBp",
             "L3YxL3N1YnNjcmliZS9wYXltZW50cy91bnNjaGVkdWxlOgEqEqQBChZHZXRT",
             "Y2hlZHVsZWRQYXltZW50UlBDEiQuc3Vic2NyaWJlLkdldFBheW1lbnRTY2hl",
@@ -118,7 +118,7 @@ namespace V1.Subscribe {
             new pbr::GeneratedClrTypeInfo(typeof(global::V1.Subscribe.UnitSchedulePaymentResponse), global::V1.Subscribe.UnitSchedulePaymentResponse.Parser, new[]{ "CustomerUid", "MerchantUid", "ImpUid", "ScheduleAt", "ExecutedAt", "RevokedAt", "Amount", "Name", "BuyerName", "BuyerEmail", "BuyerTel", "BuyerAddr", "BuyerPostcode", "CustomData", "ScheduleStatus", "PaymentStatus", "FailReason" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V1.Subscribe.SchedulePayemntRequest), global::V1.Subscribe.SchedulePayemntRequest.Parser, new[]{ "CustomerUid", "CheckingAmount", "CardNumber", "Expiry", "Birth", "Pwd2Digit", "Pg", "Schedules" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V1.Subscribe.SchedulePaymentResponse), global::V1.Subscribe.SchedulePaymentResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::V1.Subscribe.UnscheduelPaymentRequest), global::V1.Subscribe.UnscheduelPaymentRequest.Parser, new[]{ "CustomerUid", "MerchantUid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::V1.Subscribe.UnschedulePaymentRequest), global::V1.Subscribe.UnschedulePaymentRequest.Parser, new[]{ "CustomerUid", "MerchantUid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V1.Subscribe.UnschedulePaymentResponse), global::V1.Subscribe.UnschedulePaymentResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V1.Subscribe.GetPaymentScheduleRequest), global::V1.Subscribe.GetPaymentScheduleRequest.Parser, new[]{ "MerchantUid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V1.Subscribe.GetPaymentScheduleResponse), global::V1.Subscribe.GetPaymentScheduleResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
@@ -3987,15 +3987,15 @@ namespace V1.Subscribe {
 
   }
 
-  public sealed partial class UnscheduelPaymentRequest : pb::IMessage<UnscheduelPaymentRequest>
+  public sealed partial class UnschedulePaymentRequest : pb::IMessage<UnschedulePaymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<UnscheduelPaymentRequest> _parser = new pb::MessageParser<UnscheduelPaymentRequest>(() => new UnscheduelPaymentRequest());
+    private static readonly pb::MessageParser<UnschedulePaymentRequest> _parser = new pb::MessageParser<UnschedulePaymentRequest>(() => new UnschedulePaymentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<UnscheduelPaymentRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<UnschedulePaymentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -4008,22 +4008,22 @@ namespace V1.Subscribe {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UnscheduelPaymentRequest() {
+    public UnschedulePaymentRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UnscheduelPaymentRequest(UnscheduelPaymentRequest other) : this() {
+    public UnschedulePaymentRequest(UnschedulePaymentRequest other) : this() {
       customerUid_ = other.customerUid_;
       merchantUid_ = other.merchantUid_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UnscheduelPaymentRequest Clone() {
-      return new UnscheduelPaymentRequest(this);
+    public UnschedulePaymentRequest Clone() {
+      return new UnschedulePaymentRequest(this);
     }
 
     /// <summary>Field number for the "customer_uid" field.</summary>
@@ -4049,11 +4049,11 @@ namespace V1.Subscribe {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as UnscheduelPaymentRequest);
+      return Equals(other as UnschedulePaymentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(UnscheduelPaymentRequest other) {
+    public bool Equals(UnschedulePaymentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -4125,7 +4125,7 @@ namespace V1.Subscribe {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(UnscheduelPaymentRequest other) {
+    public void MergeFrom(UnschedulePaymentRequest other) {
       if (other == null) {
         return;
       }

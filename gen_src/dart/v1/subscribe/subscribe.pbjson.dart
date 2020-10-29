@@ -132,8 +132,8 @@ const SchedulePaymentResponse$json = const {
   ],
 };
 
-const UnscheduelPaymentRequest$json = const {
-  '1': 'UnscheduelPaymentRequest',
+const UnschedulePaymentRequest$json = const {
+  '1': 'UnschedulePaymentRequest',
   '2': const [
     const {'1': 'customer_uid', '3': 1, '4': 1, '5': 9, '10': 'customerUid'},
     const {'1': 'merchant_uid', '3': 2, '4': 3, '5': 9, '10': 'merchantUid'},
@@ -201,7 +201,7 @@ const SubscribeServiceBase$json = const {
     const {'1': 'OnetimePaymentRPC', '2': '.subscribe.OnetimePaymentRequest', '3': '.subscribe.OnetimePaymentResponse', '4': const {}},
     const {'1': 'AgainPaymentRPC', '2': '.subscribe.AgainPaymentRequest', '3': '.subscribe.AgainPaymentResponse', '4': const {}},
     const {'1': 'SchedulePaymentRPC', '2': '.subscribe.SchedulePayemntRequest', '3': '.subscribe.SchedulePaymentResponse', '4': const {}},
-    const {'1': 'UnschedulePaymentRPC', '2': '.subscribe.UnscheduelPaymentRequest', '3': '.subscribe.UnschedulePaymentResponse', '4': const {}},
+    const {'1': 'UnschedulePaymentRPC', '2': '.subscribe.UnschedulePaymentRequest', '3': '.subscribe.UnschedulePaymentResponse', '4': const {}},
     const {'1': 'GetScheduledPaymentRPC', '2': '.subscribe.GetPaymentScheduleRequest', '3': '.subscribe.GetPaymentScheduleResponse', '4': const {}},
     const {'1': 'GetScheduledPaymentByCustomerUidRPC', '2': '.subscribe.GetPaymentScheduleByCustomerRequest', '3': '.subscribe.GetPaymentScheduleByCustomerResponse', '4': const {}},
   ],
@@ -218,7 +218,7 @@ const SubscribeServiceBase$messageJson = const {
   '.subscribe.PaymentScheduleParam': PaymentScheduleParam$json,
   '.subscribe.SchedulePaymentResponse': SchedulePaymentResponse$json,
   '.subscribe.UnitSchedulePaymentResponse': UnitSchedulePaymentResponse$json,
-  '.subscribe.UnscheduelPaymentRequest': UnscheduelPaymentRequest$json,
+  '.subscribe.UnschedulePaymentRequest': UnschedulePaymentRequest$json,
   '.subscribe.UnschedulePaymentResponse': UnschedulePaymentResponse$json,
   '.subscribe.GetPaymentScheduleRequest': GetPaymentScheduleRequest$json,
   '.subscribe.GetPaymentScheduleResponse': GetPaymentScheduleResponse$json,

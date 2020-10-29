@@ -96,9 +96,9 @@ extern SchedulePaymentResponseDefaultTypeInternal _SchedulePaymentResponse_defau
 class UnitSchedulePaymentResponse;
 class UnitSchedulePaymentResponseDefaultTypeInternal;
 extern UnitSchedulePaymentResponseDefaultTypeInternal _UnitSchedulePaymentResponse_default_instance_;
-class UnscheduelPaymentRequest;
-class UnscheduelPaymentRequestDefaultTypeInternal;
-extern UnscheduelPaymentRequestDefaultTypeInternal _UnscheduelPaymentRequest_default_instance_;
+class UnschedulePaymentRequest;
+class UnschedulePaymentRequestDefaultTypeInternal;
+extern UnschedulePaymentRequestDefaultTypeInternal _UnschedulePaymentRequest_default_instance_;
 class UnschedulePaymentResponse;
 class UnschedulePaymentResponseDefaultTypeInternal;
 extern UnschedulePaymentResponseDefaultTypeInternal _UnschedulePaymentResponse_default_instance_;
@@ -117,7 +117,7 @@ template<> ::subscribe::PaymentScheduleParam* Arena::CreateMaybeMessage<::subscr
 template<> ::subscribe::SchedulePayemntRequest* Arena::CreateMaybeMessage<::subscribe::SchedulePayemntRequest>(Arena*);
 template<> ::subscribe::SchedulePaymentResponse* Arena::CreateMaybeMessage<::subscribe::SchedulePaymentResponse>(Arena*);
 template<> ::subscribe::UnitSchedulePaymentResponse* Arena::CreateMaybeMessage<::subscribe::UnitSchedulePaymentResponse>(Arena*);
-template<> ::subscribe::UnscheduelPaymentRequest* Arena::CreateMaybeMessage<::subscribe::UnscheduelPaymentRequest>(Arena*);
+template<> ::subscribe::UnschedulePaymentRequest* Arena::CreateMaybeMessage<::subscribe::UnschedulePaymentRequest>(Arena*);
 template<> ::subscribe::UnschedulePaymentResponse* Arena::CreateMaybeMessage<::subscribe::UnschedulePaymentResponse>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace subscribe {
@@ -2393,23 +2393,23 @@ class SchedulePaymentResponse PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
-class UnscheduelPaymentRequest PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:subscribe.UnscheduelPaymentRequest) */ {
+class UnschedulePaymentRequest PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:subscribe.UnschedulePaymentRequest) */ {
  public:
-  inline UnscheduelPaymentRequest() : UnscheduelPaymentRequest(nullptr) {}
-  virtual ~UnscheduelPaymentRequest();
+  inline UnschedulePaymentRequest() : UnschedulePaymentRequest(nullptr) {}
+  virtual ~UnschedulePaymentRequest();
 
-  UnscheduelPaymentRequest(const UnscheduelPaymentRequest& from);
-  UnscheduelPaymentRequest(UnscheduelPaymentRequest&& from) noexcept
-    : UnscheduelPaymentRequest() {
+  UnschedulePaymentRequest(const UnschedulePaymentRequest& from);
+  UnschedulePaymentRequest(UnschedulePaymentRequest&& from) noexcept
+    : UnschedulePaymentRequest() {
     *this = ::std::move(from);
   }
 
-  inline UnscheduelPaymentRequest& operator=(const UnscheduelPaymentRequest& from) {
+  inline UnschedulePaymentRequest& operator=(const UnschedulePaymentRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline UnscheduelPaymentRequest& operator=(UnscheduelPaymentRequest&& from) noexcept {
+  inline UnschedulePaymentRequest& operator=(UnschedulePaymentRequest&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -2427,20 +2427,20 @@ class UnscheduelPaymentRequest PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const UnscheduelPaymentRequest& default_instance();
+  static const UnschedulePaymentRequest& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const UnscheduelPaymentRequest* internal_default_instance() {
-    return reinterpret_cast<const UnscheduelPaymentRequest*>(
-               &_UnscheduelPaymentRequest_default_instance_);
+  static inline const UnschedulePaymentRequest* internal_default_instance() {
+    return reinterpret_cast<const UnschedulePaymentRequest*>(
+               &_UnschedulePaymentRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     8;
 
-  friend void swap(UnscheduelPaymentRequest& a, UnscheduelPaymentRequest& b) {
+  friend void swap(UnschedulePaymentRequest& a, UnschedulePaymentRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(UnscheduelPaymentRequest* other) {
+  inline void Swap(UnschedulePaymentRequest* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -2448,7 +2448,7 @@ class UnscheduelPaymentRequest PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(UnscheduelPaymentRequest* other) {
+  void UnsafeArenaSwap(UnschedulePaymentRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -2456,17 +2456,17 @@ class UnscheduelPaymentRequest PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline UnscheduelPaymentRequest* New() const final {
-    return CreateMaybeMessage<UnscheduelPaymentRequest>(nullptr);
+  inline UnschedulePaymentRequest* New() const final {
+    return CreateMaybeMessage<UnschedulePaymentRequest>(nullptr);
   }
 
-  UnscheduelPaymentRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<UnscheduelPaymentRequest>(arena);
+  UnschedulePaymentRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<UnschedulePaymentRequest>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const UnscheduelPaymentRequest& from);
-  void MergeFrom(const UnscheduelPaymentRequest& from);
+  void CopyFrom(const UnschedulePaymentRequest& from);
+  void MergeFrom(const UnschedulePaymentRequest& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2480,13 +2480,13 @@ class UnscheduelPaymentRequest PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(UnscheduelPaymentRequest* other);
+  void InternalSwap(UnschedulePaymentRequest* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "subscribe.UnscheduelPaymentRequest";
+    return "subscribe.UnschedulePaymentRequest";
   }
   protected:
-  explicit UnscheduelPaymentRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit UnschedulePaymentRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2549,7 +2549,7 @@ class UnscheduelPaymentRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_customer_uid();
   public:
 
-  // @@protoc_insertion_point(class_scope:subscribe.UnscheduelPaymentRequest)
+  // @@protoc_insertion_point(class_scope:subscribe.UnschedulePaymentRequest)
  private:
   class _Internal;
 
@@ -7605,60 +7605,60 @@ SchedulePaymentResponse::response() const {
 
 // -------------------------------------------------------------------
 
-// UnscheduelPaymentRequest
+// UnschedulePaymentRequest
 
 // string customer_uid = 1;
-inline void UnscheduelPaymentRequest::clear_customer_uid() {
+inline void UnschedulePaymentRequest::clear_customer_uid() {
   customer_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline const std::string& UnscheduelPaymentRequest::customer_uid() const {
-  // @@protoc_insertion_point(field_get:subscribe.UnscheduelPaymentRequest.customer_uid)
+inline const std::string& UnschedulePaymentRequest::customer_uid() const {
+  // @@protoc_insertion_point(field_get:subscribe.UnschedulePaymentRequest.customer_uid)
   return _internal_customer_uid();
 }
-inline void UnscheduelPaymentRequest::set_customer_uid(const std::string& value) {
+inline void UnschedulePaymentRequest::set_customer_uid(const std::string& value) {
   _internal_set_customer_uid(value);
-  // @@protoc_insertion_point(field_set:subscribe.UnscheduelPaymentRequest.customer_uid)
+  // @@protoc_insertion_point(field_set:subscribe.UnschedulePaymentRequest.customer_uid)
 }
-inline std::string* UnscheduelPaymentRequest::mutable_customer_uid() {
-  // @@protoc_insertion_point(field_mutable:subscribe.UnscheduelPaymentRequest.customer_uid)
+inline std::string* UnschedulePaymentRequest::mutable_customer_uid() {
+  // @@protoc_insertion_point(field_mutable:subscribe.UnschedulePaymentRequest.customer_uid)
   return _internal_mutable_customer_uid();
 }
-inline const std::string& UnscheduelPaymentRequest::_internal_customer_uid() const {
+inline const std::string& UnschedulePaymentRequest::_internal_customer_uid() const {
   return customer_uid_.Get();
 }
-inline void UnscheduelPaymentRequest::_internal_set_customer_uid(const std::string& value) {
+inline void UnschedulePaymentRequest::_internal_set_customer_uid(const std::string& value) {
   
   customer_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void UnscheduelPaymentRequest::set_customer_uid(std::string&& value) {
+inline void UnschedulePaymentRequest::set_customer_uid(std::string&& value) {
   
   customer_uid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:subscribe.UnscheduelPaymentRequest.customer_uid)
+  // @@protoc_insertion_point(field_set_rvalue:subscribe.UnschedulePaymentRequest.customer_uid)
 }
-inline void UnscheduelPaymentRequest::set_customer_uid(const char* value) {
+inline void UnschedulePaymentRequest::set_customer_uid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   customer_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:subscribe.UnscheduelPaymentRequest.customer_uid)
+  // @@protoc_insertion_point(field_set_char:subscribe.UnschedulePaymentRequest.customer_uid)
 }
-inline void UnscheduelPaymentRequest::set_customer_uid(const char* value,
+inline void UnschedulePaymentRequest::set_customer_uid(const char* value,
     size_t size) {
   
   customer_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:subscribe.UnscheduelPaymentRequest.customer_uid)
+  // @@protoc_insertion_point(field_set_pointer:subscribe.UnschedulePaymentRequest.customer_uid)
 }
-inline std::string* UnscheduelPaymentRequest::_internal_mutable_customer_uid() {
+inline std::string* UnschedulePaymentRequest::_internal_mutable_customer_uid() {
   
   return customer_uid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* UnscheduelPaymentRequest::release_customer_uid() {
-  // @@protoc_insertion_point(field_release:subscribe.UnscheduelPaymentRequest.customer_uid)
+inline std::string* UnschedulePaymentRequest::release_customer_uid() {
+  // @@protoc_insertion_point(field_release:subscribe.UnschedulePaymentRequest.customer_uid)
   return customer_uid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void UnscheduelPaymentRequest::set_allocated_customer_uid(std::string* customer_uid) {
+inline void UnschedulePaymentRequest::set_allocated_customer_uid(std::string* customer_uid) {
   if (customer_uid != nullptr) {
     
   } else {
@@ -7666,80 +7666,80 @@ inline void UnscheduelPaymentRequest::set_allocated_customer_uid(std::string* cu
   }
   customer_uid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), customer_uid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:subscribe.UnscheduelPaymentRequest.customer_uid)
+  // @@protoc_insertion_point(field_set_allocated:subscribe.UnschedulePaymentRequest.customer_uid)
 }
 
 // repeated string merchant_uid = 2;
-inline int UnscheduelPaymentRequest::_internal_merchant_uid_size() const {
+inline int UnschedulePaymentRequest::_internal_merchant_uid_size() const {
   return merchant_uid_.size();
 }
-inline int UnscheduelPaymentRequest::merchant_uid_size() const {
+inline int UnschedulePaymentRequest::merchant_uid_size() const {
   return _internal_merchant_uid_size();
 }
-inline void UnscheduelPaymentRequest::clear_merchant_uid() {
+inline void UnschedulePaymentRequest::clear_merchant_uid() {
   merchant_uid_.Clear();
 }
-inline std::string* UnscheduelPaymentRequest::add_merchant_uid() {
-  // @@protoc_insertion_point(field_add_mutable:subscribe.UnscheduelPaymentRequest.merchant_uid)
+inline std::string* UnschedulePaymentRequest::add_merchant_uid() {
+  // @@protoc_insertion_point(field_add_mutable:subscribe.UnschedulePaymentRequest.merchant_uid)
   return _internal_add_merchant_uid();
 }
-inline const std::string& UnscheduelPaymentRequest::_internal_merchant_uid(int index) const {
+inline const std::string& UnschedulePaymentRequest::_internal_merchant_uid(int index) const {
   return merchant_uid_.Get(index);
 }
-inline const std::string& UnscheduelPaymentRequest::merchant_uid(int index) const {
-  // @@protoc_insertion_point(field_get:subscribe.UnscheduelPaymentRequest.merchant_uid)
+inline const std::string& UnschedulePaymentRequest::merchant_uid(int index) const {
+  // @@protoc_insertion_point(field_get:subscribe.UnschedulePaymentRequest.merchant_uid)
   return _internal_merchant_uid(index);
 }
-inline std::string* UnscheduelPaymentRequest::mutable_merchant_uid(int index) {
-  // @@protoc_insertion_point(field_mutable:subscribe.UnscheduelPaymentRequest.merchant_uid)
+inline std::string* UnschedulePaymentRequest::mutable_merchant_uid(int index) {
+  // @@protoc_insertion_point(field_mutable:subscribe.UnschedulePaymentRequest.merchant_uid)
   return merchant_uid_.Mutable(index);
 }
-inline void UnscheduelPaymentRequest::set_merchant_uid(int index, const std::string& value) {
-  // @@protoc_insertion_point(field_set:subscribe.UnscheduelPaymentRequest.merchant_uid)
+inline void UnschedulePaymentRequest::set_merchant_uid(int index, const std::string& value) {
+  // @@protoc_insertion_point(field_set:subscribe.UnschedulePaymentRequest.merchant_uid)
   merchant_uid_.Mutable(index)->assign(value);
 }
-inline void UnscheduelPaymentRequest::set_merchant_uid(int index, std::string&& value) {
-  // @@protoc_insertion_point(field_set:subscribe.UnscheduelPaymentRequest.merchant_uid)
+inline void UnschedulePaymentRequest::set_merchant_uid(int index, std::string&& value) {
+  // @@protoc_insertion_point(field_set:subscribe.UnschedulePaymentRequest.merchant_uid)
   merchant_uid_.Mutable(index)->assign(std::move(value));
 }
-inline void UnscheduelPaymentRequest::set_merchant_uid(int index, const char* value) {
+inline void UnschedulePaymentRequest::set_merchant_uid(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   merchant_uid_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:subscribe.UnscheduelPaymentRequest.merchant_uid)
+  // @@protoc_insertion_point(field_set_char:subscribe.UnschedulePaymentRequest.merchant_uid)
 }
-inline void UnscheduelPaymentRequest::set_merchant_uid(int index, const char* value, size_t size) {
+inline void UnschedulePaymentRequest::set_merchant_uid(int index, const char* value, size_t size) {
   merchant_uid_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:subscribe.UnscheduelPaymentRequest.merchant_uid)
+  // @@protoc_insertion_point(field_set_pointer:subscribe.UnschedulePaymentRequest.merchant_uid)
 }
-inline std::string* UnscheduelPaymentRequest::_internal_add_merchant_uid() {
+inline std::string* UnschedulePaymentRequest::_internal_add_merchant_uid() {
   return merchant_uid_.Add();
 }
-inline void UnscheduelPaymentRequest::add_merchant_uid(const std::string& value) {
+inline void UnschedulePaymentRequest::add_merchant_uid(const std::string& value) {
   merchant_uid_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:subscribe.UnscheduelPaymentRequest.merchant_uid)
+  // @@protoc_insertion_point(field_add:subscribe.UnschedulePaymentRequest.merchant_uid)
 }
-inline void UnscheduelPaymentRequest::add_merchant_uid(std::string&& value) {
+inline void UnschedulePaymentRequest::add_merchant_uid(std::string&& value) {
   merchant_uid_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:subscribe.UnscheduelPaymentRequest.merchant_uid)
+  // @@protoc_insertion_point(field_add:subscribe.UnschedulePaymentRequest.merchant_uid)
 }
-inline void UnscheduelPaymentRequest::add_merchant_uid(const char* value) {
+inline void UnschedulePaymentRequest::add_merchant_uid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   merchant_uid_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:subscribe.UnscheduelPaymentRequest.merchant_uid)
+  // @@protoc_insertion_point(field_add_char:subscribe.UnschedulePaymentRequest.merchant_uid)
 }
-inline void UnscheduelPaymentRequest::add_merchant_uid(const char* value, size_t size) {
+inline void UnschedulePaymentRequest::add_merchant_uid(const char* value, size_t size) {
   merchant_uid_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:subscribe.UnscheduelPaymentRequest.merchant_uid)
+  // @@protoc_insertion_point(field_add_pointer:subscribe.UnschedulePaymentRequest.merchant_uid)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-UnscheduelPaymentRequest::merchant_uid() const {
-  // @@protoc_insertion_point(field_list:subscribe.UnscheduelPaymentRequest.merchant_uid)
+UnschedulePaymentRequest::merchant_uid() const {
+  // @@protoc_insertion_point(field_list:subscribe.UnschedulePaymentRequest.merchant_uid)
   return merchant_uid_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-UnscheduelPaymentRequest::mutable_merchant_uid() {
-  // @@protoc_insertion_point(field_mutable_list:subscribe.UnscheduelPaymentRequest.merchant_uid)
+UnschedulePaymentRequest::mutable_merchant_uid() {
+  // @@protoc_insertion_point(field_mutable_list:subscribe.UnschedulePaymentRequest.merchant_uid)
   return &merchant_uid_;
 }
 

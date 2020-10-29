@@ -100,7 +100,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :message, :string, 2
       repeated :response, :message, 3, "subscribe.UnitSchedulePaymentResponse"
     end
-    add_message "subscribe.UnscheduelPaymentRequest" do
+    add_message "subscribe.UnschedulePaymentRequest" do
       optional :customer_uid, :string, 1
       repeated :merchant_uid, :string, 2
     end
@@ -147,7 +147,7 @@ module Subscribe
   UnitSchedulePaymentResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("subscribe.UnitSchedulePaymentResponse").msgclass
   SchedulePayemntRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("subscribe.SchedulePayemntRequest").msgclass
   SchedulePaymentResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("subscribe.SchedulePaymentResponse").msgclass
-  UnscheduelPaymentRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("subscribe.UnscheduelPaymentRequest").msgclass
+  UnschedulePaymentRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("subscribe.UnschedulePaymentRequest").msgclass
   UnschedulePaymentResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("subscribe.UnschedulePaymentResponse").msgclass
   GetPaymentScheduleRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("subscribe.GetPaymentScheduleRequest").msgclass
   GetPaymentScheduleResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("subscribe.GetPaymentScheduleResponse").msgclass

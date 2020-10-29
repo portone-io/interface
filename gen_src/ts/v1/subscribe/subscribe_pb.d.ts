@@ -449,7 +449,7 @@ export namespace SchedulePaymentResponse {
   }
 }
 
-export class UnscheduelPaymentRequest extends jspb.Message {
+export class UnschedulePaymentRequest extends jspb.Message {
   getCustomerUid(): string;
   setCustomerUid(value: string): void;
 
@@ -459,16 +459,16 @@ export class UnscheduelPaymentRequest extends jspb.Message {
   addMerchantUid(value: string, index?: number): string;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): UnscheduelPaymentRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: UnscheduelPaymentRequest): UnscheduelPaymentRequest.AsObject;
+  toObject(includeInstance?: boolean): UnschedulePaymentRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: UnschedulePaymentRequest): UnschedulePaymentRequest.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: UnscheduelPaymentRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): UnscheduelPaymentRequest;
-  static deserializeBinaryFromReader(message: UnscheduelPaymentRequest, reader: jspb.BinaryReader): UnscheduelPaymentRequest;
+  static serializeBinaryToWriter(message: UnschedulePaymentRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UnschedulePaymentRequest;
+  static deserializeBinaryFromReader(message: UnschedulePaymentRequest, reader: jspb.BinaryReader): UnschedulePaymentRequest;
 }
 
-export namespace UnscheduelPaymentRequest {
+export namespace UnschedulePaymentRequest {
   export type AsObject = {
     customerUid: string,
     merchantUidList: Array<string>,

@@ -955,7 +955,7 @@ func (x *SchedulePaymentResponse) GetResponse() []*UnitSchedulePaymentResponse {
 	return nil
 }
 
-type UnscheduelPaymentRequest struct {
+type UnschedulePaymentRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -964,8 +964,8 @@ type UnscheduelPaymentRequest struct {
 	MerchantUid []string `protobuf:"bytes,2,rep,name=merchant_uid,json=merchantUid,proto3" json:"merchant_uid,omitempty"`
 }
 
-func (x *UnscheduelPaymentRequest) Reset() {
-	*x = UnscheduelPaymentRequest{}
+func (x *UnschedulePaymentRequest) Reset() {
+	*x = UnschedulePaymentRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_v1_subscribe_subscribe_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -973,13 +973,13 @@ func (x *UnscheduelPaymentRequest) Reset() {
 	}
 }
 
-func (x *UnscheduelPaymentRequest) String() string {
+func (x *UnschedulePaymentRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*UnscheduelPaymentRequest) ProtoMessage() {}
+func (*UnschedulePaymentRequest) ProtoMessage() {}
 
-func (x *UnscheduelPaymentRequest) ProtoReflect() protoreflect.Message {
+func (x *UnschedulePaymentRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_v1_subscribe_subscribe_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -991,19 +991,19 @@ func (x *UnscheduelPaymentRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use UnscheduelPaymentRequest.ProtoReflect.Descriptor instead.
-func (*UnscheduelPaymentRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use UnschedulePaymentRequest.ProtoReflect.Descriptor instead.
+func (*UnschedulePaymentRequest) Descriptor() ([]byte, []int) {
 	return file_v1_subscribe_subscribe_proto_rawDescGZIP(), []int{8}
 }
 
-func (x *UnscheduelPaymentRequest) GetCustomerUid() string {
+func (x *UnschedulePaymentRequest) GetCustomerUid() string {
 	if x != nil {
 		return x.CustomerUid
 	}
 	return ""
 }
 
-func (x *UnscheduelPaymentRequest) GetMerchantUid() []string {
+func (x *UnschedulePaymentRequest) GetMerchantUid() []string {
 	if x != nil {
 		return x.MerchantUid
 	}
@@ -1572,7 +1572,7 @@ var file_v1_subscribe_subscribe_proto_rawDesc = []byte{
 	0x69, 0x62, 0x65, 0x2e, 0x55, 0x6e, 0x69, 0x74, 0x53, 0x63, 0x68, 0x65, 0x64, 0x75, 0x6c, 0x65,
 	0x50, 0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x52,
 	0x08, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x60, 0x0a, 0x18, 0x55, 0x6e, 0x73,
-	0x63, 0x68, 0x65, 0x64, 0x75, 0x65, 0x6c, 0x50, 0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65,
+	0x63, 0x68, 0x65, 0x64, 0x75, 0x6c, 0x65, 0x50, 0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x21, 0x0a, 0x0c, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65,
 	0x72, 0x5f, 0x75, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x63, 0x75, 0x73,
 	0x74, 0x6f, 0x6d, 0x65, 0x72, 0x55, 0x69, 0x64, 0x12, 0x21, 0x0a, 0x0c, 0x6d, 0x65, 0x72, 0x63,
@@ -1661,7 +1661,7 @@ var file_v1_subscribe_subscribe_proto_rawDesc = []byte{
 	0x68, 0x65, 0x64, 0x75, 0x6c, 0x65, 0x3a, 0x01, 0x2a, 0x12, 0x93, 0x01, 0x0a, 0x14, 0x55, 0x6e,
 	0x73, 0x63, 0x68, 0x65, 0x64, 0x75, 0x6c, 0x65, 0x50, 0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x52,
 	0x50, 0x43, 0x12, 0x23, 0x2e, 0x73, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x55,
-	0x6e, 0x73, 0x63, 0x68, 0x65, 0x64, 0x75, 0x65, 0x6c, 0x50, 0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74,
+	0x6e, 0x73, 0x63, 0x68, 0x65, 0x64, 0x75, 0x6c, 0x65, 0x50, 0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74,
 	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x24, 0x2e, 0x73, 0x75, 0x62, 0x73, 0x63, 0x72,
 	0x69, 0x62, 0x65, 0x2e, 0x55, 0x6e, 0x73, 0x63, 0x68, 0x65, 0x64, 0x75, 0x6c, 0x65, 0x50, 0x61,
 	0x79, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x30, 0x82,
@@ -1721,7 +1721,7 @@ var file_v1_subscribe_subscribe_proto_goTypes = []interface{}{
 	(*UnitSchedulePaymentResponse)(nil),            // 5: subscribe.UnitSchedulePaymentResponse
 	(*SchedulePayemntRequest)(nil),                 // 6: subscribe.SchedulePayemntRequest
 	(*SchedulePaymentResponse)(nil),                // 7: subscribe.SchedulePaymentResponse
-	(*UnscheduelPaymentRequest)(nil),               // 8: subscribe.UnscheduelPaymentRequest
+	(*UnschedulePaymentRequest)(nil),               // 8: subscribe.UnschedulePaymentRequest
 	(*UnschedulePaymentResponse)(nil),              // 9: subscribe.UnschedulePaymentResponse
 	(*GetPaymentScheduleRequest)(nil),              // 10: subscribe.GetPaymentScheduleRequest
 	(*GetPaymentScheduleResponse)(nil),             // 11: subscribe.GetPaymentScheduleResponse
@@ -1742,7 +1742,7 @@ var file_v1_subscribe_subscribe_proto_depIdxs = []int32{
 	0,  // 8: subscribe.SubscribeService.OnetimePaymentRPC:input_type -> subscribe.OnetimePaymentRequest
 	2,  // 9: subscribe.SubscribeService.AgainPaymentRPC:input_type -> subscribe.AgainPaymentRequest
 	6,  // 10: subscribe.SubscribeService.SchedulePaymentRPC:input_type -> subscribe.SchedulePayemntRequest
-	8,  // 11: subscribe.SubscribeService.UnschedulePaymentRPC:input_type -> subscribe.UnscheduelPaymentRequest
+	8,  // 11: subscribe.SubscribeService.UnschedulePaymentRPC:input_type -> subscribe.UnschedulePaymentRequest
 	10, // 12: subscribe.SubscribeService.GetScheduledPaymentRPC:input_type -> subscribe.GetPaymentScheduleRequest
 	12, // 13: subscribe.SubscribeService.GetScheduledPaymentByCustomerUidRPC:input_type -> subscribe.GetPaymentScheduleByCustomerRequest
 	1,  // 14: subscribe.SubscribeService.OnetimePaymentRPC:output_type -> subscribe.OnetimePaymentResponse
@@ -1861,7 +1861,7 @@ func file_v1_subscribe_subscribe_proto_init() {
 			}
 		}
 		file_v1_subscribe_subscribe_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UnscheduelPaymentRequest); i {
+			switch v := v.(*UnschedulePaymentRequest); i {
 			case 0:
 				return &v.state
 			case 1:

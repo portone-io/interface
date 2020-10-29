@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>subscribe.UnscheduelPaymentRequest</code>
+ * Generated from protobuf message <code>subscribe.UnschedulePaymentRequest</code>
  */
-class UnscheduelPaymentRequest extends \Google\Protobuf\Internal\Message
+class UnschedulePaymentRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string customer_uid = 1;</code>

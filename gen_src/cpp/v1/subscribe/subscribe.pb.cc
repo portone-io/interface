@@ -51,10 +51,10 @@ class SchedulePaymentResponseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SchedulePaymentResponse> _instance;
 } _SchedulePaymentResponse_default_instance_;
-class UnscheduelPaymentRequestDefaultTypeInternal {
+class UnschedulePaymentRequestDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UnscheduelPaymentRequest> _instance;
-} _UnscheduelPaymentRequest_default_instance_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UnschedulePaymentRequest> _instance;
+} _UnschedulePaymentRequest_default_instance_;
 class UnschedulePaymentResponseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UnschedulePaymentResponse> _instance;
@@ -269,19 +269,19 @@ static void InitDefaultsscc_info_UnitSchedulePaymentResponse_v1_2fsubscribe_2fsu
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UnitSchedulePaymentResponse_v1_2fsubscribe_2fsubscribe_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_UnitSchedulePaymentResponse_v1_2fsubscribe_2fsubscribe_2eproto}, {}};
 
-static void InitDefaultsscc_info_UnscheduelPaymentRequest_v1_2fsubscribe_2fsubscribe_2eproto() {
+static void InitDefaultsscc_info_UnschedulePaymentRequest_v1_2fsubscribe_2fsubscribe_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::subscribe::_UnscheduelPaymentRequest_default_instance_;
-    new (ptr) ::subscribe::UnscheduelPaymentRequest();
+    void* ptr = &::subscribe::_UnschedulePaymentRequest_default_instance_;
+    new (ptr) ::subscribe::UnschedulePaymentRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::subscribe::UnscheduelPaymentRequest::InitAsDefaultInstance();
+  ::subscribe::UnschedulePaymentRequest::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UnscheduelPaymentRequest_v1_2fsubscribe_2fsubscribe_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_UnscheduelPaymentRequest_v1_2fsubscribe_2fsubscribe_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UnschedulePaymentRequest_v1_2fsubscribe_2fsubscribe_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_UnschedulePaymentRequest_v1_2fsubscribe_2fsubscribe_2eproto}, {}};
 
 static void InitDefaultsscc_info_UnschedulePaymentResponse_v1_2fsubscribe_2fsubscribe_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -421,12 +421,12 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_v1_2fsubscribe_2fsubscribe_2ep
   PROTOBUF_FIELD_OFFSET(::subscribe::SchedulePaymentResponse, message_),
   PROTOBUF_FIELD_OFFSET(::subscribe::SchedulePaymentResponse, response_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::subscribe::UnscheduelPaymentRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::subscribe::UnschedulePaymentRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::subscribe::UnscheduelPaymentRequest, customer_uid_),
-  PROTOBUF_FIELD_OFFSET(::subscribe::UnscheduelPaymentRequest, merchant_uid_),
+  PROTOBUF_FIELD_OFFSET(::subscribe::UnschedulePaymentRequest, customer_uid_),
+  PROTOBUF_FIELD_OFFSET(::subscribe::UnschedulePaymentRequest, merchant_uid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::subscribe::UnschedulePaymentResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -486,7 +486,7 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 74, -1, sizeof(::subscribe::UnitSchedulePaymentResponse)},
   { 96, -1, sizeof(::subscribe::SchedulePayemntRequest)},
   { 109, -1, sizeof(::subscribe::SchedulePaymentResponse)},
-  { 117, -1, sizeof(::subscribe::UnscheduelPaymentRequest)},
+  { 117, -1, sizeof(::subscribe::UnschedulePaymentRequest)},
   { 124, -1, sizeof(::subscribe::UnschedulePaymentResponse)},
   { 132, -1, sizeof(::subscribe::GetPaymentScheduleRequest)},
   { 138, -1, sizeof(::subscribe::GetPaymentScheduleResponse)},
@@ -504,7 +504,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::subscribe::_UnitSchedulePaymentResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::subscribe::_SchedulePayemntRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::subscribe::_SchedulePaymentResponse_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::subscribe::_UnscheduelPaymentRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::subscribe::_UnschedulePaymentRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::subscribe::_UnschedulePaymentResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::subscribe::_GetPaymentScheduleRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::subscribe::_GetPaymentScheduleResponse_default_instance_),
@@ -562,7 +562,7 @@ const char descriptor_table_protodef_v1_2fsubscribe_2fsubscribe_2eproto[] PROTOB
   "duleParam\"r\n\027SchedulePaymentResponse\022\014\n\004"
   "code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0228\n\010response\030"
   "\003 \003(\0132&.subscribe.UnitSchedulePaymentRes"
-  "ponse\"F\n\030UnscheduelPaymentRequest\022\024\n\014cus"
+  "ponse\"F\n\030UnschedulePaymentRequest\022\024\n\014cus"
   "tomer_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \003(\t\"t\n"
   "\031UnschedulePaymentResponse\022\014\n\004code\030\001 \001(\005"
   "\022\017\n\007message\030\002 \001(\t\0228\n\010response\030\003 \003(\0132&.su"
@@ -593,7 +593,7 @@ const char descriptor_table_protodef_v1_2fsubscribe_2fsubscribe_2eproto[] PROTOB
   "st\032\".subscribe.SchedulePaymentResponse\"."
   "\202\323\344\223\002(\"#/api/v1/subscribe/payments/sched"
   "ule:\001*\022\223\001\n\024UnschedulePaymentRPC\022#.subscr"
-  "ibe.UnscheduelPaymentRequest\032$.subscribe"
+  "ibe.UnschedulePaymentRequest\032$.subscribe"
   ".UnschedulePaymentResponse\"0\202\323\344\223\002*\"%/api"
   "/v1/subscribe/payments/unschedule:\001*\022\244\001\n"
   "\026GetScheduledPaymentRPC\022$.subscribe.GetP"
@@ -627,7 +627,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_
   &scc_info_SchedulePayemntRequest_v1_2fsubscribe_2fsubscribe_2eproto.base,
   &scc_info_SchedulePaymentResponse_v1_2fsubscribe_2fsubscribe_2eproto.base,
   &scc_info_UnitSchedulePaymentResponse_v1_2fsubscribe_2fsubscribe_2eproto.base,
-  &scc_info_UnscheduelPaymentRequest_v1_2fsubscribe_2fsubscribe_2eproto.base,
+  &scc_info_UnschedulePaymentRequest_v1_2fsubscribe_2fsubscribe_2eproto.base,
   &scc_info_UnschedulePaymentResponse_v1_2fsubscribe_2fsubscribe_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v1_2fsubscribe_2fsubscribe_2eproto_once;
@@ -4747,20 +4747,20 @@ void SchedulePaymentResponse::InternalSwap(SchedulePaymentResponse* other) {
 
 // ===================================================================
 
-void UnscheduelPaymentRequest::InitAsDefaultInstance() {
+void UnschedulePaymentRequest::InitAsDefaultInstance() {
 }
-class UnscheduelPaymentRequest::_Internal {
+class UnschedulePaymentRequest::_Internal {
  public:
 };
 
-UnscheduelPaymentRequest::UnscheduelPaymentRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+UnschedulePaymentRequest::UnschedulePaymentRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena),
   merchant_uid_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:subscribe.UnscheduelPaymentRequest)
+  // @@protoc_insertion_point(arena_constructor:subscribe.UnschedulePaymentRequest)
 }
-UnscheduelPaymentRequest::UnscheduelPaymentRequest(const UnscheduelPaymentRequest& from)
+UnschedulePaymentRequest::UnschedulePaymentRequest(const UnschedulePaymentRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       merchant_uid_(from.merchant_uid_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -4769,42 +4769,42 @@ UnscheduelPaymentRequest::UnscheduelPaymentRequest(const UnscheduelPaymentReques
     customer_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_uid(),
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:subscribe.UnscheduelPaymentRequest)
+  // @@protoc_insertion_point(copy_constructor:subscribe.UnschedulePaymentRequest)
 }
 
-void UnscheduelPaymentRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_UnscheduelPaymentRequest_v1_2fsubscribe_2fsubscribe_2eproto.base);
+void UnschedulePaymentRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_UnschedulePaymentRequest_v1_2fsubscribe_2fsubscribe_2eproto.base);
   customer_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-UnscheduelPaymentRequest::~UnscheduelPaymentRequest() {
-  // @@protoc_insertion_point(destructor:subscribe.UnscheduelPaymentRequest)
+UnschedulePaymentRequest::~UnschedulePaymentRequest() {
+  // @@protoc_insertion_point(destructor:subscribe.UnschedulePaymentRequest)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void UnscheduelPaymentRequest::SharedDtor() {
+void UnschedulePaymentRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   customer_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void UnscheduelPaymentRequest::ArenaDtor(void* object) {
-  UnscheduelPaymentRequest* _this = reinterpret_cast< UnscheduelPaymentRequest* >(object);
+void UnschedulePaymentRequest::ArenaDtor(void* object) {
+  UnschedulePaymentRequest* _this = reinterpret_cast< UnschedulePaymentRequest* >(object);
   (void)_this;
 }
-void UnscheduelPaymentRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void UnschedulePaymentRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void UnscheduelPaymentRequest::SetCachedSize(int size) const {
+void UnschedulePaymentRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const UnscheduelPaymentRequest& UnscheduelPaymentRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UnscheduelPaymentRequest_v1_2fsubscribe_2fsubscribe_2eproto.base);
+const UnschedulePaymentRequest& UnschedulePaymentRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UnschedulePaymentRequest_v1_2fsubscribe_2fsubscribe_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void UnscheduelPaymentRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:subscribe.UnscheduelPaymentRequest)
+void UnschedulePaymentRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:subscribe.UnschedulePaymentRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4814,7 +4814,7 @@ void UnscheduelPaymentRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* UnscheduelPaymentRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* UnschedulePaymentRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
@@ -4827,7 +4827,7 @@ const char* UnscheduelPaymentRequest::_InternalParse(const char* ptr, ::PROTOBUF
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_customer_uid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "subscribe.UnscheduelPaymentRequest.customer_uid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "subscribe.UnschedulePaymentRequest.customer_uid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4839,7 +4839,7 @@ const char* UnscheduelPaymentRequest::_InternalParse(const char* ptr, ::PROTOBUF
             ptr += 1;
             auto str = _internal_add_merchant_uid();
             ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "subscribe.UnscheduelPaymentRequest.merchant_uid"));
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "subscribe.UnschedulePaymentRequest.merchant_uid"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
@@ -4867,9 +4867,9 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* UnscheduelPaymentRequest::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* UnschedulePaymentRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:subscribe.UnscheduelPaymentRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:subscribe.UnschedulePaymentRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4878,7 +4878,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_uid().data(), static_cast<int>(this->_internal_customer_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "subscribe.UnscheduelPaymentRequest.customer_uid");
+      "subscribe.UnschedulePaymentRequest.customer_uid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_customer_uid(), target);
   }
@@ -4889,7 +4889,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "subscribe.UnscheduelPaymentRequest.merchant_uid");
+      "subscribe.UnschedulePaymentRequest.merchant_uid");
     target = stream->WriteString(2, s, target);
   }
 
@@ -4897,12 +4897,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:subscribe.UnscheduelPaymentRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:subscribe.UnschedulePaymentRequest)
   return target;
 }
 
-size_t UnscheduelPaymentRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:subscribe.UnscheduelPaymentRequest)
+size_t UnschedulePaymentRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:subscribe.UnschedulePaymentRequest)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -4933,23 +4933,23 @@ size_t UnscheduelPaymentRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void UnscheduelPaymentRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe.UnscheduelPaymentRequest)
+void UnschedulePaymentRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:subscribe.UnschedulePaymentRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  const UnscheduelPaymentRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<UnscheduelPaymentRequest>(
+  const UnschedulePaymentRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<UnschedulePaymentRequest>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe.UnscheduelPaymentRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe.UnschedulePaymentRequest)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe.UnscheduelPaymentRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe.UnschedulePaymentRequest)
     MergeFrom(*source);
   }
 }
 
-void UnscheduelPaymentRequest::MergeFrom(const UnscheduelPaymentRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:subscribe.UnscheduelPaymentRequest)
+void UnschedulePaymentRequest::MergeFrom(const UnschedulePaymentRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:subscribe.UnschedulePaymentRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -4961,32 +4961,32 @@ void UnscheduelPaymentRequest::MergeFrom(const UnscheduelPaymentRequest& from) {
   }
 }
 
-void UnscheduelPaymentRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe.UnscheduelPaymentRequest)
+void UnschedulePaymentRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:subscribe.UnschedulePaymentRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void UnscheduelPaymentRequest::CopyFrom(const UnscheduelPaymentRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:subscribe.UnscheduelPaymentRequest)
+void UnschedulePaymentRequest::CopyFrom(const UnschedulePaymentRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:subscribe.UnschedulePaymentRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool UnscheduelPaymentRequest::IsInitialized() const {
+bool UnschedulePaymentRequest::IsInitialized() const {
   return true;
 }
 
-void UnscheduelPaymentRequest::InternalSwap(UnscheduelPaymentRequest* other) {
+void UnschedulePaymentRequest::InternalSwap(UnschedulePaymentRequest* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   merchant_uid_.InternalSwap(&other->merchant_uid_);
   customer_uid_.Swap(&other->customer_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata UnscheduelPaymentRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata UnschedulePaymentRequest::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -6683,8 +6683,8 @@ template<> PROTOBUF_NOINLINE ::subscribe::SchedulePayemntRequest* Arena::CreateM
 template<> PROTOBUF_NOINLINE ::subscribe::SchedulePaymentResponse* Arena::CreateMaybeMessage< ::subscribe::SchedulePaymentResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::subscribe::SchedulePaymentResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::subscribe::UnscheduelPaymentRequest* Arena::CreateMaybeMessage< ::subscribe::UnscheduelPaymentRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::subscribe::UnscheduelPaymentRequest >(arena);
+template<> PROTOBUF_NOINLINE ::subscribe::UnschedulePaymentRequest* Arena::CreateMaybeMessage< ::subscribe::UnschedulePaymentRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::subscribe::UnschedulePaymentRequest >(arena);
 }
 template<> PROTOBUF_NOINLINE ::subscribe::UnschedulePaymentResponse* Arena::CreateMaybeMessage< ::subscribe::UnschedulePaymentResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::subscribe::UnschedulePaymentResponse >(arena);

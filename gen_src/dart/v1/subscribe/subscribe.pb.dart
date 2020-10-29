@@ -942,27 +942,27 @@ class SchedulePaymentResponse extends $pb.GeneratedMessage {
   $core.List<UnitSchedulePaymentResponse> get response => $_getList(2);
 }
 
-class UnscheduelPaymentRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UnscheduelPaymentRequest', package: const $pb.PackageName('subscribe'), createEmptyInstance: create)
+class UnschedulePaymentRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UnschedulePaymentRequest', package: const $pb.PackageName('subscribe'), createEmptyInstance: create)
     ..aOS(1, 'customerUid')
     ..pPS(2, 'merchantUid')
     ..hasRequiredFields = false
   ;
 
-  UnscheduelPaymentRequest._() : super();
-  factory UnscheduelPaymentRequest() => create();
-  factory UnscheduelPaymentRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory UnscheduelPaymentRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  UnscheduelPaymentRequest clone() => UnscheduelPaymentRequest()..mergeFromMessage(this);
-  UnscheduelPaymentRequest copyWith(void Function(UnscheduelPaymentRequest) updates) => super.copyWith((message) => updates(message as UnscheduelPaymentRequest));
+  UnschedulePaymentRequest._() : super();
+  factory UnschedulePaymentRequest() => create();
+  factory UnschedulePaymentRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UnschedulePaymentRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  UnschedulePaymentRequest clone() => UnschedulePaymentRequest()..mergeFromMessage(this);
+  UnschedulePaymentRequest copyWith(void Function(UnschedulePaymentRequest) updates) => super.copyWith((message) => updates(message as UnschedulePaymentRequest));
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static UnscheduelPaymentRequest create() => UnscheduelPaymentRequest._();
-  UnscheduelPaymentRequest createEmptyInstance() => create();
-  static $pb.PbList<UnscheduelPaymentRequest> createRepeated() => $pb.PbList<UnscheduelPaymentRequest>();
+  static UnschedulePaymentRequest create() => UnschedulePaymentRequest._();
+  UnschedulePaymentRequest createEmptyInstance() => create();
+  static $pb.PbList<UnschedulePaymentRequest> createRepeated() => $pb.PbList<UnschedulePaymentRequest>();
   @$core.pragma('dart2js:noInline')
-  static UnscheduelPaymentRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnscheduelPaymentRequest>(create);
-  static UnscheduelPaymentRequest _defaultInstance;
+  static UnschedulePaymentRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnschedulePaymentRequest>(create);
+  static UnschedulePaymentRequest _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get customerUid => $_getSZ(0);
@@ -1301,7 +1301,7 @@ class SubscribeServiceApi {
     var emptyResponse = SchedulePaymentResponse();
     return _client.invoke<SchedulePaymentResponse>(ctx, 'SubscribeService', 'SchedulePaymentRPC', request, emptyResponse);
   }
-  $async.Future<UnschedulePaymentResponse> unschedulePaymentRPC($pb.ClientContext ctx, UnscheduelPaymentRequest request) {
+  $async.Future<UnschedulePaymentResponse> unschedulePaymentRPC($pb.ClientContext ctx, UnschedulePaymentRequest request) {
     var emptyResponse = UnschedulePaymentResponse();
     return _client.invoke<UnschedulePaymentResponse>(ctx, 'SubscribeService', 'UnschedulePaymentRPC', request, emptyResponse);
   }

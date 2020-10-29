@@ -13946,8 +13946,8 @@ public final class Subscribe {
 
   }
 
-  public interface UnscheduelPaymentRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:subscribe.UnscheduelPaymentRequest)
+  public interface UnschedulePaymentRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:subscribe.UnschedulePaymentRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -13988,18 +13988,18 @@ public final class Subscribe {
         getMerchantUidBytes(int index);
   }
   /**
-   * Protobuf type {@code subscribe.UnscheduelPaymentRequest}
+   * Protobuf type {@code subscribe.UnschedulePaymentRequest}
    */
-  public static final class UnscheduelPaymentRequest extends
+  public static final class UnschedulePaymentRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:subscribe.UnscheduelPaymentRequest)
-      UnscheduelPaymentRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:subscribe.UnschedulePaymentRequest)
+      UnschedulePaymentRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use UnscheduelPaymentRequest.newBuilder() to construct.
-    private UnscheduelPaymentRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use UnschedulePaymentRequest.newBuilder() to construct.
+    private UnschedulePaymentRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private UnscheduelPaymentRequest() {
+    private UnschedulePaymentRequest() {
       customerUid_ = "";
       merchantUid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
@@ -14008,7 +14008,7 @@ public final class Subscribe {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new UnscheduelPaymentRequest();
+      return new UnschedulePaymentRequest();
     }
 
     @java.lang.Override
@@ -14016,7 +14016,7 @@ public final class Subscribe {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private UnscheduelPaymentRequest(
+    private UnschedulePaymentRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -14074,15 +14074,15 @@ public final class Subscribe {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return subscribe.Subscribe.internal_static_subscribe_UnscheduelPaymentRequest_descriptor;
+      return subscribe.Subscribe.internal_static_subscribe_UnschedulePaymentRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return subscribe.Subscribe.internal_static_subscribe_UnscheduelPaymentRequest_fieldAccessorTable
+      return subscribe.Subscribe.internal_static_subscribe_UnschedulePaymentRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              subscribe.Subscribe.UnscheduelPaymentRequest.class, subscribe.Subscribe.UnscheduelPaymentRequest.Builder.class);
+              subscribe.Subscribe.UnschedulePaymentRequest.class, subscribe.Subscribe.UnschedulePaymentRequest.Builder.class);
     }
 
     public static final int CUSTOMER_UID_FIELD_NUMBER = 1;
@@ -14208,10 +14208,10 @@ public final class Subscribe {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof subscribe.Subscribe.UnscheduelPaymentRequest)) {
+      if (!(obj instanceof subscribe.Subscribe.UnschedulePaymentRequest)) {
         return super.equals(obj);
       }
-      subscribe.Subscribe.UnscheduelPaymentRequest other = (subscribe.Subscribe.UnscheduelPaymentRequest) obj;
+      subscribe.Subscribe.UnschedulePaymentRequest other = (subscribe.Subscribe.UnschedulePaymentRequest) obj;
 
       if (!getCustomerUid()
           .equals(other.getCustomerUid())) return false;
@@ -14239,69 +14239,69 @@ public final class Subscribe {
       return hash;
     }
 
-    public static subscribe.Subscribe.UnscheduelPaymentRequest parseFrom(
+    public static subscribe.Subscribe.UnschedulePaymentRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static subscribe.Subscribe.UnscheduelPaymentRequest parseFrom(
+    public static subscribe.Subscribe.UnschedulePaymentRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static subscribe.Subscribe.UnscheduelPaymentRequest parseFrom(
+    public static subscribe.Subscribe.UnschedulePaymentRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static subscribe.Subscribe.UnscheduelPaymentRequest parseFrom(
+    public static subscribe.Subscribe.UnschedulePaymentRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static subscribe.Subscribe.UnscheduelPaymentRequest parseFrom(byte[] data)
+    public static subscribe.Subscribe.UnschedulePaymentRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static subscribe.Subscribe.UnscheduelPaymentRequest parseFrom(
+    public static subscribe.Subscribe.UnschedulePaymentRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static subscribe.Subscribe.UnscheduelPaymentRequest parseFrom(java.io.InputStream input)
+    public static subscribe.Subscribe.UnschedulePaymentRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static subscribe.Subscribe.UnscheduelPaymentRequest parseFrom(
+    public static subscribe.Subscribe.UnschedulePaymentRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static subscribe.Subscribe.UnscheduelPaymentRequest parseDelimitedFrom(java.io.InputStream input)
+    public static subscribe.Subscribe.UnschedulePaymentRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static subscribe.Subscribe.UnscheduelPaymentRequest parseDelimitedFrom(
+    public static subscribe.Subscribe.UnschedulePaymentRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static subscribe.Subscribe.UnscheduelPaymentRequest parseFrom(
+    public static subscribe.Subscribe.UnschedulePaymentRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static subscribe.Subscribe.UnscheduelPaymentRequest parseFrom(
+    public static subscribe.Subscribe.UnschedulePaymentRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14314,7 +14314,7 @@ public final class Subscribe {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(subscribe.Subscribe.UnscheduelPaymentRequest prototype) {
+    public static Builder newBuilder(subscribe.Subscribe.UnschedulePaymentRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -14330,26 +14330,26 @@ public final class Subscribe {
       return builder;
     }
     /**
-     * Protobuf type {@code subscribe.UnscheduelPaymentRequest}
+     * Protobuf type {@code subscribe.UnschedulePaymentRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:subscribe.UnscheduelPaymentRequest)
-        subscribe.Subscribe.UnscheduelPaymentRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:subscribe.UnschedulePaymentRequest)
+        subscribe.Subscribe.UnschedulePaymentRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return subscribe.Subscribe.internal_static_subscribe_UnscheduelPaymentRequest_descriptor;
+        return subscribe.Subscribe.internal_static_subscribe_UnschedulePaymentRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return subscribe.Subscribe.internal_static_subscribe_UnscheduelPaymentRequest_fieldAccessorTable
+        return subscribe.Subscribe.internal_static_subscribe_UnschedulePaymentRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                subscribe.Subscribe.UnscheduelPaymentRequest.class, subscribe.Subscribe.UnscheduelPaymentRequest.Builder.class);
+                subscribe.Subscribe.UnschedulePaymentRequest.class, subscribe.Subscribe.UnschedulePaymentRequest.Builder.class);
       }
 
-      // Construct using subscribe.Subscribe.UnscheduelPaymentRequest.newBuilder()
+      // Construct using subscribe.Subscribe.UnschedulePaymentRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -14377,17 +14377,17 @@ public final class Subscribe {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return subscribe.Subscribe.internal_static_subscribe_UnscheduelPaymentRequest_descriptor;
+        return subscribe.Subscribe.internal_static_subscribe_UnschedulePaymentRequest_descriptor;
       }
 
       @java.lang.Override
-      public subscribe.Subscribe.UnscheduelPaymentRequest getDefaultInstanceForType() {
-        return subscribe.Subscribe.UnscheduelPaymentRequest.getDefaultInstance();
+      public subscribe.Subscribe.UnschedulePaymentRequest getDefaultInstanceForType() {
+        return subscribe.Subscribe.UnschedulePaymentRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public subscribe.Subscribe.UnscheduelPaymentRequest build() {
-        subscribe.Subscribe.UnscheduelPaymentRequest result = buildPartial();
+      public subscribe.Subscribe.UnschedulePaymentRequest build() {
+        subscribe.Subscribe.UnschedulePaymentRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -14395,8 +14395,8 @@ public final class Subscribe {
       }
 
       @java.lang.Override
-      public subscribe.Subscribe.UnscheduelPaymentRequest buildPartial() {
-        subscribe.Subscribe.UnscheduelPaymentRequest result = new subscribe.Subscribe.UnscheduelPaymentRequest(this);
+      public subscribe.Subscribe.UnschedulePaymentRequest buildPartial() {
+        subscribe.Subscribe.UnschedulePaymentRequest result = new subscribe.Subscribe.UnschedulePaymentRequest(this);
         int from_bitField0_ = bitField0_;
         result.customerUid_ = customerUid_;
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -14442,16 +14442,16 @@ public final class Subscribe {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof subscribe.Subscribe.UnscheduelPaymentRequest) {
-          return mergeFrom((subscribe.Subscribe.UnscheduelPaymentRequest)other);
+        if (other instanceof subscribe.Subscribe.UnschedulePaymentRequest) {
+          return mergeFrom((subscribe.Subscribe.UnschedulePaymentRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(subscribe.Subscribe.UnscheduelPaymentRequest other) {
-        if (other == subscribe.Subscribe.UnscheduelPaymentRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(subscribe.Subscribe.UnschedulePaymentRequest other) {
+        if (other == subscribe.Subscribe.UnschedulePaymentRequest.getDefaultInstance()) return this;
         if (!other.getCustomerUid().isEmpty()) {
           customerUid_ = other.customerUid_;
           onChanged();
@@ -14481,11 +14481,11 @@ public final class Subscribe {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        subscribe.Subscribe.UnscheduelPaymentRequest parsedMessage = null;
+        subscribe.Subscribe.UnschedulePaymentRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (subscribe.Subscribe.UnscheduelPaymentRequest) e.getUnfinishedMessage();
+          parsedMessage = (subscribe.Subscribe.UnschedulePaymentRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -14694,41 +14694,41 @@ public final class Subscribe {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:subscribe.UnscheduelPaymentRequest)
+      // @@protoc_insertion_point(builder_scope:subscribe.UnschedulePaymentRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:subscribe.UnscheduelPaymentRequest)
-    private static final subscribe.Subscribe.UnscheduelPaymentRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:subscribe.UnschedulePaymentRequest)
+    private static final subscribe.Subscribe.UnschedulePaymentRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new subscribe.Subscribe.UnscheduelPaymentRequest();
+      DEFAULT_INSTANCE = new subscribe.Subscribe.UnschedulePaymentRequest();
     }
 
-    public static subscribe.Subscribe.UnscheduelPaymentRequest getDefaultInstance() {
+    public static subscribe.Subscribe.UnschedulePaymentRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<UnscheduelPaymentRequest>
-        PARSER = new com.google.protobuf.AbstractParser<UnscheduelPaymentRequest>() {
+    private static final com.google.protobuf.Parser<UnschedulePaymentRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UnschedulePaymentRequest>() {
       @java.lang.Override
-      public UnscheduelPaymentRequest parsePartialFrom(
+      public UnschedulePaymentRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new UnscheduelPaymentRequest(input, extensionRegistry);
+        return new UnschedulePaymentRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<UnscheduelPaymentRequest> parser() {
+    public static com.google.protobuf.Parser<UnschedulePaymentRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<UnscheduelPaymentRequest> getParserForType() {
+    public com.google.protobuf.Parser<UnschedulePaymentRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public subscribe.Subscribe.UnscheduelPaymentRequest getDefaultInstanceForType() {
+    public subscribe.Subscribe.UnschedulePaymentRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19969,10 +19969,10 @@ public final class Subscribe {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_subscribe_SchedulePaymentResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_subscribe_UnscheduelPaymentRequest_descriptor;
+    internal_static_subscribe_UnschedulePaymentRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_subscribe_UnscheduelPaymentRequest_fieldAccessorTable;
+      internal_static_subscribe_UnschedulePaymentRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_subscribe_UnschedulePaymentResponse_descriptor;
   private static final 
@@ -20060,7 +20060,7 @@ public final class Subscribe {
       "duleParam\"r\n\027SchedulePaymentResponse\022\014\n\004" +
       "code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0228\n\010response\030" +
       "\003 \003(\0132&.subscribe.UnitSchedulePaymentRes" +
-      "ponse\"F\n\030UnscheduelPaymentRequest\022\024\n\014cus" +
+      "ponse\"F\n\030UnschedulePaymentRequest\022\024\n\014cus" +
       "tomer_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \003(\t\"t\n" +
       "\031UnschedulePaymentResponse\022\014\n\004code\030\001 \001(\005" +
       "\022\017\n\007message\030\002 \001(\t\0228\n\010response\030\003 \003(\0132&.su" +
@@ -20091,7 +20091,7 @@ public final class Subscribe {
       "st\032\".subscribe.SchedulePaymentResponse\"." +
       "\202\323\344\223\002(\"#/api/v1/subscribe/payments/sched" +
       "ule:\001*\022\223\001\n\024UnschedulePaymentRPC\022#.subscr" +
-      "ibe.UnscheduelPaymentRequest\032$.subscribe" +
+      "ibe.UnschedulePaymentRequest\032$.subscribe" +
       ".UnschedulePaymentResponse\"0\202\323\344\223\002*\"%/api" +
       "/v1/subscribe/payments/unschedule:\001*\022\244\001\n" +
       "\026GetScheduledPaymentRPC\022$.subscribe.GetP" +
@@ -20161,11 +20161,11 @@ public final class Subscribe {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_subscribe_SchedulePaymentResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Response", });
-    internal_static_subscribe_UnscheduelPaymentRequest_descriptor =
+    internal_static_subscribe_UnschedulePaymentRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_subscribe_UnscheduelPaymentRequest_fieldAccessorTable = new
+    internal_static_subscribe_UnschedulePaymentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_subscribe_UnscheduelPaymentRequest_descriptor,
+        internal_static_subscribe_UnschedulePaymentRequest_descriptor,
         new java.lang.String[] { "CustomerUid", "MerchantUid", });
     internal_static_subscribe_UnschedulePaymentResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);

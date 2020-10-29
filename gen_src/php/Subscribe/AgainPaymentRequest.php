@@ -22,13 +22,13 @@ class AgainPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     protected $merchant_uid = '';
     /**
-     * Generated from protobuf field <code>double amount = 3;</code>
+     * Generated from protobuf field <code>int32 amount = 3;</code>
      */
-    protected $amount = 0.0;
+    protected $amount = 0;
     /**
-     * Generated from protobuf field <code>double tax_free = 4;</code>
+     * Generated from protobuf field <code>int32 tax_free = 4;</code>
      */
-    protected $tax_free = 0.0;
+    protected $tax_free = 0;
     /**
      * Generated from protobuf field <code>string name = 5;</code>
      */
@@ -78,8 +78,8 @@ class AgainPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $customer_uid
      *     @type string $merchant_uid
-     *     @type float $amount
-     *     @type float $tax_free
+     *     @type int $amount
+     *     @type int $tax_free
      *     @type string $name
      *     @type string $buyer_name
      *     @type string $buyer_email
@@ -142,8 +142,8 @@ class AgainPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>double amount = 3;</code>
-     * @return float
+     * Generated from protobuf field <code>int32 amount = 3;</code>
+     * @return int
      */
     public function getAmount()
     {
@@ -151,21 +151,21 @@ class AgainPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>double amount = 3;</code>
-     * @param float $var
+     * Generated from protobuf field <code>int32 amount = 3;</code>
+     * @param int $var
      * @return $this
      */
     public function setAmount($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkInt32($var);
         $this->amount = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>double tax_free = 4;</code>
-     * @return float
+     * Generated from protobuf field <code>int32 tax_free = 4;</code>
+     * @return int
      */
     public function getTaxFree()
     {
@@ -173,13 +173,13 @@ class AgainPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>double tax_free = 4;</code>
-     * @param float $var
+     * Generated from protobuf field <code>int32 tax_free = 4;</code>
+     * @param int $var
      * @return $this
      */
     public function setTaxFree($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkInt32($var);
         $this->tax_free = $var;
 
         return $this;

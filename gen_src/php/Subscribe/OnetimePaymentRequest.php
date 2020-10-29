@@ -18,13 +18,13 @@ class OnetimePaymentRequest extends \Google\Protobuf\Internal\Message
      */
     protected $merchant_uid = '';
     /**
-     * Generated from protobuf field <code>double amount = 2;</code>
+     * Generated from protobuf field <code>int32 amount = 2;</code>
      */
-    protected $amount = 0.0;
+    protected $amount = 0;
     /**
-     * Generated from protobuf field <code>double tax_free = 3;</code>
+     * Generated from protobuf field <code>int32 tax_free = 3;</code>
      */
-    protected $tax_free = 0.0;
+    protected $tax_free = 0;
     /**
      * Generated from protobuf field <code>string card_number = 4;</code>
      */
@@ -97,8 +97,8 @@ class OnetimePaymentRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $merchant_uid
-     *     @type float $amount
-     *     @type float $tax_free
+     *     @type int $amount
+     *     @type int $tax_free
      *     @type string $card_number
      *     @type string $expiry
      *     @type string $birth
@@ -145,8 +145,8 @@ class OnetimePaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>double amount = 2;</code>
-     * @return float
+     * Generated from protobuf field <code>int32 amount = 2;</code>
+     * @return int
      */
     public function getAmount()
     {
@@ -154,21 +154,21 @@ class OnetimePaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>double amount = 2;</code>
-     * @param float $var
+     * Generated from protobuf field <code>int32 amount = 2;</code>
+     * @param int $var
      * @return $this
      */
     public function setAmount($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkInt32($var);
         $this->amount = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>double tax_free = 3;</code>
-     * @return float
+     * Generated from protobuf field <code>int32 tax_free = 3;</code>
+     * @return int
      */
     public function getTaxFree()
     {
@@ -176,13 +176,13 @@ class OnetimePaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>double tax_free = 3;</code>
-     * @param float $var
+     * Generated from protobuf field <code>int32 tax_free = 3;</code>
+     * @param int $var
      * @return $this
      */
     public function setTaxFree($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkInt32($var);
         $this->tax_free = $var;
 
         return $this;

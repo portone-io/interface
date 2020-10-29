@@ -32,25 +32,25 @@ type OnetimePaymentRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	MerchantUid            string  `protobuf:"bytes,1,opt,name=merchant_uid,json=merchantUid,proto3" json:"merchant_uid,omitempty"`
-	Amount                 float64 `protobuf:"fixed64,2,opt,name=amount,proto3" json:"amount,omitempty"`
-	TaxFree                float64 `protobuf:"fixed64,3,opt,name=tax_free,json=taxFree,proto3" json:"tax_free,omitempty"`
-	CardNumber             string  `protobuf:"bytes,4,opt,name=card_number,json=cardNumber,proto3" json:"card_number,omitempty"`
-	Expiry                 string  `protobuf:"bytes,5,opt,name=expiry,proto3" json:"expiry,omitempty"`
-	Birth                  string  `protobuf:"bytes,6,opt,name=birth,proto3" json:"birth,omitempty"`
-	Pwd_2Digit             string  `protobuf:"bytes,7,opt,name=pwd_2digit,json=pwd2digit,proto3" json:"pwd_2digit,omitempty"`
-	CustomerUid            string  `protobuf:"bytes,8,opt,name=customer_uid,json=customerUid,proto3" json:"customer_uid,omitempty"`
-	Pg                     string  `protobuf:"bytes,9,opt,name=pg,proto3" json:"pg,omitempty"`
-	Name                   string  `protobuf:"bytes,10,opt,name=name,proto3" json:"name,omitempty"`
-	BuyerName              string  `protobuf:"bytes,11,opt,name=buyer_name,json=buyerName,proto3" json:"buyer_name,omitempty"`
-	BuyerEmail             string  `protobuf:"bytes,12,opt,name=buyer_email,json=buyerEmail,proto3" json:"buyer_email,omitempty"`
-	BuyerTel               string  `protobuf:"bytes,13,opt,name=buyer_tel,json=buyerTel,proto3" json:"buyer_tel,omitempty"`
-	BuyerAddr              string  `protobuf:"bytes,14,opt,name=buyer_addr,json=buyerAddr,proto3" json:"buyer_addr,omitempty"`
-	BuyerPostcode          string  `protobuf:"bytes,15,opt,name=buyer_postcode,json=buyerPostcode,proto3" json:"buyer_postcode,omitempty"`
-	CardQuota              int32   `protobuf:"varint,16,opt,name=card_quota,json=cardQuota,proto3" json:"card_quota,omitempty"`
-	InterestFreeByMerchant bool    `protobuf:"varint,17,opt,name=interest_free_by_merchant,json=interestFreeByMerchant,proto3" json:"interest_free_by_merchant,omitempty"`
-	CustomData             string  `protobuf:"bytes,18,opt,name=custom_data,json=customData,proto3" json:"custom_data,omitempty"`
-	NoticeUrl              string  `protobuf:"bytes,19,opt,name=notice_url,json=noticeUrl,proto3" json:"notice_url,omitempty"`
+	MerchantUid            string `protobuf:"bytes,1,opt,name=merchant_uid,json=merchantUid,proto3" json:"merchant_uid,omitempty"`
+	Amount                 int32  `protobuf:"varint,2,opt,name=amount,proto3" json:"amount,omitempty"`
+	TaxFree                int32  `protobuf:"varint,3,opt,name=tax_free,json=taxFree,proto3" json:"tax_free,omitempty"`
+	CardNumber             string `protobuf:"bytes,4,opt,name=card_number,json=cardNumber,proto3" json:"card_number,omitempty"`
+	Expiry                 string `protobuf:"bytes,5,opt,name=expiry,proto3" json:"expiry,omitempty"`
+	Birth                  string `protobuf:"bytes,6,opt,name=birth,proto3" json:"birth,omitempty"`
+	Pwd_2Digit             string `protobuf:"bytes,7,opt,name=pwd_2digit,json=pwd2digit,proto3" json:"pwd_2digit,omitempty"`
+	CustomerUid            string `protobuf:"bytes,8,opt,name=customer_uid,json=customerUid,proto3" json:"customer_uid,omitempty"`
+	Pg                     string `protobuf:"bytes,9,opt,name=pg,proto3" json:"pg,omitempty"`
+	Name                   string `protobuf:"bytes,10,opt,name=name,proto3" json:"name,omitempty"`
+	BuyerName              string `protobuf:"bytes,11,opt,name=buyer_name,json=buyerName,proto3" json:"buyer_name,omitempty"`
+	BuyerEmail             string `protobuf:"bytes,12,opt,name=buyer_email,json=buyerEmail,proto3" json:"buyer_email,omitempty"`
+	BuyerTel               string `protobuf:"bytes,13,opt,name=buyer_tel,json=buyerTel,proto3" json:"buyer_tel,omitempty"`
+	BuyerAddr              string `protobuf:"bytes,14,opt,name=buyer_addr,json=buyerAddr,proto3" json:"buyer_addr,omitempty"`
+	BuyerPostcode          string `protobuf:"bytes,15,opt,name=buyer_postcode,json=buyerPostcode,proto3" json:"buyer_postcode,omitempty"`
+	CardQuota              int32  `protobuf:"varint,16,opt,name=card_quota,json=cardQuota,proto3" json:"card_quota,omitempty"`
+	InterestFreeByMerchant bool   `protobuf:"varint,17,opt,name=interest_free_by_merchant,json=interestFreeByMerchant,proto3" json:"interest_free_by_merchant,omitempty"`
+	CustomData             string `protobuf:"bytes,18,opt,name=custom_data,json=customData,proto3" json:"custom_data,omitempty"`
+	NoticeUrl              string `protobuf:"bytes,19,opt,name=notice_url,json=noticeUrl,proto3" json:"notice_url,omitempty"`
 }
 
 func (x *OnetimePaymentRequest) Reset() {
@@ -92,14 +92,14 @@ func (x *OnetimePaymentRequest) GetMerchantUid() string {
 	return ""
 }
 
-func (x *OnetimePaymentRequest) GetAmount() float64 {
+func (x *OnetimePaymentRequest) GetAmount() int32 {
 	if x != nil {
 		return x.Amount
 	}
 	return 0
 }
 
-func (x *OnetimePaymentRequest) GetTaxFree() float64 {
+func (x *OnetimePaymentRequest) GetTaxFree() int32 {
 	if x != nil {
 		return x.TaxFree
 	}
@@ -286,20 +286,20 @@ type AgainPaymentRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	CustomerUid            string  `protobuf:"bytes,1,opt,name=customer_uid,json=customerUid,proto3" json:"customer_uid,omitempty"`
-	MerchantUid            string  `protobuf:"bytes,2,opt,name=merchant_uid,json=merchantUid,proto3" json:"merchant_uid,omitempty"`
-	Amount                 float64 `protobuf:"fixed64,3,opt,name=amount,proto3" json:"amount,omitempty"`
-	TaxFree                float64 `protobuf:"fixed64,4,opt,name=tax_free,json=taxFree,proto3" json:"tax_free,omitempty"`
-	Name                   string  `protobuf:"bytes,5,opt,name=name,proto3" json:"name,omitempty"`
-	BuyerName              string  `protobuf:"bytes,6,opt,name=buyer_name,json=buyerName,proto3" json:"buyer_name,omitempty"`
-	BuyerEmail             string  `protobuf:"bytes,7,opt,name=buyer_email,json=buyerEmail,proto3" json:"buyer_email,omitempty"`
-	BuyerTel               string  `protobuf:"bytes,8,opt,name=buyer_tel,json=buyerTel,proto3" json:"buyer_tel,omitempty"`
-	BuyerAddr              string  `protobuf:"bytes,9,opt,name=buyer_addr,json=buyerAddr,proto3" json:"buyer_addr,omitempty"`
-	BuyerPostcode          string  `protobuf:"bytes,10,opt,name=buyer_postcode,json=buyerPostcode,proto3" json:"buyer_postcode,omitempty"`
-	CardQuota              int32   `protobuf:"varint,11,opt,name=card_quota,json=cardQuota,proto3" json:"card_quota,omitempty"`
-	InterestFreeByMerchant bool    `protobuf:"varint,12,opt,name=interest_free_by_merchant,json=interestFreeByMerchant,proto3" json:"interest_free_by_merchant,omitempty"`
-	CustomData             string  `protobuf:"bytes,13,opt,name=custom_data,json=customData,proto3" json:"custom_data,omitempty"`
-	NoticeUrl              string  `protobuf:"bytes,14,opt,name=notice_url,json=noticeUrl,proto3" json:"notice_url,omitempty"`
+	CustomerUid            string `protobuf:"bytes,1,opt,name=customer_uid,json=customerUid,proto3" json:"customer_uid,omitempty"`
+	MerchantUid            string `protobuf:"bytes,2,opt,name=merchant_uid,json=merchantUid,proto3" json:"merchant_uid,omitempty"`
+	Amount                 int32  `protobuf:"varint,3,opt,name=amount,proto3" json:"amount,omitempty"`
+	TaxFree                int32  `protobuf:"varint,4,opt,name=tax_free,json=taxFree,proto3" json:"tax_free,omitempty"`
+	Name                   string `protobuf:"bytes,5,opt,name=name,proto3" json:"name,omitempty"`
+	BuyerName              string `protobuf:"bytes,6,opt,name=buyer_name,json=buyerName,proto3" json:"buyer_name,omitempty"`
+	BuyerEmail             string `protobuf:"bytes,7,opt,name=buyer_email,json=buyerEmail,proto3" json:"buyer_email,omitempty"`
+	BuyerTel               string `protobuf:"bytes,8,opt,name=buyer_tel,json=buyerTel,proto3" json:"buyer_tel,omitempty"`
+	BuyerAddr              string `protobuf:"bytes,9,opt,name=buyer_addr,json=buyerAddr,proto3" json:"buyer_addr,omitempty"`
+	BuyerPostcode          string `protobuf:"bytes,10,opt,name=buyer_postcode,json=buyerPostcode,proto3" json:"buyer_postcode,omitempty"`
+	CardQuota              int32  `protobuf:"varint,11,opt,name=card_quota,json=cardQuota,proto3" json:"card_quota,omitempty"`
+	InterestFreeByMerchant bool   `protobuf:"varint,12,opt,name=interest_free_by_merchant,json=interestFreeByMerchant,proto3" json:"interest_free_by_merchant,omitempty"`
+	CustomData             string `protobuf:"bytes,13,opt,name=custom_data,json=customData,proto3" json:"custom_data,omitempty"`
+	NoticeUrl              string `protobuf:"bytes,14,opt,name=notice_url,json=noticeUrl,proto3" json:"notice_url,omitempty"`
 }
 
 func (x *AgainPaymentRequest) Reset() {
@@ -348,14 +348,14 @@ func (x *AgainPaymentRequest) GetMerchantUid() string {
 	return ""
 }
 
-func (x *AgainPaymentRequest) GetAmount() float64 {
+func (x *AgainPaymentRequest) GetAmount() int32 {
 	if x != nil {
 		return x.Amount
 	}
 	return 0
 }
 
-func (x *AgainPaymentRequest) GetTaxFree() float64 {
+func (x *AgainPaymentRequest) GetTaxFree() int32 {
 	if x != nil {
 		return x.TaxFree
 	}
@@ -500,16 +500,16 @@ type PaymentScheduleParam struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	MerchantUid   string  `protobuf:"bytes,1,opt,name=merchant_uid,json=merchantUid,proto3" json:"merchant_uid,omitempty"`
-	ScheduleAt    float64 `protobuf:"fixed64,2,opt,name=schedule_at,json=scheduleAt,proto3" json:"schedule_at,omitempty"`
-	Amount        int32   `protobuf:"varint,3,opt,name=amount,proto3" json:"amount,omitempty"`
-	TaxFree       int32   `protobuf:"varint,4,opt,name=tax_free,json=taxFree,proto3" json:"tax_free,omitempty"`
-	Name          string  `protobuf:"bytes,5,opt,name=name,proto3" json:"name,omitempty"`
-	BuyerName     string  `protobuf:"bytes,6,opt,name=buyer_name,json=buyerName,proto3" json:"buyer_name,omitempty"`
-	BuyerEmail    string  `protobuf:"bytes,7,opt,name=buyer_email,json=buyerEmail,proto3" json:"buyer_email,omitempty"`
-	BuyerTel      string  `protobuf:"bytes,8,opt,name=buyer_tel,json=buyerTel,proto3" json:"buyer_tel,omitempty"`
-	BuyerAddr     string  `protobuf:"bytes,9,opt,name=buyer_addr,json=buyerAddr,proto3" json:"buyer_addr,omitempty"`
-	BuyerPostcode string  `protobuf:"bytes,10,opt,name=buyer_postcode,json=buyerPostcode,proto3" json:"buyer_postcode,omitempty"`
+	MerchantUid   string `protobuf:"bytes,1,opt,name=merchant_uid,json=merchantUid,proto3" json:"merchant_uid,omitempty"`
+	ScheduleAt    int32  `protobuf:"varint,2,opt,name=schedule_at,json=scheduleAt,proto3" json:"schedule_at,omitempty"`
+	Amount        int32  `protobuf:"varint,3,opt,name=amount,proto3" json:"amount,omitempty"`
+	TaxFree       int32  `protobuf:"varint,4,opt,name=tax_free,json=taxFree,proto3" json:"tax_free,omitempty"`
+	Name          string `protobuf:"bytes,5,opt,name=name,proto3" json:"name,omitempty"`
+	BuyerName     string `protobuf:"bytes,6,opt,name=buyer_name,json=buyerName,proto3" json:"buyer_name,omitempty"`
+	BuyerEmail    string `protobuf:"bytes,7,opt,name=buyer_email,json=buyerEmail,proto3" json:"buyer_email,omitempty"`
+	BuyerTel      string `protobuf:"bytes,8,opt,name=buyer_tel,json=buyerTel,proto3" json:"buyer_tel,omitempty"`
+	BuyerAddr     string `protobuf:"bytes,9,opt,name=buyer_addr,json=buyerAddr,proto3" json:"buyer_addr,omitempty"`
+	BuyerPostcode string `protobuf:"bytes,10,opt,name=buyer_postcode,json=buyerPostcode,proto3" json:"buyer_postcode,omitempty"`
 }
 
 func (x *PaymentScheduleParam) Reset() {
@@ -551,7 +551,7 @@ func (x *PaymentScheduleParam) GetMerchantUid() string {
 	return ""
 }
 
-func (x *PaymentScheduleParam) GetScheduleAt() float64 {
+func (x *PaymentScheduleParam) GetScheduleAt() int32 {
 	if x != nil {
 		return x.ScheduleAt
 	}
@@ -1409,9 +1409,9 @@ var file_v1_subscribe_subscribe_proto_rawDesc = []byte{
 	0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x21, 0x0a, 0x0c, 0x6d,
 	0x65, 0x72, 0x63, 0x68, 0x61, 0x6e, 0x74, 0x5f, 0x75, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28,
 	0x09, 0x52, 0x0b, 0x6d, 0x65, 0x72, 0x63, 0x68, 0x61, 0x6e, 0x74, 0x55, 0x69, 0x64, 0x12, 0x16,
-	0x0a, 0x06, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x01, 0x52, 0x06,
+	0x0a, 0x06, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06,
 	0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x19, 0x0a, 0x08, 0x74, 0x61, 0x78, 0x5f, 0x66, 0x72,
-	0x65, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x01, 0x52, 0x07, 0x74, 0x61, 0x78, 0x46, 0x72, 0x65,
+	0x65, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x07, 0x74, 0x61, 0x78, 0x46, 0x72, 0x65,
 	0x65, 0x12, 0x1f, 0x0a, 0x0b, 0x63, 0x61, 0x72, 0x64, 0x5f, 0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72,
 	0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x63, 0x61, 0x72, 0x64, 0x4e, 0x75, 0x6d, 0x62,
 	0x65, 0x72, 0x12, 0x16, 0x0a, 0x06, 0x65, 0x78, 0x70, 0x69, 0x72, 0x79, 0x18, 0x05, 0x20, 0x01,
@@ -1457,9 +1457,9 @@ var file_v1_subscribe_subscribe_proto_rawDesc = []byte{
 	0x72, 0x55, 0x69, 0x64, 0x12, 0x21, 0x0a, 0x0c, 0x6d, 0x65, 0x72, 0x63, 0x68, 0x61, 0x6e, 0x74,
 	0x5f, 0x75, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x6d, 0x65, 0x72, 0x63,
 	0x68, 0x61, 0x6e, 0x74, 0x55, 0x69, 0x64, 0x12, 0x16, 0x0a, 0x06, 0x61, 0x6d, 0x6f, 0x75, 0x6e,
-	0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x01, 0x52, 0x06, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x12,
+	0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x12,
 	0x19, 0x0a, 0x08, 0x74, 0x61, 0x78, 0x5f, 0x66, 0x72, 0x65, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28,
-	0x01, 0x52, 0x07, 0x74, 0x61, 0x78, 0x46, 0x72, 0x65, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61,
+	0x05, 0x52, 0x07, 0x74, 0x61, 0x78, 0x46, 0x72, 0x65, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61,
 	0x6d, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1d,
 	0x0a, 0x0a, 0x62, 0x75, 0x79, 0x65, 0x72, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x06, 0x20, 0x01,
 	0x28, 0x09, 0x52, 0x09, 0x62, 0x75, 0x79, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1f, 0x0a,
@@ -1492,7 +1492,7 @@ var file_v1_subscribe_subscribe_proto_rawDesc = []byte{
 	0x75, 0x6c, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x12, 0x21, 0x0a, 0x0c, 0x6d, 0x65, 0x72, 0x63,
 	0x68, 0x61, 0x6e, 0x74, 0x5f, 0x75, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b,
 	0x6d, 0x65, 0x72, 0x63, 0x68, 0x61, 0x6e, 0x74, 0x55, 0x69, 0x64, 0x12, 0x1f, 0x0a, 0x0b, 0x73,
-	0x63, 0x68, 0x65, 0x64, 0x75, 0x6c, 0x65, 0x5f, 0x61, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x01,
+	0x63, 0x68, 0x65, 0x64, 0x75, 0x6c, 0x65, 0x5f, 0x61, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05,
 	0x52, 0x0a, 0x73, 0x63, 0x68, 0x65, 0x64, 0x75, 0x6c, 0x65, 0x41, 0x74, 0x12, 0x16, 0x0a, 0x06,
 	0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06, 0x61, 0x6d,
 	0x6f, 0x75, 0x6e, 0x74, 0x12, 0x19, 0x0a, 0x08, 0x74, 0x61, 0x78, 0x5f, 0x66, 0x72, 0x65, 0x65,

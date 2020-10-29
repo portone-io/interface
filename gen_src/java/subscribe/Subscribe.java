@@ -31,16 +31,16 @@ public final class Subscribe {
         getMerchantUidBytes();
 
     /**
-     * <code>double amount = 2;</code>
+     * <code>int32 amount = 2;</code>
      * @return The amount.
      */
-    double getAmount();
+    int getAmount();
 
     /**
-     * <code>double tax_free = 3;</code>
+     * <code>int32 tax_free = 3;</code>
      * @return The taxFree.
      */
-    double getTaxFree();
+    int getTaxFree();
 
     /**
      * <code>string card_number = 4;</code>
@@ -288,14 +288,14 @@ public final class Subscribe {
               merchantUid_ = s;
               break;
             }
-            case 17: {
+            case 16: {
 
-              amount_ = input.readDouble();
+              amount_ = input.readInt32();
               break;
             }
-            case 25: {
+            case 24: {
 
-              taxFree_ = input.readDouble();
+              taxFree_ = input.readInt32();
               break;
             }
             case 34: {
@@ -463,24 +463,24 @@ public final class Subscribe {
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 2;
-    private double amount_;
+    private int amount_;
     /**
-     * <code>double amount = 2;</code>
+     * <code>int32 amount = 2;</code>
      * @return The amount.
      */
     @java.lang.Override
-    public double getAmount() {
+    public int getAmount() {
       return amount_;
     }
 
     public static final int TAX_FREE_FIELD_NUMBER = 3;
-    private double taxFree_;
+    private int taxFree_;
     /**
-     * <code>double tax_free = 3;</code>
+     * <code>int32 tax_free = 3;</code>
      * @return The taxFree.
      */
     @java.lang.Override
-    public double getTaxFree() {
+    public int getTaxFree() {
       return taxFree_;
     }
 
@@ -1055,11 +1055,11 @@ public final class Subscribe {
       if (!getMerchantUidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, merchantUid_);
       }
-      if (amount_ != 0D) {
-        output.writeDouble(2, amount_);
+      if (amount_ != 0) {
+        output.writeInt32(2, amount_);
       }
-      if (taxFree_ != 0D) {
-        output.writeDouble(3, taxFree_);
+      if (taxFree_ != 0) {
+        output.writeInt32(3, taxFree_);
       }
       if (!getCardNumberBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, cardNumber_);
@@ -1121,13 +1121,13 @@ public final class Subscribe {
       if (!getMerchantUidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, merchantUid_);
       }
-      if (amount_ != 0D) {
+      if (amount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(2, amount_);
+          .computeInt32Size(2, amount_);
       }
-      if (taxFree_ != 0D) {
+      if (taxFree_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(3, taxFree_);
+          .computeInt32Size(3, taxFree_);
       }
       if (!getCardNumberBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, cardNumber_);
@@ -1196,12 +1196,10 @@ public final class Subscribe {
 
       if (!getMerchantUid()
           .equals(other.getMerchantUid())) return false;
-      if (java.lang.Double.doubleToLongBits(getAmount())
-          != java.lang.Double.doubleToLongBits(
-              other.getAmount())) return false;
-      if (java.lang.Double.doubleToLongBits(getTaxFree())
-          != java.lang.Double.doubleToLongBits(
-              other.getTaxFree())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (getTaxFree()
+          != other.getTaxFree()) return false;
       if (!getCardNumber()
           .equals(other.getCardNumber())) return false;
       if (!getExpiry()
@@ -1248,11 +1246,9 @@ public final class Subscribe {
       hash = (37 * hash) + MERCHANT_UID_FIELD_NUMBER;
       hash = (53 * hash) + getMerchantUid().hashCode();
       hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getAmount()));
+      hash = (53 * hash) + getAmount();
       hash = (37 * hash) + TAX_FREE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getTaxFree()));
+      hash = (53 * hash) + getTaxFree();
       hash = (37 * hash) + CARD_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getCardNumber().hashCode();
       hash = (37 * hash) + EXPIRY_FIELD_NUMBER;
@@ -1421,9 +1417,9 @@ public final class Subscribe {
         super.clear();
         merchantUid_ = "";
 
-        amount_ = 0D;
+        amount_ = 0;
 
-        taxFree_ = 0D;
+        taxFree_ = 0;
 
         cardNumber_ = "";
 
@@ -1554,10 +1550,10 @@ public final class Subscribe {
           merchantUid_ = other.merchantUid_;
           onChanged();
         }
-        if (other.getAmount() != 0D) {
+        if (other.getAmount() != 0) {
           setAmount(other.getAmount());
         }
-        if (other.getTaxFree() != 0D) {
+        if (other.getTaxFree() != 0) {
           setTaxFree(other.getTaxFree());
         }
         if (!other.getCardNumber().isEmpty()) {
@@ -1727,64 +1723,64 @@ public final class Subscribe {
         return this;
       }
 
-      private double amount_ ;
+      private int amount_ ;
       /**
-       * <code>double amount = 2;</code>
+       * <code>int32 amount = 2;</code>
        * @return The amount.
        */
       @java.lang.Override
-      public double getAmount() {
+      public int getAmount() {
         return amount_;
       }
       /**
-       * <code>double amount = 2;</code>
+       * <code>int32 amount = 2;</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
-      public Builder setAmount(double value) {
+      public Builder setAmount(int value) {
         
         amount_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>double amount = 2;</code>
+       * <code>int32 amount = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
-        amount_ = 0D;
+        amount_ = 0;
         onChanged();
         return this;
       }
 
-      private double taxFree_ ;
+      private int taxFree_ ;
       /**
-       * <code>double tax_free = 3;</code>
+       * <code>int32 tax_free = 3;</code>
        * @return The taxFree.
        */
       @java.lang.Override
-      public double getTaxFree() {
+      public int getTaxFree() {
         return taxFree_;
       }
       /**
-       * <code>double tax_free = 3;</code>
+       * <code>int32 tax_free = 3;</code>
        * @param value The taxFree to set.
        * @return This builder for chaining.
        */
-      public Builder setTaxFree(double value) {
+      public Builder setTaxFree(int value) {
         
         taxFree_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>double tax_free = 3;</code>
+       * <code>int32 tax_free = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearTaxFree() {
         
-        taxFree_ = 0D;
+        taxFree_ = 0;
         onChanged();
         return this;
       }
@@ -3837,16 +3833,16 @@ public final class Subscribe {
         getMerchantUidBytes();
 
     /**
-     * <code>double amount = 3;</code>
+     * <code>int32 amount = 3;</code>
      * @return The amount.
      */
-    double getAmount();
+    int getAmount();
 
     /**
-     * <code>double tax_free = 4;</code>
+     * <code>int32 tax_free = 4;</code>
      * @return The taxFree.
      */
-    double getTaxFree();
+    int getTaxFree();
 
     /**
      * <code>string name = 5;</code>
@@ -4023,14 +4019,14 @@ public final class Subscribe {
               merchantUid_ = s;
               break;
             }
-            case 25: {
+            case 24: {
 
-              amount_ = input.readDouble();
+              amount_ = input.readInt32();
               break;
             }
-            case 33: {
+            case 32: {
 
-              taxFree_ = input.readDouble();
+              taxFree_ = input.readInt32();
               break;
             }
             case 42: {
@@ -4200,24 +4196,24 @@ public final class Subscribe {
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 3;
-    private double amount_;
+    private int amount_;
     /**
-     * <code>double amount = 3;</code>
+     * <code>int32 amount = 3;</code>
      * @return The amount.
      */
     @java.lang.Override
-    public double getAmount() {
+    public int getAmount() {
       return amount_;
     }
 
     public static final int TAX_FREE_FIELD_NUMBER = 4;
-    private double taxFree_;
+    private int taxFree_;
     /**
-     * <code>double tax_free = 4;</code>
+     * <code>int32 tax_free = 4;</code>
      * @return The taxFree.
      */
     @java.lang.Override
-    public double getTaxFree() {
+    public int getTaxFree() {
       return taxFree_;
     }
 
@@ -4567,11 +4563,11 @@ public final class Subscribe {
       if (!getMerchantUidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, merchantUid_);
       }
-      if (amount_ != 0D) {
-        output.writeDouble(3, amount_);
+      if (amount_ != 0) {
+        output.writeInt32(3, amount_);
       }
-      if (taxFree_ != 0D) {
-        output.writeDouble(4, taxFree_);
+      if (taxFree_ != 0) {
+        output.writeInt32(4, taxFree_);
       }
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
@@ -4618,13 +4614,13 @@ public final class Subscribe {
       if (!getMerchantUidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, merchantUid_);
       }
-      if (amount_ != 0D) {
+      if (amount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(3, amount_);
+          .computeInt32Size(3, amount_);
       }
-      if (taxFree_ != 0D) {
+      if (taxFree_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(4, taxFree_);
+          .computeInt32Size(4, taxFree_);
       }
       if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
@@ -4677,12 +4673,10 @@ public final class Subscribe {
           .equals(other.getCustomerUid())) return false;
       if (!getMerchantUid()
           .equals(other.getMerchantUid())) return false;
-      if (java.lang.Double.doubleToLongBits(getAmount())
-          != java.lang.Double.doubleToLongBits(
-              other.getAmount())) return false;
-      if (java.lang.Double.doubleToLongBits(getTaxFree())
-          != java.lang.Double.doubleToLongBits(
-              other.getTaxFree())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (getTaxFree()
+          != other.getTaxFree()) return false;
       if (!getName()
           .equals(other.getName())) return false;
       if (!getBuyerName()
@@ -4719,11 +4713,9 @@ public final class Subscribe {
       hash = (37 * hash) + MERCHANT_UID_FIELD_NUMBER;
       hash = (53 * hash) + getMerchantUid().hashCode();
       hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getAmount()));
+      hash = (53 * hash) + getAmount();
       hash = (37 * hash) + TAX_FREE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getTaxFree()));
+      hash = (53 * hash) + getTaxFree();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + BUYER_NAME_FIELD_NUMBER;
@@ -4882,9 +4874,9 @@ public final class Subscribe {
 
         merchantUid_ = "";
 
-        amount_ = 0D;
+        amount_ = 0;
 
-        taxFree_ = 0D;
+        taxFree_ = 0;
 
         name_ = "";
 
@@ -5002,10 +4994,10 @@ public final class Subscribe {
           merchantUid_ = other.merchantUid_;
           onChanged();
         }
-        if (other.getAmount() != 0D) {
+        if (other.getAmount() != 0) {
           setAmount(other.getAmount());
         }
-        if (other.getTaxFree() != 0D) {
+        if (other.getTaxFree() != 0) {
           setTaxFree(other.getTaxFree());
         }
         if (!other.getName().isEmpty()) {
@@ -5227,64 +5219,64 @@ public final class Subscribe {
         return this;
       }
 
-      private double amount_ ;
+      private int amount_ ;
       /**
-       * <code>double amount = 3;</code>
+       * <code>int32 amount = 3;</code>
        * @return The amount.
        */
       @java.lang.Override
-      public double getAmount() {
+      public int getAmount() {
         return amount_;
       }
       /**
-       * <code>double amount = 3;</code>
+       * <code>int32 amount = 3;</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
-      public Builder setAmount(double value) {
+      public Builder setAmount(int value) {
         
         amount_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>double amount = 3;</code>
+       * <code>int32 amount = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
-        amount_ = 0D;
+        amount_ = 0;
         onChanged();
         return this;
       }
 
-      private double taxFree_ ;
+      private int taxFree_ ;
       /**
-       * <code>double tax_free = 4;</code>
+       * <code>int32 tax_free = 4;</code>
        * @return The taxFree.
        */
       @java.lang.Override
-      public double getTaxFree() {
+      public int getTaxFree() {
         return taxFree_;
       }
       /**
-       * <code>double tax_free = 4;</code>
+       * <code>int32 tax_free = 4;</code>
        * @param value The taxFree to set.
        * @return This builder for chaining.
        */
-      public Builder setTaxFree(double value) {
+      public Builder setTaxFree(int value) {
         
         taxFree_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>double tax_free = 4;</code>
+       * <code>int32 tax_free = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearTaxFree() {
         
-        taxFree_ = 0D;
+        taxFree_ = 0;
         onChanged();
         return this;
       }
@@ -6869,10 +6861,10 @@ public final class Subscribe {
         getMerchantUidBytes();
 
     /**
-     * <code>double schedule_at = 2;</code>
+     * <code>int32 schedule_at = 2;</code>
      * @return The scheduleAt.
      */
-    double getScheduleAt();
+    int getScheduleAt();
 
     /**
      * <code>int32 amount = 3;</code>
@@ -7016,9 +7008,9 @@ public final class Subscribe {
               merchantUid_ = s;
               break;
             }
-            case 17: {
+            case 16: {
 
-              scheduleAt_ = input.readDouble();
+              scheduleAt_ = input.readInt32();
               break;
             }
             case 24: {
@@ -7138,13 +7130,13 @@ public final class Subscribe {
     }
 
     public static final int SCHEDULE_AT_FIELD_NUMBER = 2;
-    private double scheduleAt_;
+    private int scheduleAt_;
     /**
-     * <code>double schedule_at = 2;</code>
+     * <code>int32 schedule_at = 2;</code>
      * @return The scheduleAt.
      */
     @java.lang.Override
-    public double getScheduleAt() {
+    public int getScheduleAt() {
       return scheduleAt_;
     }
 
@@ -7415,8 +7407,8 @@ public final class Subscribe {
       if (!getMerchantUidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, merchantUid_);
       }
-      if (scheduleAt_ != 0D) {
-        output.writeDouble(2, scheduleAt_);
+      if (scheduleAt_ != 0) {
+        output.writeInt32(2, scheduleAt_);
       }
       if (amount_ != 0) {
         output.writeInt32(3, amount_);
@@ -7454,9 +7446,9 @@ public final class Subscribe {
       if (!getMerchantUidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, merchantUid_);
       }
-      if (scheduleAt_ != 0D) {
+      if (scheduleAt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(2, scheduleAt_);
+          .computeInt32Size(2, scheduleAt_);
       }
       if (amount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -7501,9 +7493,8 @@ public final class Subscribe {
 
       if (!getMerchantUid()
           .equals(other.getMerchantUid())) return false;
-      if (java.lang.Double.doubleToLongBits(getScheduleAt())
-          != java.lang.Double.doubleToLongBits(
-              other.getScheduleAt())) return false;
+      if (getScheduleAt()
+          != other.getScheduleAt()) return false;
       if (getAmount()
           != other.getAmount()) return false;
       if (getTaxFree()
@@ -7534,8 +7525,7 @@ public final class Subscribe {
       hash = (37 * hash) + MERCHANT_UID_FIELD_NUMBER;
       hash = (53 * hash) + getMerchantUid().hashCode();
       hash = (37 * hash) + SCHEDULE_AT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getScheduleAt()));
+      hash = (53 * hash) + getScheduleAt();
       hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
       hash = (53 * hash) + getAmount();
       hash = (37 * hash) + TAX_FREE_FIELD_NUMBER;
@@ -7687,7 +7677,7 @@ public final class Subscribe {
         super.clear();
         merchantUid_ = "";
 
-        scheduleAt_ = 0D;
+        scheduleAt_ = 0;
 
         amount_ = 0;
 
@@ -7793,7 +7783,7 @@ public final class Subscribe {
           merchantUid_ = other.merchantUid_;
           onChanged();
         }
-        if (other.getScheduleAt() != 0D) {
+        if (other.getScheduleAt() != 0) {
           setScheduleAt(other.getScheduleAt());
         }
         if (other.getAmount() != 0) {
@@ -7931,33 +7921,33 @@ public final class Subscribe {
         return this;
       }
 
-      private double scheduleAt_ ;
+      private int scheduleAt_ ;
       /**
-       * <code>double schedule_at = 2;</code>
+       * <code>int32 schedule_at = 2;</code>
        * @return The scheduleAt.
        */
       @java.lang.Override
-      public double getScheduleAt() {
+      public int getScheduleAt() {
         return scheduleAt_;
       }
       /**
-       * <code>double schedule_at = 2;</code>
+       * <code>int32 schedule_at = 2;</code>
        * @param value The scheduleAt to set.
        * @return This builder for chaining.
        */
-      public Builder setScheduleAt(double value) {
+      public Builder setScheduleAt(int value) {
         
         scheduleAt_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>double schedule_at = 2;</code>
+       * <code>int32 schedule_at = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearScheduleAt() {
         
-        scheduleAt_ = 0D;
+        scheduleAt_ = 0;
         onChanged();
         return this;
       }
@@ -20026,7 +20016,7 @@ public final class Subscribe {
       "e\032\034google/api/annotations.proto\032\030v1/paym" +
       "ent/payment.proto\"\217\003\n\025OnetimePaymentRequ" +
       "est\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(" +
-      "\001\022\020\n\010tax_free\030\003 \001(\001\022\023\n\013card_number\030\004 \001(\t" +
+      "\005\022\020\n\010tax_free\030\003 \001(\005\022\023\n\013card_number\030\004 \001(\t" +
       "\022\016\n\006expiry\030\005 \001(\t\022\r\n\005birth\030\006 \001(\t\022\022\n\npwd_2" +
       "digit\030\007 \001(\t\022\024\n\014customer_uid\030\010 \001(\t\022\n\n\002pg\030" +
       "\t \001(\t\022\014\n\004name\030\n \001(\t\022\022\n\nbuyer_name\030\013 \001(\t\022" +
@@ -20038,8 +20028,8 @@ public final class Subscribe {
       "ponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010" +
       "response\030\003 \001(\0132\020.payment.Payment\"\271\002\n\023Aga" +
       "inPaymentRequest\022\024\n\014customer_uid\030\001 \001(\t\022\024" +
-      "\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount\030\003 \001(\001\022\020\n\010" +
-      "tax_free\030\004 \001(\001\022\014\n\004name\030\005 \001(\t\022\022\n\nbuyer_na" +
+      "\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount\030\003 \001(\005\022\020\n\010" +
+      "tax_free\030\004 \001(\005\022\014\n\004name\030\005 \001(\t\022\022\n\nbuyer_na" +
       "me\030\006 \001(\t\022\023\n\013buyer_email\030\007 \001(\t\022\021\n\tbuyer_t" +
       "el\030\010 \001(\t\022\022\n\nbuyer_addr\030\t \001(\t\022\026\n\016buyer_po" +
       "stcode\030\n \001(\t\022\022\n\ncard_quota\030\013 \001(\005\022!\n\031inte" +
@@ -20048,7 +20038,7 @@ public final class Subscribe {
       "mentResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 " +
       "\001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.Payment\"" +
       "\331\001\n\024PaymentScheduleParam\022\024\n\014merchant_uid" +
-      "\030\001 \001(\t\022\023\n\013schedule_at\030\002 \001(\001\022\016\n\006amount\030\003 " +
+      "\030\001 \001(\t\022\023\n\013schedule_at\030\002 \001(\005\022\016\n\006amount\030\003 " +
       "\001(\005\022\020\n\010tax_free\030\004 \001(\005\022\014\n\004name\030\005 \001(\t\022\022\n\nb" +
       "uyer_name\030\006 \001(\t\022\023\n\013buyer_email\030\007 \001(\t\022\021\n\t" +
       "buyer_tel\030\010 \001(\t\022\022\n\nbuyer_addr\030\t \001(\t\022\026\n\016b" +

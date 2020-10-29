@@ -15,8 +15,8 @@ import '../payment/payment.pb.dart' as $2;
 class OnetimePaymentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OnetimePaymentRequest', package: const $pb.PackageName('subscribe'), createEmptyInstance: create)
     ..aOS(1, 'merchantUid')
-    ..a<$core.double>(2, 'amount', $pb.PbFieldType.OD)
-    ..a<$core.double>(3, 'taxFree', $pb.PbFieldType.OD)
+    ..a<$core.int>(2, 'amount', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, 'taxFree', $pb.PbFieldType.O3)
     ..aOS(4, 'cardNumber')
     ..aOS(5, 'expiry')
     ..aOS(6, 'birth')
@@ -61,18 +61,18 @@ class OnetimePaymentRequest extends $pb.GeneratedMessage {
   void clearMerchantUid() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.double get amount => $_getN(1);
+  $core.int get amount => $_getIZ(1);
   @$pb.TagNumber(2)
-  set amount($core.double v) { $_setDouble(1, v); }
+  set amount($core.int v) { $_setSignedInt32(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasAmount() => $_has(1);
   @$pb.TagNumber(2)
   void clearAmount() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.double get taxFree => $_getN(2);
+  $core.int get taxFree => $_getIZ(2);
   @$pb.TagNumber(3)
-  set taxFree($core.double v) { $_setDouble(2, v); }
+  set taxFree($core.int v) { $_setSignedInt32(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasTaxFree() => $_has(2);
   @$pb.TagNumber(3)
@@ -280,8 +280,8 @@ class AgainPaymentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AgainPaymentRequest', package: const $pb.PackageName('subscribe'), createEmptyInstance: create)
     ..aOS(1, 'customerUid')
     ..aOS(2, 'merchantUid')
-    ..a<$core.double>(3, 'amount', $pb.PbFieldType.OD)
-    ..a<$core.double>(4, 'taxFree', $pb.PbFieldType.OD)
+    ..a<$core.int>(3, 'amount', $pb.PbFieldType.O3)
+    ..a<$core.int>(4, 'taxFree', $pb.PbFieldType.O3)
     ..aOS(5, 'name')
     ..aOS(6, 'buyerName')
     ..aOS(7, 'buyerEmail')
@@ -329,18 +329,18 @@ class AgainPaymentRequest extends $pb.GeneratedMessage {
   void clearMerchantUid() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.double get amount => $_getN(2);
+  $core.int get amount => $_getIZ(2);
   @$pb.TagNumber(3)
-  set amount($core.double v) { $_setDouble(2, v); }
+  set amount($core.int v) { $_setSignedInt32(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasAmount() => $_has(2);
   @$pb.TagNumber(3)
   void clearAmount() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.double get taxFree => $_getN(3);
+  $core.int get taxFree => $_getIZ(3);
   @$pb.TagNumber(4)
-  set taxFree($core.double v) { $_setDouble(3, v); }
+  set taxFree($core.int v) { $_setSignedInt32(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasTaxFree() => $_has(3);
   @$pb.TagNumber(4)
@@ -493,7 +493,7 @@ class AgainPaymentResponse extends $pb.GeneratedMessage {
 class PaymentScheduleParam extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PaymentScheduleParam', package: const $pb.PackageName('subscribe'), createEmptyInstance: create)
     ..aOS(1, 'merchantUid')
-    ..a<$core.double>(2, 'scheduleAt', $pb.PbFieldType.OD)
+    ..a<$core.int>(2, 'scheduleAt', $pb.PbFieldType.O3)
     ..a<$core.int>(3, 'amount', $pb.PbFieldType.O3)
     ..a<$core.int>(4, 'taxFree', $pb.PbFieldType.O3)
     ..aOS(5, 'name')
@@ -530,9 +530,9 @@ class PaymentScheduleParam extends $pb.GeneratedMessage {
   void clearMerchantUid() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.double get scheduleAt => $_getN(1);
+  $core.int get scheduleAt => $_getIZ(1);
   @$pb.TagNumber(2)
-  set scheduleAt($core.double v) { $_setDouble(1, v); }
+  set scheduleAt($core.int v) { $_setSignedInt32(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasScheduleAt() => $_has(1);
   @$pb.TagNumber(2)

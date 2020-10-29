@@ -497,22 +497,22 @@ class OnetimePaymentRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_notice_url();
   public:
 
-  // double amount = 2;
+  // int32 amount = 2;
   void clear_amount();
-  double amount() const;
-  void set_amount(double value);
+  ::PROTOBUF_NAMESPACE_ID::int32 amount() const;
+  void set_amount(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  double _internal_amount() const;
-  void _internal_set_amount(double value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_amount() const;
+  void _internal_set_amount(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // double tax_free = 3;
+  // int32 tax_free = 3;
   void clear_tax_free();
-  double tax_free() const;
-  void set_tax_free(double value);
+  ::PROTOBUF_NAMESPACE_ID::int32 tax_free() const;
+  void set_tax_free(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  double _internal_tax_free() const;
-  void _internal_set_tax_free(double value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_tax_free() const;
+  void _internal_set_tax_free(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
   // int32 card_quota = 16;
@@ -555,8 +555,8 @@ class OnetimePaymentRequest PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buyer_postcode_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr custom_data_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr notice_url_;
-  double amount_;
-  double tax_free_;
+  ::PROTOBUF_NAMESPACE_ID::int32 amount_;
+  ::PROTOBUF_NAMESPACE_ID::int32 tax_free_;
   ::PROTOBUF_NAMESPACE_ID::int32 card_quota_;
   bool interest_free_by_merchant_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1027,22 +1027,22 @@ class AgainPaymentRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_notice_url();
   public:
 
-  // double amount = 3;
+  // int32 amount = 3;
   void clear_amount();
-  double amount() const;
-  void set_amount(double value);
+  ::PROTOBUF_NAMESPACE_ID::int32 amount() const;
+  void set_amount(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  double _internal_amount() const;
-  void _internal_set_amount(double value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_amount() const;
+  void _internal_set_amount(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // double tax_free = 4;
+  // int32 tax_free = 4;
   void clear_tax_free();
-  double tax_free() const;
-  void set_tax_free(double value);
+  ::PROTOBUF_NAMESPACE_ID::int32 tax_free() const;
+  void set_tax_free(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  double _internal_tax_free() const;
-  void _internal_set_tax_free(double value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_tax_free() const;
+  void _internal_set_tax_free(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
   // int32 card_quota = 11;
@@ -1080,8 +1080,8 @@ class AgainPaymentRequest PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buyer_postcode_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr custom_data_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr notice_url_;
-  double amount_;
-  double tax_free_;
+  ::PROTOBUF_NAMESPACE_ID::int32 amount_;
+  ::PROTOBUF_NAMESPACE_ID::int32 tax_free_;
   ::PROTOBUF_NAMESPACE_ID::int32 card_quota_;
   bool interest_free_by_merchant_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1500,13 +1500,13 @@ class PaymentScheduleParam PROTOBUF_FINAL :
   std::string* _internal_mutable_buyer_postcode();
   public:
 
-  // double schedule_at = 2;
+  // int32 schedule_at = 2;
   void clear_schedule_at();
-  double schedule_at() const;
-  void set_schedule_at(double value);
+  ::PROTOBUF_NAMESPACE_ID::int32 schedule_at() const;
+  void set_schedule_at(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  double _internal_schedule_at() const;
-  void _internal_set_schedule_at(double value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_schedule_at() const;
+  void _internal_set_schedule_at(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
   // int32 amount = 3;
@@ -1541,7 +1541,7 @@ class PaymentScheduleParam PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buyer_tel_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buyer_addr_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buyer_postcode_;
-  double schedule_at_;
+  ::PROTOBUF_NAMESPACE_ID::int32 schedule_at_;
   ::PROTOBUF_NAMESPACE_ID::int32 amount_;
   ::PROTOBUF_NAMESPACE_ID::int32 tax_free_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -3677,42 +3677,42 @@ inline void OnetimePaymentRequest::set_allocated_merchant_uid(std::string* merch
   // @@protoc_insertion_point(field_set_allocated:subscribe.OnetimePaymentRequest.merchant_uid)
 }
 
-// double amount = 2;
+// int32 amount = 2;
 inline void OnetimePaymentRequest::clear_amount() {
   amount_ = 0;
 }
-inline double OnetimePaymentRequest::_internal_amount() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 OnetimePaymentRequest::_internal_amount() const {
   return amount_;
 }
-inline double OnetimePaymentRequest::amount() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 OnetimePaymentRequest::amount() const {
   // @@protoc_insertion_point(field_get:subscribe.OnetimePaymentRequest.amount)
   return _internal_amount();
 }
-inline void OnetimePaymentRequest::_internal_set_amount(double value) {
+inline void OnetimePaymentRequest::_internal_set_amount(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   amount_ = value;
 }
-inline void OnetimePaymentRequest::set_amount(double value) {
+inline void OnetimePaymentRequest::set_amount(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_amount(value);
   // @@protoc_insertion_point(field_set:subscribe.OnetimePaymentRequest.amount)
 }
 
-// double tax_free = 3;
+// int32 tax_free = 3;
 inline void OnetimePaymentRequest::clear_tax_free() {
   tax_free_ = 0;
 }
-inline double OnetimePaymentRequest::_internal_tax_free() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 OnetimePaymentRequest::_internal_tax_free() const {
   return tax_free_;
 }
-inline double OnetimePaymentRequest::tax_free() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 OnetimePaymentRequest::tax_free() const {
   // @@protoc_insertion_point(field_get:subscribe.OnetimePaymentRequest.tax_free)
   return _internal_tax_free();
 }
-inline void OnetimePaymentRequest::_internal_set_tax_free(double value) {
+inline void OnetimePaymentRequest::_internal_set_tax_free(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   tax_free_ = value;
 }
-inline void OnetimePaymentRequest::set_tax_free(double value) {
+inline void OnetimePaymentRequest::set_tax_free(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_tax_free(value);
   // @@protoc_insertion_point(field_set:subscribe.OnetimePaymentRequest.tax_free)
 }
@@ -4916,42 +4916,42 @@ inline void AgainPaymentRequest::set_allocated_merchant_uid(std::string* merchan
   // @@protoc_insertion_point(field_set_allocated:subscribe.AgainPaymentRequest.merchant_uid)
 }
 
-// double amount = 3;
+// int32 amount = 3;
 inline void AgainPaymentRequest::clear_amount() {
   amount_ = 0;
 }
-inline double AgainPaymentRequest::_internal_amount() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 AgainPaymentRequest::_internal_amount() const {
   return amount_;
 }
-inline double AgainPaymentRequest::amount() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 AgainPaymentRequest::amount() const {
   // @@protoc_insertion_point(field_get:subscribe.AgainPaymentRequest.amount)
   return _internal_amount();
 }
-inline void AgainPaymentRequest::_internal_set_amount(double value) {
+inline void AgainPaymentRequest::_internal_set_amount(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   amount_ = value;
 }
-inline void AgainPaymentRequest::set_amount(double value) {
+inline void AgainPaymentRequest::set_amount(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_amount(value);
   // @@protoc_insertion_point(field_set:subscribe.AgainPaymentRequest.amount)
 }
 
-// double tax_free = 4;
+// int32 tax_free = 4;
 inline void AgainPaymentRequest::clear_tax_free() {
   tax_free_ = 0;
 }
-inline double AgainPaymentRequest::_internal_tax_free() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 AgainPaymentRequest::_internal_tax_free() const {
   return tax_free_;
 }
-inline double AgainPaymentRequest::tax_free() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 AgainPaymentRequest::tax_free() const {
   // @@protoc_insertion_point(field_get:subscribe.AgainPaymentRequest.tax_free)
   return _internal_tax_free();
 }
-inline void AgainPaymentRequest::_internal_set_tax_free(double value) {
+inline void AgainPaymentRequest::_internal_set_tax_free(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   tax_free_ = value;
 }
-inline void AgainPaymentRequest::set_tax_free(double value) {
+inline void AgainPaymentRequest::set_tax_free(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_tax_free(value);
   // @@protoc_insertion_point(field_set:subscribe.AgainPaymentRequest.tax_free)
 }
@@ -5721,22 +5721,22 @@ inline void PaymentScheduleParam::set_allocated_merchant_uid(std::string* mercha
   // @@protoc_insertion_point(field_set_allocated:subscribe.PaymentScheduleParam.merchant_uid)
 }
 
-// double schedule_at = 2;
+// int32 schedule_at = 2;
 inline void PaymentScheduleParam::clear_schedule_at() {
   schedule_at_ = 0;
 }
-inline double PaymentScheduleParam::_internal_schedule_at() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 PaymentScheduleParam::_internal_schedule_at() const {
   return schedule_at_;
 }
-inline double PaymentScheduleParam::schedule_at() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 PaymentScheduleParam::schedule_at() const {
   // @@protoc_insertion_point(field_get:subscribe.PaymentScheduleParam.schedule_at)
   return _internal_schedule_at();
 }
-inline void PaymentScheduleParam::_internal_set_schedule_at(double value) {
+inline void PaymentScheduleParam::_internal_set_schedule_at(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   schedule_at_ = value;
 }
-inline void PaymentScheduleParam::set_schedule_at(double value) {
+inline void PaymentScheduleParam::set_schedule_at(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_schedule_at(value);
   // @@protoc_insertion_point(field_set:subscribe.PaymentScheduleParam.schedule_at)
 }

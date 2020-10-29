@@ -27,7 +27,7 @@ namespace V1.Subscribe {
             "Chx2MS9zdWJzY3JpYmUvc3Vic2NyaWJlLnByb3RvEglzdWJzY3JpYmUaHGdv",
             "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aGHYxL3BheW1lbnQvcGF5bWVu",
             "dC5wcm90byKPAwoVT25ldGltZVBheW1lbnRSZXF1ZXN0EhQKDG1lcmNoYW50",
-            "X3VpZBgBIAEoCRIOCgZhbW91bnQYAiABKAESEAoIdGF4X2ZyZWUYAyABKAES",
+            "X3VpZBgBIAEoCRIOCgZhbW91bnQYAiABKAUSEAoIdGF4X2ZyZWUYAyABKAUS",
             "EwoLY2FyZF9udW1iZXIYBCABKAkSDgoGZXhwaXJ5GAUgASgJEg0KBWJpcnRo",
             "GAYgASgJEhIKCnB3ZF8yZGlnaXQYByABKAkSFAoMY3VzdG9tZXJfdWlkGAgg",
             "ASgJEgoKAnBnGAkgASgJEgwKBG5hbWUYCiABKAkSEgoKYnV5ZXJfbmFtZRgL",
@@ -39,7 +39,7 @@ namespace V1.Subscribe {
             "DwoHbWVzc2FnZRgCIAEoCRIiCghyZXNwb25zZRgDIAEoCzIQLnBheW1lbnQu",
             "UGF5bWVudCK5AgoTQWdhaW5QYXltZW50UmVxdWVzdBIUCgxjdXN0b21lcl91",
             "aWQYASABKAkSFAoMbWVyY2hhbnRfdWlkGAIgASgJEg4KBmFtb3VudBgDIAEo",
-            "ARIQCgh0YXhfZnJlZRgEIAEoARIMCgRuYW1lGAUgASgJEhIKCmJ1eWVyX25h",
+            "BRIQCgh0YXhfZnJlZRgEIAEoBRIMCgRuYW1lGAUgASgJEhIKCmJ1eWVyX25h",
             "bWUYBiABKAkSEwoLYnV5ZXJfZW1haWwYByABKAkSEQoJYnV5ZXJfdGVsGAgg",
             "ASgJEhIKCmJ1eWVyX2FkZHIYCSABKAkSFgoOYnV5ZXJfcG9zdGNvZGUYCiAB",
             "KAkSEgoKY2FyZF9xdW90YRgLIAEoBRIhChlpbnRlcmVzdF9mcmVlX2J5X21l",
@@ -47,7 +47,7 @@ namespace V1.Subscribe {
             "cmwYDiABKAkiWQoUQWdhaW5QYXltZW50UmVzcG9uc2USDAoEY29kZRgBIAEo",
             "BRIPCgdtZXNzYWdlGAIgASgJEiIKCHJlc3BvbnNlGAMgASgLMhAucGF5bWVu",
             "dC5QYXltZW50ItkBChRQYXltZW50U2NoZWR1bGVQYXJhbRIUCgxtZXJjaGFu",
-            "dF91aWQYASABKAkSEwoLc2NoZWR1bGVfYXQYAiABKAESDgoGYW1vdW50GAMg",
+            "dF91aWQYASABKAkSEwoLc2NoZWR1bGVfYXQYAiABKAUSDgoGYW1vdW50GAMg",
             "ASgFEhAKCHRheF9mcmVlGAQgASgFEgwKBG5hbWUYBSABKAkSEgoKYnV5ZXJf",
             "bmFtZRgGIAEoCRITCgtidXllcl9lbWFpbBgHIAEoCRIRCglidXllcl90ZWwY",
             "CCABKAkSEgoKYnV5ZXJfYWRkchgJIAEoCRIWCg5idXllcl9wb3N0Y29kZRgK",
@@ -200,9 +200,9 @@ namespace V1.Subscribe {
 
     /// <summary>Field number for the "amount" field.</summary>
     public const int AmountFieldNumber = 2;
-    private double amount_;
+    private int amount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double Amount {
+    public int Amount {
       get { return amount_; }
       set {
         amount_ = value;
@@ -211,9 +211,9 @@ namespace V1.Subscribe {
 
     /// <summary>Field number for the "tax_free" field.</summary>
     public const int TaxFreeFieldNumber = 3;
-    private double taxFree_;
+    private int taxFree_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double TaxFree {
+    public int TaxFree {
       get { return taxFree_; }
       set {
         taxFree_ = value;
@@ -410,8 +410,8 @@ namespace V1.Subscribe {
         return true;
       }
       if (MerchantUid != other.MerchantUid) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Amount, other.Amount)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TaxFree, other.TaxFree)) return false;
+      if (Amount != other.Amount) return false;
+      if (TaxFree != other.TaxFree) return false;
       if (CardNumber != other.CardNumber) return false;
       if (Expiry != other.Expiry) return false;
       if (Birth != other.Birth) return false;
@@ -435,8 +435,8 @@ namespace V1.Subscribe {
     public override int GetHashCode() {
       int hash = 1;
       if (MerchantUid.Length != 0) hash ^= MerchantUid.GetHashCode();
-      if (Amount != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Amount);
-      if (TaxFree != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TaxFree);
+      if (Amount != 0) hash ^= Amount.GetHashCode();
+      if (TaxFree != 0) hash ^= TaxFree.GetHashCode();
       if (CardNumber.Length != 0) hash ^= CardNumber.GetHashCode();
       if (Expiry.Length != 0) hash ^= Expiry.GetHashCode();
       if (Birth.Length != 0) hash ^= Birth.GetHashCode();
@@ -473,13 +473,13 @@ namespace V1.Subscribe {
         output.WriteRawTag(10);
         output.WriteString(MerchantUid);
       }
-      if (Amount != 0D) {
-        output.WriteRawTag(17);
-        output.WriteDouble(Amount);
+      if (Amount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Amount);
       }
-      if (TaxFree != 0D) {
-        output.WriteRawTag(25);
-        output.WriteDouble(TaxFree);
+      if (TaxFree != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TaxFree);
       }
       if (CardNumber.Length != 0) {
         output.WriteRawTag(34);
@@ -558,13 +558,13 @@ namespace V1.Subscribe {
         output.WriteRawTag(10);
         output.WriteString(MerchantUid);
       }
-      if (Amount != 0D) {
-        output.WriteRawTag(17);
-        output.WriteDouble(Amount);
+      if (Amount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Amount);
       }
-      if (TaxFree != 0D) {
-        output.WriteRawTag(25);
-        output.WriteDouble(TaxFree);
+      if (TaxFree != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TaxFree);
       }
       if (CardNumber.Length != 0) {
         output.WriteRawTag(34);
@@ -642,11 +642,11 @@ namespace V1.Subscribe {
       if (MerchantUid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MerchantUid);
       }
-      if (Amount != 0D) {
-        size += 1 + 8;
+      if (Amount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Amount);
       }
-      if (TaxFree != 0D) {
-        size += 1 + 8;
+      if (TaxFree != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TaxFree);
       }
       if (CardNumber.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CardNumber);
@@ -710,10 +710,10 @@ namespace V1.Subscribe {
       if (other.MerchantUid.Length != 0) {
         MerchantUid = other.MerchantUid;
       }
-      if (other.Amount != 0D) {
+      if (other.Amount != 0) {
         Amount = other.Amount;
       }
-      if (other.TaxFree != 0D) {
+      if (other.TaxFree != 0) {
         TaxFree = other.TaxFree;
       }
       if (other.CardNumber.Length != 0) {
@@ -782,12 +782,12 @@ namespace V1.Subscribe {
             MerchantUid = input.ReadString();
             break;
           }
-          case 17: {
-            Amount = input.ReadDouble();
+          case 16: {
+            Amount = input.ReadInt32();
             break;
           }
-          case 25: {
-            TaxFree = input.ReadDouble();
+          case 24: {
+            TaxFree = input.ReadInt32();
             break;
           }
           case 34: {
@@ -872,12 +872,12 @@ namespace V1.Subscribe {
             MerchantUid = input.ReadString();
             break;
           }
-          case 17: {
-            Amount = input.ReadDouble();
+          case 16: {
+            Amount = input.ReadInt32();
             break;
           }
-          case 25: {
-            TaxFree = input.ReadDouble();
+          case 24: {
+            TaxFree = input.ReadInt32();
             break;
           }
           case 34: {
@@ -1279,9 +1279,9 @@ namespace V1.Subscribe {
 
     /// <summary>Field number for the "amount" field.</summary>
     public const int AmountFieldNumber = 3;
-    private double amount_;
+    private int amount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double Amount {
+    public int Amount {
       get { return amount_; }
       set {
         amount_ = value;
@@ -1290,9 +1290,9 @@ namespace V1.Subscribe {
 
     /// <summary>Field number for the "tax_free" field.</summary>
     public const int TaxFreeFieldNumber = 4;
-    private double taxFree_;
+    private int taxFree_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double TaxFree {
+    public int TaxFree {
       get { return taxFree_; }
       set {
         taxFree_ = value;
@@ -1424,8 +1424,8 @@ namespace V1.Subscribe {
       }
       if (CustomerUid != other.CustomerUid) return false;
       if (MerchantUid != other.MerchantUid) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Amount, other.Amount)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TaxFree, other.TaxFree)) return false;
+      if (Amount != other.Amount) return false;
+      if (TaxFree != other.TaxFree) return false;
       if (Name != other.Name) return false;
       if (BuyerName != other.BuyerName) return false;
       if (BuyerEmail != other.BuyerEmail) return false;
@@ -1444,8 +1444,8 @@ namespace V1.Subscribe {
       int hash = 1;
       if (CustomerUid.Length != 0) hash ^= CustomerUid.GetHashCode();
       if (MerchantUid.Length != 0) hash ^= MerchantUid.GetHashCode();
-      if (Amount != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Amount);
-      if (TaxFree != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TaxFree);
+      if (Amount != 0) hash ^= Amount.GetHashCode();
+      if (TaxFree != 0) hash ^= TaxFree.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (BuyerName.Length != 0) hash ^= BuyerName.GetHashCode();
       if (BuyerEmail.Length != 0) hash ^= BuyerEmail.GetHashCode();
@@ -1480,13 +1480,13 @@ namespace V1.Subscribe {
         output.WriteRawTag(18);
         output.WriteString(MerchantUid);
       }
-      if (Amount != 0D) {
-        output.WriteRawTag(25);
-        output.WriteDouble(Amount);
+      if (Amount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Amount);
       }
-      if (TaxFree != 0D) {
-        output.WriteRawTag(33);
-        output.WriteDouble(TaxFree);
+      if (TaxFree != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(TaxFree);
       }
       if (Name.Length != 0) {
         output.WriteRawTag(42);
@@ -1545,13 +1545,13 @@ namespace V1.Subscribe {
         output.WriteRawTag(18);
         output.WriteString(MerchantUid);
       }
-      if (Amount != 0D) {
-        output.WriteRawTag(25);
-        output.WriteDouble(Amount);
+      if (Amount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Amount);
       }
-      if (TaxFree != 0D) {
-        output.WriteRawTag(33);
-        output.WriteDouble(TaxFree);
+      if (TaxFree != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(TaxFree);
       }
       if (Name.Length != 0) {
         output.WriteRawTag(42);
@@ -1608,11 +1608,11 @@ namespace V1.Subscribe {
       if (MerchantUid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MerchantUid);
       }
-      if (Amount != 0D) {
-        size += 1 + 8;
+      if (Amount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Amount);
       }
-      if (TaxFree != 0D) {
-        size += 1 + 8;
+      if (TaxFree != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TaxFree);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -1661,10 +1661,10 @@ namespace V1.Subscribe {
       if (other.MerchantUid.Length != 0) {
         MerchantUid = other.MerchantUid;
       }
-      if (other.Amount != 0D) {
+      if (other.Amount != 0) {
         Amount = other.Amount;
       }
-      if (other.TaxFree != 0D) {
+      if (other.TaxFree != 0) {
         TaxFree = other.TaxFree;
       }
       if (other.Name.Length != 0) {
@@ -1719,12 +1719,12 @@ namespace V1.Subscribe {
             MerchantUid = input.ReadString();
             break;
           }
-          case 25: {
-            Amount = input.ReadDouble();
+          case 24: {
+            Amount = input.ReadInt32();
             break;
           }
-          case 33: {
-            TaxFree = input.ReadDouble();
+          case 32: {
+            TaxFree = input.ReadInt32();
             break;
           }
           case 42: {
@@ -1789,12 +1789,12 @@ namespace V1.Subscribe {
             MerchantUid = input.ReadString();
             break;
           }
-          case 25: {
-            Amount = input.ReadDouble();
+          case 24: {
+            Amount = input.ReadInt32();
             break;
           }
-          case 33: {
-            TaxFree = input.ReadDouble();
+          case 32: {
+            TaxFree = input.ReadInt32();
             break;
           }
           case 42: {
@@ -2157,9 +2157,9 @@ namespace V1.Subscribe {
 
     /// <summary>Field number for the "schedule_at" field.</summary>
     public const int ScheduleAtFieldNumber = 2;
-    private double scheduleAt_;
+    private int scheduleAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double ScheduleAt {
+    public int ScheduleAt {
       get { return scheduleAt_; }
       set {
         scheduleAt_ = value;
@@ -2268,7 +2268,7 @@ namespace V1.Subscribe {
         return true;
       }
       if (MerchantUid != other.MerchantUid) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ScheduleAt, other.ScheduleAt)) return false;
+      if (ScheduleAt != other.ScheduleAt) return false;
       if (Amount != other.Amount) return false;
       if (TaxFree != other.TaxFree) return false;
       if (Name != other.Name) return false;
@@ -2284,7 +2284,7 @@ namespace V1.Subscribe {
     public override int GetHashCode() {
       int hash = 1;
       if (MerchantUid.Length != 0) hash ^= MerchantUid.GetHashCode();
-      if (ScheduleAt != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ScheduleAt);
+      if (ScheduleAt != 0) hash ^= ScheduleAt.GetHashCode();
       if (Amount != 0) hash ^= Amount.GetHashCode();
       if (TaxFree != 0) hash ^= TaxFree.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2313,9 +2313,9 @@ namespace V1.Subscribe {
         output.WriteRawTag(10);
         output.WriteString(MerchantUid);
       }
-      if (ScheduleAt != 0D) {
-        output.WriteRawTag(17);
-        output.WriteDouble(ScheduleAt);
+      if (ScheduleAt != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ScheduleAt);
       }
       if (Amount != 0) {
         output.WriteRawTag(24);
@@ -2362,9 +2362,9 @@ namespace V1.Subscribe {
         output.WriteRawTag(10);
         output.WriteString(MerchantUid);
       }
-      if (ScheduleAt != 0D) {
-        output.WriteRawTag(17);
-        output.WriteDouble(ScheduleAt);
+      if (ScheduleAt != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ScheduleAt);
       }
       if (Amount != 0) {
         output.WriteRawTag(24);
@@ -2410,8 +2410,8 @@ namespace V1.Subscribe {
       if (MerchantUid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MerchantUid);
       }
-      if (ScheduleAt != 0D) {
-        size += 1 + 8;
+      if (ScheduleAt != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ScheduleAt);
       }
       if (Amount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Amount);
@@ -2451,7 +2451,7 @@ namespace V1.Subscribe {
       if (other.MerchantUid.Length != 0) {
         MerchantUid = other.MerchantUid;
       }
-      if (other.ScheduleAt != 0D) {
+      if (other.ScheduleAt != 0) {
         ScheduleAt = other.ScheduleAt;
       }
       if (other.Amount != 0) {
@@ -2496,8 +2496,8 @@ namespace V1.Subscribe {
             MerchantUid = input.ReadString();
             break;
           }
-          case 17: {
-            ScheduleAt = input.ReadDouble();
+          case 16: {
+            ScheduleAt = input.ReadInt32();
             break;
           }
           case 24: {
@@ -2550,8 +2550,8 @@ namespace V1.Subscribe {
             MerchantUid = input.ReadString();
             break;
           }
-          case 17: {
-            ScheduleAt = input.ReadDouble();
+          case 16: {
+            ScheduleAt = input.ReadInt32();
             break;
           }
           case 24: {

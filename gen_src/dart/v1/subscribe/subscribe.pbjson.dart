@@ -11,8 +11,8 @@ const OnetimePaymentRequest$json = const {
   '1': 'OnetimePaymentRequest',
   '2': const [
     const {'1': 'merchant_uid', '3': 1, '4': 1, '5': 9, '10': 'merchantUid'},
-    const {'1': 'amount', '3': 2, '4': 1, '5': 1, '10': 'amount'},
-    const {'1': 'tax_free', '3': 3, '4': 1, '5': 1, '10': 'taxFree'},
+    const {'1': 'amount', '3': 2, '4': 1, '5': 5, '10': 'amount'},
+    const {'1': 'tax_free', '3': 3, '4': 1, '5': 5, '10': 'taxFree'},
     const {'1': 'card_number', '3': 4, '4': 1, '5': 9, '10': 'cardNumber'},
     const {'1': 'expiry', '3': 5, '4': 1, '5': 9, '10': 'expiry'},
     const {'1': 'birth', '3': 6, '4': 1, '5': 9, '10': 'birth'},
@@ -46,8 +46,8 @@ const AgainPaymentRequest$json = const {
   '2': const [
     const {'1': 'customer_uid', '3': 1, '4': 1, '5': 9, '10': 'customerUid'},
     const {'1': 'merchant_uid', '3': 2, '4': 1, '5': 9, '10': 'merchantUid'},
-    const {'1': 'amount', '3': 3, '4': 1, '5': 1, '10': 'amount'},
-    const {'1': 'tax_free', '3': 4, '4': 1, '5': 1, '10': 'taxFree'},
+    const {'1': 'amount', '3': 3, '4': 1, '5': 5, '10': 'amount'},
+    const {'1': 'tax_free', '3': 4, '4': 1, '5': 5, '10': 'taxFree'},
     const {'1': 'name', '3': 5, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'buyer_name', '3': 6, '4': 1, '5': 9, '10': 'buyerName'},
     const {'1': 'buyer_email', '3': 7, '4': 1, '5': 9, '10': 'buyerEmail'},
@@ -74,7 +74,7 @@ const PaymentScheduleParam$json = const {
   '1': 'PaymentScheduleParam',
   '2': const [
     const {'1': 'merchant_uid', '3': 1, '4': 1, '5': 9, '10': 'merchantUid'},
-    const {'1': 'schedule_at', '3': 2, '4': 1, '5': 1, '10': 'scheduleAt'},
+    const {'1': 'schedule_at', '3': 2, '4': 1, '5': 5, '10': 'scheduleAt'},
     const {'1': 'amount', '3': 3, '4': 1, '5': 5, '10': 'amount'},
     const {'1': 'tax_free', '3': 4, '4': 1, '5': 5, '10': 'taxFree'},
     const {'1': 'name', '3': 5, '4': 1, '5': 9, '10': 'name'},

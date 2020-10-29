@@ -518,7 +518,7 @@ const char descriptor_table_protodef_v1_2fsubscribe_2fsubscribe_2eproto[] PROTOB
   "e\032\034google/api/annotations.proto\032\030v1/paym"
   "ent/payment.proto\"\217\003\n\025OnetimePaymentRequ"
   "est\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001("
-  "\001\022\020\n\010tax_free\030\003 \001(\001\022\023\n\013card_number\030\004 \001(\t"
+  "\005\022\020\n\010tax_free\030\003 \001(\005\022\023\n\013card_number\030\004 \001(\t"
   "\022\016\n\006expiry\030\005 \001(\t\022\r\n\005birth\030\006 \001(\t\022\022\n\npwd_2"
   "digit\030\007 \001(\t\022\024\n\014customer_uid\030\010 \001(\t\022\n\n\002pg\030"
   "\t \001(\t\022\014\n\004name\030\n \001(\t\022\022\n\nbuyer_name\030\013 \001(\t\022"
@@ -530,8 +530,8 @@ const char descriptor_table_protodef_v1_2fsubscribe_2fsubscribe_2eproto[] PROTOB
   "ponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010"
   "response\030\003 \001(\0132\020.payment.Payment\"\271\002\n\023Aga"
   "inPaymentRequest\022\024\n\014customer_uid\030\001 \001(\t\022\024"
-  "\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount\030\003 \001(\001\022\020\n\010"
-  "tax_free\030\004 \001(\001\022\014\n\004name\030\005 \001(\t\022\022\n\nbuyer_na"
+  "\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount\030\003 \001(\005\022\020\n\010"
+  "tax_free\030\004 \001(\005\022\014\n\004name\030\005 \001(\t\022\022\n\nbuyer_na"
   "me\030\006 \001(\t\022\023\n\013buyer_email\030\007 \001(\t\022\021\n\tbuyer_t"
   "el\030\010 \001(\t\022\022\n\nbuyer_addr\030\t \001(\t\022\026\n\016buyer_po"
   "stcode\030\n \001(\t\022\022\n\ncard_quota\030\013 \001(\005\022!\n\031inte"
@@ -540,7 +540,7 @@ const char descriptor_table_protodef_v1_2fsubscribe_2fsubscribe_2eproto[] PROTOB
   "mentResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 "
   "\001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.Payment\""
   "\331\001\n\024PaymentScheduleParam\022\024\n\014merchant_uid"
-  "\030\001 \001(\t\022\023\n\013schedule_at\030\002 \001(\001\022\016\n\006amount\030\003 "
+  "\030\001 \001(\t\022\023\n\013schedule_at\030\002 \001(\005\022\016\n\006amount\030\003 "
   "\001(\005\022\020\n\010tax_free\030\004 \001(\005\022\014\n\004name\030\005 \001(\t\022\022\n\nb"
   "uyer_name\030\006 \001(\t\022\023\n\013buyer_email\030\007 \001(\t\022\021\n\t"
   "buyer_tel\030\010 \001(\t\022\022\n\nbuyer_addr\030\t \001(\t\022\026\n\016b"
@@ -846,18 +846,18 @@ const char* OnetimePaymentRequest::_InternalParse(const char* ptr, ::PROTOBUF_NA
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // double amount = 2;
+      // int32 amount = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 17)) {
-          amount_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
-          ptr += sizeof(double);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          amount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // double tax_free = 3;
+      // int32 tax_free = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
-          tax_free_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
-          ptr += sizeof(double);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          tax_free_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string card_number = 4;
@@ -1038,16 +1038,16 @@ failure:
         1, this->_internal_merchant_uid(), target);
   }
 
-  // double amount = 2;
-  if (!(this->amount() <= 0 && this->amount() >= 0)) {
+  // int32 amount = 2;
+  if (this->amount() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_amount(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_amount(), target);
   }
 
-  // double tax_free = 3;
-  if (!(this->tax_free() <= 0 && this->tax_free() >= 0)) {
+  // int32 tax_free = 3;
+  if (this->tax_free() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_tax_free(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_tax_free(), target);
   }
 
   // string card_number = 4;
@@ -1323,14 +1323,18 @@ size_t OnetimePaymentRequest::ByteSizeLong() const {
         this->_internal_notice_url());
   }
 
-  // double amount = 2;
-  if (!(this->amount() <= 0 && this->amount() >= 0)) {
-    total_size += 1 + 8;
+  // int32 amount = 2;
+  if (this->amount() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_amount());
   }
 
-  // double tax_free = 3;
-  if (!(this->tax_free() <= 0 && this->tax_free() >= 0)) {
-    total_size += 1 + 8;
+  // int32 tax_free = 3;
+  if (this->tax_free() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_tax_free());
   }
 
   // int32 card_quota = 16;
@@ -1421,10 +1425,10 @@ void OnetimePaymentRequest::MergeFrom(const OnetimePaymentRequest& from) {
   if (from.notice_url().size() > 0) {
     _internal_set_notice_url(from._internal_notice_url());
   }
-  if (!(from.amount() <= 0 && from.amount() >= 0)) {
+  if (from.amount() != 0) {
     _internal_set_amount(from._internal_amount());
   }
-  if (!(from.tax_free() <= 0 && from.tax_free() >= 0)) {
+  if (from.tax_free() != 0) {
     _internal_set_tax_free(from._internal_tax_free());
   }
   if (from.card_quota() != 0) {
@@ -1948,18 +1952,18 @@ const char* AgainPaymentRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAME
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // double amount = 3;
+      // int32 amount = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
-          amount_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
-          ptr += sizeof(double);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          amount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // double tax_free = 4;
+      // int32 tax_free = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 33)) {
-          tax_free_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
-          ptr += sizeof(double);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          tax_free_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string name = 5;
@@ -2096,16 +2100,16 @@ failure:
         2, this->_internal_merchant_uid(), target);
   }
 
-  // double amount = 3;
-  if (!(this->amount() <= 0 && this->amount() >= 0)) {
+  // int32 amount = 3;
+  if (this->amount() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_amount(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_amount(), target);
   }
 
-  // double tax_free = 4;
-  if (!(this->tax_free() <= 0 && this->tax_free() >= 0)) {
+  // int32 tax_free = 4;
+  if (this->tax_free() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_tax_free(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_tax_free(), target);
   }
 
   // string name = 5;
@@ -2286,14 +2290,18 @@ size_t AgainPaymentRequest::ByteSizeLong() const {
         this->_internal_notice_url());
   }
 
-  // double amount = 3;
-  if (!(this->amount() <= 0 && this->amount() >= 0)) {
-    total_size += 1 + 8;
+  // int32 amount = 3;
+  if (this->amount() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_amount());
   }
 
-  // double tax_free = 4;
-  if (!(this->tax_free() <= 0 && this->tax_free() >= 0)) {
-    total_size += 1 + 8;
+  // int32 tax_free = 4;
+  if (this->tax_free() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_tax_free());
   }
 
   // int32 card_quota = 11;
@@ -2369,10 +2377,10 @@ void AgainPaymentRequest::MergeFrom(const AgainPaymentRequest& from) {
   if (from.notice_url().size() > 0) {
     _internal_set_notice_url(from._internal_notice_url());
   }
-  if (!(from.amount() <= 0 && from.amount() >= 0)) {
+  if (from.amount() != 0) {
     _internal_set_amount(from._internal_amount());
   }
-  if (!(from.tax_free() <= 0 && from.tax_free() >= 0)) {
+  if (from.tax_free() != 0) {
     _internal_set_tax_free(from._internal_tax_free());
   }
   if (from.card_quota() != 0) {
@@ -2858,11 +2866,11 @@ const char* PaymentScheduleParam::_InternalParse(const char* ptr, ::PROTOBUF_NAM
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // double schedule_at = 2;
+      // int32 schedule_at = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 17)) {
-          schedule_at_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
-          ptr += sizeof(double);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          schedule_at_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // int32 amount = 3;
@@ -2971,10 +2979,10 @@ failure:
         1, this->_internal_merchant_uid(), target);
   }
 
-  // double schedule_at = 2;
-  if (!(this->schedule_at() <= 0 && this->schedule_at() >= 0)) {
+  // int32 schedule_at = 2;
+  if (this->schedule_at() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_schedule_at(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_schedule_at(), target);
   }
 
   // int32 amount = 3;
@@ -3114,9 +3122,11 @@ size_t PaymentScheduleParam::ByteSizeLong() const {
         this->_internal_buyer_postcode());
   }
 
-  // double schedule_at = 2;
-  if (!(this->schedule_at() <= 0 && this->schedule_at() >= 0)) {
-    total_size += 1 + 8;
+  // int32 schedule_at = 2;
+  if (this->schedule_at() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_schedule_at());
   }
 
   // int32 amount = 3;
@@ -3185,7 +3195,7 @@ void PaymentScheduleParam::MergeFrom(const PaymentScheduleParam& from) {
   if (from.buyer_postcode().size() > 0) {
     _internal_set_buyer_postcode(from._internal_buyer_postcode());
   }
-  if (!(from.schedule_at() <= 0 && from.schedule_at() >= 0)) {
+  if (from.schedule_at() != 0) {
     _internal_set_schedule_at(from._internal_schedule_at());
   }
   if (from.amount() != 0) {

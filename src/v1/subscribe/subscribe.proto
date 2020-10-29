@@ -54,8 +54,8 @@ service SubscribeService {
 
 message OnetimePaymentRequest {
     string merchant_uid = 1;
-    double amount = 2;
-    double tax_free = 3;
+    int32 amount = 2;
+    int32 tax_free = 3;
     string card_number = 4;
     string expiry = 5;
     string birth = 6;
@@ -83,8 +83,8 @@ message OnetimePaymentResponse {
 message AgainPaymentRequest {
     string customer_uid = 1;
     string merchant_uid = 2;
-    double amount = 3;
-    double tax_free = 4;
+    int32 amount = 3;
+    int32 tax_free = 4;
     string name = 5;
     string buyer_name = 6;
     string buyer_email = 7;
@@ -105,7 +105,7 @@ message AgainPaymentResponse {
 
 message PaymentScheduleParam {
     string merchant_uid = 1;
-    double schedule_at = 2;
+    int32 schedule_at = 2;
     int32 amount = 3;
     int32 tax_free = 4;
     string name = 5;

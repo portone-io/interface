@@ -21249,27 +21249,27 @@ public final class Card {
       "reason\030\005 \001(\t\"o\n\032CancelCardPaymenttRespon" +
       "se\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0222\n\010res" +
       "ponse\030\003 \001(\0132 .card_v2.PayByRegisteredCar" +
-      "dData2\302\005\n\022PaymentCardService\022u\n\017CardRegi" +
-      "sterRPC\022\034.card_v2.CardRegisterRequest\032\035." +
-      "card_v2.CardRegisterResponse\"%\202\323\344\223\002\037\"\032/a" +
-      "pi/v2/payments/card/info:\001*\022z\n\016GetCardIn" +
-      "foRPC\022\033.card_v2.GetCardInfoRequest\032\034.car" +
-      "d_v2.GetCardInfoResponse\"-\202\323\344\223\002\'\022%/api/v" +
-      "2/payments/card/info/{card_uid}\022\203\001\n\021Dele" +
-      "teCardInfoRPC\022\036.card_v2.DeleteCardInfoRe" +
-      "quest\032\037.card_v2.DeleteCardInfoResponse\"-" +
-      "\202\323\344\223\002\'*%/api/v2/payments/card/info/{card" +
-      "_uid}\022\222\001\n\027PayByRegiseteredCardRPC\022#.card" +
-      "_v2.PayByRegisteredCardRequest\032$.card_v2" +
-      ".PayByRegisteredCardResponse\",\202\323\344\223\002&\"$/a" +
-      "pi/v2/payments/card/pay/registered\022\235\001\n\030C" +
-      "ancelRegiseteredCardRPC\022!.card_v2.Cancel" +
-      "CardPaymentRequest\032#.card_v2.CancelCardP" +
-      "aymenttResponse\"9\202\323\344\223\0023\"1/api/v2/payment" +
-      "s/card/cancel/registered/{imp_uid}BMZ8gi" +
-      "thub.com/iamport/interface/gen_src/go/v2" +
-      "/payments/card\252\002\020V2.Payments.Cardb\006proto" +
-      "3"
+      "dData2\314\005\n\022PaymentCardService\022w\n\021CardRegi" +
+      "sterV2RPC\022\034.card_v2.CardRegisterRequest\032" +
+      "\035.card_v2.CardRegisterResponse\"%\202\323\344\223\002\037\"\032" +
+      "/api/v2/payments/card/info:\001*\022|\n\020GetCard" +
+      "InfoV2RPC\022\033.card_v2.GetCardInfoRequest\032\034" +
+      ".card_v2.GetCardInfoResponse\"-\202\323\344\223\002\'\022%/a" +
+      "pi/v2/payments/card/info/{card_uid}\022\205\001\n\023" +
+      "DeleteCardInfoV2RPC\022\036.card_v2.DeleteCard" +
+      "InfoRequest\032\037.card_v2.DeleteCardInfoResp" +
+      "onse\"-\202\323\344\223\002\'*%/api/v2/payments/card/info" +
+      "/{card_uid}\022\224\001\n\031PayByRegiseteredCardV2RP" +
+      "C\022#.card_v2.PayByRegisteredCardRequest\032$" +
+      ".card_v2.PayByRegisteredCardResponse\",\202\323" +
+      "\344\223\002&\"$/api/v2/payments/card/pay/register" +
+      "ed\022\237\001\n\032CancelRegiseteredCardV2RPC\022!.card" +
+      "_v2.CancelCardPaymentRequest\032#.card_v2.C" +
+      "ancelCardPaymenttResponse\"9\202\323\344\223\0023\"1/api/" +
+      "v2/payments/card/cancel/registered/{imp_" +
+      "uid}BMZ8github.com/iamport/interface/gen" +
+      "_src/go/v2/payments/card\252\002\020V2.Payments.C" +
+      "ardb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

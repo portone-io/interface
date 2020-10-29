@@ -1374,25 +1374,25 @@ class PaymentCardServiceApi {
   $pb.RpcClient _client;
   PaymentCardServiceApi(this._client);
 
-  $async.Future<CardRegisterResponse> cardRegisterRPC($pb.ClientContext ctx, CardRegisterRequest request) {
+  $async.Future<CardRegisterResponse> cardRegisterV2RPC($pb.ClientContext ctx, CardRegisterRequest request) {
     var emptyResponse = CardRegisterResponse();
-    return _client.invoke<CardRegisterResponse>(ctx, 'PaymentCardService', 'CardRegisterRPC', request, emptyResponse);
+    return _client.invoke<CardRegisterResponse>(ctx, 'PaymentCardService', 'CardRegisterV2RPC', request, emptyResponse);
   }
-  $async.Future<GetCardInfoResponse> getCardInfoRPC($pb.ClientContext ctx, GetCardInfoRequest request) {
+  $async.Future<GetCardInfoResponse> getCardInfoV2RPC($pb.ClientContext ctx, GetCardInfoRequest request) {
     var emptyResponse = GetCardInfoResponse();
-    return _client.invoke<GetCardInfoResponse>(ctx, 'PaymentCardService', 'GetCardInfoRPC', request, emptyResponse);
+    return _client.invoke<GetCardInfoResponse>(ctx, 'PaymentCardService', 'GetCardInfoV2RPC', request, emptyResponse);
   }
-  $async.Future<DeleteCardInfoResponse> deleteCardInfoRPC($pb.ClientContext ctx, DeleteCardInfoRequest request) {
+  $async.Future<DeleteCardInfoResponse> deleteCardInfoV2RPC($pb.ClientContext ctx, DeleteCardInfoRequest request) {
     var emptyResponse = DeleteCardInfoResponse();
-    return _client.invoke<DeleteCardInfoResponse>(ctx, 'PaymentCardService', 'DeleteCardInfoRPC', request, emptyResponse);
+    return _client.invoke<DeleteCardInfoResponse>(ctx, 'PaymentCardService', 'DeleteCardInfoV2RPC', request, emptyResponse);
   }
-  $async.Future<PayByRegisteredCardResponse> payByRegiseteredCardRPC($pb.ClientContext ctx, PayByRegisteredCardRequest request) {
+  $async.Future<PayByRegisteredCardResponse> payByRegiseteredCardV2RPC($pb.ClientContext ctx, PayByRegisteredCardRequest request) {
     var emptyResponse = PayByRegisteredCardResponse();
-    return _client.invoke<PayByRegisteredCardResponse>(ctx, 'PaymentCardService', 'PayByRegiseteredCardRPC', request, emptyResponse);
+    return _client.invoke<PayByRegisteredCardResponse>(ctx, 'PaymentCardService', 'PayByRegiseteredCardV2RPC', request, emptyResponse);
   }
-  $async.Future<CancelCardPaymenttResponse> cancelRegiseteredCardRPC($pb.ClientContext ctx, CancelCardPaymentRequest request) {
+  $async.Future<CancelCardPaymenttResponse> cancelRegiseteredCardV2RPC($pb.ClientContext ctx, CancelCardPaymentRequest request) {
     var emptyResponse = CancelCardPaymenttResponse();
-    return _client.invoke<CancelCardPaymenttResponse>(ctx, 'PaymentCardService', 'CancelRegiseteredCardRPC', request, emptyResponse);
+    return _client.invoke<CancelCardPaymenttResponse>(ctx, 'PaymentCardService', 'CancelRegiseteredCardV2RPC', request, emptyResponse);
   }
 }
 

@@ -3867,16 +3867,16 @@ public final class Authenticate {
       "icate_v2.TokenData\"N\n\025PubKeyRegisterRequ" +
       "est\022\017\n\007imp_key\030\001 \001(\t\022\022\n\npublic_key\030\002 \001(\t" +
       "\022\020\n\010password\030\003 \001(\t\"7\n\026PubKeyRegisterResp" +
-      "onse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t2\217\002\n\023" +
-      "AuthenticateService\022l\n\010TokenRPC\022\035.authen" +
-      "ticate_v2.TokenRequest\032\036.authenticate_v2" +
-      ".TokenResponse\"!\202\323\344\223\002\033\"\026/api/v2/users/ge" +
-      "tToken:\001*\022\211\001\n\021RegisterPubKeyRPC\022&.authen" +
-      "ticate_v2.PubKeyRegisterRequest\032\'.authen" +
-      "ticate_v2.PubKeyRegisterResponse\"#\202\323\344\223\002\035" +
-      "\"\030/api/v2/users/public_key:\001*BKZ7github." +
-      "com/iamport/interface/gen_src/go/v2/auth" +
-      "enticate\252\002\017V2.Authenticateb\006proto3"
+      "onse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t2\223\002\n\023" +
+      "AuthenticateService\022n\n\nTokenV2RPC\022\035.auth" +
+      "enticate_v2.TokenRequest\032\036.authenticate_" +
+      "v2.TokenResponse\"!\202\323\344\223\002\033\"\026/api/v2/users/" +
+      "getToken:\001*\022\213\001\n\023RegisterPubKeyV2RPC\022&.au" +
+      "thenticate_v2.PubKeyRegisterRequest\032\'.au" +
+      "thenticate_v2.PubKeyRegisterResponse\"#\202\323" +
+      "\344\223\002\035\"\030/api/v2/users/public_key:\001*BKZ7git" +
+      "hub.com/iamport/interface/gen_src/go/v2/" +
+      "authenticate\252\002\017V2.Authenticateb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

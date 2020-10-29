@@ -22,7 +22,7 @@ abstract class PaymentServiceBase extends $pb.GeneratedService {
   $async.Future<$2.PaymentMerchantUidResponse> paymentMerchantUidRPC($pb.ServerContext ctx, $2.PaymentMerchantUidRequest request);
   $async.Future<$2.PaymentsMerchantUidResponse> paymentsMerchantUidRPC($pb.ServerContext ctx, $2.PaymentsMerchantUidRequest request);
   $async.Future<$2.PaymentStatusResponse> paymentsStatusRPC($pb.ServerContext ctx, $2.PaymentStatusRequest request);
-  $async.Future<$2.PaymentCancelResponse> paymentCanselRPC($pb.ServerContext ctx, $2.PaymentCancelRequest request);
+  $async.Future<$2.PaymentCancelResponse> paymentCancelRPC($pb.ServerContext ctx, $2.PaymentCancelRequest request);
   $async.Future<$2.PaymentPrepareResponse> paymentPrepareRPC($pb.ServerContext ctx, $2.PaymentPrepareRequest request);
   $async.Future<$2.PaymentPrepareResponse> paymentGetPrepareRPC($pb.ServerContext ctx, $2.PaymentGetPrepareRequest request);
 
@@ -34,7 +34,7 @@ abstract class PaymentServiceBase extends $pb.GeneratedService {
       case 'PaymentMerchantUidRPC': return $2.PaymentMerchantUidRequest();
       case 'PaymentsMerchantUidRPC': return $2.PaymentsMerchantUidRequest();
       case 'PaymentsStatusRPC': return $2.PaymentStatusRequest();
-      case 'PaymentCanselRPC': return $2.PaymentCancelRequest();
+      case 'PaymentCancelRPC': return $2.PaymentCancelRequest();
       case 'PaymentPrepareRPC': return $2.PaymentPrepareRequest();
       case 'PaymentGetPrepareRPC': return $2.PaymentGetPrepareRequest();
       default: throw $core.ArgumentError('Unknown method: $method');
@@ -49,7 +49,7 @@ abstract class PaymentServiceBase extends $pb.GeneratedService {
       case 'PaymentMerchantUidRPC': return this.paymentMerchantUidRPC(ctx, request);
       case 'PaymentsMerchantUidRPC': return this.paymentsMerchantUidRPC(ctx, request);
       case 'PaymentsStatusRPC': return this.paymentsStatusRPC(ctx, request);
-      case 'PaymentCanselRPC': return this.paymentCanselRPC(ctx, request);
+      case 'PaymentCancelRPC': return this.paymentCancelRPC(ctx, request);
       case 'PaymentPrepareRPC': return this.paymentPrepareRPC(ctx, request);
       case 'PaymentGetPrepareRPC': return this.paymentGetPrepareRPC(ctx, request);
       default: throw $core.ArgumentError('Unknown method: $method');

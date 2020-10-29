@@ -282,7 +282,7 @@ const PaymentServiceBase$json = const {
     const {'1': 'PaymentMerchantUidRPC', '2': '.payment.PaymentMerchantUidRequest', '3': '.payment.PaymentMerchantUidResponse', '4': const {}},
     const {'1': 'PaymentsMerchantUidRPC', '2': '.payment.PaymentsMerchantUidRequest', '3': '.payment.PaymentsMerchantUidResponse', '4': const {}},
     const {'1': 'PaymentsStatusRPC', '2': '.payment.PaymentStatusRequest', '3': '.payment.PaymentStatusResponse', '4': const {}},
-    const {'1': 'PaymentCanselRPC', '2': '.payment.PaymentCancelRequest', '3': '.payment.PaymentCancelResponse', '4': const {}},
+    const {'1': 'PaymentCancelRPC', '2': '.payment.PaymentCancelRequest', '3': '.payment.PaymentCancelResponse', '4': const {}},
     const {'1': 'PaymentPrepareRPC', '2': '.payment.PaymentPrepareRequest', '3': '.payment.PaymentPrepareResponse', '4': const {}},
     const {'1': 'PaymentGetPrepareRPC', '2': '.payment.PaymentGetPrepareRequest', '3': '.payment.PaymentPrepareResponse', '4': const {}},
   ],

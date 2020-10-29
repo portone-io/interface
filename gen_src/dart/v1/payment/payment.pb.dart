@@ -1776,9 +1776,9 @@ class PaymentServiceApi {
     var emptyResponse = PaymentStatusResponse();
     return _client.invoke<PaymentStatusResponse>(ctx, 'PaymentService', 'PaymentsStatusRPC', request, emptyResponse);
   }
-  $async.Future<PaymentCancelResponse> paymentCanselRPC($pb.ClientContext ctx, PaymentCancelRequest request) {
+  $async.Future<PaymentCancelResponse> paymentCancelRPC($pb.ClientContext ctx, PaymentCancelRequest request) {
     var emptyResponse = PaymentCancelResponse();
-    return _client.invoke<PaymentCancelResponse>(ctx, 'PaymentService', 'PaymentCanselRPC', request, emptyResponse);
+    return _client.invoke<PaymentCancelResponse>(ctx, 'PaymentService', 'PaymentCancelRPC', request, emptyResponse);
   }
   $async.Future<PaymentPrepareResponse> paymentPrepareRPC($pb.ClientContext ctx, PaymentPrepareRequest request) {
     var emptyResponse = PaymentPrepareResponse();

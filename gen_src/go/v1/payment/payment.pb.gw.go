@@ -421,7 +421,7 @@ func local_request_PaymentService_PaymentsStatusRPC_0(ctx context.Context, marsh
 
 }
 
-func request_PaymentService_PaymentCanselRPC_0(ctx context.Context, marshaler runtime.Marshaler, client PaymentServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PaymentService_PaymentCancelRPC_0(ctx context.Context, marshaler runtime.Marshaler, client PaymentServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq PaymentCancelRequest
 	var metadata runtime.ServerMetadata
 
@@ -433,12 +433,12 @@ func request_PaymentService_PaymentCanselRPC_0(ctx context.Context, marshaler ru
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.PaymentCanselRPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.PaymentCancelRPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func local_request_PaymentService_PaymentCanselRPC_0(ctx context.Context, marshaler runtime.Marshaler, server PaymentServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PaymentService_PaymentCancelRPC_0(ctx context.Context, marshaler runtime.Marshaler, server PaymentServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq PaymentCancelRequest
 	var metadata runtime.ServerMetadata
 
@@ -450,7 +450,7 @@ func local_request_PaymentService_PaymentCanselRPC_0(ctx context.Context, marsha
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := server.PaymentCanselRPC(ctx, &protoReq)
+	msg, err := server.PaymentCancelRPC(ctx, &protoReq)
 	return msg, metadata, err
 
 }
@@ -685,18 +685,18 @@ func RegisterPaymentServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 
 	})
 
-	mux.Handle("POST", pattern_PaymentService_PaymentCanselRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PaymentService_PaymentCancelRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/payment.PaymentService/PaymentCanselRPC")
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/payment.PaymentService/PaymentCancelRPC")
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_PaymentService_PaymentCanselRPC_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PaymentService_PaymentCancelRPC_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -704,7 +704,7 @@ func RegisterPaymentServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 			return
 		}
 
-		forward_PaymentService_PaymentCanselRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PaymentService_PaymentCancelRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -915,23 +915,23 @@ func RegisterPaymentServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 
 	})
 
-	mux.Handle("POST", pattern_PaymentService_PaymentCanselRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PaymentService_PaymentCancelRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/payment.PaymentService/PaymentCanselRPC")
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/payment.PaymentService/PaymentCancelRPC")
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_PaymentService_PaymentCanselRPC_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PaymentService_PaymentCancelRPC_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_PaymentService_PaymentCanselRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PaymentService_PaymentCancelRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -991,7 +991,7 @@ var (
 
 	pattern_PaymentService_PaymentsStatusRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 1, 0, 4, 1, 5, 3}, []string{"api", "v1", "payments", "status"}, ""))
 
-	pattern_PaymentService_PaymentCanselRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"api", "v1", "payments", "cancel"}, ""))
+	pattern_PaymentService_PaymentCancelRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"api", "v1", "payments", "cancel"}, ""))
 
 	pattern_PaymentService_PaymentPrepareRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"api", "v1", "payments", "prepare"}, ""))
 
@@ -1011,7 +1011,7 @@ var (
 
 	forward_PaymentService_PaymentsStatusRPC_0 = runtime.ForwardResponseMessage
 
-	forward_PaymentService_PaymentCanselRPC_0 = runtime.ForwardResponseMessage
+	forward_PaymentService_PaymentCancelRPC_0 = runtime.ForwardResponseMessage
 
 	forward_PaymentService_PaymentPrepareRPC_0 = runtime.ForwardResponseMessage
 

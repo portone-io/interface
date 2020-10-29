@@ -31,7 +31,7 @@ var _ = runtime.String
 var _ = utilities.NewDoubleArray
 var _ = metadata.Join
 
-func request_PaymentCardService_CardRegisterRPC_0(ctx context.Context, marshaler runtime.Marshaler, client PaymentCardServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PaymentCardService_CardRegisterV2RPC_0(ctx context.Context, marshaler runtime.Marshaler, client PaymentCardServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq CardRegisterRequest
 	var metadata runtime.ServerMetadata
 
@@ -43,12 +43,12 @@ func request_PaymentCardService_CardRegisterRPC_0(ctx context.Context, marshaler
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.CardRegisterRPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.CardRegisterV2RPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func local_request_PaymentCardService_CardRegisterRPC_0(ctx context.Context, marshaler runtime.Marshaler, server PaymentCardServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PaymentCardService_CardRegisterV2RPC_0(ctx context.Context, marshaler runtime.Marshaler, server PaymentCardServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq CardRegisterRequest
 	var metadata runtime.ServerMetadata
 
@@ -60,12 +60,12 @@ func local_request_PaymentCardService_CardRegisterRPC_0(ctx context.Context, mar
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := server.CardRegisterRPC(ctx, &protoReq)
+	msg, err := server.CardRegisterV2RPC(ctx, &protoReq)
 	return msg, metadata, err
 
 }
 
-func request_PaymentCardService_GetCardInfoRPC_0(ctx context.Context, marshaler runtime.Marshaler, client PaymentCardServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PaymentCardService_GetCardInfoV2RPC_0(ctx context.Context, marshaler runtime.Marshaler, client PaymentCardServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq GetCardInfoRequest
 	var metadata runtime.ServerMetadata
 
@@ -86,12 +86,12 @@ func request_PaymentCardService_GetCardInfoRPC_0(ctx context.Context, marshaler 
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "card_uid", err)
 	}
 
-	msg, err := client.GetCardInfoRPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.GetCardInfoV2RPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func local_request_PaymentCardService_GetCardInfoRPC_0(ctx context.Context, marshaler runtime.Marshaler, server PaymentCardServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PaymentCardService_GetCardInfoV2RPC_0(ctx context.Context, marshaler runtime.Marshaler, server PaymentCardServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq GetCardInfoRequest
 	var metadata runtime.ServerMetadata
 
@@ -112,12 +112,12 @@ func local_request_PaymentCardService_GetCardInfoRPC_0(ctx context.Context, mars
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "card_uid", err)
 	}
 
-	msg, err := server.GetCardInfoRPC(ctx, &protoReq)
+	msg, err := server.GetCardInfoV2RPC(ctx, &protoReq)
 	return msg, metadata, err
 
 }
 
-func request_PaymentCardService_DeleteCardInfoRPC_0(ctx context.Context, marshaler runtime.Marshaler, client PaymentCardServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PaymentCardService_DeleteCardInfoV2RPC_0(ctx context.Context, marshaler runtime.Marshaler, client PaymentCardServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq DeleteCardInfoRequest
 	var metadata runtime.ServerMetadata
 
@@ -138,12 +138,12 @@ func request_PaymentCardService_DeleteCardInfoRPC_0(ctx context.Context, marshal
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "card_uid", err)
 	}
 
-	msg, err := client.DeleteCardInfoRPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.DeleteCardInfoV2RPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func local_request_PaymentCardService_DeleteCardInfoRPC_0(ctx context.Context, marshaler runtime.Marshaler, server PaymentCardServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PaymentCardService_DeleteCardInfoV2RPC_0(ctx context.Context, marshaler runtime.Marshaler, server PaymentCardServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq DeleteCardInfoRequest
 	var metadata runtime.ServerMetadata
 
@@ -164,52 +164,52 @@ func local_request_PaymentCardService_DeleteCardInfoRPC_0(ctx context.Context, m
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "card_uid", err)
 	}
 
-	msg, err := server.DeleteCardInfoRPC(ctx, &protoReq)
+	msg, err := server.DeleteCardInfoV2RPC(ctx, &protoReq)
 	return msg, metadata, err
 
 }
 
 var (
-	filter_PaymentCardService_PayByRegiseteredCardRPC_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
+	filter_PaymentCardService_PayByRegiseteredCardV2RPC_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
 )
 
-func request_PaymentCardService_PayByRegiseteredCardRPC_0(ctx context.Context, marshaler runtime.Marshaler, client PaymentCardServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PaymentCardService_PayByRegiseteredCardV2RPC_0(ctx context.Context, marshaler runtime.Marshaler, client PaymentCardServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq PayByRegisteredCardRequest
 	var metadata runtime.ServerMetadata
 
 	if err := req.ParseForm(); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
-	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_PaymentCardService_PayByRegiseteredCardRPC_0); err != nil {
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_PaymentCardService_PayByRegiseteredCardV2RPC_0); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.PayByRegiseteredCardRPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.PayByRegiseteredCardV2RPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func local_request_PaymentCardService_PayByRegiseteredCardRPC_0(ctx context.Context, marshaler runtime.Marshaler, server PaymentCardServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PaymentCardService_PayByRegiseteredCardV2RPC_0(ctx context.Context, marshaler runtime.Marshaler, server PaymentCardServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq PayByRegisteredCardRequest
 	var metadata runtime.ServerMetadata
 
 	if err := req.ParseForm(); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
-	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_PaymentCardService_PayByRegiseteredCardRPC_0); err != nil {
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_PaymentCardService_PayByRegiseteredCardV2RPC_0); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := server.PayByRegiseteredCardRPC(ctx, &protoReq)
+	msg, err := server.PayByRegiseteredCardV2RPC(ctx, &protoReq)
 	return msg, metadata, err
 
 }
 
 var (
-	filter_PaymentCardService_CancelRegiseteredCardRPC_0 = &utilities.DoubleArray{Encoding: map[string]int{"imp_uid": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
+	filter_PaymentCardService_CancelRegiseteredCardV2RPC_0 = &utilities.DoubleArray{Encoding: map[string]int{"imp_uid": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
 )
 
-func request_PaymentCardService_CancelRegiseteredCardRPC_0(ctx context.Context, marshaler runtime.Marshaler, client PaymentCardServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_PaymentCardService_CancelRegiseteredCardV2RPC_0(ctx context.Context, marshaler runtime.Marshaler, client PaymentCardServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq CancelCardPaymentRequest
 	var metadata runtime.ServerMetadata
 
@@ -233,16 +233,16 @@ func request_PaymentCardService_CancelRegiseteredCardRPC_0(ctx context.Context, 
 	if err := req.ParseForm(); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
-	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_PaymentCardService_CancelRegiseteredCardRPC_0); err != nil {
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_PaymentCardService_CancelRegiseteredCardV2RPC_0); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.CancelRegiseteredCardRPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.CancelRegiseteredCardV2RPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func local_request_PaymentCardService_CancelRegiseteredCardRPC_0(ctx context.Context, marshaler runtime.Marshaler, server PaymentCardServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func local_request_PaymentCardService_CancelRegiseteredCardV2RPC_0(ctx context.Context, marshaler runtime.Marshaler, server PaymentCardServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq CancelCardPaymentRequest
 	var metadata runtime.ServerMetadata
 
@@ -266,11 +266,11 @@ func local_request_PaymentCardService_CancelRegiseteredCardRPC_0(ctx context.Con
 	if err := req.ParseForm(); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
-	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_PaymentCardService_CancelRegiseteredCardRPC_0); err != nil {
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_PaymentCardService_CancelRegiseteredCardV2RPC_0); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := server.CancelRegiseteredCardRPC(ctx, &protoReq)
+	msg, err := server.CancelRegiseteredCardV2RPC(ctx, &protoReq)
 	return msg, metadata, err
 
 }
@@ -281,18 +281,18 @@ func local_request_PaymentCardService_CancelRegiseteredCardRPC_0(ctx context.Con
 // Note that using this registration option will cause many gRPC library features to stop working. Consider using RegisterPaymentCardServiceHandlerFromEndpoint instead.
 func RegisterPaymentCardServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux, server PaymentCardServiceServer) error {
 
-	mux.Handle("POST", pattern_PaymentCardService_CardRegisterRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PaymentCardService_CardRegisterV2RPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/card_v2.PaymentCardService/CardRegisterRPC")
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/card_v2.PaymentCardService/CardRegisterV2RPC")
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_PaymentCardService_CardRegisterRPC_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PaymentCardService_CardRegisterV2RPC_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -300,22 +300,22 @@ func RegisterPaymentCardServiceHandlerServer(ctx context.Context, mux *runtime.S
 			return
 		}
 
-		forward_PaymentCardService_CardRegisterRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PaymentCardService_CardRegisterV2RPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("GET", pattern_PaymentCardService_GetCardInfoRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_PaymentCardService_GetCardInfoV2RPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/card_v2.PaymentCardService/GetCardInfoRPC")
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/card_v2.PaymentCardService/GetCardInfoV2RPC")
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_PaymentCardService_GetCardInfoRPC_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PaymentCardService_GetCardInfoV2RPC_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -323,22 +323,22 @@ func RegisterPaymentCardServiceHandlerServer(ctx context.Context, mux *runtime.S
 			return
 		}
 
-		forward_PaymentCardService_GetCardInfoRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PaymentCardService_GetCardInfoV2RPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("DELETE", pattern_PaymentCardService_DeleteCardInfoRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("DELETE", pattern_PaymentCardService_DeleteCardInfoV2RPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/card_v2.PaymentCardService/DeleteCardInfoRPC")
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/card_v2.PaymentCardService/DeleteCardInfoV2RPC")
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_PaymentCardService_DeleteCardInfoRPC_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PaymentCardService_DeleteCardInfoV2RPC_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -346,22 +346,22 @@ func RegisterPaymentCardServiceHandlerServer(ctx context.Context, mux *runtime.S
 			return
 		}
 
-		forward_PaymentCardService_DeleteCardInfoRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PaymentCardService_DeleteCardInfoV2RPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_PaymentCardService_PayByRegiseteredCardRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PaymentCardService_PayByRegiseteredCardV2RPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/card_v2.PaymentCardService/PayByRegiseteredCardRPC")
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/card_v2.PaymentCardService/PayByRegiseteredCardV2RPC")
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_PaymentCardService_PayByRegiseteredCardRPC_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PaymentCardService_PayByRegiseteredCardV2RPC_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -369,22 +369,22 @@ func RegisterPaymentCardServiceHandlerServer(ctx context.Context, mux *runtime.S
 			return
 		}
 
-		forward_PaymentCardService_PayByRegiseteredCardRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PaymentCardService_PayByRegiseteredCardV2RPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_PaymentCardService_CancelRegiseteredCardRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PaymentCardService_CancelRegiseteredCardV2RPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/card_v2.PaymentCardService/CancelRegiseteredCardRPC")
+		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/card_v2.PaymentCardService/CancelRegiseteredCardV2RPC")
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_PaymentCardService_CancelRegiseteredCardRPC_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_PaymentCardService_CancelRegiseteredCardV2RPC_0(rctx, inboundMarshaler, server, req, pathParams)
 		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
@@ -392,7 +392,7 @@ func RegisterPaymentCardServiceHandlerServer(ctx context.Context, mux *runtime.S
 			return
 		}
 
-		forward_PaymentCardService_CancelRegiseteredCardRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PaymentCardService_CancelRegiseteredCardV2RPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -437,103 +437,103 @@ func RegisterPaymentCardServiceHandler(ctx context.Context, mux *runtime.ServeMu
 // "PaymentCardServiceClient" to call the correct interceptors.
 func RegisterPaymentCardServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux, client PaymentCardServiceClient) error {
 
-	mux.Handle("POST", pattern_PaymentCardService_CardRegisterRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PaymentCardService_CardRegisterV2RPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/card_v2.PaymentCardService/CardRegisterRPC")
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/card_v2.PaymentCardService/CardRegisterV2RPC")
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_PaymentCardService_CardRegisterRPC_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PaymentCardService_CardRegisterV2RPC_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_PaymentCardService_CardRegisterRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PaymentCardService_CardRegisterV2RPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("GET", pattern_PaymentCardService_GetCardInfoRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_PaymentCardService_GetCardInfoV2RPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/card_v2.PaymentCardService/GetCardInfoRPC")
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/card_v2.PaymentCardService/GetCardInfoV2RPC")
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_PaymentCardService_GetCardInfoRPC_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PaymentCardService_GetCardInfoV2RPC_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_PaymentCardService_GetCardInfoRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PaymentCardService_GetCardInfoV2RPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("DELETE", pattern_PaymentCardService_DeleteCardInfoRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("DELETE", pattern_PaymentCardService_DeleteCardInfoV2RPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/card_v2.PaymentCardService/DeleteCardInfoRPC")
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/card_v2.PaymentCardService/DeleteCardInfoV2RPC")
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_PaymentCardService_DeleteCardInfoRPC_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PaymentCardService_DeleteCardInfoV2RPC_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_PaymentCardService_DeleteCardInfoRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PaymentCardService_DeleteCardInfoV2RPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_PaymentCardService_PayByRegiseteredCardRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PaymentCardService_PayByRegiseteredCardV2RPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/card_v2.PaymentCardService/PayByRegiseteredCardRPC")
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/card_v2.PaymentCardService/PayByRegiseteredCardV2RPC")
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_PaymentCardService_PayByRegiseteredCardRPC_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PaymentCardService_PayByRegiseteredCardV2RPC_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_PaymentCardService_PayByRegiseteredCardRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PaymentCardService_PayByRegiseteredCardV2RPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_PaymentCardService_CancelRegiseteredCardRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_PaymentCardService_CancelRegiseteredCardV2RPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/card_v2.PaymentCardService/CancelRegiseteredCardRPC")
+		rctx, err := runtime.AnnotateContext(ctx, mux, req, "/card_v2.PaymentCardService/CancelRegiseteredCardV2RPC")
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_PaymentCardService_CancelRegiseteredCardRPC_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_PaymentCardService_CancelRegiseteredCardV2RPC_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_PaymentCardService_CancelRegiseteredCardRPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_PaymentCardService_CancelRegiseteredCardV2RPC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -541,25 +541,25 @@ func RegisterPaymentCardServiceHandlerClient(ctx context.Context, mux *runtime.S
 }
 
 var (
-	pattern_PaymentCardService_CardRegisterRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v2", "payments", "card", "info"}, ""))
+	pattern_PaymentCardService_CardRegisterV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v2", "payments", "card", "info"}, ""))
 
-	pattern_PaymentCardService_GetCardInfoRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 1, 0, 4, 1, 5, 5}, []string{"api", "v2", "payments", "card", "info", "card_uid"}, ""))
+	pattern_PaymentCardService_GetCardInfoV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 1, 0, 4, 1, 5, 5}, []string{"api", "v2", "payments", "card", "info", "card_uid"}, ""))
 
-	pattern_PaymentCardService_DeleteCardInfoRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 1, 0, 4, 1, 5, 5}, []string{"api", "v2", "payments", "card", "info", "card_uid"}, ""))
+	pattern_PaymentCardService_DeleteCardInfoV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 1, 0, 4, 1, 5, 5}, []string{"api", "v2", "payments", "card", "info", "card_uid"}, ""))
 
-	pattern_PaymentCardService_PayByRegiseteredCardRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v2", "payments", "card", "pay", "registered"}, ""))
+	pattern_PaymentCardService_PayByRegiseteredCardV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v2", "payments", "card", "pay", "registered"}, ""))
 
-	pattern_PaymentCardService_CancelRegiseteredCardRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5, 1, 0, 4, 1, 5, 6}, []string{"api", "v2", "payments", "card", "cancel", "registered", "imp_uid"}, ""))
+	pattern_PaymentCardService_CancelRegiseteredCardV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5, 1, 0, 4, 1, 5, 6}, []string{"api", "v2", "payments", "card", "cancel", "registered", "imp_uid"}, ""))
 )
 
 var (
-	forward_PaymentCardService_CardRegisterRPC_0 = runtime.ForwardResponseMessage
+	forward_PaymentCardService_CardRegisterV2RPC_0 = runtime.ForwardResponseMessage
 
-	forward_PaymentCardService_GetCardInfoRPC_0 = runtime.ForwardResponseMessage
+	forward_PaymentCardService_GetCardInfoV2RPC_0 = runtime.ForwardResponseMessage
 
-	forward_PaymentCardService_DeleteCardInfoRPC_0 = runtime.ForwardResponseMessage
+	forward_PaymentCardService_DeleteCardInfoV2RPC_0 = runtime.ForwardResponseMessage
 
-	forward_PaymentCardService_PayByRegiseteredCardRPC_0 = runtime.ForwardResponseMessage
+	forward_PaymentCardService_PayByRegiseteredCardV2RPC_0 = runtime.ForwardResponseMessage
 
-	forward_PaymentCardService_CancelRegiseteredCardRPC_0 = runtime.ForwardResponseMessage
+	forward_PaymentCardService_CancelRegiseteredCardV2RPC_0 = runtime.ForwardResponseMessage
 )

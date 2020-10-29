@@ -7,14 +7,14 @@ option go_package = "github.com/iamport/interface/gen_src/go/v2/authenticate";
 option csharp_namespace = "V2.Authenticate";
 
 service AuthenticateService {
-    rpc TokenRPC(TokenRequest) returns (TokenResponse) {
+    rpc TokenV2RPC(TokenRequest) returns (TokenResponse) {
         option (google.api.http) = {
             post: "/api/v2/users/getToken"
             body: "*"
         };
     }
 
-    rpc RegisterPubKeyRPC(PubKeyRegisterRequest) returns (PubKeyRegisterResponse) {
+    rpc RegisterPubKeyV2RPC(PubKeyRegisterRequest) returns (PubKeyRegisterResponse) {
         option (google.api.http) = {
             post: "/api/v2/users/public_key"
             body: "*"

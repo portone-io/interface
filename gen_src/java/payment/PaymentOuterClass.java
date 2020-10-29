@@ -27361,7 +27361,7 @@ public final class PaymentOuterClass {
       "ymentsStatusRPC\022\035.payment.PaymentStatusR" +
       "equest\032\036.payment.PaymentStatusResponse\"(" +
       "\202\323\344\223\002\"\022 /api/v1/payments/status/{status}" +
-      "\022u\n\020PaymentCanselRPC\022\035.payment.PaymentCa" +
+      "\022u\n\020PaymentCancelRPC\022\035.payment.PaymentCa" +
       "ncelRequest\032\036.payment.PaymentCancelRespo" +
       "nse\"\"\202\323\344\223\002\034\"\027/api/v1/payments/cancel:\001*\022" +
       "y\n\021PaymentPrepareRPC\022\036.payment.PaymentPr" +

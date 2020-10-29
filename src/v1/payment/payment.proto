@@ -42,7 +42,7 @@ service PaymentService {
         };
     }
 
-    rpc PaymentCanselRPC(PaymentCancelRequest) returns (PaymentCancelResponse) {
+    rpc PaymentCancelRPC(PaymentCancelRequest) returns (PaymentCancelResponse) {
         option (google.api.http) = {
             post: "/api/v1/payments/cancel"
             body: "*"

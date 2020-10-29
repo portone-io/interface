@@ -11,7 +11,7 @@ $ git clone https://github.com/iamport/interface.git
 
 $ cd interface
 
-$ make build
+$ make all
 ```
 
 ## Clean

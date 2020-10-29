@@ -18,9 +18,9 @@ class PaymentScheduleParam extends \Google\Protobuf\Internal\Message
      */
     protected $merchant_uid = '';
     /**
-     * Generated from protobuf field <code>double schedule_at = 2;</code>
+     * Generated from protobuf field <code>int32 schedule_at = 2;</code>
      */
-    protected $schedule_at = 0.0;
+    protected $schedule_at = 0;
     /**
      * Generated from protobuf field <code>int32 amount = 3;</code>
      */
@@ -61,7 +61,7 @@ class PaymentScheduleParam extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $merchant_uid
-     *     @type float $schedule_at
+     *     @type int $schedule_at
      *     @type int $amount
      *     @type int $tax_free
      *     @type string $name
@@ -100,8 +100,8 @@ class PaymentScheduleParam extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>double schedule_at = 2;</code>
-     * @return float
+     * Generated from protobuf field <code>int32 schedule_at = 2;</code>
+     * @return int
      */
     public function getScheduleAt()
     {
@@ -109,13 +109,13 @@ class PaymentScheduleParam extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>double schedule_at = 2;</code>
-     * @param float $var
+     * Generated from protobuf field <code>int32 schedule_at = 2;</code>
+     * @param int $var
      * @return $this
      */
     public function setScheduleAt($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkInt32($var);
         $this->schedule_at = $var;
 
         return $this;

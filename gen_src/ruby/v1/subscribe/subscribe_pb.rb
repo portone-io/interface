@@ -9,8 +9,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("v1/subscribe/subscribe.proto", :syntax => :proto3) do
     add_message "subscribe.OnetimePaymentRequest" do
       optional :merchant_uid, :string, 1
-      optional :amount, :double, 2
-      optional :tax_free, :double, 3
+      optional :amount, :int32, 2
+      optional :tax_free, :int32, 3
       optional :card_number, :string, 4
       optional :expiry, :string, 5
       optional :birth, :string, 6
@@ -36,8 +36,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "subscribe.AgainPaymentRequest" do
       optional :customer_uid, :string, 1
       optional :merchant_uid, :string, 2
-      optional :amount, :double, 3
-      optional :tax_free, :double, 4
+      optional :amount, :int32, 3
+      optional :tax_free, :int32, 4
       optional :name, :string, 5
       optional :buyer_name, :string, 6
       optional :buyer_email, :string, 7
@@ -56,7 +56,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "subscribe.PaymentScheduleParam" do
       optional :merchant_uid, :string, 1
-      optional :schedule_at, :double, 2
+      optional :schedule_at, :int32, 2
       optional :amount, :int32, 3
       optional :tax_free, :int32, 4
       optional :name, :string, 5

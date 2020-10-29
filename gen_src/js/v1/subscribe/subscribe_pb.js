@@ -379,8 +379,8 @@ proto.subscribe.OnetimePaymentRequest.prototype.toObject = function(opt_includeI
 proto.subscribe.OnetimePaymentRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     merchantUid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    amount: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
-    taxFree: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
+    amount: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    taxFree: jspb.Message.getFieldWithDefault(msg, 3, 0),
     cardNumber: jspb.Message.getFieldWithDefault(msg, 4, ""),
     expiry: jspb.Message.getFieldWithDefault(msg, 5, ""),
     birth: jspb.Message.getFieldWithDefault(msg, 6, ""),
@@ -438,11 +438,11 @@ proto.subscribe.OnetimePaymentRequest.deserializeBinaryFromReader = function(msg
       msg.setMerchantUid(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readDouble());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setAmount(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readDouble());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setTaxFree(value);
       break;
     case 4:
@@ -546,15 +546,15 @@ proto.subscribe.OnetimePaymentRequest.serializeBinaryToWriter = function(message
     );
   }
   f = message.getAmount();
-  if (f !== 0.0) {
-    writer.writeDouble(
+  if (f !== 0) {
+    writer.writeInt32(
       2,
       f
     );
   }
   f = message.getTaxFree();
-  if (f !== 0.0) {
-    writer.writeDouble(
+  if (f !== 0) {
+    writer.writeInt32(
       3,
       f
     );
@@ -693,11 +693,11 @@ proto.subscribe.OnetimePaymentRequest.prototype.setMerchantUid = function(value)
 
 
 /**
- * optional double amount = 2;
+ * optional int32 amount = 2;
  * @return {number}
  */
 proto.subscribe.OnetimePaymentRequest.prototype.getAmount = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
@@ -706,16 +706,16 @@ proto.subscribe.OnetimePaymentRequest.prototype.getAmount = function() {
  * @return {!proto.subscribe.OnetimePaymentRequest} returns this
  */
 proto.subscribe.OnetimePaymentRequest.prototype.setAmount = function(value) {
-  return jspb.Message.setProto3FloatField(this, 2, value);
+  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
 /**
- * optional double tax_free = 3;
+ * optional int32 tax_free = 3;
  * @return {number}
  */
 proto.subscribe.OnetimePaymentRequest.prototype.getTaxFree = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 3, 0.0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
@@ -724,7 +724,7 @@ proto.subscribe.OnetimePaymentRequest.prototype.getTaxFree = function() {
  * @return {!proto.subscribe.OnetimePaymentRequest} returns this
  */
 proto.subscribe.OnetimePaymentRequest.prototype.setTaxFree = function(value) {
-  return jspb.Message.setProto3FloatField(this, 3, value);
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -1261,8 +1261,8 @@ proto.subscribe.AgainPaymentRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     customerUid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     merchantUid: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    amount: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
-    taxFree: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
+    amount: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    taxFree: jspb.Message.getFieldWithDefault(msg, 4, 0),
     name: jspb.Message.getFieldWithDefault(msg, 5, ""),
     buyerName: jspb.Message.getFieldWithDefault(msg, 6, ""),
     buyerEmail: jspb.Message.getFieldWithDefault(msg, 7, ""),
@@ -1318,11 +1318,11 @@ proto.subscribe.AgainPaymentRequest.deserializeBinaryFromReader = function(msg, 
       msg.setMerchantUid(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readDouble());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setAmount(value);
       break;
     case 4:
-      var value = /** @type {number} */ (reader.readDouble());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setTaxFree(value);
       break;
     case 5:
@@ -1409,15 +1409,15 @@ proto.subscribe.AgainPaymentRequest.serializeBinaryToWriter = function(message, 
     );
   }
   f = message.getAmount();
-  if (f !== 0.0) {
-    writer.writeDouble(
+  if (f !== 0) {
+    writer.writeInt32(
       3,
       f
     );
   }
   f = message.getTaxFree();
-  if (f !== 0.0) {
-    writer.writeDouble(
+  if (f !== 0) {
+    writer.writeInt32(
       4,
       f
     );
@@ -1532,11 +1532,11 @@ proto.subscribe.AgainPaymentRequest.prototype.setMerchantUid = function(value) {
 
 
 /**
- * optional double amount = 3;
+ * optional int32 amount = 3;
  * @return {number}
  */
 proto.subscribe.AgainPaymentRequest.prototype.getAmount = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 3, 0.0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
@@ -1545,16 +1545,16 @@ proto.subscribe.AgainPaymentRequest.prototype.getAmount = function() {
  * @return {!proto.subscribe.AgainPaymentRequest} returns this
  */
 proto.subscribe.AgainPaymentRequest.prototype.setAmount = function(value) {
-  return jspb.Message.setProto3FloatField(this, 3, value);
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
 /**
- * optional double tax_free = 4;
+ * optional int32 tax_free = 4;
  * @return {number}
  */
 proto.subscribe.AgainPaymentRequest.prototype.getTaxFree = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
@@ -1563,7 +1563,7 @@ proto.subscribe.AgainPaymentRequest.prototype.getTaxFree = function() {
  * @return {!proto.subscribe.AgainPaymentRequest} returns this
  */
 proto.subscribe.AgainPaymentRequest.prototype.setTaxFree = function(value) {
-  return jspb.Message.setProto3FloatField(this, 4, value);
+  return jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
@@ -1991,7 +1991,7 @@ proto.subscribe.PaymentScheduleParam.prototype.toObject = function(opt_includeIn
 proto.subscribe.PaymentScheduleParam.toObject = function(includeInstance, msg) {
   var f, obj = {
     merchantUid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    scheduleAt: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
+    scheduleAt: jspb.Message.getFieldWithDefault(msg, 2, 0),
     amount: jspb.Message.getFieldWithDefault(msg, 3, 0),
     taxFree: jspb.Message.getFieldWithDefault(msg, 4, 0),
     name: jspb.Message.getFieldWithDefault(msg, 5, ""),
@@ -2041,7 +2041,7 @@ proto.subscribe.PaymentScheduleParam.deserializeBinaryFromReader = function(msg,
       msg.setMerchantUid(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readDouble());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setScheduleAt(value);
       break;
     case 3:
@@ -2113,8 +2113,8 @@ proto.subscribe.PaymentScheduleParam.serializeBinaryToWriter = function(message,
     );
   }
   f = message.getScheduleAt();
-  if (f !== 0.0) {
-    writer.writeDouble(
+  if (f !== 0) {
+    writer.writeInt32(
       2,
       f
     );
@@ -2197,11 +2197,11 @@ proto.subscribe.PaymentScheduleParam.prototype.setMerchantUid = function(value) 
 
 
 /**
- * optional double schedule_at = 2;
+ * optional int32 schedule_at = 2;
  * @return {number}
  */
 proto.subscribe.PaymentScheduleParam.prototype.getScheduleAt = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
@@ -2210,7 +2210,7 @@ proto.subscribe.PaymentScheduleParam.prototype.getScheduleAt = function() {
  * @return {!proto.subscribe.PaymentScheduleParam} returns this
  */
 proto.subscribe.PaymentScheduleParam.prototype.setScheduleAt = function(value) {
-  return jspb.Message.setProto3FloatField(this, 2, value);
+  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 

@@ -75,7 +75,7 @@ type UnsafeAuthenticateServiceServer interface {
 	mustEmbedUnimplementedAuthenticateServiceServer()
 }
 
-func RegisterAuthenticateServiceServer(s *grpc.Server, srv AuthenticateServiceServer) {
+func RegisterAuthenticateServiceServer(s grpc.ServiceRegistrar, srv AuthenticateServiceServer) {
 	s.RegisterService(&_AuthenticateService_serviceDesc, srv)
 }
 

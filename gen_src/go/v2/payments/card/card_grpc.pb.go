@@ -117,7 +117,7 @@ type UnsafePaymentCardServiceServer interface {
 	mustEmbedUnimplementedPaymentCardServiceServer()
 }
 
-func RegisterPaymentCardServiceServer(s *grpc.Server, srv PaymentCardServiceServer) {
+func RegisterPaymentCardServiceServer(s grpc.ServiceRegistrar, srv PaymentCardServiceServer) {
 	s.RegisterService(&_PaymentCardService_serviceDesc, srv)
 }
 

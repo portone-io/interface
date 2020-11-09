@@ -133,7 +133,7 @@ type UnsafeSubscribeCustomersServiceServer interface {
 	mustEmbedUnimplementedSubscribeCustomersServiceServer()
 }
 
-func RegisterSubscribeCustomersServiceServer(s *grpc.Server, srv SubscribeCustomersServiceServer) {
+func RegisterSubscribeCustomersServiceServer(s grpc.ServiceRegistrar, srv SubscribeCustomersServiceServer) {
 	s.RegisterService(&_SubscribeCustomersService_serviceDesc, srv)
 }
 

@@ -171,14 +171,6 @@ func request_SubscribeService_GetScheduledPaymentRPC_0(ctx context.Context, mars
 	var protoReq GetPaymentScheduleRequest
 	var metadata runtime.ServerMetadata
 
-	newReader, berr := utilities.IOReaderFactory(req.Body)
-	if berr != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", berr)
-	}
-	if err := marshaler.NewDecoder(newReader()).Decode(&protoReq); err != nil && err != io.EOF {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-
 	var (
 		val string
 		ok  bool
@@ -205,14 +197,6 @@ func local_request_SubscribeService_GetScheduledPaymentRPC_0(ctx context.Context
 	var protoReq GetPaymentScheduleRequest
 	var metadata runtime.ServerMetadata
 
-	newReader, berr := utilities.IOReaderFactory(req.Body)
-	if berr != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", berr)
-	}
-	if err := marshaler.NewDecoder(newReader()).Decode(&protoReq); err != nil && err != io.EOF {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-
 	var (
 		val string
 		ok  bool
@@ -235,17 +219,13 @@ func local_request_SubscribeService_GetScheduledPaymentRPC_0(ctx context.Context
 
 }
 
+var (
+	filter_SubscribeService_GetScheduledPaymentByCustomerUidRPC_0 = &utilities.DoubleArray{Encoding: map[string]int{"customer_uid": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
+)
+
 func request_SubscribeService_GetScheduledPaymentByCustomerUidRPC_0(ctx context.Context, marshaler runtime.Marshaler, client SubscribeServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq GetPaymentScheduleByCustomerRequest
 	var metadata runtime.ServerMetadata
-
-	newReader, berr := utilities.IOReaderFactory(req.Body)
-	if berr != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", berr)
-	}
-	if err := marshaler.NewDecoder(newReader()).Decode(&protoReq); err != nil && err != io.EOF {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
 
 	var (
 		val string
@@ -262,6 +242,13 @@ func request_SubscribeService_GetScheduledPaymentByCustomerUidRPC_0(ctx context.
 	protoReq.CustomerUid, err = runtime.String(val)
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "customer_uid", err)
+	}
+
+	if err := req.ParseForm(); err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_SubscribeService_GetScheduledPaymentByCustomerUidRPC_0); err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
 	msg, err := client.GetScheduledPaymentByCustomerUidRPC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -273,14 +260,6 @@ func local_request_SubscribeService_GetScheduledPaymentByCustomerUidRPC_0(ctx co
 	var protoReq GetPaymentScheduleByCustomerRequest
 	var metadata runtime.ServerMetadata
 
-	newReader, berr := utilities.IOReaderFactory(req.Body)
-	if berr != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", berr)
-	}
-	if err := marshaler.NewDecoder(newReader()).Decode(&protoReq); err != nil && err != io.EOF {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-
 	var (
 		val string
 		ok  bool
@@ -296,6 +275,13 @@ func local_request_SubscribeService_GetScheduledPaymentByCustomerUidRPC_0(ctx co
 	protoReq.CustomerUid, err = runtime.String(val)
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "customer_uid", err)
+	}
+
+	if err := req.ParseForm(); err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_SubscribeService_GetScheduledPaymentByCustomerUidRPC_0); err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
 	msg, err := server.GetScheduledPaymentByCustomerUidRPC(ctx, &protoReq)
@@ -401,7 +387,7 @@ func RegisterSubscribeServiceHandlerServer(ctx context.Context, mux *runtime.Ser
 
 	})
 
-	mux.Handle("POST", pattern_SubscribeService_GetScheduledPaymentRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_SubscribeService_GetScheduledPaymentRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
@@ -424,7 +410,7 @@ func RegisterSubscribeServiceHandlerServer(ctx context.Context, mux *runtime.Ser
 
 	})
 
-	mux.Handle("POST", pattern_SubscribeService_GetScheduledPaymentByCustomerUidRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_SubscribeService_GetScheduledPaymentByCustomerUidRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		var stream runtime.ServerTransportStream
@@ -568,7 +554,7 @@ func RegisterSubscribeServiceHandlerClient(ctx context.Context, mux *runtime.Ser
 
 	})
 
-	mux.Handle("POST", pattern_SubscribeService_GetScheduledPaymentRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_SubscribeService_GetScheduledPaymentRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -588,7 +574,7 @@ func RegisterSubscribeServiceHandlerClient(ctx context.Context, mux *runtime.Ser
 
 	})
 
-	mux.Handle("POST", pattern_SubscribeService_GetScheduledPaymentByCustomerUidRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_SubscribeService_GetScheduledPaymentByCustomerUidRPC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)

@@ -61,7 +61,7 @@ type UnsafeTokenServiceServer interface {
 	mustEmbedUnimplementedTokenServiceServer()
 }
 
-func RegisterTokenServiceServer(s *grpc.Server, srv TokenServiceServer) {
+func RegisterTokenServiceServer(s grpc.ServiceRegistrar, srv TokenServiceServer) {
 	s.RegisterService(&_TokenService_serviceDesc, srv)
 }
 

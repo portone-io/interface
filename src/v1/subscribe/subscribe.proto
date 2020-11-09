@@ -38,15 +38,13 @@ service SubscribeService {
 
     rpc GetScheduledPaymentRPC(GetPaymentScheduleRequest) returns (GetPaymentScheduleResponse) {
         option (google.api.http) = {
-            post: "/api/v1/subscribe/payments/schedule/{merchant_uid}"
-            body: "*"
+            get: "/api/v1/subscribe/payments/schedule/{merchant_uid}"
         };
     }
 
     rpc GetScheduledPaymentByCustomerUidRPC(GetPaymentScheduleByCustomerRequest) returns (GetPaymentScheduleByCustomerResponse) {
         option (google.api.http) = {
-            post: "/api/v1/subscribe/payments/schedule/customers/{customer_uid}"
-            body: "*"
+            get: "/api/v1/subscribe/payments/schedule/customers/{customer_uid}"
         };
     }
 

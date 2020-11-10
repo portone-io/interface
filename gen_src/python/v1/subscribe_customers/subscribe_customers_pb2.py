@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z>github.com/iamport/interface/gen_src/go/v1/subscribe_customers\252\002\025V1.SubscribeCustomers',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n0v1/subscribe_customers/subscribe_customers.proto\x12\x13subscribe_customers\x1a\x1cgoogle/api/annotations.proto\x1a\x18v1/payment/payment.proto\x1a\x1cv1/subscribe/subscribe.proto\"\xb6\x02\n\x12\x43ustomerBillingKey\x12\x11\n\tcard_code\x18\x01 \x01(\t\x12\x11\n\tcard_name\x18\x02 \x01(\t\x12\x13\n\x0b\x63\x61rd_number\x18\x03 \x01(\t\x12\x11\n\tcard_type\x18\x04 \x01(\x05\x12\x15\n\rcustomer_addr\x18\x05 \x01(\t\x12\x16\n\x0e\x63ustomer_email\x18\x06 \x01(\t\x12\x15\n\rcustomer_name\x18\x07 \x01(\t\x12\x19\n\x11\x63ustomer_postcode\x18\x08 \x01(\t\x12\x14\n\x0c\x63ustomer_tel\x18\t \x01(\t\x12\x14\n\x0c\x63ustomer_uid\x18\n \x01(\t\x12\x10\n\x08inserted\x18\x0b \x01(\x05\x12\r\n\x05pg_id\x18\x0c \x01(\t\x12\x13\n\x0bpg_provider\x18\r \x01(\t\x12\x0f\n\x07updated\x18\x0e \x01(\x05\"<\n$GetMultipleCustomerBillingKeyRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x03(\t\"\x81\x01\n%GetMultipleCustomerBillingKeyResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x39\n\x08response\x18\x03 \x03(\x0b\x32\'.subscribe_customers.CustomerBillingKey\"Z\n\x1f\x44\x65leteCustomerBillingKeyRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x0e\n\x06reason\x18\x02 \x01(\t\x12\x11\n\trequester\x18\x03 \x01(\t\"|\n DeleteCustomerBillingKeyResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x39\n\x08response\x18\x03 \x01(\x0b\x32\'.subscribe_customers.CustomerBillingKey\"4\n\x1cGetCustomerBillingKeyRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\"y\n\x1dGetCustomerBillingKeyResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x39\n\x08response\x18\x03 \x01(\x0b\x32\'.subscribe_customers.CustomerBillingKey\"\x82\x02\n\x1fInsertCustomerBillingKeyRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\n\n\x02pg\x18\x02 \x01(\t\x12\x13\n\x0b\x63\x61rd_number\x18\x03 \x01(\t\x12\x0e\n\x06\x65xpiry\x18\x04 \x01(\t\x12\r\n\x05\x62irth\x18\x05 \x01(\t\x12\x12\n\npwd_2digit\x18\x06 \x01(\t\x12\x15\n\rcustomer_name\x18\x07 \x01(\t\x12\x14\n\x0c\x63ustomer_tel\x18\x08 \x01(\t\x12\x16\n\x0e\x63ustomer_email\x18\t \x01(\t\x12\x15\n\rcustomer_addr\x18\n \x01(\t\x12\x19\n\x11\x63ustomer_postcode\x18\x0b \x01(\t\"|\n InsertCustomerBillingKeyResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x39\n\x08response\x18\x03 \x01(\x0b\x32\'.subscribe_customers.CustomerBillingKey\"D\n\x1eGetPaidByBillingKeyListRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\"r\n!NestedGetPaidByBillingKeyListData\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x10\n\x08previous\x18\x02 \x01(\x05\x12\x0c\n\x04next\x18\x03 \x01(\x05\x12\x1e\n\x04list\x18\x04 \x03(\x0b\x32\x10.payment.Payment\"\x8a\x01\n\x1fGetPaidByBillingKeyListResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12H\n\x08response\x18\x03 \x01(\x0b\x32\x36.subscribe_customers.NestedGetPaidByBillingKeyListData2\xa3\t\n\x19SubscribeCustomersService\x12\xbe\x01\n GetMultipleCustomerBillingKeyRPC\x12\x39.subscribe_customers.GetMultipleCustomerBillingKeyRequest\x1a:.subscribe_customers.GetMultipleCustomerBillingKeyResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/api/v1/subscribe/customers\x12\xbe\x01\n\x1b\x44\x65leteCustomerBillingKeyRPC\x12\x34.subscribe_customers.DeleteCustomerBillingKeyRequest\x1a\x35.subscribe_customers.DeleteCustomerBillingKeyResponse\"2\x82\xd3\xe4\x93\x02,**/api/v1/subscribe/customers/{customer_uid}\x12\xb5\x01\n\x18GetCustomerBillingKeyRPC\x12\x31.subscribe_customers.GetCustomerBillingKeyRequest\x1a\x32.subscribe_customers.GetCustomerBillingKeyResponse\"2\x82\xd3\xe4\x93\x02,\x12*/api/v1/subscribe/customers/{customer_uid}\x12\xc1\x01\n\x1bInsertCustomerBillingKeyRPC\x12\x34.subscribe_customers.InsertCustomerBillingKeyRequest\x1a\x35.subscribe_customers.InsertCustomerBillingKeyResponse\"5\x82\xd3\xe4\x93\x02/\"*/api/v1/subscribe/customers/{customer_uid}:\x01*\x12\xc4\x01\n\x1aGetPaidByBillingKeyListRPC\x12\x33.subscribe_customers.GetPaidByBillingKeyListRequest\x1a\x34.subscribe_customers.GetPaidByBillingKeyListResponse\";\x82\xd3\xe4\x93\x02\x35\x12\x33/api/v1/subscribe/customers/{customer_uid}/payments\x12\xc0\x01\n\x1fGetPaymentScheduleByCustomerRPC\x12..subscribe.GetPaymentScheduleByCustomerRequest\x1a/.subscribe.GetPaymentScheduleByCustomerResponse\"<\x82\xd3\xe4\x93\x02\x36\x12\x34/api/v1/subscribe/customers/{customer_uid}/schedulesBXZ>github.com/iamport/interface/gen_src/go/v1/subscribe_customers\xaa\x02\x15V1.SubscribeCustomersb\x06proto3'
+  serialized_pb=b'\n0v1/subscribe_customers/subscribe_customers.proto\x12\x13subscribe_customers\x1a\x1cgoogle/api/annotations.proto\x1a\x18v1/payment/payment.proto\x1a\x1cv1/subscribe/subscribe.proto\"\xb6\x02\n\x12\x43ustomerBillingKey\x12\x11\n\tcard_code\x18\x01 \x01(\t\x12\x11\n\tcard_name\x18\x02 \x01(\t\x12\x13\n\x0b\x63\x61rd_number\x18\x03 \x01(\t\x12\x11\n\tcard_type\x18\x04 \x01(\x05\x12\x15\n\rcustomer_addr\x18\x05 \x01(\t\x12\x16\n\x0e\x63ustomer_email\x18\x06 \x01(\t\x12\x15\n\rcustomer_name\x18\x07 \x01(\t\x12\x19\n\x11\x63ustomer_postcode\x18\x08 \x01(\t\x12\x14\n\x0c\x63ustomer_tel\x18\t \x01(\t\x12\x14\n\x0c\x63ustomer_uid\x18\n \x01(\t\x12\x10\n\x08inserted\x18\x0b \x01(\x05\x12\r\n\x05pg_id\x18\x0c \x01(\t\x12\x13\n\x0bpg_provider\x18\r \x01(\t\x12\x0f\n\x07updated\x18\x0e \x01(\x05\"<\n$GetMultipleCustomerBillingKeyRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x03(\t\"\x81\x01\n%GetMultipleCustomerBillingKeyResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x39\n\x08response\x18\x03 \x03(\x0b\x32\'.subscribe_customers.CustomerBillingKey\"Z\n\x1f\x44\x65leteCustomerBillingKeyRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x0e\n\x06reason\x18\x02 \x01(\t\x12\x11\n\trequester\x18\x03 \x01(\t\"|\n DeleteCustomerBillingKeyResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x39\n\x08response\x18\x03 \x01(\x0b\x32\'.subscribe_customers.CustomerBillingKey\"4\n\x1cGetCustomerBillingKeyRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\"y\n\x1dGetCustomerBillingKeyResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x39\n\x08response\x18\x03 \x01(\x0b\x32\'.subscribe_customers.CustomerBillingKey\"\x82\x02\n\x1fInsertCustomerBillingKeyRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\n\n\x02pg\x18\x02 \x01(\t\x12\x13\n\x0b\x63\x61rd_number\x18\x03 \x01(\t\x12\x0e\n\x06\x65xpiry\x18\x04 \x01(\t\x12\r\n\x05\x62irth\x18\x05 \x01(\t\x12\x12\n\npwd_2digit\x18\x06 \x01(\t\x12\x15\n\rcustomer_name\x18\x07 \x01(\t\x12\x14\n\x0c\x63ustomer_tel\x18\x08 \x01(\t\x12\x16\n\x0e\x63ustomer_email\x18\t \x01(\t\x12\x15\n\rcustomer_addr\x18\n \x01(\t\x12\x19\n\x11\x63ustomer_postcode\x18\x0b \x01(\t\"|\n InsertCustomerBillingKeyResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x39\n\x08response\x18\x03 \x01(\x0b\x32\'.subscribe_customers.CustomerBillingKey\"D\n\x1eGetPaidByBillingKeyListRequest\x12\x14\n\x0c\x63ustomer_uid\x18\x01 \x01(\t\x12\x0c\n\x04page\x18\x02 \x01(\x05\"r\n!NestedGetPaidByBillingKeyListData\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x10\n\x08previous\x18\x02 \x01(\x05\x12\x0c\n\x04next\x18\x03 \x01(\x05\x12\x1e\n\x04list\x18\x04 \x03(\x0b\x32\x10.payment.Payment\"\x8a\x01\n\x1fGetPaidByBillingKeyListResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12H\n\x08response\x18\x03 \x01(\x0b\x32\x36.subscribe_customers.NestedGetPaidByBillingKeyListData2\x8b\t\n\x19SubscribeCustomersService\x12\xba\x01\n GetMultipleCustomerBillingKeyRPC\x12\x39.subscribe_customers.GetMultipleCustomerBillingKeyRequest\x1a:.subscribe_customers.GetMultipleCustomerBillingKeyResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/v1/subscribe/customers\x12\xba\x01\n\x1b\x44\x65leteCustomerBillingKeyRPC\x12\x34.subscribe_customers.DeleteCustomerBillingKeyRequest\x1a\x35.subscribe_customers.DeleteCustomerBillingKeyResponse\".\x82\xd3\xe4\x93\x02(*&/v1/subscribe/customers/{customer_uid}\x12\xb1\x01\n\x18GetCustomerBillingKeyRPC\x12\x31.subscribe_customers.GetCustomerBillingKeyRequest\x1a\x32.subscribe_customers.GetCustomerBillingKeyResponse\".\x82\xd3\xe4\x93\x02(\x12&/v1/subscribe/customers/{customer_uid}\x12\xbd\x01\n\x1bInsertCustomerBillingKeyRPC\x12\x34.subscribe_customers.InsertCustomerBillingKeyRequest\x1a\x35.subscribe_customers.InsertCustomerBillingKeyResponse\"1\x82\xd3\xe4\x93\x02+\"&/v1/subscribe/customers/{customer_uid}:\x01*\x12\xc0\x01\n\x1aGetPaidByBillingKeyListRPC\x12\x33.subscribe_customers.GetPaidByBillingKeyListRequest\x1a\x34.subscribe_customers.GetPaidByBillingKeyListResponse\"7\x82\xd3\xe4\x93\x02\x31\x12//v1/subscribe/customers/{customer_uid}/payments\x12\xbc\x01\n\x1fGetPaymentScheduleByCustomerRPC\x12..subscribe.GetPaymentScheduleByCustomerRequest\x1a/.subscribe.GetPaymentScheduleByCustomerResponse\"8\x82\xd3\xe4\x93\x02\x32\x12\x30/v1/subscribe/customers/{customer_uid}/schedulesBXZ>github.com/iamport/interface/gen_src/go/v1/subscribe_customers\xaa\x02\x15V1.SubscribeCustomersb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,v1_dot_payment_dot_payment__pb2.DESCRIPTOR,v1_dot_subscribe_dot_subscribe__pb2.DESCRIPTOR,])
 
@@ -800,7 +800,7 @@ _SUBSCRIBECUSTOMERSSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=1776,
-  serialized_end=2963,
+  serialized_end=2939,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetMultipleCustomerBillingKeyRPC',
@@ -809,7 +809,7 @@ _SUBSCRIBECUSTOMERSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_GETMULTIPLECUSTOMERBILLINGKEYREQUEST,
     output_type=_GETMULTIPLECUSTOMERBILLINGKEYRESPONSE,
-    serialized_options=b'\202\323\344\223\002\035\022\033/api/v1/subscribe/customers',
+    serialized_options=b'\202\323\344\223\002\031\022\027/v1/subscribe/customers',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -819,7 +819,7 @@ _SUBSCRIBECUSTOMERSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_DELETECUSTOMERBILLINGKEYREQUEST,
     output_type=_DELETECUSTOMERBILLINGKEYRESPONSE,
-    serialized_options=b'\202\323\344\223\002,**/api/v1/subscribe/customers/{customer_uid}',
+    serialized_options=b'\202\323\344\223\002(*&/v1/subscribe/customers/{customer_uid}',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -829,7 +829,7 @@ _SUBSCRIBECUSTOMERSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_GETCUSTOMERBILLINGKEYREQUEST,
     output_type=_GETCUSTOMERBILLINGKEYRESPONSE,
-    serialized_options=b'\202\323\344\223\002,\022*/api/v1/subscribe/customers/{customer_uid}',
+    serialized_options=b'\202\323\344\223\002(\022&/v1/subscribe/customers/{customer_uid}',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -839,7 +839,7 @@ _SUBSCRIBECUSTOMERSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_INSERTCUSTOMERBILLINGKEYREQUEST,
     output_type=_INSERTCUSTOMERBILLINGKEYRESPONSE,
-    serialized_options=b'\202\323\344\223\002/\"*/api/v1/subscribe/customers/{customer_uid}:\001*',
+    serialized_options=b'\202\323\344\223\002+\"&/v1/subscribe/customers/{customer_uid}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -849,7 +849,7 @@ _SUBSCRIBECUSTOMERSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_GETPAIDBYBILLINGKEYLISTREQUEST,
     output_type=_GETPAIDBYBILLINGKEYLISTRESPONSE,
-    serialized_options=b'\202\323\344\223\0025\0223/api/v1/subscribe/customers/{customer_uid}/payments',
+    serialized_options=b'\202\323\344\223\0021\022//v1/subscribe/customers/{customer_uid}/payments',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -859,7 +859,7 @@ _SUBSCRIBECUSTOMERSSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=v1_dot_subscribe_dot_subscribe__pb2._GETPAYMENTSCHEDULEBYCUSTOMERREQUEST,
     output_type=v1_dot_subscribe_dot_subscribe__pb2._GETPAYMENTSCHEDULEBYCUSTOMERRESPONSE,
-    serialized_options=b'\202\323\344\223\0026\0224/api/v1/subscribe/customers/{customer_uid}/schedules',
+    serialized_options=b'\202\323\344\223\0022\0220/v1/subscribe/customers/{customer_uid}/schedules',
     create_key=_descriptor._internal_create_key,
   ),
 ])

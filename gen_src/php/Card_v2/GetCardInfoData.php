@@ -30,9 +30,9 @@ class GetCardInfoData extends \Google\Protobuf\Internal\Message
      */
     protected $bin_number = '';
     /**
-     * Generated from protobuf field <code>string card_type = 5;</code>
+     * Generated from protobuf field <code>int32 card_type = 5;</code>
      */
-    protected $card_type = '';
+    protected $card_type = 0;
     /**
      * Generated from protobuf field <code>string customer_name = 6;</code>
      */
@@ -72,7 +72,7 @@ class GetCardInfoData extends \Google\Protobuf\Internal\Message
      *     @type string $card_provider
      *     @type string $card_code
      *     @type string $bin_number
-     *     @type string $card_type
+     *     @type int $card_type
      *     @type string $customer_name
      *     @type string $customer_tel
      *     @type string $customer_email
@@ -176,8 +176,8 @@ class GetCardInfoData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string card_type = 5;</code>
-     * @return string
+     * Generated from protobuf field <code>int32 card_type = 5;</code>
+     * @return int
      */
     public function getCardType()
     {
@@ -185,13 +185,13 @@ class GetCardInfoData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string card_type = 5;</code>
-     * @param string $var
+     * Generated from protobuf field <code>int32 card_type = 5;</code>
+     * @param int $var
      * @return $this
      */
     public function setCardType($var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkInt32($var);
         $this->card_type = $var;
 
         return $this;

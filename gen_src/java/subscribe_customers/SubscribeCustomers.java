@@ -12565,39 +12565,38 @@ public final class SubscribeCustomers {
       "PaidByBillingKeyListResponse\022\014\n\004code\030\001 \001" +
       "(\005\022\017\n\007message\030\002 \001(\t\022H\n\010response\030\003 \001(\01326." +
       "subscribe_customers.NestedGetPaidByBilli" +
-      "ngKeyListData2\243\t\n\031SubscribeCustomersServ" +
-      "ice\022\276\001\n GetMultipleCustomerBillingKeyRPC" +
+      "ngKeyListData2\213\t\n\031SubscribeCustomersServ" +
+      "ice\022\272\001\n GetMultipleCustomerBillingKeyRPC" +
       "\0229.subscribe_customers.GetMultipleCustom" +
       "erBillingKeyRequest\032:.subscribe_customer" +
       "s.GetMultipleCustomerBillingKeyResponse\"" +
-      "#\202\323\344\223\002\035\022\033/api/v1/subscribe/customers\022\276\001\n" +
-      "\033DeleteCustomerBillingKeyRPC\0224.subscribe" +
-      "_customers.DeleteCustomerBillingKeyReque" +
-      "st\0325.subscribe_customers.DeleteCustomerB" +
-      "illingKeyResponse\"2\202\323\344\223\002,**/api/v1/subsc" +
-      "ribe/customers/{customer_uid}\022\265\001\n\030GetCus" +
-      "tomerBillingKeyRPC\0221.subscribe_customers" +
-      ".GetCustomerBillingKeyRequest\0322.subscrib" +
-      "e_customers.GetCustomerBillingKeyRespons" +
-      "e\"2\202\323\344\223\002,\022*/api/v1/subscribe/customers/{" +
-      "customer_uid}\022\301\001\n\033InsertCustomerBillingK" +
-      "eyRPC\0224.subscribe_customers.InsertCustom" +
-      "erBillingKeyRequest\0325.subscribe_customer" +
-      "s.InsertCustomerBillingKeyResponse\"5\202\323\344\223" +
-      "\002/\"*/api/v1/subscribe/customers/{custome" +
-      "r_uid}:\001*\022\304\001\n\032GetPaidByBillingKeyListRPC" +
-      "\0223.subscribe_customers.GetPaidByBillingK" +
-      "eyListRequest\0324.subscribe_customers.GetP" +
-      "aidByBillingKeyListResponse\";\202\323\344\223\0025\0223/ap" +
-      "i/v1/subscribe/customers/{customer_uid}/" +
-      "payments\022\300\001\n\037GetPaymentScheduleByCustome" +
-      "rRPC\022..subscribe.GetPaymentScheduleByCus" +
-      "tomerRequest\032/.subscribe.GetPaymentSched" +
-      "uleByCustomerResponse\"<\202\323\344\223\0026\0224/api/v1/s" +
-      "ubscribe/customers/{customer_uid}/schedu" +
-      "lesBXZ>github.com/iamport/interface/gen_" +
-      "src/go/v1/subscribe_customers\252\002\025V1.Subsc" +
-      "ribeCustomersb\006proto3"
+      "\037\202\323\344\223\002\031\022\027/v1/subscribe/customers\022\272\001\n\033Del" +
+      "eteCustomerBillingKeyRPC\0224.subscribe_cus" +
+      "tomers.DeleteCustomerBillingKeyRequest\0325" +
+      ".subscribe_customers.DeleteCustomerBilli" +
+      "ngKeyResponse\".\202\323\344\223\002(*&/v1/subscribe/cus" +
+      "tomers/{customer_uid}\022\261\001\n\030GetCustomerBil" +
+      "lingKeyRPC\0221.subscribe_customers.GetCust" +
+      "omerBillingKeyRequest\0322.subscribe_custom" +
+      "ers.GetCustomerBillingKeyResponse\".\202\323\344\223\002" +
+      "(\022&/v1/subscribe/customers/{customer_uid" +
+      "}\022\275\001\n\033InsertCustomerBillingKeyRPC\0224.subs" +
+      "cribe_customers.InsertCustomerBillingKey" +
+      "Request\0325.subscribe_customers.InsertCust" +
+      "omerBillingKeyResponse\"1\202\323\344\223\002+\"&/v1/subs" +
+      "cribe/customers/{customer_uid}:\001*\022\300\001\n\032Ge" +
+      "tPaidByBillingKeyListRPC\0223.subscribe_cus" +
+      "tomers.GetPaidByBillingKeyListRequest\0324." +
+      "subscribe_customers.GetPaidByBillingKeyL" +
+      "istResponse\"7\202\323\344\223\0021\022//v1/subscribe/custo" +
+      "mers/{customer_uid}/payments\022\274\001\n\037GetPaym" +
+      "entScheduleByCustomerRPC\022..subscribe.Get" +
+      "PaymentScheduleByCustomerRequest\032/.subsc" +
+      "ribe.GetPaymentScheduleByCustomerRespons" +
+      "e\"8\202\323\344\223\0022\0220/v1/subscribe/customers/{cust" +
+      "omer_uid}/schedulesBXZ>github.com/iampor" +
+      "t/interface/gen_src/go/v1/subscribe_cust" +
+      "omers\252\002\025V1.SubscribeCustomersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -137,15 +137,14 @@ class CardRegisterResultData extends $pb.GeneratedMessage {
     ..aOS(2, 'cardName')
     ..aOS(3, 'cardCode')
     ..aOS(4, 'binNumbrer')
-    ..aOS(5, 'birthNumber')
-    ..aOS(6, 'cardType')
-    ..aOS(7, 'customerName')
-    ..aOS(8, 'customerTel')
-    ..aOS(9, 'customerEmail')
-    ..aOS(10, 'customerAddr')
-    ..aOS(11, 'customerPostcode')
-    ..a<$core.int>(12, 'inserted', $pb.PbFieldType.O3)
-    ..a<$core.int>(13, 'updated', $pb.PbFieldType.O3)
+    ..a<$core.int>(5, 'cardType', $pb.PbFieldType.O3)
+    ..aOS(6, 'customerName')
+    ..aOS(7, 'customerTel')
+    ..aOS(8, 'customerEmail')
+    ..aOS(9, 'customerAddr')
+    ..aOS(10, 'customerPostcode')
+    ..a<$core.int>(11, 'inserted', $pb.PbFieldType.O3)
+    ..a<$core.int>(12, 'updated', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -201,85 +200,76 @@ class CardRegisterResultData extends $pb.GeneratedMessage {
   void clearBinNumbrer() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get birthNumber => $_getSZ(4);
+  $core.int get cardType => $_getIZ(4);
   @$pb.TagNumber(5)
-  set birthNumber($core.String v) { $_setString(4, v); }
+  set cardType($core.int v) { $_setSignedInt32(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasBirthNumber() => $_has(4);
+  $core.bool hasCardType() => $_has(4);
   @$pb.TagNumber(5)
-  void clearBirthNumber() => clearField(5);
+  void clearCardType() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get cardType => $_getSZ(5);
+  $core.String get customerName => $_getSZ(5);
   @$pb.TagNumber(6)
-  set cardType($core.String v) { $_setString(5, v); }
+  set customerName($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasCardType() => $_has(5);
+  $core.bool hasCustomerName() => $_has(5);
   @$pb.TagNumber(6)
-  void clearCardType() => clearField(6);
+  void clearCustomerName() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.String get customerName => $_getSZ(6);
+  $core.String get customerTel => $_getSZ(6);
   @$pb.TagNumber(7)
-  set customerName($core.String v) { $_setString(6, v); }
+  set customerTel($core.String v) { $_setString(6, v); }
   @$pb.TagNumber(7)
-  $core.bool hasCustomerName() => $_has(6);
+  $core.bool hasCustomerTel() => $_has(6);
   @$pb.TagNumber(7)
-  void clearCustomerName() => clearField(7);
+  void clearCustomerTel() => clearField(7);
 
   @$pb.TagNumber(8)
-  $core.String get customerTel => $_getSZ(7);
+  $core.String get customerEmail => $_getSZ(7);
   @$pb.TagNumber(8)
-  set customerTel($core.String v) { $_setString(7, v); }
+  set customerEmail($core.String v) { $_setString(7, v); }
   @$pb.TagNumber(8)
-  $core.bool hasCustomerTel() => $_has(7);
+  $core.bool hasCustomerEmail() => $_has(7);
   @$pb.TagNumber(8)
-  void clearCustomerTel() => clearField(8);
+  void clearCustomerEmail() => clearField(8);
 
   @$pb.TagNumber(9)
-  $core.String get customerEmail => $_getSZ(8);
+  $core.String get customerAddr => $_getSZ(8);
   @$pb.TagNumber(9)
-  set customerEmail($core.String v) { $_setString(8, v); }
+  set customerAddr($core.String v) { $_setString(8, v); }
   @$pb.TagNumber(9)
-  $core.bool hasCustomerEmail() => $_has(8);
+  $core.bool hasCustomerAddr() => $_has(8);
   @$pb.TagNumber(9)
-  void clearCustomerEmail() => clearField(9);
+  void clearCustomerAddr() => clearField(9);
 
   @$pb.TagNumber(10)
-  $core.String get customerAddr => $_getSZ(9);
+  $core.String get customerPostcode => $_getSZ(9);
   @$pb.TagNumber(10)
-  set customerAddr($core.String v) { $_setString(9, v); }
+  set customerPostcode($core.String v) { $_setString(9, v); }
   @$pb.TagNumber(10)
-  $core.bool hasCustomerAddr() => $_has(9);
+  $core.bool hasCustomerPostcode() => $_has(9);
   @$pb.TagNumber(10)
-  void clearCustomerAddr() => clearField(10);
+  void clearCustomerPostcode() => clearField(10);
 
   @$pb.TagNumber(11)
-  $core.String get customerPostcode => $_getSZ(10);
+  $core.int get inserted => $_getIZ(10);
   @$pb.TagNumber(11)
-  set customerPostcode($core.String v) { $_setString(10, v); }
+  set inserted($core.int v) { $_setSignedInt32(10, v); }
   @$pb.TagNumber(11)
-  $core.bool hasCustomerPostcode() => $_has(10);
+  $core.bool hasInserted() => $_has(10);
   @$pb.TagNumber(11)
-  void clearCustomerPostcode() => clearField(11);
+  void clearInserted() => clearField(11);
 
   @$pb.TagNumber(12)
-  $core.int get inserted => $_getIZ(11);
+  $core.int get updated => $_getIZ(11);
   @$pb.TagNumber(12)
-  set inserted($core.int v) { $_setSignedInt32(11, v); }
+  set updated($core.int v) { $_setSignedInt32(11, v); }
   @$pb.TagNumber(12)
-  $core.bool hasInserted() => $_has(11);
+  $core.bool hasUpdated() => $_has(11);
   @$pb.TagNumber(12)
-  void clearInserted() => clearField(12);
-
-  @$pb.TagNumber(13)
-  $core.int get updated => $_getIZ(12);
-  @$pb.TagNumber(13)
-  set updated($core.int v) { $_setSignedInt32(12, v); }
-  @$pb.TagNumber(13)
-  $core.bool hasUpdated() => $_has(12);
-  @$pb.TagNumber(13)
-  void clearUpdated() => clearField(13);
+  void clearUpdated() => clearField(12);
 }
 
 class CardRegisterResponse extends $pb.GeneratedMessage {
@@ -372,7 +362,7 @@ class GetCardInfoData extends $pb.GeneratedMessage {
     ..aOS(2, 'cardProvider')
     ..aOS(3, 'cardCode')
     ..aOS(4, 'binNumber')
-    ..aOS(5, 'cardType')
+    ..a<$core.int>(5, 'cardType', $pb.PbFieldType.O3)
     ..aOS(6, 'customerName')
     ..aOS(7, 'customerTel')
     ..aOS(8, 'customerEmail')
@@ -435,9 +425,9 @@ class GetCardInfoData extends $pb.GeneratedMessage {
   void clearBinNumber() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get cardType => $_getSZ(4);
+  $core.int get cardType => $_getIZ(4);
   @$pb.TagNumber(5)
-  set cardType($core.String v) { $_setString(4, v); }
+  set cardType($core.int v) { $_setSignedInt32(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasCardType() => $_has(4);
   @$pb.TagNumber(5)

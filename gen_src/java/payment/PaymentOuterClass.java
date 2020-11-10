@@ -27341,38 +27341,37 @@ public final class PaymentOuterClass {
       "entPrepareResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007mess" +
       "age\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.Pr" +
       "epare\"0\n\030PaymentGetPrepareRequest\022\024\n\014mer" +
-      "chant_uid\030\001 \001(\t2\216\t\n\016PaymentService\022\200\001\n\021P" +
-      "aymentBalanceRPC\022\036.payment.PaymentBalanc" +
-      "eRequest\032\037.payment.PaymentBalanceRespons" +
-      "e\"*\202\323\344\223\002$\022\"/api/v1/payments/{imp_uid}/ba" +
-      "lance\022c\n\nPaymentRPC\022\027.payment.PaymentReq" +
-      "uest\032\030.payment.PaymentResponse\"\"\202\323\344\223\002\034\022\032" +
-      "/api/v1/payments/{imp_uid}\022\\\n\013PaymentsRP" +
-      "C\022\030.payment.PaymentsRequest\032\031.payment.Pa" +
-      "ymentsResponse\"\030\202\323\344\223\002\022\022\020/api/v1/payments" +
-      "\022\227\001\n\025PaymentMerchantUidRPC\022\".payment.Pay" +
-      "mentMerchantUidRequest\032#.payment.Payment" +
-      "MerchantUidResponse\"5\202\323\344\223\002/\022-/api/v1/pay" +
-      "ments/find/{merchant_uid}/{status}\022\235\001\n\026P" +
-      "aymentsMerchantUidRPC\022#.payment.Payments" +
-      "MerchantUidRequest\032$.payment.PaymentsMer" +
-      "chantUidResponse\"8\202\323\344\223\0022\0220/api/v1/paymen" +
-      "ts/findAll/{merchant_uid}/{status}\022|\n\021Pa" +
-      "ymentsStatusRPC\022\035.payment.PaymentStatusR" +
-      "equest\032\036.payment.PaymentStatusResponse\"(" +
-      "\202\323\344\223\002\"\022 /api/v1/payments/status/{status}" +
-      "\022u\n\020PaymentCancelRPC\022\035.payment.PaymentCa" +
-      "ncelRequest\032\036.payment.PaymentCancelRespo" +
-      "nse\"\"\202\323\344\223\002\034\"\027/api/v1/payments/cancel:\001*\022" +
-      "y\n\021PaymentPrepareRPC\022\036.payment.PaymentPr" +
-      "epareRequest\032\037.payment.PaymentPrepareRes" +
-      "ponse\"#\202\323\344\223\002\035\"\030/api/v1/payments/prepare:" +
-      "\001*\022\213\001\n\024PaymentGetPrepareRPC\022!.payment.Pa" +
-      "ymentGetPrepareRequest\032\037.payment.Payment" +
-      "PrepareResponse\"/\202\323\344\223\002)\022\'/api/v1/payment" +
-      "s/prepare/{merchant_uid}BAZ2github.com/i" +
-      "amport/interface/gen_src/go/v1/payment\252\002" +
-      "\nV1.Paymentb\006proto3"
+      "chant_uid\030\001 \001(\t2\351\010\n\016PaymentService\022|\n\021Pa" +
+      "ymentBalanceRPC\022\036.payment.PaymentBalance" +
+      "Request\032\037.payment.PaymentBalanceResponse" +
+      "\"&\202\323\344\223\002 \022\036/v1/payments/{imp_uid}/balance" +
+      "\022_\n\nPaymentRPC\022\027.payment.PaymentRequest\032" +
+      "\030.payment.PaymentResponse\"\036\202\323\344\223\002\030\022\026/v1/p" +
+      "ayments/{imp_uid}\022X\n\013PaymentsRPC\022\030.payme" +
+      "nt.PaymentsRequest\032\031.payment.PaymentsRes" +
+      "ponse\"\024\202\323\344\223\002\016\022\014/v1/payments\022\223\001\n\025PaymentM" +
+      "erchantUidRPC\022\".payment.PaymentMerchantU" +
+      "idRequest\032#.payment.PaymentMerchantUidRe" +
+      "sponse\"1\202\323\344\223\002+\022)/v1/payments/find/{merch" +
+      "ant_uid}/{status}\022\231\001\n\026PaymentsMerchantUi" +
+      "dRPC\022#.payment.PaymentsMerchantUidReques" +
+      "t\032$.payment.PaymentsMerchantUidResponse\"" +
+      "4\202\323\344\223\002.\022,/v1/payments/findAll/{merchant_" +
+      "uid}/{status}\022x\n\021PaymentsStatusRPC\022\035.pay" +
+      "ment.PaymentStatusRequest\032\036.payment.Paym" +
+      "entStatusResponse\"$\202\323\344\223\002\036\022\034/v1/payments/" +
+      "status/{status}\022q\n\020PaymentCancelRPC\022\035.pa" +
+      "yment.PaymentCancelRequest\032\036.payment.Pay" +
+      "mentCancelResponse\"\036\202\323\344\223\002\030\"\023/v1/payments" +
+      "/cancel:\001*\022u\n\021PaymentPrepareRPC\022\036.paymen" +
+      "t.PaymentPrepareRequest\032\037.payment.Paymen" +
+      "tPrepareResponse\"\037\202\323\344\223\002\031\"\024/v1/payments/p" +
+      "repare:\001*\022\207\001\n\024PaymentGetPrepareRPC\022!.pay" +
+      "ment.PaymentGetPrepareRequest\032\037.payment." +
+      "PaymentPrepareResponse\"+\202\323\344\223\002%\022#/v1/paym" +
+      "ents/prepare/{merchant_uid}BAZ2github.co" +
+      "m/iamport/interface/gen_src/go/v1/paymen" +
+      "t\252\002\nV1.Paymentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

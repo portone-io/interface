@@ -541,15 +541,15 @@ func RegisterPaymentCardServiceHandlerClient(ctx context.Context, mux *runtime.S
 }
 
 var (
-	pattern_PaymentCardService_CardRegisterV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v2", "payments", "card", "info"}, ""))
+	pattern_PaymentCardService_CardRegisterV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v2", "payments", "card", "info"}, ""))
 
-	pattern_PaymentCardService_GetCardInfoV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 1, 0, 4, 1, 5, 5}, []string{"api", "v2", "payments", "card", "info", "card_uid"}, ""))
+	pattern_PaymentCardService_GetCardInfoV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"v2", "payments", "card", "info", "card_uid"}, ""))
 
-	pattern_PaymentCardService_DeleteCardInfoV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 1, 0, 4, 1, 5, 5}, []string{"api", "v2", "payments", "card", "info", "card_uid"}, ""))
+	pattern_PaymentCardService_DeleteCardInfoV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"v2", "payments", "card", "info", "card_uid"}, ""))
 
-	pattern_PaymentCardService_PayByRegiseteredCardV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v2", "payments", "card", "pay", "registered"}, ""))
+	pattern_PaymentCardService_PayByRegiseteredCardV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"v2", "payments", "card", "pay", "registered"}, ""))
 
-	pattern_PaymentCardService_CancelRegiseteredCardV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5, 1, 0, 4, 1, 5, 6}, []string{"api", "v2", "payments", "card", "cancel", "registered", "imp_uid"}, ""))
+	pattern_PaymentCardService_CancelRegiseteredCardV2RPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 1, 0, 4, 1, 5, 5}, []string{"v2", "payments", "card", "cancel", "registered", "imp_uid"}, ""))
 )
 
 var (

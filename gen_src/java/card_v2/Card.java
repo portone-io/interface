@@ -2037,97 +2037,79 @@ public final class Card {
         getBinNumbrerBytes();
 
     /**
-     * <code>string birth_number = 5;</code>
-     * @return The birthNumber.
-     */
-    java.lang.String getBirthNumber();
-    /**
-     * <code>string birth_number = 5;</code>
-     * @return The bytes for birthNumber.
-     */
-    com.google.protobuf.ByteString
-        getBirthNumberBytes();
-
-    /**
-     * <code>string card_type = 6;</code>
+     * <code>int32 card_type = 5;</code>
      * @return The cardType.
      */
-    java.lang.String getCardType();
-    /**
-     * <code>string card_type = 6;</code>
-     * @return The bytes for cardType.
-     */
-    com.google.protobuf.ByteString
-        getCardTypeBytes();
+    int getCardType();
 
     /**
-     * <code>string customer_name = 7;</code>
+     * <code>string customer_name = 6;</code>
      * @return The customerName.
      */
     java.lang.String getCustomerName();
     /**
-     * <code>string customer_name = 7;</code>
+     * <code>string customer_name = 6;</code>
      * @return The bytes for customerName.
      */
     com.google.protobuf.ByteString
         getCustomerNameBytes();
 
     /**
-     * <code>string customer_tel = 8;</code>
+     * <code>string customer_tel = 7;</code>
      * @return The customerTel.
      */
     java.lang.String getCustomerTel();
     /**
-     * <code>string customer_tel = 8;</code>
+     * <code>string customer_tel = 7;</code>
      * @return The bytes for customerTel.
      */
     com.google.protobuf.ByteString
         getCustomerTelBytes();
 
     /**
-     * <code>string customer_email = 9;</code>
+     * <code>string customer_email = 8;</code>
      * @return The customerEmail.
      */
     java.lang.String getCustomerEmail();
     /**
-     * <code>string customer_email = 9;</code>
+     * <code>string customer_email = 8;</code>
      * @return The bytes for customerEmail.
      */
     com.google.protobuf.ByteString
         getCustomerEmailBytes();
 
     /**
-     * <code>string customer_addr = 10;</code>
+     * <code>string customer_addr = 9;</code>
      * @return The customerAddr.
      */
     java.lang.String getCustomerAddr();
     /**
-     * <code>string customer_addr = 10;</code>
+     * <code>string customer_addr = 9;</code>
      * @return The bytes for customerAddr.
      */
     com.google.protobuf.ByteString
         getCustomerAddrBytes();
 
     /**
-     * <code>string customer_postcode = 11;</code>
+     * <code>string customer_postcode = 10;</code>
      * @return The customerPostcode.
      */
     java.lang.String getCustomerPostcode();
     /**
-     * <code>string customer_postcode = 11;</code>
+     * <code>string customer_postcode = 10;</code>
      * @return The bytes for customerPostcode.
      */
     com.google.protobuf.ByteString
         getCustomerPostcodeBytes();
 
     /**
-     * <code>int32 inserted = 12;</code>
+     * <code>int32 inserted = 11;</code>
      * @return The inserted.
      */
     int getInserted();
 
     /**
-     * <code>int32 updated = 13;</code>
+     * <code>int32 updated = 12;</code>
      * @return The updated.
      */
     int getUpdated();
@@ -2149,8 +2131,6 @@ public final class Card {
       cardName_ = "";
       cardCode_ = "";
       binNumbrer_ = "";
-      birthNumber_ = "";
-      cardType_ = "";
       customerName_ = "";
       customerTel_ = "";
       customerEmail_ = "";
@@ -2212,54 +2192,47 @@ public final class Card {
               binNumbrer_ = s;
               break;
             }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 40: {
 
-              birthNumber_ = s;
+              cardType_ = input.readInt32();
               break;
             }
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              cardType_ = s;
+              customerName_ = s;
               break;
             }
             case 58: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              customerName_ = s;
+              customerTel_ = s;
               break;
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              customerTel_ = s;
+              customerEmail_ = s;
               break;
             }
             case 74: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              customerEmail_ = s;
+              customerAddr_ = s;
               break;
             }
             case 82: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              customerAddr_ = s;
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
               customerPostcode_ = s;
               break;
             }
-            case 96: {
+            case 88: {
 
               inserted_ = input.readInt32();
               break;
             }
-            case 104: {
+            case 96: {
 
               updated_ = input.readInt32();
               break;
@@ -2464,86 +2437,21 @@ public final class Card {
       }
     }
 
-    public static final int BIRTH_NUMBER_FIELD_NUMBER = 5;
-    private volatile java.lang.Object birthNumber_;
+    public static final int CARD_TYPE_FIELD_NUMBER = 5;
+    private int cardType_;
     /**
-     * <code>string birth_number = 5;</code>
-     * @return The birthNumber.
-     */
-    @java.lang.Override
-    public java.lang.String getBirthNumber() {
-      java.lang.Object ref = birthNumber_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        birthNumber_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string birth_number = 5;</code>
-     * @return The bytes for birthNumber.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBirthNumberBytes() {
-      java.lang.Object ref = birthNumber_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        birthNumber_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CARD_TYPE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object cardType_;
-    /**
-     * <code>string card_type = 6;</code>
+     * <code>int32 card_type = 5;</code>
      * @return The cardType.
      */
     @java.lang.Override
-    public java.lang.String getCardType() {
-      java.lang.Object ref = cardType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cardType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string card_type = 6;</code>
-     * @return The bytes for cardType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCardTypeBytes() {
-      java.lang.Object ref = cardType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cardType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getCardType() {
+      return cardType_;
     }
 
-    public static final int CUSTOMER_NAME_FIELD_NUMBER = 7;
+    public static final int CUSTOMER_NAME_FIELD_NUMBER = 6;
     private volatile java.lang.Object customerName_;
     /**
-     * <code>string customer_name = 7;</code>
+     * <code>string customer_name = 6;</code>
      * @return The customerName.
      */
     @java.lang.Override
@@ -2560,7 +2468,7 @@ public final class Card {
       }
     }
     /**
-     * <code>string customer_name = 7;</code>
+     * <code>string customer_name = 6;</code>
      * @return The bytes for customerName.
      */
     @java.lang.Override
@@ -2578,10 +2486,10 @@ public final class Card {
       }
     }
 
-    public static final int CUSTOMER_TEL_FIELD_NUMBER = 8;
+    public static final int CUSTOMER_TEL_FIELD_NUMBER = 7;
     private volatile java.lang.Object customerTel_;
     /**
-     * <code>string customer_tel = 8;</code>
+     * <code>string customer_tel = 7;</code>
      * @return The customerTel.
      */
     @java.lang.Override
@@ -2598,7 +2506,7 @@ public final class Card {
       }
     }
     /**
-     * <code>string customer_tel = 8;</code>
+     * <code>string customer_tel = 7;</code>
      * @return The bytes for customerTel.
      */
     @java.lang.Override
@@ -2616,10 +2524,10 @@ public final class Card {
       }
     }
 
-    public static final int CUSTOMER_EMAIL_FIELD_NUMBER = 9;
+    public static final int CUSTOMER_EMAIL_FIELD_NUMBER = 8;
     private volatile java.lang.Object customerEmail_;
     /**
-     * <code>string customer_email = 9;</code>
+     * <code>string customer_email = 8;</code>
      * @return The customerEmail.
      */
     @java.lang.Override
@@ -2636,7 +2544,7 @@ public final class Card {
       }
     }
     /**
-     * <code>string customer_email = 9;</code>
+     * <code>string customer_email = 8;</code>
      * @return The bytes for customerEmail.
      */
     @java.lang.Override
@@ -2654,10 +2562,10 @@ public final class Card {
       }
     }
 
-    public static final int CUSTOMER_ADDR_FIELD_NUMBER = 10;
+    public static final int CUSTOMER_ADDR_FIELD_NUMBER = 9;
     private volatile java.lang.Object customerAddr_;
     /**
-     * <code>string customer_addr = 10;</code>
+     * <code>string customer_addr = 9;</code>
      * @return The customerAddr.
      */
     @java.lang.Override
@@ -2674,7 +2582,7 @@ public final class Card {
       }
     }
     /**
-     * <code>string customer_addr = 10;</code>
+     * <code>string customer_addr = 9;</code>
      * @return The bytes for customerAddr.
      */
     @java.lang.Override
@@ -2692,10 +2600,10 @@ public final class Card {
       }
     }
 
-    public static final int CUSTOMER_POSTCODE_FIELD_NUMBER = 11;
+    public static final int CUSTOMER_POSTCODE_FIELD_NUMBER = 10;
     private volatile java.lang.Object customerPostcode_;
     /**
-     * <code>string customer_postcode = 11;</code>
+     * <code>string customer_postcode = 10;</code>
      * @return The customerPostcode.
      */
     @java.lang.Override
@@ -2712,7 +2620,7 @@ public final class Card {
       }
     }
     /**
-     * <code>string customer_postcode = 11;</code>
+     * <code>string customer_postcode = 10;</code>
      * @return The bytes for customerPostcode.
      */
     @java.lang.Override
@@ -2730,10 +2638,10 @@ public final class Card {
       }
     }
 
-    public static final int INSERTED_FIELD_NUMBER = 12;
+    public static final int INSERTED_FIELD_NUMBER = 11;
     private int inserted_;
     /**
-     * <code>int32 inserted = 12;</code>
+     * <code>int32 inserted = 11;</code>
      * @return The inserted.
      */
     @java.lang.Override
@@ -2741,10 +2649,10 @@ public final class Card {
       return inserted_;
     }
 
-    public static final int UPDATED_FIELD_NUMBER = 13;
+    public static final int UPDATED_FIELD_NUMBER = 12;
     private int updated_;
     /**
-     * <code>int32 updated = 13;</code>
+     * <code>int32 updated = 12;</code>
      * @return The updated.
      */
     @java.lang.Override
@@ -2778,32 +2686,29 @@ public final class Card {
       if (!getBinNumbrerBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, binNumbrer_);
       }
-      if (!getBirthNumberBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, birthNumber_);
-      }
-      if (!getCardTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, cardType_);
+      if (cardType_ != 0) {
+        output.writeInt32(5, cardType_);
       }
       if (!getCustomerNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, customerName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, customerName_);
       }
       if (!getCustomerTelBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, customerTel_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, customerTel_);
       }
       if (!getCustomerEmailBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, customerEmail_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, customerEmail_);
       }
       if (!getCustomerAddrBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, customerAddr_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, customerAddr_);
       }
       if (!getCustomerPostcodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, customerPostcode_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, customerPostcode_);
       }
       if (inserted_ != 0) {
-        output.writeInt32(12, inserted_);
+        output.writeInt32(11, inserted_);
       }
       if (updated_ != 0) {
-        output.writeInt32(13, updated_);
+        output.writeInt32(12, updated_);
       }
       unknownFields.writeTo(output);
     }
@@ -2826,34 +2731,32 @@ public final class Card {
       if (!getBinNumbrerBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, binNumbrer_);
       }
-      if (!getBirthNumberBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, birthNumber_);
-      }
-      if (!getCardTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, cardType_);
+      if (cardType_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, cardType_);
       }
       if (!getCustomerNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, customerName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, customerName_);
       }
       if (!getCustomerTelBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, customerTel_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, customerTel_);
       }
       if (!getCustomerEmailBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, customerEmail_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, customerEmail_);
       }
       if (!getCustomerAddrBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, customerAddr_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, customerAddr_);
       }
       if (!getCustomerPostcodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, customerPostcode_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, customerPostcode_);
       }
       if (inserted_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, inserted_);
+          .computeInt32Size(11, inserted_);
       }
       if (updated_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, updated_);
+          .computeInt32Size(12, updated_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2878,10 +2781,8 @@ public final class Card {
           .equals(other.getCardCode())) return false;
       if (!getBinNumbrer()
           .equals(other.getBinNumbrer())) return false;
-      if (!getBirthNumber()
-          .equals(other.getBirthNumber())) return false;
-      if (!getCardType()
-          .equals(other.getCardType())) return false;
+      if (getCardType()
+          != other.getCardType()) return false;
       if (!getCustomerName()
           .equals(other.getCustomerName())) return false;
       if (!getCustomerTel()
@@ -2915,10 +2816,8 @@ public final class Card {
       hash = (53 * hash) + getCardCode().hashCode();
       hash = (37 * hash) + BIN_NUMBRER_FIELD_NUMBER;
       hash = (53 * hash) + getBinNumbrer().hashCode();
-      hash = (37 * hash) + BIRTH_NUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + getBirthNumber().hashCode();
       hash = (37 * hash) + CARD_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getCardType().hashCode();
+      hash = (53 * hash) + getCardType();
       hash = (37 * hash) + CUSTOMER_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getCustomerName().hashCode();
       hash = (37 * hash) + CUSTOMER_TEL_FIELD_NUMBER;
@@ -3074,9 +2973,7 @@ public final class Card {
 
         binNumbrer_ = "";
 
-        birthNumber_ = "";
-
-        cardType_ = "";
+        cardType_ = 0;
 
         customerName_ = "";
 
@@ -3122,7 +3019,6 @@ public final class Card {
         result.cardName_ = cardName_;
         result.cardCode_ = cardCode_;
         result.binNumbrer_ = binNumbrer_;
-        result.birthNumber_ = birthNumber_;
         result.cardType_ = cardType_;
         result.customerName_ = customerName_;
         result.customerTel_ = customerTel_;
@@ -3195,13 +3091,8 @@ public final class Card {
           binNumbrer_ = other.binNumbrer_;
           onChanged();
         }
-        if (!other.getBirthNumber().isEmpty()) {
-          birthNumber_ = other.birthNumber_;
-          onChanged();
-        }
-        if (!other.getCardType().isEmpty()) {
-          cardType_ = other.cardType_;
-          onChanged();
+        if (other.getCardType() != 0) {
+          setCardType(other.getCardType());
         }
         if (!other.getCustomerName().isEmpty()) {
           customerName_ = other.customerName_;
@@ -3602,161 +3493,40 @@ public final class Card {
         return this;
       }
 
-      private java.lang.Object birthNumber_ = "";
+      private int cardType_ ;
       /**
-       * <code>string birth_number = 5;</code>
-       * @return The birthNumber.
-       */
-      public java.lang.String getBirthNumber() {
-        java.lang.Object ref = birthNumber_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          birthNumber_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string birth_number = 5;</code>
-       * @return The bytes for birthNumber.
-       */
-      public com.google.protobuf.ByteString
-          getBirthNumberBytes() {
-        java.lang.Object ref = birthNumber_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          birthNumber_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string birth_number = 5;</code>
-       * @param value The birthNumber to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBirthNumber(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        birthNumber_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string birth_number = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBirthNumber() {
-        
-        birthNumber_ = getDefaultInstance().getBirthNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string birth_number = 5;</code>
-       * @param value The bytes for birthNumber to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBirthNumberBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        birthNumber_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object cardType_ = "";
-      /**
-       * <code>string card_type = 6;</code>
+       * <code>int32 card_type = 5;</code>
        * @return The cardType.
        */
-      public java.lang.String getCardType() {
-        java.lang.Object ref = cardType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cardType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public int getCardType() {
+        return cardType_;
       }
       /**
-       * <code>string card_type = 6;</code>
-       * @return The bytes for cardType.
-       */
-      public com.google.protobuf.ByteString
-          getCardTypeBytes() {
-        java.lang.Object ref = cardType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cardType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string card_type = 6;</code>
+       * <code>int32 card_type = 5;</code>
        * @param value The cardType to set.
        * @return This builder for chaining.
        */
-      public Builder setCardType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setCardType(int value) {
+        
         cardType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string card_type = 6;</code>
+       * <code>int32 card_type = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearCardType() {
         
-        cardType_ = getDefaultInstance().getCardType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string card_type = 6;</code>
-       * @param value The bytes for cardType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cardType_ = value;
+        cardType_ = 0;
         onChanged();
         return this;
       }
 
       private java.lang.Object customerName_ = "";
       /**
-       * <code>string customer_name = 7;</code>
+       * <code>string customer_name = 6;</code>
        * @return The customerName.
        */
       public java.lang.String getCustomerName() {
@@ -3772,7 +3542,7 @@ public final class Card {
         }
       }
       /**
-       * <code>string customer_name = 7;</code>
+       * <code>string customer_name = 6;</code>
        * @return The bytes for customerName.
        */
       public com.google.protobuf.ByteString
@@ -3789,7 +3559,7 @@ public final class Card {
         }
       }
       /**
-       * <code>string customer_name = 7;</code>
+       * <code>string customer_name = 6;</code>
        * @param value The customerName to set.
        * @return This builder for chaining.
        */
@@ -3804,7 +3574,7 @@ public final class Card {
         return this;
       }
       /**
-       * <code>string customer_name = 7;</code>
+       * <code>string customer_name = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerName() {
@@ -3814,7 +3584,7 @@ public final class Card {
         return this;
       }
       /**
-       * <code>string customer_name = 7;</code>
+       * <code>string customer_name = 6;</code>
        * @param value The bytes for customerName to set.
        * @return This builder for chaining.
        */
@@ -3832,7 +3602,7 @@ public final class Card {
 
       private java.lang.Object customerTel_ = "";
       /**
-       * <code>string customer_tel = 8;</code>
+       * <code>string customer_tel = 7;</code>
        * @return The customerTel.
        */
       public java.lang.String getCustomerTel() {
@@ -3848,7 +3618,7 @@ public final class Card {
         }
       }
       /**
-       * <code>string customer_tel = 8;</code>
+       * <code>string customer_tel = 7;</code>
        * @return The bytes for customerTel.
        */
       public com.google.protobuf.ByteString
@@ -3865,7 +3635,7 @@ public final class Card {
         }
       }
       /**
-       * <code>string customer_tel = 8;</code>
+       * <code>string customer_tel = 7;</code>
        * @param value The customerTel to set.
        * @return This builder for chaining.
        */
@@ -3880,7 +3650,7 @@ public final class Card {
         return this;
       }
       /**
-       * <code>string customer_tel = 8;</code>
+       * <code>string customer_tel = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerTel() {
@@ -3890,7 +3660,7 @@ public final class Card {
         return this;
       }
       /**
-       * <code>string customer_tel = 8;</code>
+       * <code>string customer_tel = 7;</code>
        * @param value The bytes for customerTel to set.
        * @return This builder for chaining.
        */
@@ -3908,7 +3678,7 @@ public final class Card {
 
       private java.lang.Object customerEmail_ = "";
       /**
-       * <code>string customer_email = 9;</code>
+       * <code>string customer_email = 8;</code>
        * @return The customerEmail.
        */
       public java.lang.String getCustomerEmail() {
@@ -3924,7 +3694,7 @@ public final class Card {
         }
       }
       /**
-       * <code>string customer_email = 9;</code>
+       * <code>string customer_email = 8;</code>
        * @return The bytes for customerEmail.
        */
       public com.google.protobuf.ByteString
@@ -3941,7 +3711,7 @@ public final class Card {
         }
       }
       /**
-       * <code>string customer_email = 9;</code>
+       * <code>string customer_email = 8;</code>
        * @param value The customerEmail to set.
        * @return This builder for chaining.
        */
@@ -3956,7 +3726,7 @@ public final class Card {
         return this;
       }
       /**
-       * <code>string customer_email = 9;</code>
+       * <code>string customer_email = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerEmail() {
@@ -3966,7 +3736,7 @@ public final class Card {
         return this;
       }
       /**
-       * <code>string customer_email = 9;</code>
+       * <code>string customer_email = 8;</code>
        * @param value The bytes for customerEmail to set.
        * @return This builder for chaining.
        */
@@ -3984,7 +3754,7 @@ public final class Card {
 
       private java.lang.Object customerAddr_ = "";
       /**
-       * <code>string customer_addr = 10;</code>
+       * <code>string customer_addr = 9;</code>
        * @return The customerAddr.
        */
       public java.lang.String getCustomerAddr() {
@@ -4000,7 +3770,7 @@ public final class Card {
         }
       }
       /**
-       * <code>string customer_addr = 10;</code>
+       * <code>string customer_addr = 9;</code>
        * @return The bytes for customerAddr.
        */
       public com.google.protobuf.ByteString
@@ -4017,7 +3787,7 @@ public final class Card {
         }
       }
       /**
-       * <code>string customer_addr = 10;</code>
+       * <code>string customer_addr = 9;</code>
        * @param value The customerAddr to set.
        * @return This builder for chaining.
        */
@@ -4032,7 +3802,7 @@ public final class Card {
         return this;
       }
       /**
-       * <code>string customer_addr = 10;</code>
+       * <code>string customer_addr = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerAddr() {
@@ -4042,7 +3812,7 @@ public final class Card {
         return this;
       }
       /**
-       * <code>string customer_addr = 10;</code>
+       * <code>string customer_addr = 9;</code>
        * @param value The bytes for customerAddr to set.
        * @return This builder for chaining.
        */
@@ -4060,7 +3830,7 @@ public final class Card {
 
       private java.lang.Object customerPostcode_ = "";
       /**
-       * <code>string customer_postcode = 11;</code>
+       * <code>string customer_postcode = 10;</code>
        * @return The customerPostcode.
        */
       public java.lang.String getCustomerPostcode() {
@@ -4076,7 +3846,7 @@ public final class Card {
         }
       }
       /**
-       * <code>string customer_postcode = 11;</code>
+       * <code>string customer_postcode = 10;</code>
        * @return The bytes for customerPostcode.
        */
       public com.google.protobuf.ByteString
@@ -4093,7 +3863,7 @@ public final class Card {
         }
       }
       /**
-       * <code>string customer_postcode = 11;</code>
+       * <code>string customer_postcode = 10;</code>
        * @param value The customerPostcode to set.
        * @return This builder for chaining.
        */
@@ -4108,7 +3878,7 @@ public final class Card {
         return this;
       }
       /**
-       * <code>string customer_postcode = 11;</code>
+       * <code>string customer_postcode = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerPostcode() {
@@ -4118,7 +3888,7 @@ public final class Card {
         return this;
       }
       /**
-       * <code>string customer_postcode = 11;</code>
+       * <code>string customer_postcode = 10;</code>
        * @param value The bytes for customerPostcode to set.
        * @return This builder for chaining.
        */
@@ -4136,7 +3906,7 @@ public final class Card {
 
       private int inserted_ ;
       /**
-       * <code>int32 inserted = 12;</code>
+       * <code>int32 inserted = 11;</code>
        * @return The inserted.
        */
       @java.lang.Override
@@ -4144,7 +3914,7 @@ public final class Card {
         return inserted_;
       }
       /**
-       * <code>int32 inserted = 12;</code>
+       * <code>int32 inserted = 11;</code>
        * @param value The inserted to set.
        * @return This builder for chaining.
        */
@@ -4155,7 +3925,7 @@ public final class Card {
         return this;
       }
       /**
-       * <code>int32 inserted = 12;</code>
+       * <code>int32 inserted = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearInserted() {
@@ -4167,7 +3937,7 @@ public final class Card {
 
       private int updated_ ;
       /**
-       * <code>int32 updated = 13;</code>
+       * <code>int32 updated = 12;</code>
        * @return The updated.
        */
       @java.lang.Override
@@ -4175,7 +3945,7 @@ public final class Card {
         return updated_;
       }
       /**
-       * <code>int32 updated = 13;</code>
+       * <code>int32 updated = 12;</code>
        * @param value The updated to set.
        * @return This builder for chaining.
        */
@@ -4186,7 +3956,7 @@ public final class Card {
         return this;
       }
       /**
-       * <code>int32 updated = 13;</code>
+       * <code>int32 updated = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearUpdated() {
@@ -5710,16 +5480,10 @@ public final class Card {
         getBinNumberBytes();
 
     /**
-     * <code>string card_type = 5;</code>
+     * <code>int32 card_type = 5;</code>
      * @return The cardType.
      */
-    java.lang.String getCardType();
-    /**
-     * <code>string card_type = 5;</code>
-     * @return The bytes for cardType.
-     */
-    com.google.protobuf.ByteString
-        getCardTypeBytes();
+    int getCardType();
 
     /**
      * <code>string customer_name = 6;</code>
@@ -5810,7 +5574,6 @@ public final class Card {
       cardProvider_ = "";
       cardCode_ = "";
       binNumber_ = "";
-      cardType_ = "";
       customerName_ = "";
       customerTel_ = "";
       customerEmail_ = "";
@@ -5872,10 +5635,9 @@ public final class Card {
               binNumber_ = s;
               break;
             }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 40: {
 
-              cardType_ = s;
+              cardType_ = input.readInt32();
               break;
             }
             case 50: {
@@ -6103,41 +5865,14 @@ public final class Card {
     }
 
     public static final int CARD_TYPE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object cardType_;
+    private int cardType_;
     /**
-     * <code>string card_type = 5;</code>
+     * <code>int32 card_type = 5;</code>
      * @return The cardType.
      */
     @java.lang.Override
-    public java.lang.String getCardType() {
-      java.lang.Object ref = cardType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cardType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string card_type = 5;</code>
-     * @return The bytes for cardType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCardTypeBytes() {
-      java.lang.Object ref = cardType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cardType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getCardType() {
+      return cardType_;
     }
 
     public static final int CUSTOMER_NAME_FIELD_NUMBER = 6;
@@ -6378,8 +6113,8 @@ public final class Card {
       if (!getBinNumberBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, binNumber_);
       }
-      if (!getCardTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, cardType_);
+      if (cardType_ != 0) {
+        output.writeInt32(5, cardType_);
       }
       if (!getCustomerNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, customerName_);
@@ -6423,8 +6158,9 @@ public final class Card {
       if (!getBinNumberBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, binNumber_);
       }
-      if (!getCardTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, cardType_);
+      if (cardType_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, cardType_);
       }
       if (!getCustomerNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, customerName_);
@@ -6472,8 +6208,8 @@ public final class Card {
           .equals(other.getCardCode())) return false;
       if (!getBinNumber()
           .equals(other.getBinNumber())) return false;
-      if (!getCardType()
-          .equals(other.getCardType())) return false;
+      if (getCardType()
+          != other.getCardType()) return false;
       if (!getCustomerName()
           .equals(other.getCustomerName())) return false;
       if (!getCustomerTel()
@@ -6508,7 +6244,7 @@ public final class Card {
       hash = (37 * hash) + BIN_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getBinNumber().hashCode();
       hash = (37 * hash) + CARD_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getCardType().hashCode();
+      hash = (53 * hash) + getCardType();
       hash = (37 * hash) + CUSTOMER_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getCustomerName().hashCode();
       hash = (37 * hash) + CUSTOMER_TEL_FIELD_NUMBER;
@@ -6664,7 +6400,7 @@ public final class Card {
 
         binNumber_ = "";
 
-        cardType_ = "";
+        cardType_ = 0;
 
         customerName_ = "";
 
@@ -6782,9 +6518,8 @@ public final class Card {
           binNumber_ = other.binNumber_;
           onChanged();
         }
-        if (!other.getCardType().isEmpty()) {
-          cardType_ = other.cardType_;
-          onChanged();
+        if (other.getCardType() != 0) {
+          setCardType(other.getCardType());
         }
         if (!other.getCustomerName().isEmpty()) {
           customerName_ = other.customerName_;
@@ -7145,78 +6880,33 @@ public final class Card {
         return this;
       }
 
-      private java.lang.Object cardType_ = "";
+      private int cardType_ ;
       /**
-       * <code>string card_type = 5;</code>
+       * <code>int32 card_type = 5;</code>
        * @return The cardType.
        */
-      public java.lang.String getCardType() {
-        java.lang.Object ref = cardType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cardType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public int getCardType() {
+        return cardType_;
       }
       /**
-       * <code>string card_type = 5;</code>
-       * @return The bytes for cardType.
-       */
-      public com.google.protobuf.ByteString
-          getCardTypeBytes() {
-        java.lang.Object ref = cardType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cardType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string card_type = 5;</code>
+       * <code>int32 card_type = 5;</code>
        * @param value The cardType to set.
        * @return This builder for chaining.
        */
-      public Builder setCardType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setCardType(int value) {
+        
         cardType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string card_type = 5;</code>
+       * <code>int32 card_type = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearCardType() {
         
-        cardType_ = getDefaultInstance().getCardType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string card_type = 5;</code>
-       * @param value The bytes for cardType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cardType_ = value;
+        cardType_ = 0;
         onChanged();
         return this;
       }
@@ -21188,88 +20878,87 @@ public final class Card {
       "(\t\022\022\n\npwd_2digit\030\005 \001(\t\022\025\n\rcustomer_name\030" +
       "\006 \001(\t\022\024\n\014customer_tel\030\007 \001(\t\022\026\n\016customer_" +
       "email\030\010 \001(\t\022\025\n\rcustomer_addr\030\t \001(\t\022\031\n\021cu" +
-      "stomer_postcode\030\n \001(\t\"\250\002\n\026CardRegisterRe" +
+      "stomer_postcode\030\n \001(\t\"\222\002\n\026CardRegisterRe" +
       "sultData\022\020\n\010card_uid\030\001 \001(\t\022\021\n\tcard_name\030" +
       "\002 \001(\t\022\021\n\tcard_code\030\003 \001(\t\022\023\n\013bin_numbrer\030" +
-      "\004 \001(\t\022\024\n\014birth_number\030\005 \001(\t\022\021\n\tcard_type" +
-      "\030\006 \001(\t\022\025\n\rcustomer_name\030\007 \001(\t\022\024\n\014custome" +
-      "r_tel\030\010 \001(\t\022\026\n\016customer_email\030\t \001(\t\022\025\n\rc" +
-      "ustomer_addr\030\n \001(\t\022\031\n\021customer_postcode\030" +
-      "\013 \001(\t\022\020\n\010inserted\030\014 \001(\005\022\017\n\007updated\030\r \001(\005" +
-      "\"h\n\024CardRegisterResponse\022\014\n\004code\030\001 \001(\005\022\017" +
-      "\n\007message\030\002 \001(\t\0221\n\010response\030\003 \001(\0132\037.card" +
-      "_v2.CardRegisterResultData\"&\n\022GetCardInf" +
-      "oRequest\022\020\n\010card_uid\030\001 \001(\t\"\216\002\n\017GetCardIn" +
-      "foData\022\020\n\010card_uid\030\001 \001(\t\022\025\n\rcard_provide" +
-      "r\030\002 \001(\t\022\021\n\tcard_code\030\003 \001(\t\022\022\n\nbin_number" +
-      "\030\004 \001(\t\022\021\n\tcard_type\030\005 \001(\t\022\025\n\rcustomer_na" +
-      "me\030\006 \001(\t\022\024\n\014customer_tel\030\007 \001(\t\022\026\n\016custom" +
-      "er_email\030\010 \001(\t\022\025\n\rcustomer_addr\030\t \001(\t\022\031\n" +
-      "\021customer_postcode\030\n \001(\t\022\020\n\010inserted\030\013 \001" +
-      "(\005\022\017\n\007updated\030\014 \001(\005\"`\n\023GetCardInfoRespon" +
-      "se\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022*\n\010res" +
-      "ponse\030\003 \001(\0132\030.card_v2.GetCardInfoData\")\n" +
-      "\025DeleteCardInfoRequest\022\020\n\010card_uid\030\001 \001(\t" +
-      "\"7\n\026DeleteCardInfoResponse\022\014\n\004code\030\001 \001(\005" +
-      "\022\017\n\007message\030\002 \001(\t\"\352\001\n\032PayByRegisteredCar" +
-      "dRequest\022\020\n\010card_uid\030\001 \001(\t\022\024\n\014merchant_u" +
-      "id\030\002 \001(\t\022\016\n\006amount\030\003 \001(\t\022\030\n\020duty_free_am" +
-      "ount\030\004 \001(\t\022\022\n\norder_name\030\005 \001(\t\022\030\n\020card_i" +
-      "nstallment\030\006 \001(\005\022!\n\031interest_free_by_mer" +
-      "chant\030\007 \001(\010\022\023\n\013custom_data\030\010 \001(\t\022\024\n\014call" +
-      "back_url\030\t \001(\t\"\250\006\n\027PayByRegisteredCardDa" +
-      "ta\022\016\n\006amount\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\022\n" +
-      "\nbuyer_addr\030\003 \001(\t\022\023\n\013buyer_email\030\004 \001(\t\022\022" +
-      "\n\nbuyer_name\030\005 \001(\t\022\026\n\016buyer_postcode\030\006 \001" +
-      "(\t\022\021\n\tbuyer_tel\030\007 \001(\t\022\025\n\rcancel_amount\030\010" +
-      " \001(\t\022.\n\016cancel_history\030\t \003(\0132\026.card_v2.C" +
-      "ancelHistory\022\025\n\rcancel_reason\030\n \001(\t\022\033\n\023c" +
-      "ancel_receipt_urls\030\013 \003(\t\022\024\n\014cancelled_at" +
-      "\030\014 \001(\005\022\021\n\tcard_code\030\r \001(\t\022\021\n\tcard_name\030\016" +
-      " \001(\t\022\022\n\nbin_number\030\017 \001(\t\022\030\n\020card_install" +
-      "ment\030\020 \001(\005\022\021\n\tcard_type\030\021 \001(\005\022\033\n\023cash_re" +
-      "ceipt_issued\030\022 \001(\010\022\017\n\007channel\030\023 \001(\t\022\020\n\010c" +
-      "urrency\030\024 \001(\t\022\023\n\013custom_data\030\025 \001(\t\022\020\n\010ca" +
-      "rd_uid\030\026 \001(\t\022\032\n\022customer_uid_usage\030\027 \001(\t" +
-      "\022\023\n\013fail_reason\030\030 \001(\t\022\021\n\tfailed_at\030\031 \001(\005" +
-      "\022\017\n\007imp_uid\030\032 \001(\t\022\024\n\014merchant_uid\030\033 \001(\t\022" +
-      "\022\n\norder_name\030\034 \001(\t\022\017\n\007paid_at\030\035 \001(\005\022\022\n\n" +
-      "pay_method\030\036 \001(\t\022\r\n\005pg_id\030\037 \001(\t\022\023\n\013pg_pr" +
-      "ovider\030  \001(\t\022\016\n\006pg_tid\030! \001(\t\022\023\n\013receipt_" +
-      "url\030\" \001(\t\022\022\n\nstarted_at\030# \001(\005\022\016\n\006status\030" +
-      "$ \001(\t\022\022\n\nuser_agent\030% \001(\t\"p\n\033PayByRegist" +
-      "eredCardResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messag" +
-      "e\030\002 \001(\t\0222\n\010response\030\003 \001(\0132 .card_v2.PayB" +
-      "yRegisteredCardData\"j\n\rCancelHistory\022\016\n\006" +
-      "pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n\014cancelle" +
-      "d_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022\023\n\013receipt_ur" +
-      "l\030\005 \001(\t\"{\n\030CancelCardPaymentRequest\022\017\n\007i" +
-      "mp_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n\014merchant" +
-      "_uid\030\003 \001(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\016\n\006" +
-      "reason\030\005 \001(\t\"o\n\032CancelCardPaymenttRespon" +
-      "se\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0222\n\010res" +
-      "ponse\030\003 \001(\0132 .card_v2.PayByRegisteredCar" +
-      "dData2\314\005\n\022PaymentCardService\022w\n\021CardRegi" +
-      "sterV2RPC\022\034.card_v2.CardRegisterRequest\032" +
-      "\035.card_v2.CardRegisterResponse\"%\202\323\344\223\002\037\"\032" +
-      "/api/v2/payments/card/info:\001*\022|\n\020GetCard" +
-      "InfoV2RPC\022\033.card_v2.GetCardInfoRequest\032\034" +
-      ".card_v2.GetCardInfoResponse\"-\202\323\344\223\002\'\022%/a" +
-      "pi/v2/payments/card/info/{card_uid}\022\205\001\n\023" +
-      "DeleteCardInfoV2RPC\022\036.card_v2.DeleteCard" +
-      "InfoRequest\032\037.card_v2.DeleteCardInfoResp" +
-      "onse\"-\202\323\344\223\002\'*%/api/v2/payments/card/info" +
-      "/{card_uid}\022\224\001\n\031PayByRegiseteredCardV2RP" +
-      "C\022#.card_v2.PayByRegisteredCardRequest\032$" +
-      ".card_v2.PayByRegisteredCardResponse\",\202\323" +
-      "\344\223\002&\"$/api/v2/payments/card/pay/register" +
-      "ed\022\237\001\n\032CancelRegiseteredCardV2RPC\022!.card" +
-      "_v2.CancelCardPaymentRequest\032#.card_v2.C" +
-      "ancelCardPaymenttResponse\"9\202\323\344\223\0023\"1/api/" +
-      "v2/payments/card/cancel/registered/{imp_" +
-      "uid}BMZ8github.com/iamport/interface/gen" +
-      "_src/go/v2/payments/card\252\002\020V2.Payments.C" +
-      "ardb\006proto3"
+      "\004 \001(\t\022\021\n\tcard_type\030\005 \001(\005\022\025\n\rcustomer_nam" +
+      "e\030\006 \001(\t\022\024\n\014customer_tel\030\007 \001(\t\022\026\n\016custome" +
+      "r_email\030\010 \001(\t\022\025\n\rcustomer_addr\030\t \001(\t\022\031\n\021" +
+      "customer_postcode\030\n \001(\t\022\020\n\010inserted\030\013 \001(" +
+      "\005\022\017\n\007updated\030\014 \001(\005\"h\n\024CardRegisterRespon" +
+      "se\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0221\n\010res" +
+      "ponse\030\003 \001(\0132\037.card_v2.CardRegisterResult" +
+      "Data\"&\n\022GetCardInfoRequest\022\020\n\010card_uid\030\001" +
+      " \001(\t\"\216\002\n\017GetCardInfoData\022\020\n\010card_uid\030\001 \001" +
+      "(\t\022\025\n\rcard_provider\030\002 \001(\t\022\021\n\tcard_code\030\003" +
+      " \001(\t\022\022\n\nbin_number\030\004 \001(\t\022\021\n\tcard_type\030\005 " +
+      "\001(\005\022\025\n\rcustomer_name\030\006 \001(\t\022\024\n\014customer_t" +
+      "el\030\007 \001(\t\022\026\n\016customer_email\030\010 \001(\t\022\025\n\rcust" +
+      "omer_addr\030\t \001(\t\022\031\n\021customer_postcode\030\n \001" +
+      "(\t\022\020\n\010inserted\030\013 \001(\005\022\017\n\007updated\030\014 \001(\005\"`\n" +
+      "\023GetCardInfoResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007me" +
+      "ssage\030\002 \001(\t\022*\n\010response\030\003 \001(\0132\030.card_v2." +
+      "GetCardInfoData\")\n\025DeleteCardInfoRequest" +
+      "\022\020\n\010card_uid\030\001 \001(\t\"7\n\026DeleteCardInfoResp" +
+      "onse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\"\352\001\n\032" +
+      "PayByRegisteredCardRequest\022\020\n\010card_uid\030\001" +
+      " \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount\030\003 \001" +
+      "(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\022\n\norder_na" +
+      "me\030\005 \001(\t\022\030\n\020card_installment\030\006 \001(\005\022!\n\031in" +
+      "terest_free_by_merchant\030\007 \001(\010\022\023\n\013custom_" +
+      "data\030\010 \001(\t\022\024\n\014callback_url\030\t \001(\t\"\250\006\n\027Pay" +
+      "ByRegisteredCardData\022\016\n\006amount\030\001 \001(\t\022\021\n\t" +
+      "apply_num\030\002 \001(\t\022\022\n\nbuyer_addr\030\003 \001(\t\022\023\n\013b" +
+      "uyer_email\030\004 \001(\t\022\022\n\nbuyer_name\030\005 \001(\t\022\026\n\016" +
+      "buyer_postcode\030\006 \001(\t\022\021\n\tbuyer_tel\030\007 \001(\t\022" +
+      "\025\n\rcancel_amount\030\010 \001(\t\022.\n\016cancel_history" +
+      "\030\t \003(\0132\026.card_v2.CancelHistory\022\025\n\rcancel" +
+      "_reason\030\n \001(\t\022\033\n\023cancel_receipt_urls\030\013 \003" +
+      "(\t\022\024\n\014cancelled_at\030\014 \001(\005\022\021\n\tcard_code\030\r " +
+      "\001(\t\022\021\n\tcard_name\030\016 \001(\t\022\022\n\nbin_number\030\017 \001" +
+      "(\t\022\030\n\020card_installment\030\020 \001(\005\022\021\n\tcard_typ" +
+      "e\030\021 \001(\005\022\033\n\023cash_receipt_issued\030\022 \001(\010\022\017\n\007" +
+      "channel\030\023 \001(\t\022\020\n\010currency\030\024 \001(\t\022\023\n\013custo" +
+      "m_data\030\025 \001(\t\022\020\n\010card_uid\030\026 \001(\t\022\032\n\022custom" +
+      "er_uid_usage\030\027 \001(\t\022\023\n\013fail_reason\030\030 \001(\t\022" +
+      "\021\n\tfailed_at\030\031 \001(\005\022\017\n\007imp_uid\030\032 \001(\t\022\024\n\014m" +
+      "erchant_uid\030\033 \001(\t\022\022\n\norder_name\030\034 \001(\t\022\017\n" +
+      "\007paid_at\030\035 \001(\005\022\022\n\npay_method\030\036 \001(\t\022\r\n\005pg" +
+      "_id\030\037 \001(\t\022\023\n\013pg_provider\030  \001(\t\022\016\n\006pg_tid" +
+      "\030! \001(\t\022\023\n\013receipt_url\030\" \001(\t\022\022\n\nstarted_a" +
+      "t\030# \001(\005\022\016\n\006status\030$ \001(\t\022\022\n\nuser_agent\030% " +
+      "\001(\t\"p\n\033PayByRegisteredCardResponse\022\014\n\004co" +
+      "de\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0222\n\010response\030\003 " +
+      "\001(\0132 .card_v2.PayByRegisteredCardData\"j\n" +
+      "\rCancelHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount" +
+      "\030\002 \001(\t\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004" +
+      " \001(\t\022\023\n\013receipt_url\030\005 \001(\t\"{\n\030CancelCardP" +
+      "aymentRequest\022\017\n\007imp_uid\030\001 \001(\t\022\016\n\006amount" +
+      "\030\002 \001(\t\022\024\n\014merchant_uid\030\003 \001(\t\022\030\n\020duty_fre" +
+      "e_amount\030\004 \001(\t\022\016\n\006reason\030\005 \001(\t\"o\n\032Cancel" +
+      "CardPaymenttResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007me" +
+      "ssage\030\002 \001(\t\0222\n\010response\030\003 \001(\0132 .card_v2." +
+      "PayByRegisteredCardData2\270\005\n\022PaymentCardS" +
+      "ervice\022s\n\021CardRegisterV2RPC\022\034.card_v2.Ca" +
+      "rdRegisterRequest\032\035.card_v2.CardRegister" +
+      "Response\"!\202\323\344\223\002\033\"\026/v2/payments/card/info" +
+      ":\001*\022x\n\020GetCardInfoV2RPC\022\033.card_v2.GetCar" +
+      "dInfoRequest\032\034.card_v2.GetCardInfoRespon" +
+      "se\")\202\323\344\223\002#\022!/v2/payments/card/info/{card" +
+      "_uid}\022\201\001\n\023DeleteCardInfoV2RPC\022\036.card_v2." +
+      "DeleteCardInfoRequest\032\037.card_v2.DeleteCa" +
+      "rdInfoResponse\")\202\323\344\223\002#*!/v2/payments/car" +
+      "d/info/{card_uid}\022\220\001\n\031PayByRegiseteredCa" +
+      "rdV2RPC\022#.card_v2.PayByRegisteredCardReq" +
+      "uest\032$.card_v2.PayByRegisteredCardRespon" +
+      "se\"(\202\323\344\223\002\"\" /v2/payments/card/pay/regist" +
+      "ered\022\233\001\n\032CancelRegiseteredCardV2RPC\022!.ca" +
+      "rd_v2.CancelCardPaymentRequest\032#.card_v2" +
+      ".CancelCardPaymenttResponse\"5\202\323\344\223\002/\"-/v2" +
+      "/payments/card/cancel/registered/{imp_ui" +
+      "d}BMZ8github.com/iamport/interface/gen_s" +
+      "rc/go/v2/payments/card\252\002\020V2.Payments.Car" +
+      "db\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21287,7 +20976,7 @@ public final class Card {
     internal_static_card_v2_CardRegisterResultData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_card_v2_CardRegisterResultData_descriptor,
-        new java.lang.String[] { "CardUid", "CardName", "CardCode", "BinNumbrer", "BirthNumber", "CardType", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", "Inserted", "Updated", });
+        new java.lang.String[] { "CardUid", "CardName", "CardCode", "BinNumbrer", "CardType", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", "Inserted", "Updated", });
     internal_static_card_v2_CardRegisterResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_card_v2_CardRegisterResponse_fieldAccessorTable = new

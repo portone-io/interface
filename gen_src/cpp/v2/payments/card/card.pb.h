@@ -542,15 +542,14 @@ class CardRegisterResultData PROTOBUF_FINAL :
     kCardNameFieldNumber = 2,
     kCardCodeFieldNumber = 3,
     kBinNumbrerFieldNumber = 4,
-    kBirthNumberFieldNumber = 5,
-    kCardTypeFieldNumber = 6,
-    kCustomerNameFieldNumber = 7,
-    kCustomerTelFieldNumber = 8,
-    kCustomerEmailFieldNumber = 9,
-    kCustomerAddrFieldNumber = 10,
-    kCustomerPostcodeFieldNumber = 11,
-    kInsertedFieldNumber = 12,
-    kUpdatedFieldNumber = 13,
+    kCustomerNameFieldNumber = 6,
+    kCustomerTelFieldNumber = 7,
+    kCustomerEmailFieldNumber = 8,
+    kCustomerAddrFieldNumber = 9,
+    kCustomerPostcodeFieldNumber = 10,
+    kCardTypeFieldNumber = 5,
+    kInsertedFieldNumber = 11,
+    kUpdatedFieldNumber = 12,
   };
   // string card_uid = 1;
   void clear_card_uid();
@@ -616,39 +615,7 @@ class CardRegisterResultData PROTOBUF_FINAL :
   std::string* _internal_mutable_bin_numbrer();
   public:
 
-  // string birth_number = 5;
-  void clear_birth_number();
-  const std::string& birth_number() const;
-  void set_birth_number(const std::string& value);
-  void set_birth_number(std::string&& value);
-  void set_birth_number(const char* value);
-  void set_birth_number(const char* value, size_t size);
-  std::string* mutable_birth_number();
-  std::string* release_birth_number();
-  void set_allocated_birth_number(std::string* birth_number);
-  private:
-  const std::string& _internal_birth_number() const;
-  void _internal_set_birth_number(const std::string& value);
-  std::string* _internal_mutable_birth_number();
-  public:
-
-  // string card_type = 6;
-  void clear_card_type();
-  const std::string& card_type() const;
-  void set_card_type(const std::string& value);
-  void set_card_type(std::string&& value);
-  void set_card_type(const char* value);
-  void set_card_type(const char* value, size_t size);
-  std::string* mutable_card_type();
-  std::string* release_card_type();
-  void set_allocated_card_type(std::string* card_type);
-  private:
-  const std::string& _internal_card_type() const;
-  void _internal_set_card_type(const std::string& value);
-  std::string* _internal_mutable_card_type();
-  public:
-
-  // string customer_name = 7;
+  // string customer_name = 6;
   void clear_customer_name();
   const std::string& customer_name() const;
   void set_customer_name(const std::string& value);
@@ -664,7 +631,7 @@ class CardRegisterResultData PROTOBUF_FINAL :
   std::string* _internal_mutable_customer_name();
   public:
 
-  // string customer_tel = 8;
+  // string customer_tel = 7;
   void clear_customer_tel();
   const std::string& customer_tel() const;
   void set_customer_tel(const std::string& value);
@@ -680,7 +647,7 @@ class CardRegisterResultData PROTOBUF_FINAL :
   std::string* _internal_mutable_customer_tel();
   public:
 
-  // string customer_email = 9;
+  // string customer_email = 8;
   void clear_customer_email();
   const std::string& customer_email() const;
   void set_customer_email(const std::string& value);
@@ -696,7 +663,7 @@ class CardRegisterResultData PROTOBUF_FINAL :
   std::string* _internal_mutable_customer_email();
   public:
 
-  // string customer_addr = 10;
+  // string customer_addr = 9;
   void clear_customer_addr();
   const std::string& customer_addr() const;
   void set_customer_addr(const std::string& value);
@@ -712,7 +679,7 @@ class CardRegisterResultData PROTOBUF_FINAL :
   std::string* _internal_mutable_customer_addr();
   public:
 
-  // string customer_postcode = 11;
+  // string customer_postcode = 10;
   void clear_customer_postcode();
   const std::string& customer_postcode() const;
   void set_customer_postcode(const std::string& value);
@@ -728,7 +695,16 @@ class CardRegisterResultData PROTOBUF_FINAL :
   std::string* _internal_mutable_customer_postcode();
   public:
 
-  // int32 inserted = 12;
+  // int32 card_type = 5;
+  void clear_card_type();
+  ::PROTOBUF_NAMESPACE_ID::int32 card_type() const;
+  void set_card_type(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_card_type() const;
+  void _internal_set_card_type(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 inserted = 11;
   void clear_inserted();
   ::PROTOBUF_NAMESPACE_ID::int32 inserted() const;
   void set_inserted(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -737,7 +713,7 @@ class CardRegisterResultData PROTOBUF_FINAL :
   void _internal_set_inserted(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int32 updated = 13;
+  // int32 updated = 12;
   void clear_updated();
   ::PROTOBUF_NAMESPACE_ID::int32 updated() const;
   void set_updated(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -757,13 +733,12 @@ class CardRegisterResultData PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_code_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bin_numbrer_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr birth_number_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_type_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_tel_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_email_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_addr_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_postcode_;
+  ::PROTOBUF_NAMESPACE_ID::int32 card_type_;
   ::PROTOBUF_NAMESPACE_ID::int32 inserted_;
   ::PROTOBUF_NAMESPACE_ID::int32 updated_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1207,12 +1182,12 @@ class GetCardInfoData PROTOBUF_FINAL :
     kCardProviderFieldNumber = 2,
     kCardCodeFieldNumber = 3,
     kBinNumberFieldNumber = 4,
-    kCardTypeFieldNumber = 5,
     kCustomerNameFieldNumber = 6,
     kCustomerTelFieldNumber = 7,
     kCustomerEmailFieldNumber = 8,
     kCustomerAddrFieldNumber = 9,
     kCustomerPostcodeFieldNumber = 10,
+    kCardTypeFieldNumber = 5,
     kInsertedFieldNumber = 11,
     kUpdatedFieldNumber = 12,
   };
@@ -1278,22 +1253,6 @@ class GetCardInfoData PROTOBUF_FINAL :
   const std::string& _internal_bin_number() const;
   void _internal_set_bin_number(const std::string& value);
   std::string* _internal_mutable_bin_number();
-  public:
-
-  // string card_type = 5;
-  void clear_card_type();
-  const std::string& card_type() const;
-  void set_card_type(const std::string& value);
-  void set_card_type(std::string&& value);
-  void set_card_type(const char* value);
-  void set_card_type(const char* value, size_t size);
-  std::string* mutable_card_type();
-  std::string* release_card_type();
-  void set_allocated_card_type(std::string* card_type);
-  private:
-  const std::string& _internal_card_type() const;
-  void _internal_set_card_type(const std::string& value);
-  std::string* _internal_mutable_card_type();
   public:
 
   // string customer_name = 6;
@@ -1376,6 +1335,15 @@ class GetCardInfoData PROTOBUF_FINAL :
   std::string* _internal_mutable_customer_postcode();
   public:
 
+  // int32 card_type = 5;
+  void clear_card_type();
+  ::PROTOBUF_NAMESPACE_ID::int32 card_type() const;
+  void set_card_type(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_card_type() const;
+  void _internal_set_card_type(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
   // int32 inserted = 11;
   void clear_inserted();
   ::PROTOBUF_NAMESPACE_ID::int32 inserted() const;
@@ -1405,12 +1373,12 @@ class GetCardInfoData PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_provider_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_code_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bin_number_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_type_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_tel_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_email_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_addr_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_postcode_;
+  ::PROTOBUF_NAMESPACE_ID::int32 card_type_;
   ::PROTOBUF_NAMESPACE_ID::int32 inserted_;
   ::PROTOBUF_NAMESPACE_ID::int32 updated_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -4575,131 +4543,27 @@ inline void CardRegisterResultData::set_allocated_bin_numbrer(std::string* bin_n
   // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterResultData.bin_numbrer)
 }
 
-// string birth_number = 5;
-inline void CardRegisterResultData::clear_birth_number() {
-  birth_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline const std::string& CardRegisterResultData::birth_number() const {
-  // @@protoc_insertion_point(field_get:card_v2.CardRegisterResultData.birth_number)
-  return _internal_birth_number();
-}
-inline void CardRegisterResultData::set_birth_number(const std::string& value) {
-  _internal_set_birth_number(value);
-  // @@protoc_insertion_point(field_set:card_v2.CardRegisterResultData.birth_number)
-}
-inline std::string* CardRegisterResultData::mutable_birth_number() {
-  // @@protoc_insertion_point(field_mutable:card_v2.CardRegisterResultData.birth_number)
-  return _internal_mutable_birth_number();
-}
-inline const std::string& CardRegisterResultData::_internal_birth_number() const {
-  return birth_number_.Get();
-}
-inline void CardRegisterResultData::_internal_set_birth_number(const std::string& value) {
-  
-  birth_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void CardRegisterResultData::set_birth_number(std::string&& value) {
-  
-  birth_number_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:card_v2.CardRegisterResultData.birth_number)
-}
-inline void CardRegisterResultData::set_birth_number(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  birth_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:card_v2.CardRegisterResultData.birth_number)
-}
-inline void CardRegisterResultData::set_birth_number(const char* value,
-    size_t size) {
-  
-  birth_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:card_v2.CardRegisterResultData.birth_number)
-}
-inline std::string* CardRegisterResultData::_internal_mutable_birth_number() {
-  
-  return birth_number_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* CardRegisterResultData::release_birth_number() {
-  // @@protoc_insertion_point(field_release:card_v2.CardRegisterResultData.birth_number)
-  return birth_number_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void CardRegisterResultData::set_allocated_birth_number(std::string* birth_number) {
-  if (birth_number != nullptr) {
-    
-  } else {
-    
-  }
-  birth_number_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), birth_number,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterResultData.birth_number)
-}
-
-// string card_type = 6;
+// int32 card_type = 5;
 inline void CardRegisterResultData::clear_card_type() {
-  card_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_type_ = 0;
 }
-inline const std::string& CardRegisterResultData::card_type() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 CardRegisterResultData::_internal_card_type() const {
+  return card_type_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 CardRegisterResultData::card_type() const {
   // @@protoc_insertion_point(field_get:card_v2.CardRegisterResultData.card_type)
   return _internal_card_type();
 }
-inline void CardRegisterResultData::set_card_type(const std::string& value) {
+inline void CardRegisterResultData::_internal_set_card_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  card_type_ = value;
+}
+inline void CardRegisterResultData::set_card_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_card_type(value);
   // @@protoc_insertion_point(field_set:card_v2.CardRegisterResultData.card_type)
 }
-inline std::string* CardRegisterResultData::mutable_card_type() {
-  // @@protoc_insertion_point(field_mutable:card_v2.CardRegisterResultData.card_type)
-  return _internal_mutable_card_type();
-}
-inline const std::string& CardRegisterResultData::_internal_card_type() const {
-  return card_type_.Get();
-}
-inline void CardRegisterResultData::_internal_set_card_type(const std::string& value) {
-  
-  card_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void CardRegisterResultData::set_card_type(std::string&& value) {
-  
-  card_type_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:card_v2.CardRegisterResultData.card_type)
-}
-inline void CardRegisterResultData::set_card_type(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  card_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:card_v2.CardRegisterResultData.card_type)
-}
-inline void CardRegisterResultData::set_card_type(const char* value,
-    size_t size) {
-  
-  card_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:card_v2.CardRegisterResultData.card_type)
-}
-inline std::string* CardRegisterResultData::_internal_mutable_card_type() {
-  
-  return card_type_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* CardRegisterResultData::release_card_type() {
-  // @@protoc_insertion_point(field_release:card_v2.CardRegisterResultData.card_type)
-  return card_type_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void CardRegisterResultData::set_allocated_card_type(std::string* card_type) {
-  if (card_type != nullptr) {
-    
-  } else {
-    
-  }
-  card_type_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), card_type,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterResultData.card_type)
-}
 
-// string customer_name = 7;
+// string customer_name = 6;
 inline void CardRegisterResultData::clear_customer_name() {
   customer_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -4761,7 +4625,7 @@ inline void CardRegisterResultData::set_allocated_customer_name(std::string* cus
   // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterResultData.customer_name)
 }
 
-// string customer_tel = 8;
+// string customer_tel = 7;
 inline void CardRegisterResultData::clear_customer_tel() {
   customer_tel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -4823,7 +4687,7 @@ inline void CardRegisterResultData::set_allocated_customer_tel(std::string* cust
   // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterResultData.customer_tel)
 }
 
-// string customer_email = 9;
+// string customer_email = 8;
 inline void CardRegisterResultData::clear_customer_email() {
   customer_email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -4885,7 +4749,7 @@ inline void CardRegisterResultData::set_allocated_customer_email(std::string* cu
   // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterResultData.customer_email)
 }
 
-// string customer_addr = 10;
+// string customer_addr = 9;
 inline void CardRegisterResultData::clear_customer_addr() {
   customer_addr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -4947,7 +4811,7 @@ inline void CardRegisterResultData::set_allocated_customer_addr(std::string* cus
   // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterResultData.customer_addr)
 }
 
-// string customer_postcode = 11;
+// string customer_postcode = 10;
 inline void CardRegisterResultData::clear_customer_postcode() {
   customer_postcode_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -5009,7 +4873,7 @@ inline void CardRegisterResultData::set_allocated_customer_postcode(std::string*
   // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterResultData.customer_postcode)
 }
 
-// int32 inserted = 12;
+// int32 inserted = 11;
 inline void CardRegisterResultData::clear_inserted() {
   inserted_ = 0;
 }
@@ -5029,7 +4893,7 @@ inline void CardRegisterResultData::set_inserted(::PROTOBUF_NAMESPACE_ID::int32 
   // @@protoc_insertion_point(field_set:card_v2.CardRegisterResultData.inserted)
 }
 
-// int32 updated = 13;
+// int32 updated = 12;
 inline void CardRegisterResultData::clear_updated() {
   updated_ = 0;
 }
@@ -5536,66 +5400,24 @@ inline void GetCardInfoData::set_allocated_bin_number(std::string* bin_number) {
   // @@protoc_insertion_point(field_set_allocated:card_v2.GetCardInfoData.bin_number)
 }
 
-// string card_type = 5;
+// int32 card_type = 5;
 inline void GetCardInfoData::clear_card_type() {
-  card_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_type_ = 0;
 }
-inline const std::string& GetCardInfoData::card_type() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 GetCardInfoData::_internal_card_type() const {
+  return card_type_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 GetCardInfoData::card_type() const {
   // @@protoc_insertion_point(field_get:card_v2.GetCardInfoData.card_type)
   return _internal_card_type();
 }
-inline void GetCardInfoData::set_card_type(const std::string& value) {
+inline void GetCardInfoData::_internal_set_card_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  card_type_ = value;
+}
+inline void GetCardInfoData::set_card_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_card_type(value);
   // @@protoc_insertion_point(field_set:card_v2.GetCardInfoData.card_type)
-}
-inline std::string* GetCardInfoData::mutable_card_type() {
-  // @@protoc_insertion_point(field_mutable:card_v2.GetCardInfoData.card_type)
-  return _internal_mutable_card_type();
-}
-inline const std::string& GetCardInfoData::_internal_card_type() const {
-  return card_type_.Get();
-}
-inline void GetCardInfoData::_internal_set_card_type(const std::string& value) {
-  
-  card_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void GetCardInfoData::set_card_type(std::string&& value) {
-  
-  card_type_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:card_v2.GetCardInfoData.card_type)
-}
-inline void GetCardInfoData::set_card_type(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  card_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:card_v2.GetCardInfoData.card_type)
-}
-inline void GetCardInfoData::set_card_type(const char* value,
-    size_t size) {
-  
-  card_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:card_v2.GetCardInfoData.card_type)
-}
-inline std::string* GetCardInfoData::_internal_mutable_card_type() {
-  
-  return card_type_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* GetCardInfoData::release_card_type() {
-  // @@protoc_insertion_point(field_release:card_v2.GetCardInfoData.card_type)
-  return card_type_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void GetCardInfoData::set_allocated_card_type(std::string* card_type) {
-  if (card_type != nullptr) {
-    
-  } else {
-    
-  }
-  card_type_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), card_type,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:card_v2.GetCardInfoData.card_type)
 }
 
 // string customer_name = 6;

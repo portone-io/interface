@@ -73,11 +73,8 @@ export class CardRegisterResultData extends jspb.Message {
   getBinNumbrer(): string;
   setBinNumbrer(value: string): void;
 
-  getBirthNumber(): string;
-  setBirthNumber(value: string): void;
-
-  getCardType(): string;
-  setCardType(value: string): void;
+  getCardType(): number;
+  setCardType(value: number): void;
 
   getCustomerName(): string;
   setCustomerName(value: string): void;
@@ -116,8 +113,7 @@ export namespace CardRegisterResultData {
     cardName: string,
     cardCode: string,
     binNumbrer: string,
-    birthNumber: string,
-    cardType: string,
+    cardType: number,
     customerName: string,
     customerTel: string,
     customerEmail: string,
@@ -191,8 +187,8 @@ export class GetCardInfoData extends jspb.Message {
   getBinNumber(): string;
   setBinNumber(value: string): void;
 
-  getCardType(): string;
-  setCardType(value: string): void;
+  getCardType(): number;
+  setCardType(value: number): void;
 
   getCustomerName(): string;
   setCustomerName(value: string): void;
@@ -231,7 +227,7 @@ export namespace GetCardInfoData {
     cardProvider: string,
     cardCode: string,
     binNumber: string,
-    cardType: string,
+    cardType: number,
     customerName: string,
     customerTel: string,
     customerEmail: string,

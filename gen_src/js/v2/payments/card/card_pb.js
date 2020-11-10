@@ -357,7 +357,7 @@ proto.card_v2.CardRegisterRequest.toObject = function(includeInstance, msg) {
     cardUid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     cardNumber: jspb.Message.getFieldWithDefault(msg, 2, ""),
     expiry: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    bitrh: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    birth: jspb.Message.getFieldWithDefault(msg, 4, ""),
     pwd2digit: jspb.Message.getFieldWithDefault(msg, 5, ""),
     customerName: jspb.Message.getFieldWithDefault(msg, 6, ""),
     customerTel: jspb.Message.getFieldWithDefault(msg, 7, ""),
@@ -414,7 +414,7 @@ proto.card_v2.CardRegisterRequest.deserializeBinaryFromReader = function(msg, re
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
-      msg.setBitrh(value);
+      msg.setBirth(value);
       break;
     case 5:
       var value = /** @type {string} */ (reader.readString());
@@ -490,7 +490,7 @@ proto.card_v2.CardRegisterRequest.serializeBinaryToWriter = function(message, wr
       f
     );
   }
-  f = message.getBitrh();
+  f = message.getBirth();
   if (f.length > 0) {
     writer.writeString(
       4,
@@ -597,10 +597,10 @@ proto.card_v2.CardRegisterRequest.prototype.setExpiry = function(value) {
 
 
 /**
- * optional string bitrh = 4;
+ * optional string birth = 4;
  * @return {string}
  */
-proto.card_v2.CardRegisterRequest.prototype.getBitrh = function() {
+proto.card_v2.CardRegisterRequest.prototype.getBirth = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
@@ -609,7 +609,7 @@ proto.card_v2.CardRegisterRequest.prototype.getBitrh = function() {
  * @param {string} value
  * @return {!proto.card_v2.CardRegisterRequest} returns this
  */
-proto.card_v2.CardRegisterRequest.prototype.setBitrh = function(value) {
+proto.card_v2.CardRegisterRequest.prototype.setBirth = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 

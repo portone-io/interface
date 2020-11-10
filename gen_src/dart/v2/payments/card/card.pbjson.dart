@@ -11,7 +11,7 @@ const CardRegisterRequest$json = const {
     const {'1': 'card_uid', '3': 1, '4': 1, '5': 9, '10': 'cardUid'},
     const {'1': 'card_number', '3': 2, '4': 1, '5': 9, '10': 'cardNumber'},
     const {'1': 'expiry', '3': 3, '4': 1, '5': 9, '10': 'expiry'},
-    const {'1': 'bitrh', '3': 4, '4': 1, '5': 9, '10': 'bitrh'},
+    const {'1': 'birth', '3': 4, '4': 1, '5': 9, '10': 'birth'},
     const {'1': 'pwd_2digit', '3': 5, '4': 1, '5': 9, '10': 'pwd2digit'},
     const {'1': 'customer_name', '3': 6, '4': 1, '5': 9, '10': 'customerName'},
     const {'1': 'customer_tel', '3': 7, '4': 1, '5': 9, '10': 'customerTel'},

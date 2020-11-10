@@ -290,7 +290,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_v2_2fpayments_2fcard_2fcard_2e
   PROTOBUF_FIELD_OFFSET(::card_v2::CardRegisterRequest, card_uid_),
   PROTOBUF_FIELD_OFFSET(::card_v2::CardRegisterRequest, card_number_),
   PROTOBUF_FIELD_OFFSET(::card_v2::CardRegisterRequest, expiry_),
-  PROTOBUF_FIELD_OFFSET(::card_v2::CardRegisterRequest, bitrh_),
+  PROTOBUF_FIELD_OFFSET(::card_v2::CardRegisterRequest, birth_),
   PROTOBUF_FIELD_OFFSET(::card_v2::CardRegisterRequest, pwd_2digit_),
   PROTOBUF_FIELD_OFFSET(::card_v2::CardRegisterRequest, customer_name_),
   PROTOBUF_FIELD_OFFSET(::card_v2::CardRegisterRequest, customer_tel_),
@@ -497,7 +497,7 @@ const char descriptor_table_protodef_v2_2fpayments_2fcard_2fcard_2eproto[] PROTO
   "\n\033v2/payments/card/card.proto\022\007card_v2\032\034"
   "google/api/annotations.proto\"\346\001\n\023CardReg"
   "isterRequest\022\020\n\010card_uid\030\001 \001(\t\022\023\n\013card_n"
-  "umber\030\002 \001(\t\022\016\n\006expiry\030\003 \001(\t\022\r\n\005bitrh\030\004 \001"
+  "umber\030\002 \001(\t\022\016\n\006expiry\030\003 \001(\t\022\r\n\005birth\030\004 \001"
   "(\t\022\022\n\npwd_2digit\030\005 \001(\t\022\025\n\rcustomer_name\030"
   "\006 \001(\t\022\024\n\014customer_tel\030\007 \001(\t\022\026\n\016customer_"
   "email\030\010 \001(\t\022\025\n\rcustomer_addr\030\t \001(\t\022\031\n\021cu"
@@ -646,9 +646,9 @@ CardRegisterRequest::CardRegisterRequest(const CardRegisterRequest& from)
     expiry_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_expiry(),
       GetArena());
   }
-  bitrh_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_bitrh().empty()) {
-    bitrh_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_bitrh(),
+  birth_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_birth().empty()) {
+    birth_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_birth(),
       GetArena());
   }
   pwd_2digit_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -689,7 +689,7 @@ void CardRegisterRequest::SharedCtor() {
   card_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   card_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   expiry_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  bitrh_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  birth_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   pwd_2digit_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   customer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   customer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -709,7 +709,7 @@ void CardRegisterRequest::SharedDtor() {
   card_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   card_number_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   expiry_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  bitrh_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  birth_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   pwd_2digit_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   customer_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   customer_tel_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -742,7 +742,7 @@ void CardRegisterRequest::Clear() {
   card_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   card_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   expiry_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  bitrh_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  birth_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   pwd_2digit_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   customer_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   customer_tel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -787,12 +787,12 @@ const char* CardRegisterRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAME
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string bitrh = 4;
+      // string birth = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          auto str = _internal_mutable_bitrh();
+          auto str = _internal_mutable_birth();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "card_v2.CardRegisterRequest.bitrh"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "card_v2.CardRegisterRequest.birth"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -908,14 +908,14 @@ failure:
         3, this->_internal_expiry(), target);
   }
 
-  // string bitrh = 4;
-  if (this->bitrh().size() > 0) {
+  // string birth = 4;
+  if (this->birth().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_bitrh().data(), static_cast<int>(this->_internal_bitrh().length()),
+      this->_internal_birth().data(), static_cast<int>(this->_internal_birth().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "card_v2.CardRegisterRequest.bitrh");
+      "card_v2.CardRegisterRequest.birth");
     target = stream->WriteStringMaybeAliased(
-        4, this->_internal_bitrh(), target);
+        4, this->_internal_birth(), target);
   }
 
   // string pwd_2digit = 5;
@@ -1015,11 +1015,11 @@ size_t CardRegisterRequest::ByteSizeLong() const {
         this->_internal_expiry());
   }
 
-  // string bitrh = 4;
-  if (this->bitrh().size() > 0) {
+  // string birth = 4;
+  if (this->birth().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_bitrh());
+        this->_internal_birth());
   }
 
   // string pwd_2digit = 5;
@@ -1104,8 +1104,8 @@ void CardRegisterRequest::MergeFrom(const CardRegisterRequest& from) {
   if (from.expiry().size() > 0) {
     _internal_set_expiry(from._internal_expiry());
   }
-  if (from.bitrh().size() > 0) {
-    _internal_set_bitrh(from._internal_bitrh());
+  if (from.birth().size() > 0) {
+    _internal_set_birth(from._internal_birth());
   }
   if (from.pwd_2digit().size() > 0) {
     _internal_set_pwd_2digit(from._internal_pwd_2digit());
@@ -1151,7 +1151,7 @@ void CardRegisterRequest::InternalSwap(CardRegisterRequest* other) {
   card_uid_.Swap(&other->card_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   card_number_.Swap(&other->card_number_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   expiry_.Swap(&other->expiry_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  bitrh_.Swap(&other->bitrh_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  birth_.Swap(&other->birth_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   pwd_2digit_.Swap(&other->pwd_2digit_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   customer_name_.Swap(&other->customer_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   customer_tel_.Swap(&other->customer_tel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());

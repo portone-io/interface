@@ -43,7 +43,7 @@ message CardRegisterRequest {
     string card_uid = 1; // a.k.a.) customer_uid
     string card_number = 2;
     string expiry = 3;
-    string bitrh = 4;
+    string birth = 4;
     string pwd_2digit = 5;
     string customer_name = 6;
     string customer_tel = 7;

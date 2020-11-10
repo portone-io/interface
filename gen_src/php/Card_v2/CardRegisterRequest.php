@@ -28,9 +28,9 @@ class CardRegisterRequest extends \Google\Protobuf\Internal\Message
      */
     protected $expiry = '';
     /**
-     * Generated from protobuf field <code>string bitrh = 4;</code>
+     * Generated from protobuf field <code>string birth = 4;</code>
      */
-    protected $bitrh = '';
+    protected $birth = '';
     /**
      * Generated from protobuf field <code>string pwd_2digit = 5;</code>
      */
@@ -66,7 +66,7 @@ class CardRegisterRequest extends \Google\Protobuf\Internal\Message
      *           a.k.a.) customer_uid
      *     @type string $card_number
      *     @type string $expiry
-     *     @type string $bitrh
+     *     @type string $birth
      *     @type string $pwd_2digit
      *     @type string $customer_name
      *     @type string $customer_tel
@@ -151,23 +151,23 @@ class CardRegisterRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string bitrh = 4;</code>
+     * Generated from protobuf field <code>string birth = 4;</code>
      * @return string
      */
-    public function getBitrh()
+    public function getBirth()
     {
-        return $this->bitrh;
+        return $this->birth;
     }
 
     /**
-     * Generated from protobuf field <code>string bitrh = 4;</code>
+     * Generated from protobuf field <code>string birth = 4;</code>
      * @param string $var
      * @return $this
      */
-    public function setBitrh($var)
+    public function setBirth($var)
     {
         GPBUtil::checkString($var, True);
-        $this->bitrh = $var;
+        $this->birth = $var;
 
         return $this;
     }

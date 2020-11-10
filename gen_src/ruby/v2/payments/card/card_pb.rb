@@ -10,7 +10,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :card_uid, :string, 1
       optional :card_number, :string, 2
       optional :expiry, :string, 3
-      optional :bitrh, :string, 4
+      optional :birth, :string, 4
       optional :pwd_2digit, :string, 5
       optional :customer_name, :string, 6
       optional :customer_tel, :string, 7

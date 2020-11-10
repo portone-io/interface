@@ -27,7 +27,7 @@ namespace V2.Payments.Card {
             "Cht2Mi9wYXltZW50cy9jYXJkL2NhcmQucHJvdG8SB2NhcmRfdjIaHGdvb2ds",
             "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i5gEKE0NhcmRSZWdpc3RlclJlcXVl",
             "c3QSEAoIY2FyZF91aWQYASABKAkSEwoLY2FyZF9udW1iZXIYAiABKAkSDgoG",
-            "ZXhwaXJ5GAMgASgJEg0KBWJpdHJoGAQgASgJEhIKCnB3ZF8yZGlnaXQYBSAB",
+            "ZXhwaXJ5GAMgASgJEg0KBWJpcnRoGAQgASgJEhIKCnB3ZF8yZGlnaXQYBSAB",
             "KAkSFQoNY3VzdG9tZXJfbmFtZRgGIAEoCRIUCgxjdXN0b21lcl90ZWwYByAB",
             "KAkSFgoOY3VzdG9tZXJfZW1haWwYCCABKAkSFQoNY3VzdG9tZXJfYWRkchgJ",
             "IAEoCRIZChFjdXN0b21lcl9wb3N0Y29kZRgKIAEoCSKSAgoWQ2FyZFJlZ2lz",
@@ -105,7 +105,7 @@ namespace V2.Payments.Card {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.Annotations.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.CardRegisterRequest), global::V2.Payments.Card.CardRegisterRequest.Parser, new[]{ "CardUid", "CardNumber", "Expiry", "Bitrh", "Pwd2Digit", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.CardRegisterRequest), global::V2.Payments.Card.CardRegisterRequest.Parser, new[]{ "CardUid", "CardNumber", "Expiry", "Birth", "Pwd2Digit", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.CardRegisterResultData), global::V2.Payments.Card.CardRegisterResultData.Parser, new[]{ "CardUid", "CardName", "CardCode", "BinNumbrer", "CardType", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", "Inserted", "Updated" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.CardRegisterResponse), global::V2.Payments.Card.CardRegisterResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.GetCardInfoRequest), global::V2.Payments.Card.GetCardInfoRequest.Parser, new[]{ "CardUid" }, null, null, null, null),
@@ -157,7 +157,7 @@ namespace V2.Payments.Card {
       cardUid_ = other.cardUid_;
       cardNumber_ = other.cardNumber_;
       expiry_ = other.expiry_;
-      bitrh_ = other.bitrh_;
+      birth_ = other.birth_;
       pwd2Digit_ = other.pwd2Digit_;
       customerName_ = other.customerName_;
       customerTel_ = other.customerTel_;
@@ -208,14 +208,14 @@ namespace V2.Payments.Card {
       }
     }
 
-    /// <summary>Field number for the "bitrh" field.</summary>
-    public const int BitrhFieldNumber = 4;
-    private string bitrh_ = "";
+    /// <summary>Field number for the "birth" field.</summary>
+    public const int BirthFieldNumber = 4;
+    private string birth_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Bitrh {
-      get { return bitrh_; }
+    public string Birth {
+      get { return birth_; }
       set {
-        bitrh_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        birth_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -301,7 +301,7 @@ namespace V2.Payments.Card {
       if (CardUid != other.CardUid) return false;
       if (CardNumber != other.CardNumber) return false;
       if (Expiry != other.Expiry) return false;
-      if (Bitrh != other.Bitrh) return false;
+      if (Birth != other.Birth) return false;
       if (Pwd2Digit != other.Pwd2Digit) return false;
       if (CustomerName != other.CustomerName) return false;
       if (CustomerTel != other.CustomerTel) return false;
@@ -317,7 +317,7 @@ namespace V2.Payments.Card {
       if (CardUid.Length != 0) hash ^= CardUid.GetHashCode();
       if (CardNumber.Length != 0) hash ^= CardNumber.GetHashCode();
       if (Expiry.Length != 0) hash ^= Expiry.GetHashCode();
-      if (Bitrh.Length != 0) hash ^= Bitrh.GetHashCode();
+      if (Birth.Length != 0) hash ^= Birth.GetHashCode();
       if (Pwd2Digit.Length != 0) hash ^= Pwd2Digit.GetHashCode();
       if (CustomerName.Length != 0) hash ^= CustomerName.GetHashCode();
       if (CustomerTel.Length != 0) hash ^= CustomerTel.GetHashCode();
@@ -352,9 +352,9 @@ namespace V2.Payments.Card {
         output.WriteRawTag(26);
         output.WriteString(Expiry);
       }
-      if (Bitrh.Length != 0) {
+      if (Birth.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteString(Bitrh);
+        output.WriteString(Birth);
       }
       if (Pwd2Digit.Length != 0) {
         output.WriteRawTag(42);
@@ -401,9 +401,9 @@ namespace V2.Payments.Card {
         output.WriteRawTag(26);
         output.WriteString(Expiry);
       }
-      if (Bitrh.Length != 0) {
+      if (Birth.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteString(Bitrh);
+        output.WriteString(Birth);
       }
       if (Pwd2Digit.Length != 0) {
         output.WriteRawTag(42);
@@ -447,8 +447,8 @@ namespace V2.Payments.Card {
       if (Expiry.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Expiry);
       }
-      if (Bitrh.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Bitrh);
+      if (Birth.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Birth);
       }
       if (Pwd2Digit.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Pwd2Digit);
@@ -488,8 +488,8 @@ namespace V2.Payments.Card {
       if (other.Expiry.Length != 0) {
         Expiry = other.Expiry;
       }
-      if (other.Bitrh.Length != 0) {
-        Bitrh = other.Bitrh;
+      if (other.Birth.Length != 0) {
+        Birth = other.Birth;
       }
       if (other.Pwd2Digit.Length != 0) {
         Pwd2Digit = other.Pwd2Digit;
@@ -536,7 +536,7 @@ namespace V2.Payments.Card {
             break;
           }
           case 34: {
-            Bitrh = input.ReadString();
+            Birth = input.ReadString();
             break;
           }
           case 42: {
@@ -590,7 +590,7 @@ namespace V2.Payments.Card {
             break;
           }
           case 34: {
-            Bitrh = input.ReadString();
+            Birth = input.ReadString();
             break;
           }
           case 42: {

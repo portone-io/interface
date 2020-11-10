@@ -9,7 +9,7 @@ option csharp_namespace = "V1.Authenticate";
 service TokenService {
     rpc TokenRPC(TokenRequest) returns (TokenResponse) {
         option (google.api.http) = {
-            post: "/v1/gettoken"
+            post: "/api/payments/v1/gettoken"
             body: "*"
         };
     }

@@ -10,41 +10,41 @@ option csharp_namespace = "V1.Subscribe";
 service SubscribeService {
     rpc OnetimePaymentRPC(OnetimePaymentRequest) returns (OnetimePaymentResponse) {
         option (google.api.http) = {
-            post: "/v1/subscribe/payments/onetime"
+            post: "/api/payments/v1/subscribe/payments/onetime"
             body: "*"
         };
     }
 
     rpc AgainPaymentRPC(AgainPaymentRequest) returns (AgainPaymentResponse) {
         option (google.api.http) = {
-            post: "/v1/subscribe/payments/again"
+            post: "/api/payments/v1/subscribe/payments/again"
             body: "*"
         };
     }
 
     rpc SchedulePaymentRPC(SchedulePayemntRequest) returns (SchedulePaymentResponse) {
         option (google.api.http) = {
-            post: "/v1/subscribe/payments/schedule"
+            post: "/api/payments/v1/subscribe/payments/schedule"
             body: "*"
         };
     }
 
     rpc UnschedulePaymentRPC(UnschedulePaymentRequest) returns (UnschedulePaymentResponse) {
         option (google.api.http) = {
-            post: "/v1/subscribe/payments/unschedule"
+            post: "/api/payments/v1/subscribe/payments/unschedule"
             body: "*"
         };
     }
 
     rpc GetScheduledPaymentRPC(GetPaymentScheduleRequest) returns (GetPaymentScheduleResponse) {
         option (google.api.http) = {
-            get: "/v1/subscribe/payments/schedule/{merchant_uid}"
+            get: "/api/payments/v1/subscribe/payments/schedule/{merchant_uid}"
         };
     }
 
     rpc GetScheduledPaymentByCustomerUidRPC(GetPaymentScheduleByCustomerRequest) returns (GetPaymentScheduleByCustomerResponse) {
         option (google.api.http) = {
-            get: "/v1/subscribe/payments/schedule/customers/{customer_uid}"
+            get: "/api/payments/v1/subscribe/payments/schedule/customers/{customer_uid}"
         };
     }
 

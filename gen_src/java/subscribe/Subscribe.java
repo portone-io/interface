@@ -20079,32 +20079,34 @@ public final class Subscribe {
       "GetPaymentScheduleByCustomerResponse\022\014\n\004" +
       "code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022C\n\010response\030" +
       "\003 \001(\01321.subscribe.NestedGetPaymentSchedu" +
-      "leByCustomerData2\234\007\n\020SubscribeService\022\203\001" +
+      "leByCustomerData2\353\007\n\020SubscribeService\022\220\001" +
       "\n\021OnetimePaymentRPC\022 .subscribe.OnetimeP" +
       "aymentRequest\032!.subscribe.OnetimePayment" +
-      "Response\")\202\323\344\223\002#\"\036/v1/subscribe/payments" +
-      "/onetime:\001*\022{\n\017AgainPaymentRPC\022\036.subscri" +
-      "be.AgainPaymentRequest\032\037.subscribe.Again" +
-      "PaymentResponse\"\'\202\323\344\223\002!\"\034/v1/subscribe/p" +
-      "ayments/again:\001*\022\207\001\n\022SchedulePaymentRPC\022" +
-      "!.subscribe.SchedulePayemntRequest\032\".sub" +
-      "scribe.SchedulePaymentResponse\"*\202\323\344\223\002$\"\037" +
-      "/v1/subscribe/payments/schedule:\001*\022\217\001\n\024U" +
+      "Response\"6\202\323\344\223\0020\"+/api/payments/v1/subsc" +
+      "ribe/payments/onetime:\001*\022\210\001\n\017AgainPaymen" +
+      "tRPC\022\036.subscribe.AgainPaymentRequest\032\037.s" +
+      "ubscribe.AgainPaymentResponse\"4\202\323\344\223\002.\")/" +
+      "api/payments/v1/subscribe/payments/again" +
+      ":\001*\022\224\001\n\022SchedulePaymentRPC\022!.subscribe.S" +
+      "chedulePayemntRequest\032\".subscribe.Schedu" +
+      "lePaymentResponse\"7\202\323\344\223\0021\",/api/payments" +
+      "/v1/subscribe/payments/schedule:\001*\022\234\001\n\024U" +
       "nschedulePaymentRPC\022#.subscribe.Unschedu" +
       "lePaymentRequest\032$.subscribe.UnscheduleP" +
-      "aymentResponse\",\202\323\344\223\002&\"!/v1/subscribe/pa" +
-      "yments/unschedule:\001*\022\235\001\n\026GetScheduledPay" +
-      "mentRPC\022$.subscribe.GetPaymentScheduleRe" +
-      "quest\032%.subscribe.GetPaymentScheduleResp" +
-      "onse\"6\202\323\344\223\0020\022./v1/subscribe/payments/sch" +
-      "edule/{merchant_uid}\022\310\001\n#GetScheduledPay" +
-      "mentByCustomerUidRPC\022..subscribe.GetPaym" +
-      "entScheduleByCustomerRequest\032/.subscribe" +
-      ".GetPaymentScheduleByCustomerResponse\"@\202" +
-      "\323\344\223\002:\0228/v1/subscribe/payments/schedule/c" +
-      "ustomers/{customer_uid}BEZ4github.com/ia" +
-      "mport/interface/gen_src/go/v1/subscribe\252" +
-      "\002\014V1.Subscribeb\006proto3"
+      "aymentResponse\"9\202\323\344\223\0023\"./api/payments/v1" +
+      "/subscribe/payments/unschedule:\001*\022\252\001\n\026Ge" +
+      "tScheduledPaymentRPC\022$.subscribe.GetPaym" +
+      "entScheduleRequest\032%.subscribe.GetPaymen" +
+      "tScheduleResponse\"C\202\323\344\223\002=\022;/api/payments" +
+      "/v1/subscribe/payments/schedule/{merchan" +
+      "t_uid}\022\325\001\n#GetScheduledPaymentByCustomer" +
+      "UidRPC\022..subscribe.GetPaymentScheduleByC" +
+      "ustomerRequest\032/.subscribe.GetPaymentSch" +
+      "eduleByCustomerResponse\"M\202\323\344\223\002G\022E/api/pa" +
+      "yments/v1/subscribe/payments/schedule/cu" +
+      "stomers/{customer_uid}BEZ4github.com/iam" +
+      "port/interface/gen_src/go/v1/subscribe\252\002" +
+      "\014V1.Subscribeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

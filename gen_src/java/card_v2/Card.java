@@ -20938,26 +20938,27 @@ public final class Card {
       "e_amount\030\004 \001(\t\022\016\n\006reason\030\005 \001(\t\"o\n\032Cancel" +
       "CardPaymenttResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007me" +
       "ssage\030\002 \001(\t\0222\n\010response\030\003 \001(\0132 .card_v2." +
-      "PayByRegisteredCardData2\212\005\n\022PaymentCardS" +
-      "ervice\022j\n\021CardRegisterV2RPC\022\034.card_v2.Ca" +
+      "PayByRegisteredCardData2\314\005\n\022PaymentCardS" +
+      "ervice\022w\n\021CardRegisterV2RPC\022\034.card_v2.Ca" +
       "rdRegisterRequest\032\035.card_v2.CardRegister" +
-      "Response\"\030\202\323\344\223\002\022\"\r/v2/card/info:\001*\022o\n\020Ge" +
-      "tCardInfoV2RPC\022\033.card_v2.GetCardInfoRequ" +
-      "est\032\034.card_v2.GetCardInfoResponse\" \202\323\344\223\002" +
-      "\032\022\030/v2/card/info/{card_uid}\022x\n\023DeleteCar" +
-      "dInfoV2RPC\022\036.card_v2.DeleteCardInfoReque" +
-      "st\032\037.card_v2.DeleteCardInfoResponse\" \202\323\344" +
-      "\223\002\032*\030/v2/card/info/{card_uid}\022\207\001\n\031PayByR" +
+      "Response\"%\202\323\344\223\002\037\"\032/api/payments/v2/card/" +
+      "info:\001*\022|\n\020GetCardInfoV2RPC\022\033.card_v2.Ge" +
+      "tCardInfoRequest\032\034.card_v2.GetCardInfoRe" +
+      "sponse\"-\202\323\344\223\002\'\022%/api/payments/v2/card/in" +
+      "fo/{card_uid}\022\205\001\n\023DeleteCardInfoV2RPC\022\036." +
+      "card_v2.DeleteCardInfoRequest\032\037.card_v2." +
+      "DeleteCardInfoResponse\"-\202\323\344\223\002\'*%/api/pay" +
+      "ments/v2/card/info/{card_uid}\022\224\001\n\031PayByR" +
       "egiseteredCardV2RPC\022#.card_v2.PayByRegis" +
       "teredCardRequest\032$.card_v2.PayByRegister" +
-      "edCardResponse\"\037\202\323\344\223\002\031\"\027/v2/card/pay/reg" +
-      "istered\022\222\001\n\032CancelRegiseteredCardV2RPC\022!" +
-      ".card_v2.CancelCardPaymentRequest\032#.card" +
-      "_v2.CancelCardPaymenttResponse\",\202\323\344\223\002&\"$" +
-      "/v2/card/cancel/registered/{imp_uid}BMZ8" +
-      "github.com/iamport/interface/gen_src/go/" +
-      "v2/payments/card\252\002\020V2.Payments.Cardb\006pro" +
-      "to3"
+      "edCardResponse\",\202\323\344\223\002&\"$/api/payments/v2" +
+      "/card/pay/registered\022\237\001\n\032CancelRegiseter" +
+      "edCardV2RPC\022!.card_v2.CancelCardPaymentR" +
+      "equest\032#.card_v2.CancelCardPaymenttRespo" +
+      "nse\"9\202\323\344\223\0023\"1/api/payments/v2/card/cance" +
+      "l/registered/{imp_uid}BMZ8github.com/iam" +
+      "port/interface/gen_src/go/v2/payments/ca" +
+      "rd\252\002\020V2.Payments.Cardb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

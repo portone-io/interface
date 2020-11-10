@@ -235,7 +235,7 @@ class CardRegisterRequest PROTOBUF_FINAL :
     kCardUidFieldNumber = 1,
     kCardNumberFieldNumber = 2,
     kExpiryFieldNumber = 3,
-    kBitrhFieldNumber = 4,
+    kBirthFieldNumber = 4,
     kPwd2DigitFieldNumber = 5,
     kCustomerNameFieldNumber = 6,
     kCustomerTelFieldNumber = 7,
@@ -291,20 +291,20 @@ class CardRegisterRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_expiry();
   public:
 
-  // string bitrh = 4;
-  void clear_bitrh();
-  const std::string& bitrh() const;
-  void set_bitrh(const std::string& value);
-  void set_bitrh(std::string&& value);
-  void set_bitrh(const char* value);
-  void set_bitrh(const char* value, size_t size);
-  std::string* mutable_bitrh();
-  std::string* release_bitrh();
-  void set_allocated_bitrh(std::string* bitrh);
+  // string birth = 4;
+  void clear_birth();
+  const std::string& birth() const;
+  void set_birth(const std::string& value);
+  void set_birth(std::string&& value);
+  void set_birth(const char* value);
+  void set_birth(const char* value, size_t size);
+  std::string* mutable_birth();
+  std::string* release_birth();
+  void set_allocated_birth(std::string* birth);
   private:
-  const std::string& _internal_bitrh() const;
-  void _internal_set_bitrh(const std::string& value);
-  std::string* _internal_mutable_bitrh();
+  const std::string& _internal_birth() const;
+  void _internal_set_birth(const std::string& value);
+  std::string* _internal_mutable_birth();
   public:
 
   // string pwd_2digit = 5;
@@ -413,7 +413,7 @@ class CardRegisterRequest PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_uid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_number_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr expiry_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bitrh_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr birth_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr pwd_2digit_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_tel_;
@@ -3857,66 +3857,66 @@ inline void CardRegisterRequest::set_allocated_expiry(std::string* expiry) {
   // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterRequest.expiry)
 }
 
-// string bitrh = 4;
-inline void CardRegisterRequest::clear_bitrh() {
-  bitrh_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// string birth = 4;
+inline void CardRegisterRequest::clear_birth() {
+  birth_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline const std::string& CardRegisterRequest::bitrh() const {
-  // @@protoc_insertion_point(field_get:card_v2.CardRegisterRequest.bitrh)
-  return _internal_bitrh();
+inline const std::string& CardRegisterRequest::birth() const {
+  // @@protoc_insertion_point(field_get:card_v2.CardRegisterRequest.birth)
+  return _internal_birth();
 }
-inline void CardRegisterRequest::set_bitrh(const std::string& value) {
-  _internal_set_bitrh(value);
-  // @@protoc_insertion_point(field_set:card_v2.CardRegisterRequest.bitrh)
+inline void CardRegisterRequest::set_birth(const std::string& value) {
+  _internal_set_birth(value);
+  // @@protoc_insertion_point(field_set:card_v2.CardRegisterRequest.birth)
 }
-inline std::string* CardRegisterRequest::mutable_bitrh() {
-  // @@protoc_insertion_point(field_mutable:card_v2.CardRegisterRequest.bitrh)
-  return _internal_mutable_bitrh();
+inline std::string* CardRegisterRequest::mutable_birth() {
+  // @@protoc_insertion_point(field_mutable:card_v2.CardRegisterRequest.birth)
+  return _internal_mutable_birth();
 }
-inline const std::string& CardRegisterRequest::_internal_bitrh() const {
-  return bitrh_.Get();
+inline const std::string& CardRegisterRequest::_internal_birth() const {
+  return birth_.Get();
 }
-inline void CardRegisterRequest::_internal_set_bitrh(const std::string& value) {
+inline void CardRegisterRequest::_internal_set_birth(const std::string& value) {
   
-  bitrh_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  birth_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void CardRegisterRequest::set_bitrh(std::string&& value) {
+inline void CardRegisterRequest::set_birth(std::string&& value) {
   
-  bitrh_.Set(
+  birth_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:card_v2.CardRegisterRequest.bitrh)
+  // @@protoc_insertion_point(field_set_rvalue:card_v2.CardRegisterRequest.birth)
 }
-inline void CardRegisterRequest::set_bitrh(const char* value) {
+inline void CardRegisterRequest::set_birth(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  bitrh_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+  birth_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:card_v2.CardRegisterRequest.bitrh)
+  // @@protoc_insertion_point(field_set_char:card_v2.CardRegisterRequest.birth)
 }
-inline void CardRegisterRequest::set_bitrh(const char* value,
+inline void CardRegisterRequest::set_birth(const char* value,
     size_t size) {
   
-  bitrh_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+  birth_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:card_v2.CardRegisterRequest.bitrh)
+  // @@protoc_insertion_point(field_set_pointer:card_v2.CardRegisterRequest.birth)
 }
-inline std::string* CardRegisterRequest::_internal_mutable_bitrh() {
+inline std::string* CardRegisterRequest::_internal_mutable_birth() {
   
-  return bitrh_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  return birth_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* CardRegisterRequest::release_bitrh() {
-  // @@protoc_insertion_point(field_release:card_v2.CardRegisterRequest.bitrh)
-  return bitrh_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* CardRegisterRequest::release_birth() {
+  // @@protoc_insertion_point(field_release:card_v2.CardRegisterRequest.birth)
+  return birth_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void CardRegisterRequest::set_allocated_bitrh(std::string* bitrh) {
-  if (bitrh != nullptr) {
+inline void CardRegisterRequest::set_allocated_birth(std::string* birth) {
+  if (birth != nullptr) {
     
   } else {
     
   }
-  bitrh_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), bitrh,
+  birth_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), birth,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterRequest.bitrh)
+  // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterRequest.birth)
 }
 
 // string pwd_2digit = 5;

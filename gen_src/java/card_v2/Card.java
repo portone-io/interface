@@ -63,16 +63,16 @@ public final class Card {
         getExpiryBytes();
 
     /**
-     * <code>string bitrh = 4;</code>
-     * @return The bitrh.
+     * <code>string birth = 4;</code>
+     * @return The birth.
      */
-    java.lang.String getBitrh();
+    java.lang.String getBirth();
     /**
-     * <code>string bitrh = 4;</code>
-     * @return The bytes for bitrh.
+     * <code>string birth = 4;</code>
+     * @return The bytes for birth.
      */
     com.google.protobuf.ByteString
-        getBitrhBytes();
+        getBirthBytes();
 
     /**
      * <code>string pwd_2digit = 5;</code>
@@ -162,7 +162,7 @@ public final class Card {
       cardUid_ = "";
       cardNumber_ = "";
       expiry_ = "";
-      bitrh_ = "";
+      birth_ = "";
       pwd2Digit_ = "";
       customerName_ = "";
       customerTel_ = "";
@@ -222,7 +222,7 @@ public final class Card {
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              bitrh_ = s;
+              birth_ = s;
               break;
             }
             case 42: {
@@ -415,38 +415,38 @@ public final class Card {
       }
     }
 
-    public static final int BITRH_FIELD_NUMBER = 4;
-    private volatile java.lang.Object bitrh_;
+    public static final int BIRTH_FIELD_NUMBER = 4;
+    private volatile java.lang.Object birth_;
     /**
-     * <code>string bitrh = 4;</code>
-     * @return The bitrh.
+     * <code>string birth = 4;</code>
+     * @return The birth.
      */
     @java.lang.Override
-    public java.lang.String getBitrh() {
-      java.lang.Object ref = bitrh_;
+    public java.lang.String getBirth() {
+      java.lang.Object ref = birth_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        bitrh_ = s;
+        birth_ = s;
         return s;
       }
     }
     /**
-     * <code>string bitrh = 4;</code>
-     * @return The bytes for bitrh.
+     * <code>string birth = 4;</code>
+     * @return The bytes for birth.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getBitrhBytes() {
-      java.lang.Object ref = bitrh_;
+        getBirthBytes() {
+      java.lang.Object ref = birth_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        bitrh_ = b;
+        birth_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -704,8 +704,8 @@ public final class Card {
       if (!getExpiryBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, expiry_);
       }
-      if (!getBitrhBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bitrh_);
+      if (!getBirthBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, birth_);
       }
       if (!getPwd2DigitBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, pwd2Digit_);
@@ -743,8 +743,8 @@ public final class Card {
       if (!getExpiryBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, expiry_);
       }
-      if (!getBitrhBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bitrh_);
+      if (!getBirthBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, birth_);
       }
       if (!getPwd2DigitBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, pwd2Digit_);
@@ -785,8 +785,8 @@ public final class Card {
           .equals(other.getCardNumber())) return false;
       if (!getExpiry()
           .equals(other.getExpiry())) return false;
-      if (!getBitrh()
-          .equals(other.getBitrh())) return false;
+      if (!getBirth()
+          .equals(other.getBirth())) return false;
       if (!getPwd2Digit()
           .equals(other.getPwd2Digit())) return false;
       if (!getCustomerName()
@@ -816,8 +816,8 @@ public final class Card {
       hash = (53 * hash) + getCardNumber().hashCode();
       hash = (37 * hash) + EXPIRY_FIELD_NUMBER;
       hash = (53 * hash) + getExpiry().hashCode();
-      hash = (37 * hash) + BITRH_FIELD_NUMBER;
-      hash = (53 * hash) + getBitrh().hashCode();
+      hash = (37 * hash) + BIRTH_FIELD_NUMBER;
+      hash = (53 * hash) + getBirth().hashCode();
       hash = (37 * hash) + PWD_2DIGIT_FIELD_NUMBER;
       hash = (53 * hash) + getPwd2Digit().hashCode();
       hash = (37 * hash) + CUSTOMER_NAME_FIELD_NUMBER;
@@ -969,7 +969,7 @@ public final class Card {
 
         expiry_ = "";
 
-        bitrh_ = "";
+        birth_ = "";
 
         pwd2Digit_ = "";
 
@@ -1012,7 +1012,7 @@ public final class Card {
         result.cardUid_ = cardUid_;
         result.cardNumber_ = cardNumber_;
         result.expiry_ = expiry_;
-        result.bitrh_ = bitrh_;
+        result.birth_ = birth_;
         result.pwd2Digit_ = pwd2Digit_;
         result.customerName_ = customerName_;
         result.customerTel_ = customerTel_;
@@ -1079,8 +1079,8 @@ public final class Card {
           expiry_ = other.expiry_;
           onChanged();
         }
-        if (!other.getBitrh().isEmpty()) {
-          bitrh_ = other.bitrh_;
+        if (!other.getBirth().isEmpty()) {
+          birth_ = other.birth_;
           onChanged();
         }
         if (!other.getPwd2Digit().isEmpty()) {
@@ -1384,78 +1384,78 @@ public final class Card {
         return this;
       }
 
-      private java.lang.Object bitrh_ = "";
+      private java.lang.Object birth_ = "";
       /**
-       * <code>string bitrh = 4;</code>
-       * @return The bitrh.
+       * <code>string birth = 4;</code>
+       * @return The birth.
        */
-      public java.lang.String getBitrh() {
-        java.lang.Object ref = bitrh_;
+      public java.lang.String getBirth() {
+        java.lang.Object ref = birth_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          bitrh_ = s;
+          birth_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string bitrh = 4;</code>
-       * @return The bytes for bitrh.
+       * <code>string birth = 4;</code>
+       * @return The bytes for birth.
        */
       public com.google.protobuf.ByteString
-          getBitrhBytes() {
-        java.lang.Object ref = bitrh_;
+          getBirthBytes() {
+        java.lang.Object ref = birth_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          bitrh_ = b;
+          birth_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string bitrh = 4;</code>
-       * @param value The bitrh to set.
+       * <code>string birth = 4;</code>
+       * @param value The birth to set.
        * @return This builder for chaining.
        */
-      public Builder setBitrh(
+      public Builder setBirth(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        bitrh_ = value;
+        birth_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string bitrh = 4;</code>
+       * <code>string birth = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearBitrh() {
+      public Builder clearBirth() {
         
-        bitrh_ = getDefaultInstance().getBitrh();
+        birth_ = getDefaultInstance().getBirth();
         onChanged();
         return this;
       }
       /**
-       * <code>string bitrh = 4;</code>
-       * @param value The bytes for bitrh to set.
+       * <code>string birth = 4;</code>
+       * @param value The bytes for birth to set.
        * @return This builder for chaining.
        */
-      public Builder setBitrhBytes(
+      public Builder setBirthBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        bitrh_ = value;
+        birth_ = value;
         onChanged();
         return this;
       }
@@ -20874,7 +20874,7 @@ public final class Card {
       "\n\033v2/payments/card/card.proto\022\007card_v2\032\034" +
       "google/api/annotations.proto\"\346\001\n\023CardReg" +
       "isterRequest\022\020\n\010card_uid\030\001 \001(\t\022\023\n\013card_n" +
-      "umber\030\002 \001(\t\022\016\n\006expiry\030\003 \001(\t\022\r\n\005bitrh\030\004 \001" +
+      "umber\030\002 \001(\t\022\016\n\006expiry\030\003 \001(\t\022\r\n\005birth\030\004 \001" +
       "(\t\022\022\n\npwd_2digit\030\005 \001(\t\022\025\n\rcustomer_name\030" +
       "\006 \001(\t\022\024\n\014customer_tel\030\007 \001(\t\022\026\n\016customer_" +
       "email\030\010 \001(\t\022\025\n\rcustomer_addr\030\t \001(\t\022\031\n\021cu" +
@@ -20970,7 +20970,7 @@ public final class Card {
     internal_static_card_v2_CardRegisterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_card_v2_CardRegisterRequest_descriptor,
-        new java.lang.String[] { "CardUid", "CardNumber", "Expiry", "Bitrh", "Pwd2Digit", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", });
+        new java.lang.String[] { "CardUid", "CardNumber", "Expiry", "Birth", "Pwd2Digit", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", });
     internal_static_card_v2_CardRegisterResultData_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_card_v2_CardRegisterResultData_fieldAccessorTable = new

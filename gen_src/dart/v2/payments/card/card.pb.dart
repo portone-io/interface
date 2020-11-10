@@ -15,7 +15,7 @@ class CardRegisterRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'cardUid')
     ..aOS(2, 'cardNumber')
     ..aOS(3, 'expiry')
-    ..aOS(4, 'bitrh')
+    ..aOS(4, 'birth')
     ..aOS(5, 'pwd2digit', protoName: 'pwd_2digit')
     ..aOS(6, 'customerName')
     ..aOS(7, 'customerTel')
@@ -68,13 +68,13 @@ class CardRegisterRequest extends $pb.GeneratedMessage {
   void clearExpiry() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get bitrh => $_getSZ(3);
+  $core.String get birth => $_getSZ(3);
   @$pb.TagNumber(4)
-  set bitrh($core.String v) { $_setString(3, v); }
+  set birth($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasBitrh() => $_has(3);
+  $core.bool hasBirth() => $_has(3);
   @$pb.TagNumber(4)
-  void clearBitrh() => clearField(4);
+  void clearBirth() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.String get pwd2digit => $_getSZ(4);

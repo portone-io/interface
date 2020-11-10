@@ -14,8 +14,8 @@ export class CardRegisterRequest extends jspb.Message {
   getExpiry(): string;
   setExpiry(value: string): void;
 
-  getBitrh(): string;
-  setBitrh(value: string): void;
+  getBirth(): string;
+  setBirth(value: string): void;
 
   getPwd2digit(): string;
   setPwd2digit(value: string): void;
@@ -50,7 +50,7 @@ export namespace CardRegisterRequest {
     cardUid: string,
     cardNumber: string,
     expiry: string,
-    bitrh: string,
+    birth: string,
     pwd2digit: string,
     customerName: string,
     customerTel: string,

@@ -561,27 +561,26 @@ const char descriptor_table_protodef_v2_2fpayments_2fcard_2fcard_2eproto[] PROTO
   "e_amount\030\004 \001(\t\022\016\n\006reason\030\005 \001(\t\"o\n\032Cancel"
   "CardPaymenttResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007me"
   "ssage\030\002 \001(\t\0222\n\010response\030\003 \001(\0132 .card_v2."
-  "PayByRegisteredCardData2\270\005\n\022PaymentCardS"
-  "ervice\022s\n\021CardRegisterV2RPC\022\034.card_v2.Ca"
+  "PayByRegisteredCardData2\212\005\n\022PaymentCardS"
+  "ervice\022j\n\021CardRegisterV2RPC\022\034.card_v2.Ca"
   "rdRegisterRequest\032\035.card_v2.CardRegister"
-  "Response\"!\202\323\344\223\002\033\"\026/v2/payments/card/info"
-  ":\001*\022x\n\020GetCardInfoV2RPC\022\033.card_v2.GetCar"
-  "dInfoRequest\032\034.card_v2.GetCardInfoRespon"
-  "se\")\202\323\344\223\002#\022!/v2/payments/card/info/{card"
-  "_uid}\022\201\001\n\023DeleteCardInfoV2RPC\022\036.card_v2."
-  "DeleteCardInfoRequest\032\037.card_v2.DeleteCa"
-  "rdInfoResponse\")\202\323\344\223\002#*!/v2/payments/car"
-  "d/info/{card_uid}\022\220\001\n\031PayByRegiseteredCa"
-  "rdV2RPC\022#.card_v2.PayByRegisteredCardReq"
-  "uest\032$.card_v2.PayByRegisteredCardRespon"
-  "se\"(\202\323\344\223\002\"\" /v2/payments/card/pay/regist"
-  "ered\022\233\001\n\032CancelRegiseteredCardV2RPC\022!.ca"
-  "rd_v2.CancelCardPaymentRequest\032#.card_v2"
-  ".CancelCardPaymenttResponse\"5\202\323\344\223\002/\"-/v2"
-  "/payments/card/cancel/registered/{imp_ui"
-  "d}BMZ8github.com/iamport/interface/gen_s"
-  "rc/go/v2/payments/card\252\002\020V2.Payments.Car"
-  "db\006proto3"
+  "Response\"\030\202\323\344\223\002\022\"\r/v2/card/info:\001*\022o\n\020Ge"
+  "tCardInfoV2RPC\022\033.card_v2.GetCardInfoRequ"
+  "est\032\034.card_v2.GetCardInfoResponse\" \202\323\344\223\002"
+  "\032\022\030/v2/card/info/{card_uid}\022x\n\023DeleteCar"
+  "dInfoV2RPC\022\036.card_v2.DeleteCardInfoReque"
+  "st\032\037.card_v2.DeleteCardInfoResponse\" \202\323\344"
+  "\223\002\032*\030/v2/card/info/{card_uid}\022\207\001\n\031PayByR"
+  "egiseteredCardV2RPC\022#.card_v2.PayByRegis"
+  "teredCardRequest\032$.card_v2.PayByRegister"
+  "edCardResponse\"\037\202\323\344\223\002\031\"\027/v2/card/pay/reg"
+  "istered\022\222\001\n\032CancelRegiseteredCardV2RPC\022!"
+  ".card_v2.CancelCardPaymentRequest\032#.card"
+  "_v2.CancelCardPaymenttResponse\",\202\323\344\223\002&\"$"
+  "/v2/card/cancel/registered/{imp_uid}BMZ8"
+  "github.com/iamport/interface/gen_src/go/"
+  "v2/payments/card\252\002\020V2.Payments.Cardb\006pro"
+  "to3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_deps[1] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
@@ -604,7 +603,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v2_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto = {
-  false, false, descriptor_table_protodef_v2_2fpayments_2fcard_2fcard_2eproto, "v2/payments/card/card.proto", 3489,
+  false, false, descriptor_table_protodef_v2_2fpayments_2fcard_2fcard_2eproto, "v2/payments/card/card.proto", 3443,
   &descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_once, descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_sccs, descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_deps, 14, 1,
   schemas, file_default_instances, TableStruct_v2_2fpayments_2fcard_2fcard_2eproto::offsets,
   file_level_metadata_v2_2fpayments_2fcard_2fcard_2eproto, 14, file_level_enum_descriptors_v2_2fpayments_2fcard_2fcard_2eproto, file_level_service_descriptors_v2_2fpayments_2fcard_2fcard_2eproto,

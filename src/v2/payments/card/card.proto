@@ -9,32 +9,32 @@ option csharp_namespace = "V2.Payments.Card";
 service PaymentCardService {
     rpc CardRegisterV2RPC(CardRegisterRequest) returns (CardRegisterResponse) {
         option (google.api.http) = {
-            post: "/v2/card/info"
+            post: "/api/payments/v2/card/info"
             body: "*"
         };
     }
 
     rpc GetCardInfoV2RPC(GetCardInfoRequest) returns (GetCardInfoResponse) {
         option (google.api.http) = {
-            get: "/v2/card/info/{card_uid}"
+            get: "/api/payments/v2/card/info/{card_uid}"
         };
     }
 
     rpc DeleteCardInfoV2RPC(DeleteCardInfoRequest) returns (DeleteCardInfoResponse) {
         option (google.api.http) = {
-            delete: "/v2/card/info/{card_uid}"
+            delete: "/api/payments/v2/card/info/{card_uid}"
         };
     }
 
     rpc PayByRegiseteredCardV2RPC(PayByRegisteredCardRequest) returns (PayByRegisteredCardResponse) {
         option (google.api.http) = {
-            post: "/v2/card/pay/registered"
+            post: "/api/payments/v2/card/pay/registered"
         };
     }
 
     rpc CancelRegiseteredCardV2RPC(CancelCardPaymentRequest) returns (CancelCardPaymenttResponse) {
         option (google.api.http) = {
-            post: "/v2/card/cancel/registered/{imp_uid}"
+            post: "/api/payments/v2/card/cancel/registered/{imp_uid}"
         };
     }
 }

@@ -979,23 +979,23 @@ func RegisterPaymentServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 }
 
 var (
-	pattern_PaymentService_PaymentBalanceRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3}, []string{"v1", "payments", "imp_uid", "balance"}, ""))
+	pattern_PaymentService_PaymentBalanceRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 1, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"api", "payments", "v1", "imp_uid", "balance"}, ""))
 
-	pattern_PaymentService_PaymentRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "payments", "imp_uid"}, ""))
+	pattern_PaymentService_PaymentRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 1, 1, 0, 4, 1, 5, 3}, []string{"api", "payments", "v1", "imp_uid"}, ""))
 
-	pattern_PaymentService_PaymentsRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "payments"}, ""))
+	pattern_PaymentService_PaymentsRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 1}, []string{"api", "payments", "v1"}, ""))
 
-	pattern_PaymentService_PaymentMerchantUidRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"v1", "payments", "find", "merchant_uid", "status"}, ""))
+	pattern_PaymentService_PaymentMerchantUidRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 1, 2, 3, 1, 0, 4, 1, 5, 4, 1, 0, 4, 1, 5, 5}, []string{"api", "payments", "v1", "find", "merchant_uid", "status"}, ""))
 
-	pattern_PaymentService_PaymentsMerchantUidRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"v1", "payments", "findAll", "merchant_uid", "status"}, ""))
+	pattern_PaymentService_PaymentsMerchantUidRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 1, 2, 3, 1, 0, 4, 1, 5, 4, 1, 0, 4, 1, 5, 5}, []string{"api", "payments", "v1", "findAll", "merchant_uid", "status"}, ""))
 
-	pattern_PaymentService_PaymentsStatusRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 2}, []string{"v1", "payments", "status"}, ""))
+	pattern_PaymentService_PaymentsStatusRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 1, 2, 3, 1, 0, 4, 1, 5, 3}, []string{"api", "payments", "v1", "status"}, ""))
 
-	pattern_PaymentService_PaymentCancelRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "payments", "cancel"}, ""))
+	pattern_PaymentService_PaymentCancelRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 1, 2, 3}, []string{"api", "payments", "v1", "cancel"}, ""))
 
-	pattern_PaymentService_PaymentPrepareRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "payments", "prepare"}, ""))
+	pattern_PaymentService_PaymentPrepareRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 1, 2, 3}, []string{"api", "payments", "v1", "prepare"}, ""))
 
-	pattern_PaymentService_PaymentGetPrepareRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"v1", "payments", "prepare", "merchant_uid"}, ""))
+	pattern_PaymentService_PaymentGetPrepareRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 1, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"api", "payments", "v1", "prepare", "merchant_uid"}, ""))
 )
 
 var (

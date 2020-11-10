@@ -9,14 +9,14 @@ option csharp_namespace = "V2.Authenticate";
 service AuthenticateService {
     rpc TokenV2RPC(TokenRequest) returns (TokenResponse) {
         option (google.api.http) = {
-            post: "/v2/users/getToken"
+            post: "/api/payments/v2/users/gettoken"
             body: "*"
         };
     }
 
     rpc RegisterPubKeyV2RPC(PubKeyRegisterRequest) returns (PubKeyRegisterResponse) {
         option (google.api.http) = {
-            post: "/v2/users/public_key"
+            post: "/api/payments/v2/users/public_key"
             body: "*"
         };
     }

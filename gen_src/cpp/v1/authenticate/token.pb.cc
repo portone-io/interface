@@ -120,12 +120,13 @@ const char descriptor_table_protodef_v1_2fauthenticate_2ftoken_2eproto[] PROTOBU
   "\nexpired_at\030\003 \001(\005\"3\n\014TokenRequest\022\017\n\007imp"
   "_key\030\001 \001(\t\022\022\n\nimp_secret\030\002 \001(\t\"U\n\rTokenR"
   "esponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022%"
-  "\n\010response\030\003 \001(\0132\023.authenticate.Token2l\n"
-  "\014TokenService\022\\\n\010TokenRPC\022\032.authenticate"
+  "\n\010response\030\003 \001(\0132\023.authenticate.Token2y\n"
+  "\014TokenService\022i\n\010TokenRPC\022\032.authenticate"
   ".TokenRequest\032\033.authenticate.TokenRespon"
-  "se\"\027\202\323\344\223\002\021\"\014/v1/gettoken:\001*BKZ7github.co"
-  "m/iamport/interface/gen_src/go/v1/authen"
-  "ticate\252\002\017V1.Authenticateb\006proto3"
+  "se\"$\202\323\344\223\002\036\"\031/api/payments/v1/gettoken:\001*"
+  "BKZ7github.com/iamport/interface/gen_src"
+  "/go/v1/authenticate\252\002\017V1.Authenticateb\006p"
+  "roto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v1_2fauthenticate_2ftoken_2eproto_deps[1] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
@@ -137,7 +138,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v1_2fauthenticate_2ftoken_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v1_2fauthenticate_2ftoken_2eproto = {
-  false, false, descriptor_table_protodef_v1_2fauthenticate_2ftoken_2eproto, "v1/authenticate/token.proto", 472,
+  false, false, descriptor_table_protodef_v1_2fauthenticate_2ftoken_2eproto, "v1/authenticate/token.proto", 485,
   &descriptor_table_v1_2fauthenticate_2ftoken_2eproto_once, descriptor_table_v1_2fauthenticate_2ftoken_2eproto_sccs, descriptor_table_v1_2fauthenticate_2ftoken_2eproto_deps, 3, 1,
   schemas, file_default_instances, TableStruct_v1_2fauthenticate_2ftoken_2eproto::offsets,
   file_level_metadata_v1_2fauthenticate_2ftoken_2eproto, 3, file_level_enum_descriptors_v1_2fauthenticate_2ftoken_2eproto, file_level_service_descriptors_v1_2fauthenticate_2ftoken_2eproto,

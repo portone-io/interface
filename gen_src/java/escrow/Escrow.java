@@ -3947,14 +3947,15 @@ public final class Escrow {
       "eiver\030\003 \001(\0132\014.escrow.Info\022\034\n\005logis\030\004 \001(\013" +
       "2\r.escrow.Logis\"P\n\016EscrowResponse\022\014\n\004cod" +
       "e\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\037\n\010response\030\003 \001" +
-      "(\0132\r.escrow.Logis2\336\001\n\rEscrowService\022f\n\rE" +
+      "(\0132\r.escrow.Logis2\370\001\n\rEscrowService\022s\n\rE" +
       "scrowPostRPC\022\025.escrow.EscrowRequest\032\026.es" +
-      "crow.EscrowResponse\"&\202\323\344\223\002 \"\033/v1/escrows" +
-      "/logis/{imp_uid}:\001*\022e\n\014EscrowPutRPC\022\025.es" +
-      "crow.EscrowRequest\032\026.escrow.EscrowRespon" +
-      "se\"&\202\323\344\223\002 \032\033/v1/escrows/logis/{imp_uid}:" +
-      "\001*B?Z1github.com/iamport/interface/gen_s" +
-      "rc/go/v1/escrow\252\002\tV1.Escrowb\006proto3"
+      "crow.EscrowResponse\"3\202\323\344\223\002-\"(/api/paymen" +
+      "ts/v1/escrows/logis/{imp_uid}:\001*\022r\n\014Escr" +
+      "owPutRPC\022\025.escrow.EscrowRequest\032\026.escrow" +
+      ".EscrowResponse\"3\202\323\344\223\002-\032(/api/payments/v" +
+      "1/escrows/logis/{imp_uid}:\001*B?Z1github.c" +
+      "om/iamport/interface/gen_src/go/v1/escro" +
+      "w\252\002\tV1.Escrowb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

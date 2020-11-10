@@ -159,14 +159,15 @@ const char descriptor_table_protodef_v1_2fescrow_2fescrow_2eproto[] PROTOBUF_SEC
   "eiver\030\003 \001(\0132\014.escrow.Info\022\034\n\005logis\030\004 \001(\013"
   "2\r.escrow.Logis\"P\n\016EscrowResponse\022\014\n\004cod"
   "e\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\037\n\010response\030\003 \001"
-  "(\0132\r.escrow.Logis2\336\001\n\rEscrowService\022f\n\rE"
+  "(\0132\r.escrow.Logis2\370\001\n\rEscrowService\022s\n\rE"
   "scrowPostRPC\022\025.escrow.EscrowRequest\032\026.es"
-  "crow.EscrowResponse\"&\202\323\344\223\002 \"\033/v1/escrows"
-  "/logis/{imp_uid}:\001*\022e\n\014EscrowPutRPC\022\025.es"
-  "crow.EscrowRequest\032\026.escrow.EscrowRespon"
-  "se\"&\202\323\344\223\002 \032\033/v1/escrows/logis/{imp_uid}:"
-  "\001*B\?Z1github.com/iamport/interface/gen_s"
-  "rc/go/v1/escrow\252\002\tV1.Escrowb\006proto3"
+  "crow.EscrowResponse\"3\202\323\344\223\002-\"(/api/paymen"
+  "ts/v1/escrows/logis/{imp_uid}:\001*\022r\n\014Escr"
+  "owPutRPC\022\025.escrow.EscrowRequest\032\026.escrow"
+  ".EscrowResponse\"3\202\323\344\223\002-\032(/api/payments/v"
+  "1/escrows/logis/{imp_uid}:\001*B\?Z1github.c"
+  "om/iamport/interface/gen_src/go/v1/escro"
+  "w\252\002\tV1.Escrowb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v1_2fescrow_2fescrow_2eproto_deps[1] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
@@ -179,7 +180,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v1_2fescrow_2fescrow_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v1_2fescrow_2fescrow_2eproto = {
-  false, false, descriptor_table_protodef_v1_2fescrow_2fescrow_2eproto, "v1/escrow/escrow.proto", 715,
+  false, false, descriptor_table_protodef_v1_2fescrow_2fescrow_2eproto, "v1/escrow/escrow.proto", 741,
   &descriptor_table_v1_2fescrow_2fescrow_2eproto_once, descriptor_table_v1_2fescrow_2fescrow_2eproto_sccs, descriptor_table_v1_2fescrow_2fescrow_2eproto_deps, 4, 1,
   schemas, file_default_instances, TableStruct_v1_2fescrow_2fescrow_2eproto::offsets,
   file_level_metadata_v1_2fescrow_2fescrow_2eproto, 4, file_level_enum_descriptors_v1_2fescrow_2fescrow_2eproto, file_level_service_descriptors_v1_2fescrow_2fescrow_2eproto,

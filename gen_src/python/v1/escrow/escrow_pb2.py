@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z1github.com/iamport/interface/gen_src/go/v1/escrow\252\002\tV1.Escrow',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x16v1/escrow/escrow.proto\x12\x06\x65scrow\x1a\x1cgoogle/api/annotations.proto\"A\n\x04Info\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03tel\x18\x02 \x01(\t\x12\x0c\n\x04\x61\x64\x64r\x18\x03 \x01(\t\x12\x10\n\x08postcode\x18\x04 \x01(\t\"N\n\x05Logis\x12\x0f\n\x07\x63ompany\x18\x01 \x01(\t\x12\x0f\n\x07invoice\x18\x02 \x01(\t\x12\x0f\n\x07sent_at\x18\x03 \x01(\x05\x12\x12\n\napplied_at\x18\x04 \x01(\x05\"|\n\rEscrowRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x1c\n\x06sender\x18\x02 \x01(\x0b\x32\x0c.escrow.Info\x12\x1e\n\x08receiver\x18\x03 \x01(\x0b\x32\x0c.escrow.Info\x12\x1c\n\x05logis\x18\x04 \x01(\x0b\x32\r.escrow.Logis\"P\n\x0e\x45scrowResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x1f\n\x08response\x18\x03 \x01(\x0b\x32\r.escrow.Logis2\xde\x01\n\rEscrowService\x12\x66\n\rEscrowPostRPC\x12\x15.escrow.EscrowRequest\x1a\x16.escrow.EscrowResponse\"&\x82\xd3\xe4\x93\x02 \"\x1b/v1/escrows/logis/{imp_uid}:\x01*\x12\x65\n\x0c\x45scrowPutRPC\x12\x15.escrow.EscrowRequest\x1a\x16.escrow.EscrowResponse\"&\x82\xd3\xe4\x93\x02 \x1a\x1b/v1/escrows/logis/{imp_uid}:\x01*B?Z1github.com/iamport/interface/gen_src/go/v1/escrow\xaa\x02\tV1.Escrowb\x06proto3'
+  serialized_pb=b'\n\x16v1/escrow/escrow.proto\x12\x06\x65scrow\x1a\x1cgoogle/api/annotations.proto\"A\n\x04Info\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03tel\x18\x02 \x01(\t\x12\x0c\n\x04\x61\x64\x64r\x18\x03 \x01(\t\x12\x10\n\x08postcode\x18\x04 \x01(\t\"N\n\x05Logis\x12\x0f\n\x07\x63ompany\x18\x01 \x01(\t\x12\x0f\n\x07invoice\x18\x02 \x01(\t\x12\x0f\n\x07sent_at\x18\x03 \x01(\x05\x12\x12\n\napplied_at\x18\x04 \x01(\x05\"|\n\rEscrowRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x1c\n\x06sender\x18\x02 \x01(\x0b\x32\x0c.escrow.Info\x12\x1e\n\x08receiver\x18\x03 \x01(\x0b\x32\x0c.escrow.Info\x12\x1c\n\x05logis\x18\x04 \x01(\x0b\x32\r.escrow.Logis\"P\n\x0e\x45scrowResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x1f\n\x08response\x18\x03 \x01(\x0b\x32\r.escrow.Logis2\xf8\x01\n\rEscrowService\x12s\n\rEscrowPostRPC\x12\x15.escrow.EscrowRequest\x1a\x16.escrow.EscrowResponse\"3\x82\xd3\xe4\x93\x02-\"(/api/payments/v1/escrows/logis/{imp_uid}:\x01*\x12r\n\x0c\x45scrowPutRPC\x12\x15.escrow.EscrowRequest\x1a\x16.escrow.EscrowResponse\"3\x82\xd3\xe4\x93\x02-\x1a(/api/payments/v1/escrows/logis/{imp_uid}:\x01*B?Z1github.com/iamport/interface/gen_src/go/v1/escrow\xaa\x02\tV1.Escrowb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -280,7 +280,7 @@ _ESCROWSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=420,
-  serialized_end=642,
+  serialized_end=668,
   methods=[
   _descriptor.MethodDescriptor(
     name='EscrowPostRPC',
@@ -289,7 +289,7 @@ _ESCROWSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_ESCROWREQUEST,
     output_type=_ESCROWRESPONSE,
-    serialized_options=b'\202\323\344\223\002 \"\033/v1/escrows/logis/{imp_uid}:\001*',
+    serialized_options=b'\202\323\344\223\002-\"(/api/payments/v1/escrows/logis/{imp_uid}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -299,7 +299,7 @@ _ESCROWSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_ESCROWREQUEST,
     output_type=_ESCROWRESPONSE,
-    serialized_options=b'\202\323\344\223\002 \032\033/v1/escrows/logis/{imp_uid}:\001*',
+    serialized_options=b'\202\323\344\223\002-\032(/api/payments/v1/escrows/logis/{imp_uid}:\001*',
     create_key=_descriptor._internal_create_key,
   ),
 ])

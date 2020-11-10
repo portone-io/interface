@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z7github.com/iamport/interface/gen_src/go/v1/authenticate\252\002\017V1.Authenticate',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1bv1/authenticate/token.proto\x12\x0c\x61uthenticate\x1a\x1cgoogle/api/annotations.proto\">\n\x05Token\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x0b\n\x03now\x18\x02 \x01(\x05\x12\x12\n\nexpired_at\x18\x03 \x01(\x05\"3\n\x0cTokenRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\nimp_secret\x18\x02 \x01(\t\"U\n\rTokenResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12%\n\x08response\x18\x03 \x01(\x0b\x32\x13.authenticate.Token2l\n\x0cTokenService\x12\\\n\x08TokenRPC\x12\x1a.authenticate.TokenRequest\x1a\x1b.authenticate.TokenResponse\"\x17\x82\xd3\xe4\x93\x02\x11\"\x0c/v1/gettoken:\x01*BKZ7github.com/iamport/interface/gen_src/go/v1/authenticate\xaa\x02\x0fV1.Authenticateb\x06proto3'
+  serialized_pb=b'\n\x1bv1/authenticate/token.proto\x12\x0c\x61uthenticate\x1a\x1cgoogle/api/annotations.proto\">\n\x05Token\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x0b\n\x03now\x18\x02 \x01(\x05\x12\x12\n\nexpired_at\x18\x03 \x01(\x05\"3\n\x0cTokenRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\nimp_secret\x18\x02 \x01(\t\"U\n\rTokenResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12%\n\x08response\x18\x03 \x01(\x0b\x32\x13.authenticate.Token2y\n\x0cTokenService\x12i\n\x08TokenRPC\x12\x1a.authenticate.TokenRequest\x1a\x1b.authenticate.TokenResponse\"$\x82\xd3\xe4\x93\x02\x1e\"\x19/api/payments/v1/gettoken:\x01*BKZ7github.com/iamport/interface/gen_src/go/v1/authenticate\xaa\x02\x0fV1.Authenticateb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -195,7 +195,7 @@ _TOKENSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=279,
-  serialized_end=387,
+  serialized_end=400,
   methods=[
   _descriptor.MethodDescriptor(
     name='TokenRPC',
@@ -204,7 +204,7 @@ _TOKENSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_TOKENREQUEST,
     output_type=_TOKENRESPONSE,
-    serialized_options=b'\202\323\344\223\002\021\"\014/v1/gettoken:\001*',
+    serialized_options=b'\202\323\344\223\002\036\"\031/api/payments/v1/gettoken:\001*',
     create_key=_descriptor._internal_create_key,
   ),
 ])

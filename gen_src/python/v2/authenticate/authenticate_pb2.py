@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z7github.com/iamport/interface/gen_src/go/v2/authenticate\252\002\017V2.Authenticate',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\"v2/authenticate/authenticate.proto\x12\x0f\x61uthenticate_v2\x1a\x1cgoogle/api/annotations.proto\"3\n\x0cTokenRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\nimp_secret\x18\x02 \x01(\t\"B\n\tTokenData\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x12\n\nexpired_at\x18\x02 \x01(\x05\x12\x0b\n\x03now\x18\x03 \x01(\x05\"\\\n\rTokenResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12,\n\x08response\x18\x03 \x01(\x0b\x32\x1a.authenticate_v2.TokenData\"N\n\x15PubKeyRegisterRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\npublic_key\x18\x02 \x01(\t\x12\x10\n\x08password\x18\x03 \x01(\t\"7\n\x16PubKeyRegisterResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t2\x8b\x02\n\x13\x41uthenticateService\x12j\n\nTokenV2RPC\x12\x1d.authenticate_v2.TokenRequest\x1a\x1e.authenticate_v2.TokenResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x12/v2/users/getToken:\x01*\x12\x87\x01\n\x13RegisterPubKeyV2RPC\x12&.authenticate_v2.PubKeyRegisterRequest\x1a\'.authenticate_v2.PubKeyRegisterResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\"\x14/v2/users/public_key:\x01*BKZ7github.com/iamport/interface/gen_src/go/v2/authenticate\xaa\x02\x0fV2.Authenticateb\x06proto3'
+  serialized_pb=b'\n\"v2/authenticate/authenticate.proto\x12\x0f\x61uthenticate_v2\x1a\x1cgoogle/api/annotations.proto\"3\n\x0cTokenRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\nimp_secret\x18\x02 \x01(\t\"B\n\tTokenData\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x12\n\nexpired_at\x18\x02 \x01(\x05\x12\x0b\n\x03now\x18\x03 \x01(\x05\"\\\n\rTokenResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12,\n\x08response\x18\x03 \x01(\x0b\x32\x1a.authenticate_v2.TokenData\"N\n\x15PubKeyRegisterRequest\x12\x0f\n\x07imp_key\x18\x01 \x01(\t\x12\x12\n\npublic_key\x18\x02 \x01(\t\x12\x10\n\x08password\x18\x03 \x01(\t\"7\n\x16PubKeyRegisterResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t2\xa5\x02\n\x13\x41uthenticateService\x12w\n\nTokenV2RPC\x12\x1d.authenticate_v2.TokenRequest\x1a\x1e.authenticate_v2.TokenResponse\"*\x82\xd3\xe4\x93\x02$\"\x1f/api/payments/v2/users/gettoken:\x01*\x12\x94\x01\n\x13RegisterPubKeyV2RPC\x12&.authenticate_v2.PubKeyRegisterRequest\x1a\'.authenticate_v2.PubKeyRegisterResponse\",\x82\xd3\xe4\x93\x02&\"!/api/payments/v2/users/public_key:\x01*BKZ7github.com/iamport/interface/gen_src/go/v2/authenticate\xaa\x02\x0fV2.Authenticateb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -296,7 +296,7 @@ _AUTHENTICATESERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=438,
-  serialized_end=705,
+  serialized_end=731,
   methods=[
   _descriptor.MethodDescriptor(
     name='TokenV2RPC',
@@ -305,7 +305,7 @@ _AUTHENTICATESERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_TOKENREQUEST,
     output_type=_TOKENRESPONSE,
-    serialized_options=b'\202\323\344\223\002\027\"\022/v2/users/getToken:\001*',
+    serialized_options=b'\202\323\344\223\002$\"\037/api/payments/v2/users/gettoken:\001*',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -315,7 +315,7 @@ _AUTHENTICATESERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_PUBKEYREGISTERREQUEST,
     output_type=_PUBKEYREGISTERRESPONSE,
-    serialized_options=b'\202\323\344\223\002\031\"\024/v2/users/public_key:\001*',
+    serialized_options=b'\202\323\344\223\002&\"!/api/payments/v2/users/public_key:\001*',
     create_key=_descriptor._internal_create_key,
   ),
 ])

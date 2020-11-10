@@ -8,14 +8,14 @@ option csharp_namespace = "V1.Escrow";
 service EscrowService {
     rpc EscrowPostRPC(EscrowRequest) returns (EscrowResponse) {
         option (google.api.http) = {
-            post: "/v1/escrows/logis/{imp_uid}"
+            post: "/api/payments/v1/escrows/logis/{imp_uid}"
             body: "*"
         };
     }
 
     rpc EscrowPutRPC(EscrowRequest) returns (EscrowResponse) {
         option (google.api.http) = {
-            put: "/v1/escrows/logis/{imp_uid}"
+            put: "/api/payments/v1/escrows/logis/{imp_uid}"
             body: "*"
         };
     }

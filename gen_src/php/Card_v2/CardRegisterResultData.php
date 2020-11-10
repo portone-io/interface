@@ -34,39 +34,35 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
      */
     protected $bin_numbrer = '';
     /**
-     * Generated from protobuf field <code>string birth_number = 5;</code>
+     * Generated from protobuf field <code>int32 card_type = 5;</code>
      */
-    protected $birth_number = '';
+    protected $card_type = 0;
     /**
-     * Generated from protobuf field <code>string card_type = 6;</code>
-     */
-    protected $card_type = '';
-    /**
-     * Generated from protobuf field <code>string customer_name = 7;</code>
+     * Generated from protobuf field <code>string customer_name = 6;</code>
      */
     protected $customer_name = '';
     /**
-     * Generated from protobuf field <code>string customer_tel = 8;</code>
+     * Generated from protobuf field <code>string customer_tel = 7;</code>
      */
     protected $customer_tel = '';
     /**
-     * Generated from protobuf field <code>string customer_email = 9;</code>
+     * Generated from protobuf field <code>string customer_email = 8;</code>
      */
     protected $customer_email = '';
     /**
-     * Generated from protobuf field <code>string customer_addr = 10;</code>
+     * Generated from protobuf field <code>string customer_addr = 9;</code>
      */
     protected $customer_addr = '';
     /**
-     * Generated from protobuf field <code>string customer_postcode = 11;</code>
+     * Generated from protobuf field <code>string customer_postcode = 10;</code>
      */
     protected $customer_postcode = '';
     /**
-     * Generated from protobuf field <code>int32 inserted = 12;</code>
+     * Generated from protobuf field <code>int32 inserted = 11;</code>
      */
     protected $inserted = 0;
     /**
-     * Generated from protobuf field <code>int32 updated = 13;</code>
+     * Generated from protobuf field <code>int32 updated = 12;</code>
      */
     protected $updated = 0;
 
@@ -82,8 +78,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
      *     @type string $card_code
      *     @type string $bin_numbrer
      *           Only masked company can provide
-     *     @type string $birth_number
-     *     @type string $card_type
+     *     @type int $card_type
      *     @type string $customer_name
      *     @type string $customer_tel
      *     @type string $customer_email
@@ -195,30 +190,8 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string birth_number = 5;</code>
-     * @return string
-     */
-    public function getBirthNumber()
-    {
-        return $this->birth_number;
-    }
-
-    /**
-     * Generated from protobuf field <code>string birth_number = 5;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setBirthNumber($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->birth_number = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string card_type = 6;</code>
-     * @return string
+     * Generated from protobuf field <code>int32 card_type = 5;</code>
+     * @return int
      */
     public function getCardType()
     {
@@ -226,20 +199,20 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string card_type = 6;</code>
-     * @param string $var
+     * Generated from protobuf field <code>int32 card_type = 5;</code>
+     * @param int $var
      * @return $this
      */
     public function setCardType($var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkInt32($var);
         $this->card_type = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string customer_name = 7;</code>
+     * Generated from protobuf field <code>string customer_name = 6;</code>
      * @return string
      */
     public function getCustomerName()
@@ -248,7 +221,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_name = 7;</code>
+     * Generated from protobuf field <code>string customer_name = 6;</code>
      * @param string $var
      * @return $this
      */
@@ -261,7 +234,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_tel = 8;</code>
+     * Generated from protobuf field <code>string customer_tel = 7;</code>
      * @return string
      */
     public function getCustomerTel()
@@ -270,7 +243,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_tel = 8;</code>
+     * Generated from protobuf field <code>string customer_tel = 7;</code>
      * @param string $var
      * @return $this
      */
@@ -283,7 +256,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_email = 9;</code>
+     * Generated from protobuf field <code>string customer_email = 8;</code>
      * @return string
      */
     public function getCustomerEmail()
@@ -292,7 +265,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_email = 9;</code>
+     * Generated from protobuf field <code>string customer_email = 8;</code>
      * @param string $var
      * @return $this
      */
@@ -305,7 +278,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_addr = 10;</code>
+     * Generated from protobuf field <code>string customer_addr = 9;</code>
      * @return string
      */
     public function getCustomerAddr()
@@ -314,7 +287,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_addr = 10;</code>
+     * Generated from protobuf field <code>string customer_addr = 9;</code>
      * @param string $var
      * @return $this
      */
@@ -327,7 +300,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_postcode = 11;</code>
+     * Generated from protobuf field <code>string customer_postcode = 10;</code>
      * @return string
      */
     public function getCustomerPostcode()
@@ -336,7 +309,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_postcode = 11;</code>
+     * Generated from protobuf field <code>string customer_postcode = 10;</code>
      * @param string $var
      * @return $this
      */
@@ -349,7 +322,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 inserted = 12;</code>
+     * Generated from protobuf field <code>int32 inserted = 11;</code>
      * @return int
      */
     public function getInserted()
@@ -358,7 +331,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 inserted = 12;</code>
+     * Generated from protobuf field <code>int32 inserted = 11;</code>
      * @param int $var
      * @return $this
      */
@@ -371,7 +344,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 updated = 13;</code>
+     * Generated from protobuf field <code>int32 updated = 12;</code>
      * @return int
      */
     public function getUpdated()
@@ -380,7 +353,7 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 updated = 13;</code>
+     * Generated from protobuf field <code>int32 updated = 12;</code>
      * @param int $var
      * @return $this
      */

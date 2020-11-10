@@ -8,57 +8,57 @@ option csharp_namespace = "V1.Payment";
 service PaymentService {
     rpc PaymentBalanceRPC(PaymentBalanceRequest) returns (PaymentBalanceResponse) {
         option (google.api.http) = {
-            get: "/api/v1/payments/{imp_uid}/balance"
+            get: "/v1/payments/{imp_uid}/balance"
         };
     }
 
     rpc PaymentRPC(PaymentRequest) returns (PaymentResponse) {
         option (google.api.http) = {
-            get: "/api/v1/payments/{imp_uid}"
+            get: "/v1/payments/{imp_uid}"
         };
     }
 
     rpc PaymentsRPC(PaymentsRequest) returns (PaymentsResponse) {
         option (google.api.http) = {
-            get: "/api/v1/payments"
+            get: "/v1/payments"
         };
     }
 
     rpc PaymentMerchantUidRPC(PaymentMerchantUidRequest) returns (PaymentMerchantUidResponse) {
         option (google.api.http) = {
-            get: "/api/v1/payments/find/{merchant_uid}/{status}"
+            get: "/v1/payments/find/{merchant_uid}/{status}"
         };
     }
 
     rpc PaymentsMerchantUidRPC(PaymentsMerchantUidRequest) returns (PaymentsMerchantUidResponse) {
         option (google.api.http) = {
-            get: "/api/v1/payments/findAll/{merchant_uid}/{status}"
+            get: "/v1/payments/findAll/{merchant_uid}/{status}"
         };
     }
 
     rpc PaymentsStatusRPC(PaymentStatusRequest) returns (PaymentStatusResponse) {
         option (google.api.http) = {
-            get: "/api/v1/payments/status/{status}"
+            get: "/v1/payments/status/{status}"
         };
     }
 
     rpc PaymentCancelRPC(PaymentCancelRequest) returns (PaymentCancelResponse) {
         option (google.api.http) = {
-            post: "/api/v1/payments/cancel"
+            post: "/v1/payments/cancel"
             body: "*"
         };
     }
 
     rpc PaymentPrepareRPC(PaymentPrepareRequest) returns (PaymentPrepareResponse) {
         option (google.api.http) = {
-            post: "/api/v1/payments/prepare"
+            post: "/v1/payments/prepare"
             body: "*"
         };
     }
 
     rpc PaymentGetPrepareRPC(PaymentGetPrepareRequest) returns (PaymentPrepareResponse) {
         option (google.api.http) = {
-            get: "/api/v1/payments/prepare/{merchant_uid}"
+            get: "/v1/payments/prepare/{merchant_uid}"
         };
     }
 }

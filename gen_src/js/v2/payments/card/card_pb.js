@@ -758,15 +758,14 @@ proto.card_v2.CardRegisterResultData.toObject = function(includeInstance, msg) {
     cardName: jspb.Message.getFieldWithDefault(msg, 2, ""),
     cardCode: jspb.Message.getFieldWithDefault(msg, 3, ""),
     binNumbrer: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    birthNumber: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    cardType: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    customerName: jspb.Message.getFieldWithDefault(msg, 7, ""),
-    customerTel: jspb.Message.getFieldWithDefault(msg, 8, ""),
-    customerEmail: jspb.Message.getFieldWithDefault(msg, 9, ""),
-    customerAddr: jspb.Message.getFieldWithDefault(msg, 10, ""),
-    customerPostcode: jspb.Message.getFieldWithDefault(msg, 11, ""),
-    inserted: jspb.Message.getFieldWithDefault(msg, 12, 0),
-    updated: jspb.Message.getFieldWithDefault(msg, 13, 0)
+    cardType: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    customerName: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    customerTel: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    customerEmail: jspb.Message.getFieldWithDefault(msg, 8, ""),
+    customerAddr: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    customerPostcode: jspb.Message.getFieldWithDefault(msg, 10, ""),
+    inserted: jspb.Message.getFieldWithDefault(msg, 11, 0),
+    updated: jspb.Message.getFieldWithDefault(msg, 12, 0)
   };
 
   if (includeInstance) {
@@ -820,38 +819,34 @@ proto.card_v2.CardRegisterResultData.deserializeBinaryFromReader = function(msg,
       msg.setBinNumbrer(value);
       break;
     case 5:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setBirthNumber(value);
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setCardType(value);
       break;
     case 6:
       var value = /** @type {string} */ (reader.readString());
-      msg.setCardType(value);
+      msg.setCustomerName(value);
       break;
     case 7:
       var value = /** @type {string} */ (reader.readString());
-      msg.setCustomerName(value);
+      msg.setCustomerTel(value);
       break;
     case 8:
       var value = /** @type {string} */ (reader.readString());
-      msg.setCustomerTel(value);
+      msg.setCustomerEmail(value);
       break;
     case 9:
       var value = /** @type {string} */ (reader.readString());
-      msg.setCustomerEmail(value);
+      msg.setCustomerAddr(value);
       break;
     case 10:
       var value = /** @type {string} */ (reader.readString());
-      msg.setCustomerAddr(value);
-      break;
-    case 11:
-      var value = /** @type {string} */ (reader.readString());
       msg.setCustomerPostcode(value);
       break;
-    case 12:
+    case 11:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setInserted(value);
       break;
-    case 13:
+    case 12:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setUpdated(value);
       break;
@@ -912,66 +907,59 @@ proto.card_v2.CardRegisterResultData.serializeBinaryToWriter = function(message,
       f
     );
   }
-  f = message.getBirthNumber();
-  if (f.length > 0) {
-    writer.writeString(
-      5,
-      f
-    );
-  }
   f = message.getCardType();
-  if (f.length > 0) {
-    writer.writeString(
-      6,
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
       f
     );
   }
   f = message.getCustomerName();
   if (f.length > 0) {
     writer.writeString(
-      7,
+      6,
       f
     );
   }
   f = message.getCustomerTel();
   if (f.length > 0) {
     writer.writeString(
-      8,
+      7,
       f
     );
   }
   f = message.getCustomerEmail();
   if (f.length > 0) {
     writer.writeString(
-      9,
+      8,
       f
     );
   }
   f = message.getCustomerAddr();
   if (f.length > 0) {
     writer.writeString(
-      10,
+      9,
       f
     );
   }
   f = message.getCustomerPostcode();
   if (f.length > 0) {
     writer.writeString(
-      11,
+      10,
       f
     );
   }
   f = message.getInserted();
   if (f !== 0) {
     writer.writeInt32(
-      12,
+      11,
       f
     );
   }
   f = message.getUpdated();
   if (f !== 0) {
     writer.writeInt32(
-      13,
+      12,
       f
     );
   }
@@ -1051,28 +1039,28 @@ proto.card_v2.CardRegisterResultData.prototype.setBinNumbrer = function(value) {
 
 
 /**
- * optional string birth_number = 5;
- * @return {string}
- */
-proto.card_v2.CardRegisterResultData.prototype.getBirthNumber = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.card_v2.CardRegisterResultData} returns this
- */
-proto.card_v2.CardRegisterResultData.prototype.setBirthNumber = function(value) {
-  return jspb.Message.setProto3StringField(this, 5, value);
-};
-
-
-/**
- * optional string card_type = 6;
- * @return {string}
+ * optional int32 card_type = 5;
+ * @return {number}
  */
 proto.card_v2.CardRegisterResultData.prototype.getCardType = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.card_v2.CardRegisterResultData} returns this
+ */
+proto.card_v2.CardRegisterResultData.prototype.setCardType = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional string customer_name = 6;
+ * @return {string}
+ */
+proto.card_v2.CardRegisterResultData.prototype.getCustomerName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
@@ -1081,16 +1069,16 @@ proto.card_v2.CardRegisterResultData.prototype.getCardType = function() {
  * @param {string} value
  * @return {!proto.card_v2.CardRegisterResultData} returns this
  */
-proto.card_v2.CardRegisterResultData.prototype.setCardType = function(value) {
+proto.card_v2.CardRegisterResultData.prototype.setCustomerName = function(value) {
   return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
 /**
- * optional string customer_name = 7;
+ * optional string customer_tel = 7;
  * @return {string}
  */
-proto.card_v2.CardRegisterResultData.prototype.getCustomerName = function() {
+proto.card_v2.CardRegisterResultData.prototype.getCustomerTel = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
@@ -1099,16 +1087,16 @@ proto.card_v2.CardRegisterResultData.prototype.getCustomerName = function() {
  * @param {string} value
  * @return {!proto.card_v2.CardRegisterResultData} returns this
  */
-proto.card_v2.CardRegisterResultData.prototype.setCustomerName = function(value) {
+proto.card_v2.CardRegisterResultData.prototype.setCustomerTel = function(value) {
   return jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
 /**
- * optional string customer_tel = 8;
+ * optional string customer_email = 8;
  * @return {string}
  */
-proto.card_v2.CardRegisterResultData.prototype.getCustomerTel = function() {
+proto.card_v2.CardRegisterResultData.prototype.getCustomerEmail = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
 
@@ -1117,16 +1105,16 @@ proto.card_v2.CardRegisterResultData.prototype.getCustomerTel = function() {
  * @param {string} value
  * @return {!proto.card_v2.CardRegisterResultData} returns this
  */
-proto.card_v2.CardRegisterResultData.prototype.setCustomerTel = function(value) {
+proto.card_v2.CardRegisterResultData.prototype.setCustomerEmail = function(value) {
   return jspb.Message.setProto3StringField(this, 8, value);
 };
 
 
 /**
- * optional string customer_email = 9;
+ * optional string customer_addr = 9;
  * @return {string}
  */
-proto.card_v2.CardRegisterResultData.prototype.getCustomerEmail = function() {
+proto.card_v2.CardRegisterResultData.prototype.getCustomerAddr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
 };
 
@@ -1135,16 +1123,16 @@ proto.card_v2.CardRegisterResultData.prototype.getCustomerEmail = function() {
  * @param {string} value
  * @return {!proto.card_v2.CardRegisterResultData} returns this
  */
-proto.card_v2.CardRegisterResultData.prototype.setCustomerEmail = function(value) {
+proto.card_v2.CardRegisterResultData.prototype.setCustomerAddr = function(value) {
   return jspb.Message.setProto3StringField(this, 9, value);
 };
 
 
 /**
- * optional string customer_addr = 10;
+ * optional string customer_postcode = 10;
  * @return {string}
  */
-proto.card_v2.CardRegisterResultData.prototype.getCustomerAddr = function() {
+proto.card_v2.CardRegisterResultData.prototype.getCustomerPostcode = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
 };
 
@@ -1153,35 +1141,17 @@ proto.card_v2.CardRegisterResultData.prototype.getCustomerAddr = function() {
  * @param {string} value
  * @return {!proto.card_v2.CardRegisterResultData} returns this
  */
-proto.card_v2.CardRegisterResultData.prototype.setCustomerAddr = function(value) {
+proto.card_v2.CardRegisterResultData.prototype.setCustomerPostcode = function(value) {
   return jspb.Message.setProto3StringField(this, 10, value);
 };
 
 
 /**
- * optional string customer_postcode = 11;
- * @return {string}
- */
-proto.card_v2.CardRegisterResultData.prototype.getCustomerPostcode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.card_v2.CardRegisterResultData} returns this
- */
-proto.card_v2.CardRegisterResultData.prototype.setCustomerPostcode = function(value) {
-  return jspb.Message.setProto3StringField(this, 11, value);
-};
-
-
-/**
- * optional int32 inserted = 12;
+ * optional int32 inserted = 11;
  * @return {number}
  */
 proto.card_v2.CardRegisterResultData.prototype.getInserted = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 12, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
 };
 
 
@@ -1190,16 +1160,16 @@ proto.card_v2.CardRegisterResultData.prototype.getInserted = function() {
  * @return {!proto.card_v2.CardRegisterResultData} returns this
  */
 proto.card_v2.CardRegisterResultData.prototype.setInserted = function(value) {
-  return jspb.Message.setProto3IntField(this, 12, value);
+  return jspb.Message.setProto3IntField(this, 11, value);
 };
 
 
 /**
- * optional int32 updated = 13;
+ * optional int32 updated = 12;
  * @return {number}
  */
 proto.card_v2.CardRegisterResultData.prototype.getUpdated = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 13, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 12, 0));
 };
 
 
@@ -1208,7 +1178,7 @@ proto.card_v2.CardRegisterResultData.prototype.getUpdated = function() {
  * @return {!proto.card_v2.CardRegisterResultData} returns this
  */
 proto.card_v2.CardRegisterResultData.prototype.setUpdated = function(value) {
-  return jspb.Message.setProto3IntField(this, 13, value);
+  return jspb.Message.setProto3IntField(this, 12, value);
 };
 
 
@@ -1589,7 +1559,7 @@ proto.card_v2.GetCardInfoData.toObject = function(includeInstance, msg) {
     cardProvider: jspb.Message.getFieldWithDefault(msg, 2, ""),
     cardCode: jspb.Message.getFieldWithDefault(msg, 3, ""),
     binNumber: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    cardType: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    cardType: jspb.Message.getFieldWithDefault(msg, 5, 0),
     customerName: jspb.Message.getFieldWithDefault(msg, 6, ""),
     customerTel: jspb.Message.getFieldWithDefault(msg, 7, ""),
     customerEmail: jspb.Message.getFieldWithDefault(msg, 8, ""),
@@ -1650,7 +1620,7 @@ proto.card_v2.GetCardInfoData.deserializeBinaryFromReader = function(msg, reader
       msg.setBinNumber(value);
       break;
     case 5:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setCardType(value);
       break;
     case 6:
@@ -1739,8 +1709,8 @@ proto.card_v2.GetCardInfoData.serializeBinaryToWriter = function(message, writer
     );
   }
   f = message.getCardType();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0) {
+    writer.writeInt32(
       5,
       f
     );
@@ -1870,20 +1840,20 @@ proto.card_v2.GetCardInfoData.prototype.setBinNumber = function(value) {
 
 
 /**
- * optional string card_type = 5;
- * @return {string}
+ * optional int32 card_type = 5;
+ * @return {number}
  */
 proto.card_v2.GetCardInfoData.prototype.getCardType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {number} value
  * @return {!proto.card_v2.GetCardInfoData} returns this
  */
 proto.card_v2.GetCardInfoData.prototype.setCardType = function(value) {
-  return jspb.Message.setProto3StringField(this, 5, value);
+  return jspb.Message.setProto3IntField(this, 5, value);
 };
 
 

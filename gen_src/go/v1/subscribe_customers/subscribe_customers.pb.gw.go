@@ -707,17 +707,17 @@ func RegisterSubscribeCustomersServiceHandlerClient(ctx context.Context, mux *ru
 }
 
 var (
-	pattern_SubscribeCustomersService_GetMultipleCustomerBillingKeyRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"api", "v1", "subscribe", "customers"}, ""))
+	pattern_SubscribeCustomersService_GetMultipleCustomerBillingKeyRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "subscribe", "customers"}, ""))
 
-	pattern_SubscribeCustomersService_DeleteCustomerBillingKeyRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"api", "v1", "subscribe", "customers", "customer_uid"}, ""))
+	pattern_SubscribeCustomersService_DeleteCustomerBillingKeyRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"v1", "subscribe", "customers", "customer_uid"}, ""))
 
-	pattern_SubscribeCustomersService_GetCustomerBillingKeyRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"api", "v1", "subscribe", "customers", "customer_uid"}, ""))
+	pattern_SubscribeCustomersService_GetCustomerBillingKeyRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"v1", "subscribe", "customers", "customer_uid"}, ""))
 
-	pattern_SubscribeCustomersService_InsertCustomerBillingKeyRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"api", "v1", "subscribe", "customers", "customer_uid"}, ""))
+	pattern_SubscribeCustomersService_InsertCustomerBillingKeyRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"v1", "subscribe", "customers", "customer_uid"}, ""))
 
-	pattern_SubscribeCustomersService_GetPaidByBillingKeyListRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 1, 0, 4, 1, 5, 4, 2, 5}, []string{"api", "v1", "subscribe", "customers", "customer_uid", "payments"}, ""))
+	pattern_SubscribeCustomersService_GetPaidByBillingKeyListRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"v1", "subscribe", "customers", "customer_uid", "payments"}, ""))
 
-	pattern_SubscribeCustomersService_GetPaymentScheduleByCustomerRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 1, 0, 4, 1, 5, 4, 2, 5}, []string{"api", "v1", "subscribe", "customers", "customer_uid", "schedules"}, ""))
+	pattern_SubscribeCustomersService_GetPaymentScheduleByCustomerRPC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"v1", "subscribe", "customers", "customer_uid", "schedules"}, ""))
 )
 
 var (

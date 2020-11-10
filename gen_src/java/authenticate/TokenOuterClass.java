@@ -2311,13 +2311,12 @@ public final class TokenOuterClass {
       "\nexpired_at\030\003 \001(\005\"3\n\014TokenRequest\022\017\n\007imp" +
       "_key\030\001 \001(\t\022\022\n\nimp_secret\030\002 \001(\t\"U\n\rTokenR" +
       "esponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022%" +
-      "\n\010response\030\003 \001(\0132\023.authenticate.Token2v\n" +
-      "\014TokenService\022f\n\010TokenRPC\022\032.authenticate" +
+      "\n\010response\030\003 \001(\0132\023.authenticate.Token2l\n" +
+      "\014TokenService\022\\\n\010TokenRPC\022\032.authenticate" +
       ".TokenRequest\032\033.authenticate.TokenRespon" +
-      "se\"!\202\323\344\223\002\033\"\026/api/v1/users/getToken:\001*BKZ" +
-      "7github.com/iamport/interface/gen_src/go" +
-      "/v1/authenticate\252\002\017V1.Authenticateb\006prot" +
-      "o3"
+      "se\"\027\202\323\344\223\002\021\"\014/v1/gettoken:\001*BKZ7github.co" +
+      "m/iamport/interface/gen_src/go/v1/authen" +
+      "ticate\252\002\017V1.Authenticateb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -23,15 +23,14 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :card_name, :string, 2
       optional :card_code, :string, 3
       optional :bin_numbrer, :string, 4
-      optional :birth_number, :string, 5
-      optional :card_type, :string, 6
-      optional :customer_name, :string, 7
-      optional :customer_tel, :string, 8
-      optional :customer_email, :string, 9
-      optional :customer_addr, :string, 10
-      optional :customer_postcode, :string, 11
-      optional :inserted, :int32, 12
-      optional :updated, :int32, 13
+      optional :card_type, :int32, 5
+      optional :customer_name, :string, 6
+      optional :customer_tel, :string, 7
+      optional :customer_email, :string, 8
+      optional :customer_addr, :string, 9
+      optional :customer_postcode, :string, 10
+      optional :inserted, :int32, 11
+      optional :updated, :int32, 12
     end
     add_message "card_v2.CardRegisterResponse" do
       optional :code, :int32, 1
@@ -46,7 +45,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :card_provider, :string, 2
       optional :card_code, :string, 3
       optional :bin_number, :string, 4
-      optional :card_type, :string, 5
+      optional :card_type, :int32, 5
       optional :customer_name, :string, 6
       optional :customer_tel, :string, 7
       optional :customer_email, :string, 8

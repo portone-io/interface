@@ -9,32 +9,32 @@ option csharp_namespace = "V2.Payments.Card";
 service PaymentCardService {
     rpc CardRegisterV2RPC(CardRegisterRequest) returns (CardRegisterResponse) {
         option (google.api.http) = {
-            post: "/api/v2/payments/card/info"
+            post: "/v2/payments/card/info"
             body: "*"
         };
     }
 
     rpc GetCardInfoV2RPC(GetCardInfoRequest) returns (GetCardInfoResponse) {
         option (google.api.http) = {
-            get: "/api/v2/payments/card/info/{card_uid}"
+            get: "/v2/payments/card/info/{card_uid}"
         };
     }
 
     rpc DeleteCardInfoV2RPC(DeleteCardInfoRequest) returns (DeleteCardInfoResponse) {
         option (google.api.http) = {
-            delete: "/api/v2/payments/card/info/{card_uid}"
+            delete: "/v2/payments/card/info/{card_uid}"
         };
     }
 
     rpc PayByRegiseteredCardV2RPC(PayByRegisteredCardRequest) returns (PayByRegisteredCardResponse) {
         option (google.api.http) = {
-            post: "/api/v2/payments/card/pay/registered"
+            post: "/v2/payments/card/pay/registered"
         };
     }
 
     rpc CancelRegiseteredCardV2RPC(CancelCardPaymentRequest) returns (CancelCardPaymenttResponse) {
         option (google.api.http) = {
-            post: "/api/v2/payments/card/cancel/registered/{imp_uid}"
+            post: "/v2/payments/card/cancel/registered/{imp_uid}"
         };
     }
 }
@@ -57,15 +57,14 @@ message CardRegisterResultData {
     string card_name = 2; // card alias of the user
     string card_code = 3;
     string bin_numbrer = 4; // Only masked company can provide
-    string birth_number = 5;
-    string card_type = 6;
-    string customer_name = 7;
-    string customer_tel = 8;
-    string customer_email = 9;
-    string customer_addr = 10;
-    string customer_postcode = 11;
-    int32 inserted = 12;
-    int32 updated = 13;
+    int32 card_type = 5;
+    string customer_name = 6;
+    string customer_tel = 7;
+    string customer_email = 8;
+    string customer_addr = 9;
+    string customer_postcode = 10;
+    int32 inserted = 11;
+    int32 updated = 12;
 }
 
 message CardRegisterResponse {
@@ -83,7 +82,7 @@ message GetCardInfoData {
     string card_provider = 2;
     string card_code = 3;
     string bin_number = 4;
-    string card_type = 5;
+    int32 card_type = 5;
     string customer_name = 6;
     string customer_tel = 7;
     string customer_email = 8;

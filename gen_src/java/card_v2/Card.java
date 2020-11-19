@@ -145,6 +145,18 @@ public final class Card {
      */
     com.google.protobuf.ByteString
         getCustomerPostcodeBytes();
+
+    /**
+     * <code>string pg = 11;</code>
+     * @return The pg.
+     */
+    java.lang.String getPg();
+    /**
+     * <code>string pg = 11;</code>
+     * @return The bytes for pg.
+     */
+    com.google.protobuf.ByteString
+        getPgBytes();
   }
   /**
    * Protobuf type {@code card_v2.CardRegisterRequest}
@@ -169,6 +181,7 @@ public final class Card {
       customerEmail_ = "";
       customerAddr_ = "";
       customerPostcode_ = "";
+      pg_ = "";
     }
 
     @java.lang.Override
@@ -259,6 +272,12 @@ public final class Card {
               java.lang.String s = input.readStringRequireUtf8();
 
               customerPostcode_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pg_ = s;
               break;
             }
             default: {
@@ -681,6 +700,44 @@ public final class Card {
       }
     }
 
+    public static final int PG_FIELD_NUMBER = 11;
+    private volatile java.lang.Object pg_;
+    /**
+     * <code>string pg = 11;</code>
+     * @return The pg.
+     */
+    @java.lang.Override
+    public java.lang.String getPg() {
+      java.lang.Object ref = pg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pg_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pg = 11;</code>
+     * @return The bytes for pg.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPgBytes() {
+      java.lang.Object ref = pg_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pg_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -725,6 +782,9 @@ public final class Card {
       if (!getCustomerPostcodeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, customerPostcode_);
       }
+      if (!getPgBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, pg_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -764,6 +824,9 @@ public final class Card {
       if (!getCustomerPostcodeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, customerPostcode_);
       }
+      if (!getPgBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, pg_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -799,6 +862,8 @@ public final class Card {
           .equals(other.getCustomerAddr())) return false;
       if (!getCustomerPostcode()
           .equals(other.getCustomerPostcode())) return false;
+      if (!getPg()
+          .equals(other.getPg())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -830,6 +895,8 @@ public final class Card {
       hash = (53 * hash) + getCustomerAddr().hashCode();
       hash = (37 * hash) + CUSTOMER_POSTCODE_FIELD_NUMBER;
       hash = (53 * hash) + getCustomerPostcode().hashCode();
+      hash = (37 * hash) + PG_FIELD_NUMBER;
+      hash = (53 * hash) + getPg().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -983,6 +1050,8 @@ public final class Card {
 
         customerPostcode_ = "";
 
+        pg_ = "";
+
         return this;
       }
 
@@ -1019,6 +1088,7 @@ public final class Card {
         result.customerEmail_ = customerEmail_;
         result.customerAddr_ = customerAddr_;
         result.customerPostcode_ = customerPostcode_;
+        result.pg_ = pg_;
         onBuilt();
         return result;
       }
@@ -1105,6 +1175,10 @@ public final class Card {
         }
         if (!other.getCustomerPostcode().isEmpty()) {
           customerPostcode_ = other.customerPostcode_;
+          onChanged();
+        }
+        if (!other.getPg().isEmpty()) {
+          pg_ = other.pg_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1915,6 +1989,82 @@ public final class Card {
         onChanged();
         return this;
       }
+
+      private java.lang.Object pg_ = "";
+      /**
+       * <code>string pg = 11;</code>
+       * @return The pg.
+       */
+      public java.lang.String getPg() {
+        java.lang.Object ref = pg_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pg_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pg = 11;</code>
+       * @return The bytes for pg.
+       */
+      public com.google.protobuf.ByteString
+          getPgBytes() {
+        java.lang.Object ref = pg_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pg_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pg = 11;</code>
+       * @param value The pg to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPg(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pg_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pg = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPg() {
+        
+        pg_ = getDefaultInstance().getPg();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pg = 11;</code>
+       * @param value The bytes for pg to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPgBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pg_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2113,6 +2263,30 @@ public final class Card {
      * @return The updated.
      */
     int getUpdated();
+
+    /**
+     * <code>string pg_provider = 13;</code>
+     * @return The pgProvider.
+     */
+    java.lang.String getPgProvider();
+    /**
+     * <code>string pg_provider = 13;</code>
+     * @return The bytes for pgProvider.
+     */
+    com.google.protobuf.ByteString
+        getPgProviderBytes();
+
+    /**
+     * <code>string pg_id = 14;</code>
+     * @return The pgId.
+     */
+    java.lang.String getPgId();
+    /**
+     * <code>string pg_id = 14;</code>
+     * @return The bytes for pgId.
+     */
+    com.google.protobuf.ByteString
+        getPgIdBytes();
   }
   /**
    * Protobuf type {@code card_v2.CardRegisterResultData}
@@ -2136,6 +2310,8 @@ public final class Card {
       customerEmail_ = "";
       customerAddr_ = "";
       customerPostcode_ = "";
+      pgProvider_ = "";
+      pgId_ = "";
     }
 
     @java.lang.Override
@@ -2235,6 +2411,18 @@ public final class Card {
             case 96: {
 
               updated_ = input.readInt32();
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pgProvider_ = s;
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pgId_ = s;
               break;
             }
             default: {
@@ -2660,6 +2848,82 @@ public final class Card {
       return updated_;
     }
 
+    public static final int PG_PROVIDER_FIELD_NUMBER = 13;
+    private volatile java.lang.Object pgProvider_;
+    /**
+     * <code>string pg_provider = 13;</code>
+     * @return The pgProvider.
+     */
+    @java.lang.Override
+    public java.lang.String getPgProvider() {
+      java.lang.Object ref = pgProvider_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pgProvider_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pg_provider = 13;</code>
+     * @return The bytes for pgProvider.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPgProviderBytes() {
+      java.lang.Object ref = pgProvider_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pgProvider_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PG_ID_FIELD_NUMBER = 14;
+    private volatile java.lang.Object pgId_;
+    /**
+     * <code>string pg_id = 14;</code>
+     * @return The pgId.
+     */
+    @java.lang.Override
+    public java.lang.String getPgId() {
+      java.lang.Object ref = pgId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pgId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pg_id = 14;</code>
+     * @return The bytes for pgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPgIdBytes() {
+      java.lang.Object ref = pgId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2710,6 +2974,12 @@ public final class Card {
       if (updated_ != 0) {
         output.writeInt32(12, updated_);
       }
+      if (!getPgProviderBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, pgProvider_);
+      }
+      if (!getPgIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, pgId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2758,6 +3028,12 @@ public final class Card {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(12, updated_);
       }
+      if (!getPgProviderBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, pgProvider_);
+      }
+      if (!getPgIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, pgId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2797,6 +3073,10 @@ public final class Card {
           != other.getInserted()) return false;
       if (getUpdated()
           != other.getUpdated()) return false;
+      if (!getPgProvider()
+          .equals(other.getPgProvider())) return false;
+      if (!getPgId()
+          .equals(other.getPgId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2832,6 +3112,10 @@ public final class Card {
       hash = (53 * hash) + getInserted();
       hash = (37 * hash) + UPDATED_FIELD_NUMBER;
       hash = (53 * hash) + getUpdated();
+      hash = (37 * hash) + PG_PROVIDER_FIELD_NUMBER;
+      hash = (53 * hash) + getPgProvider().hashCode();
+      hash = (37 * hash) + PG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPgId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2989,6 +3273,10 @@ public final class Card {
 
         updated_ = 0;
 
+        pgProvider_ = "";
+
+        pgId_ = "";
+
         return this;
       }
 
@@ -3027,6 +3315,8 @@ public final class Card {
         result.customerPostcode_ = customerPostcode_;
         result.inserted_ = inserted_;
         result.updated_ = updated_;
+        result.pgProvider_ = pgProvider_;
+        result.pgId_ = pgId_;
         onBuilt();
         return result;
       }
@@ -3119,6 +3409,14 @@ public final class Card {
         }
         if (other.getUpdated() != 0) {
           setUpdated(other.getUpdated());
+        }
+        if (!other.getPgProvider().isEmpty()) {
+          pgProvider_ = other.pgProvider_;
+          onChanged();
+        }
+        if (!other.getPgId().isEmpty()) {
+          pgId_ = other.pgId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3962,6 +4260,158 @@ public final class Card {
       public Builder clearUpdated() {
         
         updated_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pgProvider_ = "";
+      /**
+       * <code>string pg_provider = 13;</code>
+       * @return The pgProvider.
+       */
+      public java.lang.String getPgProvider() {
+        java.lang.Object ref = pgProvider_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pgProvider_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pg_provider = 13;</code>
+       * @return The bytes for pgProvider.
+       */
+      public com.google.protobuf.ByteString
+          getPgProviderBytes() {
+        java.lang.Object ref = pgProvider_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pgProvider_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pg_provider = 13;</code>
+       * @param value The pgProvider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPgProvider(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pgProvider_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pg_provider = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPgProvider() {
+        
+        pgProvider_ = getDefaultInstance().getPgProvider();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pg_provider = 13;</code>
+       * @param value The bytes for pgProvider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPgProviderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pgProvider_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pgId_ = "";
+      /**
+       * <code>string pg_id = 14;</code>
+       * @return The pgId.
+       */
+      public java.lang.String getPgId() {
+        java.lang.Object ref = pgId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pgId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pg_id = 14;</code>
+       * @return The bytes for pgId.
+       */
+      public com.google.protobuf.ByteString
+          getPgIdBytes() {
+        java.lang.Object ref = pgId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pgId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pg_id = 14;</code>
+       * @param value The pgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPgId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pg_id = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPgId() {
+        
+        pgId_ = getDefaultInstance().getPgId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pg_id = 14;</code>
+       * @param value The bytes for pgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPgIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pgId_ = value;
         onChanged();
         return this;
       }
@@ -21022,94 +21472,95 @@ public final class Card {
   static {
     java.lang.String[] descriptorData = {
       "\n\033v2/payments/card/card.proto\022\007card_v2\032\034" +
-      "google/api/annotations.proto\"\346\001\n\023CardReg" +
+      "google/api/annotations.proto\"\362\001\n\023CardReg" +
       "isterRequest\022\020\n\010card_uid\030\001 \001(\t\022\023\n\013card_n" +
       "umber\030\002 \001(\t\022\016\n\006expiry\030\003 \001(\t\022\r\n\005birth\030\004 \001" +
       "(\t\022\022\n\npwd_2digit\030\005 \001(\t\022\025\n\rcustomer_name\030" +
       "\006 \001(\t\022\024\n\014customer_tel\030\007 \001(\t\022\026\n\016customer_" +
       "email\030\010 \001(\t\022\025\n\rcustomer_addr\030\t \001(\t\022\031\n\021cu" +
-      "stomer_postcode\030\n \001(\t\"\222\002\n\026CardRegisterRe" +
-      "sultData\022\020\n\010card_uid\030\001 \001(\t\022\021\n\tcard_name\030" +
-      "\002 \001(\t\022\021\n\tcard_code\030\003 \001(\t\022\023\n\013bin_numbrer\030" +
-      "\004 \001(\t\022\021\n\tcard_type\030\005 \001(\005\022\025\n\rcustomer_nam" +
-      "e\030\006 \001(\t\022\024\n\014customer_tel\030\007 \001(\t\022\026\n\016custome" +
-      "r_email\030\010 \001(\t\022\025\n\rcustomer_addr\030\t \001(\t\022\031\n\021" +
-      "customer_postcode\030\n \001(\t\022\020\n\010inserted\030\013 \001(" +
-      "\005\022\017\n\007updated\030\014 \001(\005\"h\n\024CardRegisterRespon" +
-      "se\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0221\n\010res" +
-      "ponse\030\003 \001(\0132\037.card_v2.CardRegisterResult" +
-      "Data\"&\n\022GetCardInfoRequest\022\020\n\010card_uid\030\001" +
-      " \001(\t\"\216\002\n\017GetCardInfoData\022\020\n\010card_uid\030\001 \001" +
-      "(\t\022\025\n\rcard_provider\030\002 \001(\t\022\021\n\tcard_code\030\003" +
-      " \001(\t\022\022\n\nbin_number\030\004 \001(\t\022\021\n\tcard_type\030\005 " +
-      "\001(\005\022\025\n\rcustomer_name\030\006 \001(\t\022\024\n\014customer_t" +
-      "el\030\007 \001(\t\022\026\n\016customer_email\030\010 \001(\t\022\025\n\rcust" +
-      "omer_addr\030\t \001(\t\022\031\n\021customer_postcode\030\n \001" +
-      "(\t\022\020\n\010inserted\030\013 \001(\005\022\017\n\007updated\030\014 \001(\005\"`\n" +
-      "\023GetCardInfoResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007me" +
-      "ssage\030\002 \001(\t\022*\n\010response\030\003 \001(\0132\030.card_v2." +
-      "GetCardInfoData\")\n\025DeleteCardInfoRequest" +
-      "\022\020\n\010card_uid\030\001 \001(\t\"7\n\026DeleteCardInfoResp" +
-      "onse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\"\371\001\n\032" +
-      "PayByRegisteredCardRequest\022\020\n\010card_uid\030\001" +
-      " \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount\030\003 \001" +
-      "(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\022\n\norder_na" +
-      "me\030\005 \001(\t\022\030\n\020card_installment\030\006 \001(\005\022!\n\031in" +
-      "terest_free_by_merchant\030\007 \001(\010\022\023\n\013custom_" +
-      "data\030\010 \001(\t\022\024\n\014callback_url\030\t \001(\t\022\r\n\005emai" +
-      "l\030\n \001(\t\"\250\006\n\027PayByRegisteredCardData\022\016\n\006a" +
-      "mount\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\022\n\nbuyer_" +
-      "addr\030\003 \001(\t\022\023\n\013buyer_email\030\004 \001(\t\022\022\n\nbuyer" +
-      "_name\030\005 \001(\t\022\026\n\016buyer_postcode\030\006 \001(\t\022\021\n\tb" +
-      "uyer_tel\030\007 \001(\t\022\025\n\rcancel_amount\030\010 \001(\t\022.\n" +
-      "\016cancel_history\030\t \003(\0132\026.card_v2.CancelHi" +
-      "story\022\025\n\rcancel_reason\030\n \001(\t\022\033\n\023cancel_r" +
-      "eceipt_urls\030\013 \003(\t\022\024\n\014cancelled_at\030\014 \001(\005\022" +
-      "\021\n\tcard_code\030\r \001(\t\022\021\n\tcard_name\030\016 \001(\t\022\022\n" +
-      "\nbin_number\030\017 \001(\t\022\030\n\020card_installment\030\020 " +
-      "\001(\005\022\021\n\tcard_type\030\021 \001(\005\022\033\n\023cash_receipt_i" +
-      "ssued\030\022 \001(\010\022\017\n\007channel\030\023 \001(\t\022\020\n\010currency" +
-      "\030\024 \001(\t\022\023\n\013custom_data\030\025 \001(\t\022\020\n\010card_uid\030" +
-      "\026 \001(\t\022\032\n\022customer_uid_usage\030\027 \001(\t\022\023\n\013fai" +
-      "l_reason\030\030 \001(\t\022\021\n\tfailed_at\030\031 \001(\005\022\017\n\007imp" +
-      "_uid\030\032 \001(\t\022\024\n\014merchant_uid\030\033 \001(\t\022\022\n\norde" +
-      "r_name\030\034 \001(\t\022\017\n\007paid_at\030\035 \001(\005\022\022\n\npay_met" +
-      "hod\030\036 \001(\t\022\r\n\005pg_id\030\037 \001(\t\022\023\n\013pg_provider\030" +
-      "  \001(\t\022\016\n\006pg_tid\030! \001(\t\022\023\n\013receipt_url\030\" \001" +
-      "(\t\022\022\n\nstarted_at\030# \001(\005\022\016\n\006status\030$ \001(\t\022\022" +
-      "\n\nuser_agent\030% \001(\t\"p\n\033PayByRegisteredCar" +
-      "dResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t" +
-      "\0222\n\010response\030\003 \001(\0132 .card_v2.PayByRegist" +
-      "eredCardData\"j\n\rCancelHistory\022\016\n\006pg_tid\030" +
-      "\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n\014cancelled_at\030\003 " +
-      "\001(\005\022\016\n\006reason\030\004 \001(\t\022\023\n\013receipt_url\030\005 \001(\t" +
-      "\"{\n\030CancelCardPaymentRequest\022\017\n\007imp_uid\030" +
-      "\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n\014merchant_uid\030\003 " +
-      "\001(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\016\n\006reason\030" +
-      "\005 \001(\t\"o\n\032CancelCardPaymenttResponse\022\014\n\004c" +
-      "ode\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0222\n\010response\030\003" +
-      " \001(\0132 .card_v2.PayByRegisteredCardData2\314" +
-      "\005\n\022PaymentCardService\022w\n\021CardRegisterV2R" +
-      "PC\022\034.card_v2.CardRegisterRequest\032\035.card_" +
-      "v2.CardRegisterResponse\"%\202\323\344\223\002\037\"\032/api/pa" +
-      "yments/v2/card/info:\001*\022|\n\020GetCardInfoV2R" +
-      "PC\022\033.card_v2.GetCardInfoRequest\032\034.card_v" +
-      "2.GetCardInfoResponse\"-\202\323\344\223\002\'\022%/api/paym" +
-      "ents/v2/card/info/{card_uid}\022\205\001\n\023DeleteC" +
-      "ardInfoV2RPC\022\036.card_v2.DeleteCardInfoReq" +
-      "uest\032\037.card_v2.DeleteCardInfoResponse\"-\202" +
-      "\323\344\223\002\'*%/api/payments/v2/card/info/{card_" +
-      "uid}\022\224\001\n\031PayByRegiseteredCardV2RPC\022#.car" +
-      "d_v2.PayByRegisteredCardRequest\032$.card_v" +
-      "2.PayByRegisteredCardResponse\",\202\323\344\223\002&\"$/" +
-      "api/payments/v2/card/pay/registered\022\237\001\n\032" +
-      "CancelRegiseteredCardV2RPC\022!.card_v2.Can" +
-      "celCardPaymentRequest\032#.card_v2.CancelCa" +
-      "rdPaymenttResponse\"9\202\323\344\223\0023\"1/api/payment" +
-      "s/v2/card/cancel/registered/{imp_uid}BMZ" +
-      "8github.com/iamport/interface/gen_src/go" +
-      "/v2/payments/card\252\002\020V2.Payments.Cardb\006pr" +
-      "oto3"
+      "stomer_postcode\030\n \001(\t\022\n\n\002pg\030\013 \001(\t\"\266\002\n\026Ca" +
+      "rdRegisterResultData\022\020\n\010card_uid\030\001 \001(\t\022\021" +
+      "\n\tcard_name\030\002 \001(\t\022\021\n\tcard_code\030\003 \001(\t\022\023\n\013" +
+      "bin_numbrer\030\004 \001(\t\022\021\n\tcard_type\030\005 \001(\005\022\025\n\r" +
+      "customer_name\030\006 \001(\t\022\024\n\014customer_tel\030\007 \001(" +
+      "\t\022\026\n\016customer_email\030\010 \001(\t\022\025\n\rcustomer_ad" +
+      "dr\030\t \001(\t\022\031\n\021customer_postcode\030\n \001(\t\022\020\n\010i" +
+      "nserted\030\013 \001(\005\022\017\n\007updated\030\014 \001(\005\022\023\n\013pg_pro" +
+      "vider\030\r \001(\t\022\r\n\005pg_id\030\016 \001(\t\"h\n\024CardRegist" +
+      "erResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(" +
+      "\t\0221\n\010response\030\003 \001(\0132\037.card_v2.CardRegist" +
+      "erResultData\"&\n\022GetCardInfoRequest\022\020\n\010ca" +
+      "rd_uid\030\001 \001(\t\"\216\002\n\017GetCardInfoData\022\020\n\010card" +
+      "_uid\030\001 \001(\t\022\025\n\rcard_provider\030\002 \001(\t\022\021\n\tcar" +
+      "d_code\030\003 \001(\t\022\022\n\nbin_number\030\004 \001(\t\022\021\n\tcard" +
+      "_type\030\005 \001(\005\022\025\n\rcustomer_name\030\006 \001(\t\022\024\n\014cu" +
+      "stomer_tel\030\007 \001(\t\022\026\n\016customer_email\030\010 \001(\t" +
+      "\022\025\n\rcustomer_addr\030\t \001(\t\022\031\n\021customer_post" +
+      "code\030\n \001(\t\022\020\n\010inserted\030\013 \001(\005\022\017\n\007updated\030" +
+      "\014 \001(\005\"`\n\023GetCardInfoResponse\022\014\n\004code\030\001 \001" +
+      "(\005\022\017\n\007message\030\002 \001(\t\022*\n\010response\030\003 \001(\0132\030." +
+      "card_v2.GetCardInfoData\")\n\025DeleteCardInf" +
+      "oRequest\022\020\n\010card_uid\030\001 \001(\t\"7\n\026DeleteCard" +
+      "InfoResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 " +
+      "\001(\t\"\371\001\n\032PayByRegisteredCardRequest\022\020\n\010ca" +
+      "rd_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n\006am" +
+      "ount\030\003 \001(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\022\n\n" +
+      "order_name\030\005 \001(\t\022\030\n\020card_installment\030\006 \001" +
+      "(\005\022!\n\031interest_free_by_merchant\030\007 \001(\010\022\023\n" +
+      "\013custom_data\030\010 \001(\t\022\024\n\014callback_url\030\t \001(\t" +
+      "\022\r\n\005email\030\n \001(\t\"\250\006\n\027PayByRegisteredCardD" +
+      "ata\022\016\n\006amount\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\022" +
+      "\n\nbuyer_addr\030\003 \001(\t\022\023\n\013buyer_email\030\004 \001(\t\022" +
+      "\022\n\nbuyer_name\030\005 \001(\t\022\026\n\016buyer_postcode\030\006 " +
+      "\001(\t\022\021\n\tbuyer_tel\030\007 \001(\t\022\025\n\rcancel_amount\030" +
+      "\010 \001(\t\022.\n\016cancel_history\030\t \003(\0132\026.card_v2." +
+      "CancelHistory\022\025\n\rcancel_reason\030\n \001(\t\022\033\n\023" +
+      "cancel_receipt_urls\030\013 \003(\t\022\024\n\014cancelled_a" +
+      "t\030\014 \001(\005\022\021\n\tcard_code\030\r \001(\t\022\021\n\tcard_name\030" +
+      "\016 \001(\t\022\022\n\nbin_number\030\017 \001(\t\022\030\n\020card_instal" +
+      "lment\030\020 \001(\005\022\021\n\tcard_type\030\021 \001(\005\022\033\n\023cash_r" +
+      "eceipt_issued\030\022 \001(\010\022\017\n\007channel\030\023 \001(\t\022\020\n\010" +
+      "currency\030\024 \001(\t\022\023\n\013custom_data\030\025 \001(\t\022\020\n\010c" +
+      "ard_uid\030\026 \001(\t\022\032\n\022customer_uid_usage\030\027 \001(" +
+      "\t\022\023\n\013fail_reason\030\030 \001(\t\022\021\n\tfailed_at\030\031 \001(" +
+      "\005\022\017\n\007imp_uid\030\032 \001(\t\022\024\n\014merchant_uid\030\033 \001(\t" +
+      "\022\022\n\norder_name\030\034 \001(\t\022\017\n\007paid_at\030\035 \001(\005\022\022\n" +
+      "\npay_method\030\036 \001(\t\022\r\n\005pg_id\030\037 \001(\t\022\023\n\013pg_p" +
+      "rovider\030  \001(\t\022\016\n\006pg_tid\030! \001(\t\022\023\n\013receipt" +
+      "_url\030\" \001(\t\022\022\n\nstarted_at\030# \001(\005\022\016\n\006status" +
+      "\030$ \001(\t\022\022\n\nuser_agent\030% \001(\t\"p\n\033PayByRegis" +
+      "teredCardResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messa" +
+      "ge\030\002 \001(\t\0222\n\010response\030\003 \001(\0132 .card_v2.Pay" +
+      "ByRegisteredCardData\"j\n\rCancelHistory\022\016\n" +
+      "\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n\014cancell" +
+      "ed_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022\023\n\013receipt_u" +
+      "rl\030\005 \001(\t\"{\n\030CancelCardPaymentRequest\022\017\n\007" +
+      "imp_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n\014merchan" +
+      "t_uid\030\003 \001(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\016\n" +
+      "\006reason\030\005 \001(\t\"o\n\032CancelCardPaymenttRespo" +
+      "nse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0222\n\010re" +
+      "sponse\030\003 \001(\0132 .card_v2.PayByRegisteredCa" +
+      "rdData2\314\005\n\022PaymentCardService\022w\n\021CardReg" +
+      "isterV2RPC\022\034.card_v2.CardRegisterRequest" +
+      "\032\035.card_v2.CardRegisterResponse\"%\202\323\344\223\002\037\"" +
+      "\032/api/payments/v2/card/info:\001*\022|\n\020GetCar" +
+      "dInfoV2RPC\022\033.card_v2.GetCardInfoRequest\032" +
+      "\034.card_v2.GetCardInfoResponse\"-\202\323\344\223\002\'\022%/" +
+      "api/payments/v2/card/info/{card_uid}\022\205\001\n" +
+      "\023DeleteCardInfoV2RPC\022\036.card_v2.DeleteCar" +
+      "dInfoRequest\032\037.card_v2.DeleteCardInfoRes" +
+      "ponse\"-\202\323\344\223\002\'*%/api/payments/v2/card/inf" +
+      "o/{card_uid}\022\224\001\n\031PayByRegiseteredCardV2R" +
+      "PC\022#.card_v2.PayByRegisteredCardRequest\032" +
+      "$.card_v2.PayByRegisteredCardResponse\",\202" +
+      "\323\344\223\002&\"$/api/payments/v2/card/pay/registe" +
+      "red\022\237\001\n\032CancelRegiseteredCardV2RPC\022!.car" +
+      "d_v2.CancelCardPaymentRequest\032#.card_v2." +
+      "CancelCardPaymenttResponse\"9\202\323\344\223\0023\"1/api" +
+      "/payments/v2/card/cancel/registered/{imp" +
+      "_uid}BMZ8github.com/iamport/interface/ge" +
+      "n_src/go/v2/payments/card\252\002\020V2.Payments." +
+      "Cardb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21121,13 +21572,13 @@ public final class Card {
     internal_static_card_v2_CardRegisterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_card_v2_CardRegisterRequest_descriptor,
-        new java.lang.String[] { "CardUid", "CardNumber", "Expiry", "Birth", "Pwd2Digit", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", });
+        new java.lang.String[] { "CardUid", "CardNumber", "Expiry", "Birth", "Pwd2Digit", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", "Pg", });
     internal_static_card_v2_CardRegisterResultData_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_card_v2_CardRegisterResultData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_card_v2_CardRegisterResultData_descriptor,
-        new java.lang.String[] { "CardUid", "CardName", "CardCode", "BinNumbrer", "CardType", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", "Inserted", "Updated", });
+        new java.lang.String[] { "CardUid", "CardName", "CardCode", "BinNumbrer", "CardType", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", "Inserted", "Updated", "PgProvider", "PgId", });
     internal_static_card_v2_CardRegisterResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_card_v2_CardRegisterResponse_fieldAccessorTable = new

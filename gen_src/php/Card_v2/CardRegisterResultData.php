@@ -65,6 +65,14 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 updated = 12;</code>
      */
     protected $updated = 0;
+    /**
+     * Generated from protobuf field <code>string pg_provider = 13;</code>
+     */
+    protected $pg_provider = '';
+    /**
+     * Generated from protobuf field <code>string pg_id = 14;</code>
+     */
+    protected $pg_id = '';
 
     /**
      * Constructor.
@@ -86,6 +94,8 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
      *     @type string $customer_postcode
      *     @type int $inserted
      *     @type int $updated
+     *     @type string $pg_provider
+     *     @type string $pg_id
      * }
      */
     public function __construct($data = NULL) {
@@ -361,6 +371,50 @@ class CardRegisterResultData extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->updated = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string pg_provider = 13;</code>
+     * @return string
+     */
+    public function getPgProvider()
+    {
+        return $this->pg_provider;
+    }
+
+    /**
+     * Generated from protobuf field <code>string pg_provider = 13;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPgProvider($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->pg_provider = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string pg_id = 14;</code>
+     * @return string
+     */
+    public function getPgId()
+    {
+        return $this->pg_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string pg_id = 14;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPgId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->pg_id = $var;
 
         return $this;
     }

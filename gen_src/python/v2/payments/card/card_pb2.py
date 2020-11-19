@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z8github.com/iamport/interface/gen_src/go/v2/payments/card\252\002\020V2.Payments.Card',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1bv2/payments/card/card.proto\x12\x07\x63\x61rd_v2\x1a\x1cgoogle/api/annotations.proto\"\xe6\x01\n\x13\x43\x61rdRegisterRequest\x12\x10\n\x08\x63\x61rd_uid\x18\x01 \x01(\t\x12\x13\n\x0b\x63\x61rd_number\x18\x02 \x01(\t\x12\x0e\n\x06\x65xpiry\x18\x03 \x01(\t\x12\r\n\x05\x62irth\x18\x04 \x01(\t\x12\x12\n\npwd_2digit\x18\x05 \x01(\t\x12\x15\n\rcustomer_name\x18\x06 \x01(\t\x12\x14\n\x0c\x63ustomer_tel\x18\x07 \x01(\t\x12\x16\n\x0e\x63ustomer_email\x18\x08 \x01(\t\x12\x15\n\rcustomer_addr\x18\t \x01(\t\x12\x19\n\x11\x63ustomer_postcode\x18\n \x01(\t\"\x92\x02\n\x16\x43\x61rdRegisterResultData\x12\x10\n\x08\x63\x61rd_uid\x18\x01 \x01(\t\x12\x11\n\tcard_name\x18\x02 \x01(\t\x12\x11\n\tcard_code\x18\x03 \x01(\t\x12\x13\n\x0b\x62in_numbrer\x18\x04 \x01(\t\x12\x11\n\tcard_type\x18\x05 \x01(\x05\x12\x15\n\rcustomer_name\x18\x06 \x01(\t\x12\x14\n\x0c\x63ustomer_tel\x18\x07 \x01(\t\x12\x16\n\x0e\x63ustomer_email\x18\x08 \x01(\t\x12\x15\n\rcustomer_addr\x18\t \x01(\t\x12\x19\n\x11\x63ustomer_postcode\x18\n \x01(\t\x12\x10\n\x08inserted\x18\x0b \x01(\x05\x12\x0f\n\x07updated\x18\x0c \x01(\x05\"h\n\x14\x43\x61rdRegisterResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x31\n\x08response\x18\x03 \x01(\x0b\x32\x1f.card_v2.CardRegisterResultData\"&\n\x12GetCardInfoRequest\x12\x10\n\x08\x63\x61rd_uid\x18\x01 \x01(\t\"\x8e\x02\n\x0fGetCardInfoData\x12\x10\n\x08\x63\x61rd_uid\x18\x01 \x01(\t\x12\x15\n\rcard_provider\x18\x02 \x01(\t\x12\x11\n\tcard_code\x18\x03 \x01(\t\x12\x12\n\nbin_number\x18\x04 \x01(\t\x12\x11\n\tcard_type\x18\x05 \x01(\x05\x12\x15\n\rcustomer_name\x18\x06 \x01(\t\x12\x14\n\x0c\x63ustomer_tel\x18\x07 \x01(\t\x12\x16\n\x0e\x63ustomer_email\x18\x08 \x01(\t\x12\x15\n\rcustomer_addr\x18\t \x01(\t\x12\x19\n\x11\x63ustomer_postcode\x18\n \x01(\t\x12\x10\n\x08inserted\x18\x0b \x01(\x05\x12\x0f\n\x07updated\x18\x0c \x01(\x05\"`\n\x13GetCardInfoResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12*\n\x08response\x18\x03 \x01(\x0b\x32\x18.card_v2.GetCardInfoData\")\n\x15\x44\x65leteCardInfoRequest\x12\x10\n\x08\x63\x61rd_uid\x18\x01 \x01(\t\"7\n\x16\x44\x65leteCardInfoResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\"\xf9\x01\n\x1aPayByRegisteredCardRequest\x12\x10\n\x08\x63\x61rd_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\t\x12\x18\n\x10\x64uty_free_amount\x18\x04 \x01(\t\x12\x12\n\norder_name\x18\x05 \x01(\t\x12\x18\n\x10\x63\x61rd_installment\x18\x06 \x01(\x05\x12!\n\x19interest_free_by_merchant\x18\x07 \x01(\x08\x12\x13\n\x0b\x63ustom_data\x18\x08 \x01(\t\x12\x14\n\x0c\x63\x61llback_url\x18\t \x01(\t\x12\r\n\x05\x65mail\x18\n \x01(\t\"\xa8\x06\n\x17PayByRegisteredCardData\x12\x0e\n\x06\x61mount\x18\x01 \x01(\t\x12\x11\n\tapply_num\x18\x02 \x01(\t\x12\x12\n\nbuyer_addr\x18\x03 \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x04 \x01(\t\x12\x12\n\nbuyer_name\x18\x05 \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\x06 \x01(\t\x12\x11\n\tbuyer_tel\x18\x07 \x01(\t\x12\x15\n\rcancel_amount\x18\x08 \x01(\t\x12.\n\x0e\x63\x61ncel_history\x18\t \x03(\x0b\x32\x16.card_v2.CancelHistory\x12\x15\n\rcancel_reason\x18\n \x01(\t\x12\x1b\n\x13\x63\x61ncel_receipt_urls\x18\x0b \x03(\t\x12\x14\n\x0c\x63\x61ncelled_at\x18\x0c \x01(\x05\x12\x11\n\tcard_code\x18\r \x01(\t\x12\x11\n\tcard_name\x18\x0e \x01(\t\x12\x12\n\nbin_number\x18\x0f \x01(\t\x12\x18\n\x10\x63\x61rd_installment\x18\x10 \x01(\x05\x12\x11\n\tcard_type\x18\x11 \x01(\x05\x12\x1b\n\x13\x63\x61sh_receipt_issued\x18\x12 \x01(\x08\x12\x0f\n\x07\x63hannel\x18\x13 \x01(\t\x12\x10\n\x08\x63urrency\x18\x14 \x01(\t\x12\x13\n\x0b\x63ustom_data\x18\x15 \x01(\t\x12\x10\n\x08\x63\x61rd_uid\x18\x16 \x01(\t\x12\x1a\n\x12\x63ustomer_uid_usage\x18\x17 \x01(\t\x12\x13\n\x0b\x66\x61il_reason\x18\x18 \x01(\t\x12\x11\n\tfailed_at\x18\x19 \x01(\x05\x12\x0f\n\x07imp_uid\x18\x1a \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x1b \x01(\t\x12\x12\n\norder_name\x18\x1c \x01(\t\x12\x0f\n\x07paid_at\x18\x1d \x01(\x05\x12\x12\n\npay_method\x18\x1e \x01(\t\x12\r\n\x05pg_id\x18\x1f \x01(\t\x12\x13\n\x0bpg_provider\x18  \x01(\t\x12\x0e\n\x06pg_tid\x18! \x01(\t\x12\x13\n\x0breceipt_url\x18\" \x01(\t\x12\x12\n\nstarted_at\x18# \x01(\x05\x12\x0e\n\x06status\x18$ \x01(\t\x12\x12\n\nuser_agent\x18% \x01(\t\"p\n\x1bPayByRegisteredCardResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x32\n\x08response\x18\x03 \x01(\x0b\x32 .card_v2.PayByRegisteredCardData\"j\n\rCancelHistory\x12\x0e\n\x06pg_tid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\t\x12\x14\n\x0c\x63\x61ncelled_at\x18\x03 \x01(\x05\x12\x0e\n\x06reason\x18\x04 \x01(\t\x12\x13\n\x0breceipt_url\x18\x05 \x01(\t\"{\n\x18\x43\x61ncelCardPaymentRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x03 \x01(\t\x12\x18\n\x10\x64uty_free_amount\x18\x04 \x01(\t\x12\x0e\n\x06reason\x18\x05 \x01(\t\"o\n\x1a\x43\x61ncelCardPaymenttResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x32\n\x08response\x18\x03 \x01(\x0b\x32 .card_v2.PayByRegisteredCardData2\xcc\x05\n\x12PaymentCardService\x12w\n\x11\x43\x61rdRegisterV2RPC\x12\x1c.card_v2.CardRegisterRequest\x1a\x1d.card_v2.CardRegisterResponse\"%\x82\xd3\xe4\x93\x02\x1f\"\x1a/api/payments/v2/card/info:\x01*\x12|\n\x10GetCardInfoV2RPC\x12\x1b.card_v2.GetCardInfoRequest\x1a\x1c.card_v2.GetCardInfoResponse\"-\x82\xd3\xe4\x93\x02\'\x12%/api/payments/v2/card/info/{card_uid}\x12\x85\x01\n\x13\x44\x65leteCardInfoV2RPC\x12\x1e.card_v2.DeleteCardInfoRequest\x1a\x1f.card_v2.DeleteCardInfoResponse\"-\x82\xd3\xe4\x93\x02\'*%/api/payments/v2/card/info/{card_uid}\x12\x94\x01\n\x19PayByRegiseteredCardV2RPC\x12#.card_v2.PayByRegisteredCardRequest\x1a$.card_v2.PayByRegisteredCardResponse\",\x82\xd3\xe4\x93\x02&\"$/api/payments/v2/card/pay/registered\x12\x9f\x01\n\x1a\x43\x61ncelRegiseteredCardV2RPC\x12!.card_v2.CancelCardPaymentRequest\x1a#.card_v2.CancelCardPaymenttResponse\"9\x82\xd3\xe4\x93\x02\x33\"1/api/payments/v2/card/cancel/registered/{imp_uid}BMZ8github.com/iamport/interface/gen_src/go/v2/payments/card\xaa\x02\x10V2.Payments.Cardb\x06proto3'
+  serialized_pb=b'\n\x1bv2/payments/card/card.proto\x12\x07\x63\x61rd_v2\x1a\x1cgoogle/api/annotations.proto\"\xf2\x01\n\x13\x43\x61rdRegisterRequest\x12\x10\n\x08\x63\x61rd_uid\x18\x01 \x01(\t\x12\x13\n\x0b\x63\x61rd_number\x18\x02 \x01(\t\x12\x0e\n\x06\x65xpiry\x18\x03 \x01(\t\x12\r\n\x05\x62irth\x18\x04 \x01(\t\x12\x12\n\npwd_2digit\x18\x05 \x01(\t\x12\x15\n\rcustomer_name\x18\x06 \x01(\t\x12\x14\n\x0c\x63ustomer_tel\x18\x07 \x01(\t\x12\x16\n\x0e\x63ustomer_email\x18\x08 \x01(\t\x12\x15\n\rcustomer_addr\x18\t \x01(\t\x12\x19\n\x11\x63ustomer_postcode\x18\n \x01(\t\x12\n\n\x02pg\x18\x0b \x01(\t\"\xb6\x02\n\x16\x43\x61rdRegisterResultData\x12\x10\n\x08\x63\x61rd_uid\x18\x01 \x01(\t\x12\x11\n\tcard_name\x18\x02 \x01(\t\x12\x11\n\tcard_code\x18\x03 \x01(\t\x12\x13\n\x0b\x62in_numbrer\x18\x04 \x01(\t\x12\x11\n\tcard_type\x18\x05 \x01(\x05\x12\x15\n\rcustomer_name\x18\x06 \x01(\t\x12\x14\n\x0c\x63ustomer_tel\x18\x07 \x01(\t\x12\x16\n\x0e\x63ustomer_email\x18\x08 \x01(\t\x12\x15\n\rcustomer_addr\x18\t \x01(\t\x12\x19\n\x11\x63ustomer_postcode\x18\n \x01(\t\x12\x10\n\x08inserted\x18\x0b \x01(\x05\x12\x0f\n\x07updated\x18\x0c \x01(\x05\x12\x13\n\x0bpg_provider\x18\r \x01(\t\x12\r\n\x05pg_id\x18\x0e \x01(\t\"h\n\x14\x43\x61rdRegisterResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x31\n\x08response\x18\x03 \x01(\x0b\x32\x1f.card_v2.CardRegisterResultData\"&\n\x12GetCardInfoRequest\x12\x10\n\x08\x63\x61rd_uid\x18\x01 \x01(\t\"\x8e\x02\n\x0fGetCardInfoData\x12\x10\n\x08\x63\x61rd_uid\x18\x01 \x01(\t\x12\x15\n\rcard_provider\x18\x02 \x01(\t\x12\x11\n\tcard_code\x18\x03 \x01(\t\x12\x12\n\nbin_number\x18\x04 \x01(\t\x12\x11\n\tcard_type\x18\x05 \x01(\x05\x12\x15\n\rcustomer_name\x18\x06 \x01(\t\x12\x14\n\x0c\x63ustomer_tel\x18\x07 \x01(\t\x12\x16\n\x0e\x63ustomer_email\x18\x08 \x01(\t\x12\x15\n\rcustomer_addr\x18\t \x01(\t\x12\x19\n\x11\x63ustomer_postcode\x18\n \x01(\t\x12\x10\n\x08inserted\x18\x0b \x01(\x05\x12\x0f\n\x07updated\x18\x0c \x01(\x05\"`\n\x13GetCardInfoResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12*\n\x08response\x18\x03 \x01(\x0b\x32\x18.card_v2.GetCardInfoData\")\n\x15\x44\x65leteCardInfoRequest\x12\x10\n\x08\x63\x61rd_uid\x18\x01 \x01(\t\"7\n\x16\x44\x65leteCardInfoResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\"\xf9\x01\n\x1aPayByRegisteredCardRequest\x12\x10\n\x08\x63\x61rd_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\t\x12\x18\n\x10\x64uty_free_amount\x18\x04 \x01(\t\x12\x12\n\norder_name\x18\x05 \x01(\t\x12\x18\n\x10\x63\x61rd_installment\x18\x06 \x01(\x05\x12!\n\x19interest_free_by_merchant\x18\x07 \x01(\x08\x12\x13\n\x0b\x63ustom_data\x18\x08 \x01(\t\x12\x14\n\x0c\x63\x61llback_url\x18\t \x01(\t\x12\r\n\x05\x65mail\x18\n \x01(\t\"\xa8\x06\n\x17PayByRegisteredCardData\x12\x0e\n\x06\x61mount\x18\x01 \x01(\t\x12\x11\n\tapply_num\x18\x02 \x01(\t\x12\x12\n\nbuyer_addr\x18\x03 \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x04 \x01(\t\x12\x12\n\nbuyer_name\x18\x05 \x01(\t\x12\x16\n\x0e\x62uyer_postcode\x18\x06 \x01(\t\x12\x11\n\tbuyer_tel\x18\x07 \x01(\t\x12\x15\n\rcancel_amount\x18\x08 \x01(\t\x12.\n\x0e\x63\x61ncel_history\x18\t \x03(\x0b\x32\x16.card_v2.CancelHistory\x12\x15\n\rcancel_reason\x18\n \x01(\t\x12\x1b\n\x13\x63\x61ncel_receipt_urls\x18\x0b \x03(\t\x12\x14\n\x0c\x63\x61ncelled_at\x18\x0c \x01(\x05\x12\x11\n\tcard_code\x18\r \x01(\t\x12\x11\n\tcard_name\x18\x0e \x01(\t\x12\x12\n\nbin_number\x18\x0f \x01(\t\x12\x18\n\x10\x63\x61rd_installment\x18\x10 \x01(\x05\x12\x11\n\tcard_type\x18\x11 \x01(\x05\x12\x1b\n\x13\x63\x61sh_receipt_issued\x18\x12 \x01(\x08\x12\x0f\n\x07\x63hannel\x18\x13 \x01(\t\x12\x10\n\x08\x63urrency\x18\x14 \x01(\t\x12\x13\n\x0b\x63ustom_data\x18\x15 \x01(\t\x12\x10\n\x08\x63\x61rd_uid\x18\x16 \x01(\t\x12\x1a\n\x12\x63ustomer_uid_usage\x18\x17 \x01(\t\x12\x13\n\x0b\x66\x61il_reason\x18\x18 \x01(\t\x12\x11\n\tfailed_at\x18\x19 \x01(\x05\x12\x0f\n\x07imp_uid\x18\x1a \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x1b \x01(\t\x12\x12\n\norder_name\x18\x1c \x01(\t\x12\x0f\n\x07paid_at\x18\x1d \x01(\x05\x12\x12\n\npay_method\x18\x1e \x01(\t\x12\r\n\x05pg_id\x18\x1f \x01(\t\x12\x13\n\x0bpg_provider\x18  \x01(\t\x12\x0e\n\x06pg_tid\x18! \x01(\t\x12\x13\n\x0breceipt_url\x18\" \x01(\t\x12\x12\n\nstarted_at\x18# \x01(\x05\x12\x0e\n\x06status\x18$ \x01(\t\x12\x12\n\nuser_agent\x18% \x01(\t\"p\n\x1bPayByRegisteredCardResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x32\n\x08response\x18\x03 \x01(\x0b\x32 .card_v2.PayByRegisteredCardData\"j\n\rCancelHistory\x12\x0e\n\x06pg_tid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\t\x12\x14\n\x0c\x63\x61ncelled_at\x18\x03 \x01(\x05\x12\x0e\n\x06reason\x18\x04 \x01(\t\x12\x13\n\x0breceipt_url\x18\x05 \x01(\t\"{\n\x18\x43\x61ncelCardPaymentRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x03 \x01(\t\x12\x18\n\x10\x64uty_free_amount\x18\x04 \x01(\t\x12\x0e\n\x06reason\x18\x05 \x01(\t\"o\n\x1a\x43\x61ncelCardPaymenttResponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x32\n\x08response\x18\x03 \x01(\x0b\x32 .card_v2.PayByRegisteredCardData2\xcc\x05\n\x12PaymentCardService\x12w\n\x11\x43\x61rdRegisterV2RPC\x12\x1c.card_v2.CardRegisterRequest\x1a\x1d.card_v2.CardRegisterResponse\"%\x82\xd3\xe4\x93\x02\x1f\"\x1a/api/payments/v2/card/info:\x01*\x12|\n\x10GetCardInfoV2RPC\x12\x1b.card_v2.GetCardInfoRequest\x1a\x1c.card_v2.GetCardInfoResponse\"-\x82\xd3\xe4\x93\x02\'\x12%/api/payments/v2/card/info/{card_uid}\x12\x85\x01\n\x13\x44\x65leteCardInfoV2RPC\x12\x1e.card_v2.DeleteCardInfoRequest\x1a\x1f.card_v2.DeleteCardInfoResponse\"-\x82\xd3\xe4\x93\x02\'*%/api/payments/v2/card/info/{card_uid}\x12\x94\x01\n\x19PayByRegiseteredCardV2RPC\x12#.card_v2.PayByRegisteredCardRequest\x1a$.card_v2.PayByRegisteredCardResponse\",\x82\xd3\xe4\x93\x02&\"$/api/payments/v2/card/pay/registered\x12\x9f\x01\n\x1a\x43\x61ncelRegiseteredCardV2RPC\x12!.card_v2.CancelCardPaymentRequest\x1a#.card_v2.CancelCardPaymenttResponse\"9\x82\xd3\xe4\x93\x02\x33\"1/api/payments/v2/card/cancel/registered/{imp_uid}BMZ8github.com/iamport/interface/gen_src/go/v2/payments/card\xaa\x02\x10V2.Payments.Cardb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -105,6 +105,13 @@ _CARDREGISTERREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='pg', full_name='card_v2.CardRegisterRequest.pg', index=10,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -118,7 +125,7 @@ _CARDREGISTERREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=71,
-  serialized_end=301,
+  serialized_end=313,
 )
 
 
@@ -214,6 +221,20 @@ _CARDREGISTERRESULTDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='pg_provider', full_name='card_v2.CardRegisterResultData.pg_provider', index=12,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='pg_id', full_name='card_v2.CardRegisterResultData.pg_id', index=13,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -226,8 +247,8 @@ _CARDREGISTERRESULTDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=304,
-  serialized_end=578,
+  serialized_start=316,
+  serialized_end=626,
 )
 
 
@@ -272,8 +293,8 @@ _CARDREGISTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=580,
-  serialized_end=684,
+  serialized_start=628,
+  serialized_end=732,
 )
 
 
@@ -304,8 +325,8 @@ _GETCARDINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=686,
-  serialized_end=724,
+  serialized_start=734,
+  serialized_end=772,
 )
 
 
@@ -413,8 +434,8 @@ _GETCARDINFODATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=727,
-  serialized_end=997,
+  serialized_start=775,
+  serialized_end=1045,
 )
 
 
@@ -459,8 +480,8 @@ _GETCARDINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=999,
-  serialized_end=1095,
+  serialized_start=1047,
+  serialized_end=1143,
 )
 
 
@@ -491,8 +512,8 @@ _DELETECARDINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1097,
-  serialized_end=1138,
+  serialized_start=1145,
+  serialized_end=1186,
 )
 
 
@@ -530,8 +551,8 @@ _DELETECARDINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1140,
-  serialized_end=1195,
+  serialized_start=1188,
+  serialized_end=1243,
 )
 
 
@@ -625,8 +646,8 @@ _PAYBYREGISTEREDCARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1198,
-  serialized_end=1447,
+  serialized_start=1246,
+  serialized_end=1495,
 )
 
 
@@ -909,8 +930,8 @@ _PAYBYREGISTEREDCARDDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1450,
-  serialized_end=2258,
+  serialized_start=1498,
+  serialized_end=2306,
 )
 
 
@@ -955,8 +976,8 @@ _PAYBYREGISTEREDCARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2260,
-  serialized_end=2372,
+  serialized_start=2308,
+  serialized_end=2420,
 )
 
 
@@ -1015,8 +1036,8 @@ _CANCELHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2374,
-  serialized_end=2480,
+  serialized_start=2422,
+  serialized_end=2528,
 )
 
 
@@ -1075,8 +1096,8 @@ _CANCELCARDPAYMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2482,
-  serialized_end=2605,
+  serialized_start=2530,
+  serialized_end=2653,
 )
 
 
@@ -1121,8 +1142,8 @@ _CANCELCARDPAYMENTTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2607,
-  serialized_end=2718,
+  serialized_start=2655,
+  serialized_end=2766,
 )
 
 _CARDREGISTERRESPONSE.fields_by_name['response'].message_type = _CARDREGISTERRESULTDATA
@@ -1254,8 +1275,8 @@ _PAYMENTCARDSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=2721,
-  serialized_end=3437,
+  serialized_start=2769,
+  serialized_end=3485,
   methods=[
   _descriptor.MethodDescriptor(
     name='CardRegisterV2RPC',

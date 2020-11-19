@@ -18,6 +18,7 @@ const CardRegisterRequest$json = const {
     const {'1': 'customer_email', '3': 8, '4': 1, '5': 9, '10': 'customerEmail'},
     const {'1': 'customer_addr', '3': 9, '4': 1, '5': 9, '10': 'customerAddr'},
     const {'1': 'customer_postcode', '3': 10, '4': 1, '5': 9, '10': 'customerPostcode'},
+    const {'1': 'pg', '3': 11, '4': 1, '5': 9, '10': 'pg'},
   ],
 };
 
@@ -36,6 +37,8 @@ const CardRegisterResultData$json = const {
     const {'1': 'customer_postcode', '3': 10, '4': 1, '5': 9, '10': 'customerPostcode'},
     const {'1': 'inserted', '3': 11, '4': 1, '5': 5, '10': 'inserted'},
     const {'1': 'updated', '3': 12, '4': 1, '5': 5, '10': 'updated'},
+    const {'1': 'pg_provider', '3': 13, '4': 1, '5': 9, '10': 'pgProvider'},
+    const {'1': 'pg_id', '3': 14, '4': 1, '5': 9, '10': 'pgId'},
   ],
 };
 

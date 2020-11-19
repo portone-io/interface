@@ -340,6 +340,9 @@ export class PayByRegisteredCardRequest extends jspb.Message {
   getCallbackUrl(): string;
   setCallbackUrl(value: string): void;
 
+  getEmail(): string;
+  setEmail(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PayByRegisteredCardRequest.AsObject;
   static toObject(includeInstance: boolean, msg: PayByRegisteredCardRequest): PayByRegisteredCardRequest.AsObject;
@@ -361,6 +364,7 @@ export namespace PayByRegisteredCardRequest {
     interestFreeByMerchant: boolean,
     customData: string,
     callbackUrl: string,
+    email: string,
   }
 }
 

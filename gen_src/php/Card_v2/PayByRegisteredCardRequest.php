@@ -53,6 +53,10 @@ class PayByRegisteredCardRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string callback_url = 9;</code>
      */
     protected $callback_url = '';
+    /**
+     * Generated from protobuf field <code>string email = 10;</code>
+     */
+    protected $email = '';
 
     /**
      * Constructor.
@@ -71,6 +75,7 @@ class PayByRegisteredCardRequest extends \Google\Protobuf\Internal\Message
      *     @type bool $interest_free_by_merchant
      *     @type string $custom_data
      *     @type string $callback_url
+     *     @type string $email
      * }
      */
     public function __construct($data = NULL) {
@@ -280,6 +285,28 @@ class PayByRegisteredCardRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->callback_url = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string email = 10;</code>
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Generated from protobuf field <code>string email = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setEmail($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->email = $var;
 
         return $this;
     }

@@ -633,6 +633,7 @@ class PayByRegisteredCardRequest extends $pb.GeneratedMessage {
     ..aOB(7, 'interestFreeByMerchant')
     ..aOS(8, 'customData')
     ..aOS(9, 'callbackUrl')
+    ..aOS(10, 'email')
     ..hasRequiredFields = false
   ;
 
@@ -731,6 +732,15 @@ class PayByRegisteredCardRequest extends $pb.GeneratedMessage {
   $core.bool hasCallbackUrl() => $_has(8);
   @$pb.TagNumber(9)
   void clearCallbackUrl() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get email => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set email($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasEmail() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearEmail() => clearField(10);
 }
 
 class PayByRegisteredCardData extends $pb.GeneratedMessage {

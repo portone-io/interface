@@ -76,6 +76,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :interest_free_by_merchant, :bool, 7
       optional :custom_data, :string, 8
       optional :callback_url, :string, 9
+      optional :email, :string, 10
     end
     add_message "card_v2.PayByRegisteredCardData" do
       optional :amount, :string, 1

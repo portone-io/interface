@@ -9563,6 +9563,18 @@ public final class Card {
      */
     com.google.protobuf.ByteString
         getCallbackUrlBytes();
+
+    /**
+     * <code>string email = 10;</code>
+     * @return The email.
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>string email = 10;</code>
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
   }
   /**
    * Protobuf type {@code card_v2.PayByRegisteredCardRequest}
@@ -9584,6 +9596,7 @@ public final class Card {
       orderName_ = "";
       customData_ = "";
       callbackUrl_ = "";
+      email_ = "";
     }
 
     @java.lang.Override
@@ -9666,6 +9679,12 @@ public final class Card {
               java.lang.String s = input.readStringRequireUtf8();
 
               callbackUrl_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              email_ = s;
               break;
             }
             default: {
@@ -10000,6 +10019,44 @@ public final class Card {
       }
     }
 
+    public static final int EMAIL_FIELD_NUMBER = 10;
+    private volatile java.lang.Object email_;
+    /**
+     * <code>string email = 10;</code>
+     * @return The email.
+     */
+    @java.lang.Override
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        email_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string email = 10;</code>
+     * @return The bytes for email.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10041,6 +10098,9 @@ public final class Card {
       if (!getCallbackUrlBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, callbackUrl_);
       }
+      if (!getEmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, email_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10079,6 +10139,9 @@ public final class Card {
       if (!getCallbackUrlBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, callbackUrl_);
       }
+      if (!getEmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, email_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10112,6 +10175,8 @@ public final class Card {
           .equals(other.getCustomData())) return false;
       if (!getCallbackUrl()
           .equals(other.getCallbackUrl())) return false;
+      if (!getEmail()
+          .equals(other.getEmail())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10142,6 +10207,8 @@ public final class Card {
       hash = (53 * hash) + getCustomData().hashCode();
       hash = (37 * hash) + CALLBACK_URL_FIELD_NUMBER;
       hash = (53 * hash) + getCallbackUrl().hashCode();
+      hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getEmail().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10293,6 +10360,8 @@ public final class Card {
 
         callbackUrl_ = "";
 
+        email_ = "";
+
         return this;
       }
 
@@ -10328,6 +10397,7 @@ public final class Card {
         result.interestFreeByMerchant_ = interestFreeByMerchant_;
         result.customData_ = customData_;
         result.callbackUrl_ = callbackUrl_;
+        result.email_ = email_;
         onBuilt();
         return result;
       }
@@ -10408,6 +10478,10 @@ public final class Card {
         }
         if (!other.getCallbackUrl().isEmpty()) {
           callbackUrl_ = other.callbackUrl_;
+          onChanged();
+        }
+        if (!other.getEmail().isEmpty()) {
+          email_ = other.email_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -11061,6 +11135,82 @@ public final class Card {
   checkByteStringIsUtf8(value);
         
         callbackUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object email_ = "";
+      /**
+       * <code>string email = 10;</code>
+       * @return The email.
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          email_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string email = 10;</code>
+       * @return The bytes for email.
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string email = 10;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmail() {
+        
+        email_ = getDefaultInstance().getEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 10;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        email_ = value;
         onChanged();
         return this;
       }
@@ -20900,65 +21050,66 @@ public final class Card {
       "ssage\030\002 \001(\t\022*\n\010response\030\003 \001(\0132\030.card_v2." +
       "GetCardInfoData\")\n\025DeleteCardInfoRequest" +
       "\022\020\n\010card_uid\030\001 \001(\t\"7\n\026DeleteCardInfoResp" +
-      "onse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\"\352\001\n\032" +
+      "onse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\"\371\001\n\032" +
       "PayByRegisteredCardRequest\022\020\n\010card_uid\030\001" +
       " \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount\030\003 \001" +
       "(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\022\n\norder_na" +
       "me\030\005 \001(\t\022\030\n\020card_installment\030\006 \001(\005\022!\n\031in" +
       "terest_free_by_merchant\030\007 \001(\010\022\023\n\013custom_" +
-      "data\030\010 \001(\t\022\024\n\014callback_url\030\t \001(\t\"\250\006\n\027Pay" +
-      "ByRegisteredCardData\022\016\n\006amount\030\001 \001(\t\022\021\n\t" +
-      "apply_num\030\002 \001(\t\022\022\n\nbuyer_addr\030\003 \001(\t\022\023\n\013b" +
-      "uyer_email\030\004 \001(\t\022\022\n\nbuyer_name\030\005 \001(\t\022\026\n\016" +
-      "buyer_postcode\030\006 \001(\t\022\021\n\tbuyer_tel\030\007 \001(\t\022" +
-      "\025\n\rcancel_amount\030\010 \001(\t\022.\n\016cancel_history" +
-      "\030\t \003(\0132\026.card_v2.CancelHistory\022\025\n\rcancel" +
-      "_reason\030\n \001(\t\022\033\n\023cancel_receipt_urls\030\013 \003" +
-      "(\t\022\024\n\014cancelled_at\030\014 \001(\005\022\021\n\tcard_code\030\r " +
-      "\001(\t\022\021\n\tcard_name\030\016 \001(\t\022\022\n\nbin_number\030\017 \001" +
-      "(\t\022\030\n\020card_installment\030\020 \001(\005\022\021\n\tcard_typ" +
-      "e\030\021 \001(\005\022\033\n\023cash_receipt_issued\030\022 \001(\010\022\017\n\007" +
-      "channel\030\023 \001(\t\022\020\n\010currency\030\024 \001(\t\022\023\n\013custo" +
-      "m_data\030\025 \001(\t\022\020\n\010card_uid\030\026 \001(\t\022\032\n\022custom" +
-      "er_uid_usage\030\027 \001(\t\022\023\n\013fail_reason\030\030 \001(\t\022" +
-      "\021\n\tfailed_at\030\031 \001(\005\022\017\n\007imp_uid\030\032 \001(\t\022\024\n\014m" +
-      "erchant_uid\030\033 \001(\t\022\022\n\norder_name\030\034 \001(\t\022\017\n" +
-      "\007paid_at\030\035 \001(\005\022\022\n\npay_method\030\036 \001(\t\022\r\n\005pg" +
-      "_id\030\037 \001(\t\022\023\n\013pg_provider\030  \001(\t\022\016\n\006pg_tid" +
-      "\030! \001(\t\022\023\n\013receipt_url\030\" \001(\t\022\022\n\nstarted_a" +
-      "t\030# \001(\005\022\016\n\006status\030$ \001(\t\022\022\n\nuser_agent\030% " +
-      "\001(\t\"p\n\033PayByRegisteredCardResponse\022\014\n\004co" +
-      "de\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0222\n\010response\030\003 " +
-      "\001(\0132 .card_v2.PayByRegisteredCardData\"j\n" +
-      "\rCancelHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount" +
-      "\030\002 \001(\t\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004" +
-      " \001(\t\022\023\n\013receipt_url\030\005 \001(\t\"{\n\030CancelCardP" +
-      "aymentRequest\022\017\n\007imp_uid\030\001 \001(\t\022\016\n\006amount" +
-      "\030\002 \001(\t\022\024\n\014merchant_uid\030\003 \001(\t\022\030\n\020duty_fre" +
-      "e_amount\030\004 \001(\t\022\016\n\006reason\030\005 \001(\t\"o\n\032Cancel" +
-      "CardPaymenttResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007me" +
-      "ssage\030\002 \001(\t\0222\n\010response\030\003 \001(\0132 .card_v2." +
-      "PayByRegisteredCardData2\314\005\n\022PaymentCardS" +
-      "ervice\022w\n\021CardRegisterV2RPC\022\034.card_v2.Ca" +
-      "rdRegisterRequest\032\035.card_v2.CardRegister" +
-      "Response\"%\202\323\344\223\002\037\"\032/api/payments/v2/card/" +
-      "info:\001*\022|\n\020GetCardInfoV2RPC\022\033.card_v2.Ge" +
-      "tCardInfoRequest\032\034.card_v2.GetCardInfoRe" +
-      "sponse\"-\202\323\344\223\002\'\022%/api/payments/v2/card/in" +
-      "fo/{card_uid}\022\205\001\n\023DeleteCardInfoV2RPC\022\036." +
-      "card_v2.DeleteCardInfoRequest\032\037.card_v2." +
-      "DeleteCardInfoResponse\"-\202\323\344\223\002\'*%/api/pay" +
-      "ments/v2/card/info/{card_uid}\022\224\001\n\031PayByR" +
-      "egiseteredCardV2RPC\022#.card_v2.PayByRegis" +
-      "teredCardRequest\032$.card_v2.PayByRegister" +
-      "edCardResponse\",\202\323\344\223\002&\"$/api/payments/v2" +
-      "/card/pay/registered\022\237\001\n\032CancelRegiseter" +
-      "edCardV2RPC\022!.card_v2.CancelCardPaymentR" +
-      "equest\032#.card_v2.CancelCardPaymenttRespo" +
-      "nse\"9\202\323\344\223\0023\"1/api/payments/v2/card/cance" +
-      "l/registered/{imp_uid}BMZ8github.com/iam" +
-      "port/interface/gen_src/go/v2/payments/ca" +
-      "rd\252\002\020V2.Payments.Cardb\006proto3"
+      "data\030\010 \001(\t\022\024\n\014callback_url\030\t \001(\t\022\r\n\005emai" +
+      "l\030\n \001(\t\"\250\006\n\027PayByRegisteredCardData\022\016\n\006a" +
+      "mount\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\022\n\nbuyer_" +
+      "addr\030\003 \001(\t\022\023\n\013buyer_email\030\004 \001(\t\022\022\n\nbuyer" +
+      "_name\030\005 \001(\t\022\026\n\016buyer_postcode\030\006 \001(\t\022\021\n\tb" +
+      "uyer_tel\030\007 \001(\t\022\025\n\rcancel_amount\030\010 \001(\t\022.\n" +
+      "\016cancel_history\030\t \003(\0132\026.card_v2.CancelHi" +
+      "story\022\025\n\rcancel_reason\030\n \001(\t\022\033\n\023cancel_r" +
+      "eceipt_urls\030\013 \003(\t\022\024\n\014cancelled_at\030\014 \001(\005\022" +
+      "\021\n\tcard_code\030\r \001(\t\022\021\n\tcard_name\030\016 \001(\t\022\022\n" +
+      "\nbin_number\030\017 \001(\t\022\030\n\020card_installment\030\020 " +
+      "\001(\005\022\021\n\tcard_type\030\021 \001(\005\022\033\n\023cash_receipt_i" +
+      "ssued\030\022 \001(\010\022\017\n\007channel\030\023 \001(\t\022\020\n\010currency" +
+      "\030\024 \001(\t\022\023\n\013custom_data\030\025 \001(\t\022\020\n\010card_uid\030" +
+      "\026 \001(\t\022\032\n\022customer_uid_usage\030\027 \001(\t\022\023\n\013fai" +
+      "l_reason\030\030 \001(\t\022\021\n\tfailed_at\030\031 \001(\005\022\017\n\007imp" +
+      "_uid\030\032 \001(\t\022\024\n\014merchant_uid\030\033 \001(\t\022\022\n\norde" +
+      "r_name\030\034 \001(\t\022\017\n\007paid_at\030\035 \001(\005\022\022\n\npay_met" +
+      "hod\030\036 \001(\t\022\r\n\005pg_id\030\037 \001(\t\022\023\n\013pg_provider\030" +
+      "  \001(\t\022\016\n\006pg_tid\030! \001(\t\022\023\n\013receipt_url\030\" \001" +
+      "(\t\022\022\n\nstarted_at\030# \001(\005\022\016\n\006status\030$ \001(\t\022\022" +
+      "\n\nuser_agent\030% \001(\t\"p\n\033PayByRegisteredCar" +
+      "dResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t" +
+      "\0222\n\010response\030\003 \001(\0132 .card_v2.PayByRegist" +
+      "eredCardData\"j\n\rCancelHistory\022\016\n\006pg_tid\030" +
+      "\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n\014cancelled_at\030\003 " +
+      "\001(\005\022\016\n\006reason\030\004 \001(\t\022\023\n\013receipt_url\030\005 \001(\t" +
+      "\"{\n\030CancelCardPaymentRequest\022\017\n\007imp_uid\030" +
+      "\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n\014merchant_uid\030\003 " +
+      "\001(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\016\n\006reason\030" +
+      "\005 \001(\t\"o\n\032CancelCardPaymenttResponse\022\014\n\004c" +
+      "ode\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0222\n\010response\030\003" +
+      " \001(\0132 .card_v2.PayByRegisteredCardData2\314" +
+      "\005\n\022PaymentCardService\022w\n\021CardRegisterV2R" +
+      "PC\022\034.card_v2.CardRegisterRequest\032\035.card_" +
+      "v2.CardRegisterResponse\"%\202\323\344\223\002\037\"\032/api/pa" +
+      "yments/v2/card/info:\001*\022|\n\020GetCardInfoV2R" +
+      "PC\022\033.card_v2.GetCardInfoRequest\032\034.card_v" +
+      "2.GetCardInfoResponse\"-\202\323\344\223\002\'\022%/api/paym" +
+      "ents/v2/card/info/{card_uid}\022\205\001\n\023DeleteC" +
+      "ardInfoV2RPC\022\036.card_v2.DeleteCardInfoReq" +
+      "uest\032\037.card_v2.DeleteCardInfoResponse\"-\202" +
+      "\323\344\223\002\'*%/api/payments/v2/card/info/{card_" +
+      "uid}\022\224\001\n\031PayByRegiseteredCardV2RPC\022#.car" +
+      "d_v2.PayByRegisteredCardRequest\032$.card_v" +
+      "2.PayByRegisteredCardResponse\",\202\323\344\223\002&\"$/" +
+      "api/payments/v2/card/pay/registered\022\237\001\n\032" +
+      "CancelRegiseteredCardV2RPC\022!.card_v2.Can" +
+      "celCardPaymentRequest\032#.card_v2.CancelCa" +
+      "rdPaymenttResponse\"9\202\323\344\223\0023\"1/api/payment" +
+      "s/v2/card/cancel/registered/{imp_uid}BMZ" +
+      "8github.com/iamport/interface/gen_src/go" +
+      "/v2/payments/card\252\002\020V2.Payments.Cardb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21018,7 +21169,7 @@ public final class Card {
     internal_static_card_v2_PayByRegisteredCardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_card_v2_PayByRegisteredCardRequest_descriptor,
-        new java.lang.String[] { "CardUid", "MerchantUid", "Amount", "DutyFreeAmount", "OrderName", "CardInstallment", "InterestFreeByMerchant", "CustomData", "CallbackUrl", });
+        new java.lang.String[] { "CardUid", "MerchantUid", "Amount", "DutyFreeAmount", "OrderName", "CardInstallment", "InterestFreeByMerchant", "CustomData", "CallbackUrl", "Email", });
     internal_static_card_v2_PayByRegisteredCardData_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_card_v2_PayByRegisteredCardData_fieldAccessorTable = new

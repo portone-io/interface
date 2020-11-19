@@ -2524,7 +2524,8 @@ proto.card_v2.PayByRegisteredCardRequest.toObject = function(includeInstance, ms
     cardInstallment: jspb.Message.getFieldWithDefault(msg, 6, 0),
     interestFreeByMerchant: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
     customData: jspb.Message.getFieldWithDefault(msg, 8, ""),
-    callbackUrl: jspb.Message.getFieldWithDefault(msg, 9, "")
+    callbackUrl: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    email: jspb.Message.getFieldWithDefault(msg, 10, "")
   };
 
   if (includeInstance) {
@@ -2596,6 +2597,10 @@ proto.card_v2.PayByRegisteredCardRequest.deserializeBinaryFromReader = function(
     case 9:
       var value = /** @type {string} */ (reader.readString());
       msg.setCallbackUrl(value);
+      break;
+    case 10:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setEmail(value);
       break;
     default:
       reader.skipField();
@@ -2686,6 +2691,13 @@ proto.card_v2.PayByRegisteredCardRequest.serializeBinaryToWriter = function(mess
   if (f.length > 0) {
     writer.writeString(
       9,
+      f
+    );
+  }
+  f = message.getEmail();
+  if (f.length > 0) {
+    writer.writeString(
+      10,
       f
     );
   }
@@ -2851,6 +2863,24 @@ proto.card_v2.PayByRegisteredCardRequest.prototype.getCallbackUrl = function() {
  */
 proto.card_v2.PayByRegisteredCardRequest.prototype.setCallbackUrl = function(value) {
   return jspb.Message.setProto3StringField(this, 9, value);
+};
+
+
+/**
+ * optional string email = 10;
+ * @return {string}
+ */
+proto.card_v2.PayByRegisteredCardRequest.prototype.getEmail = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.card_v2.PayByRegisteredCardRequest} returns this
+ */
+proto.card_v2.PayByRegisteredCardRequest.prototype.setEmail = function(value) {
+  return jspb.Message.setProto3StringField(this, 10, value);
 };
 
 

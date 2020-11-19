@@ -109,6 +109,7 @@ const PayByRegisteredCardRequest$json = const {
     const {'1': 'interest_free_by_merchant', '3': 7, '4': 1, '5': 8, '10': 'interestFreeByMerchant'},
     const {'1': 'custom_data', '3': 8, '4': 1, '5': 9, '10': 'customData'},
     const {'1': 'callback_url', '3': 9, '4': 1, '5': 9, '10': 'callbackUrl'},
+    const {'1': 'email', '3': 10, '4': 1, '5': 9, '10': 'email'},
   ],
 };
 

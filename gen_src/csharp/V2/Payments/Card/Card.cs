@@ -25,95 +25,97 @@ namespace V2.Payments.Card {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cht2Mi9wYXltZW50cy9jYXJkL2NhcmQucHJvdG8SB2NhcmRfdjIaHGdvb2ds",
-            "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i5gEKE0NhcmRSZWdpc3RlclJlcXVl",
+            "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i8gEKE0NhcmRSZWdpc3RlclJlcXVl",
             "c3QSEAoIY2FyZF91aWQYASABKAkSEwoLY2FyZF9udW1iZXIYAiABKAkSDgoG",
             "ZXhwaXJ5GAMgASgJEg0KBWJpcnRoGAQgASgJEhIKCnB3ZF8yZGlnaXQYBSAB",
             "KAkSFQoNY3VzdG9tZXJfbmFtZRgGIAEoCRIUCgxjdXN0b21lcl90ZWwYByAB",
             "KAkSFgoOY3VzdG9tZXJfZW1haWwYCCABKAkSFQoNY3VzdG9tZXJfYWRkchgJ",
-            "IAEoCRIZChFjdXN0b21lcl9wb3N0Y29kZRgKIAEoCSKSAgoWQ2FyZFJlZ2lz",
-            "dGVyUmVzdWx0RGF0YRIQCghjYXJkX3VpZBgBIAEoCRIRCgljYXJkX25hbWUY",
-            "AiABKAkSEQoJY2FyZF9jb2RlGAMgASgJEhMKC2Jpbl9udW1icmVyGAQgASgJ",
-            "EhEKCWNhcmRfdHlwZRgFIAEoBRIVCg1jdXN0b21lcl9uYW1lGAYgASgJEhQK",
-            "DGN1c3RvbWVyX3RlbBgHIAEoCRIWCg5jdXN0b21lcl9lbWFpbBgIIAEoCRIV",
-            "Cg1jdXN0b21lcl9hZGRyGAkgASgJEhkKEWN1c3RvbWVyX3Bvc3Rjb2RlGAog",
-            "ASgJEhAKCGluc2VydGVkGAsgASgFEg8KB3VwZGF0ZWQYDCABKAUiaAoUQ2Fy",
-            "ZFJlZ2lzdGVyUmVzcG9uc2USDAoEY29kZRgBIAEoBRIPCgdtZXNzYWdlGAIg",
-            "ASgJEjEKCHJlc3BvbnNlGAMgASgLMh8uY2FyZF92Mi5DYXJkUmVnaXN0ZXJS",
-            "ZXN1bHREYXRhIiYKEkdldENhcmRJbmZvUmVxdWVzdBIQCghjYXJkX3VpZBgB",
-            "IAEoCSKOAgoPR2V0Q2FyZEluZm9EYXRhEhAKCGNhcmRfdWlkGAEgASgJEhUK",
-            "DWNhcmRfcHJvdmlkZXIYAiABKAkSEQoJY2FyZF9jb2RlGAMgASgJEhIKCmJp",
-            "bl9udW1iZXIYBCABKAkSEQoJY2FyZF90eXBlGAUgASgFEhUKDWN1c3RvbWVy",
-            "X25hbWUYBiABKAkSFAoMY3VzdG9tZXJfdGVsGAcgASgJEhYKDmN1c3RvbWVy",
-            "X2VtYWlsGAggASgJEhUKDWN1c3RvbWVyX2FkZHIYCSABKAkSGQoRY3VzdG9t",
-            "ZXJfcG9zdGNvZGUYCiABKAkSEAoIaW5zZXJ0ZWQYCyABKAUSDwoHdXBkYXRl",
-            "ZBgMIAEoBSJgChNHZXRDYXJkSW5mb1Jlc3BvbnNlEgwKBGNvZGUYASABKAUS",
-            "DwoHbWVzc2FnZRgCIAEoCRIqCghyZXNwb25zZRgDIAEoCzIYLmNhcmRfdjIu",
-            "R2V0Q2FyZEluZm9EYXRhIikKFURlbGV0ZUNhcmRJbmZvUmVxdWVzdBIQCghj",
-            "YXJkX3VpZBgBIAEoCSI3ChZEZWxldGVDYXJkSW5mb1Jlc3BvbnNlEgwKBGNv",
-            "ZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCSLqAQoaUGF5QnlSZWdpc3RlcmVk",
-            "Q2FyZFJlcXVlc3QSEAoIY2FyZF91aWQYASABKAkSFAoMbWVyY2hhbnRfdWlk",
-            "GAIgASgJEg4KBmFtb3VudBgDIAEoCRIYChBkdXR5X2ZyZWVfYW1vdW50GAQg",
-            "ASgJEhIKCm9yZGVyX25hbWUYBSABKAkSGAoQY2FyZF9pbnN0YWxsbWVudBgG",
-            "IAEoBRIhChlpbnRlcmVzdF9mcmVlX2J5X21lcmNoYW50GAcgASgIEhMKC2N1",
-            "c3RvbV9kYXRhGAggASgJEhQKDGNhbGxiYWNrX3VybBgJIAEoCSKoBgoXUGF5",
-            "QnlSZWdpc3RlcmVkQ2FyZERhdGESDgoGYW1vdW50GAEgASgJEhEKCWFwcGx5",
-            "X251bRgCIAEoCRISCgpidXllcl9hZGRyGAMgASgJEhMKC2J1eWVyX2VtYWls",
-            "GAQgASgJEhIKCmJ1eWVyX25hbWUYBSABKAkSFgoOYnV5ZXJfcG9zdGNvZGUY",
-            "BiABKAkSEQoJYnV5ZXJfdGVsGAcgASgJEhUKDWNhbmNlbF9hbW91bnQYCCAB",
-            "KAkSLgoOY2FuY2VsX2hpc3RvcnkYCSADKAsyFi5jYXJkX3YyLkNhbmNlbEhp",
-            "c3RvcnkSFQoNY2FuY2VsX3JlYXNvbhgKIAEoCRIbChNjYW5jZWxfcmVjZWlw",
-            "dF91cmxzGAsgAygJEhQKDGNhbmNlbGxlZF9hdBgMIAEoBRIRCgljYXJkX2Nv",
-            "ZGUYDSABKAkSEQoJY2FyZF9uYW1lGA4gASgJEhIKCmJpbl9udW1iZXIYDyAB",
-            "KAkSGAoQY2FyZF9pbnN0YWxsbWVudBgQIAEoBRIRCgljYXJkX3R5cGUYESAB",
-            "KAUSGwoTY2FzaF9yZWNlaXB0X2lzc3VlZBgSIAEoCBIPCgdjaGFubmVsGBMg",
-            "ASgJEhAKCGN1cnJlbmN5GBQgASgJEhMKC2N1c3RvbV9kYXRhGBUgASgJEhAK",
-            "CGNhcmRfdWlkGBYgASgJEhoKEmN1c3RvbWVyX3VpZF91c2FnZRgXIAEoCRIT",
-            "CgtmYWlsX3JlYXNvbhgYIAEoCRIRCglmYWlsZWRfYXQYGSABKAUSDwoHaW1w",
-            "X3VpZBgaIAEoCRIUCgxtZXJjaGFudF91aWQYGyABKAkSEgoKb3JkZXJfbmFt",
-            "ZRgcIAEoCRIPCgdwYWlkX2F0GB0gASgFEhIKCnBheV9tZXRob2QYHiABKAkS",
-            "DQoFcGdfaWQYHyABKAkSEwoLcGdfcHJvdmlkZXIYICABKAkSDgoGcGdfdGlk",
-            "GCEgASgJEhMKC3JlY2VpcHRfdXJsGCIgASgJEhIKCnN0YXJ0ZWRfYXQYIyAB",
-            "KAUSDgoGc3RhdHVzGCQgASgJEhIKCnVzZXJfYWdlbnQYJSABKAkicAobUGF5",
-            "QnlSZWdpc3RlcmVkQ2FyZFJlc3BvbnNlEgwKBGNvZGUYASABKAUSDwoHbWVz",
-            "c2FnZRgCIAEoCRIyCghyZXNwb25zZRgDIAEoCzIgLmNhcmRfdjIuUGF5QnlS",
-            "ZWdpc3RlcmVkQ2FyZERhdGEiagoNQ2FuY2VsSGlzdG9yeRIOCgZwZ190aWQY",
-            "ASABKAkSDgoGYW1vdW50GAIgASgJEhQKDGNhbmNlbGxlZF9hdBgDIAEoBRIO",
-            "CgZyZWFzb24YBCABKAkSEwoLcmVjZWlwdF91cmwYBSABKAkiewoYQ2FuY2Vs",
-            "Q2FyZFBheW1lbnRSZXF1ZXN0Eg8KB2ltcF91aWQYASABKAkSDgoGYW1vdW50",
-            "GAIgASgJEhQKDG1lcmNoYW50X3VpZBgDIAEoCRIYChBkdXR5X2ZyZWVfYW1v",
-            "dW50GAQgASgJEg4KBnJlYXNvbhgFIAEoCSJvChpDYW5jZWxDYXJkUGF5bWVu",
-            "dHRSZXNwb25zZRIMCgRjb2RlGAEgASgFEg8KB21lc3NhZ2UYAiABKAkSMgoI",
-            "cmVzcG9uc2UYAyABKAsyIC5jYXJkX3YyLlBheUJ5UmVnaXN0ZXJlZENhcmRE",
-            "YXRhMswFChJQYXltZW50Q2FyZFNlcnZpY2USdwoRQ2FyZFJlZ2lzdGVyVjJS",
-            "UEMSHC5jYXJkX3YyLkNhcmRSZWdpc3RlclJlcXVlc3QaHS5jYXJkX3YyLkNh",
-            "cmRSZWdpc3RlclJlc3BvbnNlIiWC0+STAh8iGi9hcGkvcGF5bWVudHMvdjIv",
-            "Y2FyZC9pbmZvOgEqEnwKEEdldENhcmRJbmZvVjJSUEMSGy5jYXJkX3YyLkdl",
-            "dENhcmRJbmZvUmVxdWVzdBocLmNhcmRfdjIuR2V0Q2FyZEluZm9SZXNwb25z",
-            "ZSItgtPkkwInEiUvYXBpL3BheW1lbnRzL3YyL2NhcmQvaW5mby97Y2FyZF91",
-            "aWR9EoUBChNEZWxldGVDYXJkSW5mb1YyUlBDEh4uY2FyZF92Mi5EZWxldGVD",
-            "YXJkSW5mb1JlcXVlc3QaHy5jYXJkX3YyLkRlbGV0ZUNhcmRJbmZvUmVzcG9u",
-            "c2UiLYLT5JMCJyolL2FwaS9wYXltZW50cy92Mi9jYXJkL2luZm8ve2NhcmRf",
-            "dWlkfRKUAQoZUGF5QnlSZWdpc2V0ZXJlZENhcmRWMlJQQxIjLmNhcmRfdjIu",
-            "UGF5QnlSZWdpc3RlcmVkQ2FyZFJlcXVlc3QaJC5jYXJkX3YyLlBheUJ5UmVn",
-            "aXN0ZXJlZENhcmRSZXNwb25zZSIsgtPkkwImIiQvYXBpL3BheW1lbnRzL3Yy",
-            "L2NhcmQvcGF5L3JlZ2lzdGVyZWQSnwEKGkNhbmNlbFJlZ2lzZXRlcmVkQ2Fy",
-            "ZFYyUlBDEiEuY2FyZF92Mi5DYW5jZWxDYXJkUGF5bWVudFJlcXVlc3QaIy5j",
-            "YXJkX3YyLkNhbmNlbENhcmRQYXltZW50dFJlc3BvbnNlIjmC0+STAjMiMS9h",
-            "cGkvcGF5bWVudHMvdjIvY2FyZC9jYW5jZWwvcmVnaXN0ZXJlZC97aW1wX3Vp",
-            "ZH1CTVo4Z2l0aHViLmNvbS9pYW1wb3J0L2ludGVyZmFjZS9nZW5fc3JjL2dv",
-            "L3YyL3BheW1lbnRzL2NhcmSqAhBWMi5QYXltZW50cy5DYXJkYgZwcm90bzM="));
+            "IAEoCRIZChFjdXN0b21lcl9wb3N0Y29kZRgKIAEoCRIKCgJwZxgLIAEoCSK2",
+            "AgoWQ2FyZFJlZ2lzdGVyUmVzdWx0RGF0YRIQCghjYXJkX3VpZBgBIAEoCRIR",
+            "CgljYXJkX25hbWUYAiABKAkSEQoJY2FyZF9jb2RlGAMgASgJEhMKC2Jpbl9u",
+            "dW1icmVyGAQgASgJEhEKCWNhcmRfdHlwZRgFIAEoBRIVCg1jdXN0b21lcl9u",
+            "YW1lGAYgASgJEhQKDGN1c3RvbWVyX3RlbBgHIAEoCRIWCg5jdXN0b21lcl9l",
+            "bWFpbBgIIAEoCRIVCg1jdXN0b21lcl9hZGRyGAkgASgJEhkKEWN1c3RvbWVy",
+            "X3Bvc3Rjb2RlGAogASgJEhAKCGluc2VydGVkGAsgASgFEg8KB3VwZGF0ZWQY",
+            "DCABKAUSEwoLcGdfcHJvdmlkZXIYDSABKAkSDQoFcGdfaWQYDiABKAkiaAoU",
+            "Q2FyZFJlZ2lzdGVyUmVzcG9uc2USDAoEY29kZRgBIAEoBRIPCgdtZXNzYWdl",
+            "GAIgASgJEjEKCHJlc3BvbnNlGAMgASgLMh8uY2FyZF92Mi5DYXJkUmVnaXN0",
+            "ZXJSZXN1bHREYXRhIiYKEkdldENhcmRJbmZvUmVxdWVzdBIQCghjYXJkX3Vp",
+            "ZBgBIAEoCSKOAgoPR2V0Q2FyZEluZm9EYXRhEhAKCGNhcmRfdWlkGAEgASgJ",
+            "EhUKDWNhcmRfcHJvdmlkZXIYAiABKAkSEQoJY2FyZF9jb2RlGAMgASgJEhIK",
+            "CmJpbl9udW1iZXIYBCABKAkSEQoJY2FyZF90eXBlGAUgASgFEhUKDWN1c3Rv",
+            "bWVyX25hbWUYBiABKAkSFAoMY3VzdG9tZXJfdGVsGAcgASgJEhYKDmN1c3Rv",
+            "bWVyX2VtYWlsGAggASgJEhUKDWN1c3RvbWVyX2FkZHIYCSABKAkSGQoRY3Vz",
+            "dG9tZXJfcG9zdGNvZGUYCiABKAkSEAoIaW5zZXJ0ZWQYCyABKAUSDwoHdXBk",
+            "YXRlZBgMIAEoBSJgChNHZXRDYXJkSW5mb1Jlc3BvbnNlEgwKBGNvZGUYASAB",
+            "KAUSDwoHbWVzc2FnZRgCIAEoCRIqCghyZXNwb25zZRgDIAEoCzIYLmNhcmRf",
+            "djIuR2V0Q2FyZEluZm9EYXRhIikKFURlbGV0ZUNhcmRJbmZvUmVxdWVzdBIQ",
+            "CghjYXJkX3VpZBgBIAEoCSI3ChZEZWxldGVDYXJkSW5mb1Jlc3BvbnNlEgwK",
+            "BGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCSL5AQoaUGF5QnlSZWdpc3Rl",
+            "cmVkQ2FyZFJlcXVlc3QSEAoIY2FyZF91aWQYASABKAkSFAoMbWVyY2hhbnRf",
+            "dWlkGAIgASgJEg4KBmFtb3VudBgDIAEoCRIYChBkdXR5X2ZyZWVfYW1vdW50",
+            "GAQgASgJEhIKCm9yZGVyX25hbWUYBSABKAkSGAoQY2FyZF9pbnN0YWxsbWVu",
+            "dBgGIAEoBRIhChlpbnRlcmVzdF9mcmVlX2J5X21lcmNoYW50GAcgASgIEhMK",
+            "C2N1c3RvbV9kYXRhGAggASgJEhQKDGNhbGxiYWNrX3VybBgJIAEoCRINCgVl",
+            "bWFpbBgKIAEoCSKoBgoXUGF5QnlSZWdpc3RlcmVkQ2FyZERhdGESDgoGYW1v",
+            "dW50GAEgASgJEhEKCWFwcGx5X251bRgCIAEoCRISCgpidXllcl9hZGRyGAMg",
+            "ASgJEhMKC2J1eWVyX2VtYWlsGAQgASgJEhIKCmJ1eWVyX25hbWUYBSABKAkS",
+            "FgoOYnV5ZXJfcG9zdGNvZGUYBiABKAkSEQoJYnV5ZXJfdGVsGAcgASgJEhUK",
+            "DWNhbmNlbF9hbW91bnQYCCABKAkSLgoOY2FuY2VsX2hpc3RvcnkYCSADKAsy",
+            "Fi5jYXJkX3YyLkNhbmNlbEhpc3RvcnkSFQoNY2FuY2VsX3JlYXNvbhgKIAEo",
+            "CRIbChNjYW5jZWxfcmVjZWlwdF91cmxzGAsgAygJEhQKDGNhbmNlbGxlZF9h",
+            "dBgMIAEoBRIRCgljYXJkX2NvZGUYDSABKAkSEQoJY2FyZF9uYW1lGA4gASgJ",
+            "EhIKCmJpbl9udW1iZXIYDyABKAkSGAoQY2FyZF9pbnN0YWxsbWVudBgQIAEo",
+            "BRIRCgljYXJkX3R5cGUYESABKAUSGwoTY2FzaF9yZWNlaXB0X2lzc3VlZBgS",
+            "IAEoCBIPCgdjaGFubmVsGBMgASgJEhAKCGN1cnJlbmN5GBQgASgJEhMKC2N1",
+            "c3RvbV9kYXRhGBUgASgJEhAKCGNhcmRfdWlkGBYgASgJEhoKEmN1c3RvbWVy",
+            "X3VpZF91c2FnZRgXIAEoCRITCgtmYWlsX3JlYXNvbhgYIAEoCRIRCglmYWls",
+            "ZWRfYXQYGSABKAUSDwoHaW1wX3VpZBgaIAEoCRIUCgxtZXJjaGFudF91aWQY",
+            "GyABKAkSEgoKb3JkZXJfbmFtZRgcIAEoCRIPCgdwYWlkX2F0GB0gASgFEhIK",
+            "CnBheV9tZXRob2QYHiABKAkSDQoFcGdfaWQYHyABKAkSEwoLcGdfcHJvdmlk",
+            "ZXIYICABKAkSDgoGcGdfdGlkGCEgASgJEhMKC3JlY2VpcHRfdXJsGCIgASgJ",
+            "EhIKCnN0YXJ0ZWRfYXQYIyABKAUSDgoGc3RhdHVzGCQgASgJEhIKCnVzZXJf",
+            "YWdlbnQYJSABKAkicAobUGF5QnlSZWdpc3RlcmVkQ2FyZFJlc3BvbnNlEgwK",
+            "BGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRIyCghyZXNwb25zZRgDIAEo",
+            "CzIgLmNhcmRfdjIuUGF5QnlSZWdpc3RlcmVkQ2FyZERhdGEiagoNQ2FuY2Vs",
+            "SGlzdG9yeRIOCgZwZ190aWQYASABKAkSDgoGYW1vdW50GAIgASgJEhQKDGNh",
+            "bmNlbGxlZF9hdBgDIAEoBRIOCgZyZWFzb24YBCABKAkSEwoLcmVjZWlwdF91",
+            "cmwYBSABKAkiewoYQ2FuY2VsQ2FyZFBheW1lbnRSZXF1ZXN0Eg8KB2ltcF91",
+            "aWQYASABKAkSDgoGYW1vdW50GAIgASgJEhQKDG1lcmNoYW50X3VpZBgDIAEo",
+            "CRIYChBkdXR5X2ZyZWVfYW1vdW50GAQgASgJEg4KBnJlYXNvbhgFIAEoCSJv",
+            "ChpDYW5jZWxDYXJkUGF5bWVudHRSZXNwb25zZRIMCgRjb2RlGAEgASgFEg8K",
+            "B21lc3NhZ2UYAiABKAkSMgoIcmVzcG9uc2UYAyABKAsyIC5jYXJkX3YyLlBh",
+            "eUJ5UmVnaXN0ZXJlZENhcmREYXRhMswFChJQYXltZW50Q2FyZFNlcnZpY2US",
+            "dwoRQ2FyZFJlZ2lzdGVyVjJSUEMSHC5jYXJkX3YyLkNhcmRSZWdpc3RlclJl",
+            "cXVlc3QaHS5jYXJkX3YyLkNhcmRSZWdpc3RlclJlc3BvbnNlIiWC0+STAh8i",
+            "Gi9hcGkvcGF5bWVudHMvdjIvY2FyZC9pbmZvOgEqEnwKEEdldENhcmRJbmZv",
+            "VjJSUEMSGy5jYXJkX3YyLkdldENhcmRJbmZvUmVxdWVzdBocLmNhcmRfdjIu",
+            "R2V0Q2FyZEluZm9SZXNwb25zZSItgtPkkwInEiUvYXBpL3BheW1lbnRzL3Yy",
+            "L2NhcmQvaW5mby97Y2FyZF91aWR9EoUBChNEZWxldGVDYXJkSW5mb1YyUlBD",
+            "Eh4uY2FyZF92Mi5EZWxldGVDYXJkSW5mb1JlcXVlc3QaHy5jYXJkX3YyLkRl",
+            "bGV0ZUNhcmRJbmZvUmVzcG9uc2UiLYLT5JMCJyolL2FwaS9wYXltZW50cy92",
+            "Mi9jYXJkL2luZm8ve2NhcmRfdWlkfRKUAQoZUGF5QnlSZWdpc2V0ZXJlZENh",
+            "cmRWMlJQQxIjLmNhcmRfdjIuUGF5QnlSZWdpc3RlcmVkQ2FyZFJlcXVlc3Qa",
+            "JC5jYXJkX3YyLlBheUJ5UmVnaXN0ZXJlZENhcmRSZXNwb25zZSIsgtPkkwIm",
+            "IiQvYXBpL3BheW1lbnRzL3YyL2NhcmQvcGF5L3JlZ2lzdGVyZWQSnwEKGkNh",
+            "bmNlbFJlZ2lzZXRlcmVkQ2FyZFYyUlBDEiEuY2FyZF92Mi5DYW5jZWxDYXJk",
+            "UGF5bWVudFJlcXVlc3QaIy5jYXJkX3YyLkNhbmNlbENhcmRQYXltZW50dFJl",
+            "c3BvbnNlIjmC0+STAjMiMS9hcGkvcGF5bWVudHMvdjIvY2FyZC9jYW5jZWwv",
+            "cmVnaXN0ZXJlZC97aW1wX3VpZH1CTVo4Z2l0aHViLmNvbS9pYW1wb3J0L2lu",
+            "dGVyZmFjZS9nZW5fc3JjL2dvL3YyL3BheW1lbnRzL2NhcmSqAhBWMi5QYXlt",
+            "ZW50cy5DYXJkYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.Annotations.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.CardRegisterRequest), global::V2.Payments.Card.CardRegisterRequest.Parser, new[]{ "CardUid", "CardNumber", "Expiry", "Birth", "Pwd2Digit", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.CardRegisterResultData), global::V2.Payments.Card.CardRegisterResultData.Parser, new[]{ "CardUid", "CardName", "CardCode", "BinNumbrer", "CardType", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", "Inserted", "Updated" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.CardRegisterRequest), global::V2.Payments.Card.CardRegisterRequest.Parser, new[]{ "CardUid", "CardNumber", "Expiry", "Birth", "Pwd2Digit", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", "Pg" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.CardRegisterResultData), global::V2.Payments.Card.CardRegisterResultData.Parser, new[]{ "CardUid", "CardName", "CardCode", "BinNumbrer", "CardType", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", "Inserted", "Updated", "PgProvider", "PgId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.CardRegisterResponse), global::V2.Payments.Card.CardRegisterResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.GetCardInfoRequest), global::V2.Payments.Card.GetCardInfoRequest.Parser, new[]{ "CardUid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.GetCardInfoData), global::V2.Payments.Card.GetCardInfoData.Parser, new[]{ "CardUid", "CardProvider", "CardCode", "BinNumber", "CardType", "CustomerName", "CustomerTel", "CustomerEmail", "CustomerAddr", "CustomerPostcode", "Inserted", "Updated" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.GetCardInfoResponse), global::V2.Payments.Card.GetCardInfoResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.DeleteCardInfoRequest), global::V2.Payments.Card.DeleteCardInfoRequest.Parser, new[]{ "CardUid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.DeleteCardInfoResponse), global::V2.Payments.Card.DeleteCardInfoResponse.Parser, new[]{ "Code", "Message" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.PayByRegisteredCardRequest), global::V2.Payments.Card.PayByRegisteredCardRequest.Parser, new[]{ "CardUid", "MerchantUid", "Amount", "DutyFreeAmount", "OrderName", "CardInstallment", "InterestFreeByMerchant", "CustomData", "CallbackUrl" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.PayByRegisteredCardRequest), global::V2.Payments.Card.PayByRegisteredCardRequest.Parser, new[]{ "CardUid", "MerchantUid", "Amount", "DutyFreeAmount", "OrderName", "CardInstallment", "InterestFreeByMerchant", "CustomData", "CallbackUrl", "Email" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.PayByRegisteredCardData), global::V2.Payments.Card.PayByRegisteredCardData.Parser, new[]{ "Amount", "ApplyNum", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "BinNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.PayByRegisteredCardResponse), global::V2.Payments.Card.PayByRegisteredCardResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.CancelHistory), global::V2.Payments.Card.CancelHistory.Parser, new[]{ "PgTid", "Amount", "CancelledAt", "Reason", "ReceiptUrl" }, null, null, null, null),
@@ -164,6 +166,7 @@ namespace V2.Payments.Card {
       customerEmail_ = other.customerEmail_;
       customerAddr_ = other.customerAddr_;
       customerPostcode_ = other.customerPostcode_;
+      pg_ = other.pg_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -285,6 +288,17 @@ namespace V2.Payments.Card {
       }
     }
 
+    /// <summary>Field number for the "pg" field.</summary>
+    public const int PgFieldNumber = 11;
+    private string pg_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Pg {
+      get { return pg_; }
+      set {
+        pg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CardRegisterRequest);
@@ -308,6 +322,7 @@ namespace V2.Payments.Card {
       if (CustomerEmail != other.CustomerEmail) return false;
       if (CustomerAddr != other.CustomerAddr) return false;
       if (CustomerPostcode != other.CustomerPostcode) return false;
+      if (Pg != other.Pg) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -324,6 +339,7 @@ namespace V2.Payments.Card {
       if (CustomerEmail.Length != 0) hash ^= CustomerEmail.GetHashCode();
       if (CustomerAddr.Length != 0) hash ^= CustomerAddr.GetHashCode();
       if (CustomerPostcode.Length != 0) hash ^= CustomerPostcode.GetHashCode();
+      if (Pg.Length != 0) hash ^= Pg.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -380,6 +396,10 @@ namespace V2.Payments.Card {
         output.WriteRawTag(82);
         output.WriteString(CustomerPostcode);
       }
+      if (Pg.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Pg);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -429,6 +449,10 @@ namespace V2.Payments.Card {
         output.WriteRawTag(82);
         output.WriteString(CustomerPostcode);
       }
+      if (Pg.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Pg);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -467,6 +491,9 @@ namespace V2.Payments.Card {
       }
       if (CustomerPostcode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerPostcode);
+      }
+      if (Pg.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Pg);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -508,6 +535,9 @@ namespace V2.Payments.Card {
       }
       if (other.CustomerPostcode.Length != 0) {
         CustomerPostcode = other.CustomerPostcode;
+      }
+      if (other.Pg.Length != 0) {
+        Pg = other.Pg;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -561,6 +591,10 @@ namespace V2.Payments.Card {
           }
           case 82: {
             CustomerPostcode = input.ReadString();
+            break;
+          }
+          case 90: {
+            Pg = input.ReadString();
             break;
           }
         }
@@ -617,6 +651,10 @@ namespace V2.Payments.Card {
             CustomerPostcode = input.ReadString();
             break;
           }
+          case 90: {
+            Pg = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -665,6 +703,8 @@ namespace V2.Payments.Card {
       customerPostcode_ = other.customerPostcode_;
       inserted_ = other.inserted_;
       updated_ = other.updated_;
+      pgProvider_ = other.pgProvider_;
+      pgId_ = other.pgId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -811,6 +851,28 @@ namespace V2.Payments.Card {
       }
     }
 
+    /// <summary>Field number for the "pg_provider" field.</summary>
+    public const int PgProviderFieldNumber = 13;
+    private string pgProvider_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PgProvider {
+      get { return pgProvider_; }
+      set {
+        pgProvider_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "pg_id" field.</summary>
+    public const int PgIdFieldNumber = 14;
+    private string pgId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PgId {
+      get { return pgId_; }
+      set {
+        pgId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CardRegisterResultData);
@@ -836,6 +898,8 @@ namespace V2.Payments.Card {
       if (CustomerPostcode != other.CustomerPostcode) return false;
       if (Inserted != other.Inserted) return false;
       if (Updated != other.Updated) return false;
+      if (PgProvider != other.PgProvider) return false;
+      if (PgId != other.PgId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -854,6 +918,8 @@ namespace V2.Payments.Card {
       if (CustomerPostcode.Length != 0) hash ^= CustomerPostcode.GetHashCode();
       if (Inserted != 0) hash ^= Inserted.GetHashCode();
       if (Updated != 0) hash ^= Updated.GetHashCode();
+      if (PgProvider.Length != 0) hash ^= PgProvider.GetHashCode();
+      if (PgId.Length != 0) hash ^= PgId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -918,6 +984,14 @@ namespace V2.Payments.Card {
         output.WriteRawTag(96);
         output.WriteInt32(Updated);
       }
+      if (PgProvider.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(PgProvider);
+      }
+      if (PgId.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(PgId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -975,6 +1049,14 @@ namespace V2.Payments.Card {
         output.WriteRawTag(96);
         output.WriteInt32(Updated);
       }
+      if (PgProvider.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(PgProvider);
+      }
+      if (PgId.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(PgId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1019,6 +1101,12 @@ namespace V2.Payments.Card {
       }
       if (Updated != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Updated);
+      }
+      if (PgProvider.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PgProvider);
+      }
+      if (PgId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PgId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1066,6 +1154,12 @@ namespace V2.Payments.Card {
       }
       if (other.Updated != 0) {
         Updated = other.Updated;
+      }
+      if (other.PgProvider.Length != 0) {
+        PgProvider = other.PgProvider;
+      }
+      if (other.PgId.Length != 0) {
+        PgId = other.PgId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1129,6 +1223,14 @@ namespace V2.Payments.Card {
             Updated = input.ReadInt32();
             break;
           }
+          case 106: {
+            PgProvider = input.ReadString();
+            break;
+          }
+          case 114: {
+            PgId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1189,6 +1291,14 @@ namespace V2.Payments.Card {
           }
           case 96: {
             Updated = input.ReadInt32();
+            break;
+          }
+          case 106: {
+            PgProvider = input.ReadString();
+            break;
+          }
+          case 114: {
+            PgId = input.ReadString();
             break;
           }
         }
@@ -2862,6 +2972,7 @@ namespace V2.Payments.Card {
       interestFreeByMerchant_ = other.interestFreeByMerchant_;
       customData_ = other.customData_;
       callbackUrl_ = other.callbackUrl_;
+      email_ = other.email_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2975,6 +3086,17 @@ namespace V2.Payments.Card {
       }
     }
 
+    /// <summary>Field number for the "email" field.</summary>
+    public const int EmailFieldNumber = 10;
+    private string email_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Email {
+      get { return email_; }
+      set {
+        email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PayByRegisteredCardRequest);
@@ -2997,6 +3119,7 @@ namespace V2.Payments.Card {
       if (InterestFreeByMerchant != other.InterestFreeByMerchant) return false;
       if (CustomData != other.CustomData) return false;
       if (CallbackUrl != other.CallbackUrl) return false;
+      if (Email != other.Email) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3012,6 +3135,7 @@ namespace V2.Payments.Card {
       if (InterestFreeByMerchant != false) hash ^= InterestFreeByMerchant.GetHashCode();
       if (CustomData.Length != 0) hash ^= CustomData.GetHashCode();
       if (CallbackUrl.Length != 0) hash ^= CallbackUrl.GetHashCode();
+      if (Email.Length != 0) hash ^= Email.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3064,6 +3188,10 @@ namespace V2.Payments.Card {
         output.WriteRawTag(74);
         output.WriteString(CallbackUrl);
       }
+      if (Email.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Email);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3109,6 +3237,10 @@ namespace V2.Payments.Card {
         output.WriteRawTag(74);
         output.WriteString(CallbackUrl);
       }
+      if (Email.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Email);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3144,6 +3276,9 @@ namespace V2.Payments.Card {
       }
       if (CallbackUrl.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CallbackUrl);
+      }
+      if (Email.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3182,6 +3317,9 @@ namespace V2.Payments.Card {
       }
       if (other.CallbackUrl.Length != 0) {
         CallbackUrl = other.CallbackUrl;
+      }
+      if (other.Email.Length != 0) {
+        Email = other.Email;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3233,6 +3371,10 @@ namespace V2.Payments.Card {
             CallbackUrl = input.ReadString();
             break;
           }
+          case 82: {
+            Email = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3281,6 +3423,10 @@ namespace V2.Payments.Card {
           }
           case 74: {
             CallbackUrl = input.ReadString();
+            break;
+          }
+          case 82: {
+            Email = input.ReadString();
             break;
           }
         }

@@ -242,6 +242,7 @@ class CardRegisterRequest PROTOBUF_FINAL :
     kCustomerEmailFieldNumber = 8,
     kCustomerAddrFieldNumber = 9,
     kCustomerPostcodeFieldNumber = 10,
+    kPgFieldNumber = 11,
   };
   // string card_uid = 1;
   void clear_card_uid();
@@ -403,6 +404,22 @@ class CardRegisterRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_customer_postcode();
   public:
 
+  // string pg = 11;
+  void clear_pg();
+  const std::string& pg() const;
+  void set_pg(const std::string& value);
+  void set_pg(std::string&& value);
+  void set_pg(const char* value);
+  void set_pg(const char* value, size_t size);
+  std::string* mutable_pg();
+  std::string* release_pg();
+  void set_allocated_pg(std::string* pg);
+  private:
+  const std::string& _internal_pg() const;
+  void _internal_set_pg(const std::string& value);
+  std::string* _internal_mutable_pg();
+  public:
+
   // @@protoc_insertion_point(class_scope:card_v2.CardRegisterRequest)
  private:
   class _Internal;
@@ -420,6 +437,7 @@ class CardRegisterRequest PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_email_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_addr_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_postcode_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr pg_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_v2_2fpayments_2fcard_2fcard_2eproto;
 };
@@ -547,6 +565,8 @@ class CardRegisterResultData PROTOBUF_FINAL :
     kCustomerEmailFieldNumber = 8,
     kCustomerAddrFieldNumber = 9,
     kCustomerPostcodeFieldNumber = 10,
+    kPgProviderFieldNumber = 13,
+    kPgIdFieldNumber = 14,
     kCardTypeFieldNumber = 5,
     kInsertedFieldNumber = 11,
     kUpdatedFieldNumber = 12,
@@ -695,6 +715,38 @@ class CardRegisterResultData PROTOBUF_FINAL :
   std::string* _internal_mutable_customer_postcode();
   public:
 
+  // string pg_provider = 13;
+  void clear_pg_provider();
+  const std::string& pg_provider() const;
+  void set_pg_provider(const std::string& value);
+  void set_pg_provider(std::string&& value);
+  void set_pg_provider(const char* value);
+  void set_pg_provider(const char* value, size_t size);
+  std::string* mutable_pg_provider();
+  std::string* release_pg_provider();
+  void set_allocated_pg_provider(std::string* pg_provider);
+  private:
+  const std::string& _internal_pg_provider() const;
+  void _internal_set_pg_provider(const std::string& value);
+  std::string* _internal_mutable_pg_provider();
+  public:
+
+  // string pg_id = 14;
+  void clear_pg_id();
+  const std::string& pg_id() const;
+  void set_pg_id(const std::string& value);
+  void set_pg_id(std::string&& value);
+  void set_pg_id(const char* value);
+  void set_pg_id(const char* value, size_t size);
+  std::string* mutable_pg_id();
+  std::string* release_pg_id();
+  void set_allocated_pg_id(std::string* pg_id);
+  private:
+  const std::string& _internal_pg_id() const;
+  void _internal_set_pg_id(const std::string& value);
+  std::string* _internal_mutable_pg_id();
+  public:
+
   // int32 card_type = 5;
   void clear_card_type();
   ::PROTOBUF_NAMESPACE_ID::int32 card_type() const;
@@ -738,6 +790,8 @@ class CardRegisterResultData PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_email_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_addr_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_postcode_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr pg_provider_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr pg_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 card_type_;
   ::PROTOBUF_NAMESPACE_ID::int32 inserted_;
   ::PROTOBUF_NAMESPACE_ID::int32 updated_;
@@ -1980,6 +2034,7 @@ class PayByRegisteredCardRequest PROTOBUF_FINAL :
     kOrderNameFieldNumber = 5,
     kCustomDataFieldNumber = 8,
     kCallbackUrlFieldNumber = 9,
+    kEmailFieldNumber = 10,
     kCardInstallmentFieldNumber = 6,
     kInterestFreeByMerchantFieldNumber = 7,
   };
@@ -2095,6 +2150,22 @@ class PayByRegisteredCardRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_callback_url();
   public:
 
+  // string email = 10;
+  void clear_email();
+  const std::string& email() const;
+  void set_email(const std::string& value);
+  void set_email(std::string&& value);
+  void set_email(const char* value);
+  void set_email(const char* value, size_t size);
+  std::string* mutable_email();
+  std::string* release_email();
+  void set_allocated_email(std::string* email);
+  private:
+  const std::string& _internal_email() const;
+  void _internal_set_email(const std::string& value);
+  std::string* _internal_mutable_email();
+  public:
+
   // int32 card_installment = 6;
   void clear_card_installment();
   ::PROTOBUF_NAMESPACE_ID::int32 card_installment() const;
@@ -2127,6 +2198,7 @@ class PayByRegisteredCardRequest PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr order_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr custom_data_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr callback_url_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr email_;
   ::PROTOBUF_NAMESPACE_ID::int32 card_installment_;
   bool interest_free_by_merchant_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -4291,6 +4363,68 @@ inline void CardRegisterRequest::set_allocated_customer_postcode(std::string* cu
   // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterRequest.customer_postcode)
 }
 
+// string pg = 11;
+inline void CardRegisterRequest::clear_pg() {
+  pg_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CardRegisterRequest::pg() const {
+  // @@protoc_insertion_point(field_get:card_v2.CardRegisterRequest.pg)
+  return _internal_pg();
+}
+inline void CardRegisterRequest::set_pg(const std::string& value) {
+  _internal_set_pg(value);
+  // @@protoc_insertion_point(field_set:card_v2.CardRegisterRequest.pg)
+}
+inline std::string* CardRegisterRequest::mutable_pg() {
+  // @@protoc_insertion_point(field_mutable:card_v2.CardRegisterRequest.pg)
+  return _internal_mutable_pg();
+}
+inline const std::string& CardRegisterRequest::_internal_pg() const {
+  return pg_.Get();
+}
+inline void CardRegisterRequest::_internal_set_pg(const std::string& value) {
+  
+  pg_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CardRegisterRequest::set_pg(std::string&& value) {
+  
+  pg_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:card_v2.CardRegisterRequest.pg)
+}
+inline void CardRegisterRequest::set_pg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  pg_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:card_v2.CardRegisterRequest.pg)
+}
+inline void CardRegisterRequest::set_pg(const char* value,
+    size_t size) {
+  
+  pg_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:card_v2.CardRegisterRequest.pg)
+}
+inline std::string* CardRegisterRequest::_internal_mutable_pg() {
+  
+  return pg_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CardRegisterRequest::release_pg() {
+  // @@protoc_insertion_point(field_release:card_v2.CardRegisterRequest.pg)
+  return pg_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CardRegisterRequest::set_allocated_pg(std::string* pg) {
+  if (pg != nullptr) {
+    
+  } else {
+    
+  }
+  pg_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), pg,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterRequest.pg)
+}
+
 // -------------------------------------------------------------------
 
 // CardRegisterResultData
@@ -4911,6 +5045,130 @@ inline void CardRegisterResultData::_internal_set_updated(::PROTOBUF_NAMESPACE_I
 inline void CardRegisterResultData::set_updated(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_updated(value);
   // @@protoc_insertion_point(field_set:card_v2.CardRegisterResultData.updated)
+}
+
+// string pg_provider = 13;
+inline void CardRegisterResultData::clear_pg_provider() {
+  pg_provider_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CardRegisterResultData::pg_provider() const {
+  // @@protoc_insertion_point(field_get:card_v2.CardRegisterResultData.pg_provider)
+  return _internal_pg_provider();
+}
+inline void CardRegisterResultData::set_pg_provider(const std::string& value) {
+  _internal_set_pg_provider(value);
+  // @@protoc_insertion_point(field_set:card_v2.CardRegisterResultData.pg_provider)
+}
+inline std::string* CardRegisterResultData::mutable_pg_provider() {
+  // @@protoc_insertion_point(field_mutable:card_v2.CardRegisterResultData.pg_provider)
+  return _internal_mutable_pg_provider();
+}
+inline const std::string& CardRegisterResultData::_internal_pg_provider() const {
+  return pg_provider_.Get();
+}
+inline void CardRegisterResultData::_internal_set_pg_provider(const std::string& value) {
+  
+  pg_provider_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CardRegisterResultData::set_pg_provider(std::string&& value) {
+  
+  pg_provider_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:card_v2.CardRegisterResultData.pg_provider)
+}
+inline void CardRegisterResultData::set_pg_provider(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  pg_provider_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:card_v2.CardRegisterResultData.pg_provider)
+}
+inline void CardRegisterResultData::set_pg_provider(const char* value,
+    size_t size) {
+  
+  pg_provider_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:card_v2.CardRegisterResultData.pg_provider)
+}
+inline std::string* CardRegisterResultData::_internal_mutable_pg_provider() {
+  
+  return pg_provider_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CardRegisterResultData::release_pg_provider() {
+  // @@protoc_insertion_point(field_release:card_v2.CardRegisterResultData.pg_provider)
+  return pg_provider_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CardRegisterResultData::set_allocated_pg_provider(std::string* pg_provider) {
+  if (pg_provider != nullptr) {
+    
+  } else {
+    
+  }
+  pg_provider_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), pg_provider,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterResultData.pg_provider)
+}
+
+// string pg_id = 14;
+inline void CardRegisterResultData::clear_pg_id() {
+  pg_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CardRegisterResultData::pg_id() const {
+  // @@protoc_insertion_point(field_get:card_v2.CardRegisterResultData.pg_id)
+  return _internal_pg_id();
+}
+inline void CardRegisterResultData::set_pg_id(const std::string& value) {
+  _internal_set_pg_id(value);
+  // @@protoc_insertion_point(field_set:card_v2.CardRegisterResultData.pg_id)
+}
+inline std::string* CardRegisterResultData::mutable_pg_id() {
+  // @@protoc_insertion_point(field_mutable:card_v2.CardRegisterResultData.pg_id)
+  return _internal_mutable_pg_id();
+}
+inline const std::string& CardRegisterResultData::_internal_pg_id() const {
+  return pg_id_.Get();
+}
+inline void CardRegisterResultData::_internal_set_pg_id(const std::string& value) {
+  
+  pg_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CardRegisterResultData::set_pg_id(std::string&& value) {
+  
+  pg_id_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:card_v2.CardRegisterResultData.pg_id)
+}
+inline void CardRegisterResultData::set_pg_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  pg_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:card_v2.CardRegisterResultData.pg_id)
+}
+inline void CardRegisterResultData::set_pg_id(const char* value,
+    size_t size) {
+  
+  pg_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:card_v2.CardRegisterResultData.pg_id)
+}
+inline std::string* CardRegisterResultData::_internal_mutable_pg_id() {
+  
+  return pg_id_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CardRegisterResultData::release_pg_id() {
+  // @@protoc_insertion_point(field_release:card_v2.CardRegisterResultData.pg_id)
+  return pg_id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CardRegisterResultData::set_allocated_pg_id(std::string* pg_id) {
+  if (pg_id != nullptr) {
+    
+  } else {
+    
+  }
+  pg_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), pg_id,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:card_v2.CardRegisterResultData.pg_id)
 }
 
 // -------------------------------------------------------------------
@@ -6567,6 +6825,68 @@ inline void PayByRegisteredCardRequest::set_allocated_callback_url(std::string* 
   callback_url_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), callback_url,
       GetArena());
   // @@protoc_insertion_point(field_set_allocated:card_v2.PayByRegisteredCardRequest.callback_url)
+}
+
+// string email = 10;
+inline void PayByRegisteredCardRequest::clear_email() {
+  email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& PayByRegisteredCardRequest::email() const {
+  // @@protoc_insertion_point(field_get:card_v2.PayByRegisteredCardRequest.email)
+  return _internal_email();
+}
+inline void PayByRegisteredCardRequest::set_email(const std::string& value) {
+  _internal_set_email(value);
+  // @@protoc_insertion_point(field_set:card_v2.PayByRegisteredCardRequest.email)
+}
+inline std::string* PayByRegisteredCardRequest::mutable_email() {
+  // @@protoc_insertion_point(field_mutable:card_v2.PayByRegisteredCardRequest.email)
+  return _internal_mutable_email();
+}
+inline const std::string& PayByRegisteredCardRequest::_internal_email() const {
+  return email_.Get();
+}
+inline void PayByRegisteredCardRequest::_internal_set_email(const std::string& value) {
+  
+  email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void PayByRegisteredCardRequest::set_email(std::string&& value) {
+  
+  email_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:card_v2.PayByRegisteredCardRequest.email)
+}
+inline void PayByRegisteredCardRequest::set_email(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:card_v2.PayByRegisteredCardRequest.email)
+}
+inline void PayByRegisteredCardRequest::set_email(const char* value,
+    size_t size) {
+  
+  email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:card_v2.PayByRegisteredCardRequest.email)
+}
+inline std::string* PayByRegisteredCardRequest::_internal_mutable_email() {
+  
+  return email_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* PayByRegisteredCardRequest::release_email() {
+  // @@protoc_insertion_point(field_release:card_v2.PayByRegisteredCardRequest.email)
+  return email_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void PayByRegisteredCardRequest::set_allocated_email(std::string* email) {
+  if (email != nullptr) {
+    
+  } else {
+    
+  }
+  email_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), email,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:card_v2.PayByRegisteredCardRequest.email)
 }
 
 // -------------------------------------------------------------------

@@ -17,6 +17,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :customer_email, :string, 8
       optional :customer_addr, :string, 9
       optional :customer_postcode, :string, 10
+      optional :pg, :string, 11
     end
     add_message "card_v2.CardRegisterResultData" do
       optional :card_uid, :string, 1
@@ -31,6 +32,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :customer_postcode, :string, 10
       optional :inserted, :int32, 11
       optional :updated, :int32, 12
+      optional :pg_provider, :string, 13
+      optional :pg_id, :string, 14
     end
     add_message "card_v2.CardRegisterResponse" do
       optional :code, :int32, 1
@@ -76,6 +79,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :interest_free_by_merchant, :bool, 7
       optional :custom_data, :string, 8
       optional :callback_url, :string, 9
+      optional :email, :string, 10
     end
     add_message "card_v2.PayByRegisteredCardData" do
       optional :amount, :string, 1

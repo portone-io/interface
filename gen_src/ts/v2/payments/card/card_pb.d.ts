@@ -35,6 +35,9 @@ export class CardRegisterRequest extends jspb.Message {
   getCustomerPostcode(): string;
   setCustomerPostcode(value: string): void;
 
+  getPg(): string;
+  setPg(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CardRegisterRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CardRegisterRequest): CardRegisterRequest.AsObject;
@@ -57,6 +60,7 @@ export namespace CardRegisterRequest {
     customerEmail: string,
     customerAddr: string,
     customerPostcode: string,
+    pg: string,
   }
 }
 
@@ -97,6 +101,12 @@ export class CardRegisterResultData extends jspb.Message {
   getUpdated(): number;
   setUpdated(value: number): void;
 
+  getPgProvider(): string;
+  setPgProvider(value: string): void;
+
+  getPgId(): string;
+  setPgId(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CardRegisterResultData.AsObject;
   static toObject(includeInstance: boolean, msg: CardRegisterResultData): CardRegisterResultData.AsObject;
@@ -121,6 +131,8 @@ export namespace CardRegisterResultData {
     customerPostcode: string,
     inserted: number,
     updated: number,
+    pgProvider: string,
+    pgId: string,
   }
 }
 
@@ -340,6 +352,9 @@ export class PayByRegisteredCardRequest extends jspb.Message {
   getCallbackUrl(): string;
   setCallbackUrl(value: string): void;
 
+  getEmail(): string;
+  setEmail(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PayByRegisteredCardRequest.AsObject;
   static toObject(includeInstance: boolean, msg: PayByRegisteredCardRequest): PayByRegisteredCardRequest.AsObject;
@@ -361,6 +376,7 @@ export namespace PayByRegisteredCardRequest {
     interestFreeByMerchant: boolean,
     customData: string,
     callbackUrl: string,
+    email: string,
   }
 }
 

@@ -22,6 +22,7 @@ class CardRegisterRequest extends $pb.GeneratedMessage {
     ..aOS(8, 'customerEmail')
     ..aOS(9, 'customerAddr')
     ..aOS(10, 'customerPostcode')
+    ..aOS(11, 'pg')
     ..hasRequiredFields = false
   ;
 
@@ -129,6 +130,15 @@ class CardRegisterRequest extends $pb.GeneratedMessage {
   $core.bool hasCustomerPostcode() => $_has(9);
   @$pb.TagNumber(10)
   void clearCustomerPostcode() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.String get pg => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set pg($core.String v) { $_setString(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasPg() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearPg() => clearField(11);
 }
 
 class CardRegisterResultData extends $pb.GeneratedMessage {
@@ -145,6 +155,8 @@ class CardRegisterResultData extends $pb.GeneratedMessage {
     ..aOS(10, 'customerPostcode')
     ..a<$core.int>(11, 'inserted', $pb.PbFieldType.O3)
     ..a<$core.int>(12, 'updated', $pb.PbFieldType.O3)
+    ..aOS(13, 'pgProvider')
+    ..aOS(14, 'pgId')
     ..hasRequiredFields = false
   ;
 
@@ -270,6 +282,24 @@ class CardRegisterResultData extends $pb.GeneratedMessage {
   $core.bool hasUpdated() => $_has(11);
   @$pb.TagNumber(12)
   void clearUpdated() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.String get pgProvider => $_getSZ(12);
+  @$pb.TagNumber(13)
+  set pgProvider($core.String v) { $_setString(12, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasPgProvider() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearPgProvider() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.String get pgId => $_getSZ(13);
+  @$pb.TagNumber(14)
+  set pgId($core.String v) { $_setString(13, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasPgId() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearPgId() => clearField(14);
 }
 
 class CardRegisterResponse extends $pb.GeneratedMessage {
@@ -633,6 +663,7 @@ class PayByRegisteredCardRequest extends $pb.GeneratedMessage {
     ..aOB(7, 'interestFreeByMerchant')
     ..aOS(8, 'customData')
     ..aOS(9, 'callbackUrl')
+    ..aOS(10, 'email')
     ..hasRequiredFields = false
   ;
 
@@ -731,6 +762,15 @@ class PayByRegisteredCardRequest extends $pb.GeneratedMessage {
   $core.bool hasCallbackUrl() => $_has(8);
   @$pb.TagNumber(9)
   void clearCallbackUrl() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get email => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set email($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasEmail() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearEmail() => clearField(10);
 }
 
 class PayByRegisteredCardData extends $pb.GeneratedMessage {

@@ -50,6 +50,7 @@ message CardRegisterRequest {
     string customer_email = 8;
     string customer_addr = 9;
     string customer_postcode = 10;
+    string pg = 11;
 }
 
 message CardRegisterResultData {
@@ -65,6 +66,8 @@ message CardRegisterResultData {
     string customer_postcode = 10;
     int32 inserted = 11;
     int32 updated = 12;
+    string pg_provider = 13;
+    string pg_id = 14;
 }
 
 message CardRegisterResponse {
@@ -117,6 +120,7 @@ message PayByRegisteredCardRequest {
     bool interest_free_by_merchant = 7;
     string custom_data = 8;
     string callback_url = 9;
+    string email = 10;
 }
 
 message PayByRegisteredCardData {

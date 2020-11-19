@@ -55,6 +55,10 @@ class CardRegisterRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string customer_postcode = 10;</code>
      */
     protected $customer_postcode = '';
+    /**
+     * Generated from protobuf field <code>string pg = 11;</code>
+     */
+    protected $pg = '';
 
     /**
      * Constructor.
@@ -73,6 +77,7 @@ class CardRegisterRequest extends \Google\Protobuf\Internal\Message
      *     @type string $customer_email
      *     @type string $customer_addr
      *     @type string $customer_postcode
+     *     @type string $pg
      * }
      */
     public function __construct($data = NULL) {
@@ -300,6 +305,28 @@ class CardRegisterRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->customer_postcode = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string pg = 11;</code>
+     * @return string
+     */
+    public function getPg()
+    {
+        return $this->pg;
+    }
+
+    /**
+     * Generated from protobuf field <code>string pg = 11;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPg($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->pg = $var;
 
         return $this;
     }

@@ -117,6 +117,7 @@ message PayByRegisteredCardRequest {
     bool interest_free_by_merchant = 7;
     string custom_data = 8;
     string callback_url = 9;
+    string email = 10;
 }
 
 message PayByRegisteredCardData {

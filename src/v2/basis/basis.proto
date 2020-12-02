@@ -1,0 +1,64 @@
+syntax = "proto3";
+package basis_v2;
+
+option go_package = "github.com/iamport/interface/gen_src/go/v2/basis";
+option csharp_namespace = "V2.Basis";
+
+message CancelHistory {
+    string pg_tid = 1;
+    string amount = 2;
+    int32 cancelled_at = 3;
+    string reason = 4;
+    string receipt_url = 5;
+}
+
+message UnitTx {
+    int32 amount = 1;
+    string apply_num = 2;
+    int32 bank_code = 3;
+    string bank_name = 4;
+    string buyer_addr = 5;
+    string buyer_email = 6;
+    string buyer_name = 7;
+    string buyer_postcode = 8;
+    string buyer_tel = 9;
+    int32 cancel_amount = 10;
+    repeated CancelHistory cancel_history = 11;
+    string cancel_reason = 12;
+    repeated string cancel_receipt_urls = 13;
+    int32 cancelled_at = 14;
+    string card_code = 15;
+    string card_name = 16;
+    string bin_number = 17;
+    int32 card_installment = 18;
+    int32 card_type = 19;
+    bool cash_receipt_issued = 20;
+    string channel = 21;
+    string currency = 22;
+    string custom_data = 23;
+    string card_uid = 24;
+    string customer_uid_usage = 25;
+    bool escrow = 26;
+    string fail_reason = 27;
+    int32 failed_at = 28;
+    string imp_uid = 29;
+    string merchant_uid = 30;
+    string order_name = 31;
+    int32 paid_at = 32;
+    string pay_method = 33;
+    string pg_id = 34;
+    string pg_provider = 35;
+    string pg_tid = 36;
+    string receipt_url = 37;
+    int32 started_at = 38;
+    string status = 39;
+    string user_agent = 40;
+    string vbank_code = 41;
+    int32 vbank_date = 42;
+    string vbank_holder = 43;
+    int32 vbank_issued_at = 44;
+    string vbank_name = 45;
+    string vbank_num = 46;
+    string customer_email = 47;
+}
+

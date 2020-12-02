@@ -1,0 +1,32 @@
+syntax = "proto3";
+package txs_v2;
+
+import "google/api/annotations.proto";
+import "v2/basis/basis.proto";
+
+option go_package = "github.com/iamport/interface/gen_src/go/v2/txs";
+option csharp_namespace = "V2.Txs";
+
+service TxsService {
+    rpc GetTxsRecordService(GetTxsRecordsRequest) returns (GetTxsRecordsReponse) {
+        option (google.api.http) = {
+            get: "/api/payments/v2/txs"
+        };
+    }
+}
+
+message GetTxsRecordsRequest {
+    string imp_uid = 1;
+    string merchant_uid = 2;
+    string paid_by = 3;
+    string status = 4;
+    int32 page = 5;
+    string sorting = 6;
+}
+
+message GetTxsRecordsReponse {
+    int32 code = 1;
+    string message = 2;
+    repeated basis_v2.UnitTx response = 3;
+}
+

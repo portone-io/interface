@@ -59,6 +59,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :vbank_issued_at, :int32, 44
       optional :vbank_name, :string, 45
       optional :vbank_num, :string, 46
+      optional :customer_email, :string, 47
     end
   end
 end

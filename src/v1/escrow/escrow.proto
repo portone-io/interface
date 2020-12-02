@@ -1,0 +1,50 @@
+syntax = "proto3";
+package escrow;
+
+import "google/api/annotations.proto";
+option go_package = "github.com/iamport/interface/gen_src/go/v1/escrow";
+option csharp_namespace = "V1.Escrow";
+
+service EscrowService {
+    rpc EscrowPostRPC(EscrowRequest) returns (EscrowResponse) {
+        option (google.api.http) = {
+            post: "/api/payments/v1/escrows/logis/{imp_uid}"
+            body: "*"
+        };
+    }
+
+    rpc EscrowPutRPC(EscrowRequest) returns (EscrowResponse) {
+        option (google.api.http) = {
+            put: "/api/payments/v1/escrows/logis/{imp_uid}"
+            body: "*"
+        };
+    }
+}
+
+message Info {
+    string name = 1;
+    string tel = 2;
+    string addr = 3;
+    string postcode = 4;
+}
+
+message Logis {
+    string company = 1;
+    string invoice = 2;
+    int32 sent_at =3;
+    int32 applied_at = 4;
+}
+
+message EscrowRequest {
+    string imp_uid = 1;
+    Info sender = 2;
+    Info receiver = 3;
+    Logis logis = 4;
+}
+
+message EscrowResponse {
+    int32 code = 1;
+    string message = 2;
+    Logis response = 3;
+}
+

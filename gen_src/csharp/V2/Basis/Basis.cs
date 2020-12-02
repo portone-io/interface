@@ -27,7 +27,7 @@ namespace V2.Basis {
             "ChR2Mi9iYXNpcy9iYXNpcy5wcm90bxIIYmFzaXNfdjIiagoNQ2FuY2VsSGlz",
             "dG9yeRIOCgZwZ190aWQYASABKAkSDgoGYW1vdW50GAIgASgJEhQKDGNhbmNl",
             "bGxlZF9hdBgDIAEoBRIOCgZyZWFzb24YBCABKAkSEwoLcmVjZWlwdF91cmwY",
-            "BSABKAkizAcKBlVuaXRUeBIOCgZhbW91bnQYASABKAUSEQoJYXBwbHlfbnVt",
+            "BSABKAki5AcKBlVuaXRUeBIOCgZhbW91bnQYASABKAUSEQoJYXBwbHlfbnVt",
             "GAIgASgJEhEKCWJhbmtfY29kZRgDIAEoBRIRCgliYW5rX25hbWUYBCABKAkS",
             "EgoKYnV5ZXJfYWRkchgFIAEoCRITCgtidXllcl9lbWFpbBgGIAEoCRISCgpi",
             "dXllcl9uYW1lGAcgASgJEhYKDmJ1eWVyX3Bvc3Rjb2RlGAggASgJEhEKCWJ1",
@@ -48,14 +48,14 @@ namespace V2.Basis {
             "YXQYJiABKAUSDgoGc3RhdHVzGCcgASgJEhIKCnVzZXJfYWdlbnQYKCABKAkS",
             "EgoKdmJhbmtfY29kZRgpIAEoCRISCgp2YmFua19kYXRlGCogASgFEhQKDHZi",
             "YW5rX2hvbGRlchgrIAEoCRIXCg92YmFua19pc3N1ZWRfYXQYLCABKAUSEgoK",
-            "dmJhbmtfbmFtZRgtIAEoCRIRCgl2YmFua19udW0YLiABKAlCPVowZ2l0aHVi",
-            "LmNvbS9pYW1wb3J0L2ludGVyZmFjZS9nZW5fc3JjL2dvL3YyL2Jhc2lzqgII",
-            "VjIuQmFzaXNiBnByb3RvMw=="));
+            "dmJhbmtfbmFtZRgtIAEoCRIRCgl2YmFua19udW0YLiABKAkSFgoOY3VzdG9t",
+            "ZXJfZW1haWwYLyABKAlCPVowZ2l0aHViLmNvbS9pYW1wb3J0L2ludGVyZmFj",
+            "ZS9nZW5fc3JjL2dvL3YyL2Jhc2lzqgIIVjIuQmFzaXNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Basis.CancelHistory), global::V2.Basis.CancelHistory.Parser, new[]{ "PgTid", "Amount", "CancelledAt", "Reason", "ReceiptUrl" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Basis.UnitTx), global::V2.Basis.UnitTx.Parser, new[]{ "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "BinNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Basis.UnitTx), global::V2.Basis.UnitTx.Parser, new[]{ "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "BinNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", "CustomerEmail" }, null, null, null, null)
           }));
     }
     #endregion
@@ -453,6 +453,7 @@ namespace V2.Basis {
       vbankIssuedAt_ = other.vbankIssuedAt_;
       vbankName_ = other.vbankName_;
       vbankNum_ = other.vbankNum_;
+      customerEmail_ = other.customerEmail_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -965,6 +966,17 @@ namespace V2.Basis {
       }
     }
 
+    /// <summary>Field number for the "customer_email" field.</summary>
+    public const int CustomerEmailFieldNumber = 47;
+    private string customerEmail_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CustomerEmail {
+      get { return customerEmail_; }
+      set {
+        customerEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as UnitTx);
@@ -1024,6 +1036,7 @@ namespace V2.Basis {
       if (VbankIssuedAt != other.VbankIssuedAt) return false;
       if (VbankName != other.VbankName) return false;
       if (VbankNum != other.VbankNum) return false;
+      if (CustomerEmail != other.CustomerEmail) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1076,6 +1089,7 @@ namespace V2.Basis {
       if (VbankIssuedAt != 0) hash ^= VbankIssuedAt.GetHashCode();
       if (VbankName.Length != 0) hash ^= VbankName.GetHashCode();
       if (VbankNum.Length != 0) hash ^= VbankNum.GetHashCode();
+      if (CustomerEmail.Length != 0) hash ^= CustomerEmail.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1270,6 +1284,10 @@ namespace V2.Basis {
         output.WriteRawTag(242, 2);
         output.WriteString(VbankNum);
       }
+      if (CustomerEmail.Length != 0) {
+        output.WriteRawTag(250, 2);
+        output.WriteString(CustomerEmail);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1457,6 +1475,10 @@ namespace V2.Basis {
         output.WriteRawTag(242, 2);
         output.WriteString(VbankNum);
       }
+      if (CustomerEmail.Length != 0) {
+        output.WriteRawTag(250, 2);
+        output.WriteString(CustomerEmail);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1599,6 +1621,9 @@ namespace V2.Basis {
       }
       if (VbankNum.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(VbankNum);
+      }
+      if (CustomerEmail.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CustomerEmail);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1744,6 +1769,9 @@ namespace V2.Basis {
       }
       if (other.VbankNum.Length != 0) {
         VbankNum = other.VbankNum;
+      }
+      if (other.CustomerEmail.Length != 0) {
+        CustomerEmail = other.CustomerEmail;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1943,6 +1971,10 @@ namespace V2.Basis {
             VbankNum = input.ReadString();
             break;
           }
+          case 378: {
+            CustomerEmail = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2139,6 +2171,10 @@ namespace V2.Basis {
           }
           case 370: {
             VbankNum = input.ReadString();
+            break;
+          }
+          case 378: {
+            CustomerEmail = input.ReadString();
             break;
           }
         }

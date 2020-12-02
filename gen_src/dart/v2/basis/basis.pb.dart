@@ -128,6 +128,7 @@ class UnitTx extends $pb.GeneratedMessage {
     ..a<$core.int>(44, 'vbankIssuedAt', $pb.PbFieldType.O3)
     ..aOS(45, 'vbankName')
     ..aOS(46, 'vbankNum')
+    ..aOS(47, 'customerEmail')
     ..hasRequiredFields = false
   ;
 
@@ -547,5 +548,14 @@ class UnitTx extends $pb.GeneratedMessage {
   $core.bool hasVbankNum() => $_has(45);
   @$pb.TagNumber(46)
   void clearVbankNum() => clearField(46);
+
+  @$pb.TagNumber(47)
+  $core.String get customerEmail => $_getSZ(46);
+  @$pb.TagNumber(47)
+  set customerEmail($core.String v) { $_setString(46, v); }
+  @$pb.TagNumber(47)
+  $core.bool hasCustomerEmail() => $_has(46);
+  @$pb.TagNumber(47)
+  void clearCustomerEmail() => clearField(47);
 }
 

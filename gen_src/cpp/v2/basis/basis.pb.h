@@ -425,6 +425,7 @@ class UnitTx PROTOBUF_FINAL :
     kVbankHolderFieldNumber = 43,
     kVbankNameFieldNumber = 45,
     kVbankNumFieldNumber = 46,
+    kCustomerEmailFieldNumber = 47,
     kAmountFieldNumber = 1,
     kBankCodeFieldNumber = 3,
     kCancelAmountFieldNumber = 10,
@@ -977,6 +978,22 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_vbank_num();
   public:
 
+  // string customer_email = 47;
+  void clear_customer_email();
+  const std::string& customer_email() const;
+  void set_customer_email(const std::string& value);
+  void set_customer_email(std::string&& value);
+  void set_customer_email(const char* value);
+  void set_customer_email(const char* value, size_t size);
+  std::string* mutable_customer_email();
+  std::string* release_customer_email();
+  void set_allocated_customer_email(std::string* customer_email);
+  private:
+  const std::string& _internal_customer_email() const;
+  void _internal_set_customer_email(const std::string& value);
+  std::string* _internal_mutable_customer_email();
+  public:
+
   // int32 amount = 1;
   void clear_amount();
   ::PROTOBUF_NAMESPACE_ID::int32 amount() const;
@@ -1134,6 +1151,7 @@ class UnitTx PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vbank_holder_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vbank_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vbank_num_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_email_;
   ::PROTOBUF_NAMESPACE_ID::int32 amount_;
   ::PROTOBUF_NAMESPACE_ID::int32 bank_code_;
   ::PROTOBUF_NAMESPACE_ID::int32 cancel_amount_;
@@ -3726,6 +3744,68 @@ inline void UnitTx::set_allocated_vbank_num(std::string* vbank_num) {
   vbank_num_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), vbank_num,
       GetArena());
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.vbank_num)
+}
+
+// string customer_email = 47;
+inline void UnitTx::clear_customer_email() {
+  customer_email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& UnitTx::customer_email() const {
+  // @@protoc_insertion_point(field_get:basis_v2.UnitTx.customer_email)
+  return _internal_customer_email();
+}
+inline void UnitTx::set_customer_email(const std::string& value) {
+  _internal_set_customer_email(value);
+  // @@protoc_insertion_point(field_set:basis_v2.UnitTx.customer_email)
+}
+inline std::string* UnitTx::mutable_customer_email() {
+  // @@protoc_insertion_point(field_mutable:basis_v2.UnitTx.customer_email)
+  return _internal_mutable_customer_email();
+}
+inline const std::string& UnitTx::_internal_customer_email() const {
+  return customer_email_.Get();
+}
+inline void UnitTx::_internal_set_customer_email(const std::string& value) {
+  
+  customer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void UnitTx::set_customer_email(std::string&& value) {
+  
+  customer_email_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:basis_v2.UnitTx.customer_email)
+}
+inline void UnitTx::set_customer_email(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  customer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:basis_v2.UnitTx.customer_email)
+}
+inline void UnitTx::set_customer_email(const char* value,
+    size_t size) {
+  
+  customer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:basis_v2.UnitTx.customer_email)
+}
+inline std::string* UnitTx::_internal_mutable_customer_email() {
+  
+  return customer_email_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* UnitTx::release_customer_email() {
+  // @@protoc_insertion_point(field_release:basis_v2.UnitTx.customer_email)
+  return customer_email_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void UnitTx::set_allocated_customer_email(std::string* customer_email) {
+  if (customer_email != nullptr) {
+    
+  } else {
+    
+  }
+  customer_email_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), customer_email,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.customer_email)
 }
 
 #ifdef __GNUC__

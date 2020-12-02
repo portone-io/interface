@@ -197,6 +197,10 @@ class UnitTx extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string vbank_num = 46;</code>
      */
     protected $vbank_num = '';
+    /**
+     * Generated from protobuf field <code>string customer_email = 47;</code>
+     */
+    protected $customer_email = '';
 
     /**
      * Constructor.
@@ -250,6 +254,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
      *     @type int $vbank_issued_at
      *     @type string $vbank_name
      *     @type string $vbank_num
+     *     @type string $customer_email
      * }
      */
     public function __construct($data = NULL) {
@@ -1265,6 +1270,28 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->vbank_num = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string customer_email = 47;</code>
+     * @return string
+     */
+    public function getCustomerEmail()
+    {
+        return $this->customer_email;
+    }
+
+    /**
+     * Generated from protobuf field <code>string customer_email = 47;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCustomerEmail($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->customer_email = $var;
 
         return $this;
     }

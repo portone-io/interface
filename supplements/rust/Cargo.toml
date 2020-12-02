@@ -1,0 +1,17 @@
+[package]
+name = "iamport_protobuf"
+version = "0.1.0"
+authors = ["Yeon Hwang <yeon@chai.finance>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+#protobuf = { version = "2", features = ["with-bytes"] }
+protobuf = { git="https://github.com/stepancheg/rust-protobuf", features = ["with-bytes"] }
+
+[build-dependencies]
+
+[lib]
+name = "iamport_protobuf"
+path = "iamport_protobuf.rs"

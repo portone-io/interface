@@ -120,6 +120,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_v2_2fbasis_2fbasis_2eproto::of
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, vbank_issued_at_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, vbank_name_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, vbank_num_),
+  PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, customer_email_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::basis_v2::CancelHistory)},
@@ -135,7 +136,7 @@ const char descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto[] PROTOBUF_SECTI
   "\n\024v2/basis/basis.proto\022\010basis_v2\"j\n\rCanc"
   "elHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001("
   "\t\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022"
-  "\023\n\013receipt_url\030\005 \001(\t\"\314\007\n\006UnitTx\022\016\n\006amoun"
+  "\023\n\013receipt_url\030\005 \001(\t\"\344\007\n\006UnitTx\022\016\n\006amoun"
   "t\030\001 \001(\005\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank_code\030"
   "\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_addr\030\005"
   " \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer_name\030"
@@ -159,9 +160,10 @@ const char descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto[] PROTOBUF_SECTI
   "tus\030\' \001(\t\022\022\n\nuser_agent\030( \001(\t\022\022\n\nvbank_c"
   "ode\030) \001(\t\022\022\n\nvbank_date\030* \001(\005\022\024\n\014vbank_h"
   "older\030+ \001(\t\022\027\n\017vbank_issued_at\030, \001(\005\022\022\n\n"
-  "vbank_name\030- \001(\t\022\021\n\tvbank_num\030. \001(\tB=Z0g"
-  "ithub.com/iamport/interface/gen_src/go/v"
-  "2/basis\252\002\010V2.Basisb\006proto3"
+  "vbank_name\030- \001(\t\022\021\n\tvbank_num\030. \001(\t\022\026\n\016c"
+  "ustomer_email\030/ \001(\tB=Z0github.com/iampor"
+  "t/interface/gen_src/go/v2/basis\252\002\010V2.Bas"
+  "isb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v2_2fbasis_2fbasis_2eproto_deps[1] = {
 };
@@ -171,7 +173,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v2_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2fbasis_2fbasis_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2fbasis_2fbasis_2eproto = {
-  false, false, descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto, "v2/basis/basis.proto", 1186,
+  false, false, descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto, "v2/basis/basis.proto", 1210,
   &descriptor_table_v2_2fbasis_2fbasis_2eproto_once, descriptor_table_v2_2fbasis_2fbasis_2eproto_sccs, descriptor_table_v2_2fbasis_2fbasis_2eproto_deps, 2, 0,
   schemas, file_default_instances, TableStruct_v2_2fbasis_2fbasis_2eproto::offsets,
   file_level_metadata_v2_2fbasis_2fbasis_2eproto, 2, file_level_enum_descriptors_v2_2fbasis_2fbasis_2eproto, file_level_service_descriptors_v2_2fbasis_2fbasis_2eproto,
@@ -707,6 +709,11 @@ UnitTx::UnitTx(const UnitTx& from)
     vbank_num_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_vbank_num(),
       GetArena());
   }
+  customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_customer_email().empty()) {
+    customer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_email(),
+      GetArena());
+  }
   ::memcpy(&amount_, &from.amount_,
     static_cast<size_t>(reinterpret_cast<char*>(&vbank_issued_at_) -
     reinterpret_cast<char*>(&amount_)) + sizeof(vbank_issued_at_));
@@ -746,6 +753,7 @@ void UnitTx::SharedCtor() {
   vbank_holder_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   vbank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   vbank_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&amount_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&vbank_issued_at_) -
       reinterpret_cast<char*>(&amount_)) + sizeof(vbank_issued_at_));
@@ -790,6 +798,7 @@ void UnitTx::SharedDtor() {
   vbank_holder_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   vbank_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   vbank_num_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  customer_email_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void UnitTx::ArenaDtor(void* object) {
@@ -846,6 +855,7 @@ void UnitTx::Clear() {
   vbank_holder_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   vbank_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   vbank_num_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  customer_email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::memset(&amount_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&vbank_issued_at_) -
       reinterpret_cast<char*>(&amount_)) + sizeof(vbank_issued_at_));
@@ -1253,6 +1263,15 @@ const char* UnitTx::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
           auto str = _internal_mutable_vbank_num();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.vbank_num"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string customer_email = 47;
+      case 47:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
+          auto str = _internal_mutable_customer_email();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.customer_email"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1690,6 +1709,16 @@ failure:
         46, this->_internal_vbank_num(), target);
   }
 
+  // string customer_email = 47;
+  if (this->customer_email().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_customer_email().data(), static_cast<int>(this->_internal_customer_email().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "basis_v2.UnitTx.customer_email");
+    target = stream->WriteStringMaybeAliased(
+        47, this->_internal_customer_email(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -1938,6 +1967,13 @@ size_t UnitTx::ByteSizeLong() const {
         this->_internal_vbank_num());
   }
 
+  // string customer_email = 47;
+  if (this->customer_email().size() > 0) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_customer_email());
+  }
+
   // int32 amount = 1;
   if (this->amount() != 0) {
     total_size += 1 +
@@ -2151,6 +2187,9 @@ void UnitTx::MergeFrom(const UnitTx& from) {
   if (from.vbank_num().size() > 0) {
     _internal_set_vbank_num(from._internal_vbank_num());
   }
+  if (from.customer_email().size() > 0) {
+    _internal_set_customer_email(from._internal_customer_email());
+  }
   if (from.amount() != 0) {
     _internal_set_amount(from._internal_amount());
   }
@@ -2246,6 +2285,7 @@ void UnitTx::InternalSwap(UnitTx* other) {
   vbank_holder_.Swap(&other->vbank_holder_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   vbank_name_.Swap(&other->vbank_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   vbank_num_.Swap(&other->vbank_num_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  customer_email_.Swap(&other->customer_email_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(UnitTx, vbank_issued_at_)
       + sizeof(UnitTx::vbank_issued_at_)

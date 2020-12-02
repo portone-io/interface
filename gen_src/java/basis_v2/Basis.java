@@ -1604,6 +1604,18 @@ public final class Basis {
      */
     com.google.protobuf.ByteString
         getVbankNumBytes();
+
+    /**
+     * <code>string customer_email = 47;</code>
+     * @return The customerEmail.
+     */
+    java.lang.String getCustomerEmail();
+    /**
+     * <code>string customer_email = 47;</code>
+     * @return The bytes for customerEmail.
+     */
+    com.google.protobuf.ByteString
+        getCustomerEmailBytes();
   }
   /**
    * Protobuf type {@code basis_v2.UnitTx}
@@ -1651,6 +1663,7 @@ public final class Basis {
       vbankHolder_ = "";
       vbankName_ = "";
       vbankNum_ = "";
+      customerEmail_ = "";
     }
 
     @java.lang.Override
@@ -1951,6 +1964,12 @@ public final class Basis {
               java.lang.String s = input.readStringRequireUtf8();
 
               vbankNum_ = s;
+              break;
+            }
+            case 378: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              customerEmail_ = s;
               break;
             }
             default: {
@@ -3387,6 +3406,44 @@ public final class Basis {
       }
     }
 
+    public static final int CUSTOMER_EMAIL_FIELD_NUMBER = 47;
+    private volatile java.lang.Object customerEmail_;
+    /**
+     * <code>string customer_email = 47;</code>
+     * @return The customerEmail.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomerEmail() {
+      java.lang.Object ref = customerEmail_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customerEmail_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string customer_email = 47;</code>
+     * @return The bytes for customerEmail.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCustomerEmailBytes() {
+      java.lang.Object ref = customerEmail_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customerEmail_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3538,6 +3595,9 @@ public final class Basis {
       }
       if (!getVbankNumBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 46, vbankNum_);
+      }
+      if (!getCustomerEmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 47, customerEmail_);
       }
       unknownFields.writeTo(output);
     }
@@ -3705,6 +3765,9 @@ public final class Basis {
       if (!getVbankNumBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(46, vbankNum_);
       }
+      if (!getCustomerEmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(47, customerEmail_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3812,6 +3875,8 @@ public final class Basis {
           .equals(other.getVbankName())) return false;
       if (!getVbankNum()
           .equals(other.getVbankNum())) return false;
+      if (!getCustomerEmail()
+          .equals(other.getCustomerEmail())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3921,6 +3986,8 @@ public final class Basis {
       hash = (53 * hash) + getVbankName().hashCode();
       hash = (37 * hash) + VBANK_NUM_FIELD_NUMBER;
       hash = (53 * hash) + getVbankNum().hashCode();
+      hash = (37 * hash) + CUSTOMER_EMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerEmail().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4151,6 +4218,8 @@ public final class Basis {
 
         vbankNum_ = "";
 
+        customerEmail_ = "";
+
         return this;
       }
 
@@ -4236,6 +4305,7 @@ public final class Basis {
         result.vbankIssuedAt_ = vbankIssuedAt_;
         result.vbankName_ = vbankName_;
         result.vbankNum_ = vbankNum_;
+        result.customerEmail_ = customerEmail_;
         onBuilt();
         return result;
       }
@@ -4481,6 +4551,10 @@ public final class Basis {
         }
         if (!other.getVbankNum().isEmpty()) {
           vbankNum_ = other.vbankNum_;
+          onChanged();
+        }
+        if (!other.getCustomerEmail().isEmpty()) {
+          customerEmail_ = other.customerEmail_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -7621,6 +7695,82 @@ public final class Basis {
         onChanged();
         return this;
       }
+
+      private java.lang.Object customerEmail_ = "";
+      /**
+       * <code>string customer_email = 47;</code>
+       * @return The customerEmail.
+       */
+      public java.lang.String getCustomerEmail() {
+        java.lang.Object ref = customerEmail_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          customerEmail_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string customer_email = 47;</code>
+       * @return The bytes for customerEmail.
+       */
+      public com.google.protobuf.ByteString
+          getCustomerEmailBytes() {
+        java.lang.Object ref = customerEmail_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          customerEmail_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string customer_email = 47;</code>
+       * @param value The customerEmail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        customerEmail_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string customer_email = 47;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomerEmail() {
+        
+        customerEmail_ = getDefaultInstance().getCustomerEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string customer_email = 47;</code>
+       * @param value The bytes for customerEmail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        customerEmail_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7696,7 +7846,7 @@ public final class Basis {
       "\n\024v2/basis/basis.proto\022\010basis_v2\"j\n\rCanc" +
       "elHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(" +
       "\t\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022" +
-      "\023\n\013receipt_url\030\005 \001(\t\"\314\007\n\006UnitTx\022\016\n\006amoun" +
+      "\023\n\013receipt_url\030\005 \001(\t\"\344\007\n\006UnitTx\022\016\n\006amoun" +
       "t\030\001 \001(\005\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank_code\030" +
       "\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_addr\030\005" +
       " \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer_name\030" +
@@ -7720,9 +7870,10 @@ public final class Basis {
       "tus\030\' \001(\t\022\022\n\nuser_agent\030( \001(\t\022\022\n\nvbank_c" +
       "ode\030) \001(\t\022\022\n\nvbank_date\030* \001(\005\022\024\n\014vbank_h" +
       "older\030+ \001(\t\022\027\n\017vbank_issued_at\030, \001(\005\022\022\n\n" +
-      "vbank_name\030- \001(\t\022\021\n\tvbank_num\030. \001(\tB=Z0g" +
-      "ithub.com/iamport/interface/gen_src/go/v" +
-      "2/basis\252\002\010V2.Basisb\006proto3"
+      "vbank_name\030- \001(\t\022\021\n\tvbank_num\030. \001(\t\022\026\n\016c" +
+      "ustomer_email\030/ \001(\tB=Z0github.com/iampor" +
+      "t/interface/gen_src/go/v2/basis\252\002\010V2.Bas" +
+      "isb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7739,7 +7890,7 @@ public final class Basis {
     internal_static_basis_v2_UnitTx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_basis_v2_UnitTx_descriptor,
-        new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "BinNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", });
+        new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "BinNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", "CustomerEmail", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

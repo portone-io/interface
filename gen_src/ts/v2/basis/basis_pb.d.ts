@@ -182,6 +182,9 @@ export class UnitTx extends jspb.Message {
   getVbankNum(): string;
   setVbankNum(value: string): void;
 
+  getCustomerEmail(): string;
+  setCustomerEmail(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnitTx.AsObject;
   static toObject(includeInstance: boolean, msg: UnitTx): UnitTx.AsObject;
@@ -240,6 +243,7 @@ export namespace UnitTx {
     vbankIssuedAt: number,
     vbankName: string,
     vbankNum: string,
+    customerEmail: string,
   }
 }
 

@@ -391,7 +391,8 @@ proto.basis_v2.UnitTx.toObject = function(includeInstance, msg) {
     vbankHolder: jspb.Message.getFieldWithDefault(msg, 43, ""),
     vbankIssuedAt: jspb.Message.getFieldWithDefault(msg, 44, 0),
     vbankName: jspb.Message.getFieldWithDefault(msg, 45, ""),
-    vbankNum: jspb.Message.getFieldWithDefault(msg, 46, "")
+    vbankNum: jspb.Message.getFieldWithDefault(msg, 46, ""),
+    customerEmail: jspb.Message.getFieldWithDefault(msg, 47, "")
   };
 
   if (includeInstance) {
@@ -612,6 +613,10 @@ proto.basis_v2.UnitTx.deserializeBinaryFromReader = function(msg, reader) {
     case 46:
       var value = /** @type {string} */ (reader.readString());
       msg.setVbankNum(value);
+      break;
+    case 47:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCustomerEmail(value);
       break;
     default:
       reader.skipField();
@@ -962,6 +967,13 @@ proto.basis_v2.UnitTx.serializeBinaryToWriter = function(message, writer) {
   if (f.length > 0) {
     writer.writeString(
       46,
+      f
+    );
+  }
+  f = message.getCustomerEmail();
+  if (f.length > 0) {
+    writer.writeString(
+      47,
       f
     );
   }
@@ -1832,6 +1844,24 @@ proto.basis_v2.UnitTx.prototype.getVbankNum = function() {
  */
 proto.basis_v2.UnitTx.prototype.setVbankNum = function(value) {
   return jspb.Message.setProto3StringField(this, 46, value);
+};
+
+
+/**
+ * optional string customer_email = 47;
+ * @return {string}
+ */
+proto.basis_v2.UnitTx.prototype.getCustomerEmail = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 47, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.basis_v2.UnitTx} returns this
+ */
+proto.basis_v2.UnitTx.prototype.setCustomerEmail = function(value) {
+  return jspb.Message.setProto3StringField(this, 47, value);
 };
 
 

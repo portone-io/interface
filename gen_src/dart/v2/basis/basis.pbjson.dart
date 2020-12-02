@@ -65,6 +65,7 @@ const UnitTx$json = const {
     const {'1': 'vbank_issued_at', '3': 44, '4': 1, '5': 5, '10': 'vbankIssuedAt'},
     const {'1': 'vbank_name', '3': 45, '4': 1, '5': 9, '10': 'vbankName'},
     const {'1': 'vbank_num', '3': 46, '4': 1, '5': 9, '10': 'vbankNum'},
+    const {'1': 'customer_email', '3': 47, '4': 1, '5': 9, '10': 'customerEmail'},
   ],
 };
 

@@ -352,8 +352,20 @@ export class PayByRegisteredCardRequest extends jspb.Message {
   getCallbackUrl(): string;
   setCallbackUrl(value: string): void;
 
-  getEmail(): string;
-  setEmail(value: string): void;
+  getBuyerAddr(): string;
+  setBuyerAddr(value: string): void;
+
+  getBuyerEmail(): string;
+  setBuyerEmail(value: string): void;
+
+  getBuyerName(): string;
+  setBuyerName(value: string): void;
+
+  getBuyerPostcode(): string;
+  setBuyerPostcode(value: string): void;
+
+  getBuyerTel(): string;
+  setBuyerTel(value: string): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PayByRegisteredCardRequest.AsObject;
@@ -376,7 +388,11 @@ export namespace PayByRegisteredCardRequest {
     interestFreeByMerchant: boolean,
     customData: string,
     callbackUrl: string,
-    email: string,
+    buyerAddr: string,
+    buyerEmail: string,
+    buyerName: string,
+    buyerPostcode: string,
+    buyerTel: string,
   }
 }
 

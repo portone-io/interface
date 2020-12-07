@@ -10015,16 +10015,64 @@ public final class Card {
         getCallbackUrlBytes();
 
     /**
-     * <code>string email = 10;</code>
-     * @return The email.
+     * <code>string buyer_addr = 10;</code>
+     * @return The buyerAddr.
      */
-    java.lang.String getEmail();
+    java.lang.String getBuyerAddr();
     /**
-     * <code>string email = 10;</code>
-     * @return The bytes for email.
+     * <code>string buyer_addr = 10;</code>
+     * @return The bytes for buyerAddr.
      */
     com.google.protobuf.ByteString
-        getEmailBytes();
+        getBuyerAddrBytes();
+
+    /**
+     * <code>string buyer_email = 11;</code>
+     * @return The buyerEmail.
+     */
+    java.lang.String getBuyerEmail();
+    /**
+     * <code>string buyer_email = 11;</code>
+     * @return The bytes for buyerEmail.
+     */
+    com.google.protobuf.ByteString
+        getBuyerEmailBytes();
+
+    /**
+     * <code>string buyer_name = 12;</code>
+     * @return The buyerName.
+     */
+    java.lang.String getBuyerName();
+    /**
+     * <code>string buyer_name = 12;</code>
+     * @return The bytes for buyerName.
+     */
+    com.google.protobuf.ByteString
+        getBuyerNameBytes();
+
+    /**
+     * <code>string buyer_postcode = 13;</code>
+     * @return The buyerPostcode.
+     */
+    java.lang.String getBuyerPostcode();
+    /**
+     * <code>string buyer_postcode = 13;</code>
+     * @return The bytes for buyerPostcode.
+     */
+    com.google.protobuf.ByteString
+        getBuyerPostcodeBytes();
+
+    /**
+     * <code>string buyer_tel = 14;</code>
+     * @return The buyerTel.
+     */
+    java.lang.String getBuyerTel();
+    /**
+     * <code>string buyer_tel = 14;</code>
+     * @return The bytes for buyerTel.
+     */
+    com.google.protobuf.ByteString
+        getBuyerTelBytes();
   }
   /**
    * Protobuf type {@code card_v2.PayByRegisteredCardRequest}
@@ -10046,7 +10094,11 @@ public final class Card {
       orderName_ = "";
       customData_ = "";
       callbackUrl_ = "";
-      email_ = "";
+      buyerAddr_ = "";
+      buyerEmail_ = "";
+      buyerName_ = "";
+      buyerPostcode_ = "";
+      buyerTel_ = "";
     }
 
     @java.lang.Override
@@ -10134,7 +10186,31 @@ public final class Card {
             case 82: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              email_ = s;
+              buyerAddr_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              buyerEmail_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              buyerName_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              buyerPostcode_ = s;
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              buyerTel_ = s;
               break;
             }
             default: {
@@ -10469,38 +10545,190 @@ public final class Card {
       }
     }
 
-    public static final int EMAIL_FIELD_NUMBER = 10;
-    private volatile java.lang.Object email_;
+    public static final int BUYER_ADDR_FIELD_NUMBER = 10;
+    private volatile java.lang.Object buyerAddr_;
     /**
-     * <code>string email = 10;</code>
-     * @return The email.
+     * <code>string buyer_addr = 10;</code>
+     * @return The buyerAddr.
      */
     @java.lang.Override
-    public java.lang.String getEmail() {
-      java.lang.Object ref = email_;
+    public java.lang.String getBuyerAddr() {
+      java.lang.Object ref = buyerAddr_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        email_ = s;
+        buyerAddr_ = s;
         return s;
       }
     }
     /**
-     * <code>string email = 10;</code>
-     * @return The bytes for email.
+     * <code>string buyer_addr = 10;</code>
+     * @return The bytes for buyerAddr.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getEmailBytes() {
-      java.lang.Object ref = email_;
+        getBuyerAddrBytes() {
+      java.lang.Object ref = buyerAddr_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        email_ = b;
+        buyerAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUYER_EMAIL_FIELD_NUMBER = 11;
+    private volatile java.lang.Object buyerEmail_;
+    /**
+     * <code>string buyer_email = 11;</code>
+     * @return The buyerEmail.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyerEmail() {
+      java.lang.Object ref = buyerEmail_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyerEmail_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer_email = 11;</code>
+     * @return The bytes for buyerEmail.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerEmailBytes() {
+      java.lang.Object ref = buyerEmail_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyerEmail_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUYER_NAME_FIELD_NUMBER = 12;
+    private volatile java.lang.Object buyerName_;
+    /**
+     * <code>string buyer_name = 12;</code>
+     * @return The buyerName.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyerName() {
+      java.lang.Object ref = buyerName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyerName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer_name = 12;</code>
+     * @return The bytes for buyerName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerNameBytes() {
+      java.lang.Object ref = buyerName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUYER_POSTCODE_FIELD_NUMBER = 13;
+    private volatile java.lang.Object buyerPostcode_;
+    /**
+     * <code>string buyer_postcode = 13;</code>
+     * @return The buyerPostcode.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyerPostcode() {
+      java.lang.Object ref = buyerPostcode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyerPostcode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer_postcode = 13;</code>
+     * @return The bytes for buyerPostcode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerPostcodeBytes() {
+      java.lang.Object ref = buyerPostcode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyerPostcode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUYER_TEL_FIELD_NUMBER = 14;
+    private volatile java.lang.Object buyerTel_;
+    /**
+     * <code>string buyer_tel = 14;</code>
+     * @return The buyerTel.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyerTel() {
+      java.lang.Object ref = buyerTel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyerTel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer_tel = 14;</code>
+     * @return The bytes for buyerTel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerTelBytes() {
+      java.lang.Object ref = buyerTel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyerTel_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -10548,8 +10776,20 @@ public final class Card {
       if (!getCallbackUrlBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, callbackUrl_);
       }
-      if (!getEmailBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, email_);
+      if (!getBuyerAddrBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, buyerAddr_);
+      }
+      if (!getBuyerEmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, buyerEmail_);
+      }
+      if (!getBuyerNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, buyerName_);
+      }
+      if (!getBuyerPostcodeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, buyerPostcode_);
+      }
+      if (!getBuyerTelBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, buyerTel_);
       }
       unknownFields.writeTo(output);
     }
@@ -10589,8 +10829,20 @@ public final class Card {
       if (!getCallbackUrlBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, callbackUrl_);
       }
-      if (!getEmailBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, email_);
+      if (!getBuyerAddrBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, buyerAddr_);
+      }
+      if (!getBuyerEmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, buyerEmail_);
+      }
+      if (!getBuyerNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, buyerName_);
+      }
+      if (!getBuyerPostcodeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, buyerPostcode_);
+      }
+      if (!getBuyerTelBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, buyerTel_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10625,8 +10877,16 @@ public final class Card {
           .equals(other.getCustomData())) return false;
       if (!getCallbackUrl()
           .equals(other.getCallbackUrl())) return false;
-      if (!getEmail()
-          .equals(other.getEmail())) return false;
+      if (!getBuyerAddr()
+          .equals(other.getBuyerAddr())) return false;
+      if (!getBuyerEmail()
+          .equals(other.getBuyerEmail())) return false;
+      if (!getBuyerName()
+          .equals(other.getBuyerName())) return false;
+      if (!getBuyerPostcode()
+          .equals(other.getBuyerPostcode())) return false;
+      if (!getBuyerTel()
+          .equals(other.getBuyerTel())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10657,8 +10917,16 @@ public final class Card {
       hash = (53 * hash) + getCustomData().hashCode();
       hash = (37 * hash) + CALLBACK_URL_FIELD_NUMBER;
       hash = (53 * hash) + getCallbackUrl().hashCode();
-      hash = (37 * hash) + EMAIL_FIELD_NUMBER;
-      hash = (53 * hash) + getEmail().hashCode();
+      hash = (37 * hash) + BUYER_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyerAddr().hashCode();
+      hash = (37 * hash) + BUYER_EMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyerEmail().hashCode();
+      hash = (37 * hash) + BUYER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyerName().hashCode();
+      hash = (37 * hash) + BUYER_POSTCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyerPostcode().hashCode();
+      hash = (37 * hash) + BUYER_TEL_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyerTel().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10810,7 +11078,15 @@ public final class Card {
 
         callbackUrl_ = "";
 
-        email_ = "";
+        buyerAddr_ = "";
+
+        buyerEmail_ = "";
+
+        buyerName_ = "";
+
+        buyerPostcode_ = "";
+
+        buyerTel_ = "";
 
         return this;
       }
@@ -10847,7 +11123,11 @@ public final class Card {
         result.interestFreeByMerchant_ = interestFreeByMerchant_;
         result.customData_ = customData_;
         result.callbackUrl_ = callbackUrl_;
-        result.email_ = email_;
+        result.buyerAddr_ = buyerAddr_;
+        result.buyerEmail_ = buyerEmail_;
+        result.buyerName_ = buyerName_;
+        result.buyerPostcode_ = buyerPostcode_;
+        result.buyerTel_ = buyerTel_;
         onBuilt();
         return result;
       }
@@ -10930,8 +11210,24 @@ public final class Card {
           callbackUrl_ = other.callbackUrl_;
           onChanged();
         }
-        if (!other.getEmail().isEmpty()) {
-          email_ = other.email_;
+        if (!other.getBuyerAddr().isEmpty()) {
+          buyerAddr_ = other.buyerAddr_;
+          onChanged();
+        }
+        if (!other.getBuyerEmail().isEmpty()) {
+          buyerEmail_ = other.buyerEmail_;
+          onChanged();
+        }
+        if (!other.getBuyerName().isEmpty()) {
+          buyerName_ = other.buyerName_;
+          onChanged();
+        }
+        if (!other.getBuyerPostcode().isEmpty()) {
+          buyerPostcode_ = other.buyerPostcode_;
+          onChanged();
+        }
+        if (!other.getBuyerTel().isEmpty()) {
+          buyerTel_ = other.buyerTel_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -11589,78 +11885,382 @@ public final class Card {
         return this;
       }
 
-      private java.lang.Object email_ = "";
+      private java.lang.Object buyerAddr_ = "";
       /**
-       * <code>string email = 10;</code>
-       * @return The email.
+       * <code>string buyer_addr = 10;</code>
+       * @return The buyerAddr.
        */
-      public java.lang.String getEmail() {
-        java.lang.Object ref = email_;
+      public java.lang.String getBuyerAddr() {
+        java.lang.Object ref = buyerAddr_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          email_ = s;
+          buyerAddr_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string email = 10;</code>
-       * @return The bytes for email.
+       * <code>string buyer_addr = 10;</code>
+       * @return The bytes for buyerAddr.
        */
       public com.google.protobuf.ByteString
-          getEmailBytes() {
-        java.lang.Object ref = email_;
+          getBuyerAddrBytes() {
+        java.lang.Object ref = buyerAddr_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          email_ = b;
+          buyerAddr_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string email = 10;</code>
-       * @param value The email to set.
+       * <code>string buyer_addr = 10;</code>
+       * @param value The buyerAddr to set.
        * @return This builder for chaining.
        */
-      public Builder setEmail(
+      public Builder setBuyerAddr(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        email_ = value;
+        buyerAddr_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string email = 10;</code>
+       * <code>string buyer_addr = 10;</code>
        * @return This builder for chaining.
        */
-      public Builder clearEmail() {
+      public Builder clearBuyerAddr() {
         
-        email_ = getDefaultInstance().getEmail();
+        buyerAddr_ = getDefaultInstance().getBuyerAddr();
         onChanged();
         return this;
       }
       /**
-       * <code>string email = 10;</code>
-       * @param value The bytes for email to set.
+       * <code>string buyer_addr = 10;</code>
+       * @param value The bytes for buyerAddr to set.
        * @return This builder for chaining.
        */
-      public Builder setEmailBytes(
+      public Builder setBuyerAddrBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        email_ = value;
+        buyerAddr_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyerEmail_ = "";
+      /**
+       * <code>string buyer_email = 11;</code>
+       * @return The buyerEmail.
+       */
+      public java.lang.String getBuyerEmail() {
+        java.lang.Object ref = buyerEmail_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyerEmail_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer_email = 11;</code>
+       * @return The bytes for buyerEmail.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerEmailBytes() {
+        java.lang.Object ref = buyerEmail_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyerEmail_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer_email = 11;</code>
+       * @param value The buyerEmail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        buyerEmail_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_email = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyerEmail() {
+        
+        buyerEmail_ = getDefaultInstance().getBuyerEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_email = 11;</code>
+       * @param value The bytes for buyerEmail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        buyerEmail_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyerName_ = "";
+      /**
+       * <code>string buyer_name = 12;</code>
+       * @return The buyerName.
+       */
+      public java.lang.String getBuyerName() {
+        java.lang.Object ref = buyerName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyerName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer_name = 12;</code>
+       * @return The bytes for buyerName.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerNameBytes() {
+        java.lang.Object ref = buyerName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyerName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer_name = 12;</code>
+       * @param value The buyerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        buyerName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_name = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyerName() {
+        
+        buyerName_ = getDefaultInstance().getBuyerName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_name = 12;</code>
+       * @param value The bytes for buyerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        buyerName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyerPostcode_ = "";
+      /**
+       * <code>string buyer_postcode = 13;</code>
+       * @return The buyerPostcode.
+       */
+      public java.lang.String getBuyerPostcode() {
+        java.lang.Object ref = buyerPostcode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyerPostcode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer_postcode = 13;</code>
+       * @return The bytes for buyerPostcode.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerPostcodeBytes() {
+        java.lang.Object ref = buyerPostcode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyerPostcode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer_postcode = 13;</code>
+       * @param value The buyerPostcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerPostcode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        buyerPostcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_postcode = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyerPostcode() {
+        
+        buyerPostcode_ = getDefaultInstance().getBuyerPostcode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_postcode = 13;</code>
+       * @param value The bytes for buyerPostcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerPostcodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        buyerPostcode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyerTel_ = "";
+      /**
+       * <code>string buyer_tel = 14;</code>
+       * @return The buyerTel.
+       */
+      public java.lang.String getBuyerTel() {
+        java.lang.Object ref = buyerTel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyerTel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer_tel = 14;</code>
+       * @return The bytes for buyerTel.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerTelBytes() {
+        java.lang.Object ref = buyerTel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyerTel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer_tel = 14;</code>
+       * @param value The buyerTel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerTel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        buyerTel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_tel = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyerTel() {
+        
+        buyerTel_ = getDefaultInstance().getBuyerTel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_tel = 14;</code>
+       * @param value The bytes for buyerTel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerTelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        buyerTel_ = value;
         onChanged();
         return this;
       }
@@ -21502,65 +22102,67 @@ public final class Card {
       "card_v2.GetCardInfoData\")\n\025DeleteCardInf" +
       "oRequest\022\020\n\010card_uid\030\001 \001(\t\"7\n\026DeleteCard" +
       "InfoResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 " +
-      "\001(\t\"\371\001\n\032PayByRegisteredCardRequest\022\020\n\010ca" +
+      "\001(\t\"\322\002\n\032PayByRegisteredCardRequest\022\020\n\010ca" +
       "rd_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n\006am" +
       "ount\030\003 \001(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\022\n\n" +
       "order_name\030\005 \001(\t\022\030\n\020card_installment\030\006 \001" +
       "(\005\022!\n\031interest_free_by_merchant\030\007 \001(\010\022\023\n" +
       "\013custom_data\030\010 \001(\t\022\024\n\014callback_url\030\t \001(\t" +
-      "\022\r\n\005email\030\n \001(\t\"\250\006\n\027PayByRegisteredCardD" +
-      "ata\022\016\n\006amount\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\022" +
-      "\n\nbuyer_addr\030\003 \001(\t\022\023\n\013buyer_email\030\004 \001(\t\022" +
-      "\022\n\nbuyer_name\030\005 \001(\t\022\026\n\016buyer_postcode\030\006 " +
-      "\001(\t\022\021\n\tbuyer_tel\030\007 \001(\t\022\025\n\rcancel_amount\030" +
-      "\010 \001(\t\022.\n\016cancel_history\030\t \003(\0132\026.card_v2." +
-      "CancelHistory\022\025\n\rcancel_reason\030\n \001(\t\022\033\n\023" +
-      "cancel_receipt_urls\030\013 \003(\t\022\024\n\014cancelled_a" +
-      "t\030\014 \001(\005\022\021\n\tcard_code\030\r \001(\t\022\021\n\tcard_name\030" +
-      "\016 \001(\t\022\022\n\nbin_number\030\017 \001(\t\022\030\n\020card_instal" +
-      "lment\030\020 \001(\005\022\021\n\tcard_type\030\021 \001(\005\022\033\n\023cash_r" +
-      "eceipt_issued\030\022 \001(\010\022\017\n\007channel\030\023 \001(\t\022\020\n\010" +
-      "currency\030\024 \001(\t\022\023\n\013custom_data\030\025 \001(\t\022\020\n\010c" +
-      "ard_uid\030\026 \001(\t\022\032\n\022customer_uid_usage\030\027 \001(" +
-      "\t\022\023\n\013fail_reason\030\030 \001(\t\022\021\n\tfailed_at\030\031 \001(" +
-      "\005\022\017\n\007imp_uid\030\032 \001(\t\022\024\n\014merchant_uid\030\033 \001(\t" +
-      "\022\022\n\norder_name\030\034 \001(\t\022\017\n\007paid_at\030\035 \001(\005\022\022\n" +
-      "\npay_method\030\036 \001(\t\022\r\n\005pg_id\030\037 \001(\t\022\023\n\013pg_p" +
-      "rovider\030  \001(\t\022\016\n\006pg_tid\030! \001(\t\022\023\n\013receipt" +
-      "_url\030\" \001(\t\022\022\n\nstarted_at\030# \001(\005\022\016\n\006status" +
-      "\030$ \001(\t\022\022\n\nuser_agent\030% \001(\t\"p\n\033PayByRegis" +
-      "teredCardResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messa" +
-      "ge\030\002 \001(\t\0222\n\010response\030\003 \001(\0132 .card_v2.Pay" +
-      "ByRegisteredCardData\"j\n\rCancelHistory\022\016\n" +
-      "\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n\014cancell" +
-      "ed_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022\023\n\013receipt_u" +
-      "rl\030\005 \001(\t\"{\n\030CancelCardPaymentRequest\022\017\n\007" +
-      "imp_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n\014merchan" +
-      "t_uid\030\003 \001(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\016\n" +
-      "\006reason\030\005 \001(\t\"o\n\032CancelCardPaymenttRespo" +
-      "nse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0222\n\010re" +
-      "sponse\030\003 \001(\0132 .card_v2.PayByRegisteredCa" +
-      "rdData2\314\005\n\022PaymentCardService\022w\n\021CardReg" +
-      "isterV2RPC\022\034.card_v2.CardRegisterRequest" +
-      "\032\035.card_v2.CardRegisterResponse\"%\202\323\344\223\002\037\"" +
-      "\032/api/payments/v2/card/info:\001*\022|\n\020GetCar" +
-      "dInfoV2RPC\022\033.card_v2.GetCardInfoRequest\032" +
-      "\034.card_v2.GetCardInfoResponse\"-\202\323\344\223\002\'\022%/" +
-      "api/payments/v2/card/info/{card_uid}\022\205\001\n" +
-      "\023DeleteCardInfoV2RPC\022\036.card_v2.DeleteCar" +
-      "dInfoRequest\032\037.card_v2.DeleteCardInfoRes" +
-      "ponse\"-\202\323\344\223\002\'*%/api/payments/v2/card/inf" +
-      "o/{card_uid}\022\224\001\n\031PayByRegiseteredCardV2R" +
-      "PC\022#.card_v2.PayByRegisteredCardRequest\032" +
-      "$.card_v2.PayByRegisteredCardResponse\",\202" +
-      "\323\344\223\002&\"$/api/payments/v2/card/pay/registe" +
-      "red\022\237\001\n\032CancelRegiseteredCardV2RPC\022!.car" +
-      "d_v2.CancelCardPaymentRequest\032#.card_v2." +
-      "CancelCardPaymenttResponse\"9\202\323\344\223\0023\"1/api" +
-      "/payments/v2/card/cancel/registered/{imp" +
-      "_uid}BMZ8github.com/iamport/interface/ge" +
-      "n_src/go/v2/payments/card\252\002\020V2.Payments." +
-      "Cardb\006proto3"
+      "\022\022\n\nbuyer_addr\030\n \001(\t\022\023\n\013buyer_email\030\013 \001(" +
+      "\t\022\022\n\nbuyer_name\030\014 \001(\t\022\026\n\016buyer_postcode\030" +
+      "\r \001(\t\022\021\n\tbuyer_tel\030\016 \001(\t\"\250\006\n\027PayByRegist" +
+      "eredCardData\022\016\n\006amount\030\001 \001(\t\022\021\n\tapply_nu" +
+      "m\030\002 \001(\t\022\022\n\nbuyer_addr\030\003 \001(\t\022\023\n\013buyer_ema" +
+      "il\030\004 \001(\t\022\022\n\nbuyer_name\030\005 \001(\t\022\026\n\016buyer_po" +
+      "stcode\030\006 \001(\t\022\021\n\tbuyer_tel\030\007 \001(\t\022\025\n\rcance" +
+      "l_amount\030\010 \001(\t\022.\n\016cancel_history\030\t \003(\0132\026" +
+      ".card_v2.CancelHistory\022\025\n\rcancel_reason\030" +
+      "\n \001(\t\022\033\n\023cancel_receipt_urls\030\013 \003(\t\022\024\n\014ca" +
+      "ncelled_at\030\014 \001(\005\022\021\n\tcard_code\030\r \001(\t\022\021\n\tc" +
+      "ard_name\030\016 \001(\t\022\022\n\nbin_number\030\017 \001(\t\022\030\n\020ca" +
+      "rd_installment\030\020 \001(\005\022\021\n\tcard_type\030\021 \001(\005\022" +
+      "\033\n\023cash_receipt_issued\030\022 \001(\010\022\017\n\007channel\030" +
+      "\023 \001(\t\022\020\n\010currency\030\024 \001(\t\022\023\n\013custom_data\030\025" +
+      " \001(\t\022\020\n\010card_uid\030\026 \001(\t\022\032\n\022customer_uid_u" +
+      "sage\030\027 \001(\t\022\023\n\013fail_reason\030\030 \001(\t\022\021\n\tfaile" +
+      "d_at\030\031 \001(\005\022\017\n\007imp_uid\030\032 \001(\t\022\024\n\014merchant_" +
+      "uid\030\033 \001(\t\022\022\n\norder_name\030\034 \001(\t\022\017\n\007paid_at" +
+      "\030\035 \001(\005\022\022\n\npay_method\030\036 \001(\t\022\r\n\005pg_id\030\037 \001(" +
+      "\t\022\023\n\013pg_provider\030  \001(\t\022\016\n\006pg_tid\030! \001(\t\022\023" +
+      "\n\013receipt_url\030\" \001(\t\022\022\n\nstarted_at\030# \001(\005\022" +
+      "\016\n\006status\030$ \001(\t\022\022\n\nuser_agent\030% \001(\t\"p\n\033P" +
+      "ayByRegisteredCardResponse\022\014\n\004code\030\001 \001(\005" +
+      "\022\017\n\007message\030\002 \001(\t\0222\n\010response\030\003 \001(\0132 .ca" +
+      "rd_v2.PayByRegisteredCardData\"j\n\rCancelH" +
+      "istory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024" +
+      "\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022\023\n\013" +
+      "receipt_url\030\005 \001(\t\"{\n\030CancelCardPaymentRe" +
+      "quest\022\017\n\007imp_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024" +
+      "\n\014merchant_uid\030\003 \001(\t\022\030\n\020duty_free_amount" +
+      "\030\004 \001(\t\022\016\n\006reason\030\005 \001(\t\"o\n\032CancelCardPaym" +
+      "enttResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 " +
+      "\001(\t\0222\n\010response\030\003 \001(\0132 .card_v2.PayByReg" +
+      "isteredCardData2\314\005\n\022PaymentCardService\022w" +
+      "\n\021CardRegisterV2RPC\022\034.card_v2.CardRegist" +
+      "erRequest\032\035.card_v2.CardRegisterResponse" +
+      "\"%\202\323\344\223\002\037\"\032/api/payments/v2/card/info:\001*\022" +
+      "|\n\020GetCardInfoV2RPC\022\033.card_v2.GetCardInf" +
+      "oRequest\032\034.card_v2.GetCardInfoResponse\"-" +
+      "\202\323\344\223\002\'\022%/api/payments/v2/card/info/{card" +
+      "_uid}\022\205\001\n\023DeleteCardInfoV2RPC\022\036.card_v2." +
+      "DeleteCardInfoRequest\032\037.card_v2.DeleteCa" +
+      "rdInfoResponse\"-\202\323\344\223\002\'*%/api/payments/v2" +
+      "/card/info/{card_uid}\022\224\001\n\031PayByRegiseter" +
+      "edCardV2RPC\022#.card_v2.PayByRegisteredCar" +
+      "dRequest\032$.card_v2.PayByRegisteredCardRe" +
+      "sponse\",\202\323\344\223\002&\"$/api/payments/v2/card/pa" +
+      "y/registered\022\237\001\n\032CancelRegiseteredCardV2" +
+      "RPC\022!.card_v2.CancelCardPaymentRequest\032#" +
+      ".card_v2.CancelCardPaymenttResponse\"9\202\323\344" +
+      "\223\0023\"1/api/payments/v2/card/cancel/regist" +
+      "ered/{imp_uid}BMZ8github.com/iamport/int" +
+      "erface/gen_src/go/v2/payments/card\252\002\020V2." +
+      "Payments.Cardb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21620,7 +22222,7 @@ public final class Card {
     internal_static_card_v2_PayByRegisteredCardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_card_v2_PayByRegisteredCardRequest_descriptor,
-        new java.lang.String[] { "CardUid", "MerchantUid", "Amount", "DutyFreeAmount", "OrderName", "CardInstallment", "InterestFreeByMerchant", "CustomData", "CallbackUrl", "Email", });
+        new java.lang.String[] { "CardUid", "MerchantUid", "Amount", "DutyFreeAmount", "OrderName", "CardInstallment", "InterestFreeByMerchant", "CustomData", "CallbackUrl", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", });
     internal_static_card_v2_PayByRegisteredCardData_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_card_v2_PayByRegisteredCardData_fieldAccessorTable = new

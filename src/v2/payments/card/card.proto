@@ -120,7 +120,11 @@ message PayByRegisteredCardRequest {
     bool interest_free_by_merchant = 7;
     string custom_data = 8;
     string callback_url = 9;
-    string email = 10;
+    string buyer_addr = 10;
+    string buyer_email = 11;
+    string buyer_name = 12;
+    string buyer_postcode = 13;
+    string buyer_tel = 14;
 }
 
 message PayByRegisteredCardData {

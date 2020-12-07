@@ -383,7 +383,11 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_v2_2fpayments_2fcard_2fcard_2e
   PROTOBUF_FIELD_OFFSET(::card_v2::PayByRegisteredCardRequest, interest_free_by_merchant_),
   PROTOBUF_FIELD_OFFSET(::card_v2::PayByRegisteredCardRequest, custom_data_),
   PROTOBUF_FIELD_OFFSET(::card_v2::PayByRegisteredCardRequest, callback_url_),
-  PROTOBUF_FIELD_OFFSET(::card_v2::PayByRegisteredCardRequest, email_),
+  PROTOBUF_FIELD_OFFSET(::card_v2::PayByRegisteredCardRequest, buyer_addr_),
+  PROTOBUF_FIELD_OFFSET(::card_v2::PayByRegisteredCardRequest, buyer_email_),
+  PROTOBUF_FIELD_OFFSET(::card_v2::PayByRegisteredCardRequest, buyer_name_),
+  PROTOBUF_FIELD_OFFSET(::card_v2::PayByRegisteredCardRequest, buyer_postcode_),
+  PROTOBUF_FIELD_OFFSET(::card_v2::PayByRegisteredCardRequest, buyer_tel_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::card_v2::PayByRegisteredCardData, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -473,11 +477,11 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 74, -1, sizeof(::card_v2::DeleteCardInfoRequest)},
   { 80, -1, sizeof(::card_v2::DeleteCardInfoResponse)},
   { 87, -1, sizeof(::card_v2::PayByRegisteredCardRequest)},
-  { 102, -1, sizeof(::card_v2::PayByRegisteredCardData)},
-  { 144, -1, sizeof(::card_v2::PayByRegisteredCardResponse)},
-  { 152, -1, sizeof(::card_v2::CancelHistory)},
-  { 162, -1, sizeof(::card_v2::CancelCardPaymentRequest)},
-  { 172, -1, sizeof(::card_v2::CancelCardPaymenttResponse)},
+  { 106, -1, sizeof(::card_v2::PayByRegisteredCardData)},
+  { 148, -1, sizeof(::card_v2::PayByRegisteredCardResponse)},
+  { 156, -1, sizeof(::card_v2::CancelHistory)},
+  { 166, -1, sizeof(::card_v2::CancelCardPaymentRequest)},
+  { 176, -1, sizeof(::card_v2::CancelCardPaymenttResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -529,65 +533,67 @@ const char descriptor_table_protodef_v2_2fpayments_2fcard_2fcard_2eproto[] PROTO
   "card_v2.GetCardInfoData\")\n\025DeleteCardInf"
   "oRequest\022\020\n\010card_uid\030\001 \001(\t\"7\n\026DeleteCard"
   "InfoResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 "
-  "\001(\t\"\371\001\n\032PayByRegisteredCardRequest\022\020\n\010ca"
+  "\001(\t\"\322\002\n\032PayByRegisteredCardRequest\022\020\n\010ca"
   "rd_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n\006am"
   "ount\030\003 \001(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\022\n\n"
   "order_name\030\005 \001(\t\022\030\n\020card_installment\030\006 \001"
   "(\005\022!\n\031interest_free_by_merchant\030\007 \001(\010\022\023\n"
   "\013custom_data\030\010 \001(\t\022\024\n\014callback_url\030\t \001(\t"
-  "\022\r\n\005email\030\n \001(\t\"\250\006\n\027PayByRegisteredCardD"
-  "ata\022\016\n\006amount\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\022"
-  "\n\nbuyer_addr\030\003 \001(\t\022\023\n\013buyer_email\030\004 \001(\t\022"
-  "\022\n\nbuyer_name\030\005 \001(\t\022\026\n\016buyer_postcode\030\006 "
-  "\001(\t\022\021\n\tbuyer_tel\030\007 \001(\t\022\025\n\rcancel_amount\030"
-  "\010 \001(\t\022.\n\016cancel_history\030\t \003(\0132\026.card_v2."
-  "CancelHistory\022\025\n\rcancel_reason\030\n \001(\t\022\033\n\023"
-  "cancel_receipt_urls\030\013 \003(\t\022\024\n\014cancelled_a"
-  "t\030\014 \001(\005\022\021\n\tcard_code\030\r \001(\t\022\021\n\tcard_name\030"
-  "\016 \001(\t\022\022\n\nbin_number\030\017 \001(\t\022\030\n\020card_instal"
-  "lment\030\020 \001(\005\022\021\n\tcard_type\030\021 \001(\005\022\033\n\023cash_r"
-  "eceipt_issued\030\022 \001(\010\022\017\n\007channel\030\023 \001(\t\022\020\n\010"
-  "currency\030\024 \001(\t\022\023\n\013custom_data\030\025 \001(\t\022\020\n\010c"
-  "ard_uid\030\026 \001(\t\022\032\n\022customer_uid_usage\030\027 \001("
-  "\t\022\023\n\013fail_reason\030\030 \001(\t\022\021\n\tfailed_at\030\031 \001("
-  "\005\022\017\n\007imp_uid\030\032 \001(\t\022\024\n\014merchant_uid\030\033 \001(\t"
-  "\022\022\n\norder_name\030\034 \001(\t\022\017\n\007paid_at\030\035 \001(\005\022\022\n"
-  "\npay_method\030\036 \001(\t\022\r\n\005pg_id\030\037 \001(\t\022\023\n\013pg_p"
-  "rovider\030  \001(\t\022\016\n\006pg_tid\030! \001(\t\022\023\n\013receipt"
-  "_url\030\" \001(\t\022\022\n\nstarted_at\030# \001(\005\022\016\n\006status"
-  "\030$ \001(\t\022\022\n\nuser_agent\030% \001(\t\"p\n\033PayByRegis"
-  "teredCardResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messa"
-  "ge\030\002 \001(\t\0222\n\010response\030\003 \001(\0132 .card_v2.Pay"
-  "ByRegisteredCardData\"j\n\rCancelHistory\022\016\n"
-  "\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n\014cancell"
-  "ed_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022\023\n\013receipt_u"
-  "rl\030\005 \001(\t\"{\n\030CancelCardPaymentRequest\022\017\n\007"
-  "imp_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n\014merchan"
-  "t_uid\030\003 \001(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\016\n"
-  "\006reason\030\005 \001(\t\"o\n\032CancelCardPaymenttRespo"
-  "nse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\0222\n\010re"
-  "sponse\030\003 \001(\0132 .card_v2.PayByRegisteredCa"
-  "rdData2\314\005\n\022PaymentCardService\022w\n\021CardReg"
-  "isterV2RPC\022\034.card_v2.CardRegisterRequest"
-  "\032\035.card_v2.CardRegisterResponse\"%\202\323\344\223\002\037\""
-  "\032/api/payments/v2/card/info:\001*\022|\n\020GetCar"
-  "dInfoV2RPC\022\033.card_v2.GetCardInfoRequest\032"
-  "\034.card_v2.GetCardInfoResponse\"-\202\323\344\223\002\'\022%/"
-  "api/payments/v2/card/info/{card_uid}\022\205\001\n"
-  "\023DeleteCardInfoV2RPC\022\036.card_v2.DeleteCar"
-  "dInfoRequest\032\037.card_v2.DeleteCardInfoRes"
-  "ponse\"-\202\323\344\223\002\'*%/api/payments/v2/card/inf"
-  "o/{card_uid}\022\224\001\n\031PayByRegiseteredCardV2R"
-  "PC\022#.card_v2.PayByRegisteredCardRequest\032"
-  "$.card_v2.PayByRegisteredCardResponse\",\202"
-  "\323\344\223\002&\"$/api/payments/v2/card/pay/registe"
-  "red\022\237\001\n\032CancelRegiseteredCardV2RPC\022!.car"
-  "d_v2.CancelCardPaymentRequest\032#.card_v2."
-  "CancelCardPaymenttResponse\"9\202\323\344\223\0023\"1/api"
-  "/payments/v2/card/cancel/registered/{imp"
-  "_uid}BMZ8github.com/iamport/interface/ge"
-  "n_src/go/v2/payments/card\252\002\020V2.Payments."
-  "Cardb\006proto3"
+  "\022\022\n\nbuyer_addr\030\n \001(\t\022\023\n\013buyer_email\030\013 \001("
+  "\t\022\022\n\nbuyer_name\030\014 \001(\t\022\026\n\016buyer_postcode\030"
+  "\r \001(\t\022\021\n\tbuyer_tel\030\016 \001(\t\"\250\006\n\027PayByRegist"
+  "eredCardData\022\016\n\006amount\030\001 \001(\t\022\021\n\tapply_nu"
+  "m\030\002 \001(\t\022\022\n\nbuyer_addr\030\003 \001(\t\022\023\n\013buyer_ema"
+  "il\030\004 \001(\t\022\022\n\nbuyer_name\030\005 \001(\t\022\026\n\016buyer_po"
+  "stcode\030\006 \001(\t\022\021\n\tbuyer_tel\030\007 \001(\t\022\025\n\rcance"
+  "l_amount\030\010 \001(\t\022.\n\016cancel_history\030\t \003(\0132\026"
+  ".card_v2.CancelHistory\022\025\n\rcancel_reason\030"
+  "\n \001(\t\022\033\n\023cancel_receipt_urls\030\013 \003(\t\022\024\n\014ca"
+  "ncelled_at\030\014 \001(\005\022\021\n\tcard_code\030\r \001(\t\022\021\n\tc"
+  "ard_name\030\016 \001(\t\022\022\n\nbin_number\030\017 \001(\t\022\030\n\020ca"
+  "rd_installment\030\020 \001(\005\022\021\n\tcard_type\030\021 \001(\005\022"
+  "\033\n\023cash_receipt_issued\030\022 \001(\010\022\017\n\007channel\030"
+  "\023 \001(\t\022\020\n\010currency\030\024 \001(\t\022\023\n\013custom_data\030\025"
+  " \001(\t\022\020\n\010card_uid\030\026 \001(\t\022\032\n\022customer_uid_u"
+  "sage\030\027 \001(\t\022\023\n\013fail_reason\030\030 \001(\t\022\021\n\tfaile"
+  "d_at\030\031 \001(\005\022\017\n\007imp_uid\030\032 \001(\t\022\024\n\014merchant_"
+  "uid\030\033 \001(\t\022\022\n\norder_name\030\034 \001(\t\022\017\n\007paid_at"
+  "\030\035 \001(\005\022\022\n\npay_method\030\036 \001(\t\022\r\n\005pg_id\030\037 \001("
+  "\t\022\023\n\013pg_provider\030  \001(\t\022\016\n\006pg_tid\030! \001(\t\022\023"
+  "\n\013receipt_url\030\" \001(\t\022\022\n\nstarted_at\030# \001(\005\022"
+  "\016\n\006status\030$ \001(\t\022\022\n\nuser_agent\030% \001(\t\"p\n\033P"
+  "ayByRegisteredCardResponse\022\014\n\004code\030\001 \001(\005"
+  "\022\017\n\007message\030\002 \001(\t\0222\n\010response\030\003 \001(\0132 .ca"
+  "rd_v2.PayByRegisteredCardData\"j\n\rCancelH"
+  "istory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024"
+  "\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022\023\n\013"
+  "receipt_url\030\005 \001(\t\"{\n\030CancelCardPaymentRe"
+  "quest\022\017\n\007imp_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024"
+  "\n\014merchant_uid\030\003 \001(\t\022\030\n\020duty_free_amount"
+  "\030\004 \001(\t\022\016\n\006reason\030\005 \001(\t\"o\n\032CancelCardPaym"
+  "enttResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 "
+  "\001(\t\0222\n\010response\030\003 \001(\0132 .card_v2.PayByReg"
+  "isteredCardData2\314\005\n\022PaymentCardService\022w"
+  "\n\021CardRegisterV2RPC\022\034.card_v2.CardRegist"
+  "erRequest\032\035.card_v2.CardRegisterResponse"
+  "\"%\202\323\344\223\002\037\"\032/api/payments/v2/card/info:\001*\022"
+  "|\n\020GetCardInfoV2RPC\022\033.card_v2.GetCardInf"
+  "oRequest\032\034.card_v2.GetCardInfoResponse\"-"
+  "\202\323\344\223\002\'\022%/api/payments/v2/card/info/{card"
+  "_uid}\022\205\001\n\023DeleteCardInfoV2RPC\022\036.card_v2."
+  "DeleteCardInfoRequest\032\037.card_v2.DeleteCa"
+  "rdInfoResponse\"-\202\323\344\223\002\'*%/api/payments/v2"
+  "/card/info/{card_uid}\022\224\001\n\031PayByRegiseter"
+  "edCardV2RPC\022#.card_v2.PayByRegisteredCar"
+  "dRequest\032$.card_v2.PayByRegisteredCardRe"
+  "sponse\",\202\323\344\223\002&\"$/api/payments/v2/card/pa"
+  "y/registered\022\237\001\n\032CancelRegiseteredCardV2"
+  "RPC\022!.card_v2.CancelCardPaymentRequest\032#"
+  ".card_v2.CancelCardPaymenttResponse\"9\202\323\344"
+  "\223\0023\"1/api/payments/v2/card/cancel/regist"
+  "ered/{imp_uid}BMZ8github.com/iamport/int"
+  "erface/gen_src/go/v2/payments/card\252\002\020V2."
+  "Payments.Cardb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_deps[1] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
@@ -610,7 +616,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v2_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto = {
-  false, false, descriptor_table_protodef_v2_2fpayments_2fcard_2fcard_2eproto, "v2/payments/card/card.proto", 3572,
+  false, false, descriptor_table_protodef_v2_2fpayments_2fcard_2fcard_2eproto, "v2/payments/card/card.proto", 3661,
   &descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_once, descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_sccs, descriptor_table_v2_2fpayments_2fcard_2fcard_2eproto_deps, 14, 1,
   schemas, file_default_instances, TableStruct_v2_2fpayments_2fcard_2fcard_2eproto::offsets,
   file_level_metadata_v2_2fpayments_2fcard_2fcard_2eproto, 14, file_level_enum_descriptors_v2_2fpayments_2fcard_2fcard_2eproto, file_level_service_descriptors_v2_2fpayments_2fcard_2fcard_2eproto,
@@ -3755,9 +3761,29 @@ PayByRegisteredCardRequest::PayByRegisteredCardRequest(const PayByRegisteredCard
     callback_url_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_callback_url(),
       GetArena());
   }
-  email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_email().empty()) {
-    email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_email(),
+  buyer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_buyer_addr().empty()) {
+    buyer_addr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_addr(),
+      GetArena());
+  }
+  buyer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_buyer_email().empty()) {
+    buyer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_email(),
+      GetArena());
+  }
+  buyer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_buyer_name().empty()) {
+    buyer_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_name(),
+      GetArena());
+  }
+  buyer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_buyer_postcode().empty()) {
+    buyer_postcode_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_postcode(),
+      GetArena());
+  }
+  buyer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_buyer_tel().empty()) {
+    buyer_tel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_tel(),
       GetArena());
   }
   ::memcpy(&card_installment_, &from.card_installment_,
@@ -3775,7 +3801,11 @@ void PayByRegisteredCardRequest::SharedCtor() {
   order_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   custom_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   callback_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&card_installment_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&interest_free_by_merchant_) -
       reinterpret_cast<char*>(&card_installment_)) + sizeof(interest_free_by_merchant_));
@@ -3796,7 +3826,11 @@ void PayByRegisteredCardRequest::SharedDtor() {
   order_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   custom_data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   callback_url_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  email_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_addr_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_email_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_postcode_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_tel_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void PayByRegisteredCardRequest::ArenaDtor(void* object) {
@@ -3827,7 +3861,11 @@ void PayByRegisteredCardRequest::Clear() {
   order_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   custom_data_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   callback_url_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  buyer_addr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  buyer_email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  buyer_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  buyer_postcode_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  buyer_tel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::memset(&card_installment_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&interest_free_by_merchant_) -
       reinterpret_cast<char*>(&card_installment_)) + sizeof(interest_free_by_merchant_));
@@ -3919,12 +3957,48 @@ const char* PayByRegisteredCardRequest::_InternalParse(const char* ptr, ::PROTOB
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string email = 10;
+      // string buyer_addr = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          auto str = _internal_mutable_email();
+          auto str = _internal_mutable_buyer_addr();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "card_v2.PayByRegisteredCardRequest.email"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "card_v2.PayByRegisteredCardRequest.buyer_addr"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string buyer_email = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+          auto str = _internal_mutable_buyer_email();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "card_v2.PayByRegisteredCardRequest.buyer_email"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string buyer_name = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
+          auto str = _internal_mutable_buyer_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "card_v2.PayByRegisteredCardRequest.buyer_name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string buyer_postcode = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+          auto str = _internal_mutable_buyer_postcode();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "card_v2.PayByRegisteredCardRequest.buyer_postcode"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string buyer_tel = 14;
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
+          auto str = _internal_mutable_buyer_tel();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "card_v2.PayByRegisteredCardRequest.buyer_tel"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4038,14 +4112,54 @@ failure:
         9, this->_internal_callback_url(), target);
   }
 
-  // string email = 10;
-  if (this->email().size() > 0) {
+  // string buyer_addr = 10;
+  if (this->buyer_addr().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_email().data(), static_cast<int>(this->_internal_email().length()),
+      this->_internal_buyer_addr().data(), static_cast<int>(this->_internal_buyer_addr().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "card_v2.PayByRegisteredCardRequest.email");
+      "card_v2.PayByRegisteredCardRequest.buyer_addr");
     target = stream->WriteStringMaybeAliased(
-        10, this->_internal_email(), target);
+        10, this->_internal_buyer_addr(), target);
+  }
+
+  // string buyer_email = 11;
+  if (this->buyer_email().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_buyer_email().data(), static_cast<int>(this->_internal_buyer_email().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "card_v2.PayByRegisteredCardRequest.buyer_email");
+    target = stream->WriteStringMaybeAliased(
+        11, this->_internal_buyer_email(), target);
+  }
+
+  // string buyer_name = 12;
+  if (this->buyer_name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_buyer_name().data(), static_cast<int>(this->_internal_buyer_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "card_v2.PayByRegisteredCardRequest.buyer_name");
+    target = stream->WriteStringMaybeAliased(
+        12, this->_internal_buyer_name(), target);
+  }
+
+  // string buyer_postcode = 13;
+  if (this->buyer_postcode().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_buyer_postcode().data(), static_cast<int>(this->_internal_buyer_postcode().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "card_v2.PayByRegisteredCardRequest.buyer_postcode");
+    target = stream->WriteStringMaybeAliased(
+        13, this->_internal_buyer_postcode(), target);
+  }
+
+  // string buyer_tel = 14;
+  if (this->buyer_tel().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_buyer_tel().data(), static_cast<int>(this->_internal_buyer_tel().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "card_v2.PayByRegisteredCardRequest.buyer_tel");
+    target = stream->WriteStringMaybeAliased(
+        14, this->_internal_buyer_tel(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4113,11 +4227,39 @@ size_t PayByRegisteredCardRequest::ByteSizeLong() const {
         this->_internal_callback_url());
   }
 
-  // string email = 10;
-  if (this->email().size() > 0) {
+  // string buyer_addr = 10;
+  if (this->buyer_addr().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_email());
+        this->_internal_buyer_addr());
+  }
+
+  // string buyer_email = 11;
+  if (this->buyer_email().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_buyer_email());
+  }
+
+  // string buyer_name = 12;
+  if (this->buyer_name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_buyer_name());
+  }
+
+  // string buyer_postcode = 13;
+  if (this->buyer_postcode().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_buyer_postcode());
+  }
+
+  // string buyer_tel = 14;
+  if (this->buyer_tel().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_buyer_tel());
   }
 
   // int32 card_installment = 6;
@@ -4184,8 +4326,20 @@ void PayByRegisteredCardRequest::MergeFrom(const PayByRegisteredCardRequest& fro
   if (from.callback_url().size() > 0) {
     _internal_set_callback_url(from._internal_callback_url());
   }
-  if (from.email().size() > 0) {
-    _internal_set_email(from._internal_email());
+  if (from.buyer_addr().size() > 0) {
+    _internal_set_buyer_addr(from._internal_buyer_addr());
+  }
+  if (from.buyer_email().size() > 0) {
+    _internal_set_buyer_email(from._internal_buyer_email());
+  }
+  if (from.buyer_name().size() > 0) {
+    _internal_set_buyer_name(from._internal_buyer_name());
+  }
+  if (from.buyer_postcode().size() > 0) {
+    _internal_set_buyer_postcode(from._internal_buyer_postcode());
+  }
+  if (from.buyer_tel().size() > 0) {
+    _internal_set_buyer_tel(from._internal_buyer_tel());
   }
   if (from.card_installment() != 0) {
     _internal_set_card_installment(from._internal_card_installment());
@@ -4223,7 +4377,11 @@ void PayByRegisteredCardRequest::InternalSwap(PayByRegisteredCardRequest* other)
   order_name_.Swap(&other->order_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   custom_data_.Swap(&other->custom_data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   callback_url_.Swap(&other->callback_url_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  email_.Swap(&other->email_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  buyer_addr_.Swap(&other->buyer_addr_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  buyer_email_.Swap(&other->buyer_email_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  buyer_name_.Swap(&other->buyer_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  buyer_postcode_.Swap(&other->buyer_postcode_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  buyer_tel_.Swap(&other->buyer_tel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(PayByRegisteredCardRequest, interest_free_by_merchant_)
       + sizeof(PayByRegisteredCardRequest::interest_free_by_merchant_)

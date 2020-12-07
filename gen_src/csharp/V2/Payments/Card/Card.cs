@@ -51,59 +51,61 @@ namespace V2.Payments.Card {
             "KAUSDwoHbWVzc2FnZRgCIAEoCRIqCghyZXNwb25zZRgDIAEoCzIYLmNhcmRf",
             "djIuR2V0Q2FyZEluZm9EYXRhIikKFURlbGV0ZUNhcmRJbmZvUmVxdWVzdBIQ",
             "CghjYXJkX3VpZBgBIAEoCSI3ChZEZWxldGVDYXJkSW5mb1Jlc3BvbnNlEgwK",
-            "BGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCSL5AQoaUGF5QnlSZWdpc3Rl",
+            "BGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCSLSAgoaUGF5QnlSZWdpc3Rl",
             "cmVkQ2FyZFJlcXVlc3QSEAoIY2FyZF91aWQYASABKAkSFAoMbWVyY2hhbnRf",
             "dWlkGAIgASgJEg4KBmFtb3VudBgDIAEoCRIYChBkdXR5X2ZyZWVfYW1vdW50",
             "GAQgASgJEhIKCm9yZGVyX25hbWUYBSABKAkSGAoQY2FyZF9pbnN0YWxsbWVu",
             "dBgGIAEoBRIhChlpbnRlcmVzdF9mcmVlX2J5X21lcmNoYW50GAcgASgIEhMK",
-            "C2N1c3RvbV9kYXRhGAggASgJEhQKDGNhbGxiYWNrX3VybBgJIAEoCRINCgVl",
-            "bWFpbBgKIAEoCSKoBgoXUGF5QnlSZWdpc3RlcmVkQ2FyZERhdGESDgoGYW1v",
-            "dW50GAEgASgJEhEKCWFwcGx5X251bRgCIAEoCRISCgpidXllcl9hZGRyGAMg",
-            "ASgJEhMKC2J1eWVyX2VtYWlsGAQgASgJEhIKCmJ1eWVyX25hbWUYBSABKAkS",
-            "FgoOYnV5ZXJfcG9zdGNvZGUYBiABKAkSEQoJYnV5ZXJfdGVsGAcgASgJEhUK",
-            "DWNhbmNlbF9hbW91bnQYCCABKAkSLgoOY2FuY2VsX2hpc3RvcnkYCSADKAsy",
-            "Fi5jYXJkX3YyLkNhbmNlbEhpc3RvcnkSFQoNY2FuY2VsX3JlYXNvbhgKIAEo",
-            "CRIbChNjYW5jZWxfcmVjZWlwdF91cmxzGAsgAygJEhQKDGNhbmNlbGxlZF9h",
-            "dBgMIAEoBRIRCgljYXJkX2NvZGUYDSABKAkSEQoJY2FyZF9uYW1lGA4gASgJ",
-            "EhIKCmJpbl9udW1iZXIYDyABKAkSGAoQY2FyZF9pbnN0YWxsbWVudBgQIAEo",
-            "BRIRCgljYXJkX3R5cGUYESABKAUSGwoTY2FzaF9yZWNlaXB0X2lzc3VlZBgS",
-            "IAEoCBIPCgdjaGFubmVsGBMgASgJEhAKCGN1cnJlbmN5GBQgASgJEhMKC2N1",
-            "c3RvbV9kYXRhGBUgASgJEhAKCGNhcmRfdWlkGBYgASgJEhoKEmN1c3RvbWVy",
-            "X3VpZF91c2FnZRgXIAEoCRITCgtmYWlsX3JlYXNvbhgYIAEoCRIRCglmYWls",
-            "ZWRfYXQYGSABKAUSDwoHaW1wX3VpZBgaIAEoCRIUCgxtZXJjaGFudF91aWQY",
-            "GyABKAkSEgoKb3JkZXJfbmFtZRgcIAEoCRIPCgdwYWlkX2F0GB0gASgFEhIK",
-            "CnBheV9tZXRob2QYHiABKAkSDQoFcGdfaWQYHyABKAkSEwoLcGdfcHJvdmlk",
-            "ZXIYICABKAkSDgoGcGdfdGlkGCEgASgJEhMKC3JlY2VpcHRfdXJsGCIgASgJ",
-            "EhIKCnN0YXJ0ZWRfYXQYIyABKAUSDgoGc3RhdHVzGCQgASgJEhIKCnVzZXJf",
-            "YWdlbnQYJSABKAkicAobUGF5QnlSZWdpc3RlcmVkQ2FyZFJlc3BvbnNlEgwK",
-            "BGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRIyCghyZXNwb25zZRgDIAEo",
-            "CzIgLmNhcmRfdjIuUGF5QnlSZWdpc3RlcmVkQ2FyZERhdGEiagoNQ2FuY2Vs",
-            "SGlzdG9yeRIOCgZwZ190aWQYASABKAkSDgoGYW1vdW50GAIgASgJEhQKDGNh",
-            "bmNlbGxlZF9hdBgDIAEoBRIOCgZyZWFzb24YBCABKAkSEwoLcmVjZWlwdF91",
-            "cmwYBSABKAkiewoYQ2FuY2VsQ2FyZFBheW1lbnRSZXF1ZXN0Eg8KB2ltcF91",
-            "aWQYASABKAkSDgoGYW1vdW50GAIgASgJEhQKDG1lcmNoYW50X3VpZBgDIAEo",
-            "CRIYChBkdXR5X2ZyZWVfYW1vdW50GAQgASgJEg4KBnJlYXNvbhgFIAEoCSJv",
-            "ChpDYW5jZWxDYXJkUGF5bWVudHRSZXNwb25zZRIMCgRjb2RlGAEgASgFEg8K",
-            "B21lc3NhZ2UYAiABKAkSMgoIcmVzcG9uc2UYAyABKAsyIC5jYXJkX3YyLlBh",
-            "eUJ5UmVnaXN0ZXJlZENhcmREYXRhMswFChJQYXltZW50Q2FyZFNlcnZpY2US",
-            "dwoRQ2FyZFJlZ2lzdGVyVjJSUEMSHC5jYXJkX3YyLkNhcmRSZWdpc3RlclJl",
-            "cXVlc3QaHS5jYXJkX3YyLkNhcmRSZWdpc3RlclJlc3BvbnNlIiWC0+STAh8i",
-            "Gi9hcGkvcGF5bWVudHMvdjIvY2FyZC9pbmZvOgEqEnwKEEdldENhcmRJbmZv",
-            "VjJSUEMSGy5jYXJkX3YyLkdldENhcmRJbmZvUmVxdWVzdBocLmNhcmRfdjIu",
-            "R2V0Q2FyZEluZm9SZXNwb25zZSItgtPkkwInEiUvYXBpL3BheW1lbnRzL3Yy",
-            "L2NhcmQvaW5mby97Y2FyZF91aWR9EoUBChNEZWxldGVDYXJkSW5mb1YyUlBD",
-            "Eh4uY2FyZF92Mi5EZWxldGVDYXJkSW5mb1JlcXVlc3QaHy5jYXJkX3YyLkRl",
-            "bGV0ZUNhcmRJbmZvUmVzcG9uc2UiLYLT5JMCJyolL2FwaS9wYXltZW50cy92",
-            "Mi9jYXJkL2luZm8ve2NhcmRfdWlkfRKUAQoZUGF5QnlSZWdpc2V0ZXJlZENh",
-            "cmRWMlJQQxIjLmNhcmRfdjIuUGF5QnlSZWdpc3RlcmVkQ2FyZFJlcXVlc3Qa",
-            "JC5jYXJkX3YyLlBheUJ5UmVnaXN0ZXJlZENhcmRSZXNwb25zZSIsgtPkkwIm",
-            "IiQvYXBpL3BheW1lbnRzL3YyL2NhcmQvcGF5L3JlZ2lzdGVyZWQSnwEKGkNh",
-            "bmNlbFJlZ2lzZXRlcmVkQ2FyZFYyUlBDEiEuY2FyZF92Mi5DYW5jZWxDYXJk",
-            "UGF5bWVudFJlcXVlc3QaIy5jYXJkX3YyLkNhbmNlbENhcmRQYXltZW50dFJl",
-            "c3BvbnNlIjmC0+STAjMiMS9hcGkvcGF5bWVudHMvdjIvY2FyZC9jYW5jZWwv",
-            "cmVnaXN0ZXJlZC97aW1wX3VpZH1CTVo4Z2l0aHViLmNvbS9pYW1wb3J0L2lu",
-            "dGVyZmFjZS9nZW5fc3JjL2dvL3YyL3BheW1lbnRzL2NhcmSqAhBWMi5QYXlt",
-            "ZW50cy5DYXJkYgZwcm90bzM="));
+            "C2N1c3RvbV9kYXRhGAggASgJEhQKDGNhbGxiYWNrX3VybBgJIAEoCRISCgpi",
+            "dXllcl9hZGRyGAogASgJEhMKC2J1eWVyX2VtYWlsGAsgASgJEhIKCmJ1eWVy",
+            "X25hbWUYDCABKAkSFgoOYnV5ZXJfcG9zdGNvZGUYDSABKAkSEQoJYnV5ZXJf",
+            "dGVsGA4gASgJIqgGChdQYXlCeVJlZ2lzdGVyZWRDYXJkRGF0YRIOCgZhbW91",
+            "bnQYASABKAkSEQoJYXBwbHlfbnVtGAIgASgJEhIKCmJ1eWVyX2FkZHIYAyAB",
+            "KAkSEwoLYnV5ZXJfZW1haWwYBCABKAkSEgoKYnV5ZXJfbmFtZRgFIAEoCRIW",
+            "Cg5idXllcl9wb3N0Y29kZRgGIAEoCRIRCglidXllcl90ZWwYByABKAkSFQoN",
+            "Y2FuY2VsX2Ftb3VudBgIIAEoCRIuCg5jYW5jZWxfaGlzdG9yeRgJIAMoCzIW",
+            "LmNhcmRfdjIuQ2FuY2VsSGlzdG9yeRIVCg1jYW5jZWxfcmVhc29uGAogASgJ",
+            "EhsKE2NhbmNlbF9yZWNlaXB0X3VybHMYCyADKAkSFAoMY2FuY2VsbGVkX2F0",
+            "GAwgASgFEhEKCWNhcmRfY29kZRgNIAEoCRIRCgljYXJkX25hbWUYDiABKAkS",
+            "EgoKYmluX251bWJlchgPIAEoCRIYChBjYXJkX2luc3RhbGxtZW50GBAgASgF",
+            "EhEKCWNhcmRfdHlwZRgRIAEoBRIbChNjYXNoX3JlY2VpcHRfaXNzdWVkGBIg",
+            "ASgIEg8KB2NoYW5uZWwYEyABKAkSEAoIY3VycmVuY3kYFCABKAkSEwoLY3Vz",
+            "dG9tX2RhdGEYFSABKAkSEAoIY2FyZF91aWQYFiABKAkSGgoSY3VzdG9tZXJf",
+            "dWlkX3VzYWdlGBcgASgJEhMKC2ZhaWxfcmVhc29uGBggASgJEhEKCWZhaWxl",
+            "ZF9hdBgZIAEoBRIPCgdpbXBfdWlkGBogASgJEhQKDG1lcmNoYW50X3VpZBgb",
+            "IAEoCRISCgpvcmRlcl9uYW1lGBwgASgJEg8KB3BhaWRfYXQYHSABKAUSEgoK",
+            "cGF5X21ldGhvZBgeIAEoCRINCgVwZ19pZBgfIAEoCRITCgtwZ19wcm92aWRl",
+            "chggIAEoCRIOCgZwZ190aWQYISABKAkSEwoLcmVjZWlwdF91cmwYIiABKAkS",
+            "EgoKc3RhcnRlZF9hdBgjIAEoBRIOCgZzdGF0dXMYJCABKAkSEgoKdXNlcl9h",
+            "Z2VudBglIAEoCSJwChtQYXlCeVJlZ2lzdGVyZWRDYXJkUmVzcG9uc2USDAoE",
+            "Y29kZRgBIAEoBRIPCgdtZXNzYWdlGAIgASgJEjIKCHJlc3BvbnNlGAMgASgL",
+            "MiAuY2FyZF92Mi5QYXlCeVJlZ2lzdGVyZWRDYXJkRGF0YSJqCg1DYW5jZWxI",
+            "aXN0b3J5Eg4KBnBnX3RpZBgBIAEoCRIOCgZhbW91bnQYAiABKAkSFAoMY2Fu",
+            "Y2VsbGVkX2F0GAMgASgFEg4KBnJlYXNvbhgEIAEoCRITCgtyZWNlaXB0X3Vy",
+            "bBgFIAEoCSJ7ChhDYW5jZWxDYXJkUGF5bWVudFJlcXVlc3QSDwoHaW1wX3Vp",
+            "ZBgBIAEoCRIOCgZhbW91bnQYAiABKAkSFAoMbWVyY2hhbnRfdWlkGAMgASgJ",
+            "EhgKEGR1dHlfZnJlZV9hbW91bnQYBCABKAkSDgoGcmVhc29uGAUgASgJIm8K",
+            "GkNhbmNlbENhcmRQYXltZW50dFJlc3BvbnNlEgwKBGNvZGUYASABKAUSDwoH",
+            "bWVzc2FnZRgCIAEoCRIyCghyZXNwb25zZRgDIAEoCzIgLmNhcmRfdjIuUGF5",
+            "QnlSZWdpc3RlcmVkQ2FyZERhdGEyzAUKElBheW1lbnRDYXJkU2VydmljZRJ3",
+            "ChFDYXJkUmVnaXN0ZXJWMlJQQxIcLmNhcmRfdjIuQ2FyZFJlZ2lzdGVyUmVx",
+            "dWVzdBodLmNhcmRfdjIuQ2FyZFJlZ2lzdGVyUmVzcG9uc2UiJYLT5JMCHyIa",
+            "L2FwaS9wYXltZW50cy92Mi9jYXJkL2luZm86ASoSfAoQR2V0Q2FyZEluZm9W",
+            "MlJQQxIbLmNhcmRfdjIuR2V0Q2FyZEluZm9SZXF1ZXN0GhwuY2FyZF92Mi5H",
+            "ZXRDYXJkSW5mb1Jlc3BvbnNlIi2C0+STAicSJS9hcGkvcGF5bWVudHMvdjIv",
+            "Y2FyZC9pbmZvL3tjYXJkX3VpZH0ShQEKE0RlbGV0ZUNhcmRJbmZvVjJSUEMS",
+            "Hi5jYXJkX3YyLkRlbGV0ZUNhcmRJbmZvUmVxdWVzdBofLmNhcmRfdjIuRGVs",
+            "ZXRlQ2FyZEluZm9SZXNwb25zZSItgtPkkwInKiUvYXBpL3BheW1lbnRzL3Yy",
+            "L2NhcmQvaW5mby97Y2FyZF91aWR9EpQBChlQYXlCeVJlZ2lzZXRlcmVkQ2Fy",
+            "ZFYyUlBDEiMuY2FyZF92Mi5QYXlCeVJlZ2lzdGVyZWRDYXJkUmVxdWVzdBok",
+            "LmNhcmRfdjIuUGF5QnlSZWdpc3RlcmVkQ2FyZFJlc3BvbnNlIiyC0+STAiYi",
+            "JC9hcGkvcGF5bWVudHMvdjIvY2FyZC9wYXkvcmVnaXN0ZXJlZBKfAQoaQ2Fu",
+            "Y2VsUmVnaXNldGVyZWRDYXJkVjJSUEMSIS5jYXJkX3YyLkNhbmNlbENhcmRQ",
+            "YXltZW50UmVxdWVzdBojLmNhcmRfdjIuQ2FuY2VsQ2FyZFBheW1lbnR0UmVz",
+            "cG9uc2UiOYLT5JMCMyIxL2FwaS9wYXltZW50cy92Mi9jYXJkL2NhbmNlbC9y",
+            "ZWdpc3RlcmVkL3tpbXBfdWlkfUJNWjhnaXRodWIuY29tL2lhbXBvcnQvaW50",
+            "ZXJmYWNlL2dlbl9zcmMvZ28vdjIvcGF5bWVudHMvY2FyZKoCEFYyLlBheW1l",
+            "bnRzLkNhcmRiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.Annotations.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -115,7 +117,7 @@ namespace V2.Payments.Card {
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.GetCardInfoResponse), global::V2.Payments.Card.GetCardInfoResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.DeleteCardInfoRequest), global::V2.Payments.Card.DeleteCardInfoRequest.Parser, new[]{ "CardUid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.DeleteCardInfoResponse), global::V2.Payments.Card.DeleteCardInfoResponse.Parser, new[]{ "Code", "Message" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.PayByRegisteredCardRequest), global::V2.Payments.Card.PayByRegisteredCardRequest.Parser, new[]{ "CardUid", "MerchantUid", "Amount", "DutyFreeAmount", "OrderName", "CardInstallment", "InterestFreeByMerchant", "CustomData", "CallbackUrl", "Email" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.PayByRegisteredCardRequest), global::V2.Payments.Card.PayByRegisteredCardRequest.Parser, new[]{ "CardUid", "MerchantUid", "Amount", "DutyFreeAmount", "OrderName", "CardInstallment", "InterestFreeByMerchant", "CustomData", "CallbackUrl", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.PayByRegisteredCardData), global::V2.Payments.Card.PayByRegisteredCardData.Parser, new[]{ "Amount", "ApplyNum", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "BinNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.PayByRegisteredCardResponse), global::V2.Payments.Card.PayByRegisteredCardResponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Payments.Card.CancelHistory), global::V2.Payments.Card.CancelHistory.Parser, new[]{ "PgTid", "Amount", "CancelledAt", "Reason", "ReceiptUrl" }, null, null, null, null),
@@ -2972,7 +2974,11 @@ namespace V2.Payments.Card {
       interestFreeByMerchant_ = other.interestFreeByMerchant_;
       customData_ = other.customData_;
       callbackUrl_ = other.callbackUrl_;
-      email_ = other.email_;
+      buyerAddr_ = other.buyerAddr_;
+      buyerEmail_ = other.buyerEmail_;
+      buyerName_ = other.buyerName_;
+      buyerPostcode_ = other.buyerPostcode_;
+      buyerTel_ = other.buyerTel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3086,14 +3092,58 @@ namespace V2.Payments.Card {
       }
     }
 
-    /// <summary>Field number for the "email" field.</summary>
-    public const int EmailFieldNumber = 10;
-    private string email_ = "";
+    /// <summary>Field number for the "buyer_addr" field.</summary>
+    public const int BuyerAddrFieldNumber = 10;
+    private string buyerAddr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Email {
-      get { return email_; }
+    public string BuyerAddr {
+      get { return buyerAddr_; }
       set {
-        email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        buyerAddr_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "buyer_email" field.</summary>
+    public const int BuyerEmailFieldNumber = 11;
+    private string buyerEmail_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BuyerEmail {
+      get { return buyerEmail_; }
+      set {
+        buyerEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "buyer_name" field.</summary>
+    public const int BuyerNameFieldNumber = 12;
+    private string buyerName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BuyerName {
+      get { return buyerName_; }
+      set {
+        buyerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "buyer_postcode" field.</summary>
+    public const int BuyerPostcodeFieldNumber = 13;
+    private string buyerPostcode_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BuyerPostcode {
+      get { return buyerPostcode_; }
+      set {
+        buyerPostcode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "buyer_tel" field.</summary>
+    public const int BuyerTelFieldNumber = 14;
+    private string buyerTel_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BuyerTel {
+      get { return buyerTel_; }
+      set {
+        buyerTel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -3119,7 +3169,11 @@ namespace V2.Payments.Card {
       if (InterestFreeByMerchant != other.InterestFreeByMerchant) return false;
       if (CustomData != other.CustomData) return false;
       if (CallbackUrl != other.CallbackUrl) return false;
-      if (Email != other.Email) return false;
+      if (BuyerAddr != other.BuyerAddr) return false;
+      if (BuyerEmail != other.BuyerEmail) return false;
+      if (BuyerName != other.BuyerName) return false;
+      if (BuyerPostcode != other.BuyerPostcode) return false;
+      if (BuyerTel != other.BuyerTel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3135,7 +3189,11 @@ namespace V2.Payments.Card {
       if (InterestFreeByMerchant != false) hash ^= InterestFreeByMerchant.GetHashCode();
       if (CustomData.Length != 0) hash ^= CustomData.GetHashCode();
       if (CallbackUrl.Length != 0) hash ^= CallbackUrl.GetHashCode();
-      if (Email.Length != 0) hash ^= Email.GetHashCode();
+      if (BuyerAddr.Length != 0) hash ^= BuyerAddr.GetHashCode();
+      if (BuyerEmail.Length != 0) hash ^= BuyerEmail.GetHashCode();
+      if (BuyerName.Length != 0) hash ^= BuyerName.GetHashCode();
+      if (BuyerPostcode.Length != 0) hash ^= BuyerPostcode.GetHashCode();
+      if (BuyerTel.Length != 0) hash ^= BuyerTel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3188,9 +3246,25 @@ namespace V2.Payments.Card {
         output.WriteRawTag(74);
         output.WriteString(CallbackUrl);
       }
-      if (Email.Length != 0) {
+      if (BuyerAddr.Length != 0) {
         output.WriteRawTag(82);
-        output.WriteString(Email);
+        output.WriteString(BuyerAddr);
+      }
+      if (BuyerEmail.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(BuyerEmail);
+      }
+      if (BuyerName.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(BuyerName);
+      }
+      if (BuyerPostcode.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(BuyerPostcode);
+      }
+      if (BuyerTel.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(BuyerTel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3237,9 +3311,25 @@ namespace V2.Payments.Card {
         output.WriteRawTag(74);
         output.WriteString(CallbackUrl);
       }
-      if (Email.Length != 0) {
+      if (BuyerAddr.Length != 0) {
         output.WriteRawTag(82);
-        output.WriteString(Email);
+        output.WriteString(BuyerAddr);
+      }
+      if (BuyerEmail.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(BuyerEmail);
+      }
+      if (BuyerName.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(BuyerName);
+      }
+      if (BuyerPostcode.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(BuyerPostcode);
+      }
+      if (BuyerTel.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(BuyerTel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3277,8 +3367,20 @@ namespace V2.Payments.Card {
       if (CallbackUrl.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CallbackUrl);
       }
-      if (Email.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
+      if (BuyerAddr.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BuyerAddr);
+      }
+      if (BuyerEmail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BuyerEmail);
+      }
+      if (BuyerName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BuyerName);
+      }
+      if (BuyerPostcode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BuyerPostcode);
+      }
+      if (BuyerTel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BuyerTel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3318,8 +3420,20 @@ namespace V2.Payments.Card {
       if (other.CallbackUrl.Length != 0) {
         CallbackUrl = other.CallbackUrl;
       }
-      if (other.Email.Length != 0) {
-        Email = other.Email;
+      if (other.BuyerAddr.Length != 0) {
+        BuyerAddr = other.BuyerAddr;
+      }
+      if (other.BuyerEmail.Length != 0) {
+        BuyerEmail = other.BuyerEmail;
+      }
+      if (other.BuyerName.Length != 0) {
+        BuyerName = other.BuyerName;
+      }
+      if (other.BuyerPostcode.Length != 0) {
+        BuyerPostcode = other.BuyerPostcode;
+      }
+      if (other.BuyerTel.Length != 0) {
+        BuyerTel = other.BuyerTel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3372,7 +3486,23 @@ namespace V2.Payments.Card {
             break;
           }
           case 82: {
-            Email = input.ReadString();
+            BuyerAddr = input.ReadString();
+            break;
+          }
+          case 90: {
+            BuyerEmail = input.ReadString();
+            break;
+          }
+          case 98: {
+            BuyerName = input.ReadString();
+            break;
+          }
+          case 106: {
+            BuyerPostcode = input.ReadString();
+            break;
+          }
+          case 114: {
+            BuyerTel = input.ReadString();
             break;
           }
         }
@@ -3426,7 +3556,23 @@ namespace V2.Payments.Card {
             break;
           }
           case 82: {
-            Email = input.ReadString();
+            BuyerAddr = input.ReadString();
+            break;
+          }
+          case 90: {
+            BuyerEmail = input.ReadString();
+            break;
+          }
+          case 98: {
+            BuyerName = input.ReadString();
+            break;
+          }
+          case 106: {
+            BuyerPostcode = input.ReadString();
+            break;
+          }
+          case 114: {
+            BuyerTel = input.ReadString();
             break;
           }
         }

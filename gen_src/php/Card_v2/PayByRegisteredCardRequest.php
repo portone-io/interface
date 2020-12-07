@@ -54,9 +54,25 @@ class PayByRegisteredCardRequest extends \Google\Protobuf\Internal\Message
      */
     protected $callback_url = '';
     /**
-     * Generated from protobuf field <code>string email = 10;</code>
+     * Generated from protobuf field <code>string buyer_addr = 10;</code>
      */
-    protected $email = '';
+    protected $buyer_addr = '';
+    /**
+     * Generated from protobuf field <code>string buyer_email = 11;</code>
+     */
+    protected $buyer_email = '';
+    /**
+     * Generated from protobuf field <code>string buyer_name = 12;</code>
+     */
+    protected $buyer_name = '';
+    /**
+     * Generated from protobuf field <code>string buyer_postcode = 13;</code>
+     */
+    protected $buyer_postcode = '';
+    /**
+     * Generated from protobuf field <code>string buyer_tel = 14;</code>
+     */
+    protected $buyer_tel = '';
 
     /**
      * Constructor.
@@ -75,7 +91,11 @@ class PayByRegisteredCardRequest extends \Google\Protobuf\Internal\Message
      *     @type bool $interest_free_by_merchant
      *     @type string $custom_data
      *     @type string $callback_url
-     *     @type string $email
+     *     @type string $buyer_addr
+     *     @type string $buyer_email
+     *     @type string $buyer_name
+     *     @type string $buyer_postcode
+     *     @type string $buyer_tel
      * }
      */
     public function __construct($data = NULL) {
@@ -290,23 +310,111 @@ class PayByRegisteredCardRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string email = 10;</code>
+     * Generated from protobuf field <code>string buyer_addr = 10;</code>
      * @return string
      */
-    public function getEmail()
+    public function getBuyerAddr()
     {
-        return $this->email;
+        return $this->buyer_addr;
     }
 
     /**
-     * Generated from protobuf field <code>string email = 10;</code>
+     * Generated from protobuf field <code>string buyer_addr = 10;</code>
      * @param string $var
      * @return $this
      */
-    public function setEmail($var)
+    public function setBuyerAddr($var)
     {
         GPBUtil::checkString($var, True);
-        $this->email = $var;
+        $this->buyer_addr = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_email = 11;</code>
+     * @return string
+     */
+    public function getBuyerEmail()
+    {
+        return $this->buyer_email;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_email = 11;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setBuyerEmail($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->buyer_email = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_name = 12;</code>
+     * @return string
+     */
+    public function getBuyerName()
+    {
+        return $this->buyer_name;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_name = 12;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setBuyerName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->buyer_name = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_postcode = 13;</code>
+     * @return string
+     */
+    public function getBuyerPostcode()
+    {
+        return $this->buyer_postcode;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_postcode = 13;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setBuyerPostcode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->buyer_postcode = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_tel = 14;</code>
+     * @return string
+     */
+    public function getBuyerTel()
+    {
+        return $this->buyer_tel;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_tel = 14;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setBuyerTel($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->buyer_tel = $var;
 
         return $this;
     }

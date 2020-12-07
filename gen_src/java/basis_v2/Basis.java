@@ -1288,330 +1288,398 @@ public final class Basis {
         getCardCodeBytes();
 
     /**
-     * <code>string card_name = 16;</code>
-     * @return The cardName.
-     */
-    java.lang.String getCardName();
-    /**
-     * <code>string card_name = 16;</code>
-     * @return The bytes for cardName.
-     */
-    com.google.protobuf.ByteString
-        getCardNameBytes();
-
-    /**
-     * <code>string bin_number = 17;</code>
+     * <code>string bin_number = 16;</code>
      * @return The binNumber.
      */
     java.lang.String getBinNumber();
     /**
-     * <code>string bin_number = 17;</code>
+     * <code>string bin_number = 16;</code>
      * @return The bytes for binNumber.
      */
     com.google.protobuf.ByteString
         getBinNumberBytes();
 
     /**
-     * <code>int32 card_installment = 18;</code>
+     * <pre>
+     * card issuer
+     * </pre>
+     *
+     * <code>string card_name = 17;</code>
+     * @return The cardName.
+     */
+    java.lang.String getCardName();
+    /**
+     * <pre>
+     * card issuer
+     * </pre>
+     *
+     * <code>string card_name = 17;</code>
+     * @return The bytes for cardName.
+     */
+    com.google.protobuf.ByteString
+        getCardNameBytes();
+
+    /**
+     * <code>string card_receipe_name = 18;</code>
+     * @return The cardReceipeName.
+     */
+    java.lang.String getCardReceipeName();
+    /**
+     * <code>string card_receipe_name = 18;</code>
+     * @return The bytes for cardReceipeName.
+     */
+    com.google.protobuf.ByteString
+        getCardReceipeNameBytes();
+
+    /**
+     * <code>string card_owner_type = 19;</code>
+     * @return The cardOwnerType.
+     */
+    java.lang.String getCardOwnerType();
+    /**
+     * <code>string card_owner_type = 19;</code>
+     * @return The bytes for cardOwnerType.
+     */
+    com.google.protobuf.ByteString
+        getCardOwnerTypeBytes();
+
+    /**
+     * <code>string card_brand = 20;</code>
+     * @return The cardBrand.
+     */
+    java.lang.String getCardBrand();
+    /**
+     * <code>string card_brand = 20;</code>
+     * @return The bytes for cardBrand.
+     */
+    com.google.protobuf.ByteString
+        getCardBrandBytes();
+
+    /**
+     * <code>string card_credit_type = 21;</code>
+     * @return The cardCreditType.
+     */
+    java.lang.String getCardCreditType();
+    /**
+     * <code>string card_credit_type = 21;</code>
+     * @return The bytes for cardCreditType.
+     */
+    com.google.protobuf.ByteString
+        getCardCreditTypeBytes();
+
+    /**
+     * <code>string card_number = 22;</code>
+     * @return The cardNumber.
+     */
+    java.lang.String getCardNumber();
+    /**
+     * <code>string card_number = 22;</code>
+     * @return The bytes for cardNumber.
+     */
+    com.google.protobuf.ByteString
+        getCardNumberBytes();
+
+    /**
+     * <code>int32 card_installment = 23;</code>
      * @return The cardInstallment.
      */
     int getCardInstallment();
 
     /**
-     * <code>int32 card_type = 19;</code>
+     * <code>int32 card_type = 24;</code>
      * @return The cardType.
      */
     int getCardType();
 
     /**
-     * <code>bool cash_receipt_issued = 20;</code>
+     * <code>bool cash_receipt_issued = 25;</code>
      * @return The cashReceiptIssued.
      */
     boolean getCashReceiptIssued();
 
     /**
-     * <code>string channel = 21;</code>
+     * <code>string channel = 26;</code>
      * @return The channel.
      */
     java.lang.String getChannel();
     /**
-     * <code>string channel = 21;</code>
+     * <code>string channel = 26;</code>
      * @return The bytes for channel.
      */
     com.google.protobuf.ByteString
         getChannelBytes();
 
     /**
-     * <code>string currency = 22;</code>
+     * <code>string currency = 27;</code>
      * @return The currency.
      */
     java.lang.String getCurrency();
     /**
-     * <code>string currency = 22;</code>
+     * <code>string currency = 27;</code>
      * @return The bytes for currency.
      */
     com.google.protobuf.ByteString
         getCurrencyBytes();
 
     /**
-     * <code>string custom_data = 23;</code>
+     * <code>string custom_data = 28;</code>
      * @return The customData.
      */
     java.lang.String getCustomData();
     /**
-     * <code>string custom_data = 23;</code>
+     * <code>string custom_data = 28;</code>
      * @return The bytes for customData.
      */
     com.google.protobuf.ByteString
         getCustomDataBytes();
 
     /**
-     * <code>string card_uid = 24;</code>
+     * <code>string card_uid = 29;</code>
      * @return The cardUid.
      */
     java.lang.String getCardUid();
     /**
-     * <code>string card_uid = 24;</code>
+     * <code>string card_uid = 29;</code>
      * @return The bytes for cardUid.
      */
     com.google.protobuf.ByteString
         getCardUidBytes();
 
     /**
-     * <code>string customer_uid_usage = 25;</code>
+     * <code>string customer_uid_usage = 30;</code>
      * @return The customerUidUsage.
      */
     java.lang.String getCustomerUidUsage();
     /**
-     * <code>string customer_uid_usage = 25;</code>
+     * <code>string customer_uid_usage = 30;</code>
      * @return The bytes for customerUidUsage.
      */
     com.google.protobuf.ByteString
         getCustomerUidUsageBytes();
 
     /**
-     * <code>bool escrow = 26;</code>
+     * <code>bool escrow = 31;</code>
      * @return The escrow.
      */
     boolean getEscrow();
 
     /**
-     * <code>string fail_reason = 27;</code>
+     * <code>string fail_reason = 32;</code>
      * @return The failReason.
      */
     java.lang.String getFailReason();
     /**
-     * <code>string fail_reason = 27;</code>
+     * <code>string fail_reason = 32;</code>
      * @return The bytes for failReason.
      */
     com.google.protobuf.ByteString
         getFailReasonBytes();
 
     /**
-     * <code>int32 failed_at = 28;</code>
+     * <code>int32 failed_at = 33;</code>
      * @return The failedAt.
      */
     int getFailedAt();
 
     /**
-     * <code>string imp_uid = 29;</code>
+     * <code>string imp_uid = 34;</code>
      * @return The impUid.
      */
     java.lang.String getImpUid();
     /**
-     * <code>string imp_uid = 29;</code>
+     * <code>string imp_uid = 34;</code>
      * @return The bytes for impUid.
      */
     com.google.protobuf.ByteString
         getImpUidBytes();
 
     /**
-     * <code>string merchant_uid = 30;</code>
+     * <code>string merchant_uid = 35;</code>
      * @return The merchantUid.
      */
     java.lang.String getMerchantUid();
     /**
-     * <code>string merchant_uid = 30;</code>
+     * <code>string merchant_uid = 35;</code>
      * @return The bytes for merchantUid.
      */
     com.google.protobuf.ByteString
         getMerchantUidBytes();
 
     /**
-     * <code>string order_name = 31;</code>
+     * <code>string order_name = 36;</code>
      * @return The orderName.
      */
     java.lang.String getOrderName();
     /**
-     * <code>string order_name = 31;</code>
+     * <code>string order_name = 36;</code>
      * @return The bytes for orderName.
      */
     com.google.protobuf.ByteString
         getOrderNameBytes();
 
     /**
-     * <code>int32 paid_at = 32;</code>
+     * <code>int32 paid_at = 37;</code>
      * @return The paidAt.
      */
     int getPaidAt();
 
     /**
-     * <code>string pay_method = 33;</code>
+     * <code>string pay_method = 38;</code>
      * @return The payMethod.
      */
     java.lang.String getPayMethod();
     /**
-     * <code>string pay_method = 33;</code>
+     * <code>string pay_method = 38;</code>
      * @return The bytes for payMethod.
      */
     com.google.protobuf.ByteString
         getPayMethodBytes();
 
     /**
-     * <code>string pg_id = 34;</code>
+     * <code>string pg_id = 39;</code>
      * @return The pgId.
      */
     java.lang.String getPgId();
     /**
-     * <code>string pg_id = 34;</code>
+     * <code>string pg_id = 39;</code>
      * @return The bytes for pgId.
      */
     com.google.protobuf.ByteString
         getPgIdBytes();
 
     /**
-     * <code>string pg_provider = 35;</code>
+     * <code>string pg_provider = 40;</code>
      * @return The pgProvider.
      */
     java.lang.String getPgProvider();
     /**
-     * <code>string pg_provider = 35;</code>
+     * <code>string pg_provider = 40;</code>
      * @return The bytes for pgProvider.
      */
     com.google.protobuf.ByteString
         getPgProviderBytes();
 
     /**
-     * <code>string pg_tid = 36;</code>
+     * <code>string pg_tid = 41;</code>
      * @return The pgTid.
      */
     java.lang.String getPgTid();
     /**
-     * <code>string pg_tid = 36;</code>
+     * <code>string pg_tid = 41;</code>
      * @return The bytes for pgTid.
      */
     com.google.protobuf.ByteString
         getPgTidBytes();
 
     /**
-     * <code>string receipt_url = 37;</code>
+     * <code>string receipt_url = 42;</code>
      * @return The receiptUrl.
      */
     java.lang.String getReceiptUrl();
     /**
-     * <code>string receipt_url = 37;</code>
+     * <code>string receipt_url = 42;</code>
      * @return The bytes for receiptUrl.
      */
     com.google.protobuf.ByteString
         getReceiptUrlBytes();
 
     /**
-     * <code>int32 started_at = 38;</code>
+     * <code>int32 started_at = 43;</code>
      * @return The startedAt.
      */
     int getStartedAt();
 
     /**
-     * <code>string status = 39;</code>
+     * <code>string status = 44;</code>
      * @return The status.
      */
     java.lang.String getStatus();
     /**
-     * <code>string status = 39;</code>
+     * <code>string status = 44;</code>
      * @return The bytes for status.
      */
     com.google.protobuf.ByteString
         getStatusBytes();
 
     /**
-     * <code>string user_agent = 40;</code>
+     * <code>string user_agent = 45;</code>
      * @return The userAgent.
      */
     java.lang.String getUserAgent();
     /**
-     * <code>string user_agent = 40;</code>
+     * <code>string user_agent = 45;</code>
      * @return The bytes for userAgent.
      */
     com.google.protobuf.ByteString
         getUserAgentBytes();
 
     /**
-     * <code>string vbank_code = 41;</code>
+     * <code>string vbank_code = 46;</code>
      * @return The vbankCode.
      */
     java.lang.String getVbankCode();
     /**
-     * <code>string vbank_code = 41;</code>
+     * <code>string vbank_code = 46;</code>
      * @return The bytes for vbankCode.
      */
     com.google.protobuf.ByteString
         getVbankCodeBytes();
 
     /**
-     * <code>int32 vbank_date = 42;</code>
+     * <code>int32 vbank_date = 47;</code>
      * @return The vbankDate.
      */
     int getVbankDate();
 
     /**
-     * <code>string vbank_holder = 43;</code>
+     * <code>string vbank_holder = 48;</code>
      * @return The vbankHolder.
      */
     java.lang.String getVbankHolder();
     /**
-     * <code>string vbank_holder = 43;</code>
+     * <code>string vbank_holder = 48;</code>
      * @return The bytes for vbankHolder.
      */
     com.google.protobuf.ByteString
         getVbankHolderBytes();
 
     /**
-     * <code>int32 vbank_issued_at = 44;</code>
+     * <code>int32 vbank_issued_at = 49;</code>
      * @return The vbankIssuedAt.
      */
     int getVbankIssuedAt();
 
     /**
-     * <code>string vbank_name = 45;</code>
+     * <code>string vbank_name = 50;</code>
      * @return The vbankName.
      */
     java.lang.String getVbankName();
     /**
-     * <code>string vbank_name = 45;</code>
+     * <code>string vbank_name = 50;</code>
      * @return The bytes for vbankName.
      */
     com.google.protobuf.ByteString
         getVbankNameBytes();
 
     /**
-     * <code>string vbank_num = 46;</code>
+     * <code>string vbank_num = 51;</code>
      * @return The vbankNum.
      */
     java.lang.String getVbankNum();
     /**
-     * <code>string vbank_num = 46;</code>
+     * <code>string vbank_num = 51;</code>
      * @return The bytes for vbankNum.
      */
     com.google.protobuf.ByteString
         getVbankNumBytes();
 
     /**
-     * <code>string customer_email = 47;</code>
+     * <code>string customer_email = 52;</code>
      * @return The customerEmail.
      */
     java.lang.String getCustomerEmail();
     /**
-     * <code>string customer_email = 47;</code>
+     * <code>string customer_email = 52;</code>
      * @return The bytes for customerEmail.
      */
     com.google.protobuf.ByteString
@@ -1641,8 +1709,13 @@ public final class Basis {
       cancelReason_ = "";
       cancelReceiptUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       cardCode_ = "";
-      cardName_ = "";
       binNumber_ = "";
+      cardName_ = "";
+      cardReceipeName_ = "";
+      cardOwnerType_ = "";
+      cardBrand_ = "";
+      cardCreditType_ = "";
+      cardNumber_ = "";
       channel_ = "";
       currency_ = "";
       customData_ = "";
@@ -1792,181 +1865,211 @@ public final class Basis {
             case 130: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              cardName_ = s;
+              binNumber_ = s;
               break;
             }
             case 138: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              binNumber_ = s;
+              cardName_ = s;
               break;
             }
-            case 144: {
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              cardInstallment_ = input.readInt32();
+              cardReceipeName_ = s;
               break;
             }
-            case 152: {
+            case 154: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              cardType_ = input.readInt32();
+              cardOwnerType_ = s;
               break;
             }
-            case 160: {
+            case 162: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              cashReceiptIssued_ = input.readBool();
+              cardBrand_ = s;
               break;
             }
             case 170: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              channel_ = s;
+              cardCreditType_ = s;
               break;
             }
             case 178: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              currency_ = s;
+              cardNumber_ = s;
               break;
             }
-            case 186: {
+            case 184: {
+
+              cardInstallment_ = input.readInt32();
+              break;
+            }
+            case 192: {
+
+              cardType_ = input.readInt32();
+              break;
+            }
+            case 200: {
+
+              cashReceiptIssued_ = input.readBool();
+              break;
+            }
+            case 210: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              customData_ = s;
-              break;
-            }
-            case 194: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cardUid_ = s;
-              break;
-            }
-            case 202: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              customerUidUsage_ = s;
-              break;
-            }
-            case 208: {
-
-              escrow_ = input.readBool();
+              channel_ = s;
               break;
             }
             case 218: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              failReason_ = s;
+              currency_ = s;
               break;
             }
-            case 224: {
+            case 226: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              failedAt_ = input.readInt32();
+              customData_ = s;
               break;
             }
             case 234: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              impUid_ = s;
+              cardUid_ = s;
               break;
             }
             case 242: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              merchantUid_ = s;
+              customerUidUsage_ = s;
               break;
             }
-            case 250: {
+            case 248: {
+
+              escrow_ = input.readBool();
+              break;
+            }
+            case 258: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              orderName_ = s;
+              failReason_ = s;
               break;
             }
-            case 256: {
+            case 264: {
 
-              paidAt_ = input.readInt32();
-              break;
-            }
-            case 266: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              payMethod_ = s;
+              failedAt_ = input.readInt32();
               break;
             }
             case 274: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              pgId_ = s;
+              impUid_ = s;
               break;
             }
             case 282: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              pgProvider_ = s;
+              merchantUid_ = s;
               break;
             }
             case 290: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              pgTid_ = s;
+              orderName_ = s;
               break;
             }
-            case 298: {
+            case 296: {
+
+              paidAt_ = input.readInt32();
+              break;
+            }
+            case 306: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              receiptUrl_ = s;
-              break;
-            }
-            case 304: {
-
-              startedAt_ = input.readInt32();
+              payMethod_ = s;
               break;
             }
             case 314: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              status_ = s;
+              pgId_ = s;
               break;
             }
             case 322: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              userAgent_ = s;
+              pgProvider_ = s;
               break;
             }
             case 330: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              vbankCode_ = s;
+              pgTid_ = s;
               break;
             }
-            case 336: {
-
-              vbankDate_ = input.readInt32();
-              break;
-            }
-            case 346: {
+            case 338: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              vbankHolder_ = s;
+              receiptUrl_ = s;
               break;
             }
-            case 352: {
+            case 344: {
 
-              vbankIssuedAt_ = input.readInt32();
+              startedAt_ = input.readInt32();
+              break;
+            }
+            case 354: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              status_ = s;
               break;
             }
             case 362: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              vbankName_ = s;
+              userAgent_ = s;
               break;
             }
             case 370: {
               java.lang.String s = input.readStringRequireUtf8();
 
+              vbankCode_ = s;
+              break;
+            }
+            case 376: {
+
+              vbankDate_ = input.readInt32();
+              break;
+            }
+            case 386: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              vbankHolder_ = s;
+              break;
+            }
+            case 392: {
+
+              vbankIssuedAt_ = input.readInt32();
+              break;
+            }
+            case 402: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              vbankName_ = s;
+              break;
+            }
+            case 410: {
+              java.lang.String s = input.readStringRequireUtf8();
+
               vbankNum_ = s;
               break;
             }
-            case 378: {
+            case 418: {
               java.lang.String s = input.readStringRequireUtf8();
 
               customerEmail_ = s;
@@ -2471,48 +2574,10 @@ public final class Basis {
       }
     }
 
-    public static final int CARD_NAME_FIELD_NUMBER = 16;
-    private volatile java.lang.Object cardName_;
-    /**
-     * <code>string card_name = 16;</code>
-     * @return The cardName.
-     */
-    @java.lang.Override
-    public java.lang.String getCardName() {
-      java.lang.Object ref = cardName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cardName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string card_name = 16;</code>
-     * @return The bytes for cardName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCardNameBytes() {
-      java.lang.Object ref = cardName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cardName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int BIN_NUMBER_FIELD_NUMBER = 17;
+    public static final int BIN_NUMBER_FIELD_NUMBER = 16;
     private volatile java.lang.Object binNumber_;
     /**
-     * <code>string bin_number = 17;</code>
+     * <code>string bin_number = 16;</code>
      * @return The binNumber.
      */
     @java.lang.Override
@@ -2529,7 +2594,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string bin_number = 17;</code>
+     * <code>string bin_number = 16;</code>
      * @return The bytes for binNumber.
      */
     @java.lang.Override
@@ -2547,10 +2612,246 @@ public final class Basis {
       }
     }
 
-    public static final int CARD_INSTALLMENT_FIELD_NUMBER = 18;
+    public static final int CARD_NAME_FIELD_NUMBER = 17;
+    private volatile java.lang.Object cardName_;
+    /**
+     * <pre>
+     * card issuer
+     * </pre>
+     *
+     * <code>string card_name = 17;</code>
+     * @return The cardName.
+     */
+    @java.lang.Override
+    public java.lang.String getCardName() {
+      java.lang.Object ref = cardName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cardName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * card issuer
+     * </pre>
+     *
+     * <code>string card_name = 17;</code>
+     * @return The bytes for cardName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCardNameBytes() {
+      java.lang.Object ref = cardName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cardName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CARD_RECEIPE_NAME_FIELD_NUMBER = 18;
+    private volatile java.lang.Object cardReceipeName_;
+    /**
+     * <code>string card_receipe_name = 18;</code>
+     * @return The cardReceipeName.
+     */
+    @java.lang.Override
+    public java.lang.String getCardReceipeName() {
+      java.lang.Object ref = cardReceipeName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cardReceipeName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string card_receipe_name = 18;</code>
+     * @return The bytes for cardReceipeName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCardReceipeNameBytes() {
+      java.lang.Object ref = cardReceipeName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cardReceipeName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CARD_OWNER_TYPE_FIELD_NUMBER = 19;
+    private volatile java.lang.Object cardOwnerType_;
+    /**
+     * <code>string card_owner_type = 19;</code>
+     * @return The cardOwnerType.
+     */
+    @java.lang.Override
+    public java.lang.String getCardOwnerType() {
+      java.lang.Object ref = cardOwnerType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cardOwnerType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string card_owner_type = 19;</code>
+     * @return The bytes for cardOwnerType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCardOwnerTypeBytes() {
+      java.lang.Object ref = cardOwnerType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cardOwnerType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CARD_BRAND_FIELD_NUMBER = 20;
+    private volatile java.lang.Object cardBrand_;
+    /**
+     * <code>string card_brand = 20;</code>
+     * @return The cardBrand.
+     */
+    @java.lang.Override
+    public java.lang.String getCardBrand() {
+      java.lang.Object ref = cardBrand_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cardBrand_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string card_brand = 20;</code>
+     * @return The bytes for cardBrand.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCardBrandBytes() {
+      java.lang.Object ref = cardBrand_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cardBrand_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CARD_CREDIT_TYPE_FIELD_NUMBER = 21;
+    private volatile java.lang.Object cardCreditType_;
+    /**
+     * <code>string card_credit_type = 21;</code>
+     * @return The cardCreditType.
+     */
+    @java.lang.Override
+    public java.lang.String getCardCreditType() {
+      java.lang.Object ref = cardCreditType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cardCreditType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string card_credit_type = 21;</code>
+     * @return The bytes for cardCreditType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCardCreditTypeBytes() {
+      java.lang.Object ref = cardCreditType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cardCreditType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CARD_NUMBER_FIELD_NUMBER = 22;
+    private volatile java.lang.Object cardNumber_;
+    /**
+     * <code>string card_number = 22;</code>
+     * @return The cardNumber.
+     */
+    @java.lang.Override
+    public java.lang.String getCardNumber() {
+      java.lang.Object ref = cardNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cardNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string card_number = 22;</code>
+     * @return The bytes for cardNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCardNumberBytes() {
+      java.lang.Object ref = cardNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cardNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CARD_INSTALLMENT_FIELD_NUMBER = 23;
     private int cardInstallment_;
     /**
-     * <code>int32 card_installment = 18;</code>
+     * <code>int32 card_installment = 23;</code>
      * @return The cardInstallment.
      */
     @java.lang.Override
@@ -2558,10 +2859,10 @@ public final class Basis {
       return cardInstallment_;
     }
 
-    public static final int CARD_TYPE_FIELD_NUMBER = 19;
+    public static final int CARD_TYPE_FIELD_NUMBER = 24;
     private int cardType_;
     /**
-     * <code>int32 card_type = 19;</code>
+     * <code>int32 card_type = 24;</code>
      * @return The cardType.
      */
     @java.lang.Override
@@ -2569,10 +2870,10 @@ public final class Basis {
       return cardType_;
     }
 
-    public static final int CASH_RECEIPT_ISSUED_FIELD_NUMBER = 20;
+    public static final int CASH_RECEIPT_ISSUED_FIELD_NUMBER = 25;
     private boolean cashReceiptIssued_;
     /**
-     * <code>bool cash_receipt_issued = 20;</code>
+     * <code>bool cash_receipt_issued = 25;</code>
      * @return The cashReceiptIssued.
      */
     @java.lang.Override
@@ -2580,10 +2881,10 @@ public final class Basis {
       return cashReceiptIssued_;
     }
 
-    public static final int CHANNEL_FIELD_NUMBER = 21;
+    public static final int CHANNEL_FIELD_NUMBER = 26;
     private volatile java.lang.Object channel_;
     /**
-     * <code>string channel = 21;</code>
+     * <code>string channel = 26;</code>
      * @return The channel.
      */
     @java.lang.Override
@@ -2600,7 +2901,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string channel = 21;</code>
+     * <code>string channel = 26;</code>
      * @return The bytes for channel.
      */
     @java.lang.Override
@@ -2618,10 +2919,10 @@ public final class Basis {
       }
     }
 
-    public static final int CURRENCY_FIELD_NUMBER = 22;
+    public static final int CURRENCY_FIELD_NUMBER = 27;
     private volatile java.lang.Object currency_;
     /**
-     * <code>string currency = 22;</code>
+     * <code>string currency = 27;</code>
      * @return The currency.
      */
     @java.lang.Override
@@ -2638,7 +2939,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string currency = 22;</code>
+     * <code>string currency = 27;</code>
      * @return The bytes for currency.
      */
     @java.lang.Override
@@ -2656,10 +2957,10 @@ public final class Basis {
       }
     }
 
-    public static final int CUSTOM_DATA_FIELD_NUMBER = 23;
+    public static final int CUSTOM_DATA_FIELD_NUMBER = 28;
     private volatile java.lang.Object customData_;
     /**
-     * <code>string custom_data = 23;</code>
+     * <code>string custom_data = 28;</code>
      * @return The customData.
      */
     @java.lang.Override
@@ -2676,7 +2977,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string custom_data = 23;</code>
+     * <code>string custom_data = 28;</code>
      * @return The bytes for customData.
      */
     @java.lang.Override
@@ -2694,10 +2995,10 @@ public final class Basis {
       }
     }
 
-    public static final int CARD_UID_FIELD_NUMBER = 24;
+    public static final int CARD_UID_FIELD_NUMBER = 29;
     private volatile java.lang.Object cardUid_;
     /**
-     * <code>string card_uid = 24;</code>
+     * <code>string card_uid = 29;</code>
      * @return The cardUid.
      */
     @java.lang.Override
@@ -2714,7 +3015,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string card_uid = 24;</code>
+     * <code>string card_uid = 29;</code>
      * @return The bytes for cardUid.
      */
     @java.lang.Override
@@ -2732,10 +3033,10 @@ public final class Basis {
       }
     }
 
-    public static final int CUSTOMER_UID_USAGE_FIELD_NUMBER = 25;
+    public static final int CUSTOMER_UID_USAGE_FIELD_NUMBER = 30;
     private volatile java.lang.Object customerUidUsage_;
     /**
-     * <code>string customer_uid_usage = 25;</code>
+     * <code>string customer_uid_usage = 30;</code>
      * @return The customerUidUsage.
      */
     @java.lang.Override
@@ -2752,7 +3053,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string customer_uid_usage = 25;</code>
+     * <code>string customer_uid_usage = 30;</code>
      * @return The bytes for customerUidUsage.
      */
     @java.lang.Override
@@ -2770,10 +3071,10 @@ public final class Basis {
       }
     }
 
-    public static final int ESCROW_FIELD_NUMBER = 26;
+    public static final int ESCROW_FIELD_NUMBER = 31;
     private boolean escrow_;
     /**
-     * <code>bool escrow = 26;</code>
+     * <code>bool escrow = 31;</code>
      * @return The escrow.
      */
     @java.lang.Override
@@ -2781,10 +3082,10 @@ public final class Basis {
       return escrow_;
     }
 
-    public static final int FAIL_REASON_FIELD_NUMBER = 27;
+    public static final int FAIL_REASON_FIELD_NUMBER = 32;
     private volatile java.lang.Object failReason_;
     /**
-     * <code>string fail_reason = 27;</code>
+     * <code>string fail_reason = 32;</code>
      * @return The failReason.
      */
     @java.lang.Override
@@ -2801,7 +3102,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string fail_reason = 27;</code>
+     * <code>string fail_reason = 32;</code>
      * @return The bytes for failReason.
      */
     @java.lang.Override
@@ -2819,10 +3120,10 @@ public final class Basis {
       }
     }
 
-    public static final int FAILED_AT_FIELD_NUMBER = 28;
+    public static final int FAILED_AT_FIELD_NUMBER = 33;
     private int failedAt_;
     /**
-     * <code>int32 failed_at = 28;</code>
+     * <code>int32 failed_at = 33;</code>
      * @return The failedAt.
      */
     @java.lang.Override
@@ -2830,10 +3131,10 @@ public final class Basis {
       return failedAt_;
     }
 
-    public static final int IMP_UID_FIELD_NUMBER = 29;
+    public static final int IMP_UID_FIELD_NUMBER = 34;
     private volatile java.lang.Object impUid_;
     /**
-     * <code>string imp_uid = 29;</code>
+     * <code>string imp_uid = 34;</code>
      * @return The impUid.
      */
     @java.lang.Override
@@ -2850,7 +3151,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string imp_uid = 29;</code>
+     * <code>string imp_uid = 34;</code>
      * @return The bytes for impUid.
      */
     @java.lang.Override
@@ -2868,10 +3169,10 @@ public final class Basis {
       }
     }
 
-    public static final int MERCHANT_UID_FIELD_NUMBER = 30;
+    public static final int MERCHANT_UID_FIELD_NUMBER = 35;
     private volatile java.lang.Object merchantUid_;
     /**
-     * <code>string merchant_uid = 30;</code>
+     * <code>string merchant_uid = 35;</code>
      * @return The merchantUid.
      */
     @java.lang.Override
@@ -2888,7 +3189,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string merchant_uid = 30;</code>
+     * <code>string merchant_uid = 35;</code>
      * @return The bytes for merchantUid.
      */
     @java.lang.Override
@@ -2906,10 +3207,10 @@ public final class Basis {
       }
     }
 
-    public static final int ORDER_NAME_FIELD_NUMBER = 31;
+    public static final int ORDER_NAME_FIELD_NUMBER = 36;
     private volatile java.lang.Object orderName_;
     /**
-     * <code>string order_name = 31;</code>
+     * <code>string order_name = 36;</code>
      * @return The orderName.
      */
     @java.lang.Override
@@ -2926,7 +3227,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string order_name = 31;</code>
+     * <code>string order_name = 36;</code>
      * @return The bytes for orderName.
      */
     @java.lang.Override
@@ -2944,10 +3245,10 @@ public final class Basis {
       }
     }
 
-    public static final int PAID_AT_FIELD_NUMBER = 32;
+    public static final int PAID_AT_FIELD_NUMBER = 37;
     private int paidAt_;
     /**
-     * <code>int32 paid_at = 32;</code>
+     * <code>int32 paid_at = 37;</code>
      * @return The paidAt.
      */
     @java.lang.Override
@@ -2955,10 +3256,10 @@ public final class Basis {
       return paidAt_;
     }
 
-    public static final int PAY_METHOD_FIELD_NUMBER = 33;
+    public static final int PAY_METHOD_FIELD_NUMBER = 38;
     private volatile java.lang.Object payMethod_;
     /**
-     * <code>string pay_method = 33;</code>
+     * <code>string pay_method = 38;</code>
      * @return The payMethod.
      */
     @java.lang.Override
@@ -2975,7 +3276,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string pay_method = 33;</code>
+     * <code>string pay_method = 38;</code>
      * @return The bytes for payMethod.
      */
     @java.lang.Override
@@ -2993,10 +3294,10 @@ public final class Basis {
       }
     }
 
-    public static final int PG_ID_FIELD_NUMBER = 34;
+    public static final int PG_ID_FIELD_NUMBER = 39;
     private volatile java.lang.Object pgId_;
     /**
-     * <code>string pg_id = 34;</code>
+     * <code>string pg_id = 39;</code>
      * @return The pgId.
      */
     @java.lang.Override
@@ -3013,7 +3314,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string pg_id = 34;</code>
+     * <code>string pg_id = 39;</code>
      * @return The bytes for pgId.
      */
     @java.lang.Override
@@ -3031,10 +3332,10 @@ public final class Basis {
       }
     }
 
-    public static final int PG_PROVIDER_FIELD_NUMBER = 35;
+    public static final int PG_PROVIDER_FIELD_NUMBER = 40;
     private volatile java.lang.Object pgProvider_;
     /**
-     * <code>string pg_provider = 35;</code>
+     * <code>string pg_provider = 40;</code>
      * @return The pgProvider.
      */
     @java.lang.Override
@@ -3051,7 +3352,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string pg_provider = 35;</code>
+     * <code>string pg_provider = 40;</code>
      * @return The bytes for pgProvider.
      */
     @java.lang.Override
@@ -3069,10 +3370,10 @@ public final class Basis {
       }
     }
 
-    public static final int PG_TID_FIELD_NUMBER = 36;
+    public static final int PG_TID_FIELD_NUMBER = 41;
     private volatile java.lang.Object pgTid_;
     /**
-     * <code>string pg_tid = 36;</code>
+     * <code>string pg_tid = 41;</code>
      * @return The pgTid.
      */
     @java.lang.Override
@@ -3089,7 +3390,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string pg_tid = 36;</code>
+     * <code>string pg_tid = 41;</code>
      * @return The bytes for pgTid.
      */
     @java.lang.Override
@@ -3107,10 +3408,10 @@ public final class Basis {
       }
     }
 
-    public static final int RECEIPT_URL_FIELD_NUMBER = 37;
+    public static final int RECEIPT_URL_FIELD_NUMBER = 42;
     private volatile java.lang.Object receiptUrl_;
     /**
-     * <code>string receipt_url = 37;</code>
+     * <code>string receipt_url = 42;</code>
      * @return The receiptUrl.
      */
     @java.lang.Override
@@ -3127,7 +3428,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string receipt_url = 37;</code>
+     * <code>string receipt_url = 42;</code>
      * @return The bytes for receiptUrl.
      */
     @java.lang.Override
@@ -3145,10 +3446,10 @@ public final class Basis {
       }
     }
 
-    public static final int STARTED_AT_FIELD_NUMBER = 38;
+    public static final int STARTED_AT_FIELD_NUMBER = 43;
     private int startedAt_;
     /**
-     * <code>int32 started_at = 38;</code>
+     * <code>int32 started_at = 43;</code>
      * @return The startedAt.
      */
     @java.lang.Override
@@ -3156,10 +3457,10 @@ public final class Basis {
       return startedAt_;
     }
 
-    public static final int STATUS_FIELD_NUMBER = 39;
+    public static final int STATUS_FIELD_NUMBER = 44;
     private volatile java.lang.Object status_;
     /**
-     * <code>string status = 39;</code>
+     * <code>string status = 44;</code>
      * @return The status.
      */
     @java.lang.Override
@@ -3176,7 +3477,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string status = 39;</code>
+     * <code>string status = 44;</code>
      * @return The bytes for status.
      */
     @java.lang.Override
@@ -3194,10 +3495,10 @@ public final class Basis {
       }
     }
 
-    public static final int USER_AGENT_FIELD_NUMBER = 40;
+    public static final int USER_AGENT_FIELD_NUMBER = 45;
     private volatile java.lang.Object userAgent_;
     /**
-     * <code>string user_agent = 40;</code>
+     * <code>string user_agent = 45;</code>
      * @return The userAgent.
      */
     @java.lang.Override
@@ -3214,7 +3515,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string user_agent = 40;</code>
+     * <code>string user_agent = 45;</code>
      * @return The bytes for userAgent.
      */
     @java.lang.Override
@@ -3232,10 +3533,10 @@ public final class Basis {
       }
     }
 
-    public static final int VBANK_CODE_FIELD_NUMBER = 41;
+    public static final int VBANK_CODE_FIELD_NUMBER = 46;
     private volatile java.lang.Object vbankCode_;
     /**
-     * <code>string vbank_code = 41;</code>
+     * <code>string vbank_code = 46;</code>
      * @return The vbankCode.
      */
     @java.lang.Override
@@ -3252,7 +3553,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string vbank_code = 41;</code>
+     * <code>string vbank_code = 46;</code>
      * @return The bytes for vbankCode.
      */
     @java.lang.Override
@@ -3270,10 +3571,10 @@ public final class Basis {
       }
     }
 
-    public static final int VBANK_DATE_FIELD_NUMBER = 42;
+    public static final int VBANK_DATE_FIELD_NUMBER = 47;
     private int vbankDate_;
     /**
-     * <code>int32 vbank_date = 42;</code>
+     * <code>int32 vbank_date = 47;</code>
      * @return The vbankDate.
      */
     @java.lang.Override
@@ -3281,10 +3582,10 @@ public final class Basis {
       return vbankDate_;
     }
 
-    public static final int VBANK_HOLDER_FIELD_NUMBER = 43;
+    public static final int VBANK_HOLDER_FIELD_NUMBER = 48;
     private volatile java.lang.Object vbankHolder_;
     /**
-     * <code>string vbank_holder = 43;</code>
+     * <code>string vbank_holder = 48;</code>
      * @return The vbankHolder.
      */
     @java.lang.Override
@@ -3301,7 +3602,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string vbank_holder = 43;</code>
+     * <code>string vbank_holder = 48;</code>
      * @return The bytes for vbankHolder.
      */
     @java.lang.Override
@@ -3319,10 +3620,10 @@ public final class Basis {
       }
     }
 
-    public static final int VBANK_ISSUED_AT_FIELD_NUMBER = 44;
+    public static final int VBANK_ISSUED_AT_FIELD_NUMBER = 49;
     private int vbankIssuedAt_;
     /**
-     * <code>int32 vbank_issued_at = 44;</code>
+     * <code>int32 vbank_issued_at = 49;</code>
      * @return The vbankIssuedAt.
      */
     @java.lang.Override
@@ -3330,10 +3631,10 @@ public final class Basis {
       return vbankIssuedAt_;
     }
 
-    public static final int VBANK_NAME_FIELD_NUMBER = 45;
+    public static final int VBANK_NAME_FIELD_NUMBER = 50;
     private volatile java.lang.Object vbankName_;
     /**
-     * <code>string vbank_name = 45;</code>
+     * <code>string vbank_name = 50;</code>
      * @return The vbankName.
      */
     @java.lang.Override
@@ -3350,7 +3651,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string vbank_name = 45;</code>
+     * <code>string vbank_name = 50;</code>
      * @return The bytes for vbankName.
      */
     @java.lang.Override
@@ -3368,10 +3669,10 @@ public final class Basis {
       }
     }
 
-    public static final int VBANK_NUM_FIELD_NUMBER = 46;
+    public static final int VBANK_NUM_FIELD_NUMBER = 51;
     private volatile java.lang.Object vbankNum_;
     /**
-     * <code>string vbank_num = 46;</code>
+     * <code>string vbank_num = 51;</code>
      * @return The vbankNum.
      */
     @java.lang.Override
@@ -3388,7 +3689,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string vbank_num = 46;</code>
+     * <code>string vbank_num = 51;</code>
      * @return The bytes for vbankNum.
      */
     @java.lang.Override
@@ -3406,10 +3707,10 @@ public final class Basis {
       }
     }
 
-    public static final int CUSTOMER_EMAIL_FIELD_NUMBER = 47;
+    public static final int CUSTOMER_EMAIL_FIELD_NUMBER = 52;
     private volatile java.lang.Object customerEmail_;
     /**
-     * <code>string customer_email = 47;</code>
+     * <code>string customer_email = 52;</code>
      * @return The customerEmail.
      */
     @java.lang.Override
@@ -3426,7 +3727,7 @@ public final class Basis {
       }
     }
     /**
-     * <code>string customer_email = 47;</code>
+     * <code>string customer_email = 52;</code>
      * @return The bytes for customerEmail.
      */
     @java.lang.Override
@@ -3503,101 +3804,116 @@ public final class Basis {
       if (!getCardCodeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, cardCode_);
       }
-      if (!getCardNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, cardName_);
-      }
       if (!getBinNumberBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, binNumber_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, binNumber_);
+      }
+      if (!getCardNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, cardName_);
+      }
+      if (!getCardReceipeNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, cardReceipeName_);
+      }
+      if (!getCardOwnerTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, cardOwnerType_);
+      }
+      if (!getCardBrandBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, cardBrand_);
+      }
+      if (!getCardCreditTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 21, cardCreditType_);
+      }
+      if (!getCardNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 22, cardNumber_);
       }
       if (cardInstallment_ != 0) {
-        output.writeInt32(18, cardInstallment_);
+        output.writeInt32(23, cardInstallment_);
       }
       if (cardType_ != 0) {
-        output.writeInt32(19, cardType_);
+        output.writeInt32(24, cardType_);
       }
       if (cashReceiptIssued_ != false) {
-        output.writeBool(20, cashReceiptIssued_);
+        output.writeBool(25, cashReceiptIssued_);
       }
       if (!getChannelBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 21, channel_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, channel_);
       }
       if (!getCurrencyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 22, currency_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, currency_);
       }
       if (!getCustomDataBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 23, customData_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 28, customData_);
       }
       if (!getCardUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 24, cardUid_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 29, cardUid_);
       }
       if (!getCustomerUidUsageBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, customerUidUsage_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 30, customerUidUsage_);
       }
       if (escrow_ != false) {
-        output.writeBool(26, escrow_);
+        output.writeBool(31, escrow_);
       }
       if (!getFailReasonBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, failReason_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32, failReason_);
       }
       if (failedAt_ != 0) {
-        output.writeInt32(28, failedAt_);
+        output.writeInt32(33, failedAt_);
       }
       if (!getImpUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 29, impUid_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 34, impUid_);
       }
       if (!getMerchantUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 30, merchantUid_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 35, merchantUid_);
       }
       if (!getOrderNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 31, orderName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 36, orderName_);
       }
       if (paidAt_ != 0) {
-        output.writeInt32(32, paidAt_);
+        output.writeInt32(37, paidAt_);
       }
       if (!getPayMethodBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 33, payMethod_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 38, payMethod_);
       }
       if (!getPgIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 34, pgId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 39, pgId_);
       }
       if (!getPgProviderBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 35, pgProvider_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 40, pgProvider_);
       }
       if (!getPgTidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 36, pgTid_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 41, pgTid_);
       }
       if (!getReceiptUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 37, receiptUrl_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 42, receiptUrl_);
       }
       if (startedAt_ != 0) {
-        output.writeInt32(38, startedAt_);
+        output.writeInt32(43, startedAt_);
       }
       if (!getStatusBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 39, status_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 44, status_);
       }
       if (!getUserAgentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 40, userAgent_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 45, userAgent_);
       }
       if (!getVbankCodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 41, vbankCode_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 46, vbankCode_);
       }
       if (vbankDate_ != 0) {
-        output.writeInt32(42, vbankDate_);
+        output.writeInt32(47, vbankDate_);
       }
       if (!getVbankHolderBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 43, vbankHolder_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 48, vbankHolder_);
       }
       if (vbankIssuedAt_ != 0) {
-        output.writeInt32(44, vbankIssuedAt_);
+        output.writeInt32(49, vbankIssuedAt_);
       }
       if (!getVbankNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 45, vbankName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 50, vbankName_);
       }
       if (!getVbankNumBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 46, vbankNum_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 51, vbankNum_);
       }
       if (!getCustomerEmailBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 47, customerEmail_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 52, customerEmail_);
       }
       unknownFields.writeTo(output);
     }
@@ -3663,110 +3979,125 @@ public final class Basis {
       if (!getCardCodeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, cardCode_);
       }
-      if (!getCardNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, cardName_);
-      }
       if (!getBinNumberBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, binNumber_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, binNumber_);
+      }
+      if (!getCardNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, cardName_);
+      }
+      if (!getCardReceipeNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, cardReceipeName_);
+      }
+      if (!getCardOwnerTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, cardOwnerType_);
+      }
+      if (!getCardBrandBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, cardBrand_);
+      }
+      if (!getCardCreditTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, cardCreditType_);
+      }
+      if (!getCardNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, cardNumber_);
       }
       if (cardInstallment_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(18, cardInstallment_);
+          .computeInt32Size(23, cardInstallment_);
       }
       if (cardType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(19, cardType_);
+          .computeInt32Size(24, cardType_);
       }
       if (cashReceiptIssued_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(20, cashReceiptIssued_);
+          .computeBoolSize(25, cashReceiptIssued_);
       }
       if (!getChannelBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, channel_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, channel_);
       }
       if (!getCurrencyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, currency_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, currency_);
       }
       if (!getCustomDataBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, customData_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(28, customData_);
       }
       if (!getCardUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, cardUid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(29, cardUid_);
       }
       if (!getCustomerUidUsageBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, customerUidUsage_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, customerUidUsage_);
       }
       if (escrow_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(26, escrow_);
+          .computeBoolSize(31, escrow_);
       }
       if (!getFailReasonBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, failReason_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, failReason_);
       }
       if (failedAt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(28, failedAt_);
+          .computeInt32Size(33, failedAt_);
       }
       if (!getImpUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(29, impUid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, impUid_);
       }
       if (!getMerchantUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, merchantUid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, merchantUid_);
       }
       if (!getOrderNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, orderName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, orderName_);
       }
       if (paidAt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(32, paidAt_);
+          .computeInt32Size(37, paidAt_);
       }
       if (!getPayMethodBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, payMethod_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(38, payMethod_);
       }
       if (!getPgIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, pgId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(39, pgId_);
       }
       if (!getPgProviderBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, pgProvider_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, pgProvider_);
       }
       if (!getPgTidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, pgTid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(41, pgTid_);
       }
       if (!getReceiptUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, receiptUrl_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(42, receiptUrl_);
       }
       if (startedAt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(38, startedAt_);
+          .computeInt32Size(43, startedAt_);
       }
       if (!getStatusBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(39, status_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(44, status_);
       }
       if (!getUserAgentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, userAgent_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(45, userAgent_);
       }
       if (!getVbankCodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(41, vbankCode_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(46, vbankCode_);
       }
       if (vbankDate_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(42, vbankDate_);
+          .computeInt32Size(47, vbankDate_);
       }
       if (!getVbankHolderBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(43, vbankHolder_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(48, vbankHolder_);
       }
       if (vbankIssuedAt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(44, vbankIssuedAt_);
+          .computeInt32Size(49, vbankIssuedAt_);
       }
       if (!getVbankNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(45, vbankName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(50, vbankName_);
       }
       if (!getVbankNumBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(46, vbankNum_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(51, vbankNum_);
       }
       if (!getCustomerEmailBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(47, customerEmail_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(52, customerEmail_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3813,10 +4144,20 @@ public final class Basis {
           != other.getCancelledAt()) return false;
       if (!getCardCode()
           .equals(other.getCardCode())) return false;
-      if (!getCardName()
-          .equals(other.getCardName())) return false;
       if (!getBinNumber()
           .equals(other.getBinNumber())) return false;
+      if (!getCardName()
+          .equals(other.getCardName())) return false;
+      if (!getCardReceipeName()
+          .equals(other.getCardReceipeName())) return false;
+      if (!getCardOwnerType()
+          .equals(other.getCardOwnerType())) return false;
+      if (!getCardBrand()
+          .equals(other.getCardBrand())) return false;
+      if (!getCardCreditType()
+          .equals(other.getCardCreditType())) return false;
+      if (!getCardNumber()
+          .equals(other.getCardNumber())) return false;
       if (getCardInstallment()
           != other.getCardInstallment()) return false;
       if (getCardType()
@@ -3922,10 +4263,20 @@ public final class Basis {
       hash = (53 * hash) + getCancelledAt();
       hash = (37 * hash) + CARD_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getCardCode().hashCode();
-      hash = (37 * hash) + CARD_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getCardName().hashCode();
       hash = (37 * hash) + BIN_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getBinNumber().hashCode();
+      hash = (37 * hash) + CARD_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCardName().hashCode();
+      hash = (37 * hash) + CARD_RECEIPE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCardReceipeName().hashCode();
+      hash = (37 * hash) + CARD_OWNER_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getCardOwnerType().hashCode();
+      hash = (37 * hash) + CARD_BRAND_FIELD_NUMBER;
+      hash = (53 * hash) + getCardBrand().hashCode();
+      hash = (37 * hash) + CARD_CREDIT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getCardCreditType().hashCode();
+      hash = (37 * hash) + CARD_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getCardNumber().hashCode();
       hash = (37 * hash) + CARD_INSTALLMENT_FIELD_NUMBER;
       hash = (53 * hash) + getCardInstallment();
       hash = (37 * hash) + CARD_TYPE_FIELD_NUMBER;
@@ -4156,9 +4507,19 @@ public final class Basis {
 
         cardCode_ = "";
 
+        binNumber_ = "";
+
         cardName_ = "";
 
-        binNumber_ = "";
+        cardReceipeName_ = "";
+
+        cardOwnerType_ = "";
+
+        cardBrand_ = "";
+
+        cardCreditType_ = "";
+
+        cardNumber_ = "";
 
         cardInstallment_ = 0;
 
@@ -4274,8 +4635,13 @@ public final class Basis {
         result.cancelReceiptUrls_ = cancelReceiptUrls_;
         result.cancelledAt_ = cancelledAt_;
         result.cardCode_ = cardCode_;
-        result.cardName_ = cardName_;
         result.binNumber_ = binNumber_;
+        result.cardName_ = cardName_;
+        result.cardReceipeName_ = cardReceipeName_;
+        result.cardOwnerType_ = cardOwnerType_;
+        result.cardBrand_ = cardBrand_;
+        result.cardCreditType_ = cardCreditType_;
+        result.cardNumber_ = cardNumber_;
         result.cardInstallment_ = cardInstallment_;
         result.cardType_ = cardType_;
         result.cashReceiptIssued_ = cashReceiptIssued_;
@@ -4438,12 +4804,32 @@ public final class Basis {
           cardCode_ = other.cardCode_;
           onChanged();
         }
+        if (!other.getBinNumber().isEmpty()) {
+          binNumber_ = other.binNumber_;
+          onChanged();
+        }
         if (!other.getCardName().isEmpty()) {
           cardName_ = other.cardName_;
           onChanged();
         }
-        if (!other.getBinNumber().isEmpty()) {
-          binNumber_ = other.binNumber_;
+        if (!other.getCardReceipeName().isEmpty()) {
+          cardReceipeName_ = other.cardReceipeName_;
+          onChanged();
+        }
+        if (!other.getCardOwnerType().isEmpty()) {
+          cardOwnerType_ = other.cardOwnerType_;
+          onChanged();
+        }
+        if (!other.getCardBrand().isEmpty()) {
+          cardBrand_ = other.cardBrand_;
+          onChanged();
+        }
+        if (!other.getCardCreditType().isEmpty()) {
+          cardCreditType_ = other.cardCreditType_;
+          onChanged();
+        }
+        if (!other.getCardNumber().isEmpty()) {
+          cardNumber_ = other.cardNumber_;
           onChanged();
         }
         if (other.getCardInstallment() != 0) {
@@ -5745,85 +6131,9 @@ public final class Basis {
         return this;
       }
 
-      private java.lang.Object cardName_ = "";
-      /**
-       * <code>string card_name = 16;</code>
-       * @return The cardName.
-       */
-      public java.lang.String getCardName() {
-        java.lang.Object ref = cardName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cardName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string card_name = 16;</code>
-       * @return The bytes for cardName.
-       */
-      public com.google.protobuf.ByteString
-          getCardNameBytes() {
-        java.lang.Object ref = cardName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cardName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string card_name = 16;</code>
-       * @param value The cardName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cardName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string card_name = 16;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCardName() {
-        
-        cardName_ = getDefaultInstance().getCardName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string card_name = 16;</code>
-       * @param value The bytes for cardName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cardName_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object binNumber_ = "";
       /**
-       * <code>string bin_number = 17;</code>
+       * <code>string bin_number = 16;</code>
        * @return The binNumber.
        */
       public java.lang.String getBinNumber() {
@@ -5839,7 +6149,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string bin_number = 17;</code>
+       * <code>string bin_number = 16;</code>
        * @return The bytes for binNumber.
        */
       public com.google.protobuf.ByteString
@@ -5856,7 +6166,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string bin_number = 17;</code>
+       * <code>string bin_number = 16;</code>
        * @param value The binNumber to set.
        * @return This builder for chaining.
        */
@@ -5871,7 +6181,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string bin_number = 17;</code>
+       * <code>string bin_number = 16;</code>
        * @return This builder for chaining.
        */
       public Builder clearBinNumber() {
@@ -5881,7 +6191,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string bin_number = 17;</code>
+       * <code>string bin_number = 16;</code>
        * @param value The bytes for binNumber to set.
        * @return This builder for chaining.
        */
@@ -5897,9 +6207,485 @@ public final class Basis {
         return this;
       }
 
+      private java.lang.Object cardName_ = "";
+      /**
+       * <pre>
+       * card issuer
+       * </pre>
+       *
+       * <code>string card_name = 17;</code>
+       * @return The cardName.
+       */
+      public java.lang.String getCardName() {
+        java.lang.Object ref = cardName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cardName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * card issuer
+       * </pre>
+       *
+       * <code>string card_name = 17;</code>
+       * @return The bytes for cardName.
+       */
+      public com.google.protobuf.ByteString
+          getCardNameBytes() {
+        java.lang.Object ref = cardName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cardName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * card issuer
+       * </pre>
+       *
+       * <code>string card_name = 17;</code>
+       * @param value The cardName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cardName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * card issuer
+       * </pre>
+       *
+       * <code>string card_name = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCardName() {
+        
+        cardName_ = getDefaultInstance().getCardName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * card issuer
+       * </pre>
+       *
+       * <code>string card_name = 17;</code>
+       * @param value The bytes for cardName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cardName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cardReceipeName_ = "";
+      /**
+       * <code>string card_receipe_name = 18;</code>
+       * @return The cardReceipeName.
+       */
+      public java.lang.String getCardReceipeName() {
+        java.lang.Object ref = cardReceipeName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cardReceipeName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string card_receipe_name = 18;</code>
+       * @return The bytes for cardReceipeName.
+       */
+      public com.google.protobuf.ByteString
+          getCardReceipeNameBytes() {
+        java.lang.Object ref = cardReceipeName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cardReceipeName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string card_receipe_name = 18;</code>
+       * @param value The cardReceipeName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardReceipeName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cardReceipeName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string card_receipe_name = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCardReceipeName() {
+        
+        cardReceipeName_ = getDefaultInstance().getCardReceipeName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string card_receipe_name = 18;</code>
+       * @param value The bytes for cardReceipeName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardReceipeNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cardReceipeName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cardOwnerType_ = "";
+      /**
+       * <code>string card_owner_type = 19;</code>
+       * @return The cardOwnerType.
+       */
+      public java.lang.String getCardOwnerType() {
+        java.lang.Object ref = cardOwnerType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cardOwnerType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string card_owner_type = 19;</code>
+       * @return The bytes for cardOwnerType.
+       */
+      public com.google.protobuf.ByteString
+          getCardOwnerTypeBytes() {
+        java.lang.Object ref = cardOwnerType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cardOwnerType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string card_owner_type = 19;</code>
+       * @param value The cardOwnerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardOwnerType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cardOwnerType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string card_owner_type = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCardOwnerType() {
+        
+        cardOwnerType_ = getDefaultInstance().getCardOwnerType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string card_owner_type = 19;</code>
+       * @param value The bytes for cardOwnerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardOwnerTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cardOwnerType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cardBrand_ = "";
+      /**
+       * <code>string card_brand = 20;</code>
+       * @return The cardBrand.
+       */
+      public java.lang.String getCardBrand() {
+        java.lang.Object ref = cardBrand_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cardBrand_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string card_brand = 20;</code>
+       * @return The bytes for cardBrand.
+       */
+      public com.google.protobuf.ByteString
+          getCardBrandBytes() {
+        java.lang.Object ref = cardBrand_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cardBrand_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string card_brand = 20;</code>
+       * @param value The cardBrand to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardBrand(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cardBrand_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string card_brand = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCardBrand() {
+        
+        cardBrand_ = getDefaultInstance().getCardBrand();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string card_brand = 20;</code>
+       * @param value The bytes for cardBrand to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardBrandBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cardBrand_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cardCreditType_ = "";
+      /**
+       * <code>string card_credit_type = 21;</code>
+       * @return The cardCreditType.
+       */
+      public java.lang.String getCardCreditType() {
+        java.lang.Object ref = cardCreditType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cardCreditType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string card_credit_type = 21;</code>
+       * @return The bytes for cardCreditType.
+       */
+      public com.google.protobuf.ByteString
+          getCardCreditTypeBytes() {
+        java.lang.Object ref = cardCreditType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cardCreditType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string card_credit_type = 21;</code>
+       * @param value The cardCreditType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardCreditType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cardCreditType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string card_credit_type = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCardCreditType() {
+        
+        cardCreditType_ = getDefaultInstance().getCardCreditType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string card_credit_type = 21;</code>
+       * @param value The bytes for cardCreditType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardCreditTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cardCreditType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cardNumber_ = "";
+      /**
+       * <code>string card_number = 22;</code>
+       * @return The cardNumber.
+       */
+      public java.lang.String getCardNumber() {
+        java.lang.Object ref = cardNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cardNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string card_number = 22;</code>
+       * @return The bytes for cardNumber.
+       */
+      public com.google.protobuf.ByteString
+          getCardNumberBytes() {
+        java.lang.Object ref = cardNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cardNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string card_number = 22;</code>
+       * @param value The cardNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cardNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string card_number = 22;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCardNumber() {
+        
+        cardNumber_ = getDefaultInstance().getCardNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string card_number = 22;</code>
+       * @param value The bytes for cardNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cardNumber_ = value;
+        onChanged();
+        return this;
+      }
+
       private int cardInstallment_ ;
       /**
-       * <code>int32 card_installment = 18;</code>
+       * <code>int32 card_installment = 23;</code>
        * @return The cardInstallment.
        */
       @java.lang.Override
@@ -5907,7 +6693,7 @@ public final class Basis {
         return cardInstallment_;
       }
       /**
-       * <code>int32 card_installment = 18;</code>
+       * <code>int32 card_installment = 23;</code>
        * @param value The cardInstallment to set.
        * @return This builder for chaining.
        */
@@ -5918,7 +6704,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>int32 card_installment = 18;</code>
+       * <code>int32 card_installment = 23;</code>
        * @return This builder for chaining.
        */
       public Builder clearCardInstallment() {
@@ -5930,7 +6716,7 @@ public final class Basis {
 
       private int cardType_ ;
       /**
-       * <code>int32 card_type = 19;</code>
+       * <code>int32 card_type = 24;</code>
        * @return The cardType.
        */
       @java.lang.Override
@@ -5938,7 +6724,7 @@ public final class Basis {
         return cardType_;
       }
       /**
-       * <code>int32 card_type = 19;</code>
+       * <code>int32 card_type = 24;</code>
        * @param value The cardType to set.
        * @return This builder for chaining.
        */
@@ -5949,7 +6735,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>int32 card_type = 19;</code>
+       * <code>int32 card_type = 24;</code>
        * @return This builder for chaining.
        */
       public Builder clearCardType() {
@@ -5961,7 +6747,7 @@ public final class Basis {
 
       private boolean cashReceiptIssued_ ;
       /**
-       * <code>bool cash_receipt_issued = 20;</code>
+       * <code>bool cash_receipt_issued = 25;</code>
        * @return The cashReceiptIssued.
        */
       @java.lang.Override
@@ -5969,7 +6755,7 @@ public final class Basis {
         return cashReceiptIssued_;
       }
       /**
-       * <code>bool cash_receipt_issued = 20;</code>
+       * <code>bool cash_receipt_issued = 25;</code>
        * @param value The cashReceiptIssued to set.
        * @return This builder for chaining.
        */
@@ -5980,7 +6766,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>bool cash_receipt_issued = 20;</code>
+       * <code>bool cash_receipt_issued = 25;</code>
        * @return This builder for chaining.
        */
       public Builder clearCashReceiptIssued() {
@@ -5992,7 +6778,7 @@ public final class Basis {
 
       private java.lang.Object channel_ = "";
       /**
-       * <code>string channel = 21;</code>
+       * <code>string channel = 26;</code>
        * @return The channel.
        */
       public java.lang.String getChannel() {
@@ -6008,7 +6794,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string channel = 21;</code>
+       * <code>string channel = 26;</code>
        * @return The bytes for channel.
        */
       public com.google.protobuf.ByteString
@@ -6025,7 +6811,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string channel = 21;</code>
+       * <code>string channel = 26;</code>
        * @param value The channel to set.
        * @return This builder for chaining.
        */
@@ -6040,7 +6826,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string channel = 21;</code>
+       * <code>string channel = 26;</code>
        * @return This builder for chaining.
        */
       public Builder clearChannel() {
@@ -6050,7 +6836,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string channel = 21;</code>
+       * <code>string channel = 26;</code>
        * @param value The bytes for channel to set.
        * @return This builder for chaining.
        */
@@ -6068,7 +6854,7 @@ public final class Basis {
 
       private java.lang.Object currency_ = "";
       /**
-       * <code>string currency = 22;</code>
+       * <code>string currency = 27;</code>
        * @return The currency.
        */
       public java.lang.String getCurrency() {
@@ -6084,7 +6870,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string currency = 22;</code>
+       * <code>string currency = 27;</code>
        * @return The bytes for currency.
        */
       public com.google.protobuf.ByteString
@@ -6101,7 +6887,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string currency = 22;</code>
+       * <code>string currency = 27;</code>
        * @param value The currency to set.
        * @return This builder for chaining.
        */
@@ -6116,7 +6902,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string currency = 22;</code>
+       * <code>string currency = 27;</code>
        * @return This builder for chaining.
        */
       public Builder clearCurrency() {
@@ -6126,7 +6912,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string currency = 22;</code>
+       * <code>string currency = 27;</code>
        * @param value The bytes for currency to set.
        * @return This builder for chaining.
        */
@@ -6144,7 +6930,7 @@ public final class Basis {
 
       private java.lang.Object customData_ = "";
       /**
-       * <code>string custom_data = 23;</code>
+       * <code>string custom_data = 28;</code>
        * @return The customData.
        */
       public java.lang.String getCustomData() {
@@ -6160,7 +6946,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string custom_data = 23;</code>
+       * <code>string custom_data = 28;</code>
        * @return The bytes for customData.
        */
       public com.google.protobuf.ByteString
@@ -6177,7 +6963,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string custom_data = 23;</code>
+       * <code>string custom_data = 28;</code>
        * @param value The customData to set.
        * @return This builder for chaining.
        */
@@ -6192,7 +6978,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string custom_data = 23;</code>
+       * <code>string custom_data = 28;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomData() {
@@ -6202,7 +6988,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string custom_data = 23;</code>
+       * <code>string custom_data = 28;</code>
        * @param value The bytes for customData to set.
        * @return This builder for chaining.
        */
@@ -6220,7 +7006,7 @@ public final class Basis {
 
       private java.lang.Object cardUid_ = "";
       /**
-       * <code>string card_uid = 24;</code>
+       * <code>string card_uid = 29;</code>
        * @return The cardUid.
        */
       public java.lang.String getCardUid() {
@@ -6236,7 +7022,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string card_uid = 24;</code>
+       * <code>string card_uid = 29;</code>
        * @return The bytes for cardUid.
        */
       public com.google.protobuf.ByteString
@@ -6253,7 +7039,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string card_uid = 24;</code>
+       * <code>string card_uid = 29;</code>
        * @param value The cardUid to set.
        * @return This builder for chaining.
        */
@@ -6268,7 +7054,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string card_uid = 24;</code>
+       * <code>string card_uid = 29;</code>
        * @return This builder for chaining.
        */
       public Builder clearCardUid() {
@@ -6278,7 +7064,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string card_uid = 24;</code>
+       * <code>string card_uid = 29;</code>
        * @param value The bytes for cardUid to set.
        * @return This builder for chaining.
        */
@@ -6296,7 +7082,7 @@ public final class Basis {
 
       private java.lang.Object customerUidUsage_ = "";
       /**
-       * <code>string customer_uid_usage = 25;</code>
+       * <code>string customer_uid_usage = 30;</code>
        * @return The customerUidUsage.
        */
       public java.lang.String getCustomerUidUsage() {
@@ -6312,7 +7098,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string customer_uid_usage = 25;</code>
+       * <code>string customer_uid_usage = 30;</code>
        * @return The bytes for customerUidUsage.
        */
       public com.google.protobuf.ByteString
@@ -6329,7 +7115,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string customer_uid_usage = 25;</code>
+       * <code>string customer_uid_usage = 30;</code>
        * @param value The customerUidUsage to set.
        * @return This builder for chaining.
        */
@@ -6344,7 +7130,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string customer_uid_usage = 25;</code>
+       * <code>string customer_uid_usage = 30;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerUidUsage() {
@@ -6354,7 +7140,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string customer_uid_usage = 25;</code>
+       * <code>string customer_uid_usage = 30;</code>
        * @param value The bytes for customerUidUsage to set.
        * @return This builder for chaining.
        */
@@ -6372,7 +7158,7 @@ public final class Basis {
 
       private boolean escrow_ ;
       /**
-       * <code>bool escrow = 26;</code>
+       * <code>bool escrow = 31;</code>
        * @return The escrow.
        */
       @java.lang.Override
@@ -6380,7 +7166,7 @@ public final class Basis {
         return escrow_;
       }
       /**
-       * <code>bool escrow = 26;</code>
+       * <code>bool escrow = 31;</code>
        * @param value The escrow to set.
        * @return This builder for chaining.
        */
@@ -6391,7 +7177,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>bool escrow = 26;</code>
+       * <code>bool escrow = 31;</code>
        * @return This builder for chaining.
        */
       public Builder clearEscrow() {
@@ -6403,7 +7189,7 @@ public final class Basis {
 
       private java.lang.Object failReason_ = "";
       /**
-       * <code>string fail_reason = 27;</code>
+       * <code>string fail_reason = 32;</code>
        * @return The failReason.
        */
       public java.lang.String getFailReason() {
@@ -6419,7 +7205,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string fail_reason = 27;</code>
+       * <code>string fail_reason = 32;</code>
        * @return The bytes for failReason.
        */
       public com.google.protobuf.ByteString
@@ -6436,7 +7222,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string fail_reason = 27;</code>
+       * <code>string fail_reason = 32;</code>
        * @param value The failReason to set.
        * @return This builder for chaining.
        */
@@ -6451,7 +7237,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string fail_reason = 27;</code>
+       * <code>string fail_reason = 32;</code>
        * @return This builder for chaining.
        */
       public Builder clearFailReason() {
@@ -6461,7 +7247,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string fail_reason = 27;</code>
+       * <code>string fail_reason = 32;</code>
        * @param value The bytes for failReason to set.
        * @return This builder for chaining.
        */
@@ -6479,7 +7265,7 @@ public final class Basis {
 
       private int failedAt_ ;
       /**
-       * <code>int32 failed_at = 28;</code>
+       * <code>int32 failed_at = 33;</code>
        * @return The failedAt.
        */
       @java.lang.Override
@@ -6487,7 +7273,7 @@ public final class Basis {
         return failedAt_;
       }
       /**
-       * <code>int32 failed_at = 28;</code>
+       * <code>int32 failed_at = 33;</code>
        * @param value The failedAt to set.
        * @return This builder for chaining.
        */
@@ -6498,7 +7284,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>int32 failed_at = 28;</code>
+       * <code>int32 failed_at = 33;</code>
        * @return This builder for chaining.
        */
       public Builder clearFailedAt() {
@@ -6510,7 +7296,7 @@ public final class Basis {
 
       private java.lang.Object impUid_ = "";
       /**
-       * <code>string imp_uid = 29;</code>
+       * <code>string imp_uid = 34;</code>
        * @return The impUid.
        */
       public java.lang.String getImpUid() {
@@ -6526,7 +7312,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string imp_uid = 29;</code>
+       * <code>string imp_uid = 34;</code>
        * @return The bytes for impUid.
        */
       public com.google.protobuf.ByteString
@@ -6543,7 +7329,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string imp_uid = 29;</code>
+       * <code>string imp_uid = 34;</code>
        * @param value The impUid to set.
        * @return This builder for chaining.
        */
@@ -6558,7 +7344,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string imp_uid = 29;</code>
+       * <code>string imp_uid = 34;</code>
        * @return This builder for chaining.
        */
       public Builder clearImpUid() {
@@ -6568,7 +7354,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string imp_uid = 29;</code>
+       * <code>string imp_uid = 34;</code>
        * @param value The bytes for impUid to set.
        * @return This builder for chaining.
        */
@@ -6586,7 +7372,7 @@ public final class Basis {
 
       private java.lang.Object merchantUid_ = "";
       /**
-       * <code>string merchant_uid = 30;</code>
+       * <code>string merchant_uid = 35;</code>
        * @return The merchantUid.
        */
       public java.lang.String getMerchantUid() {
@@ -6602,7 +7388,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string merchant_uid = 30;</code>
+       * <code>string merchant_uid = 35;</code>
        * @return The bytes for merchantUid.
        */
       public com.google.protobuf.ByteString
@@ -6619,7 +7405,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string merchant_uid = 30;</code>
+       * <code>string merchant_uid = 35;</code>
        * @param value The merchantUid to set.
        * @return This builder for chaining.
        */
@@ -6634,7 +7420,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string merchant_uid = 30;</code>
+       * <code>string merchant_uid = 35;</code>
        * @return This builder for chaining.
        */
       public Builder clearMerchantUid() {
@@ -6644,7 +7430,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string merchant_uid = 30;</code>
+       * <code>string merchant_uid = 35;</code>
        * @param value The bytes for merchantUid to set.
        * @return This builder for chaining.
        */
@@ -6662,7 +7448,7 @@ public final class Basis {
 
       private java.lang.Object orderName_ = "";
       /**
-       * <code>string order_name = 31;</code>
+       * <code>string order_name = 36;</code>
        * @return The orderName.
        */
       public java.lang.String getOrderName() {
@@ -6678,7 +7464,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string order_name = 31;</code>
+       * <code>string order_name = 36;</code>
        * @return The bytes for orderName.
        */
       public com.google.protobuf.ByteString
@@ -6695,7 +7481,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string order_name = 31;</code>
+       * <code>string order_name = 36;</code>
        * @param value The orderName to set.
        * @return This builder for chaining.
        */
@@ -6710,7 +7496,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string order_name = 31;</code>
+       * <code>string order_name = 36;</code>
        * @return This builder for chaining.
        */
       public Builder clearOrderName() {
@@ -6720,7 +7506,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string order_name = 31;</code>
+       * <code>string order_name = 36;</code>
        * @param value The bytes for orderName to set.
        * @return This builder for chaining.
        */
@@ -6738,7 +7524,7 @@ public final class Basis {
 
       private int paidAt_ ;
       /**
-       * <code>int32 paid_at = 32;</code>
+       * <code>int32 paid_at = 37;</code>
        * @return The paidAt.
        */
       @java.lang.Override
@@ -6746,7 +7532,7 @@ public final class Basis {
         return paidAt_;
       }
       /**
-       * <code>int32 paid_at = 32;</code>
+       * <code>int32 paid_at = 37;</code>
        * @param value The paidAt to set.
        * @return This builder for chaining.
        */
@@ -6757,7 +7543,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>int32 paid_at = 32;</code>
+       * <code>int32 paid_at = 37;</code>
        * @return This builder for chaining.
        */
       public Builder clearPaidAt() {
@@ -6769,7 +7555,7 @@ public final class Basis {
 
       private java.lang.Object payMethod_ = "";
       /**
-       * <code>string pay_method = 33;</code>
+       * <code>string pay_method = 38;</code>
        * @return The payMethod.
        */
       public java.lang.String getPayMethod() {
@@ -6785,7 +7571,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string pay_method = 33;</code>
+       * <code>string pay_method = 38;</code>
        * @return The bytes for payMethod.
        */
       public com.google.protobuf.ByteString
@@ -6802,7 +7588,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string pay_method = 33;</code>
+       * <code>string pay_method = 38;</code>
        * @param value The payMethod to set.
        * @return This builder for chaining.
        */
@@ -6817,7 +7603,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string pay_method = 33;</code>
+       * <code>string pay_method = 38;</code>
        * @return This builder for chaining.
        */
       public Builder clearPayMethod() {
@@ -6827,7 +7613,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string pay_method = 33;</code>
+       * <code>string pay_method = 38;</code>
        * @param value The bytes for payMethod to set.
        * @return This builder for chaining.
        */
@@ -6845,7 +7631,7 @@ public final class Basis {
 
       private java.lang.Object pgId_ = "";
       /**
-       * <code>string pg_id = 34;</code>
+       * <code>string pg_id = 39;</code>
        * @return The pgId.
        */
       public java.lang.String getPgId() {
@@ -6861,7 +7647,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string pg_id = 34;</code>
+       * <code>string pg_id = 39;</code>
        * @return The bytes for pgId.
        */
       public com.google.protobuf.ByteString
@@ -6878,7 +7664,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string pg_id = 34;</code>
+       * <code>string pg_id = 39;</code>
        * @param value The pgId to set.
        * @return This builder for chaining.
        */
@@ -6893,7 +7679,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string pg_id = 34;</code>
+       * <code>string pg_id = 39;</code>
        * @return This builder for chaining.
        */
       public Builder clearPgId() {
@@ -6903,7 +7689,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string pg_id = 34;</code>
+       * <code>string pg_id = 39;</code>
        * @param value The bytes for pgId to set.
        * @return This builder for chaining.
        */
@@ -6921,7 +7707,7 @@ public final class Basis {
 
       private java.lang.Object pgProvider_ = "";
       /**
-       * <code>string pg_provider = 35;</code>
+       * <code>string pg_provider = 40;</code>
        * @return The pgProvider.
        */
       public java.lang.String getPgProvider() {
@@ -6937,7 +7723,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string pg_provider = 35;</code>
+       * <code>string pg_provider = 40;</code>
        * @return The bytes for pgProvider.
        */
       public com.google.protobuf.ByteString
@@ -6954,7 +7740,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string pg_provider = 35;</code>
+       * <code>string pg_provider = 40;</code>
        * @param value The pgProvider to set.
        * @return This builder for chaining.
        */
@@ -6969,7 +7755,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string pg_provider = 35;</code>
+       * <code>string pg_provider = 40;</code>
        * @return This builder for chaining.
        */
       public Builder clearPgProvider() {
@@ -6979,7 +7765,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string pg_provider = 35;</code>
+       * <code>string pg_provider = 40;</code>
        * @param value The bytes for pgProvider to set.
        * @return This builder for chaining.
        */
@@ -6997,7 +7783,7 @@ public final class Basis {
 
       private java.lang.Object pgTid_ = "";
       /**
-       * <code>string pg_tid = 36;</code>
+       * <code>string pg_tid = 41;</code>
        * @return The pgTid.
        */
       public java.lang.String getPgTid() {
@@ -7013,7 +7799,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string pg_tid = 36;</code>
+       * <code>string pg_tid = 41;</code>
        * @return The bytes for pgTid.
        */
       public com.google.protobuf.ByteString
@@ -7030,7 +7816,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string pg_tid = 36;</code>
+       * <code>string pg_tid = 41;</code>
        * @param value The pgTid to set.
        * @return This builder for chaining.
        */
@@ -7045,7 +7831,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string pg_tid = 36;</code>
+       * <code>string pg_tid = 41;</code>
        * @return This builder for chaining.
        */
       public Builder clearPgTid() {
@@ -7055,7 +7841,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string pg_tid = 36;</code>
+       * <code>string pg_tid = 41;</code>
        * @param value The bytes for pgTid to set.
        * @return This builder for chaining.
        */
@@ -7073,7 +7859,7 @@ public final class Basis {
 
       private java.lang.Object receiptUrl_ = "";
       /**
-       * <code>string receipt_url = 37;</code>
+       * <code>string receipt_url = 42;</code>
        * @return The receiptUrl.
        */
       public java.lang.String getReceiptUrl() {
@@ -7089,7 +7875,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string receipt_url = 37;</code>
+       * <code>string receipt_url = 42;</code>
        * @return The bytes for receiptUrl.
        */
       public com.google.protobuf.ByteString
@@ -7106,7 +7892,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string receipt_url = 37;</code>
+       * <code>string receipt_url = 42;</code>
        * @param value The receiptUrl to set.
        * @return This builder for chaining.
        */
@@ -7121,7 +7907,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string receipt_url = 37;</code>
+       * <code>string receipt_url = 42;</code>
        * @return This builder for chaining.
        */
       public Builder clearReceiptUrl() {
@@ -7131,7 +7917,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string receipt_url = 37;</code>
+       * <code>string receipt_url = 42;</code>
        * @param value The bytes for receiptUrl to set.
        * @return This builder for chaining.
        */
@@ -7149,7 +7935,7 @@ public final class Basis {
 
       private int startedAt_ ;
       /**
-       * <code>int32 started_at = 38;</code>
+       * <code>int32 started_at = 43;</code>
        * @return The startedAt.
        */
       @java.lang.Override
@@ -7157,7 +7943,7 @@ public final class Basis {
         return startedAt_;
       }
       /**
-       * <code>int32 started_at = 38;</code>
+       * <code>int32 started_at = 43;</code>
        * @param value The startedAt to set.
        * @return This builder for chaining.
        */
@@ -7168,7 +7954,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>int32 started_at = 38;</code>
+       * <code>int32 started_at = 43;</code>
        * @return This builder for chaining.
        */
       public Builder clearStartedAt() {
@@ -7180,7 +7966,7 @@ public final class Basis {
 
       private java.lang.Object status_ = "";
       /**
-       * <code>string status = 39;</code>
+       * <code>string status = 44;</code>
        * @return The status.
        */
       public java.lang.String getStatus() {
@@ -7196,7 +7982,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string status = 39;</code>
+       * <code>string status = 44;</code>
        * @return The bytes for status.
        */
       public com.google.protobuf.ByteString
@@ -7213,7 +7999,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string status = 39;</code>
+       * <code>string status = 44;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -7228,7 +8014,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string status = 39;</code>
+       * <code>string status = 44;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -7238,7 +8024,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string status = 39;</code>
+       * <code>string status = 44;</code>
        * @param value The bytes for status to set.
        * @return This builder for chaining.
        */
@@ -7256,7 +8042,7 @@ public final class Basis {
 
       private java.lang.Object userAgent_ = "";
       /**
-       * <code>string user_agent = 40;</code>
+       * <code>string user_agent = 45;</code>
        * @return The userAgent.
        */
       public java.lang.String getUserAgent() {
@@ -7272,7 +8058,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string user_agent = 40;</code>
+       * <code>string user_agent = 45;</code>
        * @return The bytes for userAgent.
        */
       public com.google.protobuf.ByteString
@@ -7289,7 +8075,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string user_agent = 40;</code>
+       * <code>string user_agent = 45;</code>
        * @param value The userAgent to set.
        * @return This builder for chaining.
        */
@@ -7304,7 +8090,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string user_agent = 40;</code>
+       * <code>string user_agent = 45;</code>
        * @return This builder for chaining.
        */
       public Builder clearUserAgent() {
@@ -7314,7 +8100,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string user_agent = 40;</code>
+       * <code>string user_agent = 45;</code>
        * @param value The bytes for userAgent to set.
        * @return This builder for chaining.
        */
@@ -7332,7 +8118,7 @@ public final class Basis {
 
       private java.lang.Object vbankCode_ = "";
       /**
-       * <code>string vbank_code = 41;</code>
+       * <code>string vbank_code = 46;</code>
        * @return The vbankCode.
        */
       public java.lang.String getVbankCode() {
@@ -7348,7 +8134,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string vbank_code = 41;</code>
+       * <code>string vbank_code = 46;</code>
        * @return The bytes for vbankCode.
        */
       public com.google.protobuf.ByteString
@@ -7365,7 +8151,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string vbank_code = 41;</code>
+       * <code>string vbank_code = 46;</code>
        * @param value The vbankCode to set.
        * @return This builder for chaining.
        */
@@ -7380,7 +8166,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string vbank_code = 41;</code>
+       * <code>string vbank_code = 46;</code>
        * @return This builder for chaining.
        */
       public Builder clearVbankCode() {
@@ -7390,7 +8176,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string vbank_code = 41;</code>
+       * <code>string vbank_code = 46;</code>
        * @param value The bytes for vbankCode to set.
        * @return This builder for chaining.
        */
@@ -7408,7 +8194,7 @@ public final class Basis {
 
       private int vbankDate_ ;
       /**
-       * <code>int32 vbank_date = 42;</code>
+       * <code>int32 vbank_date = 47;</code>
        * @return The vbankDate.
        */
       @java.lang.Override
@@ -7416,7 +8202,7 @@ public final class Basis {
         return vbankDate_;
       }
       /**
-       * <code>int32 vbank_date = 42;</code>
+       * <code>int32 vbank_date = 47;</code>
        * @param value The vbankDate to set.
        * @return This builder for chaining.
        */
@@ -7427,7 +8213,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>int32 vbank_date = 42;</code>
+       * <code>int32 vbank_date = 47;</code>
        * @return This builder for chaining.
        */
       public Builder clearVbankDate() {
@@ -7439,7 +8225,7 @@ public final class Basis {
 
       private java.lang.Object vbankHolder_ = "";
       /**
-       * <code>string vbank_holder = 43;</code>
+       * <code>string vbank_holder = 48;</code>
        * @return The vbankHolder.
        */
       public java.lang.String getVbankHolder() {
@@ -7455,7 +8241,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string vbank_holder = 43;</code>
+       * <code>string vbank_holder = 48;</code>
        * @return The bytes for vbankHolder.
        */
       public com.google.protobuf.ByteString
@@ -7472,7 +8258,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string vbank_holder = 43;</code>
+       * <code>string vbank_holder = 48;</code>
        * @param value The vbankHolder to set.
        * @return This builder for chaining.
        */
@@ -7487,7 +8273,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string vbank_holder = 43;</code>
+       * <code>string vbank_holder = 48;</code>
        * @return This builder for chaining.
        */
       public Builder clearVbankHolder() {
@@ -7497,7 +8283,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string vbank_holder = 43;</code>
+       * <code>string vbank_holder = 48;</code>
        * @param value The bytes for vbankHolder to set.
        * @return This builder for chaining.
        */
@@ -7515,7 +8301,7 @@ public final class Basis {
 
       private int vbankIssuedAt_ ;
       /**
-       * <code>int32 vbank_issued_at = 44;</code>
+       * <code>int32 vbank_issued_at = 49;</code>
        * @return The vbankIssuedAt.
        */
       @java.lang.Override
@@ -7523,7 +8309,7 @@ public final class Basis {
         return vbankIssuedAt_;
       }
       /**
-       * <code>int32 vbank_issued_at = 44;</code>
+       * <code>int32 vbank_issued_at = 49;</code>
        * @param value The vbankIssuedAt to set.
        * @return This builder for chaining.
        */
@@ -7534,7 +8320,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>int32 vbank_issued_at = 44;</code>
+       * <code>int32 vbank_issued_at = 49;</code>
        * @return This builder for chaining.
        */
       public Builder clearVbankIssuedAt() {
@@ -7546,7 +8332,7 @@ public final class Basis {
 
       private java.lang.Object vbankName_ = "";
       /**
-       * <code>string vbank_name = 45;</code>
+       * <code>string vbank_name = 50;</code>
        * @return The vbankName.
        */
       public java.lang.String getVbankName() {
@@ -7562,7 +8348,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string vbank_name = 45;</code>
+       * <code>string vbank_name = 50;</code>
        * @return The bytes for vbankName.
        */
       public com.google.protobuf.ByteString
@@ -7579,7 +8365,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string vbank_name = 45;</code>
+       * <code>string vbank_name = 50;</code>
        * @param value The vbankName to set.
        * @return This builder for chaining.
        */
@@ -7594,7 +8380,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string vbank_name = 45;</code>
+       * <code>string vbank_name = 50;</code>
        * @return This builder for chaining.
        */
       public Builder clearVbankName() {
@@ -7604,7 +8390,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string vbank_name = 45;</code>
+       * <code>string vbank_name = 50;</code>
        * @param value The bytes for vbankName to set.
        * @return This builder for chaining.
        */
@@ -7622,7 +8408,7 @@ public final class Basis {
 
       private java.lang.Object vbankNum_ = "";
       /**
-       * <code>string vbank_num = 46;</code>
+       * <code>string vbank_num = 51;</code>
        * @return The vbankNum.
        */
       public java.lang.String getVbankNum() {
@@ -7638,7 +8424,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string vbank_num = 46;</code>
+       * <code>string vbank_num = 51;</code>
        * @return The bytes for vbankNum.
        */
       public com.google.protobuf.ByteString
@@ -7655,7 +8441,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string vbank_num = 46;</code>
+       * <code>string vbank_num = 51;</code>
        * @param value The vbankNum to set.
        * @return This builder for chaining.
        */
@@ -7670,7 +8456,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string vbank_num = 46;</code>
+       * <code>string vbank_num = 51;</code>
        * @return This builder for chaining.
        */
       public Builder clearVbankNum() {
@@ -7680,7 +8466,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string vbank_num = 46;</code>
+       * <code>string vbank_num = 51;</code>
        * @param value The bytes for vbankNum to set.
        * @return This builder for chaining.
        */
@@ -7698,7 +8484,7 @@ public final class Basis {
 
       private java.lang.Object customerEmail_ = "";
       /**
-       * <code>string customer_email = 47;</code>
+       * <code>string customer_email = 52;</code>
        * @return The customerEmail.
        */
       public java.lang.String getCustomerEmail() {
@@ -7714,7 +8500,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string customer_email = 47;</code>
+       * <code>string customer_email = 52;</code>
        * @return The bytes for customerEmail.
        */
       public com.google.protobuf.ByteString
@@ -7731,7 +8517,7 @@ public final class Basis {
         }
       }
       /**
-       * <code>string customer_email = 47;</code>
+       * <code>string customer_email = 52;</code>
        * @param value The customerEmail to set.
        * @return This builder for chaining.
        */
@@ -7746,7 +8532,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string customer_email = 47;</code>
+       * <code>string customer_email = 52;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerEmail() {
@@ -7756,7 +8542,7 @@ public final class Basis {
         return this;
       }
       /**
-       * <code>string customer_email = 47;</code>
+       * <code>string customer_email = 52;</code>
        * @param value The bytes for customerEmail to set.
        * @return This builder for chaining.
        */
@@ -7846,7 +8632,7 @@ public final class Basis {
       "\n\024v2/basis/basis.proto\022\010basis_v2\"j\n\rCanc" +
       "elHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(" +
       "\t\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022" +
-      "\023\n\013receipt_url\030\005 \001(\t\"\344\007\n\006UnitTx\022\016\n\006amoun" +
+      "\023\n\013receipt_url\030\005 \001(\t\"\333\010\n\006UnitTx\022\016\n\006amoun" +
       "t\030\001 \001(\005\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank_code\030" +
       "\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_addr\030\005" +
       " \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer_name\030" +
@@ -7855,25 +8641,28 @@ public final class Basis {
       "l_history\030\013 \003(\0132\027.basis_v2.CancelHistory" +
       "\022\025\n\rcancel_reason\030\014 \001(\t\022\033\n\023cancel_receip" +
       "t_urls\030\r \003(\t\022\024\n\014cancelled_at\030\016 \001(\005\022\021\n\tca" +
-      "rd_code\030\017 \001(\t\022\021\n\tcard_name\030\020 \001(\t\022\022\n\nbin_" +
-      "number\030\021 \001(\t\022\030\n\020card_installment\030\022 \001(\005\022\021" +
-      "\n\tcard_type\030\023 \001(\005\022\033\n\023cash_receipt_issued" +
-      "\030\024 \001(\010\022\017\n\007channel\030\025 \001(\t\022\020\n\010currency\030\026 \001(" +
-      "\t\022\023\n\013custom_data\030\027 \001(\t\022\020\n\010card_uid\030\030 \001(\t" +
-      "\022\032\n\022customer_uid_usage\030\031 \001(\t\022\016\n\006escrow\030\032" +
-      " \001(\010\022\023\n\013fail_reason\030\033 \001(\t\022\021\n\tfailed_at\030\034" +
-      " \001(\005\022\017\n\007imp_uid\030\035 \001(\t\022\024\n\014merchant_uid\030\036 " +
-      "\001(\t\022\022\n\norder_name\030\037 \001(\t\022\017\n\007paid_at\030  \001(\005" +
-      "\022\022\n\npay_method\030! \001(\t\022\r\n\005pg_id\030\" \001(\t\022\023\n\013p" +
-      "g_provider\030# \001(\t\022\016\n\006pg_tid\030$ \001(\t\022\023\n\013rece" +
-      "ipt_url\030% \001(\t\022\022\n\nstarted_at\030& \001(\005\022\016\n\006sta" +
-      "tus\030\' \001(\t\022\022\n\nuser_agent\030( \001(\t\022\022\n\nvbank_c" +
-      "ode\030) \001(\t\022\022\n\nvbank_date\030* \001(\005\022\024\n\014vbank_h" +
-      "older\030+ \001(\t\022\027\n\017vbank_issued_at\030, \001(\005\022\022\n\n" +
-      "vbank_name\030- \001(\t\022\021\n\tvbank_num\030. \001(\t\022\026\n\016c" +
-      "ustomer_email\030/ \001(\tB=Z0github.com/iampor" +
-      "t/interface/gen_src/go/v2/basis\252\002\010V2.Bas" +
-      "isb\006proto3"
+      "rd_code\030\017 \001(\t\022\022\n\nbin_number\030\020 \001(\t\022\021\n\tcar" +
+      "d_name\030\021 \001(\t\022\031\n\021card_receipe_name\030\022 \001(\t\022" +
+      "\027\n\017card_owner_type\030\023 \001(\t\022\022\n\ncard_brand\030\024" +
+      " \001(\t\022\030\n\020card_credit_type\030\025 \001(\t\022\023\n\013card_n" +
+      "umber\030\026 \001(\t\022\030\n\020card_installment\030\027 \001(\005\022\021\n" +
+      "\tcard_type\030\030 \001(\005\022\033\n\023cash_receipt_issued\030" +
+      "\031 \001(\010\022\017\n\007channel\030\032 \001(\t\022\020\n\010currency\030\033 \001(\t" +
+      "\022\023\n\013custom_data\030\034 \001(\t\022\020\n\010card_uid\030\035 \001(\t\022" +
+      "\032\n\022customer_uid_usage\030\036 \001(\t\022\016\n\006escrow\030\037 " +
+      "\001(\010\022\023\n\013fail_reason\030  \001(\t\022\021\n\tfailed_at\030! " +
+      "\001(\005\022\017\n\007imp_uid\030\" \001(\t\022\024\n\014merchant_uid\030# \001" +
+      "(\t\022\022\n\norder_name\030$ \001(\t\022\017\n\007paid_at\030% \001(\005\022" +
+      "\022\n\npay_method\030& \001(\t\022\r\n\005pg_id\030\' \001(\t\022\023\n\013pg" +
+      "_provider\030( \001(\t\022\016\n\006pg_tid\030) \001(\t\022\023\n\013recei" +
+      "pt_url\030* \001(\t\022\022\n\nstarted_at\030+ \001(\005\022\016\n\006stat" +
+      "us\030, \001(\t\022\022\n\nuser_agent\030- \001(\t\022\022\n\nvbank_co" +
+      "de\030. \001(\t\022\022\n\nvbank_date\030/ \001(\005\022\024\n\014vbank_ho" +
+      "lder\0300 \001(\t\022\027\n\017vbank_issued_at\0301 \001(\005\022\022\n\nv" +
+      "bank_name\0302 \001(\t\022\021\n\tvbank_num\0303 \001(\t\022\026\n\016cu" +
+      "stomer_email\0304 \001(\tB=Z0github.com/iamport" +
+      "/interface/gen_src/go/v2/basis\252\002\010V2.Basi" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7890,7 +8679,7 @@ public final class Basis {
     internal_static_basis_v2_UnitTx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_basis_v2_UnitTx_descriptor,
-        new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "BinNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", "CustomerEmail", });
+        new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "BinNumber", "CardName", "CardReceipeName", "CardOwnerType", "CardBrand", "CardCreditType", "CardNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", "CustomerEmail", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

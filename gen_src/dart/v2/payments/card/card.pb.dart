@@ -663,7 +663,11 @@ class PayByRegisteredCardRequest extends $pb.GeneratedMessage {
     ..aOB(7, 'interestFreeByMerchant')
     ..aOS(8, 'customData')
     ..aOS(9, 'callbackUrl')
-    ..aOS(10, 'email')
+    ..aOS(10, 'buyerAddr')
+    ..aOS(11, 'buyerEmail')
+    ..aOS(12, 'buyerName')
+    ..aOS(13, 'buyerPostcode')
+    ..aOS(14, 'buyerTel')
     ..hasRequiredFields = false
   ;
 
@@ -764,13 +768,49 @@ class PayByRegisteredCardRequest extends $pb.GeneratedMessage {
   void clearCallbackUrl() => clearField(9);
 
   @$pb.TagNumber(10)
-  $core.String get email => $_getSZ(9);
+  $core.String get buyerAddr => $_getSZ(9);
   @$pb.TagNumber(10)
-  set email($core.String v) { $_setString(9, v); }
+  set buyerAddr($core.String v) { $_setString(9, v); }
   @$pb.TagNumber(10)
-  $core.bool hasEmail() => $_has(9);
+  $core.bool hasBuyerAddr() => $_has(9);
   @$pb.TagNumber(10)
-  void clearEmail() => clearField(10);
+  void clearBuyerAddr() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.String get buyerEmail => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set buyerEmail($core.String v) { $_setString(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasBuyerEmail() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearBuyerEmail() => clearField(11);
+
+  @$pb.TagNumber(12)
+  $core.String get buyerName => $_getSZ(11);
+  @$pb.TagNumber(12)
+  set buyerName($core.String v) { $_setString(11, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasBuyerName() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearBuyerName() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.String get buyerPostcode => $_getSZ(12);
+  @$pb.TagNumber(13)
+  set buyerPostcode($core.String v) { $_setString(12, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasBuyerPostcode() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearBuyerPostcode() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.String get buyerTel => $_getSZ(13);
+  @$pb.TagNumber(14)
+  set buyerTel($core.String v) { $_setString(13, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasBuyerTel() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearBuyerTel() => clearField(14);
 }
 
 class PayByRegisteredCardData extends $pb.GeneratedMessage {

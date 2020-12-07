@@ -2615,7 +2615,11 @@ proto.card_v2.PayByRegisteredCardRequest.toObject = function(includeInstance, ms
     interestFreeByMerchant: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
     customData: jspb.Message.getFieldWithDefault(msg, 8, ""),
     callbackUrl: jspb.Message.getFieldWithDefault(msg, 9, ""),
-    email: jspb.Message.getFieldWithDefault(msg, 10, "")
+    buyerAddr: jspb.Message.getFieldWithDefault(msg, 10, ""),
+    buyerEmail: jspb.Message.getFieldWithDefault(msg, 11, ""),
+    buyerName: jspb.Message.getFieldWithDefault(msg, 12, ""),
+    buyerPostcode: jspb.Message.getFieldWithDefault(msg, 13, ""),
+    buyerTel: jspb.Message.getFieldWithDefault(msg, 14, "")
   };
 
   if (includeInstance) {
@@ -2690,7 +2694,23 @@ proto.card_v2.PayByRegisteredCardRequest.deserializeBinaryFromReader = function(
       break;
     case 10:
       var value = /** @type {string} */ (reader.readString());
-      msg.setEmail(value);
+      msg.setBuyerAddr(value);
+      break;
+    case 11:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBuyerEmail(value);
+      break;
+    case 12:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBuyerName(value);
+      break;
+    case 13:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBuyerPostcode(value);
+      break;
+    case 14:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBuyerTel(value);
       break;
     default:
       reader.skipField();
@@ -2784,10 +2804,38 @@ proto.card_v2.PayByRegisteredCardRequest.serializeBinaryToWriter = function(mess
       f
     );
   }
-  f = message.getEmail();
+  f = message.getBuyerAddr();
   if (f.length > 0) {
     writer.writeString(
       10,
+      f
+    );
+  }
+  f = message.getBuyerEmail();
+  if (f.length > 0) {
+    writer.writeString(
+      11,
+      f
+    );
+  }
+  f = message.getBuyerName();
+  if (f.length > 0) {
+    writer.writeString(
+      12,
+      f
+    );
+  }
+  f = message.getBuyerPostcode();
+  if (f.length > 0) {
+    writer.writeString(
+      13,
+      f
+    );
+  }
+  f = message.getBuyerTel();
+  if (f.length > 0) {
+    writer.writeString(
+      14,
       f
     );
   }
@@ -2957,10 +3005,10 @@ proto.card_v2.PayByRegisteredCardRequest.prototype.setCallbackUrl = function(val
 
 
 /**
- * optional string email = 10;
+ * optional string buyer_addr = 10;
  * @return {string}
  */
-proto.card_v2.PayByRegisteredCardRequest.prototype.getEmail = function() {
+proto.card_v2.PayByRegisteredCardRequest.prototype.getBuyerAddr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
 };
 
@@ -2969,8 +3017,80 @@ proto.card_v2.PayByRegisteredCardRequest.prototype.getEmail = function() {
  * @param {string} value
  * @return {!proto.card_v2.PayByRegisteredCardRequest} returns this
  */
-proto.card_v2.PayByRegisteredCardRequest.prototype.setEmail = function(value) {
+proto.card_v2.PayByRegisteredCardRequest.prototype.setBuyerAddr = function(value) {
   return jspb.Message.setProto3StringField(this, 10, value);
+};
+
+
+/**
+ * optional string buyer_email = 11;
+ * @return {string}
+ */
+proto.card_v2.PayByRegisteredCardRequest.prototype.getBuyerEmail = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.card_v2.PayByRegisteredCardRequest} returns this
+ */
+proto.card_v2.PayByRegisteredCardRequest.prototype.setBuyerEmail = function(value) {
+  return jspb.Message.setProto3StringField(this, 11, value);
+};
+
+
+/**
+ * optional string buyer_name = 12;
+ * @return {string}
+ */
+proto.card_v2.PayByRegisteredCardRequest.prototype.getBuyerName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.card_v2.PayByRegisteredCardRequest} returns this
+ */
+proto.card_v2.PayByRegisteredCardRequest.prototype.setBuyerName = function(value) {
+  return jspb.Message.setProto3StringField(this, 12, value);
+};
+
+
+/**
+ * optional string buyer_postcode = 13;
+ * @return {string}
+ */
+proto.card_v2.PayByRegisteredCardRequest.prototype.getBuyerPostcode = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 13, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.card_v2.PayByRegisteredCardRequest} returns this
+ */
+proto.card_v2.PayByRegisteredCardRequest.prototype.setBuyerPostcode = function(value) {
+  return jspb.Message.setProto3StringField(this, 13, value);
+};
+
+
+/**
+ * optional string buyer_tel = 14;
+ * @return {string}
+ */
+proto.card_v2.PayByRegisteredCardRequest.prototype.getBuyerTel = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.card_v2.PayByRegisteredCardRequest} returns this
+ */
+proto.card_v2.PayByRegisteredCardRequest.prototype.setBuyerTel = function(value) {
+  return jspb.Message.setProto3StringField(this, 14, value);
 };
 
 

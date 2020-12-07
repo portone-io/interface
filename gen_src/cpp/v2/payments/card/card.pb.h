@@ -2034,7 +2034,11 @@ class PayByRegisteredCardRequest PROTOBUF_FINAL :
     kOrderNameFieldNumber = 5,
     kCustomDataFieldNumber = 8,
     kCallbackUrlFieldNumber = 9,
-    kEmailFieldNumber = 10,
+    kBuyerAddrFieldNumber = 10,
+    kBuyerEmailFieldNumber = 11,
+    kBuyerNameFieldNumber = 12,
+    kBuyerPostcodeFieldNumber = 13,
+    kBuyerTelFieldNumber = 14,
     kCardInstallmentFieldNumber = 6,
     kInterestFreeByMerchantFieldNumber = 7,
   };
@@ -2150,20 +2154,84 @@ class PayByRegisteredCardRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_callback_url();
   public:
 
-  // string email = 10;
-  void clear_email();
-  const std::string& email() const;
-  void set_email(const std::string& value);
-  void set_email(std::string&& value);
-  void set_email(const char* value);
-  void set_email(const char* value, size_t size);
-  std::string* mutable_email();
-  std::string* release_email();
-  void set_allocated_email(std::string* email);
+  // string buyer_addr = 10;
+  void clear_buyer_addr();
+  const std::string& buyer_addr() const;
+  void set_buyer_addr(const std::string& value);
+  void set_buyer_addr(std::string&& value);
+  void set_buyer_addr(const char* value);
+  void set_buyer_addr(const char* value, size_t size);
+  std::string* mutable_buyer_addr();
+  std::string* release_buyer_addr();
+  void set_allocated_buyer_addr(std::string* buyer_addr);
   private:
-  const std::string& _internal_email() const;
-  void _internal_set_email(const std::string& value);
-  std::string* _internal_mutable_email();
+  const std::string& _internal_buyer_addr() const;
+  void _internal_set_buyer_addr(const std::string& value);
+  std::string* _internal_mutable_buyer_addr();
+  public:
+
+  // string buyer_email = 11;
+  void clear_buyer_email();
+  const std::string& buyer_email() const;
+  void set_buyer_email(const std::string& value);
+  void set_buyer_email(std::string&& value);
+  void set_buyer_email(const char* value);
+  void set_buyer_email(const char* value, size_t size);
+  std::string* mutable_buyer_email();
+  std::string* release_buyer_email();
+  void set_allocated_buyer_email(std::string* buyer_email);
+  private:
+  const std::string& _internal_buyer_email() const;
+  void _internal_set_buyer_email(const std::string& value);
+  std::string* _internal_mutable_buyer_email();
+  public:
+
+  // string buyer_name = 12;
+  void clear_buyer_name();
+  const std::string& buyer_name() const;
+  void set_buyer_name(const std::string& value);
+  void set_buyer_name(std::string&& value);
+  void set_buyer_name(const char* value);
+  void set_buyer_name(const char* value, size_t size);
+  std::string* mutable_buyer_name();
+  std::string* release_buyer_name();
+  void set_allocated_buyer_name(std::string* buyer_name);
+  private:
+  const std::string& _internal_buyer_name() const;
+  void _internal_set_buyer_name(const std::string& value);
+  std::string* _internal_mutable_buyer_name();
+  public:
+
+  // string buyer_postcode = 13;
+  void clear_buyer_postcode();
+  const std::string& buyer_postcode() const;
+  void set_buyer_postcode(const std::string& value);
+  void set_buyer_postcode(std::string&& value);
+  void set_buyer_postcode(const char* value);
+  void set_buyer_postcode(const char* value, size_t size);
+  std::string* mutable_buyer_postcode();
+  std::string* release_buyer_postcode();
+  void set_allocated_buyer_postcode(std::string* buyer_postcode);
+  private:
+  const std::string& _internal_buyer_postcode() const;
+  void _internal_set_buyer_postcode(const std::string& value);
+  std::string* _internal_mutable_buyer_postcode();
+  public:
+
+  // string buyer_tel = 14;
+  void clear_buyer_tel();
+  const std::string& buyer_tel() const;
+  void set_buyer_tel(const std::string& value);
+  void set_buyer_tel(std::string&& value);
+  void set_buyer_tel(const char* value);
+  void set_buyer_tel(const char* value, size_t size);
+  std::string* mutable_buyer_tel();
+  std::string* release_buyer_tel();
+  void set_allocated_buyer_tel(std::string* buyer_tel);
+  private:
+  const std::string& _internal_buyer_tel() const;
+  void _internal_set_buyer_tel(const std::string& value);
+  std::string* _internal_mutable_buyer_tel();
   public:
 
   // int32 card_installment = 6;
@@ -2198,7 +2266,11 @@ class PayByRegisteredCardRequest PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr order_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr custom_data_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr callback_url_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr email_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buyer_addr_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buyer_email_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buyer_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buyer_postcode_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buyer_tel_;
   ::PROTOBUF_NAMESPACE_ID::int32 card_installment_;
   bool interest_free_by_merchant_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -6827,66 +6899,314 @@ inline void PayByRegisteredCardRequest::set_allocated_callback_url(std::string* 
   // @@protoc_insertion_point(field_set_allocated:card_v2.PayByRegisteredCardRequest.callback_url)
 }
 
-// string email = 10;
-inline void PayByRegisteredCardRequest::clear_email() {
-  email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// string buyer_addr = 10;
+inline void PayByRegisteredCardRequest::clear_buyer_addr() {
+  buyer_addr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline const std::string& PayByRegisteredCardRequest::email() const {
-  // @@protoc_insertion_point(field_get:card_v2.PayByRegisteredCardRequest.email)
-  return _internal_email();
+inline const std::string& PayByRegisteredCardRequest::buyer_addr() const {
+  // @@protoc_insertion_point(field_get:card_v2.PayByRegisteredCardRequest.buyer_addr)
+  return _internal_buyer_addr();
 }
-inline void PayByRegisteredCardRequest::set_email(const std::string& value) {
-  _internal_set_email(value);
-  // @@protoc_insertion_point(field_set:card_v2.PayByRegisteredCardRequest.email)
+inline void PayByRegisteredCardRequest::set_buyer_addr(const std::string& value) {
+  _internal_set_buyer_addr(value);
+  // @@protoc_insertion_point(field_set:card_v2.PayByRegisteredCardRequest.buyer_addr)
 }
-inline std::string* PayByRegisteredCardRequest::mutable_email() {
-  // @@protoc_insertion_point(field_mutable:card_v2.PayByRegisteredCardRequest.email)
-  return _internal_mutable_email();
+inline std::string* PayByRegisteredCardRequest::mutable_buyer_addr() {
+  // @@protoc_insertion_point(field_mutable:card_v2.PayByRegisteredCardRequest.buyer_addr)
+  return _internal_mutable_buyer_addr();
 }
-inline const std::string& PayByRegisteredCardRequest::_internal_email() const {
-  return email_.Get();
+inline const std::string& PayByRegisteredCardRequest::_internal_buyer_addr() const {
+  return buyer_addr_.Get();
 }
-inline void PayByRegisteredCardRequest::_internal_set_email(const std::string& value) {
+inline void PayByRegisteredCardRequest::_internal_set_buyer_addr(const std::string& value) {
   
-  email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  buyer_addr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void PayByRegisteredCardRequest::set_email(std::string&& value) {
+inline void PayByRegisteredCardRequest::set_buyer_addr(std::string&& value) {
   
-  email_.Set(
+  buyer_addr_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:card_v2.PayByRegisteredCardRequest.email)
+  // @@protoc_insertion_point(field_set_rvalue:card_v2.PayByRegisteredCardRequest.buyer_addr)
 }
-inline void PayByRegisteredCardRequest::set_email(const char* value) {
+inline void PayByRegisteredCardRequest::set_buyer_addr(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+  buyer_addr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:card_v2.PayByRegisteredCardRequest.email)
+  // @@protoc_insertion_point(field_set_char:card_v2.PayByRegisteredCardRequest.buyer_addr)
 }
-inline void PayByRegisteredCardRequest::set_email(const char* value,
+inline void PayByRegisteredCardRequest::set_buyer_addr(const char* value,
     size_t size) {
   
-  email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+  buyer_addr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:card_v2.PayByRegisteredCardRequest.email)
+  // @@protoc_insertion_point(field_set_pointer:card_v2.PayByRegisteredCardRequest.buyer_addr)
 }
-inline std::string* PayByRegisteredCardRequest::_internal_mutable_email() {
+inline std::string* PayByRegisteredCardRequest::_internal_mutable_buyer_addr() {
   
-  return email_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  return buyer_addr_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* PayByRegisteredCardRequest::release_email() {
-  // @@protoc_insertion_point(field_release:card_v2.PayByRegisteredCardRequest.email)
-  return email_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* PayByRegisteredCardRequest::release_buyer_addr() {
+  // @@protoc_insertion_point(field_release:card_v2.PayByRegisteredCardRequest.buyer_addr)
+  return buyer_addr_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void PayByRegisteredCardRequest::set_allocated_email(std::string* email) {
-  if (email != nullptr) {
+inline void PayByRegisteredCardRequest::set_allocated_buyer_addr(std::string* buyer_addr) {
+  if (buyer_addr != nullptr) {
     
   } else {
     
   }
-  email_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), email,
+  buyer_addr_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), buyer_addr,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:card_v2.PayByRegisteredCardRequest.email)
+  // @@protoc_insertion_point(field_set_allocated:card_v2.PayByRegisteredCardRequest.buyer_addr)
+}
+
+// string buyer_email = 11;
+inline void PayByRegisteredCardRequest::clear_buyer_email() {
+  buyer_email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& PayByRegisteredCardRequest::buyer_email() const {
+  // @@protoc_insertion_point(field_get:card_v2.PayByRegisteredCardRequest.buyer_email)
+  return _internal_buyer_email();
+}
+inline void PayByRegisteredCardRequest::set_buyer_email(const std::string& value) {
+  _internal_set_buyer_email(value);
+  // @@protoc_insertion_point(field_set:card_v2.PayByRegisteredCardRequest.buyer_email)
+}
+inline std::string* PayByRegisteredCardRequest::mutable_buyer_email() {
+  // @@protoc_insertion_point(field_mutable:card_v2.PayByRegisteredCardRequest.buyer_email)
+  return _internal_mutable_buyer_email();
+}
+inline const std::string& PayByRegisteredCardRequest::_internal_buyer_email() const {
+  return buyer_email_.Get();
+}
+inline void PayByRegisteredCardRequest::_internal_set_buyer_email(const std::string& value) {
+  
+  buyer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void PayByRegisteredCardRequest::set_buyer_email(std::string&& value) {
+  
+  buyer_email_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:card_v2.PayByRegisteredCardRequest.buyer_email)
+}
+inline void PayByRegisteredCardRequest::set_buyer_email(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  buyer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:card_v2.PayByRegisteredCardRequest.buyer_email)
+}
+inline void PayByRegisteredCardRequest::set_buyer_email(const char* value,
+    size_t size) {
+  
+  buyer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:card_v2.PayByRegisteredCardRequest.buyer_email)
+}
+inline std::string* PayByRegisteredCardRequest::_internal_mutable_buyer_email() {
+  
+  return buyer_email_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* PayByRegisteredCardRequest::release_buyer_email() {
+  // @@protoc_insertion_point(field_release:card_v2.PayByRegisteredCardRequest.buyer_email)
+  return buyer_email_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void PayByRegisteredCardRequest::set_allocated_buyer_email(std::string* buyer_email) {
+  if (buyer_email != nullptr) {
+    
+  } else {
+    
+  }
+  buyer_email_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), buyer_email,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:card_v2.PayByRegisteredCardRequest.buyer_email)
+}
+
+// string buyer_name = 12;
+inline void PayByRegisteredCardRequest::clear_buyer_name() {
+  buyer_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& PayByRegisteredCardRequest::buyer_name() const {
+  // @@protoc_insertion_point(field_get:card_v2.PayByRegisteredCardRequest.buyer_name)
+  return _internal_buyer_name();
+}
+inline void PayByRegisteredCardRequest::set_buyer_name(const std::string& value) {
+  _internal_set_buyer_name(value);
+  // @@protoc_insertion_point(field_set:card_v2.PayByRegisteredCardRequest.buyer_name)
+}
+inline std::string* PayByRegisteredCardRequest::mutable_buyer_name() {
+  // @@protoc_insertion_point(field_mutable:card_v2.PayByRegisteredCardRequest.buyer_name)
+  return _internal_mutable_buyer_name();
+}
+inline const std::string& PayByRegisteredCardRequest::_internal_buyer_name() const {
+  return buyer_name_.Get();
+}
+inline void PayByRegisteredCardRequest::_internal_set_buyer_name(const std::string& value) {
+  
+  buyer_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void PayByRegisteredCardRequest::set_buyer_name(std::string&& value) {
+  
+  buyer_name_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:card_v2.PayByRegisteredCardRequest.buyer_name)
+}
+inline void PayByRegisteredCardRequest::set_buyer_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  buyer_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:card_v2.PayByRegisteredCardRequest.buyer_name)
+}
+inline void PayByRegisteredCardRequest::set_buyer_name(const char* value,
+    size_t size) {
+  
+  buyer_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:card_v2.PayByRegisteredCardRequest.buyer_name)
+}
+inline std::string* PayByRegisteredCardRequest::_internal_mutable_buyer_name() {
+  
+  return buyer_name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* PayByRegisteredCardRequest::release_buyer_name() {
+  // @@protoc_insertion_point(field_release:card_v2.PayByRegisteredCardRequest.buyer_name)
+  return buyer_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void PayByRegisteredCardRequest::set_allocated_buyer_name(std::string* buyer_name) {
+  if (buyer_name != nullptr) {
+    
+  } else {
+    
+  }
+  buyer_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), buyer_name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:card_v2.PayByRegisteredCardRequest.buyer_name)
+}
+
+// string buyer_postcode = 13;
+inline void PayByRegisteredCardRequest::clear_buyer_postcode() {
+  buyer_postcode_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& PayByRegisteredCardRequest::buyer_postcode() const {
+  // @@protoc_insertion_point(field_get:card_v2.PayByRegisteredCardRequest.buyer_postcode)
+  return _internal_buyer_postcode();
+}
+inline void PayByRegisteredCardRequest::set_buyer_postcode(const std::string& value) {
+  _internal_set_buyer_postcode(value);
+  // @@protoc_insertion_point(field_set:card_v2.PayByRegisteredCardRequest.buyer_postcode)
+}
+inline std::string* PayByRegisteredCardRequest::mutable_buyer_postcode() {
+  // @@protoc_insertion_point(field_mutable:card_v2.PayByRegisteredCardRequest.buyer_postcode)
+  return _internal_mutable_buyer_postcode();
+}
+inline const std::string& PayByRegisteredCardRequest::_internal_buyer_postcode() const {
+  return buyer_postcode_.Get();
+}
+inline void PayByRegisteredCardRequest::_internal_set_buyer_postcode(const std::string& value) {
+  
+  buyer_postcode_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void PayByRegisteredCardRequest::set_buyer_postcode(std::string&& value) {
+  
+  buyer_postcode_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:card_v2.PayByRegisteredCardRequest.buyer_postcode)
+}
+inline void PayByRegisteredCardRequest::set_buyer_postcode(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  buyer_postcode_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:card_v2.PayByRegisteredCardRequest.buyer_postcode)
+}
+inline void PayByRegisteredCardRequest::set_buyer_postcode(const char* value,
+    size_t size) {
+  
+  buyer_postcode_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:card_v2.PayByRegisteredCardRequest.buyer_postcode)
+}
+inline std::string* PayByRegisteredCardRequest::_internal_mutable_buyer_postcode() {
+  
+  return buyer_postcode_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* PayByRegisteredCardRequest::release_buyer_postcode() {
+  // @@protoc_insertion_point(field_release:card_v2.PayByRegisteredCardRequest.buyer_postcode)
+  return buyer_postcode_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void PayByRegisteredCardRequest::set_allocated_buyer_postcode(std::string* buyer_postcode) {
+  if (buyer_postcode != nullptr) {
+    
+  } else {
+    
+  }
+  buyer_postcode_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), buyer_postcode,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:card_v2.PayByRegisteredCardRequest.buyer_postcode)
+}
+
+// string buyer_tel = 14;
+inline void PayByRegisteredCardRequest::clear_buyer_tel() {
+  buyer_tel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& PayByRegisteredCardRequest::buyer_tel() const {
+  // @@protoc_insertion_point(field_get:card_v2.PayByRegisteredCardRequest.buyer_tel)
+  return _internal_buyer_tel();
+}
+inline void PayByRegisteredCardRequest::set_buyer_tel(const std::string& value) {
+  _internal_set_buyer_tel(value);
+  // @@protoc_insertion_point(field_set:card_v2.PayByRegisteredCardRequest.buyer_tel)
+}
+inline std::string* PayByRegisteredCardRequest::mutable_buyer_tel() {
+  // @@protoc_insertion_point(field_mutable:card_v2.PayByRegisteredCardRequest.buyer_tel)
+  return _internal_mutable_buyer_tel();
+}
+inline const std::string& PayByRegisteredCardRequest::_internal_buyer_tel() const {
+  return buyer_tel_.Get();
+}
+inline void PayByRegisteredCardRequest::_internal_set_buyer_tel(const std::string& value) {
+  
+  buyer_tel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void PayByRegisteredCardRequest::set_buyer_tel(std::string&& value) {
+  
+  buyer_tel_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:card_v2.PayByRegisteredCardRequest.buyer_tel)
+}
+inline void PayByRegisteredCardRequest::set_buyer_tel(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  buyer_tel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:card_v2.PayByRegisteredCardRequest.buyer_tel)
+}
+inline void PayByRegisteredCardRequest::set_buyer_tel(const char* value,
+    size_t size) {
+  
+  buyer_tel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:card_v2.PayByRegisteredCardRequest.buyer_tel)
+}
+inline std::string* PayByRegisteredCardRequest::_internal_mutable_buyer_tel() {
+  
+  return buyer_tel_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* PayByRegisteredCardRequest::release_buyer_tel() {
+  // @@protoc_insertion_point(field_release:card_v2.PayByRegisteredCardRequest.buyer_tel)
+  return buyer_tel_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void PayByRegisteredCardRequest::set_allocated_buyer_tel(std::string* buyer_tel) {
+  if (buyer_tel != nullptr) {
+    
+  } else {
+    
+  }
+  buyer_tel_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), buyer_tel,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:card_v2.PayByRegisteredCardRequest.buyer_tel)
 }
 
 // -------------------------------------------------------------------

@@ -112,7 +112,11 @@ const PayByRegisteredCardRequest$json = const {
     const {'1': 'interest_free_by_merchant', '3': 7, '4': 1, '5': 8, '10': 'interestFreeByMerchant'},
     const {'1': 'custom_data', '3': 8, '4': 1, '5': 9, '10': 'customData'},
     const {'1': 'callback_url', '3': 9, '4': 1, '5': 9, '10': 'callbackUrl'},
-    const {'1': 'email', '3': 10, '4': 1, '5': 9, '10': 'email'},
+    const {'1': 'buyer_addr', '3': 10, '4': 1, '5': 9, '10': 'buyerAddr'},
+    const {'1': 'buyer_email', '3': 11, '4': 1, '5': 9, '10': 'buyerEmail'},
+    const {'1': 'buyer_name', '3': 12, '4': 1, '5': 9, '10': 'buyerName'},
+    const {'1': 'buyer_postcode', '3': 13, '4': 1, '5': 9, '10': 'buyerPostcode'},
+    const {'1': 'buyer_tel', '3': 14, '4': 1, '5': 9, '10': 'buyerTel'},
   ],
 };
 

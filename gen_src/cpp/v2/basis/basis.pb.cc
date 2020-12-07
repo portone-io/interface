@@ -89,8 +89,13 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_v2_2fbasis_2fbasis_2eproto::of
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, cancel_receipt_urls_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, cancelled_at_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, card_code_),
-  PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, card_name_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, bin_number_),
+  PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, card_name_),
+  PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, card_receipe_name_),
+  PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, card_owner_type_),
+  PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, card_brand_),
+  PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, card_credit_type_),
+  PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, card_number_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, card_installment_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, card_type_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, cash_receipt_issued_),
@@ -136,7 +141,7 @@ const char descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto[] PROTOBUF_SECTI
   "\n\024v2/basis/basis.proto\022\010basis_v2\"j\n\rCanc"
   "elHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001("
   "\t\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022"
-  "\023\n\013receipt_url\030\005 \001(\t\"\344\007\n\006UnitTx\022\016\n\006amoun"
+  "\023\n\013receipt_url\030\005 \001(\t\"\333\010\n\006UnitTx\022\016\n\006amoun"
   "t\030\001 \001(\005\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank_code\030"
   "\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_addr\030\005"
   " \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer_name\030"
@@ -145,25 +150,28 @@ const char descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto[] PROTOBUF_SECTI
   "l_history\030\013 \003(\0132\027.basis_v2.CancelHistory"
   "\022\025\n\rcancel_reason\030\014 \001(\t\022\033\n\023cancel_receip"
   "t_urls\030\r \003(\t\022\024\n\014cancelled_at\030\016 \001(\005\022\021\n\tca"
-  "rd_code\030\017 \001(\t\022\021\n\tcard_name\030\020 \001(\t\022\022\n\nbin_"
-  "number\030\021 \001(\t\022\030\n\020card_installment\030\022 \001(\005\022\021"
-  "\n\tcard_type\030\023 \001(\005\022\033\n\023cash_receipt_issued"
-  "\030\024 \001(\010\022\017\n\007channel\030\025 \001(\t\022\020\n\010currency\030\026 \001("
-  "\t\022\023\n\013custom_data\030\027 \001(\t\022\020\n\010card_uid\030\030 \001(\t"
-  "\022\032\n\022customer_uid_usage\030\031 \001(\t\022\016\n\006escrow\030\032"
-  " \001(\010\022\023\n\013fail_reason\030\033 \001(\t\022\021\n\tfailed_at\030\034"
-  " \001(\005\022\017\n\007imp_uid\030\035 \001(\t\022\024\n\014merchant_uid\030\036 "
-  "\001(\t\022\022\n\norder_name\030\037 \001(\t\022\017\n\007paid_at\030  \001(\005"
-  "\022\022\n\npay_method\030! \001(\t\022\r\n\005pg_id\030\" \001(\t\022\023\n\013p"
-  "g_provider\030# \001(\t\022\016\n\006pg_tid\030$ \001(\t\022\023\n\013rece"
-  "ipt_url\030% \001(\t\022\022\n\nstarted_at\030& \001(\005\022\016\n\006sta"
-  "tus\030\' \001(\t\022\022\n\nuser_agent\030( \001(\t\022\022\n\nvbank_c"
-  "ode\030) \001(\t\022\022\n\nvbank_date\030* \001(\005\022\024\n\014vbank_h"
-  "older\030+ \001(\t\022\027\n\017vbank_issued_at\030, \001(\005\022\022\n\n"
-  "vbank_name\030- \001(\t\022\021\n\tvbank_num\030. \001(\t\022\026\n\016c"
-  "ustomer_email\030/ \001(\tB=Z0github.com/iampor"
-  "t/interface/gen_src/go/v2/basis\252\002\010V2.Bas"
-  "isb\006proto3"
+  "rd_code\030\017 \001(\t\022\022\n\nbin_number\030\020 \001(\t\022\021\n\tcar"
+  "d_name\030\021 \001(\t\022\031\n\021card_receipe_name\030\022 \001(\t\022"
+  "\027\n\017card_owner_type\030\023 \001(\t\022\022\n\ncard_brand\030\024"
+  " \001(\t\022\030\n\020card_credit_type\030\025 \001(\t\022\023\n\013card_n"
+  "umber\030\026 \001(\t\022\030\n\020card_installment\030\027 \001(\005\022\021\n"
+  "\tcard_type\030\030 \001(\005\022\033\n\023cash_receipt_issued\030"
+  "\031 \001(\010\022\017\n\007channel\030\032 \001(\t\022\020\n\010currency\030\033 \001(\t"
+  "\022\023\n\013custom_data\030\034 \001(\t\022\020\n\010card_uid\030\035 \001(\t\022"
+  "\032\n\022customer_uid_usage\030\036 \001(\t\022\016\n\006escrow\030\037 "
+  "\001(\010\022\023\n\013fail_reason\030  \001(\t\022\021\n\tfailed_at\030! "
+  "\001(\005\022\017\n\007imp_uid\030\" \001(\t\022\024\n\014merchant_uid\030# \001"
+  "(\t\022\022\n\norder_name\030$ \001(\t\022\017\n\007paid_at\030% \001(\005\022"
+  "\022\n\npay_method\030& \001(\t\022\r\n\005pg_id\030\' \001(\t\022\023\n\013pg"
+  "_provider\030( \001(\t\022\016\n\006pg_tid\030) \001(\t\022\023\n\013recei"
+  "pt_url\030* \001(\t\022\022\n\nstarted_at\030+ \001(\005\022\016\n\006stat"
+  "us\030, \001(\t\022\022\n\nuser_agent\030- \001(\t\022\022\n\nvbank_co"
+  "de\030. \001(\t\022\022\n\nvbank_date\030/ \001(\005\022\024\n\014vbank_ho"
+  "lder\0300 \001(\t\022\027\n\017vbank_issued_at\0301 \001(\005\022\022\n\nv"
+  "bank_name\0302 \001(\t\022\021\n\tvbank_num\0303 \001(\t\022\026\n\016cu"
+  "stomer_email\0304 \001(\tB=Z0github.com/iamport"
+  "/interface/gen_src/go/v2/basis\252\002\010V2.Basi"
+  "sb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v2_2fbasis_2fbasis_2eproto_deps[1] = {
 };
@@ -173,7 +181,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v2_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2fbasis_2fbasis_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2fbasis_2fbasis_2eproto = {
-  false, false, descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto, "v2/basis/basis.proto", 1210,
+  false, false, descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto, "v2/basis/basis.proto", 1329,
   &descriptor_table_v2_2fbasis_2fbasis_2eproto_once, descriptor_table_v2_2fbasis_2fbasis_2eproto_sccs, descriptor_table_v2_2fbasis_2fbasis_2eproto_deps, 2, 0,
   schemas, file_default_instances, TableStruct_v2_2fbasis_2fbasis_2eproto::offsets,
   file_level_metadata_v2_2fbasis_2fbasis_2eproto, 2, file_level_enum_descriptors_v2_2fbasis_2fbasis_2eproto, file_level_service_descriptors_v2_2fbasis_2fbasis_2eproto,
@@ -599,14 +607,39 @@ UnitTx::UnitTx(const UnitTx& from)
     card_code_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_code(),
       GetArena());
   }
+  bin_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_bin_number().empty()) {
+    bin_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_bin_number(),
+      GetArena());
+  }
   card_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_name().empty()) {
     card_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_name(),
       GetArena());
   }
-  bin_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_bin_number().empty()) {
-    bin_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_bin_number(),
+  card_receipe_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_card_receipe_name().empty()) {
+    card_receipe_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_receipe_name(),
+      GetArena());
+  }
+  card_owner_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_card_owner_type().empty()) {
+    card_owner_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_owner_type(),
+      GetArena());
+  }
+  card_brand_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_card_brand().empty()) {
+    card_brand_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_brand(),
+      GetArena());
+  }
+  card_credit_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_card_credit_type().empty()) {
+    card_credit_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_credit_type(),
+      GetArena());
+  }
+  card_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_card_number().empty()) {
+    card_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_number(),
       GetArena());
   }
   channel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -731,8 +764,13 @@ void UnitTx::SharedCtor() {
   buyer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   cancel_reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   card_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  card_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   bin_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  card_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  card_receipe_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  card_owner_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  card_brand_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  card_credit_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  card_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   channel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   currency_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   custom_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -776,8 +814,13 @@ void UnitTx::SharedDtor() {
   buyer_tel_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   cancel_reason_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   card_code_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  card_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   bin_number_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  card_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  card_receipe_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  card_owner_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  card_brand_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  card_credit_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  card_number_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   channel_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   currency_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   custom_data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -833,8 +876,13 @@ void UnitTx::Clear() {
   buyer_tel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   cancel_reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   card_code_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   bin_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_receipe_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_owner_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_brand_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_credit_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   channel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   currency_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   custom_data_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -1005,270 +1053,315 @@ const char* UnitTx::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string card_name = 16;
+      // string bin_number = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
-          auto str = _internal_mutable_card_name();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.card_name"));
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string bin_number = 17;
-      case 17:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 138)) {
           auto str = _internal_mutable_bin_number();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.bin_number"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 card_installment = 18;
+      // string card_name = 17;
+      case 17:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 138)) {
+          auto str = _internal_mutable_card_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.card_name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string card_receipe_name = 18;
       case 18:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 144)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 146)) {
+          auto str = _internal_mutable_card_receipe_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.card_receipe_name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string card_owner_type = 19;
+      case 19:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 154)) {
+          auto str = _internal_mutable_card_owner_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.card_owner_type"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string card_brand = 20;
+      case 20:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 162)) {
+          auto str = _internal_mutable_card_brand();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.card_brand"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string card_credit_type = 21;
+      case 21:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 170)) {
+          auto str = _internal_mutable_card_credit_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.card_credit_type"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string card_number = 22;
+      case 22:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 178)) {
+          auto str = _internal_mutable_card_number();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.card_number"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 card_installment = 23;
+      case 23:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 184)) {
           card_installment_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 card_type = 19;
-      case 19:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 152)) {
+      // int32 card_type = 24;
+      case 24:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 192)) {
           card_type_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool cash_receipt_issued = 20;
-      case 20:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 160)) {
+      // bool cash_receipt_issued = 25;
+      case 25:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 200)) {
           cash_receipt_issued_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string channel = 21;
-      case 21:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 170)) {
+      // string channel = 26;
+      case 26:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 210)) {
           auto str = _internal_mutable_channel();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.channel"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string currency = 22;
-      case 22:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 178)) {
+      // string currency = 27;
+      case 27:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 218)) {
           auto str = _internal_mutable_currency();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.currency"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string custom_data = 23;
-      case 23:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 186)) {
+      // string custom_data = 28;
+      case 28:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 226)) {
           auto str = _internal_mutable_custom_data();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.custom_data"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string card_uid = 24;
-      case 24:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 194)) {
+      // string card_uid = 29;
+      case 29:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 234)) {
           auto str = _internal_mutable_card_uid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.card_uid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string customer_uid_usage = 25;
-      case 25:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 202)) {
+      // string customer_uid_usage = 30;
+      case 30:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 242)) {
           auto str = _internal_mutable_customer_uid_usage();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.customer_uid_usage"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool escrow = 26;
-      case 26:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 208)) {
+      // bool escrow = 31;
+      case 31:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 248)) {
           escrow_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string fail_reason = 27;
-      case 27:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 218)) {
+      // string fail_reason = 32;
+      case 32:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 2)) {
           auto str = _internal_mutable_fail_reason();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.fail_reason"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 failed_at = 28;
-      case 28:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 224)) {
+      // int32 failed_at = 33;
+      case 33:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           failed_at_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string imp_uid = 29;
-      case 29:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 234)) {
+      // string imp_uid = 34;
+      case 34:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_imp_uid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.imp_uid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string merchant_uid = 30;
-      case 30:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 242)) {
+      // string merchant_uid = 35;
+      case 35:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_merchant_uid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.merchant_uid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string order_name = 31;
-      case 31:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 250)) {
+      // string order_name = 36;
+      case 36:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_order_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.order_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 paid_at = 32;
-      case 32:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 0)) {
+      // int32 paid_at = 37;
+      case 37:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
           paid_at_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string pay_method = 33;
-      case 33:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+      // string pay_method = 38;
+      case 38:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           auto str = _internal_mutable_pay_method();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.pay_method"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string pg_id = 34;
-      case 34:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+      // string pg_id = 39;
+      case 39:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
           auto str = _internal_mutable_pg_id();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.pg_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string pg_provider = 35;
-      case 35:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+      // string pg_provider = 40;
+      case 40:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
           auto str = _internal_mutable_pg_provider();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.pg_provider"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string pg_tid = 36;
-      case 36:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+      // string pg_tid = 41;
+      case 41:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
           auto str = _internal_mutable_pg_tid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.pg_tid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string receipt_url = 37;
-      case 37:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+      // string receipt_url = 42;
+      case 42:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
           auto str = _internal_mutable_receipt_url();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.receipt_url"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 started_at = 38;
-      case 38:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+      // int32 started_at = 43;
+      case 43:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 88)) {
           started_at_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string status = 39;
-      case 39:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+      // string status = 44;
+      case 44:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
           auto str = _internal_mutable_status();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.status"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string user_agent = 40;
-      case 40:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+      // string user_agent = 45;
+      case 45:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
           auto str = _internal_mutable_user_agent();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.user_agent"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string vbank_code = 41;
-      case 41:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+      // string vbank_code = 46;
+      case 46:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
           auto str = _internal_mutable_vbank_code();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.vbank_code"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 vbank_date = 42;
-      case 42:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 80)) {
+      // int32 vbank_date = 47;
+      case 47:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 120)) {
           vbank_date_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string vbank_holder = 43;
-      case 43:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+      // string vbank_holder = 48;
+      case 48:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
           auto str = _internal_mutable_vbank_holder();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.vbank_holder"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 vbank_issued_at = 44;
-      case 44:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 96)) {
+      // int32 vbank_issued_at = 49;
+      case 49:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 136)) {
           vbank_issued_at_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string vbank_name = 45;
-      case 45:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+      // string vbank_name = 50;
+      case 50:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 146)) {
           auto str = _internal_mutable_vbank_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.vbank_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string vbank_num = 46;
-      case 46:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
+      // string vbank_num = 51;
+      case 51:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 154)) {
           auto str = _internal_mutable_vbank_num();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.vbank_num"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string customer_email = 47;
-      case 47:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
+      // string customer_email = 52;
+      case 52:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 162)) {
           auto str = _internal_mutable_customer_email();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.customer_email"));
@@ -1435,288 +1528,338 @@ failure:
         15, this->_internal_card_code(), target);
   }
 
-  // string card_name = 16;
-  if (this->card_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_card_name().data(), static_cast<int>(this->_internal_card_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "basis_v2.UnitTx.card_name");
-    target = stream->WriteStringMaybeAliased(
-        16, this->_internal_card_name(), target);
-  }
-
-  // string bin_number = 17;
+  // string bin_number = 16;
   if (this->bin_number().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_bin_number().data(), static_cast<int>(this->_internal_bin_number().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.bin_number");
     target = stream->WriteStringMaybeAliased(
-        17, this->_internal_bin_number(), target);
+        16, this->_internal_bin_number(), target);
   }
 
-  // int32 card_installment = 18;
+  // string card_name = 17;
+  if (this->card_name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_card_name().data(), static_cast<int>(this->_internal_card_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "basis_v2.UnitTx.card_name");
+    target = stream->WriteStringMaybeAliased(
+        17, this->_internal_card_name(), target);
+  }
+
+  // string card_receipe_name = 18;
+  if (this->card_receipe_name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_card_receipe_name().data(), static_cast<int>(this->_internal_card_receipe_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "basis_v2.UnitTx.card_receipe_name");
+    target = stream->WriteStringMaybeAliased(
+        18, this->_internal_card_receipe_name(), target);
+  }
+
+  // string card_owner_type = 19;
+  if (this->card_owner_type().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_card_owner_type().data(), static_cast<int>(this->_internal_card_owner_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "basis_v2.UnitTx.card_owner_type");
+    target = stream->WriteStringMaybeAliased(
+        19, this->_internal_card_owner_type(), target);
+  }
+
+  // string card_brand = 20;
+  if (this->card_brand().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_card_brand().data(), static_cast<int>(this->_internal_card_brand().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "basis_v2.UnitTx.card_brand");
+    target = stream->WriteStringMaybeAliased(
+        20, this->_internal_card_brand(), target);
+  }
+
+  // string card_credit_type = 21;
+  if (this->card_credit_type().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_card_credit_type().data(), static_cast<int>(this->_internal_card_credit_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "basis_v2.UnitTx.card_credit_type");
+    target = stream->WriteStringMaybeAliased(
+        21, this->_internal_card_credit_type(), target);
+  }
+
+  // string card_number = 22;
+  if (this->card_number().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_card_number().data(), static_cast<int>(this->_internal_card_number().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "basis_v2.UnitTx.card_number");
+    target = stream->WriteStringMaybeAliased(
+        22, this->_internal_card_number(), target);
+  }
+
+  // int32 card_installment = 23;
   if (this->card_installment() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(18, this->_internal_card_installment(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(23, this->_internal_card_installment(), target);
   }
 
-  // int32 card_type = 19;
+  // int32 card_type = 24;
   if (this->card_type() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(19, this->_internal_card_type(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(24, this->_internal_card_type(), target);
   }
 
-  // bool cash_receipt_issued = 20;
+  // bool cash_receipt_issued = 25;
   if (this->cash_receipt_issued() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(20, this->_internal_cash_receipt_issued(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(25, this->_internal_cash_receipt_issued(), target);
   }
 
-  // string channel = 21;
+  // string channel = 26;
   if (this->channel().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_channel().data(), static_cast<int>(this->_internal_channel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.channel");
     target = stream->WriteStringMaybeAliased(
-        21, this->_internal_channel(), target);
+        26, this->_internal_channel(), target);
   }
 
-  // string currency = 22;
+  // string currency = 27;
   if (this->currency().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_currency().data(), static_cast<int>(this->_internal_currency().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.currency");
     target = stream->WriteStringMaybeAliased(
-        22, this->_internal_currency(), target);
+        27, this->_internal_currency(), target);
   }
 
-  // string custom_data = 23;
+  // string custom_data = 28;
   if (this->custom_data().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_custom_data().data(), static_cast<int>(this->_internal_custom_data().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.custom_data");
     target = stream->WriteStringMaybeAliased(
-        23, this->_internal_custom_data(), target);
+        28, this->_internal_custom_data(), target);
   }
 
-  // string card_uid = 24;
+  // string card_uid = 29;
   if (this->card_uid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_uid().data(), static_cast<int>(this->_internal_card_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.card_uid");
     target = stream->WriteStringMaybeAliased(
-        24, this->_internal_card_uid(), target);
+        29, this->_internal_card_uid(), target);
   }
 
-  // string customer_uid_usage = 25;
+  // string customer_uid_usage = 30;
   if (this->customer_uid_usage().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_uid_usage().data(), static_cast<int>(this->_internal_customer_uid_usage().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.customer_uid_usage");
     target = stream->WriteStringMaybeAliased(
-        25, this->_internal_customer_uid_usage(), target);
+        30, this->_internal_customer_uid_usage(), target);
   }
 
-  // bool escrow = 26;
+  // bool escrow = 31;
   if (this->escrow() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(26, this->_internal_escrow(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(31, this->_internal_escrow(), target);
   }
 
-  // string fail_reason = 27;
+  // string fail_reason = 32;
   if (this->fail_reason().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_fail_reason().data(), static_cast<int>(this->_internal_fail_reason().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.fail_reason");
     target = stream->WriteStringMaybeAliased(
-        27, this->_internal_fail_reason(), target);
+        32, this->_internal_fail_reason(), target);
   }
 
-  // int32 failed_at = 28;
+  // int32 failed_at = 33;
   if (this->failed_at() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(28, this->_internal_failed_at(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(33, this->_internal_failed_at(), target);
   }
 
-  // string imp_uid = 29;
+  // string imp_uid = 34;
   if (this->imp_uid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_imp_uid().data(), static_cast<int>(this->_internal_imp_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.imp_uid");
     target = stream->WriteStringMaybeAliased(
-        29, this->_internal_imp_uid(), target);
+        34, this->_internal_imp_uid(), target);
   }
 
-  // string merchant_uid = 30;
+  // string merchant_uid = 35;
   if (this->merchant_uid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_merchant_uid().data(), static_cast<int>(this->_internal_merchant_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.merchant_uid");
     target = stream->WriteStringMaybeAliased(
-        30, this->_internal_merchant_uid(), target);
+        35, this->_internal_merchant_uid(), target);
   }
 
-  // string order_name = 31;
+  // string order_name = 36;
   if (this->order_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_order_name().data(), static_cast<int>(this->_internal_order_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.order_name");
     target = stream->WriteStringMaybeAliased(
-        31, this->_internal_order_name(), target);
+        36, this->_internal_order_name(), target);
   }
 
-  // int32 paid_at = 32;
+  // int32 paid_at = 37;
   if (this->paid_at() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(32, this->_internal_paid_at(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(37, this->_internal_paid_at(), target);
   }
 
-  // string pay_method = 33;
+  // string pay_method = 38;
   if (this->pay_method().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pay_method().data(), static_cast<int>(this->_internal_pay_method().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.pay_method");
     target = stream->WriteStringMaybeAliased(
-        33, this->_internal_pay_method(), target);
+        38, this->_internal_pay_method(), target);
   }
 
-  // string pg_id = 34;
+  // string pg_id = 39;
   if (this->pg_id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg_id().data(), static_cast<int>(this->_internal_pg_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.pg_id");
     target = stream->WriteStringMaybeAliased(
-        34, this->_internal_pg_id(), target);
+        39, this->_internal_pg_id(), target);
   }
 
-  // string pg_provider = 35;
+  // string pg_provider = 40;
   if (this->pg_provider().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg_provider().data(), static_cast<int>(this->_internal_pg_provider().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.pg_provider");
     target = stream->WriteStringMaybeAliased(
-        35, this->_internal_pg_provider(), target);
+        40, this->_internal_pg_provider(), target);
   }
 
-  // string pg_tid = 36;
+  // string pg_tid = 41;
   if (this->pg_tid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg_tid().data(), static_cast<int>(this->_internal_pg_tid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.pg_tid");
     target = stream->WriteStringMaybeAliased(
-        36, this->_internal_pg_tid(), target);
+        41, this->_internal_pg_tid(), target);
   }
 
-  // string receipt_url = 37;
+  // string receipt_url = 42;
   if (this->receipt_url().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_receipt_url().data(), static_cast<int>(this->_internal_receipt_url().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.receipt_url");
     target = stream->WriteStringMaybeAliased(
-        37, this->_internal_receipt_url(), target);
+        42, this->_internal_receipt_url(), target);
   }
 
-  // int32 started_at = 38;
+  // int32 started_at = 43;
   if (this->started_at() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(38, this->_internal_started_at(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(43, this->_internal_started_at(), target);
   }
 
-  // string status = 39;
+  // string status = 44;
   if (this->status().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_status().data(), static_cast<int>(this->_internal_status().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.status");
     target = stream->WriteStringMaybeAliased(
-        39, this->_internal_status(), target);
+        44, this->_internal_status(), target);
   }
 
-  // string user_agent = 40;
+  // string user_agent = 45;
   if (this->user_agent().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_user_agent().data(), static_cast<int>(this->_internal_user_agent().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.user_agent");
     target = stream->WriteStringMaybeAliased(
-        40, this->_internal_user_agent(), target);
+        45, this->_internal_user_agent(), target);
   }
 
-  // string vbank_code = 41;
+  // string vbank_code = 46;
   if (this->vbank_code().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_vbank_code().data(), static_cast<int>(this->_internal_vbank_code().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.vbank_code");
     target = stream->WriteStringMaybeAliased(
-        41, this->_internal_vbank_code(), target);
+        46, this->_internal_vbank_code(), target);
   }
 
-  // int32 vbank_date = 42;
+  // int32 vbank_date = 47;
   if (this->vbank_date() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(42, this->_internal_vbank_date(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(47, this->_internal_vbank_date(), target);
   }
 
-  // string vbank_holder = 43;
+  // string vbank_holder = 48;
   if (this->vbank_holder().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_vbank_holder().data(), static_cast<int>(this->_internal_vbank_holder().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.vbank_holder");
     target = stream->WriteStringMaybeAliased(
-        43, this->_internal_vbank_holder(), target);
+        48, this->_internal_vbank_holder(), target);
   }
 
-  // int32 vbank_issued_at = 44;
+  // int32 vbank_issued_at = 49;
   if (this->vbank_issued_at() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(44, this->_internal_vbank_issued_at(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(49, this->_internal_vbank_issued_at(), target);
   }
 
-  // string vbank_name = 45;
+  // string vbank_name = 50;
   if (this->vbank_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_vbank_name().data(), static_cast<int>(this->_internal_vbank_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.vbank_name");
     target = stream->WriteStringMaybeAliased(
-        45, this->_internal_vbank_name(), target);
+        50, this->_internal_vbank_name(), target);
   }
 
-  // string vbank_num = 46;
+  // string vbank_num = 51;
   if (this->vbank_num().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_vbank_num().data(), static_cast<int>(this->_internal_vbank_num().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.vbank_num");
     target = stream->WriteStringMaybeAliased(
-        46, this->_internal_vbank_num(), target);
+        51, this->_internal_vbank_num(), target);
   }
 
-  // string customer_email = 47;
+  // string customer_email = 52;
   if (this->customer_email().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_email().data(), static_cast<int>(this->_internal_customer_email().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.customer_email");
     target = stream->WriteStringMaybeAliased(
-        47, this->_internal_customer_email(), target);
+        52, this->_internal_customer_email(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1813,161 +1956,196 @@ size_t UnitTx::ByteSizeLong() const {
         this->_internal_card_code());
   }
 
-  // string card_name = 16;
-  if (this->card_name().size() > 0) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_card_name());
-  }
-
-  // string bin_number = 17;
+  // string bin_number = 16;
   if (this->bin_number().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_bin_number());
   }
 
-  // string channel = 21;
+  // string card_name = 17;
+  if (this->card_name().size() > 0) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_card_name());
+  }
+
+  // string card_receipe_name = 18;
+  if (this->card_receipe_name().size() > 0) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_card_receipe_name());
+  }
+
+  // string card_owner_type = 19;
+  if (this->card_owner_type().size() > 0) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_card_owner_type());
+  }
+
+  // string card_brand = 20;
+  if (this->card_brand().size() > 0) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_card_brand());
+  }
+
+  // string card_credit_type = 21;
+  if (this->card_credit_type().size() > 0) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_card_credit_type());
+  }
+
+  // string card_number = 22;
+  if (this->card_number().size() > 0) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_card_number());
+  }
+
+  // string channel = 26;
   if (this->channel().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_channel());
   }
 
-  // string currency = 22;
+  // string currency = 27;
   if (this->currency().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_currency());
   }
 
-  // string custom_data = 23;
+  // string custom_data = 28;
   if (this->custom_data().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_custom_data());
   }
 
-  // string card_uid = 24;
+  // string card_uid = 29;
   if (this->card_uid().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_uid());
   }
 
-  // string customer_uid_usage = 25;
+  // string customer_uid_usage = 30;
   if (this->customer_uid_usage().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_uid_usage());
   }
 
-  // string fail_reason = 27;
+  // string fail_reason = 32;
   if (this->fail_reason().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_fail_reason());
   }
 
-  // string imp_uid = 29;
+  // string imp_uid = 34;
   if (this->imp_uid().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_imp_uid());
   }
 
-  // string merchant_uid = 30;
+  // string merchant_uid = 35;
   if (this->merchant_uid().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_merchant_uid());
   }
 
-  // string order_name = 31;
+  // string order_name = 36;
   if (this->order_name().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_order_name());
   }
 
-  // string pay_method = 33;
+  // string pay_method = 38;
   if (this->pay_method().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pay_method());
   }
 
-  // string pg_id = 34;
+  // string pg_id = 39;
   if (this->pg_id().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pg_id());
   }
 
-  // string pg_provider = 35;
+  // string pg_provider = 40;
   if (this->pg_provider().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pg_provider());
   }
 
-  // string pg_tid = 36;
+  // string pg_tid = 41;
   if (this->pg_tid().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pg_tid());
   }
 
-  // string receipt_url = 37;
+  // string receipt_url = 42;
   if (this->receipt_url().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_receipt_url());
   }
 
-  // string status = 39;
+  // string status = 44;
   if (this->status().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_status());
   }
 
-  // string user_agent = 40;
+  // string user_agent = 45;
   if (this->user_agent().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_user_agent());
   }
 
-  // string vbank_code = 41;
+  // string vbank_code = 46;
   if (this->vbank_code().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_vbank_code());
   }
 
-  // string vbank_holder = 43;
+  // string vbank_holder = 48;
   if (this->vbank_holder().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_vbank_holder());
   }
 
-  // string vbank_name = 45;
+  // string vbank_name = 50;
   if (this->vbank_name().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_vbank_name());
   }
 
-  // string vbank_num = 46;
+  // string vbank_num = 51;
   if (this->vbank_num().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_vbank_num());
   }
 
-  // string customer_email = 47;
+  // string customer_email = 52;
   if (this->customer_email().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -2002,59 +2180,59 @@ size_t UnitTx::ByteSizeLong() const {
         this->_internal_cancelled_at());
   }
 
-  // int32 card_installment = 18;
+  // int32 card_installment = 23;
   if (this->card_installment() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_card_installment());
   }
 
-  // int32 card_type = 19;
+  // int32 card_type = 24;
   if (this->card_type() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_card_type());
   }
 
-  // bool cash_receipt_issued = 20;
+  // bool cash_receipt_issued = 25;
   if (this->cash_receipt_issued() != 0) {
     total_size += 2 + 1;
   }
 
-  // bool escrow = 26;
+  // bool escrow = 31;
   if (this->escrow() != 0) {
     total_size += 2 + 1;
   }
 
-  // int32 failed_at = 28;
+  // int32 failed_at = 33;
   if (this->failed_at() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_failed_at());
   }
 
-  // int32 paid_at = 32;
+  // int32 paid_at = 37;
   if (this->paid_at() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_paid_at());
   }
 
-  // int32 started_at = 38;
+  // int32 started_at = 43;
   if (this->started_at() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_started_at());
   }
 
-  // int32 vbank_date = 42;
+  // int32 vbank_date = 47;
   if (this->vbank_date() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_vbank_date());
   }
 
-  // int32 vbank_issued_at = 44;
+  // int32 vbank_issued_at = 49;
   if (this->vbank_issued_at() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
@@ -2121,11 +2299,26 @@ void UnitTx::MergeFrom(const UnitTx& from) {
   if (from.card_code().size() > 0) {
     _internal_set_card_code(from._internal_card_code());
   }
+  if (from.bin_number().size() > 0) {
+    _internal_set_bin_number(from._internal_bin_number());
+  }
   if (from.card_name().size() > 0) {
     _internal_set_card_name(from._internal_card_name());
   }
-  if (from.bin_number().size() > 0) {
-    _internal_set_bin_number(from._internal_bin_number());
+  if (from.card_receipe_name().size() > 0) {
+    _internal_set_card_receipe_name(from._internal_card_receipe_name());
+  }
+  if (from.card_owner_type().size() > 0) {
+    _internal_set_card_owner_type(from._internal_card_owner_type());
+  }
+  if (from.card_brand().size() > 0) {
+    _internal_set_card_brand(from._internal_card_brand());
+  }
+  if (from.card_credit_type().size() > 0) {
+    _internal_set_card_credit_type(from._internal_card_credit_type());
+  }
+  if (from.card_number().size() > 0) {
+    _internal_set_card_number(from._internal_card_number());
   }
   if (from.channel().size() > 0) {
     _internal_set_channel(from._internal_channel());
@@ -2263,8 +2456,13 @@ void UnitTx::InternalSwap(UnitTx* other) {
   buyer_tel_.Swap(&other->buyer_tel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   cancel_reason_.Swap(&other->cancel_reason_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   card_code_.Swap(&other->card_code_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_name_.Swap(&other->card_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   bin_number_.Swap(&other->bin_number_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_name_.Swap(&other->card_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_receipe_name_.Swap(&other->card_receipe_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_owner_type_.Swap(&other->card_owner_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_brand_.Swap(&other->card_brand_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_credit_type_.Swap(&other->card_credit_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_number_.Swap(&other->card_number_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   channel_.Swap(&other->channel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   currency_.Swap(&other->currency_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   custom_data_.Swap(&other->custom_data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());

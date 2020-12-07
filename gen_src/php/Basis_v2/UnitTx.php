@@ -74,131 +74,153 @@ class UnitTx extends \Google\Protobuf\Internal\Message
      */
     protected $card_code = '';
     /**
-     * Generated from protobuf field <code>string card_name = 16;</code>
-     */
-    protected $card_name = '';
-    /**
-     * Generated from protobuf field <code>string bin_number = 17;</code>
+     * Generated from protobuf field <code>string bin_number = 16;</code>
      */
     protected $bin_number = '';
     /**
-     * Generated from protobuf field <code>int32 card_installment = 18;</code>
+     * card issuer
+     *
+     * Generated from protobuf field <code>string card_name = 17;</code>
+     */
+    protected $card_name = '';
+    /**
+     * Generated from protobuf field <code>string card_receipe_name = 18;</code>
+     */
+    protected $card_receipe_name = '';
+    /**
+     * Generated from protobuf field <code>string card_owner_type = 19;</code>
+     */
+    protected $card_owner_type = '';
+    /**
+     * Generated from protobuf field <code>string card_brand = 20;</code>
+     */
+    protected $card_brand = '';
+    /**
+     * Generated from protobuf field <code>string card_credit_type = 21;</code>
+     */
+    protected $card_credit_type = '';
+    /**
+     * Generated from protobuf field <code>string card_number = 22;</code>
+     */
+    protected $card_number = '';
+    /**
+     * Generated from protobuf field <code>int32 card_installment = 23;</code>
      */
     protected $card_installment = 0;
     /**
-     * Generated from protobuf field <code>int32 card_type = 19;</code>
+     * Generated from protobuf field <code>int32 card_type = 24;</code>
      */
     protected $card_type = 0;
     /**
-     * Generated from protobuf field <code>bool cash_receipt_issued = 20;</code>
+     * Generated from protobuf field <code>bool cash_receipt_issued = 25;</code>
      */
     protected $cash_receipt_issued = false;
     /**
-     * Generated from protobuf field <code>string channel = 21;</code>
+     * Generated from protobuf field <code>string channel = 26;</code>
      */
     protected $channel = '';
     /**
-     * Generated from protobuf field <code>string currency = 22;</code>
+     * Generated from protobuf field <code>string currency = 27;</code>
      */
     protected $currency = '';
     /**
-     * Generated from protobuf field <code>string custom_data = 23;</code>
+     * Generated from protobuf field <code>string custom_data = 28;</code>
      */
     protected $custom_data = '';
     /**
-     * Generated from protobuf field <code>string card_uid = 24;</code>
+     * Generated from protobuf field <code>string card_uid = 29;</code>
      */
     protected $card_uid = '';
     /**
-     * Generated from protobuf field <code>string customer_uid_usage = 25;</code>
+     * Generated from protobuf field <code>string customer_uid_usage = 30;</code>
      */
     protected $customer_uid_usage = '';
     /**
-     * Generated from protobuf field <code>bool escrow = 26;</code>
+     * Generated from protobuf field <code>bool escrow = 31;</code>
      */
     protected $escrow = false;
     /**
-     * Generated from protobuf field <code>string fail_reason = 27;</code>
+     * Generated from protobuf field <code>string fail_reason = 32;</code>
      */
     protected $fail_reason = '';
     /**
-     * Generated from protobuf field <code>int32 failed_at = 28;</code>
+     * Generated from protobuf field <code>int32 failed_at = 33;</code>
      */
     protected $failed_at = 0;
     /**
-     * Generated from protobuf field <code>string imp_uid = 29;</code>
+     * Generated from protobuf field <code>string imp_uid = 34;</code>
      */
     protected $imp_uid = '';
     /**
-     * Generated from protobuf field <code>string merchant_uid = 30;</code>
+     * Generated from protobuf field <code>string merchant_uid = 35;</code>
      */
     protected $merchant_uid = '';
     /**
-     * Generated from protobuf field <code>string order_name = 31;</code>
+     * Generated from protobuf field <code>string order_name = 36;</code>
      */
     protected $order_name = '';
     /**
-     * Generated from protobuf field <code>int32 paid_at = 32;</code>
+     * Generated from protobuf field <code>int32 paid_at = 37;</code>
      */
     protected $paid_at = 0;
     /**
-     * Generated from protobuf field <code>string pay_method = 33;</code>
+     * Generated from protobuf field <code>string pay_method = 38;</code>
      */
     protected $pay_method = '';
     /**
-     * Generated from protobuf field <code>string pg_id = 34;</code>
+     * Generated from protobuf field <code>string pg_id = 39;</code>
      */
     protected $pg_id = '';
     /**
-     * Generated from protobuf field <code>string pg_provider = 35;</code>
+     * Generated from protobuf field <code>string pg_provider = 40;</code>
      */
     protected $pg_provider = '';
     /**
-     * Generated from protobuf field <code>string pg_tid = 36;</code>
+     * Generated from protobuf field <code>string pg_tid = 41;</code>
      */
     protected $pg_tid = '';
     /**
-     * Generated from protobuf field <code>string receipt_url = 37;</code>
+     * Generated from protobuf field <code>string receipt_url = 42;</code>
      */
     protected $receipt_url = '';
     /**
-     * Generated from protobuf field <code>int32 started_at = 38;</code>
+     * Generated from protobuf field <code>int32 started_at = 43;</code>
      */
     protected $started_at = 0;
     /**
-     * Generated from protobuf field <code>string status = 39;</code>
+     * Generated from protobuf field <code>string status = 44;</code>
      */
     protected $status = '';
     /**
-     * Generated from protobuf field <code>string user_agent = 40;</code>
+     * Generated from protobuf field <code>string user_agent = 45;</code>
      */
     protected $user_agent = '';
     /**
-     * Generated from protobuf field <code>string vbank_code = 41;</code>
+     * Generated from protobuf field <code>string vbank_code = 46;</code>
      */
     protected $vbank_code = '';
     /**
-     * Generated from protobuf field <code>int32 vbank_date = 42;</code>
+     * Generated from protobuf field <code>int32 vbank_date = 47;</code>
      */
     protected $vbank_date = 0;
     /**
-     * Generated from protobuf field <code>string vbank_holder = 43;</code>
+     * Generated from protobuf field <code>string vbank_holder = 48;</code>
      */
     protected $vbank_holder = '';
     /**
-     * Generated from protobuf field <code>int32 vbank_issued_at = 44;</code>
+     * Generated from protobuf field <code>int32 vbank_issued_at = 49;</code>
      */
     protected $vbank_issued_at = 0;
     /**
-     * Generated from protobuf field <code>string vbank_name = 45;</code>
+     * Generated from protobuf field <code>string vbank_name = 50;</code>
      */
     protected $vbank_name = '';
     /**
-     * Generated from protobuf field <code>string vbank_num = 46;</code>
+     * Generated from protobuf field <code>string vbank_num = 51;</code>
      */
     protected $vbank_num = '';
     /**
-     * Generated from protobuf field <code>string customer_email = 47;</code>
+     * Generated from protobuf field <code>string customer_email = 52;</code>
      */
     protected $customer_email = '';
 
@@ -223,8 +245,14 @@ class UnitTx extends \Google\Protobuf\Internal\Message
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $cancel_receipt_urls
      *     @type int $cancelled_at
      *     @type string $card_code
-     *     @type string $card_name
      *     @type string $bin_number
+     *     @type string $card_name
+     *           card issuer
+     *     @type string $card_receipe_name
+     *     @type string $card_owner_type
+     *     @type string $card_brand
+     *     @type string $card_credit_type
+     *     @type string $card_number
      *     @type int $card_installment
      *     @type int $card_type
      *     @type bool $cash_receipt_issued
@@ -593,29 +621,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string card_name = 16;</code>
-     * @return string
-     */
-    public function getCardName()
-    {
-        return $this->card_name;
-    }
-
-    /**
-     * Generated from protobuf field <code>string card_name = 16;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setCardName($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->card_name = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string bin_number = 17;</code>
+     * Generated from protobuf field <code>string bin_number = 16;</code>
      * @return string
      */
     public function getBinNumber()
@@ -624,7 +630,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string bin_number = 17;</code>
+     * Generated from protobuf field <code>string bin_number = 16;</code>
      * @param string $var
      * @return $this
      */
@@ -637,7 +643,143 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 card_installment = 18;</code>
+     * card issuer
+     *
+     * Generated from protobuf field <code>string card_name = 17;</code>
+     * @return string
+     */
+    public function getCardName()
+    {
+        return $this->card_name;
+    }
+
+    /**
+     * card issuer
+     *
+     * Generated from protobuf field <code>string card_name = 17;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCardName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->card_name = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string card_receipe_name = 18;</code>
+     * @return string
+     */
+    public function getCardReceipeName()
+    {
+        return $this->card_receipe_name;
+    }
+
+    /**
+     * Generated from protobuf field <code>string card_receipe_name = 18;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCardReceipeName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->card_receipe_name = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string card_owner_type = 19;</code>
+     * @return string
+     */
+    public function getCardOwnerType()
+    {
+        return $this->card_owner_type;
+    }
+
+    /**
+     * Generated from protobuf field <code>string card_owner_type = 19;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCardOwnerType($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->card_owner_type = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string card_brand = 20;</code>
+     * @return string
+     */
+    public function getCardBrand()
+    {
+        return $this->card_brand;
+    }
+
+    /**
+     * Generated from protobuf field <code>string card_brand = 20;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCardBrand($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->card_brand = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string card_credit_type = 21;</code>
+     * @return string
+     */
+    public function getCardCreditType()
+    {
+        return $this->card_credit_type;
+    }
+
+    /**
+     * Generated from protobuf field <code>string card_credit_type = 21;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCardCreditType($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->card_credit_type = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string card_number = 22;</code>
+     * @return string
+     */
+    public function getCardNumber()
+    {
+        return $this->card_number;
+    }
+
+    /**
+     * Generated from protobuf field <code>string card_number = 22;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCardNumber($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->card_number = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 card_installment = 23;</code>
      * @return int
      */
     public function getCardInstallment()
@@ -646,7 +788,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 card_installment = 18;</code>
+     * Generated from protobuf field <code>int32 card_installment = 23;</code>
      * @param int $var
      * @return $this
      */
@@ -659,7 +801,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 card_type = 19;</code>
+     * Generated from protobuf field <code>int32 card_type = 24;</code>
      * @return int
      */
     public function getCardType()
@@ -668,7 +810,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 card_type = 19;</code>
+     * Generated from protobuf field <code>int32 card_type = 24;</code>
      * @param int $var
      * @return $this
      */
@@ -681,7 +823,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool cash_receipt_issued = 20;</code>
+     * Generated from protobuf field <code>bool cash_receipt_issued = 25;</code>
      * @return bool
      */
     public function getCashReceiptIssued()
@@ -690,7 +832,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool cash_receipt_issued = 20;</code>
+     * Generated from protobuf field <code>bool cash_receipt_issued = 25;</code>
      * @param bool $var
      * @return $this
      */
@@ -703,7 +845,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string channel = 21;</code>
+     * Generated from protobuf field <code>string channel = 26;</code>
      * @return string
      */
     public function getChannel()
@@ -712,7 +854,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string channel = 21;</code>
+     * Generated from protobuf field <code>string channel = 26;</code>
      * @param string $var
      * @return $this
      */
@@ -725,7 +867,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string currency = 22;</code>
+     * Generated from protobuf field <code>string currency = 27;</code>
      * @return string
      */
     public function getCurrency()
@@ -734,7 +876,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string currency = 22;</code>
+     * Generated from protobuf field <code>string currency = 27;</code>
      * @param string $var
      * @return $this
      */
@@ -747,7 +889,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string custom_data = 23;</code>
+     * Generated from protobuf field <code>string custom_data = 28;</code>
      * @return string
      */
     public function getCustomData()
@@ -756,7 +898,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string custom_data = 23;</code>
+     * Generated from protobuf field <code>string custom_data = 28;</code>
      * @param string $var
      * @return $this
      */
@@ -769,7 +911,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string card_uid = 24;</code>
+     * Generated from protobuf field <code>string card_uid = 29;</code>
      * @return string
      */
     public function getCardUid()
@@ -778,7 +920,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string card_uid = 24;</code>
+     * Generated from protobuf field <code>string card_uid = 29;</code>
      * @param string $var
      * @return $this
      */
@@ -791,7 +933,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_uid_usage = 25;</code>
+     * Generated from protobuf field <code>string customer_uid_usage = 30;</code>
      * @return string
      */
     public function getCustomerUidUsage()
@@ -800,7 +942,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_uid_usage = 25;</code>
+     * Generated from protobuf field <code>string customer_uid_usage = 30;</code>
      * @param string $var
      * @return $this
      */
@@ -813,7 +955,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool escrow = 26;</code>
+     * Generated from protobuf field <code>bool escrow = 31;</code>
      * @return bool
      */
     public function getEscrow()
@@ -822,7 +964,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool escrow = 26;</code>
+     * Generated from protobuf field <code>bool escrow = 31;</code>
      * @param bool $var
      * @return $this
      */
@@ -835,7 +977,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string fail_reason = 27;</code>
+     * Generated from protobuf field <code>string fail_reason = 32;</code>
      * @return string
      */
     public function getFailReason()
@@ -844,7 +986,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string fail_reason = 27;</code>
+     * Generated from protobuf field <code>string fail_reason = 32;</code>
      * @param string $var
      * @return $this
      */
@@ -857,7 +999,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 failed_at = 28;</code>
+     * Generated from protobuf field <code>int32 failed_at = 33;</code>
      * @return int
      */
     public function getFailedAt()
@@ -866,7 +1008,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 failed_at = 28;</code>
+     * Generated from protobuf field <code>int32 failed_at = 33;</code>
      * @param int $var
      * @return $this
      */
@@ -879,7 +1021,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string imp_uid = 29;</code>
+     * Generated from protobuf field <code>string imp_uid = 34;</code>
      * @return string
      */
     public function getImpUid()
@@ -888,7 +1030,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string imp_uid = 29;</code>
+     * Generated from protobuf field <code>string imp_uid = 34;</code>
      * @param string $var
      * @return $this
      */
@@ -901,7 +1043,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string merchant_uid = 30;</code>
+     * Generated from protobuf field <code>string merchant_uid = 35;</code>
      * @return string
      */
     public function getMerchantUid()
@@ -910,7 +1052,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string merchant_uid = 30;</code>
+     * Generated from protobuf field <code>string merchant_uid = 35;</code>
      * @param string $var
      * @return $this
      */
@@ -923,7 +1065,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string order_name = 31;</code>
+     * Generated from protobuf field <code>string order_name = 36;</code>
      * @return string
      */
     public function getOrderName()
@@ -932,7 +1074,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string order_name = 31;</code>
+     * Generated from protobuf field <code>string order_name = 36;</code>
      * @param string $var
      * @return $this
      */
@@ -945,7 +1087,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 paid_at = 32;</code>
+     * Generated from protobuf field <code>int32 paid_at = 37;</code>
      * @return int
      */
     public function getPaidAt()
@@ -954,7 +1096,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 paid_at = 32;</code>
+     * Generated from protobuf field <code>int32 paid_at = 37;</code>
      * @param int $var
      * @return $this
      */
@@ -967,7 +1109,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string pay_method = 33;</code>
+     * Generated from protobuf field <code>string pay_method = 38;</code>
      * @return string
      */
     public function getPayMethod()
@@ -976,7 +1118,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string pay_method = 33;</code>
+     * Generated from protobuf field <code>string pay_method = 38;</code>
      * @param string $var
      * @return $this
      */
@@ -989,7 +1131,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string pg_id = 34;</code>
+     * Generated from protobuf field <code>string pg_id = 39;</code>
      * @return string
      */
     public function getPgId()
@@ -998,7 +1140,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string pg_id = 34;</code>
+     * Generated from protobuf field <code>string pg_id = 39;</code>
      * @param string $var
      * @return $this
      */
@@ -1011,7 +1153,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string pg_provider = 35;</code>
+     * Generated from protobuf field <code>string pg_provider = 40;</code>
      * @return string
      */
     public function getPgProvider()
@@ -1020,7 +1162,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string pg_provider = 35;</code>
+     * Generated from protobuf field <code>string pg_provider = 40;</code>
      * @param string $var
      * @return $this
      */
@@ -1033,7 +1175,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string pg_tid = 36;</code>
+     * Generated from protobuf field <code>string pg_tid = 41;</code>
      * @return string
      */
     public function getPgTid()
@@ -1042,7 +1184,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string pg_tid = 36;</code>
+     * Generated from protobuf field <code>string pg_tid = 41;</code>
      * @param string $var
      * @return $this
      */
@@ -1055,7 +1197,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string receipt_url = 37;</code>
+     * Generated from protobuf field <code>string receipt_url = 42;</code>
      * @return string
      */
     public function getReceiptUrl()
@@ -1064,7 +1206,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string receipt_url = 37;</code>
+     * Generated from protobuf field <code>string receipt_url = 42;</code>
      * @param string $var
      * @return $this
      */
@@ -1077,7 +1219,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 started_at = 38;</code>
+     * Generated from protobuf field <code>int32 started_at = 43;</code>
      * @return int
      */
     public function getStartedAt()
@@ -1086,7 +1228,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 started_at = 38;</code>
+     * Generated from protobuf field <code>int32 started_at = 43;</code>
      * @param int $var
      * @return $this
      */
@@ -1099,7 +1241,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string status = 39;</code>
+     * Generated from protobuf field <code>string status = 44;</code>
      * @return string
      */
     public function getStatus()
@@ -1108,7 +1250,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string status = 39;</code>
+     * Generated from protobuf field <code>string status = 44;</code>
      * @param string $var
      * @return $this
      */
@@ -1121,7 +1263,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string user_agent = 40;</code>
+     * Generated from protobuf field <code>string user_agent = 45;</code>
      * @return string
      */
     public function getUserAgent()
@@ -1130,7 +1272,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string user_agent = 40;</code>
+     * Generated from protobuf field <code>string user_agent = 45;</code>
      * @param string $var
      * @return $this
      */
@@ -1143,7 +1285,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string vbank_code = 41;</code>
+     * Generated from protobuf field <code>string vbank_code = 46;</code>
      * @return string
      */
     public function getVbankCode()
@@ -1152,7 +1294,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string vbank_code = 41;</code>
+     * Generated from protobuf field <code>string vbank_code = 46;</code>
      * @param string $var
      * @return $this
      */
@@ -1165,7 +1307,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 vbank_date = 42;</code>
+     * Generated from protobuf field <code>int32 vbank_date = 47;</code>
      * @return int
      */
     public function getVbankDate()
@@ -1174,7 +1316,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 vbank_date = 42;</code>
+     * Generated from protobuf field <code>int32 vbank_date = 47;</code>
      * @param int $var
      * @return $this
      */
@@ -1187,7 +1329,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string vbank_holder = 43;</code>
+     * Generated from protobuf field <code>string vbank_holder = 48;</code>
      * @return string
      */
     public function getVbankHolder()
@@ -1196,7 +1338,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string vbank_holder = 43;</code>
+     * Generated from protobuf field <code>string vbank_holder = 48;</code>
      * @param string $var
      * @return $this
      */
@@ -1209,7 +1351,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 vbank_issued_at = 44;</code>
+     * Generated from protobuf field <code>int32 vbank_issued_at = 49;</code>
      * @return int
      */
     public function getVbankIssuedAt()
@@ -1218,7 +1360,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 vbank_issued_at = 44;</code>
+     * Generated from protobuf field <code>int32 vbank_issued_at = 49;</code>
      * @param int $var
      * @return $this
      */
@@ -1231,7 +1373,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string vbank_name = 45;</code>
+     * Generated from protobuf field <code>string vbank_name = 50;</code>
      * @return string
      */
     public function getVbankName()
@@ -1240,7 +1382,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string vbank_name = 45;</code>
+     * Generated from protobuf field <code>string vbank_name = 50;</code>
      * @param string $var
      * @return $this
      */
@@ -1253,7 +1395,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string vbank_num = 46;</code>
+     * Generated from protobuf field <code>string vbank_num = 51;</code>
      * @return string
      */
     public function getVbankNum()
@@ -1262,7 +1404,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string vbank_num = 46;</code>
+     * Generated from protobuf field <code>string vbank_num = 51;</code>
      * @param string $var
      * @return $this
      */
@@ -1275,7 +1417,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_email = 47;</code>
+     * Generated from protobuf field <code>string customer_email = 52;</code>
      * @return string
      */
     public function getCustomerEmail()
@@ -1284,7 +1426,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string customer_email = 47;</code>
+     * Generated from protobuf field <code>string customer_email = 52;</code>
      * @param string $var
      * @return $this
      */

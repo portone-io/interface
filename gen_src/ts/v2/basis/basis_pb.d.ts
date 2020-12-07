@@ -89,11 +89,26 @@ export class UnitTx extends jspb.Message {
   getCardCode(): string;
   setCardCode(value: string): void;
 
+  getBinNumber(): string;
+  setBinNumber(value: string): void;
+
   getCardName(): string;
   setCardName(value: string): void;
 
-  getBinNumber(): string;
-  setBinNumber(value: string): void;
+  getCardReceipeName(): string;
+  setCardReceipeName(value: string): void;
+
+  getCardOwnerType(): string;
+  setCardOwnerType(value: string): void;
+
+  getCardBrand(): string;
+  setCardBrand(value: string): void;
+
+  getCardCreditType(): string;
+  setCardCreditType(value: string): void;
+
+  getCardNumber(): string;
+  setCardNumber(value: string): void;
 
   getCardInstallment(): number;
   setCardInstallment(value: number): void;
@@ -212,8 +227,13 @@ export namespace UnitTx {
     cancelReceiptUrlsList: Array<string>,
     cancelledAt: number,
     cardCode: string,
-    cardName: string,
     binNumber: string,
+    cardName: string,
+    cardReceipeName: string,
+    cardOwnerType: string,
+    cardBrand: string,
+    cardCreditType: string,
+    cardNumber: string,
     cardInstallment: number,
     cardType: number,
     cashReceiptIssued: boolean,

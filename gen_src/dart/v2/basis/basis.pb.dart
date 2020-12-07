@@ -97,38 +97,43 @@ class UnitTx extends $pb.GeneratedMessage {
     ..pPS(13, 'cancelReceiptUrls')
     ..a<$core.int>(14, 'cancelledAt', $pb.PbFieldType.O3)
     ..aOS(15, 'cardCode')
-    ..aOS(16, 'cardName')
-    ..aOS(17, 'binNumber')
-    ..a<$core.int>(18, 'cardInstallment', $pb.PbFieldType.O3)
-    ..a<$core.int>(19, 'cardType', $pb.PbFieldType.O3)
-    ..aOB(20, 'cashReceiptIssued')
-    ..aOS(21, 'channel')
-    ..aOS(22, 'currency')
-    ..aOS(23, 'customData')
-    ..aOS(24, 'cardUid')
-    ..aOS(25, 'customerUidUsage')
-    ..aOB(26, 'escrow')
-    ..aOS(27, 'failReason')
-    ..a<$core.int>(28, 'failedAt', $pb.PbFieldType.O3)
-    ..aOS(29, 'impUid')
-    ..aOS(30, 'merchantUid')
-    ..aOS(31, 'orderName')
-    ..a<$core.int>(32, 'paidAt', $pb.PbFieldType.O3)
-    ..aOS(33, 'payMethod')
-    ..aOS(34, 'pgId')
-    ..aOS(35, 'pgProvider')
-    ..aOS(36, 'pgTid')
-    ..aOS(37, 'receiptUrl')
-    ..a<$core.int>(38, 'startedAt', $pb.PbFieldType.O3)
-    ..aOS(39, 'status')
-    ..aOS(40, 'userAgent')
-    ..aOS(41, 'vbankCode')
-    ..a<$core.int>(42, 'vbankDate', $pb.PbFieldType.O3)
-    ..aOS(43, 'vbankHolder')
-    ..a<$core.int>(44, 'vbankIssuedAt', $pb.PbFieldType.O3)
-    ..aOS(45, 'vbankName')
-    ..aOS(46, 'vbankNum')
-    ..aOS(47, 'customerEmail')
+    ..aOS(16, 'binNumber')
+    ..aOS(17, 'cardName')
+    ..aOS(18, 'cardReceipeName')
+    ..aOS(19, 'cardOwnerType')
+    ..aOS(20, 'cardBrand')
+    ..aOS(21, 'cardCreditType')
+    ..aOS(22, 'cardNumber')
+    ..a<$core.int>(23, 'cardInstallment', $pb.PbFieldType.O3)
+    ..a<$core.int>(24, 'cardType', $pb.PbFieldType.O3)
+    ..aOB(25, 'cashReceiptIssued')
+    ..aOS(26, 'channel')
+    ..aOS(27, 'currency')
+    ..aOS(28, 'customData')
+    ..aOS(29, 'cardUid')
+    ..aOS(30, 'customerUidUsage')
+    ..aOB(31, 'escrow')
+    ..aOS(32, 'failReason')
+    ..a<$core.int>(33, 'failedAt', $pb.PbFieldType.O3)
+    ..aOS(34, 'impUid')
+    ..aOS(35, 'merchantUid')
+    ..aOS(36, 'orderName')
+    ..a<$core.int>(37, 'paidAt', $pb.PbFieldType.O3)
+    ..aOS(38, 'payMethod')
+    ..aOS(39, 'pgId')
+    ..aOS(40, 'pgProvider')
+    ..aOS(41, 'pgTid')
+    ..aOS(42, 'receiptUrl')
+    ..a<$core.int>(43, 'startedAt', $pb.PbFieldType.O3)
+    ..aOS(44, 'status')
+    ..aOS(45, 'userAgent')
+    ..aOS(46, 'vbankCode')
+    ..a<$core.int>(47, 'vbankDate', $pb.PbFieldType.O3)
+    ..aOS(48, 'vbankHolder')
+    ..a<$core.int>(49, 'vbankIssuedAt', $pb.PbFieldType.O3)
+    ..aOS(50, 'vbankName')
+    ..aOS(51, 'vbankNum')
+    ..aOS(52, 'customerEmail')
     ..hasRequiredFields = false
   ;
 
@@ -271,291 +276,336 @@ class UnitTx extends $pb.GeneratedMessage {
   void clearCardCode() => clearField(15);
 
   @$pb.TagNumber(16)
-  $core.String get cardName => $_getSZ(15);
+  $core.String get binNumber => $_getSZ(15);
   @$pb.TagNumber(16)
-  set cardName($core.String v) { $_setString(15, v); }
+  set binNumber($core.String v) { $_setString(15, v); }
   @$pb.TagNumber(16)
-  $core.bool hasCardName() => $_has(15);
+  $core.bool hasBinNumber() => $_has(15);
   @$pb.TagNumber(16)
-  void clearCardName() => clearField(16);
+  void clearBinNumber() => clearField(16);
 
   @$pb.TagNumber(17)
-  $core.String get binNumber => $_getSZ(16);
+  $core.String get cardName => $_getSZ(16);
   @$pb.TagNumber(17)
-  set binNumber($core.String v) { $_setString(16, v); }
+  set cardName($core.String v) { $_setString(16, v); }
   @$pb.TagNumber(17)
-  $core.bool hasBinNumber() => $_has(16);
+  $core.bool hasCardName() => $_has(16);
   @$pb.TagNumber(17)
-  void clearBinNumber() => clearField(17);
+  void clearCardName() => clearField(17);
 
   @$pb.TagNumber(18)
-  $core.int get cardInstallment => $_getIZ(17);
+  $core.String get cardReceipeName => $_getSZ(17);
   @$pb.TagNumber(18)
-  set cardInstallment($core.int v) { $_setSignedInt32(17, v); }
+  set cardReceipeName($core.String v) { $_setString(17, v); }
   @$pb.TagNumber(18)
-  $core.bool hasCardInstallment() => $_has(17);
+  $core.bool hasCardReceipeName() => $_has(17);
   @$pb.TagNumber(18)
-  void clearCardInstallment() => clearField(18);
+  void clearCardReceipeName() => clearField(18);
 
   @$pb.TagNumber(19)
-  $core.int get cardType => $_getIZ(18);
+  $core.String get cardOwnerType => $_getSZ(18);
   @$pb.TagNumber(19)
-  set cardType($core.int v) { $_setSignedInt32(18, v); }
+  set cardOwnerType($core.String v) { $_setString(18, v); }
   @$pb.TagNumber(19)
-  $core.bool hasCardType() => $_has(18);
+  $core.bool hasCardOwnerType() => $_has(18);
   @$pb.TagNumber(19)
-  void clearCardType() => clearField(19);
+  void clearCardOwnerType() => clearField(19);
 
   @$pb.TagNumber(20)
-  $core.bool get cashReceiptIssued => $_getBF(19);
+  $core.String get cardBrand => $_getSZ(19);
   @$pb.TagNumber(20)
-  set cashReceiptIssued($core.bool v) { $_setBool(19, v); }
+  set cardBrand($core.String v) { $_setString(19, v); }
   @$pb.TagNumber(20)
-  $core.bool hasCashReceiptIssued() => $_has(19);
+  $core.bool hasCardBrand() => $_has(19);
   @$pb.TagNumber(20)
-  void clearCashReceiptIssued() => clearField(20);
+  void clearCardBrand() => clearField(20);
 
   @$pb.TagNumber(21)
-  $core.String get channel => $_getSZ(20);
+  $core.String get cardCreditType => $_getSZ(20);
   @$pb.TagNumber(21)
-  set channel($core.String v) { $_setString(20, v); }
+  set cardCreditType($core.String v) { $_setString(20, v); }
   @$pb.TagNumber(21)
-  $core.bool hasChannel() => $_has(20);
+  $core.bool hasCardCreditType() => $_has(20);
   @$pb.TagNumber(21)
-  void clearChannel() => clearField(21);
+  void clearCardCreditType() => clearField(21);
 
   @$pb.TagNumber(22)
-  $core.String get currency => $_getSZ(21);
+  $core.String get cardNumber => $_getSZ(21);
   @$pb.TagNumber(22)
-  set currency($core.String v) { $_setString(21, v); }
+  set cardNumber($core.String v) { $_setString(21, v); }
   @$pb.TagNumber(22)
-  $core.bool hasCurrency() => $_has(21);
+  $core.bool hasCardNumber() => $_has(21);
   @$pb.TagNumber(22)
-  void clearCurrency() => clearField(22);
+  void clearCardNumber() => clearField(22);
 
   @$pb.TagNumber(23)
-  $core.String get customData => $_getSZ(22);
+  $core.int get cardInstallment => $_getIZ(22);
   @$pb.TagNumber(23)
-  set customData($core.String v) { $_setString(22, v); }
+  set cardInstallment($core.int v) { $_setSignedInt32(22, v); }
   @$pb.TagNumber(23)
-  $core.bool hasCustomData() => $_has(22);
+  $core.bool hasCardInstallment() => $_has(22);
   @$pb.TagNumber(23)
-  void clearCustomData() => clearField(23);
+  void clearCardInstallment() => clearField(23);
 
   @$pb.TagNumber(24)
-  $core.String get cardUid => $_getSZ(23);
+  $core.int get cardType => $_getIZ(23);
   @$pb.TagNumber(24)
-  set cardUid($core.String v) { $_setString(23, v); }
+  set cardType($core.int v) { $_setSignedInt32(23, v); }
   @$pb.TagNumber(24)
-  $core.bool hasCardUid() => $_has(23);
+  $core.bool hasCardType() => $_has(23);
   @$pb.TagNumber(24)
-  void clearCardUid() => clearField(24);
+  void clearCardType() => clearField(24);
 
   @$pb.TagNumber(25)
-  $core.String get customerUidUsage => $_getSZ(24);
+  $core.bool get cashReceiptIssued => $_getBF(24);
   @$pb.TagNumber(25)
-  set customerUidUsage($core.String v) { $_setString(24, v); }
+  set cashReceiptIssued($core.bool v) { $_setBool(24, v); }
   @$pb.TagNumber(25)
-  $core.bool hasCustomerUidUsage() => $_has(24);
+  $core.bool hasCashReceiptIssued() => $_has(24);
   @$pb.TagNumber(25)
-  void clearCustomerUidUsage() => clearField(25);
+  void clearCashReceiptIssued() => clearField(25);
 
   @$pb.TagNumber(26)
-  $core.bool get escrow => $_getBF(25);
+  $core.String get channel => $_getSZ(25);
   @$pb.TagNumber(26)
-  set escrow($core.bool v) { $_setBool(25, v); }
+  set channel($core.String v) { $_setString(25, v); }
   @$pb.TagNumber(26)
-  $core.bool hasEscrow() => $_has(25);
+  $core.bool hasChannel() => $_has(25);
   @$pb.TagNumber(26)
-  void clearEscrow() => clearField(26);
+  void clearChannel() => clearField(26);
 
   @$pb.TagNumber(27)
-  $core.String get failReason => $_getSZ(26);
+  $core.String get currency => $_getSZ(26);
   @$pb.TagNumber(27)
-  set failReason($core.String v) { $_setString(26, v); }
+  set currency($core.String v) { $_setString(26, v); }
   @$pb.TagNumber(27)
-  $core.bool hasFailReason() => $_has(26);
+  $core.bool hasCurrency() => $_has(26);
   @$pb.TagNumber(27)
-  void clearFailReason() => clearField(27);
+  void clearCurrency() => clearField(27);
 
   @$pb.TagNumber(28)
-  $core.int get failedAt => $_getIZ(27);
+  $core.String get customData => $_getSZ(27);
   @$pb.TagNumber(28)
-  set failedAt($core.int v) { $_setSignedInt32(27, v); }
+  set customData($core.String v) { $_setString(27, v); }
   @$pb.TagNumber(28)
-  $core.bool hasFailedAt() => $_has(27);
+  $core.bool hasCustomData() => $_has(27);
   @$pb.TagNumber(28)
-  void clearFailedAt() => clearField(28);
+  void clearCustomData() => clearField(28);
 
   @$pb.TagNumber(29)
-  $core.String get impUid => $_getSZ(28);
+  $core.String get cardUid => $_getSZ(28);
   @$pb.TagNumber(29)
-  set impUid($core.String v) { $_setString(28, v); }
+  set cardUid($core.String v) { $_setString(28, v); }
   @$pb.TagNumber(29)
-  $core.bool hasImpUid() => $_has(28);
+  $core.bool hasCardUid() => $_has(28);
   @$pb.TagNumber(29)
-  void clearImpUid() => clearField(29);
+  void clearCardUid() => clearField(29);
 
   @$pb.TagNumber(30)
-  $core.String get merchantUid => $_getSZ(29);
+  $core.String get customerUidUsage => $_getSZ(29);
   @$pb.TagNumber(30)
-  set merchantUid($core.String v) { $_setString(29, v); }
+  set customerUidUsage($core.String v) { $_setString(29, v); }
   @$pb.TagNumber(30)
-  $core.bool hasMerchantUid() => $_has(29);
+  $core.bool hasCustomerUidUsage() => $_has(29);
   @$pb.TagNumber(30)
-  void clearMerchantUid() => clearField(30);
+  void clearCustomerUidUsage() => clearField(30);
 
   @$pb.TagNumber(31)
-  $core.String get orderName => $_getSZ(30);
+  $core.bool get escrow => $_getBF(30);
   @$pb.TagNumber(31)
-  set orderName($core.String v) { $_setString(30, v); }
+  set escrow($core.bool v) { $_setBool(30, v); }
   @$pb.TagNumber(31)
-  $core.bool hasOrderName() => $_has(30);
+  $core.bool hasEscrow() => $_has(30);
   @$pb.TagNumber(31)
-  void clearOrderName() => clearField(31);
+  void clearEscrow() => clearField(31);
 
   @$pb.TagNumber(32)
-  $core.int get paidAt => $_getIZ(31);
+  $core.String get failReason => $_getSZ(31);
   @$pb.TagNumber(32)
-  set paidAt($core.int v) { $_setSignedInt32(31, v); }
+  set failReason($core.String v) { $_setString(31, v); }
   @$pb.TagNumber(32)
-  $core.bool hasPaidAt() => $_has(31);
+  $core.bool hasFailReason() => $_has(31);
   @$pb.TagNumber(32)
-  void clearPaidAt() => clearField(32);
+  void clearFailReason() => clearField(32);
 
   @$pb.TagNumber(33)
-  $core.String get payMethod => $_getSZ(32);
+  $core.int get failedAt => $_getIZ(32);
   @$pb.TagNumber(33)
-  set payMethod($core.String v) { $_setString(32, v); }
+  set failedAt($core.int v) { $_setSignedInt32(32, v); }
   @$pb.TagNumber(33)
-  $core.bool hasPayMethod() => $_has(32);
+  $core.bool hasFailedAt() => $_has(32);
   @$pb.TagNumber(33)
-  void clearPayMethod() => clearField(33);
+  void clearFailedAt() => clearField(33);
 
   @$pb.TagNumber(34)
-  $core.String get pgId => $_getSZ(33);
+  $core.String get impUid => $_getSZ(33);
   @$pb.TagNumber(34)
-  set pgId($core.String v) { $_setString(33, v); }
+  set impUid($core.String v) { $_setString(33, v); }
   @$pb.TagNumber(34)
-  $core.bool hasPgId() => $_has(33);
+  $core.bool hasImpUid() => $_has(33);
   @$pb.TagNumber(34)
-  void clearPgId() => clearField(34);
+  void clearImpUid() => clearField(34);
 
   @$pb.TagNumber(35)
-  $core.String get pgProvider => $_getSZ(34);
+  $core.String get merchantUid => $_getSZ(34);
   @$pb.TagNumber(35)
-  set pgProvider($core.String v) { $_setString(34, v); }
+  set merchantUid($core.String v) { $_setString(34, v); }
   @$pb.TagNumber(35)
-  $core.bool hasPgProvider() => $_has(34);
+  $core.bool hasMerchantUid() => $_has(34);
   @$pb.TagNumber(35)
-  void clearPgProvider() => clearField(35);
+  void clearMerchantUid() => clearField(35);
 
   @$pb.TagNumber(36)
-  $core.String get pgTid => $_getSZ(35);
+  $core.String get orderName => $_getSZ(35);
   @$pb.TagNumber(36)
-  set pgTid($core.String v) { $_setString(35, v); }
+  set orderName($core.String v) { $_setString(35, v); }
   @$pb.TagNumber(36)
-  $core.bool hasPgTid() => $_has(35);
+  $core.bool hasOrderName() => $_has(35);
   @$pb.TagNumber(36)
-  void clearPgTid() => clearField(36);
+  void clearOrderName() => clearField(36);
 
   @$pb.TagNumber(37)
-  $core.String get receiptUrl => $_getSZ(36);
+  $core.int get paidAt => $_getIZ(36);
   @$pb.TagNumber(37)
-  set receiptUrl($core.String v) { $_setString(36, v); }
+  set paidAt($core.int v) { $_setSignedInt32(36, v); }
   @$pb.TagNumber(37)
-  $core.bool hasReceiptUrl() => $_has(36);
+  $core.bool hasPaidAt() => $_has(36);
   @$pb.TagNumber(37)
-  void clearReceiptUrl() => clearField(37);
+  void clearPaidAt() => clearField(37);
 
   @$pb.TagNumber(38)
-  $core.int get startedAt => $_getIZ(37);
+  $core.String get payMethod => $_getSZ(37);
   @$pb.TagNumber(38)
-  set startedAt($core.int v) { $_setSignedInt32(37, v); }
+  set payMethod($core.String v) { $_setString(37, v); }
   @$pb.TagNumber(38)
-  $core.bool hasStartedAt() => $_has(37);
+  $core.bool hasPayMethod() => $_has(37);
   @$pb.TagNumber(38)
-  void clearStartedAt() => clearField(38);
+  void clearPayMethod() => clearField(38);
 
   @$pb.TagNumber(39)
-  $core.String get status => $_getSZ(38);
+  $core.String get pgId => $_getSZ(38);
   @$pb.TagNumber(39)
-  set status($core.String v) { $_setString(38, v); }
+  set pgId($core.String v) { $_setString(38, v); }
   @$pb.TagNumber(39)
-  $core.bool hasStatus() => $_has(38);
+  $core.bool hasPgId() => $_has(38);
   @$pb.TagNumber(39)
-  void clearStatus() => clearField(39);
+  void clearPgId() => clearField(39);
 
   @$pb.TagNumber(40)
-  $core.String get userAgent => $_getSZ(39);
+  $core.String get pgProvider => $_getSZ(39);
   @$pb.TagNumber(40)
-  set userAgent($core.String v) { $_setString(39, v); }
+  set pgProvider($core.String v) { $_setString(39, v); }
   @$pb.TagNumber(40)
-  $core.bool hasUserAgent() => $_has(39);
+  $core.bool hasPgProvider() => $_has(39);
   @$pb.TagNumber(40)
-  void clearUserAgent() => clearField(40);
+  void clearPgProvider() => clearField(40);
 
   @$pb.TagNumber(41)
-  $core.String get vbankCode => $_getSZ(40);
+  $core.String get pgTid => $_getSZ(40);
   @$pb.TagNumber(41)
-  set vbankCode($core.String v) { $_setString(40, v); }
+  set pgTid($core.String v) { $_setString(40, v); }
   @$pb.TagNumber(41)
-  $core.bool hasVbankCode() => $_has(40);
+  $core.bool hasPgTid() => $_has(40);
   @$pb.TagNumber(41)
-  void clearVbankCode() => clearField(41);
+  void clearPgTid() => clearField(41);
 
   @$pb.TagNumber(42)
-  $core.int get vbankDate => $_getIZ(41);
+  $core.String get receiptUrl => $_getSZ(41);
   @$pb.TagNumber(42)
-  set vbankDate($core.int v) { $_setSignedInt32(41, v); }
+  set receiptUrl($core.String v) { $_setString(41, v); }
   @$pb.TagNumber(42)
-  $core.bool hasVbankDate() => $_has(41);
+  $core.bool hasReceiptUrl() => $_has(41);
   @$pb.TagNumber(42)
-  void clearVbankDate() => clearField(42);
+  void clearReceiptUrl() => clearField(42);
 
   @$pb.TagNumber(43)
-  $core.String get vbankHolder => $_getSZ(42);
+  $core.int get startedAt => $_getIZ(42);
   @$pb.TagNumber(43)
-  set vbankHolder($core.String v) { $_setString(42, v); }
+  set startedAt($core.int v) { $_setSignedInt32(42, v); }
   @$pb.TagNumber(43)
-  $core.bool hasVbankHolder() => $_has(42);
+  $core.bool hasStartedAt() => $_has(42);
   @$pb.TagNumber(43)
-  void clearVbankHolder() => clearField(43);
+  void clearStartedAt() => clearField(43);
 
   @$pb.TagNumber(44)
-  $core.int get vbankIssuedAt => $_getIZ(43);
+  $core.String get status => $_getSZ(43);
   @$pb.TagNumber(44)
-  set vbankIssuedAt($core.int v) { $_setSignedInt32(43, v); }
+  set status($core.String v) { $_setString(43, v); }
   @$pb.TagNumber(44)
-  $core.bool hasVbankIssuedAt() => $_has(43);
+  $core.bool hasStatus() => $_has(43);
   @$pb.TagNumber(44)
-  void clearVbankIssuedAt() => clearField(44);
+  void clearStatus() => clearField(44);
 
   @$pb.TagNumber(45)
-  $core.String get vbankName => $_getSZ(44);
+  $core.String get userAgent => $_getSZ(44);
   @$pb.TagNumber(45)
-  set vbankName($core.String v) { $_setString(44, v); }
+  set userAgent($core.String v) { $_setString(44, v); }
   @$pb.TagNumber(45)
-  $core.bool hasVbankName() => $_has(44);
+  $core.bool hasUserAgent() => $_has(44);
   @$pb.TagNumber(45)
-  void clearVbankName() => clearField(45);
+  void clearUserAgent() => clearField(45);
 
   @$pb.TagNumber(46)
-  $core.String get vbankNum => $_getSZ(45);
+  $core.String get vbankCode => $_getSZ(45);
   @$pb.TagNumber(46)
-  set vbankNum($core.String v) { $_setString(45, v); }
+  set vbankCode($core.String v) { $_setString(45, v); }
   @$pb.TagNumber(46)
-  $core.bool hasVbankNum() => $_has(45);
+  $core.bool hasVbankCode() => $_has(45);
   @$pb.TagNumber(46)
-  void clearVbankNum() => clearField(46);
+  void clearVbankCode() => clearField(46);
 
   @$pb.TagNumber(47)
-  $core.String get customerEmail => $_getSZ(46);
+  $core.int get vbankDate => $_getIZ(46);
   @$pb.TagNumber(47)
-  set customerEmail($core.String v) { $_setString(46, v); }
+  set vbankDate($core.int v) { $_setSignedInt32(46, v); }
   @$pb.TagNumber(47)
-  $core.bool hasCustomerEmail() => $_has(46);
+  $core.bool hasVbankDate() => $_has(46);
   @$pb.TagNumber(47)
-  void clearCustomerEmail() => clearField(47);
+  void clearVbankDate() => clearField(47);
+
+  @$pb.TagNumber(48)
+  $core.String get vbankHolder => $_getSZ(47);
+  @$pb.TagNumber(48)
+  set vbankHolder($core.String v) { $_setString(47, v); }
+  @$pb.TagNumber(48)
+  $core.bool hasVbankHolder() => $_has(47);
+  @$pb.TagNumber(48)
+  void clearVbankHolder() => clearField(48);
+
+  @$pb.TagNumber(49)
+  $core.int get vbankIssuedAt => $_getIZ(48);
+  @$pb.TagNumber(49)
+  set vbankIssuedAt($core.int v) { $_setSignedInt32(48, v); }
+  @$pb.TagNumber(49)
+  $core.bool hasVbankIssuedAt() => $_has(48);
+  @$pb.TagNumber(49)
+  void clearVbankIssuedAt() => clearField(49);
+
+  @$pb.TagNumber(50)
+  $core.String get vbankName => $_getSZ(49);
+  @$pb.TagNumber(50)
+  set vbankName($core.String v) { $_setString(49, v); }
+  @$pb.TagNumber(50)
+  $core.bool hasVbankName() => $_has(49);
+  @$pb.TagNumber(50)
+  void clearVbankName() => clearField(50);
+
+  @$pb.TagNumber(51)
+  $core.String get vbankNum => $_getSZ(50);
+  @$pb.TagNumber(51)
+  set vbankNum($core.String v) { $_setString(50, v); }
+  @$pb.TagNumber(51)
+  $core.bool hasVbankNum() => $_has(50);
+  @$pb.TagNumber(51)
+  void clearVbankNum() => clearField(51);
+
+  @$pb.TagNumber(52)
+  $core.String get customerEmail => $_getSZ(51);
+  @$pb.TagNumber(52)
+  set customerEmail($core.String v) { $_setString(51, v); }
+  @$pb.TagNumber(52)
+  $core.bool hasCustomerEmail() => $_has(51);
+  @$pb.TagNumber(52)
+  void clearCustomerEmail() => clearField(52);
 }
 

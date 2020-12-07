@@ -403,42 +403,47 @@ class UnitTx PROTOBUF_FINAL :
     kBuyerTelFieldNumber = 9,
     kCancelReasonFieldNumber = 12,
     kCardCodeFieldNumber = 15,
-    kCardNameFieldNumber = 16,
-    kBinNumberFieldNumber = 17,
-    kChannelFieldNumber = 21,
-    kCurrencyFieldNumber = 22,
-    kCustomDataFieldNumber = 23,
-    kCardUidFieldNumber = 24,
-    kCustomerUidUsageFieldNumber = 25,
-    kFailReasonFieldNumber = 27,
-    kImpUidFieldNumber = 29,
-    kMerchantUidFieldNumber = 30,
-    kOrderNameFieldNumber = 31,
-    kPayMethodFieldNumber = 33,
-    kPgIdFieldNumber = 34,
-    kPgProviderFieldNumber = 35,
-    kPgTidFieldNumber = 36,
-    kReceiptUrlFieldNumber = 37,
-    kStatusFieldNumber = 39,
-    kUserAgentFieldNumber = 40,
-    kVbankCodeFieldNumber = 41,
-    kVbankHolderFieldNumber = 43,
-    kVbankNameFieldNumber = 45,
-    kVbankNumFieldNumber = 46,
-    kCustomerEmailFieldNumber = 47,
+    kBinNumberFieldNumber = 16,
+    kCardNameFieldNumber = 17,
+    kCardReceipeNameFieldNumber = 18,
+    kCardOwnerTypeFieldNumber = 19,
+    kCardBrandFieldNumber = 20,
+    kCardCreditTypeFieldNumber = 21,
+    kCardNumberFieldNumber = 22,
+    kChannelFieldNumber = 26,
+    kCurrencyFieldNumber = 27,
+    kCustomDataFieldNumber = 28,
+    kCardUidFieldNumber = 29,
+    kCustomerUidUsageFieldNumber = 30,
+    kFailReasonFieldNumber = 32,
+    kImpUidFieldNumber = 34,
+    kMerchantUidFieldNumber = 35,
+    kOrderNameFieldNumber = 36,
+    kPayMethodFieldNumber = 38,
+    kPgIdFieldNumber = 39,
+    kPgProviderFieldNumber = 40,
+    kPgTidFieldNumber = 41,
+    kReceiptUrlFieldNumber = 42,
+    kStatusFieldNumber = 44,
+    kUserAgentFieldNumber = 45,
+    kVbankCodeFieldNumber = 46,
+    kVbankHolderFieldNumber = 48,
+    kVbankNameFieldNumber = 50,
+    kVbankNumFieldNumber = 51,
+    kCustomerEmailFieldNumber = 52,
     kAmountFieldNumber = 1,
     kBankCodeFieldNumber = 3,
     kCancelAmountFieldNumber = 10,
     kCancelledAtFieldNumber = 14,
-    kCardInstallmentFieldNumber = 18,
-    kCardTypeFieldNumber = 19,
-    kCashReceiptIssuedFieldNumber = 20,
-    kEscrowFieldNumber = 26,
-    kFailedAtFieldNumber = 28,
-    kPaidAtFieldNumber = 32,
-    kStartedAtFieldNumber = 38,
-    kVbankDateFieldNumber = 42,
-    kVbankIssuedAtFieldNumber = 44,
+    kCardInstallmentFieldNumber = 23,
+    kCardTypeFieldNumber = 24,
+    kCashReceiptIssuedFieldNumber = 25,
+    kEscrowFieldNumber = 31,
+    kFailedAtFieldNumber = 33,
+    kPaidAtFieldNumber = 37,
+    kStartedAtFieldNumber = 43,
+    kVbankDateFieldNumber = 47,
+    kVbankIssuedAtFieldNumber = 49,
   };
   // repeated .basis_v2.CancelHistory cancel_history = 11;
   int cancel_history_size() const;
@@ -626,23 +631,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_card_code();
   public:
 
-  // string card_name = 16;
-  void clear_card_name();
-  const std::string& card_name() const;
-  void set_card_name(const std::string& value);
-  void set_card_name(std::string&& value);
-  void set_card_name(const char* value);
-  void set_card_name(const char* value, size_t size);
-  std::string* mutable_card_name();
-  std::string* release_card_name();
-  void set_allocated_card_name(std::string* card_name);
-  private:
-  const std::string& _internal_card_name() const;
-  void _internal_set_card_name(const std::string& value);
-  std::string* _internal_mutable_card_name();
-  public:
-
-  // string bin_number = 17;
+  // string bin_number = 16;
   void clear_bin_number();
   const std::string& bin_number() const;
   void set_bin_number(const std::string& value);
@@ -658,7 +647,103 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_bin_number();
   public:
 
-  // string channel = 21;
+  // string card_name = 17;
+  void clear_card_name();
+  const std::string& card_name() const;
+  void set_card_name(const std::string& value);
+  void set_card_name(std::string&& value);
+  void set_card_name(const char* value);
+  void set_card_name(const char* value, size_t size);
+  std::string* mutable_card_name();
+  std::string* release_card_name();
+  void set_allocated_card_name(std::string* card_name);
+  private:
+  const std::string& _internal_card_name() const;
+  void _internal_set_card_name(const std::string& value);
+  std::string* _internal_mutable_card_name();
+  public:
+
+  // string card_receipe_name = 18;
+  void clear_card_receipe_name();
+  const std::string& card_receipe_name() const;
+  void set_card_receipe_name(const std::string& value);
+  void set_card_receipe_name(std::string&& value);
+  void set_card_receipe_name(const char* value);
+  void set_card_receipe_name(const char* value, size_t size);
+  std::string* mutable_card_receipe_name();
+  std::string* release_card_receipe_name();
+  void set_allocated_card_receipe_name(std::string* card_receipe_name);
+  private:
+  const std::string& _internal_card_receipe_name() const;
+  void _internal_set_card_receipe_name(const std::string& value);
+  std::string* _internal_mutable_card_receipe_name();
+  public:
+
+  // string card_owner_type = 19;
+  void clear_card_owner_type();
+  const std::string& card_owner_type() const;
+  void set_card_owner_type(const std::string& value);
+  void set_card_owner_type(std::string&& value);
+  void set_card_owner_type(const char* value);
+  void set_card_owner_type(const char* value, size_t size);
+  std::string* mutable_card_owner_type();
+  std::string* release_card_owner_type();
+  void set_allocated_card_owner_type(std::string* card_owner_type);
+  private:
+  const std::string& _internal_card_owner_type() const;
+  void _internal_set_card_owner_type(const std::string& value);
+  std::string* _internal_mutable_card_owner_type();
+  public:
+
+  // string card_brand = 20;
+  void clear_card_brand();
+  const std::string& card_brand() const;
+  void set_card_brand(const std::string& value);
+  void set_card_brand(std::string&& value);
+  void set_card_brand(const char* value);
+  void set_card_brand(const char* value, size_t size);
+  std::string* mutable_card_brand();
+  std::string* release_card_brand();
+  void set_allocated_card_brand(std::string* card_brand);
+  private:
+  const std::string& _internal_card_brand() const;
+  void _internal_set_card_brand(const std::string& value);
+  std::string* _internal_mutable_card_brand();
+  public:
+
+  // string card_credit_type = 21;
+  void clear_card_credit_type();
+  const std::string& card_credit_type() const;
+  void set_card_credit_type(const std::string& value);
+  void set_card_credit_type(std::string&& value);
+  void set_card_credit_type(const char* value);
+  void set_card_credit_type(const char* value, size_t size);
+  std::string* mutable_card_credit_type();
+  std::string* release_card_credit_type();
+  void set_allocated_card_credit_type(std::string* card_credit_type);
+  private:
+  const std::string& _internal_card_credit_type() const;
+  void _internal_set_card_credit_type(const std::string& value);
+  std::string* _internal_mutable_card_credit_type();
+  public:
+
+  // string card_number = 22;
+  void clear_card_number();
+  const std::string& card_number() const;
+  void set_card_number(const std::string& value);
+  void set_card_number(std::string&& value);
+  void set_card_number(const char* value);
+  void set_card_number(const char* value, size_t size);
+  std::string* mutable_card_number();
+  std::string* release_card_number();
+  void set_allocated_card_number(std::string* card_number);
+  private:
+  const std::string& _internal_card_number() const;
+  void _internal_set_card_number(const std::string& value);
+  std::string* _internal_mutable_card_number();
+  public:
+
+  // string channel = 26;
   void clear_channel();
   const std::string& channel() const;
   void set_channel(const std::string& value);
@@ -674,7 +759,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_channel();
   public:
 
-  // string currency = 22;
+  // string currency = 27;
   void clear_currency();
   const std::string& currency() const;
   void set_currency(const std::string& value);
@@ -690,7 +775,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_currency();
   public:
 
-  // string custom_data = 23;
+  // string custom_data = 28;
   void clear_custom_data();
   const std::string& custom_data() const;
   void set_custom_data(const std::string& value);
@@ -706,7 +791,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_custom_data();
   public:
 
-  // string card_uid = 24;
+  // string card_uid = 29;
   void clear_card_uid();
   const std::string& card_uid() const;
   void set_card_uid(const std::string& value);
@@ -722,7 +807,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_card_uid();
   public:
 
-  // string customer_uid_usage = 25;
+  // string customer_uid_usage = 30;
   void clear_customer_uid_usage();
   const std::string& customer_uid_usage() const;
   void set_customer_uid_usage(const std::string& value);
@@ -738,7 +823,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_customer_uid_usage();
   public:
 
-  // string fail_reason = 27;
+  // string fail_reason = 32;
   void clear_fail_reason();
   const std::string& fail_reason() const;
   void set_fail_reason(const std::string& value);
@@ -754,7 +839,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_fail_reason();
   public:
 
-  // string imp_uid = 29;
+  // string imp_uid = 34;
   void clear_imp_uid();
   const std::string& imp_uid() const;
   void set_imp_uid(const std::string& value);
@@ -770,7 +855,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_imp_uid();
   public:
 
-  // string merchant_uid = 30;
+  // string merchant_uid = 35;
   void clear_merchant_uid();
   const std::string& merchant_uid() const;
   void set_merchant_uid(const std::string& value);
@@ -786,7 +871,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_merchant_uid();
   public:
 
-  // string order_name = 31;
+  // string order_name = 36;
   void clear_order_name();
   const std::string& order_name() const;
   void set_order_name(const std::string& value);
@@ -802,7 +887,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_order_name();
   public:
 
-  // string pay_method = 33;
+  // string pay_method = 38;
   void clear_pay_method();
   const std::string& pay_method() const;
   void set_pay_method(const std::string& value);
@@ -818,7 +903,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_pay_method();
   public:
 
-  // string pg_id = 34;
+  // string pg_id = 39;
   void clear_pg_id();
   const std::string& pg_id() const;
   void set_pg_id(const std::string& value);
@@ -834,7 +919,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_pg_id();
   public:
 
-  // string pg_provider = 35;
+  // string pg_provider = 40;
   void clear_pg_provider();
   const std::string& pg_provider() const;
   void set_pg_provider(const std::string& value);
@@ -850,7 +935,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_pg_provider();
   public:
 
-  // string pg_tid = 36;
+  // string pg_tid = 41;
   void clear_pg_tid();
   const std::string& pg_tid() const;
   void set_pg_tid(const std::string& value);
@@ -866,7 +951,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_pg_tid();
   public:
 
-  // string receipt_url = 37;
+  // string receipt_url = 42;
   void clear_receipt_url();
   const std::string& receipt_url() const;
   void set_receipt_url(const std::string& value);
@@ -882,7 +967,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_receipt_url();
   public:
 
-  // string status = 39;
+  // string status = 44;
   void clear_status();
   const std::string& status() const;
   void set_status(const std::string& value);
@@ -898,7 +983,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_status();
   public:
 
-  // string user_agent = 40;
+  // string user_agent = 45;
   void clear_user_agent();
   const std::string& user_agent() const;
   void set_user_agent(const std::string& value);
@@ -914,7 +999,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_user_agent();
   public:
 
-  // string vbank_code = 41;
+  // string vbank_code = 46;
   void clear_vbank_code();
   const std::string& vbank_code() const;
   void set_vbank_code(const std::string& value);
@@ -930,7 +1015,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_vbank_code();
   public:
 
-  // string vbank_holder = 43;
+  // string vbank_holder = 48;
   void clear_vbank_holder();
   const std::string& vbank_holder() const;
   void set_vbank_holder(const std::string& value);
@@ -946,7 +1031,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_vbank_holder();
   public:
 
-  // string vbank_name = 45;
+  // string vbank_name = 50;
   void clear_vbank_name();
   const std::string& vbank_name() const;
   void set_vbank_name(const std::string& value);
@@ -962,7 +1047,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_vbank_name();
   public:
 
-  // string vbank_num = 46;
+  // string vbank_num = 51;
   void clear_vbank_num();
   const std::string& vbank_num() const;
   void set_vbank_num(const std::string& value);
@@ -978,7 +1063,7 @@ class UnitTx PROTOBUF_FINAL :
   std::string* _internal_mutable_vbank_num();
   public:
 
-  // string customer_email = 47;
+  // string customer_email = 52;
   void clear_customer_email();
   const std::string& customer_email() const;
   void set_customer_email(const std::string& value);
@@ -1030,7 +1115,7 @@ class UnitTx PROTOBUF_FINAL :
   void _internal_set_cancelled_at(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int32 card_installment = 18;
+  // int32 card_installment = 23;
   void clear_card_installment();
   ::PROTOBUF_NAMESPACE_ID::int32 card_installment() const;
   void set_card_installment(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1039,7 +1124,7 @@ class UnitTx PROTOBUF_FINAL :
   void _internal_set_card_installment(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int32 card_type = 19;
+  // int32 card_type = 24;
   void clear_card_type();
   ::PROTOBUF_NAMESPACE_ID::int32 card_type() const;
   void set_card_type(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1048,7 +1133,7 @@ class UnitTx PROTOBUF_FINAL :
   void _internal_set_card_type(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // bool cash_receipt_issued = 20;
+  // bool cash_receipt_issued = 25;
   void clear_cash_receipt_issued();
   bool cash_receipt_issued() const;
   void set_cash_receipt_issued(bool value);
@@ -1057,7 +1142,7 @@ class UnitTx PROTOBUF_FINAL :
   void _internal_set_cash_receipt_issued(bool value);
   public:
 
-  // bool escrow = 26;
+  // bool escrow = 31;
   void clear_escrow();
   bool escrow() const;
   void set_escrow(bool value);
@@ -1066,7 +1151,7 @@ class UnitTx PROTOBUF_FINAL :
   void _internal_set_escrow(bool value);
   public:
 
-  // int32 failed_at = 28;
+  // int32 failed_at = 33;
   void clear_failed_at();
   ::PROTOBUF_NAMESPACE_ID::int32 failed_at() const;
   void set_failed_at(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1075,7 +1160,7 @@ class UnitTx PROTOBUF_FINAL :
   void _internal_set_failed_at(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int32 paid_at = 32;
+  // int32 paid_at = 37;
   void clear_paid_at();
   ::PROTOBUF_NAMESPACE_ID::int32 paid_at() const;
   void set_paid_at(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1084,7 +1169,7 @@ class UnitTx PROTOBUF_FINAL :
   void _internal_set_paid_at(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int32 started_at = 38;
+  // int32 started_at = 43;
   void clear_started_at();
   ::PROTOBUF_NAMESPACE_ID::int32 started_at() const;
   void set_started_at(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1093,7 +1178,7 @@ class UnitTx PROTOBUF_FINAL :
   void _internal_set_started_at(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int32 vbank_date = 42;
+  // int32 vbank_date = 47;
   void clear_vbank_date();
   ::PROTOBUF_NAMESPACE_ID::int32 vbank_date() const;
   void set_vbank_date(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1102,7 +1187,7 @@ class UnitTx PROTOBUF_FINAL :
   void _internal_set_vbank_date(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int32 vbank_issued_at = 44;
+  // int32 vbank_issued_at = 49;
   void clear_vbank_issued_at();
   ::PROTOBUF_NAMESPACE_ID::int32 vbank_issued_at() const;
   void set_vbank_issued_at(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1129,8 +1214,13 @@ class UnitTx PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buyer_tel_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cancel_reason_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_code_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bin_number_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_receipe_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_owner_type_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_brand_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_credit_type_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr card_number_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr channel_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr currency_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr custom_data_;
@@ -2202,69 +2292,7 @@ inline void UnitTx::set_allocated_card_code(std::string* card_code) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.card_code)
 }
 
-// string card_name = 16;
-inline void UnitTx::clear_card_name() {
-  card_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline const std::string& UnitTx::card_name() const {
-  // @@protoc_insertion_point(field_get:basis_v2.UnitTx.card_name)
-  return _internal_card_name();
-}
-inline void UnitTx::set_card_name(const std::string& value) {
-  _internal_set_card_name(value);
-  // @@protoc_insertion_point(field_set:basis_v2.UnitTx.card_name)
-}
-inline std::string* UnitTx::mutable_card_name() {
-  // @@protoc_insertion_point(field_mutable:basis_v2.UnitTx.card_name)
-  return _internal_mutable_card_name();
-}
-inline const std::string& UnitTx::_internal_card_name() const {
-  return card_name_.Get();
-}
-inline void UnitTx::_internal_set_card_name(const std::string& value) {
-  
-  card_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void UnitTx::set_card_name(std::string&& value) {
-  
-  card_name_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:basis_v2.UnitTx.card_name)
-}
-inline void UnitTx::set_card_name(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  card_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:basis_v2.UnitTx.card_name)
-}
-inline void UnitTx::set_card_name(const char* value,
-    size_t size) {
-  
-  card_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:basis_v2.UnitTx.card_name)
-}
-inline std::string* UnitTx::_internal_mutable_card_name() {
-  
-  return card_name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* UnitTx::release_card_name() {
-  // @@protoc_insertion_point(field_release:basis_v2.UnitTx.card_name)
-  return card_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void UnitTx::set_allocated_card_name(std::string* card_name) {
-  if (card_name != nullptr) {
-    
-  } else {
-    
-  }
-  card_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), card_name,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.card_name)
-}
-
-// string bin_number = 17;
+// string bin_number = 16;
 inline void UnitTx::clear_bin_number() {
   bin_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -2326,7 +2354,379 @@ inline void UnitTx::set_allocated_bin_number(std::string* bin_number) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.bin_number)
 }
 
-// int32 card_installment = 18;
+// string card_name = 17;
+inline void UnitTx::clear_card_name() {
+  card_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& UnitTx::card_name() const {
+  // @@protoc_insertion_point(field_get:basis_v2.UnitTx.card_name)
+  return _internal_card_name();
+}
+inline void UnitTx::set_card_name(const std::string& value) {
+  _internal_set_card_name(value);
+  // @@protoc_insertion_point(field_set:basis_v2.UnitTx.card_name)
+}
+inline std::string* UnitTx::mutable_card_name() {
+  // @@protoc_insertion_point(field_mutable:basis_v2.UnitTx.card_name)
+  return _internal_mutable_card_name();
+}
+inline const std::string& UnitTx::_internal_card_name() const {
+  return card_name_.Get();
+}
+inline void UnitTx::_internal_set_card_name(const std::string& value) {
+  
+  card_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void UnitTx::set_card_name(std::string&& value) {
+  
+  card_name_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:basis_v2.UnitTx.card_name)
+}
+inline void UnitTx::set_card_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  card_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:basis_v2.UnitTx.card_name)
+}
+inline void UnitTx::set_card_name(const char* value,
+    size_t size) {
+  
+  card_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:basis_v2.UnitTx.card_name)
+}
+inline std::string* UnitTx::_internal_mutable_card_name() {
+  
+  return card_name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* UnitTx::release_card_name() {
+  // @@protoc_insertion_point(field_release:basis_v2.UnitTx.card_name)
+  return card_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void UnitTx::set_allocated_card_name(std::string* card_name) {
+  if (card_name != nullptr) {
+    
+  } else {
+    
+  }
+  card_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), card_name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.card_name)
+}
+
+// string card_receipe_name = 18;
+inline void UnitTx::clear_card_receipe_name() {
+  card_receipe_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& UnitTx::card_receipe_name() const {
+  // @@protoc_insertion_point(field_get:basis_v2.UnitTx.card_receipe_name)
+  return _internal_card_receipe_name();
+}
+inline void UnitTx::set_card_receipe_name(const std::string& value) {
+  _internal_set_card_receipe_name(value);
+  // @@protoc_insertion_point(field_set:basis_v2.UnitTx.card_receipe_name)
+}
+inline std::string* UnitTx::mutable_card_receipe_name() {
+  // @@protoc_insertion_point(field_mutable:basis_v2.UnitTx.card_receipe_name)
+  return _internal_mutable_card_receipe_name();
+}
+inline const std::string& UnitTx::_internal_card_receipe_name() const {
+  return card_receipe_name_.Get();
+}
+inline void UnitTx::_internal_set_card_receipe_name(const std::string& value) {
+  
+  card_receipe_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void UnitTx::set_card_receipe_name(std::string&& value) {
+  
+  card_receipe_name_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:basis_v2.UnitTx.card_receipe_name)
+}
+inline void UnitTx::set_card_receipe_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  card_receipe_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:basis_v2.UnitTx.card_receipe_name)
+}
+inline void UnitTx::set_card_receipe_name(const char* value,
+    size_t size) {
+  
+  card_receipe_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:basis_v2.UnitTx.card_receipe_name)
+}
+inline std::string* UnitTx::_internal_mutable_card_receipe_name() {
+  
+  return card_receipe_name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* UnitTx::release_card_receipe_name() {
+  // @@protoc_insertion_point(field_release:basis_v2.UnitTx.card_receipe_name)
+  return card_receipe_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void UnitTx::set_allocated_card_receipe_name(std::string* card_receipe_name) {
+  if (card_receipe_name != nullptr) {
+    
+  } else {
+    
+  }
+  card_receipe_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), card_receipe_name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.card_receipe_name)
+}
+
+// string card_owner_type = 19;
+inline void UnitTx::clear_card_owner_type() {
+  card_owner_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& UnitTx::card_owner_type() const {
+  // @@protoc_insertion_point(field_get:basis_v2.UnitTx.card_owner_type)
+  return _internal_card_owner_type();
+}
+inline void UnitTx::set_card_owner_type(const std::string& value) {
+  _internal_set_card_owner_type(value);
+  // @@protoc_insertion_point(field_set:basis_v2.UnitTx.card_owner_type)
+}
+inline std::string* UnitTx::mutable_card_owner_type() {
+  // @@protoc_insertion_point(field_mutable:basis_v2.UnitTx.card_owner_type)
+  return _internal_mutable_card_owner_type();
+}
+inline const std::string& UnitTx::_internal_card_owner_type() const {
+  return card_owner_type_.Get();
+}
+inline void UnitTx::_internal_set_card_owner_type(const std::string& value) {
+  
+  card_owner_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void UnitTx::set_card_owner_type(std::string&& value) {
+  
+  card_owner_type_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:basis_v2.UnitTx.card_owner_type)
+}
+inline void UnitTx::set_card_owner_type(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  card_owner_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:basis_v2.UnitTx.card_owner_type)
+}
+inline void UnitTx::set_card_owner_type(const char* value,
+    size_t size) {
+  
+  card_owner_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:basis_v2.UnitTx.card_owner_type)
+}
+inline std::string* UnitTx::_internal_mutable_card_owner_type() {
+  
+  return card_owner_type_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* UnitTx::release_card_owner_type() {
+  // @@protoc_insertion_point(field_release:basis_v2.UnitTx.card_owner_type)
+  return card_owner_type_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void UnitTx::set_allocated_card_owner_type(std::string* card_owner_type) {
+  if (card_owner_type != nullptr) {
+    
+  } else {
+    
+  }
+  card_owner_type_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), card_owner_type,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.card_owner_type)
+}
+
+// string card_brand = 20;
+inline void UnitTx::clear_card_brand() {
+  card_brand_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& UnitTx::card_brand() const {
+  // @@protoc_insertion_point(field_get:basis_v2.UnitTx.card_brand)
+  return _internal_card_brand();
+}
+inline void UnitTx::set_card_brand(const std::string& value) {
+  _internal_set_card_brand(value);
+  // @@protoc_insertion_point(field_set:basis_v2.UnitTx.card_brand)
+}
+inline std::string* UnitTx::mutable_card_brand() {
+  // @@protoc_insertion_point(field_mutable:basis_v2.UnitTx.card_brand)
+  return _internal_mutable_card_brand();
+}
+inline const std::string& UnitTx::_internal_card_brand() const {
+  return card_brand_.Get();
+}
+inline void UnitTx::_internal_set_card_brand(const std::string& value) {
+  
+  card_brand_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void UnitTx::set_card_brand(std::string&& value) {
+  
+  card_brand_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:basis_v2.UnitTx.card_brand)
+}
+inline void UnitTx::set_card_brand(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  card_brand_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:basis_v2.UnitTx.card_brand)
+}
+inline void UnitTx::set_card_brand(const char* value,
+    size_t size) {
+  
+  card_brand_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:basis_v2.UnitTx.card_brand)
+}
+inline std::string* UnitTx::_internal_mutable_card_brand() {
+  
+  return card_brand_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* UnitTx::release_card_brand() {
+  // @@protoc_insertion_point(field_release:basis_v2.UnitTx.card_brand)
+  return card_brand_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void UnitTx::set_allocated_card_brand(std::string* card_brand) {
+  if (card_brand != nullptr) {
+    
+  } else {
+    
+  }
+  card_brand_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), card_brand,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.card_brand)
+}
+
+// string card_credit_type = 21;
+inline void UnitTx::clear_card_credit_type() {
+  card_credit_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& UnitTx::card_credit_type() const {
+  // @@protoc_insertion_point(field_get:basis_v2.UnitTx.card_credit_type)
+  return _internal_card_credit_type();
+}
+inline void UnitTx::set_card_credit_type(const std::string& value) {
+  _internal_set_card_credit_type(value);
+  // @@protoc_insertion_point(field_set:basis_v2.UnitTx.card_credit_type)
+}
+inline std::string* UnitTx::mutable_card_credit_type() {
+  // @@protoc_insertion_point(field_mutable:basis_v2.UnitTx.card_credit_type)
+  return _internal_mutable_card_credit_type();
+}
+inline const std::string& UnitTx::_internal_card_credit_type() const {
+  return card_credit_type_.Get();
+}
+inline void UnitTx::_internal_set_card_credit_type(const std::string& value) {
+  
+  card_credit_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void UnitTx::set_card_credit_type(std::string&& value) {
+  
+  card_credit_type_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:basis_v2.UnitTx.card_credit_type)
+}
+inline void UnitTx::set_card_credit_type(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  card_credit_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:basis_v2.UnitTx.card_credit_type)
+}
+inline void UnitTx::set_card_credit_type(const char* value,
+    size_t size) {
+  
+  card_credit_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:basis_v2.UnitTx.card_credit_type)
+}
+inline std::string* UnitTx::_internal_mutable_card_credit_type() {
+  
+  return card_credit_type_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* UnitTx::release_card_credit_type() {
+  // @@protoc_insertion_point(field_release:basis_v2.UnitTx.card_credit_type)
+  return card_credit_type_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void UnitTx::set_allocated_card_credit_type(std::string* card_credit_type) {
+  if (card_credit_type != nullptr) {
+    
+  } else {
+    
+  }
+  card_credit_type_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), card_credit_type,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.card_credit_type)
+}
+
+// string card_number = 22;
+inline void UnitTx::clear_card_number() {
+  card_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& UnitTx::card_number() const {
+  // @@protoc_insertion_point(field_get:basis_v2.UnitTx.card_number)
+  return _internal_card_number();
+}
+inline void UnitTx::set_card_number(const std::string& value) {
+  _internal_set_card_number(value);
+  // @@protoc_insertion_point(field_set:basis_v2.UnitTx.card_number)
+}
+inline std::string* UnitTx::mutable_card_number() {
+  // @@protoc_insertion_point(field_mutable:basis_v2.UnitTx.card_number)
+  return _internal_mutable_card_number();
+}
+inline const std::string& UnitTx::_internal_card_number() const {
+  return card_number_.Get();
+}
+inline void UnitTx::_internal_set_card_number(const std::string& value) {
+  
+  card_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void UnitTx::set_card_number(std::string&& value) {
+  
+  card_number_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:basis_v2.UnitTx.card_number)
+}
+inline void UnitTx::set_card_number(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  card_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:basis_v2.UnitTx.card_number)
+}
+inline void UnitTx::set_card_number(const char* value,
+    size_t size) {
+  
+  card_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:basis_v2.UnitTx.card_number)
+}
+inline std::string* UnitTx::_internal_mutable_card_number() {
+  
+  return card_number_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* UnitTx::release_card_number() {
+  // @@protoc_insertion_point(field_release:basis_v2.UnitTx.card_number)
+  return card_number_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void UnitTx::set_allocated_card_number(std::string* card_number) {
+  if (card_number != nullptr) {
+    
+  } else {
+    
+  }
+  card_number_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), card_number,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.card_number)
+}
+
+// int32 card_installment = 23;
 inline void UnitTx::clear_card_installment() {
   card_installment_ = 0;
 }
@@ -2346,7 +2746,7 @@ inline void UnitTx::set_card_installment(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:basis_v2.UnitTx.card_installment)
 }
 
-// int32 card_type = 19;
+// int32 card_type = 24;
 inline void UnitTx::clear_card_type() {
   card_type_ = 0;
 }
@@ -2366,7 +2766,7 @@ inline void UnitTx::set_card_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:basis_v2.UnitTx.card_type)
 }
 
-// bool cash_receipt_issued = 20;
+// bool cash_receipt_issued = 25;
 inline void UnitTx::clear_cash_receipt_issued() {
   cash_receipt_issued_ = false;
 }
@@ -2386,7 +2786,7 @@ inline void UnitTx::set_cash_receipt_issued(bool value) {
   // @@protoc_insertion_point(field_set:basis_v2.UnitTx.cash_receipt_issued)
 }
 
-// string channel = 21;
+// string channel = 26;
 inline void UnitTx::clear_channel() {
   channel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -2448,7 +2848,7 @@ inline void UnitTx::set_allocated_channel(std::string* channel) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.channel)
 }
 
-// string currency = 22;
+// string currency = 27;
 inline void UnitTx::clear_currency() {
   currency_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -2510,7 +2910,7 @@ inline void UnitTx::set_allocated_currency(std::string* currency) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.currency)
 }
 
-// string custom_data = 23;
+// string custom_data = 28;
 inline void UnitTx::clear_custom_data() {
   custom_data_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -2572,7 +2972,7 @@ inline void UnitTx::set_allocated_custom_data(std::string* custom_data) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.custom_data)
 }
 
-// string card_uid = 24;
+// string card_uid = 29;
 inline void UnitTx::clear_card_uid() {
   card_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -2634,7 +3034,7 @@ inline void UnitTx::set_allocated_card_uid(std::string* card_uid) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.card_uid)
 }
 
-// string customer_uid_usage = 25;
+// string customer_uid_usage = 30;
 inline void UnitTx::clear_customer_uid_usage() {
   customer_uid_usage_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -2696,7 +3096,7 @@ inline void UnitTx::set_allocated_customer_uid_usage(std::string* customer_uid_u
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.customer_uid_usage)
 }
 
-// bool escrow = 26;
+// bool escrow = 31;
 inline void UnitTx::clear_escrow() {
   escrow_ = false;
 }
@@ -2716,7 +3116,7 @@ inline void UnitTx::set_escrow(bool value) {
   // @@protoc_insertion_point(field_set:basis_v2.UnitTx.escrow)
 }
 
-// string fail_reason = 27;
+// string fail_reason = 32;
 inline void UnitTx::clear_fail_reason() {
   fail_reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -2778,7 +3178,7 @@ inline void UnitTx::set_allocated_fail_reason(std::string* fail_reason) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.fail_reason)
 }
 
-// int32 failed_at = 28;
+// int32 failed_at = 33;
 inline void UnitTx::clear_failed_at() {
   failed_at_ = 0;
 }
@@ -2798,7 +3198,7 @@ inline void UnitTx::set_failed_at(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:basis_v2.UnitTx.failed_at)
 }
 
-// string imp_uid = 29;
+// string imp_uid = 34;
 inline void UnitTx::clear_imp_uid() {
   imp_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -2860,7 +3260,7 @@ inline void UnitTx::set_allocated_imp_uid(std::string* imp_uid) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.imp_uid)
 }
 
-// string merchant_uid = 30;
+// string merchant_uid = 35;
 inline void UnitTx::clear_merchant_uid() {
   merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -2922,7 +3322,7 @@ inline void UnitTx::set_allocated_merchant_uid(std::string* merchant_uid) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.merchant_uid)
 }
 
-// string order_name = 31;
+// string order_name = 36;
 inline void UnitTx::clear_order_name() {
   order_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -2984,7 +3384,7 @@ inline void UnitTx::set_allocated_order_name(std::string* order_name) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.order_name)
 }
 
-// int32 paid_at = 32;
+// int32 paid_at = 37;
 inline void UnitTx::clear_paid_at() {
   paid_at_ = 0;
 }
@@ -3004,7 +3404,7 @@ inline void UnitTx::set_paid_at(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:basis_v2.UnitTx.paid_at)
 }
 
-// string pay_method = 33;
+// string pay_method = 38;
 inline void UnitTx::clear_pay_method() {
   pay_method_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -3066,7 +3466,7 @@ inline void UnitTx::set_allocated_pay_method(std::string* pay_method) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.pay_method)
 }
 
-// string pg_id = 34;
+// string pg_id = 39;
 inline void UnitTx::clear_pg_id() {
   pg_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -3128,7 +3528,7 @@ inline void UnitTx::set_allocated_pg_id(std::string* pg_id) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.pg_id)
 }
 
-// string pg_provider = 35;
+// string pg_provider = 40;
 inline void UnitTx::clear_pg_provider() {
   pg_provider_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -3190,7 +3590,7 @@ inline void UnitTx::set_allocated_pg_provider(std::string* pg_provider) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.pg_provider)
 }
 
-// string pg_tid = 36;
+// string pg_tid = 41;
 inline void UnitTx::clear_pg_tid() {
   pg_tid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -3252,7 +3652,7 @@ inline void UnitTx::set_allocated_pg_tid(std::string* pg_tid) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.pg_tid)
 }
 
-// string receipt_url = 37;
+// string receipt_url = 42;
 inline void UnitTx::clear_receipt_url() {
   receipt_url_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -3314,7 +3714,7 @@ inline void UnitTx::set_allocated_receipt_url(std::string* receipt_url) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.receipt_url)
 }
 
-// int32 started_at = 38;
+// int32 started_at = 43;
 inline void UnitTx::clear_started_at() {
   started_at_ = 0;
 }
@@ -3334,7 +3734,7 @@ inline void UnitTx::set_started_at(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:basis_v2.UnitTx.started_at)
 }
 
-// string status = 39;
+// string status = 44;
 inline void UnitTx::clear_status() {
   status_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -3396,7 +3796,7 @@ inline void UnitTx::set_allocated_status(std::string* status) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.status)
 }
 
-// string user_agent = 40;
+// string user_agent = 45;
 inline void UnitTx::clear_user_agent() {
   user_agent_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -3458,7 +3858,7 @@ inline void UnitTx::set_allocated_user_agent(std::string* user_agent) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.user_agent)
 }
 
-// string vbank_code = 41;
+// string vbank_code = 46;
 inline void UnitTx::clear_vbank_code() {
   vbank_code_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -3520,7 +3920,7 @@ inline void UnitTx::set_allocated_vbank_code(std::string* vbank_code) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.vbank_code)
 }
 
-// int32 vbank_date = 42;
+// int32 vbank_date = 47;
 inline void UnitTx::clear_vbank_date() {
   vbank_date_ = 0;
 }
@@ -3540,7 +3940,7 @@ inline void UnitTx::set_vbank_date(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:basis_v2.UnitTx.vbank_date)
 }
 
-// string vbank_holder = 43;
+// string vbank_holder = 48;
 inline void UnitTx::clear_vbank_holder() {
   vbank_holder_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -3602,7 +4002,7 @@ inline void UnitTx::set_allocated_vbank_holder(std::string* vbank_holder) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.vbank_holder)
 }
 
-// int32 vbank_issued_at = 44;
+// int32 vbank_issued_at = 49;
 inline void UnitTx::clear_vbank_issued_at() {
   vbank_issued_at_ = 0;
 }
@@ -3622,7 +4022,7 @@ inline void UnitTx::set_vbank_issued_at(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:basis_v2.UnitTx.vbank_issued_at)
 }
 
-// string vbank_name = 45;
+// string vbank_name = 50;
 inline void UnitTx::clear_vbank_name() {
   vbank_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -3684,7 +4084,7 @@ inline void UnitTx::set_allocated_vbank_name(std::string* vbank_name) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.vbank_name)
 }
 
-// string vbank_num = 46;
+// string vbank_num = 51;
 inline void UnitTx::clear_vbank_num() {
   vbank_num_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -3746,7 +4146,7 @@ inline void UnitTx::set_allocated_vbank_num(std::string* vbank_num) {
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.vbank_num)
 }
 
-// string customer_email = 47;
+// string customer_email = 52;
 inline void UnitTx::clear_customer_email() {
   customer_email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }

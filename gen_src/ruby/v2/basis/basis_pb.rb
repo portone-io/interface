@@ -28,38 +28,43 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :cancel_receipt_urls, :string, 13
       optional :cancelled_at, :int32, 14
       optional :card_code, :string, 15
-      optional :card_name, :string, 16
-      optional :bin_number, :string, 17
-      optional :card_installment, :int32, 18
-      optional :card_type, :int32, 19
-      optional :cash_receipt_issued, :bool, 20
-      optional :channel, :string, 21
-      optional :currency, :string, 22
-      optional :custom_data, :string, 23
-      optional :card_uid, :string, 24
-      optional :customer_uid_usage, :string, 25
-      optional :escrow, :bool, 26
-      optional :fail_reason, :string, 27
-      optional :failed_at, :int32, 28
-      optional :imp_uid, :string, 29
-      optional :merchant_uid, :string, 30
-      optional :order_name, :string, 31
-      optional :paid_at, :int32, 32
-      optional :pay_method, :string, 33
-      optional :pg_id, :string, 34
-      optional :pg_provider, :string, 35
-      optional :pg_tid, :string, 36
-      optional :receipt_url, :string, 37
-      optional :started_at, :int32, 38
-      optional :status, :string, 39
-      optional :user_agent, :string, 40
-      optional :vbank_code, :string, 41
-      optional :vbank_date, :int32, 42
-      optional :vbank_holder, :string, 43
-      optional :vbank_issued_at, :int32, 44
-      optional :vbank_name, :string, 45
-      optional :vbank_num, :string, 46
-      optional :customer_email, :string, 47
+      optional :bin_number, :string, 16
+      optional :card_name, :string, 17
+      optional :card_receipe_name, :string, 18
+      optional :card_owner_type, :string, 19
+      optional :card_brand, :string, 20
+      optional :card_credit_type, :string, 21
+      optional :card_number, :string, 22
+      optional :card_installment, :int32, 23
+      optional :card_type, :int32, 24
+      optional :cash_receipt_issued, :bool, 25
+      optional :channel, :string, 26
+      optional :currency, :string, 27
+      optional :custom_data, :string, 28
+      optional :card_uid, :string, 29
+      optional :customer_uid_usage, :string, 30
+      optional :escrow, :bool, 31
+      optional :fail_reason, :string, 32
+      optional :failed_at, :int32, 33
+      optional :imp_uid, :string, 34
+      optional :merchant_uid, :string, 35
+      optional :order_name, :string, 36
+      optional :paid_at, :int32, 37
+      optional :pay_method, :string, 38
+      optional :pg_id, :string, 39
+      optional :pg_provider, :string, 40
+      optional :pg_tid, :string, 41
+      optional :receipt_url, :string, 42
+      optional :started_at, :int32, 43
+      optional :status, :string, 44
+      optional :user_agent, :string, 45
+      optional :vbank_code, :string, 46
+      optional :vbank_date, :int32, 47
+      optional :vbank_holder, :string, 48
+      optional :vbank_issued_at, :int32, 49
+      optional :vbank_name, :string, 50
+      optional :vbank_num, :string, 51
+      optional :customer_email, :string, 52
     end
   end
 end

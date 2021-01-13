@@ -19,9 +19,19 @@ message GetTxsRecordsRequest {
     string imp_uid = 1;
     string merchant_uid = 2;
     string paid_by = 3;
-    string status = 4;
+    repeated string status = 4;
     int32 page = 5;
     string sorting = 6;
+    int32 limit = 7;
+    repeated string pg_provider= 8;
+    repeated string pay_method = 9;
+    string buyer_name = 10;
+    string buyer_tel = 11;
+    string buyer_email = 12;
+    string start = 13;
+    string end = 14;
+    bool sandbox = 15;
+    repeated string output_format = 16;
 }
 
 message GetTxsRecordsReponse {

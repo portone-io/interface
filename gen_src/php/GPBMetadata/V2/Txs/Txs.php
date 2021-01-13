@@ -16,9 +16,38 @@ class Txs
         }
         \GPBMetadata\Google\Api\Annotations::initOnce();
         \GPBMetadata\V2\Basis\Basis::initOnce();
-        $pool->internalAddGeneratedFile(hex2bin(
-            "0acc030a1076322f7478732f7478732e70726f746f12067478735f76321a1476322f62617369732f62617369732e70726f746f227d0a144765745478735265636f72647352657175657374120f0a07696d705f75696418012001280912140a0c6d65726368616e745f756964180220012809120f0a07706169645f6279180320012809120e0a06737461747573180420012809120c0a0470616765180520012805120f0a07736f7274696e6718062001280922590a144765745478735265636f7264735265706f6e7365120c0a04636f6465180120012805120f0a076d65737361676518022001280912220a08726573706f6e736518032003280b32102e62617369735f76322e556e69745478327d0a0a54787353657276696365126f0a134765745478735265636f726453657276696365121c2e7478735f76322e4765745478735265636f726473526571756573741a1c2e7478735f76322e4765745478735265636f7264735265706f6e7365221c82d3e493021612142f6170692f7061796d656e74732f76322f74787342395a2e6769746875622e636f6d2f69616d706f72742f696e746572666163652f67656e5f7372632f676f2f76322f747873aa020656322e547873620670726f746f33"
-        ), true);
+        $pool->internalAddGeneratedFile(
+            '
+…
+v2/txs/txs.prototxs_v2v2/basis/basis.proto"µ
+GetTxsRecordsRequest
+imp_uid (	
+merchant_uid (	
+paid_by (	
+status (	
+page (
+sorting (	
+limit (
+pg_provider (	
+
+pay_method	 (	
+
+buyer_name
+ (	
+	buyer_tel (	
+buyer_email (	
+start (	
+end (	
+sandbox (
+output_format (	"Y
+GetTxsRecordsReponse
+code (
+message (	"
+response (2.basis_v2.UnitTx2}
+
+TxsServiceo
+GetTxsRecordService.txs_v2.GetTxsRecordsRequest.txs_v2.GetTxsRecordsReponse"‚Óä“/api/payments/v2/txsB9Z.github.com/iamport/interface/gen_src/go/v2/txsªV2.Txsbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

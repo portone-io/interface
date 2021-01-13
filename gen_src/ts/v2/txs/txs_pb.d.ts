@@ -15,14 +15,52 @@ export class GetTxsRecordsRequest extends jspb.Message {
   getPaidBy(): string;
   setPaidBy(value: string): void;
 
-  getStatus(): string;
-  setStatus(value: string): void;
+  clearStatusList(): void;
+  getStatusList(): Array<string>;
+  setStatusList(value: Array<string>): void;
+  addStatus(value: string, index?: number): string;
 
   getPage(): number;
   setPage(value: number): void;
 
   getSorting(): string;
   setSorting(value: string): void;
+
+  getLimit(): number;
+  setLimit(value: number): void;
+
+  clearPgProviderList(): void;
+  getPgProviderList(): Array<string>;
+  setPgProviderList(value: Array<string>): void;
+  addPgProvider(value: string, index?: number): string;
+
+  clearPayMethodList(): void;
+  getPayMethodList(): Array<string>;
+  setPayMethodList(value: Array<string>): void;
+  addPayMethod(value: string, index?: number): string;
+
+  getBuyerName(): string;
+  setBuyerName(value: string): void;
+
+  getBuyerTel(): string;
+  setBuyerTel(value: string): void;
+
+  getBuyerEmail(): string;
+  setBuyerEmail(value: string): void;
+
+  getStart(): string;
+  setStart(value: string): void;
+
+  getEnd(): string;
+  setEnd(value: string): void;
+
+  getSandbox(): boolean;
+  setSandbox(value: boolean): void;
+
+  clearOutputFormatList(): void;
+  getOutputFormatList(): Array<string>;
+  setOutputFormatList(value: Array<string>): void;
+  addOutputFormat(value: string, index?: number): string;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTxsRecordsRequest.AsObject;
@@ -39,9 +77,19 @@ export namespace GetTxsRecordsRequest {
     impUid: string,
     merchantUid: string,
     paidBy: string,
-    status: string,
+    statusList: Array<string>,
     page: number,
     sorting: string,
+    limit: number,
+    pgProviderList: Array<string>,
+    payMethodList: Array<string>,
+    buyerName: string,
+    buyerTel: string,
+    buyerEmail: string,
+    start: string,
+    end: string,
+    sandbox: boolean,
+    outputFormatList: Array<string>,
   }
 }
 

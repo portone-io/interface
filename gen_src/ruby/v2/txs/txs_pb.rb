@@ -11,9 +11,19 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :imp_uid, :string, 1
       optional :merchant_uid, :string, 2
       optional :paid_by, :string, 3
-      optional :status, :string, 4
+      repeated :status, :string, 4
       optional :page, :int32, 5
       optional :sorting, :string, 6
+      optional :limit, :int32, 7
+      repeated :pg_provider, :string, 8
+      repeated :pay_method, :string, 9
+      optional :buyer_name, :string, 10
+      optional :buyer_tel, :string, 11
+      optional :buyer_email, :string, 12
+      optional :start, :string, 13
+      optional :end, :string, 14
+      optional :sandbox, :bool, 15
+      repeated :output_format, :string, 16
     end
     add_message "txs_v2.GetTxsRecordsReponse" do
       optional :code, :int32, 1

@@ -26,9 +26,9 @@ class GetTxsRecordsRequest extends \Google\Protobuf\Internal\Message
      */
     protected $paid_by = '';
     /**
-     * Generated from protobuf field <code>string status = 4;</code>
+     * Generated from protobuf field <code>repeated string status = 4;</code>
      */
-    protected $status = '';
+    private $status;
     /**
      * Generated from protobuf field <code>int32 page = 5;</code>
      */
@@ -37,6 +37,46 @@ class GetTxsRecordsRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string sorting = 6;</code>
      */
     protected $sorting = '';
+    /**
+     * Generated from protobuf field <code>int32 limit = 7;</code>
+     */
+    protected $limit = 0;
+    /**
+     * Generated from protobuf field <code>repeated string pg_provider = 8;</code>
+     */
+    private $pg_provider;
+    /**
+     * Generated from protobuf field <code>repeated string pay_method = 9;</code>
+     */
+    private $pay_method;
+    /**
+     * Generated from protobuf field <code>string buyer_name = 10;</code>
+     */
+    protected $buyer_name = '';
+    /**
+     * Generated from protobuf field <code>string buyer_tel = 11;</code>
+     */
+    protected $buyer_tel = '';
+    /**
+     * Generated from protobuf field <code>string buyer_email = 12;</code>
+     */
+    protected $buyer_email = '';
+    /**
+     * Generated from protobuf field <code>string start = 13;</code>
+     */
+    protected $start = '';
+    /**
+     * Generated from protobuf field <code>string end = 14;</code>
+     */
+    protected $end = '';
+    /**
+     * Generated from protobuf field <code>bool sandbox = 15;</code>
+     */
+    protected $sandbox = false;
+    /**
+     * Generated from protobuf field <code>repeated string output_format = 16;</code>
+     */
+    private $output_format;
 
     /**
      * Constructor.
@@ -47,9 +87,19 @@ class GetTxsRecordsRequest extends \Google\Protobuf\Internal\Message
      *     @type string $imp_uid
      *     @type string $merchant_uid
      *     @type string $paid_by
-     *     @type string $status
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $status
      *     @type int $page
      *     @type string $sorting
+     *     @type int $limit
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $pg_provider
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $pay_method
+     *     @type string $buyer_name
+     *     @type string $buyer_tel
+     *     @type string $buyer_email
+     *     @type string $start
+     *     @type string $end
+     *     @type bool $sandbox
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $output_format
      * }
      */
     public function __construct($data = NULL) {
@@ -124,8 +174,8 @@ class GetTxsRecordsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string status = 4;</code>
-     * @return string
+     * Generated from protobuf field <code>repeated string status = 4;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getStatus()
     {
@@ -133,14 +183,14 @@ class GetTxsRecordsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string status = 4;</code>
-     * @param string $var
+     * Generated from protobuf field <code>repeated string status = 4;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStatus($var)
     {
-        GPBUtil::checkString($var, True);
-        $this->status = $var;
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->status = $arr;
 
         return $this;
     }
@@ -185,6 +235,226 @@ class GetTxsRecordsRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->sorting = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 limit = 7;</code>
+     * @return int
+     */
+    public function getLimit()
+    {
+        return $this->limit;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 limit = 7;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setLimit($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->limit = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string pg_provider = 8;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getPgProvider()
+    {
+        return $this->pg_provider;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string pg_provider = 8;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setPgProvider($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->pg_provider = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string pay_method = 9;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getPayMethod()
+    {
+        return $this->pay_method;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string pay_method = 9;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setPayMethod($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->pay_method = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_name = 10;</code>
+     * @return string
+     */
+    public function getBuyerName()
+    {
+        return $this->buyer_name;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_name = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setBuyerName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->buyer_name = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_tel = 11;</code>
+     * @return string
+     */
+    public function getBuyerTel()
+    {
+        return $this->buyer_tel;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_tel = 11;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setBuyerTel($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->buyer_tel = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_email = 12;</code>
+     * @return string
+     */
+    public function getBuyerEmail()
+    {
+        return $this->buyer_email;
+    }
+
+    /**
+     * Generated from protobuf field <code>string buyer_email = 12;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setBuyerEmail($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->buyer_email = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string start = 13;</code>
+     * @return string
+     */
+    public function getStart()
+    {
+        return $this->start;
+    }
+
+    /**
+     * Generated from protobuf field <code>string start = 13;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setStart($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->start = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string end = 14;</code>
+     * @return string
+     */
+    public function getEnd()
+    {
+        return $this->end;
+    }
+
+    /**
+     * Generated from protobuf field <code>string end = 14;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setEnd($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->end = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool sandbox = 15;</code>
+     * @return bool
+     */
+    public function getSandbox()
+    {
+        return $this->sandbox;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool sandbox = 15;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSandbox($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->sandbox = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string output_format = 16;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getOutputFormat()
+    {
+        return $this->output_format;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string output_format = 16;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setOutputFormat($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->output_format = $arr;
 
         return $this;
     }

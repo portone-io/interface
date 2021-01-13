@@ -55,16 +55,29 @@ public final class Txs {
         getPaidByBytes();
 
     /**
-     * <code>string status = 4;</code>
-     * @return The status.
+     * <code>repeated string status = 4;</code>
+     * @return A list containing the status.
      */
-    java.lang.String getStatus();
+    java.util.List<java.lang.String>
+        getStatusList();
     /**
-     * <code>string status = 4;</code>
-     * @return The bytes for status.
+     * <code>repeated string status = 4;</code>
+     * @return The count of status.
+     */
+    int getStatusCount();
+    /**
+     * <code>repeated string status = 4;</code>
+     * @param index The index of the element to return.
+     * @return The status at the given index.
+     */
+    java.lang.String getStatus(int index);
+    /**
+     * <code>repeated string status = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the status at the given index.
      */
     com.google.protobuf.ByteString
-        getStatusBytes();
+        getStatusBytes(int index);
 
     /**
      * <code>int32 page = 5;</code>
@@ -83,6 +96,153 @@ public final class Txs {
      */
     com.google.protobuf.ByteString
         getSortingBytes();
+
+    /**
+     * <code>int32 limit = 7;</code>
+     * @return The limit.
+     */
+    int getLimit();
+
+    /**
+     * <code>repeated string pg_provider = 8;</code>
+     * @return A list containing the pgProvider.
+     */
+    java.util.List<java.lang.String>
+        getPgProviderList();
+    /**
+     * <code>repeated string pg_provider = 8;</code>
+     * @return The count of pgProvider.
+     */
+    int getPgProviderCount();
+    /**
+     * <code>repeated string pg_provider = 8;</code>
+     * @param index The index of the element to return.
+     * @return The pgProvider at the given index.
+     */
+    java.lang.String getPgProvider(int index);
+    /**
+     * <code>repeated string pg_provider = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the pgProvider at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPgProviderBytes(int index);
+
+    /**
+     * <code>repeated string pay_method = 9;</code>
+     * @return A list containing the payMethod.
+     */
+    java.util.List<java.lang.String>
+        getPayMethodList();
+    /**
+     * <code>repeated string pay_method = 9;</code>
+     * @return The count of payMethod.
+     */
+    int getPayMethodCount();
+    /**
+     * <code>repeated string pay_method = 9;</code>
+     * @param index The index of the element to return.
+     * @return The payMethod at the given index.
+     */
+    java.lang.String getPayMethod(int index);
+    /**
+     * <code>repeated string pay_method = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the payMethod at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPayMethodBytes(int index);
+
+    /**
+     * <code>string buyer_name = 10;</code>
+     * @return The buyerName.
+     */
+    java.lang.String getBuyerName();
+    /**
+     * <code>string buyer_name = 10;</code>
+     * @return The bytes for buyerName.
+     */
+    com.google.protobuf.ByteString
+        getBuyerNameBytes();
+
+    /**
+     * <code>string buyer_tel = 11;</code>
+     * @return The buyerTel.
+     */
+    java.lang.String getBuyerTel();
+    /**
+     * <code>string buyer_tel = 11;</code>
+     * @return The bytes for buyerTel.
+     */
+    com.google.protobuf.ByteString
+        getBuyerTelBytes();
+
+    /**
+     * <code>string buyer_email = 12;</code>
+     * @return The buyerEmail.
+     */
+    java.lang.String getBuyerEmail();
+    /**
+     * <code>string buyer_email = 12;</code>
+     * @return The bytes for buyerEmail.
+     */
+    com.google.protobuf.ByteString
+        getBuyerEmailBytes();
+
+    /**
+     * <code>string start = 13;</code>
+     * @return The start.
+     */
+    java.lang.String getStart();
+    /**
+     * <code>string start = 13;</code>
+     * @return The bytes for start.
+     */
+    com.google.protobuf.ByteString
+        getStartBytes();
+
+    /**
+     * <code>string end = 14;</code>
+     * @return The end.
+     */
+    java.lang.String getEnd();
+    /**
+     * <code>string end = 14;</code>
+     * @return The bytes for end.
+     */
+    com.google.protobuf.ByteString
+        getEndBytes();
+
+    /**
+     * <code>bool sandbox = 15;</code>
+     * @return The sandbox.
+     */
+    boolean getSandbox();
+
+    /**
+     * <code>repeated string output_format = 16;</code>
+     * @return A list containing the outputFormat.
+     */
+    java.util.List<java.lang.String>
+        getOutputFormatList();
+    /**
+     * <code>repeated string output_format = 16;</code>
+     * @return The count of outputFormat.
+     */
+    int getOutputFormatCount();
+    /**
+     * <code>repeated string output_format = 16;</code>
+     * @param index The index of the element to return.
+     * @return The outputFormat at the given index.
+     */
+    java.lang.String getOutputFormat(int index);
+    /**
+     * <code>repeated string output_format = 16;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the outputFormat at the given index.
+     */
+    com.google.protobuf.ByteString
+        getOutputFormatBytes(int index);
   }
   /**
    * Protobuf type {@code txs_v2.GetTxsRecordsRequest}
@@ -100,8 +260,16 @@ public final class Txs {
       impUid_ = "";
       merchantUid_ = "";
       paidBy_ = "";
-      status_ = "";
+      status_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       sorting_ = "";
+      pgProvider_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      payMethod_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      buyerName_ = "";
+      buyerTel_ = "";
+      buyerEmail_ = "";
+      start_ = "";
+      end_ = "";
+      outputFormat_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -124,6 +292,7 @@ public final class Txs {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -154,8 +323,11 @@ public final class Txs {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-
-              status_ = s;
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                status_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              status_.add(s);
               break;
             }
             case 40: {
@@ -167,6 +339,73 @@ public final class Txs {
               java.lang.String s = input.readStringRequireUtf8();
 
               sorting_ = s;
+              break;
+            }
+            case 56: {
+
+              limit_ = input.readInt32();
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                pgProvider_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              pgProvider_.add(s);
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                payMethod_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              payMethod_.add(s);
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              buyerName_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              buyerTel_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              buyerEmail_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              start_ = s;
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              end_ = s;
+              break;
+            }
+            case 120: {
+
+              sandbox_ = input.readBool();
+              break;
+            }
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                outputFormat_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              outputFormat_.add(s);
               break;
             }
             default: {
@@ -184,6 +423,18 @@ public final class Txs {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          status_ = status_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          pgProvider_ = pgProvider_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          payMethod_ = payMethod_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          outputFormat_ = outputFormat_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -316,41 +567,38 @@ public final class Txs {
     }
 
     public static final int STATUS_FIELD_NUMBER = 4;
-    private volatile java.lang.Object status_;
+    private com.google.protobuf.LazyStringList status_;
     /**
-     * <code>string status = 4;</code>
-     * @return The status.
+     * <code>repeated string status = 4;</code>
+     * @return A list containing the status.
      */
-    @java.lang.Override
-    public java.lang.String getStatus() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        status_ = s;
-        return s;
-      }
+    public com.google.protobuf.ProtocolStringList
+        getStatusList() {
+      return status_;
     }
     /**
-     * <code>string status = 4;</code>
-     * @return The bytes for status.
+     * <code>repeated string status = 4;</code>
+     * @return The count of status.
      */
-    @java.lang.Override
+    public int getStatusCount() {
+      return status_.size();
+    }
+    /**
+     * <code>repeated string status = 4;</code>
+     * @param index The index of the element to return.
+     * @return The status at the given index.
+     */
+    public java.lang.String getStatus(int index) {
+      return status_.get(index);
+    }
+    /**
+     * <code>repeated string status = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the status at the given index.
+     */
     public com.google.protobuf.ByteString
-        getStatusBytes() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        status_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+        getStatusBytes(int index) {
+      return status_.getByteString(index);
     }
 
     public static final int PAGE_FIELD_NUMBER = 5;
@@ -402,6 +650,323 @@ public final class Txs {
       }
     }
 
+    public static final int LIMIT_FIELD_NUMBER = 7;
+    private int limit_;
+    /**
+     * <code>int32 limit = 7;</code>
+     * @return The limit.
+     */
+    @java.lang.Override
+    public int getLimit() {
+      return limit_;
+    }
+
+    public static final int PG_PROVIDER_FIELD_NUMBER = 8;
+    private com.google.protobuf.LazyStringList pgProvider_;
+    /**
+     * <code>repeated string pg_provider = 8;</code>
+     * @return A list containing the pgProvider.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPgProviderList() {
+      return pgProvider_;
+    }
+    /**
+     * <code>repeated string pg_provider = 8;</code>
+     * @return The count of pgProvider.
+     */
+    public int getPgProviderCount() {
+      return pgProvider_.size();
+    }
+    /**
+     * <code>repeated string pg_provider = 8;</code>
+     * @param index The index of the element to return.
+     * @return The pgProvider at the given index.
+     */
+    public java.lang.String getPgProvider(int index) {
+      return pgProvider_.get(index);
+    }
+    /**
+     * <code>repeated string pg_provider = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the pgProvider at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPgProviderBytes(int index) {
+      return pgProvider_.getByteString(index);
+    }
+
+    public static final int PAY_METHOD_FIELD_NUMBER = 9;
+    private com.google.protobuf.LazyStringList payMethod_;
+    /**
+     * <code>repeated string pay_method = 9;</code>
+     * @return A list containing the payMethod.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPayMethodList() {
+      return payMethod_;
+    }
+    /**
+     * <code>repeated string pay_method = 9;</code>
+     * @return The count of payMethod.
+     */
+    public int getPayMethodCount() {
+      return payMethod_.size();
+    }
+    /**
+     * <code>repeated string pay_method = 9;</code>
+     * @param index The index of the element to return.
+     * @return The payMethod at the given index.
+     */
+    public java.lang.String getPayMethod(int index) {
+      return payMethod_.get(index);
+    }
+    /**
+     * <code>repeated string pay_method = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the payMethod at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPayMethodBytes(int index) {
+      return payMethod_.getByteString(index);
+    }
+
+    public static final int BUYER_NAME_FIELD_NUMBER = 10;
+    private volatile java.lang.Object buyerName_;
+    /**
+     * <code>string buyer_name = 10;</code>
+     * @return The buyerName.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyerName() {
+      java.lang.Object ref = buyerName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyerName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer_name = 10;</code>
+     * @return The bytes for buyerName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerNameBytes() {
+      java.lang.Object ref = buyerName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUYER_TEL_FIELD_NUMBER = 11;
+    private volatile java.lang.Object buyerTel_;
+    /**
+     * <code>string buyer_tel = 11;</code>
+     * @return The buyerTel.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyerTel() {
+      java.lang.Object ref = buyerTel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyerTel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer_tel = 11;</code>
+     * @return The bytes for buyerTel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerTelBytes() {
+      java.lang.Object ref = buyerTel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyerTel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUYER_EMAIL_FIELD_NUMBER = 12;
+    private volatile java.lang.Object buyerEmail_;
+    /**
+     * <code>string buyer_email = 12;</code>
+     * @return The buyerEmail.
+     */
+    @java.lang.Override
+    public java.lang.String getBuyerEmail() {
+      java.lang.Object ref = buyerEmail_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buyerEmail_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buyer_email = 12;</code>
+     * @return The bytes for buyerEmail.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuyerEmailBytes() {
+      java.lang.Object ref = buyerEmail_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buyerEmail_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_FIELD_NUMBER = 13;
+    private volatile java.lang.Object start_;
+    /**
+     * <code>string start = 13;</code>
+     * @return The start.
+     */
+    @java.lang.Override
+    public java.lang.String getStart() {
+      java.lang.Object ref = start_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        start_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string start = 13;</code>
+     * @return The bytes for start.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStartBytes() {
+      java.lang.Object ref = start_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        start_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int END_FIELD_NUMBER = 14;
+    private volatile java.lang.Object end_;
+    /**
+     * <code>string end = 14;</code>
+     * @return The end.
+     */
+    @java.lang.Override
+    public java.lang.String getEnd() {
+      java.lang.Object ref = end_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        end_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string end = 14;</code>
+     * @return The bytes for end.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndBytes() {
+      java.lang.Object ref = end_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        end_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SANDBOX_FIELD_NUMBER = 15;
+    private boolean sandbox_;
+    /**
+     * <code>bool sandbox = 15;</code>
+     * @return The sandbox.
+     */
+    @java.lang.Override
+    public boolean getSandbox() {
+      return sandbox_;
+    }
+
+    public static final int OUTPUT_FORMAT_FIELD_NUMBER = 16;
+    private com.google.protobuf.LazyStringList outputFormat_;
+    /**
+     * <code>repeated string output_format = 16;</code>
+     * @return A list containing the outputFormat.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getOutputFormatList() {
+      return outputFormat_;
+    }
+    /**
+     * <code>repeated string output_format = 16;</code>
+     * @return The count of outputFormat.
+     */
+    public int getOutputFormatCount() {
+      return outputFormat_.size();
+    }
+    /**
+     * <code>repeated string output_format = 16;</code>
+     * @param index The index of the element to return.
+     * @return The outputFormat at the given index.
+     */
+    public java.lang.String getOutputFormat(int index) {
+      return outputFormat_.get(index);
+    }
+    /**
+     * <code>repeated string output_format = 16;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the outputFormat at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getOutputFormatBytes(int index) {
+      return outputFormat_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -425,14 +990,44 @@ public final class Txs {
       if (!getPaidByBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, paidBy_);
       }
-      if (!getStatusBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, status_);
+      for (int i = 0; i < status_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, status_.getRaw(i));
       }
       if (page_ != 0) {
         output.writeInt32(5, page_);
       }
       if (!getSortingBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sorting_);
+      }
+      if (limit_ != 0) {
+        output.writeInt32(7, limit_);
+      }
+      for (int i = 0; i < pgProvider_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, pgProvider_.getRaw(i));
+      }
+      for (int i = 0; i < payMethod_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, payMethod_.getRaw(i));
+      }
+      if (!getBuyerNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, buyerName_);
+      }
+      if (!getBuyerTelBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, buyerTel_);
+      }
+      if (!getBuyerEmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, buyerEmail_);
+      }
+      if (!getStartBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, start_);
+      }
+      if (!getEndBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, end_);
+      }
+      if (sandbox_ != false) {
+        output.writeBool(15, sandbox_);
+      }
+      for (int i = 0; i < outputFormat_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, outputFormat_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -452,8 +1047,13 @@ public final class Txs {
       if (!getPaidByBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, paidBy_);
       }
-      if (!getStatusBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, status_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < status_.size(); i++) {
+          dataSize += computeStringSizeNoTag(status_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getStatusList().size();
       }
       if (page_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -461,6 +1061,53 @@ public final class Txs {
       }
       if (!getSortingBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sorting_);
+      }
+      if (limit_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, limit_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < pgProvider_.size(); i++) {
+          dataSize += computeStringSizeNoTag(pgProvider_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPgProviderList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < payMethod_.size(); i++) {
+          dataSize += computeStringSizeNoTag(payMethod_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPayMethodList().size();
+      }
+      if (!getBuyerNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, buyerName_);
+      }
+      if (!getBuyerTelBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, buyerTel_);
+      }
+      if (!getBuyerEmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, buyerEmail_);
+      }
+      if (!getStartBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, start_);
+      }
+      if (!getEndBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, end_);
+      }
+      if (sandbox_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(15, sandbox_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < outputFormat_.size(); i++) {
+          dataSize += computeStringSizeNoTag(outputFormat_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getOutputFormatList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -483,12 +1130,32 @@ public final class Txs {
           .equals(other.getMerchantUid())) return false;
       if (!getPaidBy()
           .equals(other.getPaidBy())) return false;
-      if (!getStatus()
-          .equals(other.getStatus())) return false;
+      if (!getStatusList()
+          .equals(other.getStatusList())) return false;
       if (getPage()
           != other.getPage()) return false;
       if (!getSorting()
           .equals(other.getSorting())) return false;
+      if (getLimit()
+          != other.getLimit()) return false;
+      if (!getPgProviderList()
+          .equals(other.getPgProviderList())) return false;
+      if (!getPayMethodList()
+          .equals(other.getPayMethodList())) return false;
+      if (!getBuyerName()
+          .equals(other.getBuyerName())) return false;
+      if (!getBuyerTel()
+          .equals(other.getBuyerTel())) return false;
+      if (!getBuyerEmail()
+          .equals(other.getBuyerEmail())) return false;
+      if (!getStart()
+          .equals(other.getStart())) return false;
+      if (!getEnd()
+          .equals(other.getEnd())) return false;
+      if (getSandbox()
+          != other.getSandbox()) return false;
+      if (!getOutputFormatList()
+          .equals(other.getOutputFormatList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -506,12 +1173,41 @@ public final class Txs {
       hash = (53 * hash) + getMerchantUid().hashCode();
       hash = (37 * hash) + PAID_BY_FIELD_NUMBER;
       hash = (53 * hash) + getPaidBy().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + getStatus().hashCode();
+      if (getStatusCount() > 0) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatusList().hashCode();
+      }
       hash = (37 * hash) + PAGE_FIELD_NUMBER;
       hash = (53 * hash) + getPage();
       hash = (37 * hash) + SORTING_FIELD_NUMBER;
       hash = (53 * hash) + getSorting().hashCode();
+      hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getLimit();
+      if (getPgProviderCount() > 0) {
+        hash = (37 * hash) + PG_PROVIDER_FIELD_NUMBER;
+        hash = (53 * hash) + getPgProviderList().hashCode();
+      }
+      if (getPayMethodCount() > 0) {
+        hash = (37 * hash) + PAY_METHOD_FIELD_NUMBER;
+        hash = (53 * hash) + getPayMethodList().hashCode();
+      }
+      hash = (37 * hash) + BUYER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyerName().hashCode();
+      hash = (37 * hash) + BUYER_TEL_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyerTel().hashCode();
+      hash = (37 * hash) + BUYER_EMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyerEmail().hashCode();
+      hash = (37 * hash) + START_FIELD_NUMBER;
+      hash = (53 * hash) + getStart().hashCode();
+      hash = (37 * hash) + END_FIELD_NUMBER;
+      hash = (53 * hash) + getEnd().hashCode();
+      hash = (37 * hash) + SANDBOX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSandbox());
+      if (getOutputFormatCount() > 0) {
+        hash = (37 * hash) + OUTPUT_FORMAT_FIELD_NUMBER;
+        hash = (53 * hash) + getOutputFormatList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -651,12 +1347,32 @@ public final class Txs {
 
         paidBy_ = "";
 
-        status_ = "";
-
+        status_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         page_ = 0;
 
         sorting_ = "";
 
+        limit_ = 0;
+
+        pgProvider_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        payMethod_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        buyerName_ = "";
+
+        buyerTel_ = "";
+
+        buyerEmail_ = "";
+
+        start_ = "";
+
+        end_ = "";
+
+        sandbox_ = false;
+
+        outputFormat_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -683,12 +1399,39 @@ public final class Txs {
       @java.lang.Override
       public txs_v2.Txs.GetTxsRecordsRequest buildPartial() {
         txs_v2.Txs.GetTxsRecordsRequest result = new txs_v2.Txs.GetTxsRecordsRequest(this);
+        int from_bitField0_ = bitField0_;
         result.impUid_ = impUid_;
         result.merchantUid_ = merchantUid_;
         result.paidBy_ = paidBy_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          status_ = status_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
         result.status_ = status_;
         result.page_ = page_;
         result.sorting_ = sorting_;
+        result.limit_ = limit_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          pgProvider_ = pgProvider_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.pgProvider_ = pgProvider_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          payMethod_ = payMethod_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.payMethod_ = payMethod_;
+        result.buyerName_ = buyerName_;
+        result.buyerTel_ = buyerTel_;
+        result.buyerEmail_ = buyerEmail_;
+        result.start_ = start_;
+        result.end_ = end_;
+        result.sandbox_ = sandbox_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          outputFormat_ = outputFormat_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.outputFormat_ = outputFormat_;
         onBuilt();
         return result;
       }
@@ -749,8 +1492,14 @@ public final class Txs {
           paidBy_ = other.paidBy_;
           onChanged();
         }
-        if (!other.getStatus().isEmpty()) {
-          status_ = other.status_;
+        if (!other.status_.isEmpty()) {
+          if (status_.isEmpty()) {
+            status_ = other.status_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureStatusIsMutable();
+            status_.addAll(other.status_);
+          }
           onChanged();
         }
         if (other.getPage() != 0) {
@@ -758,6 +1507,62 @@ public final class Txs {
         }
         if (!other.getSorting().isEmpty()) {
           sorting_ = other.sorting_;
+          onChanged();
+        }
+        if (other.getLimit() != 0) {
+          setLimit(other.getLimit());
+        }
+        if (!other.pgProvider_.isEmpty()) {
+          if (pgProvider_.isEmpty()) {
+            pgProvider_ = other.pgProvider_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensurePgProviderIsMutable();
+            pgProvider_.addAll(other.pgProvider_);
+          }
+          onChanged();
+        }
+        if (!other.payMethod_.isEmpty()) {
+          if (payMethod_.isEmpty()) {
+            payMethod_ = other.payMethod_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensurePayMethodIsMutable();
+            payMethod_.addAll(other.payMethod_);
+          }
+          onChanged();
+        }
+        if (!other.getBuyerName().isEmpty()) {
+          buyerName_ = other.buyerName_;
+          onChanged();
+        }
+        if (!other.getBuyerTel().isEmpty()) {
+          buyerTel_ = other.buyerTel_;
+          onChanged();
+        }
+        if (!other.getBuyerEmail().isEmpty()) {
+          buyerEmail_ = other.buyerEmail_;
+          onChanged();
+        }
+        if (!other.getStart().isEmpty()) {
+          start_ = other.start_;
+          onChanged();
+        }
+        if (!other.getEnd().isEmpty()) {
+          end_ = other.end_;
+          onChanged();
+        }
+        if (other.getSandbox() != false) {
+          setSandbox(other.getSandbox());
+        }
+        if (!other.outputFormat_.isEmpty()) {
+          if (outputFormat_.isEmpty()) {
+            outputFormat_ = other.outputFormat_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureOutputFormatIsMutable();
+            outputFormat_.addAll(other.outputFormat_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -788,6 +1593,7 @@ public final class Txs {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object impUid_ = "";
       /**
@@ -1017,78 +1823,112 @@ public final class Txs {
         return this;
       }
 
-      private java.lang.Object status_ = "";
-      /**
-       * <code>string status = 4;</code>
-       * @return The status.
-       */
-      public java.lang.String getStatus() {
-        java.lang.Object ref = status_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          status_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      private com.google.protobuf.LazyStringList status_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureStatusIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          status_ = new com.google.protobuf.LazyStringArrayList(status_);
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
-       * <code>string status = 4;</code>
-       * @return The bytes for status.
+       * <code>repeated string status = 4;</code>
+       * @return A list containing the status.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getStatusList() {
+        return status_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string status = 4;</code>
+       * @return The count of status.
+       */
+      public int getStatusCount() {
+        return status_.size();
+      }
+      /**
+       * <code>repeated string status = 4;</code>
+       * @param index The index of the element to return.
+       * @return The status at the given index.
+       */
+      public java.lang.String getStatus(int index) {
+        return status_.get(index);
+      }
+      /**
+       * <code>repeated string status = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the status at the given index.
        */
       public com.google.protobuf.ByteString
-          getStatusBytes() {
-        java.lang.Object ref = status_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          status_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+          getStatusBytes(int index) {
+        return status_.getByteString(index);
       }
       /**
-       * <code>string status = 4;</code>
+       * <code>repeated string status = 4;</code>
+       * @param index The index to set the value at.
        * @param value The status to set.
        * @return This builder for chaining.
        */
       public Builder setStatus(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStatusIsMutable();
+        status_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string status = 4;</code>
+       * @param value The status to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStatus(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  
-        status_ = value;
+  ensureStatusIsMutable();
+        status_.add(value);
         onChanged();
         return this;
       }
       /**
-       * <code>string status = 4;</code>
+       * <code>repeated string status = 4;</code>
+       * @param values The status to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllStatus(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureStatusIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, status_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string status = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
-        status_ = getDefaultInstance().getStatus();
+        status_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string status = 4;</code>
-       * @param value The bytes for status to set.
+       * <code>repeated string status = 4;</code>
+       * @param value The bytes of the status to add.
        * @return This builder for chaining.
        */
-      public Builder setStatusBytes(
+      public Builder addStatusBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
-        status_ = value;
+        ensureStatusIsMutable();
+        status_.add(value);
         onChanged();
         return this;
       }
@@ -1196,6 +2036,778 @@ public final class Txs {
   checkByteStringIsUtf8(value);
         
         sorting_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int limit_ ;
+      /**
+       * <code>int32 limit = 7;</code>
+       * @return The limit.
+       */
+      @java.lang.Override
+      public int getLimit() {
+        return limit_;
+      }
+      /**
+       * <code>int32 limit = 7;</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLimit(int value) {
+        
+        limit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 limit = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLimit() {
+        
+        limit_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList pgProvider_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensurePgProviderIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          pgProvider_ = new com.google.protobuf.LazyStringArrayList(pgProvider_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string pg_provider = 8;</code>
+       * @return A list containing the pgProvider.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPgProviderList() {
+        return pgProvider_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string pg_provider = 8;</code>
+       * @return The count of pgProvider.
+       */
+      public int getPgProviderCount() {
+        return pgProvider_.size();
+      }
+      /**
+       * <code>repeated string pg_provider = 8;</code>
+       * @param index The index of the element to return.
+       * @return The pgProvider at the given index.
+       */
+      public java.lang.String getPgProvider(int index) {
+        return pgProvider_.get(index);
+      }
+      /**
+       * <code>repeated string pg_provider = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the pgProvider at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPgProviderBytes(int index) {
+        return pgProvider_.getByteString(index);
+      }
+      /**
+       * <code>repeated string pg_provider = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The pgProvider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPgProvider(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePgProviderIsMutable();
+        pgProvider_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string pg_provider = 8;</code>
+       * @param value The pgProvider to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPgProvider(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePgProviderIsMutable();
+        pgProvider_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string pg_provider = 8;</code>
+       * @param values The pgProvider to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPgProvider(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePgProviderIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, pgProvider_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string pg_provider = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPgProvider() {
+        pgProvider_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string pg_provider = 8;</code>
+       * @param value The bytes of the pgProvider to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPgProviderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensurePgProviderIsMutable();
+        pgProvider_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList payMethod_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensurePayMethodIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          payMethod_ = new com.google.protobuf.LazyStringArrayList(payMethod_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string pay_method = 9;</code>
+       * @return A list containing the payMethod.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPayMethodList() {
+        return payMethod_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string pay_method = 9;</code>
+       * @return The count of payMethod.
+       */
+      public int getPayMethodCount() {
+        return payMethod_.size();
+      }
+      /**
+       * <code>repeated string pay_method = 9;</code>
+       * @param index The index of the element to return.
+       * @return The payMethod at the given index.
+       */
+      public java.lang.String getPayMethod(int index) {
+        return payMethod_.get(index);
+      }
+      /**
+       * <code>repeated string pay_method = 9;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the payMethod at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPayMethodBytes(int index) {
+        return payMethod_.getByteString(index);
+      }
+      /**
+       * <code>repeated string pay_method = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The payMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayMethod(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePayMethodIsMutable();
+        payMethod_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string pay_method = 9;</code>
+       * @param value The payMethod to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPayMethod(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePayMethodIsMutable();
+        payMethod_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string pay_method = 9;</code>
+       * @param values The payMethod to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPayMethod(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePayMethodIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, payMethod_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string pay_method = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayMethod() {
+        payMethod_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string pay_method = 9;</code>
+       * @param value The bytes of the payMethod to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPayMethodBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensurePayMethodIsMutable();
+        payMethod_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyerName_ = "";
+      /**
+       * <code>string buyer_name = 10;</code>
+       * @return The buyerName.
+       */
+      public java.lang.String getBuyerName() {
+        java.lang.Object ref = buyerName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyerName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer_name = 10;</code>
+       * @return The bytes for buyerName.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerNameBytes() {
+        java.lang.Object ref = buyerName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyerName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer_name = 10;</code>
+       * @param value The buyerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        buyerName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_name = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyerName() {
+        
+        buyerName_ = getDefaultInstance().getBuyerName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_name = 10;</code>
+       * @param value The bytes for buyerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        buyerName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyerTel_ = "";
+      /**
+       * <code>string buyer_tel = 11;</code>
+       * @return The buyerTel.
+       */
+      public java.lang.String getBuyerTel() {
+        java.lang.Object ref = buyerTel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyerTel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer_tel = 11;</code>
+       * @return The bytes for buyerTel.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerTelBytes() {
+        java.lang.Object ref = buyerTel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyerTel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer_tel = 11;</code>
+       * @param value The buyerTel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerTel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        buyerTel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_tel = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyerTel() {
+        
+        buyerTel_ = getDefaultInstance().getBuyerTel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_tel = 11;</code>
+       * @param value The bytes for buyerTel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerTelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        buyerTel_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buyerEmail_ = "";
+      /**
+       * <code>string buyer_email = 12;</code>
+       * @return The buyerEmail.
+       */
+      public java.lang.String getBuyerEmail() {
+        java.lang.Object ref = buyerEmail_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buyerEmail_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buyer_email = 12;</code>
+       * @return The bytes for buyerEmail.
+       */
+      public com.google.protobuf.ByteString
+          getBuyerEmailBytes() {
+        java.lang.Object ref = buyerEmail_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buyerEmail_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buyer_email = 12;</code>
+       * @param value The buyerEmail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        buyerEmail_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_email = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyerEmail() {
+        
+        buyerEmail_ = getDefaultInstance().getBuyerEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buyer_email = 12;</code>
+       * @param value The bytes for buyerEmail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyerEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        buyerEmail_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object start_ = "";
+      /**
+       * <code>string start = 13;</code>
+       * @return The start.
+       */
+      public java.lang.String getStart() {
+        java.lang.Object ref = start_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          start_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string start = 13;</code>
+       * @return The bytes for start.
+       */
+      public com.google.protobuf.ByteString
+          getStartBytes() {
+        java.lang.Object ref = start_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          start_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string start = 13;</code>
+       * @param value The start to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStart(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        start_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string start = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStart() {
+        
+        start_ = getDefaultInstance().getStart();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string start = 13;</code>
+       * @param value The bytes for start to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        start_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object end_ = "";
+      /**
+       * <code>string end = 14;</code>
+       * @return The end.
+       */
+      public java.lang.String getEnd() {
+        java.lang.Object ref = end_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          end_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string end = 14;</code>
+       * @return The bytes for end.
+       */
+      public com.google.protobuf.ByteString
+          getEndBytes() {
+        java.lang.Object ref = end_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          end_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string end = 14;</code>
+       * @param value The end to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnd(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        end_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string end = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnd() {
+        
+        end_ = getDefaultInstance().getEnd();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string end = 14;</code>
+       * @param value The bytes for end to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        end_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean sandbox_ ;
+      /**
+       * <code>bool sandbox = 15;</code>
+       * @return The sandbox.
+       */
+      @java.lang.Override
+      public boolean getSandbox() {
+        return sandbox_;
+      }
+      /**
+       * <code>bool sandbox = 15;</code>
+       * @param value The sandbox to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSandbox(boolean value) {
+        
+        sandbox_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool sandbox = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSandbox() {
+        
+        sandbox_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList outputFormat_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureOutputFormatIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          outputFormat_ = new com.google.protobuf.LazyStringArrayList(outputFormat_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated string output_format = 16;</code>
+       * @return A list containing the outputFormat.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getOutputFormatList() {
+        return outputFormat_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string output_format = 16;</code>
+       * @return The count of outputFormat.
+       */
+      public int getOutputFormatCount() {
+        return outputFormat_.size();
+      }
+      /**
+       * <code>repeated string output_format = 16;</code>
+       * @param index The index of the element to return.
+       * @return The outputFormat at the given index.
+       */
+      public java.lang.String getOutputFormat(int index) {
+        return outputFormat_.get(index);
+      }
+      /**
+       * <code>repeated string output_format = 16;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the outputFormat at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getOutputFormatBytes(int index) {
+        return outputFormat_.getByteString(index);
+      }
+      /**
+       * <code>repeated string output_format = 16;</code>
+       * @param index The index to set the value at.
+       * @param value The outputFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutputFormat(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureOutputFormatIsMutable();
+        outputFormat_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string output_format = 16;</code>
+       * @param value The outputFormat to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOutputFormat(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureOutputFormatIsMutable();
+        outputFormat_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string output_format = 16;</code>
+       * @param values The outputFormat to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOutputFormat(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureOutputFormatIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, outputFormat_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string output_format = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOutputFormat() {
+        outputFormat_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string output_format = 16;</code>
+       * @param value The bytes of the outputFormat to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOutputFormatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureOutputFormatIsMutable();
+        outputFormat_.add(value);
         onChanged();
         return this;
       }
@@ -2285,18 +3897,22 @@ public final class Txs {
   static {
     java.lang.String[] descriptorData = {
       "\n\020v2/txs/txs.proto\022\006txs_v2\032\034google/api/a" +
-      "nnotations.proto\032\024v2/basis/basis.proto\"}" +
-      "\n\024GetTxsRecordsRequest\022\017\n\007imp_uid\030\001 \001(\t\022" +
-      "\024\n\014merchant_uid\030\002 \001(\t\022\017\n\007paid_by\030\003 \001(\t\022\016" +
-      "\n\006status\030\004 \001(\t\022\014\n\004page\030\005 \001(\005\022\017\n\007sorting\030" +
-      "\006 \001(\t\"Y\n\024GetTxsRecordsReponse\022\014\n\004code\030\001 " +
-      "\001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \003(\0132\020" +
-      ".basis_v2.UnitTx2}\n\nTxsService\022o\n\023GetTxs" +
-      "RecordService\022\034.txs_v2.GetTxsRecordsRequ" +
-      "est\032\034.txs_v2.GetTxsRecordsReponse\"\034\202\323\344\223\002" +
-      "\026\022\024/api/payments/v2/txsB9Z.github.com/ia" +
-      "mport/interface/gen_src/go/v2/txs\252\002\006V2.T" +
-      "xsb\006proto3"
+      "nnotations.proto\032\024v2/basis/basis.proto\"\265" +
+      "\002\n\024GetTxsRecordsRequest\022\017\n\007imp_uid\030\001 \001(\t" +
+      "\022\024\n\014merchant_uid\030\002 \001(\t\022\017\n\007paid_by\030\003 \001(\t\022" +
+      "\016\n\006status\030\004 \003(\t\022\014\n\004page\030\005 \001(\005\022\017\n\007sorting" +
+      "\030\006 \001(\t\022\r\n\005limit\030\007 \001(\005\022\023\n\013pg_provider\030\010 \003" +
+      "(\t\022\022\n\npay_method\030\t \003(\t\022\022\n\nbuyer_name\030\n \001" +
+      "(\t\022\021\n\tbuyer_tel\030\013 \001(\t\022\023\n\013buyer_email\030\014 \001" +
+      "(\t\022\r\n\005start\030\r \001(\t\022\013\n\003end\030\016 \001(\t\022\017\n\007sandbo" +
+      "x\030\017 \001(\010\022\025\n\routput_format\030\020 \003(\t\"Y\n\024GetTxs" +
+      "RecordsReponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030" +
+      "\002 \001(\t\022\"\n\010response\030\003 \003(\0132\020.basis_v2.UnitT" +
+      "x2}\n\nTxsService\022o\n\023GetTxsRecordService\022\034" +
+      ".txs_v2.GetTxsRecordsRequest\032\034.txs_v2.Ge" +
+      "tTxsRecordsReponse\"\034\202\323\344\223\002\026\022\024/api/payment" +
+      "s/v2/txsB9Z.github.com/iamport/interface" +
+      "/gen_src/go/v2/txs\252\002\006V2.Txsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2309,7 +3925,7 @@ public final class Txs {
     internal_static_txs_v2_GetTxsRecordsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_txs_v2_GetTxsRecordsRequest_descriptor,
-        new java.lang.String[] { "ImpUid", "MerchantUid", "PaidBy", "Status", "Page", "Sorting", });
+        new java.lang.String[] { "ImpUid", "MerchantUid", "PaidBy", "Status", "Page", "Sorting", "Limit", "PgProvider", "PayMethod", "BuyerName", "BuyerTel", "BuyerEmail", "Start", "End", "Sandbox", "OutputFormat", });
     internal_static_txs_v2_GetTxsRecordsReponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_txs_v2_GetTxsRecordsReponse_fieldAccessorTable = new

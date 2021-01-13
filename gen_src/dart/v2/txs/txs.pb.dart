@@ -17,9 +17,19 @@ class GetTxsRecordsRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'impUid')
     ..aOS(2, 'merchantUid')
     ..aOS(3, 'paidBy')
-    ..aOS(4, 'status')
+    ..pPS(4, 'status')
     ..a<$core.int>(5, 'page', $pb.PbFieldType.O3)
     ..aOS(6, 'sorting')
+    ..a<$core.int>(7, 'limit', $pb.PbFieldType.O3)
+    ..pPS(8, 'pgProvider')
+    ..pPS(9, 'payMethod')
+    ..aOS(10, 'buyerName')
+    ..aOS(11, 'buyerTel')
+    ..aOS(12, 'buyerEmail')
+    ..aOS(13, 'start')
+    ..aOS(14, 'end')
+    ..aOB(15, 'sandbox')
+    ..pPS(16, 'outputFormat')
     ..hasRequiredFields = false
   ;
 
@@ -66,13 +76,7 @@ class GetTxsRecordsRequest extends $pb.GeneratedMessage {
   void clearPaidBy() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get status => $_getSZ(3);
-  @$pb.TagNumber(4)
-  set status($core.String v) { $_setString(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasStatus() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearStatus() => clearField(4);
+  $core.List<$core.String> get status => $_getList(3);
 
   @$pb.TagNumber(5)
   $core.int get page => $_getIZ(4);
@@ -91,6 +95,78 @@ class GetTxsRecordsRequest extends $pb.GeneratedMessage {
   $core.bool hasSorting() => $_has(5);
   @$pb.TagNumber(6)
   void clearSorting() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.int get limit => $_getIZ(6);
+  @$pb.TagNumber(7)
+  set limit($core.int v) { $_setSignedInt32(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasLimit() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearLimit() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.List<$core.String> get pgProvider => $_getList(7);
+
+  @$pb.TagNumber(9)
+  $core.List<$core.String> get payMethod => $_getList(8);
+
+  @$pb.TagNumber(10)
+  $core.String get buyerName => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set buyerName($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasBuyerName() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearBuyerName() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.String get buyerTel => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set buyerTel($core.String v) { $_setString(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasBuyerTel() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearBuyerTel() => clearField(11);
+
+  @$pb.TagNumber(12)
+  $core.String get buyerEmail => $_getSZ(11);
+  @$pb.TagNumber(12)
+  set buyerEmail($core.String v) { $_setString(11, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasBuyerEmail() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearBuyerEmail() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.String get start => $_getSZ(12);
+  @$pb.TagNumber(13)
+  set start($core.String v) { $_setString(12, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasStart() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearStart() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.String get end => $_getSZ(13);
+  @$pb.TagNumber(14)
+  set end($core.String v) { $_setString(13, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasEnd() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearEnd() => clearField(14);
+
+  @$pb.TagNumber(15)
+  $core.bool get sandbox => $_getBF(14);
+  @$pb.TagNumber(15)
+  set sandbox($core.bool v) { $_setBool(14, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasSandbox() => $_has(14);
+  @$pb.TagNumber(15)
+  void clearSandbox() => clearField(15);
+
+  @$pb.TagNumber(16)
+  $core.List<$core.String> get outputFormat => $_getList(15);
 }
 
 class GetTxsRecordsReponse extends $pb.GeneratedMessage {

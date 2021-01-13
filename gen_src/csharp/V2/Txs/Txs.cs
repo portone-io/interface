@@ -25,20 +25,24 @@ namespace V2.Txs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChB2Mi90eHMvdHhzLnByb3RvEgZ0eHNfdjIaHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8aFHYyL2Jhc2lzL2Jhc2lzLnByb3RvIn0KFEdldFR4c1Jl",
-            "Y29yZHNSZXF1ZXN0Eg8KB2ltcF91aWQYASABKAkSFAoMbWVyY2hhbnRfdWlk",
-            "GAIgASgJEg8KB3BhaWRfYnkYAyABKAkSDgoGc3RhdHVzGAQgASgJEgwKBHBh",
-            "Z2UYBSABKAUSDwoHc29ydGluZxgGIAEoCSJZChRHZXRUeHNSZWNvcmRzUmVw",
-            "b25zZRIMCgRjb2RlGAEgASgFEg8KB21lc3NhZ2UYAiABKAkSIgoIcmVzcG9u",
-            "c2UYAyADKAsyEC5iYXNpc192Mi5Vbml0VHgyfQoKVHhzU2VydmljZRJvChNH",
-            "ZXRUeHNSZWNvcmRTZXJ2aWNlEhwudHhzX3YyLkdldFR4c1JlY29yZHNSZXF1",
-            "ZXN0GhwudHhzX3YyLkdldFR4c1JlY29yZHNSZXBvbnNlIhyC0+STAhYSFC9h",
-            "cGkvcGF5bWVudHMvdjIvdHhzQjlaLmdpdGh1Yi5jb20vaWFtcG9ydC9pbnRl",
-            "cmZhY2UvZ2VuX3NyYy9nby92Mi90eHOqAgZWMi5UeHNiBnByb3RvMw=="));
+            "dGlvbnMucHJvdG8aFHYyL2Jhc2lzL2Jhc2lzLnByb3RvIrUCChRHZXRUeHNS",
+            "ZWNvcmRzUmVxdWVzdBIPCgdpbXBfdWlkGAEgASgJEhQKDG1lcmNoYW50X3Vp",
+            "ZBgCIAEoCRIPCgdwYWlkX2J5GAMgASgJEg4KBnN0YXR1cxgEIAMoCRIMCgRw",
+            "YWdlGAUgASgFEg8KB3NvcnRpbmcYBiABKAkSDQoFbGltaXQYByABKAUSEwoL",
+            "cGdfcHJvdmlkZXIYCCADKAkSEgoKcGF5X21ldGhvZBgJIAMoCRISCgpidXll",
+            "cl9uYW1lGAogASgJEhEKCWJ1eWVyX3RlbBgLIAEoCRITCgtidXllcl9lbWFp",
+            "bBgMIAEoCRINCgVzdGFydBgNIAEoCRILCgNlbmQYDiABKAkSDwoHc2FuZGJv",
+            "eBgPIAEoCBIVCg1vdXRwdXRfZm9ybWF0GBAgAygJIlkKFEdldFR4c1JlY29y",
+            "ZHNSZXBvbnNlEgwKBGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRIiCghy",
+            "ZXNwb25zZRgDIAMoCzIQLmJhc2lzX3YyLlVuaXRUeDJ9CgpUeHNTZXJ2aWNl",
+            "Em8KE0dldFR4c1JlY29yZFNlcnZpY2USHC50eHNfdjIuR2V0VHhzUmVjb3Jk",
+            "c1JlcXVlc3QaHC50eHNfdjIuR2V0VHhzUmVjb3Jkc1JlcG9uc2UiHILT5JMC",
+            "FhIUL2FwaS9wYXltZW50cy92Mi90eHNCOVouZ2l0aHViLmNvbS9pYW1wb3J0",
+            "L2ludGVyZmFjZS9nZW5fc3JjL2dvL3YyL3R4c6oCBlYyLlR4c2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.Annotations.AnnotationsReflection.Descriptor, global::V2.Basis.BasisReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Txs.GetTxsRecordsRequest), global::V2.Txs.GetTxsRecordsRequest.Parser, new[]{ "ImpUid", "MerchantUid", "PaidBy", "Status", "Page", "Sorting" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Txs.GetTxsRecordsRequest), global::V2.Txs.GetTxsRecordsRequest.Parser, new[]{ "ImpUid", "MerchantUid", "PaidBy", "Status", "Page", "Sorting", "Limit", "PgProvider", "PayMethod", "BuyerName", "BuyerTel", "BuyerEmail", "Start", "End", "Sandbox", "OutputFormat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Txs.GetTxsRecordsReponse), global::V2.Txs.GetTxsRecordsReponse.Parser, new[]{ "Code", "Message", "Response" }, null, null, null, null)
           }));
     }
@@ -78,9 +82,19 @@ namespace V2.Txs {
       impUid_ = other.impUid_;
       merchantUid_ = other.merchantUid_;
       paidBy_ = other.paidBy_;
-      status_ = other.status_;
+      status_ = other.status_.Clone();
       page_ = other.page_;
       sorting_ = other.sorting_;
+      limit_ = other.limit_;
+      pgProvider_ = other.pgProvider_.Clone();
+      payMethod_ = other.payMethod_.Clone();
+      buyerName_ = other.buyerName_;
+      buyerTel_ = other.buyerTel_;
+      buyerEmail_ = other.buyerEmail_;
+      start_ = other.start_;
+      end_ = other.end_;
+      sandbox_ = other.sandbox_;
+      outputFormat_ = other.outputFormat_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -124,13 +138,12 @@ namespace V2.Txs {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 4;
-    private string status_ = "";
+    private static readonly pb::FieldCodec<string> _repeated_status_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> status_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Status {
+    public pbc::RepeatedField<string> Status {
       get { return status_; }
-      set {
-        status_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     /// <summary>Field number for the "page" field.</summary>
@@ -155,6 +168,113 @@ namespace V2.Txs {
       }
     }
 
+    /// <summary>Field number for the "limit" field.</summary>
+    public const int LimitFieldNumber = 7;
+    private int limit_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Limit {
+      get { return limit_; }
+      set {
+        limit_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pg_provider" field.</summary>
+    public const int PgProviderFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_pgProvider_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> pgProvider_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> PgProvider {
+      get { return pgProvider_; }
+    }
+
+    /// <summary>Field number for the "pay_method" field.</summary>
+    public const int PayMethodFieldNumber = 9;
+    private static readonly pb::FieldCodec<string> _repeated_payMethod_codec
+        = pb::FieldCodec.ForString(74);
+    private readonly pbc::RepeatedField<string> payMethod_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> PayMethod {
+      get { return payMethod_; }
+    }
+
+    /// <summary>Field number for the "buyer_name" field.</summary>
+    public const int BuyerNameFieldNumber = 10;
+    private string buyerName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BuyerName {
+      get { return buyerName_; }
+      set {
+        buyerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "buyer_tel" field.</summary>
+    public const int BuyerTelFieldNumber = 11;
+    private string buyerTel_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BuyerTel {
+      get { return buyerTel_; }
+      set {
+        buyerTel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "buyer_email" field.</summary>
+    public const int BuyerEmailFieldNumber = 12;
+    private string buyerEmail_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BuyerEmail {
+      get { return buyerEmail_; }
+      set {
+        buyerEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start" field.</summary>
+    public const int StartFieldNumber = 13;
+    private string start_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Start {
+      get { return start_; }
+      set {
+        start_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "end" field.</summary>
+    public const int EndFieldNumber = 14;
+    private string end_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string End {
+      get { return end_; }
+      set {
+        end_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sandbox" field.</summary>
+    public const int SandboxFieldNumber = 15;
+    private bool sandbox_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Sandbox {
+      get { return sandbox_; }
+      set {
+        sandbox_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "output_format" field.</summary>
+    public const int OutputFormatFieldNumber = 16;
+    private static readonly pb::FieldCodec<string> _repeated_outputFormat_codec
+        = pb::FieldCodec.ForString(130);
+    private readonly pbc::RepeatedField<string> outputFormat_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> OutputFormat {
+      get { return outputFormat_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetTxsRecordsRequest);
@@ -171,9 +291,19 @@ namespace V2.Txs {
       if (ImpUid != other.ImpUid) return false;
       if (MerchantUid != other.MerchantUid) return false;
       if (PaidBy != other.PaidBy) return false;
-      if (Status != other.Status) return false;
+      if(!status_.Equals(other.status_)) return false;
       if (Page != other.Page) return false;
       if (Sorting != other.Sorting) return false;
+      if (Limit != other.Limit) return false;
+      if(!pgProvider_.Equals(other.pgProvider_)) return false;
+      if(!payMethod_.Equals(other.payMethod_)) return false;
+      if (BuyerName != other.BuyerName) return false;
+      if (BuyerTel != other.BuyerTel) return false;
+      if (BuyerEmail != other.BuyerEmail) return false;
+      if (Start != other.Start) return false;
+      if (End != other.End) return false;
+      if (Sandbox != other.Sandbox) return false;
+      if(!outputFormat_.Equals(other.outputFormat_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -183,9 +313,19 @@ namespace V2.Txs {
       if (ImpUid.Length != 0) hash ^= ImpUid.GetHashCode();
       if (MerchantUid.Length != 0) hash ^= MerchantUid.GetHashCode();
       if (PaidBy.Length != 0) hash ^= PaidBy.GetHashCode();
-      if (Status.Length != 0) hash ^= Status.GetHashCode();
+      hash ^= status_.GetHashCode();
       if (Page != 0) hash ^= Page.GetHashCode();
       if (Sorting.Length != 0) hash ^= Sorting.GetHashCode();
+      if (Limit != 0) hash ^= Limit.GetHashCode();
+      hash ^= pgProvider_.GetHashCode();
+      hash ^= payMethod_.GetHashCode();
+      if (BuyerName.Length != 0) hash ^= BuyerName.GetHashCode();
+      if (BuyerTel.Length != 0) hash ^= BuyerTel.GetHashCode();
+      if (BuyerEmail.Length != 0) hash ^= BuyerEmail.GetHashCode();
+      if (Start.Length != 0) hash ^= Start.GetHashCode();
+      if (End.Length != 0) hash ^= End.GetHashCode();
+      if (Sandbox != false) hash ^= Sandbox.GetHashCode();
+      hash ^= outputFormat_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,10 +354,7 @@ namespace V2.Txs {
         output.WriteRawTag(26);
         output.WriteString(PaidBy);
       }
-      if (Status.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Status);
-      }
+      status_.WriteTo(output, _repeated_status_codec);
       if (Page != 0) {
         output.WriteRawTag(40);
         output.WriteInt32(Page);
@@ -226,6 +363,37 @@ namespace V2.Txs {
         output.WriteRawTag(50);
         output.WriteString(Sorting);
       }
+      if (Limit != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(Limit);
+      }
+      pgProvider_.WriteTo(output, _repeated_pgProvider_codec);
+      payMethod_.WriteTo(output, _repeated_payMethod_codec);
+      if (BuyerName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(BuyerName);
+      }
+      if (BuyerTel.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(BuyerTel);
+      }
+      if (BuyerEmail.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(BuyerEmail);
+      }
+      if (Start.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Start);
+      }
+      if (End.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(End);
+      }
+      if (Sandbox != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(Sandbox);
+      }
+      outputFormat_.WriteTo(output, _repeated_outputFormat_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -247,10 +415,7 @@ namespace V2.Txs {
         output.WriteRawTag(26);
         output.WriteString(PaidBy);
       }
-      if (Status.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Status);
-      }
+      status_.WriteTo(ref output, _repeated_status_codec);
       if (Page != 0) {
         output.WriteRawTag(40);
         output.WriteInt32(Page);
@@ -259,6 +424,37 @@ namespace V2.Txs {
         output.WriteRawTag(50);
         output.WriteString(Sorting);
       }
+      if (Limit != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(Limit);
+      }
+      pgProvider_.WriteTo(ref output, _repeated_pgProvider_codec);
+      payMethod_.WriteTo(ref output, _repeated_payMethod_codec);
+      if (BuyerName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(BuyerName);
+      }
+      if (BuyerTel.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(BuyerTel);
+      }
+      if (BuyerEmail.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(BuyerEmail);
+      }
+      if (Start.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Start);
+      }
+      if (End.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(End);
+      }
+      if (Sandbox != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(Sandbox);
+      }
+      outputFormat_.WriteTo(ref output, _repeated_outputFormat_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -277,15 +473,37 @@ namespace V2.Txs {
       if (PaidBy.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PaidBy);
       }
-      if (Status.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Status);
-      }
+      size += status_.CalculateSize(_repeated_status_codec);
       if (Page != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Page);
       }
       if (Sorting.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Sorting);
       }
+      if (Limit != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Limit);
+      }
+      size += pgProvider_.CalculateSize(_repeated_pgProvider_codec);
+      size += payMethod_.CalculateSize(_repeated_payMethod_codec);
+      if (BuyerName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BuyerName);
+      }
+      if (BuyerTel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BuyerTel);
+      }
+      if (BuyerEmail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BuyerEmail);
+      }
+      if (Start.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Start);
+      }
+      if (End.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(End);
+      }
+      if (Sandbox != false) {
+        size += 1 + 1;
+      }
+      size += outputFormat_.CalculateSize(_repeated_outputFormat_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -306,15 +524,37 @@ namespace V2.Txs {
       if (other.PaidBy.Length != 0) {
         PaidBy = other.PaidBy;
       }
-      if (other.Status.Length != 0) {
-        Status = other.Status;
-      }
+      status_.Add(other.status_);
       if (other.Page != 0) {
         Page = other.Page;
       }
       if (other.Sorting.Length != 0) {
         Sorting = other.Sorting;
       }
+      if (other.Limit != 0) {
+        Limit = other.Limit;
+      }
+      pgProvider_.Add(other.pgProvider_);
+      payMethod_.Add(other.payMethod_);
+      if (other.BuyerName.Length != 0) {
+        BuyerName = other.BuyerName;
+      }
+      if (other.BuyerTel.Length != 0) {
+        BuyerTel = other.BuyerTel;
+      }
+      if (other.BuyerEmail.Length != 0) {
+        BuyerEmail = other.BuyerEmail;
+      }
+      if (other.Start.Length != 0) {
+        Start = other.Start;
+      }
+      if (other.End.Length != 0) {
+        End = other.End;
+      }
+      if (other.Sandbox != false) {
+        Sandbox = other.Sandbox;
+      }
+      outputFormat_.Add(other.outputFormat_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -342,7 +582,7 @@ namespace V2.Txs {
             break;
           }
           case 34: {
-            Status = input.ReadString();
+            status_.AddEntriesFrom(input, _repeated_status_codec);
             break;
           }
           case 40: {
@@ -351,6 +591,46 @@ namespace V2.Txs {
           }
           case 50: {
             Sorting = input.ReadString();
+            break;
+          }
+          case 56: {
+            Limit = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            pgProvider_.AddEntriesFrom(input, _repeated_pgProvider_codec);
+            break;
+          }
+          case 74: {
+            payMethod_.AddEntriesFrom(input, _repeated_payMethod_codec);
+            break;
+          }
+          case 82: {
+            BuyerName = input.ReadString();
+            break;
+          }
+          case 90: {
+            BuyerTel = input.ReadString();
+            break;
+          }
+          case 98: {
+            BuyerEmail = input.ReadString();
+            break;
+          }
+          case 106: {
+            Start = input.ReadString();
+            break;
+          }
+          case 114: {
+            End = input.ReadString();
+            break;
+          }
+          case 120: {
+            Sandbox = input.ReadBool();
+            break;
+          }
+          case 130: {
+            outputFormat_.AddEntriesFrom(input, _repeated_outputFormat_codec);
             break;
           }
         }
@@ -380,7 +660,7 @@ namespace V2.Txs {
             break;
           }
           case 34: {
-            Status = input.ReadString();
+            status_.AddEntriesFrom(ref input, _repeated_status_codec);
             break;
           }
           case 40: {
@@ -389,6 +669,46 @@ namespace V2.Txs {
           }
           case 50: {
             Sorting = input.ReadString();
+            break;
+          }
+          case 56: {
+            Limit = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            pgProvider_.AddEntriesFrom(ref input, _repeated_pgProvider_codec);
+            break;
+          }
+          case 74: {
+            payMethod_.AddEntriesFrom(ref input, _repeated_payMethod_codec);
+            break;
+          }
+          case 82: {
+            BuyerName = input.ReadString();
+            break;
+          }
+          case 90: {
+            BuyerTel = input.ReadString();
+            break;
+          }
+          case 98: {
+            BuyerEmail = input.ReadString();
+            break;
+          }
+          case 106: {
+            Start = input.ReadString();
+            break;
+          }
+          case 114: {
+            End = input.ReadString();
+            break;
+          }
+          case 120: {
+            Sandbox = input.ReadBool();
+            break;
+          }
+          case 130: {
+            outputFormat_.AddEntriesFrom(ref input, _repeated_outputFormat_codec);
             break;
           }
         }

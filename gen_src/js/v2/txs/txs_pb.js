@@ -7,6 +7,8 @@
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
+// @ts-nocheck
 
 var jspb = require('google-protobuf');
 var goog = jspb;
@@ -29,7 +31,7 @@ goog.exportSymbol('proto.txs_v2.GetTxsRecordsRequest', null, global);
  * @constructor
  */
 proto.txs_v2.GetTxsRecordsRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.txs_v2.GetTxsRecordsRequest.repeatedFields_, null);
 };
 goog.inherits(proto.txs_v2.GetTxsRecordsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -60,6 +62,13 @@ if (goog.DEBUG && !COMPILED) {
    */
   proto.txs_v2.GetTxsRecordsReponse.displayName = 'proto.txs_v2.GetTxsRecordsReponse';
 }
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.txs_v2.GetTxsRecordsRequest.repeatedFields_ = [4,8,9,16];
 
 
 
@@ -95,9 +104,19 @@ proto.txs_v2.GetTxsRecordsRequest.toObject = function(includeInstance, msg) {
     impUid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     merchantUid: jspb.Message.getFieldWithDefault(msg, 2, ""),
     paidBy: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    status: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    statusList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
     page: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    sorting: jspb.Message.getFieldWithDefault(msg, 6, "")
+    sorting: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    limit: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    pgProviderList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f,
+    payMethodList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f,
+    buyerName: jspb.Message.getFieldWithDefault(msg, 10, ""),
+    buyerTel: jspb.Message.getFieldWithDefault(msg, 11, ""),
+    buyerEmail: jspb.Message.getFieldWithDefault(msg, 12, ""),
+    start: jspb.Message.getFieldWithDefault(msg, 13, ""),
+    end: jspb.Message.getFieldWithDefault(msg, 14, ""),
+    sandbox: jspb.Message.getBooleanFieldWithDefault(msg, 15, false),
+    outputFormatList: (f = jspb.Message.getRepeatedField(msg, 16)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -148,7 +167,7 @@ proto.txs_v2.GetTxsRecordsRequest.deserializeBinaryFromReader = function(msg, re
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
+      msg.addStatus(value);
       break;
     case 5:
       var value = /** @type {number} */ (reader.readInt32());
@@ -157,6 +176,46 @@ proto.txs_v2.GetTxsRecordsRequest.deserializeBinaryFromReader = function(msg, re
     case 6:
       var value = /** @type {string} */ (reader.readString());
       msg.setSorting(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setLimit(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addPgProvider(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addPayMethod(value);
+      break;
+    case 10:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBuyerName(value);
+      break;
+    case 11:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBuyerTel(value);
+      break;
+    case 12:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBuyerEmail(value);
+      break;
+    case 13:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setStart(value);
+      break;
+    case 14:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setEnd(value);
+      break;
+    case 15:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setSandbox(value);
+      break;
+    case 16:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addOutputFormat(value);
       break;
     default:
       reader.skipField();
@@ -208,9 +267,9 @@ proto.txs_v2.GetTxsRecordsRequest.serializeBinaryToWriter = function(message, wr
       f
     );
   }
-  f = message.getStatus();
+  f = message.getStatusList();
   if (f.length > 0) {
-    writer.writeString(
+    writer.writeRepeatedString(
       4,
       f
     );
@@ -226,6 +285,76 @@ proto.txs_v2.GetTxsRecordsRequest.serializeBinaryToWriter = function(message, wr
   if (f.length > 0) {
     writer.writeString(
       6,
+      f
+    );
+  }
+  f = message.getLimit();
+  if (f !== 0) {
+    writer.writeInt32(
+      7,
+      f
+    );
+  }
+  f = message.getPgProviderList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      8,
+      f
+    );
+  }
+  f = message.getPayMethodList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      9,
+      f
+    );
+  }
+  f = message.getBuyerName();
+  if (f.length > 0) {
+    writer.writeString(
+      10,
+      f
+    );
+  }
+  f = message.getBuyerTel();
+  if (f.length > 0) {
+    writer.writeString(
+      11,
+      f
+    );
+  }
+  f = message.getBuyerEmail();
+  if (f.length > 0) {
+    writer.writeString(
+      12,
+      f
+    );
+  }
+  f = message.getStart();
+  if (f.length > 0) {
+    writer.writeString(
+      13,
+      f
+    );
+  }
+  f = message.getEnd();
+  if (f.length > 0) {
+    writer.writeString(
+      14,
+      f
+    );
+  }
+  f = message.getSandbox();
+  if (f) {
+    writer.writeBool(
+      15,
+      f
+    );
+  }
+  f = message.getOutputFormatList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      16,
       f
     );
   }
@@ -287,20 +416,39 @@ proto.txs_v2.GetTxsRecordsRequest.prototype.setPaidBy = function(value) {
 
 
 /**
- * optional string status = 4;
- * @return {string}
+ * repeated string status = 4;
+ * @return {!Array<string>}
  */
-proto.txs_v2.GetTxsRecordsRequest.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.txs_v2.GetTxsRecordsRequest.prototype.getStatusList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 4));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.setStatusList = function(value) {
+  return jspb.Message.setField(this, 4, value || []);
 };
 
 
 /**
  * @param {string} value
+ * @param {number=} opt_index
  * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
  */
-proto.txs_v2.GetTxsRecordsRequest.prototype.setStatus = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
+proto.txs_v2.GetTxsRecordsRequest.prototype.addStatus = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.clearStatusList = function() {
+  return this.setStatusList([]);
 };
 
 
@@ -337,6 +485,243 @@ proto.txs_v2.GetTxsRecordsRequest.prototype.getSorting = function() {
  */
 proto.txs_v2.GetTxsRecordsRequest.prototype.setSorting = function(value) {
   return jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional int32 limit = 7;
+ * @return {number}
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.getLimit = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.setLimit = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
+};
+
+
+/**
+ * repeated string pg_provider = 8;
+ * @return {!Array<string>}
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.getPgProviderList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 8));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.setPgProviderList = function(value) {
+  return jspb.Message.setField(this, 8, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.addPgProvider = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 8, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.clearPgProviderList = function() {
+  return this.setPgProviderList([]);
+};
+
+
+/**
+ * repeated string pay_method = 9;
+ * @return {!Array<string>}
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.getPayMethodList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 9));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.setPayMethodList = function(value) {
+  return jspb.Message.setField(this, 9, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.addPayMethod = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 9, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.clearPayMethodList = function() {
+  return this.setPayMethodList([]);
+};
+
+
+/**
+ * optional string buyer_name = 10;
+ * @return {string}
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.getBuyerName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.setBuyerName = function(value) {
+  return jspb.Message.setProto3StringField(this, 10, value);
+};
+
+
+/**
+ * optional string buyer_tel = 11;
+ * @return {string}
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.getBuyerTel = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.setBuyerTel = function(value) {
+  return jspb.Message.setProto3StringField(this, 11, value);
+};
+
+
+/**
+ * optional string buyer_email = 12;
+ * @return {string}
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.getBuyerEmail = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.setBuyerEmail = function(value) {
+  return jspb.Message.setProto3StringField(this, 12, value);
+};
+
+
+/**
+ * optional string start = 13;
+ * @return {string}
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.getStart = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 13, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.setStart = function(value) {
+  return jspb.Message.setProto3StringField(this, 13, value);
+};
+
+
+/**
+ * optional string end = 14;
+ * @return {string}
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.getEnd = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.setEnd = function(value) {
+  return jspb.Message.setProto3StringField(this, 14, value);
+};
+
+
+/**
+ * optional bool sandbox = 15;
+ * @return {boolean}
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.getSandbox = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 15, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.setSandbox = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 15, value);
+};
+
+
+/**
+ * repeated string output_format = 16;
+ * @return {!Array<string>}
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.getOutputFormatList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 16));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.setOutputFormatList = function(value) {
+  return jspb.Message.setField(this, 16, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.addOutputFormat = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 16, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.txs_v2.GetTxsRecordsRequest} returns this
+ */
+proto.txs_v2.GetTxsRecordsRequest.prototype.clearOutputFormatList = function() {
+  return this.setOutputFormatList([]);
 };
 
 

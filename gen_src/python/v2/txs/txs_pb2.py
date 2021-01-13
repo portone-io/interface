@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z.github.com/iamport/interface/gen_src/go/v2/txs\252\002\006V2.Txs',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10v2/txs/txs.proto\x12\x06txs_v2\x1a\x1cgoogle/api/annotations.proto\x1a\x14v2/basis/basis.proto\"}\n\x14GetTxsRecordsRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x01(\t\x12\x0f\n\x07paid_by\x18\x03 \x01(\t\x12\x0e\n\x06status\x18\x04 \x01(\t\x12\x0c\n\x04page\x18\x05 \x01(\x05\x12\x0f\n\x07sorting\x18\x06 \x01(\t\"Y\n\x14GetTxsRecordsReponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x03(\x0b\x32\x10.basis_v2.UnitTx2}\n\nTxsService\x12o\n\x13GetTxsRecordService\x12\x1c.txs_v2.GetTxsRecordsRequest\x1a\x1c.txs_v2.GetTxsRecordsReponse\"\x1c\x82\xd3\xe4\x93\x02\x16\x12\x14/api/payments/v2/txsB9Z.github.com/iamport/interface/gen_src/go/v2/txs\xaa\x02\x06V2.Txsb\x06proto3'
+  serialized_pb=b'\n\x10v2/txs/txs.proto\x12\x06txs_v2\x1a\x1cgoogle/api/annotations.proto\x1a\x14v2/basis/basis.proto\"\xb5\x02\n\x14GetTxsRecordsRequest\x12\x0f\n\x07imp_uid\x18\x01 \x01(\t\x12\x14\n\x0cmerchant_uid\x18\x02 \x01(\t\x12\x0f\n\x07paid_by\x18\x03 \x01(\t\x12\x0e\n\x06status\x18\x04 \x03(\t\x12\x0c\n\x04page\x18\x05 \x01(\x05\x12\x0f\n\x07sorting\x18\x06 \x01(\t\x12\r\n\x05limit\x18\x07 \x01(\x05\x12\x13\n\x0bpg_provider\x18\x08 \x03(\t\x12\x12\n\npay_method\x18\t \x03(\t\x12\x12\n\nbuyer_name\x18\n \x01(\t\x12\x11\n\tbuyer_tel\x18\x0b \x01(\t\x12\x13\n\x0b\x62uyer_email\x18\x0c \x01(\t\x12\r\n\x05start\x18\r \x01(\t\x12\x0b\n\x03\x65nd\x18\x0e \x01(\t\x12\x0f\n\x07sandbox\x18\x0f \x01(\x08\x12\x15\n\routput_format\x18\x10 \x03(\t\"Y\n\x14GetTxsRecordsReponse\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\"\n\x08response\x18\x03 \x03(\x0b\x32\x10.basis_v2.UnitTx2}\n\nTxsService\x12o\n\x13GetTxsRecordService\x12\x1c.txs_v2.GetTxsRecordsRequest\x1a\x1c.txs_v2.GetTxsRecordsReponse\"\x1c\x82\xd3\xe4\x93\x02\x16\x12\x14/api/payments/v2/txsB9Z.github.com/iamport/interface/gen_src/go/v2/txs\xaa\x02\x06V2.Txsb\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,v2_dot_basis_dot_basis__pb2.DESCRIPTOR,])
 
@@ -59,8 +59,8 @@ _GETTXSRECORDSREQUEST = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='status', full_name='txs_v2.GetTxsRecordsRequest.status', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      number=4, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -78,6 +78,76 @@ _GETTXSRECORDSREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='limit', full_name='txs_v2.GetTxsRecordsRequest.limit', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='pg_provider', full_name='txs_v2.GetTxsRecordsRequest.pg_provider', index=7,
+      number=8, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='pay_method', full_name='txs_v2.GetTxsRecordsRequest.pay_method', index=8,
+      number=9, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='buyer_name', full_name='txs_v2.GetTxsRecordsRequest.buyer_name', index=9,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='buyer_tel', full_name='txs_v2.GetTxsRecordsRequest.buyer_tel', index=10,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='buyer_email', full_name='txs_v2.GetTxsRecordsRequest.buyer_email', index=11,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='start', full_name='txs_v2.GetTxsRecordsRequest.start', index=12,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='end', full_name='txs_v2.GetTxsRecordsRequest.end', index=13,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='sandbox', full_name='txs_v2.GetTxsRecordsRequest.sandbox', index=14,
+      number=15, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='output_format', full_name='txs_v2.GetTxsRecordsRequest.output_format', index=15,
+      number=16, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -90,8 +160,8 @@ _GETTXSRECORDSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=80,
-  serialized_end=205,
+  serialized_start=81,
+  serialized_end=390,
 )
 
 
@@ -136,8 +206,8 @@ _GETTXSRECORDSREPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=207,
-  serialized_end=296,
+  serialized_start=392,
+  serialized_end=481,
 )
 
 _GETTXSRECORDSREPONSE.fields_by_name['response'].message_type = v2_dot_basis_dot_basis__pb2._UNITTX
@@ -169,8 +239,8 @@ _TXSSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=298,
-  serialized_end=423,
+  serialized_start=483,
+  serialized_end=608,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetTxsRecordService',

@@ -33,7 +33,6 @@ static void InitDefaultsscc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto() {
     new (ptr) ::txs_v2::GetTxsRecordsReponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::txs_v2::GetTxsRecordsReponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto =
@@ -48,7 +47,6 @@ static void InitDefaultsscc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto() {
     new (ptr) ::txs_v2::GetTxsRecordsRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::txs_v2::GetTxsRecordsRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto =
@@ -70,6 +68,16 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_v2_2ftxs_2ftxs_2eproto::offset
   PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, status_),
   PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, page_),
   PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, sorting_),
+  PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, limit_),
+  PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, pg_provider_),
+  PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, pay_method_),
+  PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, buyer_name_),
+  PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, buyer_tel_),
+  PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, buyer_email_),
+  PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, start_),
+  PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, end_),
+  PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, sandbox_),
+  PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsRequest, output_format_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::txs_v2::GetTxsRecordsReponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -81,7 +89,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_v2_2ftxs_2ftxs_2eproto::offset
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::txs_v2::GetTxsRecordsRequest)},
-  { 11, -1, sizeof(::txs_v2::GetTxsRecordsReponse)},
+  { 21, -1, sizeof(::txs_v2::GetTxsRecordsReponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -91,18 +99,22 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_v2_2ftxs_2ftxs_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\020v2/txs/txs.proto\022\006txs_v2\032\034google/api/a"
-  "nnotations.proto\032\024v2/basis/basis.proto\"}"
-  "\n\024GetTxsRecordsRequest\022\017\n\007imp_uid\030\001 \001(\t\022"
-  "\024\n\014merchant_uid\030\002 \001(\t\022\017\n\007paid_by\030\003 \001(\t\022\016"
-  "\n\006status\030\004 \001(\t\022\014\n\004page\030\005 \001(\005\022\017\n\007sorting\030"
-  "\006 \001(\t\"Y\n\024GetTxsRecordsReponse\022\014\n\004code\030\001 "
-  "\001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \003(\0132\020"
-  ".basis_v2.UnitTx2}\n\nTxsService\022o\n\023GetTxs"
-  "RecordService\022\034.txs_v2.GetTxsRecordsRequ"
-  "est\032\034.txs_v2.GetTxsRecordsReponse\"\034\202\323\344\223\002"
-  "\026\022\024/api/payments/v2/txsB9Z.github.com/ia"
-  "mport/interface/gen_src/go/v2/txs\252\002\006V2.T"
-  "xsb\006proto3"
+  "nnotations.proto\032\024v2/basis/basis.proto\"\265"
+  "\002\n\024GetTxsRecordsRequest\022\017\n\007imp_uid\030\001 \001(\t"
+  "\022\024\n\014merchant_uid\030\002 \001(\t\022\017\n\007paid_by\030\003 \001(\t\022"
+  "\016\n\006status\030\004 \003(\t\022\014\n\004page\030\005 \001(\005\022\017\n\007sorting"
+  "\030\006 \001(\t\022\r\n\005limit\030\007 \001(\005\022\023\n\013pg_provider\030\010 \003"
+  "(\t\022\022\n\npay_method\030\t \003(\t\022\022\n\nbuyer_name\030\n \001"
+  "(\t\022\021\n\tbuyer_tel\030\013 \001(\t\022\023\n\013buyer_email\030\014 \001"
+  "(\t\022\r\n\005start\030\r \001(\t\022\013\n\003end\030\016 \001(\t\022\017\n\007sandbo"
+  "x\030\017 \001(\010\022\025\n\routput_format\030\020 \003(\t\"Y\n\024GetTxs"
+  "RecordsReponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030"
+  "\002 \001(\t\022\"\n\010response\030\003 \003(\0132\020.basis_v2.UnitT"
+  "x2}\n\nTxsService\022o\n\023GetTxsRecordService\022\034"
+  ".txs_v2.GetTxsRecordsRequest\032\034.txs_v2.Ge"
+  "tTxsRecordsReponse\"\034\202\323\344\223\002\026\022\024/api/payment"
+  "s/v2/txsB9Z.github.com/iamport/interface"
+  "/gen_src/go/v2/txs\252\002\006V2.Txsb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v2_2ftxs_2ftxs_2eproto_deps[2] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
@@ -114,7 +126,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v2_
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2ftxs_2ftxs_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2ftxs_2ftxs_2eproto = {
-  false, false, descriptor_table_protodef_v2_2ftxs_2ftxs_2eproto, "v2/txs/txs.proto", 490,
+  false, false, descriptor_table_protodef_v2_2ftxs_2ftxs_2eproto, "v2/txs/txs.proto", 675,
   &descriptor_table_v2_2ftxs_2ftxs_2eproto_once, descriptor_table_v2_2ftxs_2ftxs_2eproto_sccs, descriptor_table_v2_2ftxs_2ftxs_2eproto_deps, 2, 2,
   schemas, file_default_instances, TableStruct_v2_2ftxs_2ftxs_2eproto::offsets,
   file_level_metadata_v2_2ftxs_2ftxs_2eproto, 2, file_level_enum_descriptors_v2_2ftxs_2ftxs_2eproto, file_level_service_descriptors_v2_2ftxs_2ftxs_2eproto,
@@ -126,47 +138,75 @@ namespace txs_v2 {
 
 // ===================================================================
 
-void GetTxsRecordsRequest::InitAsDefaultInstance() {
-}
 class GetTxsRecordsRequest::_Internal {
  public:
 };
 
 GetTxsRecordsRequest::GetTxsRecordsRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  status_(arena),
+  pg_provider_(arena),
+  pay_method_(arena),
+  output_format_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:txs_v2.GetTxsRecordsRequest)
 }
 GetTxsRecordsRequest::GetTxsRecordsRequest(const GetTxsRecordsRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      status_(from.status_),
+      pg_provider_(from.pg_provider_),
+      pay_method_(from.pay_method_),
+      output_format_(from.output_format_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
-    imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_imp_uid(),
+    imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
       GetArena());
   }
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
-    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+    merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
       GetArena());
   }
   paid_by_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_paid_by().empty()) {
-    paid_by_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_paid_by(),
-      GetArena());
-  }
-  status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_status().empty()) {
-    status_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_status(),
+    paid_by_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_paid_by(), 
       GetArena());
   }
   sorting_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_sorting().empty()) {
-    sorting_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_sorting(),
+    sorting_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sorting(), 
       GetArena());
   }
-  page_ = from.page_;
+  buyer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_buyer_name().empty()) {
+    buyer_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_name(), 
+      GetArena());
+  }
+  buyer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_buyer_tel().empty()) {
+    buyer_tel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_tel(), 
+      GetArena());
+  }
+  buyer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_buyer_email().empty()) {
+    buyer_email_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_email(), 
+      GetArena());
+  }
+  start_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_start().empty()) {
+    start_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_start(), 
+      GetArena());
+  }
+  end_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_end().empty()) {
+    end_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_end(), 
+      GetArena());
+  }
+  ::memcpy(&page_, &from.page_,
+    static_cast<size_t>(reinterpret_cast<char*>(&sandbox_) -
+    reinterpret_cast<char*>(&page_)) + sizeof(sandbox_));
   // @@protoc_insertion_point(copy_constructor:txs_v2.GetTxsRecordsRequest)
 }
 
@@ -175,9 +215,16 @@ void GetTxsRecordsRequest::SharedCtor() {
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   paid_by_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   sorting_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  page_ = 0;
+  buyer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  start_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  end_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&page_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&sandbox_) -
+      reinterpret_cast<char*>(&page_)) + sizeof(sandbox_));
 }
 
 GetTxsRecordsRequest::~GetTxsRecordsRequest() {
@@ -191,8 +238,12 @@ void GetTxsRecordsRequest::SharedDtor() {
   imp_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   merchant_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   paid_by_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  status_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   sorting_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_tel_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  buyer_email_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  start_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  end_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void GetTxsRecordsRequest::ArenaDtor(void* object) {
@@ -216,18 +267,27 @@ void GetTxsRecordsRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  imp_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  paid_by_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  status_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  sorting_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  page_ = 0;
+  status_.Clear();
+  pg_provider_.Clear();
+  pay_method_.Clear();
+  output_format_.Clear();
+  imp_uid_.ClearToEmpty();
+  merchant_uid_.ClearToEmpty();
+  paid_by_.ClearToEmpty();
+  sorting_.ClearToEmpty();
+  buyer_name_.ClearToEmpty();
+  buyer_tel_.ClearToEmpty();
+  buyer_email_.ClearToEmpty();
+  start_.ClearToEmpty();
+  end_.ClearToEmpty();
+  ::memset(&page_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sandbox_) -
+      reinterpret_cast<char*>(&page_)) + sizeof(sandbox_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* GetTxsRecordsRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -260,13 +320,18 @@ const char* GetTxsRecordsRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string status = 4;
+      // repeated string status = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          auto str = _internal_mutable_status();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "txs_v2.GetTxsRecordsRequest.status"));
-          CHK_(ptr);
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_status();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "txs_v2.GetTxsRecordsRequest.status"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
         } else goto handle_unusual;
         continue;
       // int32 page = 5;
@@ -283,6 +348,107 @@ const char* GetTxsRecordsRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "txs_v2.GetTxsRecordsRequest.sorting"));
           CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 limit = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 56)) {
+          limit_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated string pg_provider = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_pg_provider();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "txs_v2.GetTxsRecordsRequest.pg_provider"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<66>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // repeated string pay_method = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_pay_method();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "txs_v2.GetTxsRecordsRequest.pay_method"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<74>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // string buyer_name = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+          auto str = _internal_mutable_buyer_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "txs_v2.GetTxsRecordsRequest.buyer_name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string buyer_tel = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+          auto str = _internal_mutable_buyer_tel();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "txs_v2.GetTxsRecordsRequest.buyer_tel"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string buyer_email = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
+          auto str = _internal_mutable_buyer_email();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "txs_v2.GetTxsRecordsRequest.buyer_email"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string start = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+          auto str = _internal_mutable_start();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "txs_v2.GetTxsRecordsRequest.start"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string end = 14;
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
+          auto str = _internal_mutable_end();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "txs_v2.GetTxsRecordsRequest.end"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bool sandbox = 15;
+      case 15:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 120)) {
+          sandbox_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated string output_format = 16;
+      case 16:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
+          ptr -= 2;
+          do {
+            ptr += 2;
+            auto str = _internal_add_output_format();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "txs_v2.GetTxsRecordsRequest.output_format"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<130>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -343,14 +509,14 @@ failure:
         3, this->_internal_paid_by(), target);
   }
 
-  // string status = 4;
-  if (this->status().size() > 0) {
+  // repeated string status = 4;
+  for (int i = 0, n = this->_internal_status_size(); i < n; i++) {
+    const auto& s = this->_internal_status(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_status().data(), static_cast<int>(this->_internal_status().length()),
+      s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "txs_v2.GetTxsRecordsRequest.status");
-    target = stream->WriteStringMaybeAliased(
-        4, this->_internal_status(), target);
+    target = stream->WriteString(4, s, target);
   }
 
   // int32 page = 5;
@@ -369,6 +535,98 @@ failure:
         6, this->_internal_sorting(), target);
   }
 
+  // int32 limit = 7;
+  if (this->limit() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(7, this->_internal_limit(), target);
+  }
+
+  // repeated string pg_provider = 8;
+  for (int i = 0, n = this->_internal_pg_provider_size(); i < n; i++) {
+    const auto& s = this->_internal_pg_provider(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "txs_v2.GetTxsRecordsRequest.pg_provider");
+    target = stream->WriteString(8, s, target);
+  }
+
+  // repeated string pay_method = 9;
+  for (int i = 0, n = this->_internal_pay_method_size(); i < n; i++) {
+    const auto& s = this->_internal_pay_method(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "txs_v2.GetTxsRecordsRequest.pay_method");
+    target = stream->WriteString(9, s, target);
+  }
+
+  // string buyer_name = 10;
+  if (this->buyer_name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_buyer_name().data(), static_cast<int>(this->_internal_buyer_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "txs_v2.GetTxsRecordsRequest.buyer_name");
+    target = stream->WriteStringMaybeAliased(
+        10, this->_internal_buyer_name(), target);
+  }
+
+  // string buyer_tel = 11;
+  if (this->buyer_tel().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_buyer_tel().data(), static_cast<int>(this->_internal_buyer_tel().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "txs_v2.GetTxsRecordsRequest.buyer_tel");
+    target = stream->WriteStringMaybeAliased(
+        11, this->_internal_buyer_tel(), target);
+  }
+
+  // string buyer_email = 12;
+  if (this->buyer_email().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_buyer_email().data(), static_cast<int>(this->_internal_buyer_email().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "txs_v2.GetTxsRecordsRequest.buyer_email");
+    target = stream->WriteStringMaybeAliased(
+        12, this->_internal_buyer_email(), target);
+  }
+
+  // string start = 13;
+  if (this->start().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_start().data(), static_cast<int>(this->_internal_start().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "txs_v2.GetTxsRecordsRequest.start");
+    target = stream->WriteStringMaybeAliased(
+        13, this->_internal_start(), target);
+  }
+
+  // string end = 14;
+  if (this->end().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_end().data(), static_cast<int>(this->_internal_end().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "txs_v2.GetTxsRecordsRequest.end");
+    target = stream->WriteStringMaybeAliased(
+        14, this->_internal_end(), target);
+  }
+
+  // bool sandbox = 15;
+  if (this->sandbox() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(15, this->_internal_sandbox(), target);
+  }
+
+  // repeated string output_format = 16;
+  for (int i = 0, n = this->_internal_output_format_size(); i < n; i++) {
+    const auto& s = this->_internal_output_format(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "txs_v2.GetTxsRecordsRequest.output_format");
+    target = stream->WriteString(16, s, target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -384,6 +642,38 @@ size_t GetTxsRecordsRequest::ByteSizeLong() const {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // repeated string status = 4;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(status_.size());
+  for (int i = 0, n = status_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      status_.Get(i));
+  }
+
+  // repeated string pg_provider = 8;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(pg_provider_.size());
+  for (int i = 0, n = pg_provider_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      pg_provider_.Get(i));
+  }
+
+  // repeated string pay_method = 9;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(pay_method_.size());
+  for (int i = 0, n = pay_method_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      pay_method_.Get(i));
+  }
+
+  // repeated string output_format = 16;
+  total_size += 2 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(output_format_.size());
+  for (int i = 0, n = output_format_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      output_format_.Get(i));
+  }
 
   // string imp_uid = 1;
   if (this->imp_uid().size() > 0) {
@@ -406,13 +696,6 @@ size_t GetTxsRecordsRequest::ByteSizeLong() const {
         this->_internal_paid_by());
   }
 
-  // string status = 4;
-  if (this->status().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_status());
-  }
-
   // string sorting = 6;
   if (this->sorting().size() > 0) {
     total_size += 1 +
@@ -420,11 +703,58 @@ size_t GetTxsRecordsRequest::ByteSizeLong() const {
         this->_internal_sorting());
   }
 
+  // string buyer_name = 10;
+  if (this->buyer_name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_buyer_name());
+  }
+
+  // string buyer_tel = 11;
+  if (this->buyer_tel().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_buyer_tel());
+  }
+
+  // string buyer_email = 12;
+  if (this->buyer_email().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_buyer_email());
+  }
+
+  // string start = 13;
+  if (this->start().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_start());
+  }
+
+  // string end = 14;
+  if (this->end().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_end());
+  }
+
   // int32 page = 5;
   if (this->page() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_page());
+  }
+
+  // int32 limit = 7;
+  if (this->limit() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_limit());
+  }
+
+  // bool sandbox = 15;
+  if (this->sandbox() != 0) {
+    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -458,6 +788,10 @@ void GetTxsRecordsRequest::MergeFrom(const GetTxsRecordsRequest& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  status_.MergeFrom(from.status_);
+  pg_provider_.MergeFrom(from.pg_provider_);
+  pay_method_.MergeFrom(from.pay_method_);
+  output_format_.MergeFrom(from.output_format_);
   if (from.imp_uid().size() > 0) {
     _internal_set_imp_uid(from._internal_imp_uid());
   }
@@ -467,14 +801,32 @@ void GetTxsRecordsRequest::MergeFrom(const GetTxsRecordsRequest& from) {
   if (from.paid_by().size() > 0) {
     _internal_set_paid_by(from._internal_paid_by());
   }
-  if (from.status().size() > 0) {
-    _internal_set_status(from._internal_status());
-  }
   if (from.sorting().size() > 0) {
     _internal_set_sorting(from._internal_sorting());
   }
+  if (from.buyer_name().size() > 0) {
+    _internal_set_buyer_name(from._internal_buyer_name());
+  }
+  if (from.buyer_tel().size() > 0) {
+    _internal_set_buyer_tel(from._internal_buyer_tel());
+  }
+  if (from.buyer_email().size() > 0) {
+    _internal_set_buyer_email(from._internal_buyer_email());
+  }
+  if (from.start().size() > 0) {
+    _internal_set_start(from._internal_start());
+  }
+  if (from.end().size() > 0) {
+    _internal_set_end(from._internal_end());
+  }
   if (from.page() != 0) {
     _internal_set_page(from._internal_page());
+  }
+  if (from.limit() != 0) {
+    _internal_set_limit(from._internal_limit());
+  }
+  if (from.sandbox() != 0) {
+    _internal_set_sandbox(from._internal_sandbox());
   }
 }
 
@@ -499,12 +851,25 @@ bool GetTxsRecordsRequest::IsInitialized() const {
 void GetTxsRecordsRequest::InternalSwap(GetTxsRecordsRequest* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  status_.InternalSwap(&other->status_);
+  pg_provider_.InternalSwap(&other->pg_provider_);
+  pay_method_.InternalSwap(&other->pay_method_);
+  output_format_.InternalSwap(&other->output_format_);
   imp_uid_.Swap(&other->imp_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   merchant_uid_.Swap(&other->merchant_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   paid_by_.Swap(&other->paid_by_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  status_.Swap(&other->status_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   sorting_.Swap(&other->sorting_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(page_, other->page_);
+  buyer_name_.Swap(&other->buyer_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  buyer_tel_.Swap(&other->buyer_tel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  buyer_email_.Swap(&other->buyer_email_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  start_.Swap(&other->start_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  end_.Swap(&other->end_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetTxsRecordsRequest, sandbox_)
+      + sizeof(GetTxsRecordsRequest::sandbox_)
+      - PROTOBUF_FIELD_OFFSET(GetTxsRecordsRequest, page_)>(
+          reinterpret_cast<char*>(&page_),
+          reinterpret_cast<char*>(&other->page_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetTxsRecordsRequest::GetMetadata() const {
@@ -514,8 +879,6 @@ void GetTxsRecordsRequest::InternalSwap(GetTxsRecordsRequest* other) {
 
 // ===================================================================
 
-void GetTxsRecordsReponse::InitAsDefaultInstance() {
-}
 class GetTxsRecordsReponse::_Internal {
  public:
 };
@@ -536,7 +899,7 @@ GetTxsRecordsReponse::GetTxsRecordsReponse(const GetTxsRecordsReponse& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   code_ = from.code_;
@@ -582,14 +945,13 @@ void GetTxsRecordsReponse::Clear() {
   (void) cached_has_bits;
 
   response_.Clear();
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   code_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* GetTxsRecordsReponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

@@ -13,7 +13,7 @@ message CancelHistory {
 }
 
 message UnitTx {
-    int32 amount = 1;
+    string amount = 1;
     string apply_num = 2;
     int32 bank_code = 3;
     string bank_name = 4;
@@ -22,7 +22,7 @@ message UnitTx {
     string buyer_name = 7;
     string buyer_postcode = 8;
     string buyer_tel = 9;
-    int32 cancel_amount = 10;
+    string cancel_amount = 10;
     repeated CancelHistory cancel_history = 11;
     string cancel_reason = 12;
     repeated string cancel_receipt_urls = 13;

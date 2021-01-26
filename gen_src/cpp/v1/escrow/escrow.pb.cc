@@ -42,7 +42,6 @@ static void InitDefaultsscc_info_EscrowRequest_v1_2fescrow_2fescrow_2eproto() {
     new (ptr) ::escrow::EscrowRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::escrow::EscrowRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_EscrowRequest_v1_2fescrow_2fescrow_2eproto =
@@ -58,7 +57,6 @@ static void InitDefaultsscc_info_EscrowResponse_v1_2fescrow_2fescrow_2eproto() {
     new (ptr) ::escrow::EscrowResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::escrow::EscrowResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_EscrowResponse_v1_2fescrow_2fescrow_2eproto =
@@ -73,7 +71,6 @@ static void InitDefaultsscc_info_Info_v1_2fescrow_2fescrow_2eproto() {
     new (ptr) ::escrow::Info();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::escrow::Info::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Info_v1_2fescrow_2fescrow_2eproto =
@@ -87,7 +84,6 @@ static void InitDefaultsscc_info_Logis_v1_2fescrow_2fescrow_2eproto() {
     new (ptr) ::escrow::Logis();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::escrow::Logis::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Logis_v1_2fescrow_2fescrow_2eproto =
@@ -192,8 +188,6 @@ namespace escrow {
 
 // ===================================================================
 
-void Info::InitAsDefaultInstance() {
-}
 class Info::_Internal {
  public:
 };
@@ -209,22 +203,22 @@ Info::Info(const Info& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
-    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
       GetArena());
   }
   tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_tel().empty()) {
-    tel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_tel(),
+    tel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_tel(), 
       GetArena());
   }
   addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_addr().empty()) {
-    addr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_addr(),
+    addr_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_addr(), 
       GetArena());
   }
   postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_postcode().empty()) {
-    postcode_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_postcode(),
+    postcode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_postcode(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:escrow.Info)
@@ -273,16 +267,15 @@ void Info::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  tel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  addr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  postcode_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  name_.ClearToEmpty();
+  tel_.ClearToEmpty();
+  addr_.ClearToEmpty();
+  postcode_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -515,8 +508,6 @@ void Info::InternalSwap(Info* other) {
 
 // ===================================================================
 
-void Logis::InitAsDefaultInstance() {
-}
 class Logis::_Internal {
  public:
 };
@@ -532,12 +523,12 @@ Logis::Logis(const Logis& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   company_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_company().empty()) {
-    company_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_company(),
+    company_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_company(), 
       GetArena());
   }
   invoice_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_invoice().empty()) {
-    invoice_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_invoice(),
+    invoice_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_invoice(), 
       GetArena());
   }
   ::memcpy(&sent_at_, &from.sent_at_,
@@ -550,8 +541,9 @@ void Logis::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Logis_v1_2fescrow_2fescrow_2eproto.base);
   company_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   invoice_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&sent_at_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&applied_at_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&sent_at_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&applied_at_) -
       reinterpret_cast<char*>(&sent_at_)) + sizeof(applied_at_));
 }
 
@@ -588,8 +580,8 @@ void Logis::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  company_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  invoice_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  company_.ClearToEmpty();
+  invoice_.ClearToEmpty();
   ::memset(&sent_at_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&applied_at_) -
       reinterpret_cast<char*>(&sent_at_)) + sizeof(applied_at_));
@@ -598,7 +590,6 @@ void Logis::Clear() {
 
 const char* Logis::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -823,14 +814,6 @@ void Logis::InternalSwap(Logis* other) {
 
 // ===================================================================
 
-void EscrowRequest::InitAsDefaultInstance() {
-  ::escrow::_EscrowRequest_default_instance_._instance.get_mutable()->sender_ = const_cast< ::escrow::Info*>(
-      ::escrow::Info::internal_default_instance());
-  ::escrow::_EscrowRequest_default_instance_._instance.get_mutable()->receiver_ = const_cast< ::escrow::Info*>(
-      ::escrow::Info::internal_default_instance());
-  ::escrow::_EscrowRequest_default_instance_._instance.get_mutable()->logis_ = const_cast< ::escrow::Logis*>(
-      ::escrow::Logis::internal_default_instance());
-}
 class EscrowRequest::_Internal {
  public:
   static const ::escrow::Info& sender(const EscrowRequest* msg);
@@ -861,7 +844,7 @@ EscrowRequest::EscrowRequest(const EscrowRequest& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
-    imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_imp_uid(),
+    imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
       GetArena());
   }
   if (from._internal_has_sender()) {
@@ -885,8 +868,9 @@ EscrowRequest::EscrowRequest(const EscrowRequest& from)
 void EscrowRequest::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_EscrowRequest_v1_2fescrow_2fescrow_2eproto.base);
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&sender_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&logis_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&sender_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&logis_) -
       reinterpret_cast<char*>(&sender_)) + sizeof(logis_));
 }
 
@@ -925,7 +909,7 @@ void EscrowRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  imp_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  imp_uid_.ClearToEmpty();
   if (GetArena() == nullptr && sender_ != nullptr) {
     delete sender_;
   }
@@ -943,7 +927,6 @@ void EscrowRequest::Clear() {
 
 const char* EscrowRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -1167,10 +1150,6 @@ void EscrowRequest::InternalSwap(EscrowRequest* other) {
 
 // ===================================================================
 
-void EscrowResponse::InitAsDefaultInstance() {
-  ::escrow::_EscrowResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::escrow::Logis*>(
-      ::escrow::Logis::internal_default_instance());
-}
 class EscrowResponse::_Internal {
  public:
   static const ::escrow::Logis& response(const EscrowResponse* msg);
@@ -1191,7 +1170,7 @@ EscrowResponse::EscrowResponse(const EscrowResponse& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -1206,8 +1185,9 @@ EscrowResponse::EscrowResponse(const EscrowResponse& from)
 void EscrowResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_EscrowResponse_v1_2fescrow_2fescrow_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -1244,7 +1224,7 @@ void EscrowResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -1255,7 +1235,6 @@ void EscrowResponse::Clear() {
 
 const char* EscrowResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

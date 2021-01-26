@@ -27,11 +27,11 @@ namespace V2.Basis {
             "ChR2Mi9iYXNpcy9iYXNpcy5wcm90bxIIYmFzaXNfdjIiagoNQ2FuY2VsSGlz",
             "dG9yeRIOCgZwZ190aWQYASABKAkSDgoGYW1vdW50GAIgASgJEhQKDGNhbmNl",
             "bGxlZF9hdBgDIAEoBRIOCgZyZWFzb24YBCABKAkSEwoLcmVjZWlwdF91cmwY",
-            "BSABKAki2wgKBlVuaXRUeBIOCgZhbW91bnQYASABKAUSEQoJYXBwbHlfbnVt",
+            "BSABKAki2wgKBlVuaXRUeBIOCgZhbW91bnQYASABKAkSEQoJYXBwbHlfbnVt",
             "GAIgASgJEhEKCWJhbmtfY29kZRgDIAEoBRIRCgliYW5rX25hbWUYBCABKAkS",
             "EgoKYnV5ZXJfYWRkchgFIAEoCRITCgtidXllcl9lbWFpbBgGIAEoCRISCgpi",
             "dXllcl9uYW1lGAcgASgJEhYKDmJ1eWVyX3Bvc3Rjb2RlGAggASgJEhEKCWJ1",
-            "eWVyX3RlbBgJIAEoCRIVCg1jYW5jZWxfYW1vdW50GAogASgFEi8KDmNhbmNl",
+            "eWVyX3RlbBgJIAEoCRIVCg1jYW5jZWxfYW1vdW50GAogASgJEi8KDmNhbmNl",
             "bF9oaXN0b3J5GAsgAygLMhcuYmFzaXNfdjIuQ2FuY2VsSGlzdG9yeRIVCg1j",
             "YW5jZWxfcmVhc29uGAwgASgJEhsKE2NhbmNlbF9yZWNlaXB0X3VybHMYDSAD",
             "KAkSFAoMY2FuY2VsbGVkX2F0GA4gASgFEhEKCWNhcmRfY29kZRgPIAEoCRIS",
@@ -472,12 +472,12 @@ namespace V2.Basis {
 
     /// <summary>Field number for the "amount" field.</summary>
     public const int AmountFieldNumber = 1;
-    private int amount_;
+    private string amount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Amount {
+    public string Amount {
       get { return amount_; }
       set {
-        amount_ = value;
+        amount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -571,12 +571,12 @@ namespace V2.Basis {
 
     /// <summary>Field number for the "cancel_amount" field.</summary>
     public const int CancelAmountFieldNumber = 10;
-    private int cancelAmount_;
+    private string cancelAmount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CancelAmount {
+    public string CancelAmount {
       get { return cancelAmount_; }
       set {
-        cancelAmount_ = value;
+        cancelAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1114,7 +1114,7 @@ namespace V2.Basis {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Amount != 0) hash ^= Amount.GetHashCode();
+      if (Amount.Length != 0) hash ^= Amount.GetHashCode();
       if (ApplyNum.Length != 0) hash ^= ApplyNum.GetHashCode();
       if (BankCode != 0) hash ^= BankCode.GetHashCode();
       if (BankName.Length != 0) hash ^= BankName.GetHashCode();
@@ -1123,7 +1123,7 @@ namespace V2.Basis {
       if (BuyerName.Length != 0) hash ^= BuyerName.GetHashCode();
       if (BuyerPostcode.Length != 0) hash ^= BuyerPostcode.GetHashCode();
       if (BuyerTel.Length != 0) hash ^= BuyerTel.GetHashCode();
-      if (CancelAmount != 0) hash ^= CancelAmount.GetHashCode();
+      if (CancelAmount.Length != 0) hash ^= CancelAmount.GetHashCode();
       hash ^= cancelHistory_.GetHashCode();
       if (CancelReason.Length != 0) hash ^= CancelReason.GetHashCode();
       hash ^= cancelReceiptUrls_.GetHashCode();
@@ -1182,9 +1182,9 @@ namespace V2.Basis {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Amount != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Amount);
+      if (Amount.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Amount);
       }
       if (ApplyNum.Length != 0) {
         output.WriteRawTag(18);
@@ -1218,9 +1218,9 @@ namespace V2.Basis {
         output.WriteRawTag(74);
         output.WriteString(BuyerTel);
       }
-      if (CancelAmount != 0) {
-        output.WriteRawTag(80);
-        output.WriteInt32(CancelAmount);
+      if (CancelAmount.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(CancelAmount);
       }
       cancelHistory_.WriteTo(output, _repeated_cancelHistory_codec);
       if (CancelReason.Length != 0) {
@@ -1393,9 +1393,9 @@ namespace V2.Basis {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Amount != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Amount);
+      if (Amount.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Amount);
       }
       if (ApplyNum.Length != 0) {
         output.WriteRawTag(18);
@@ -1429,9 +1429,9 @@ namespace V2.Basis {
         output.WriteRawTag(74);
         output.WriteString(BuyerTel);
       }
-      if (CancelAmount != 0) {
-        output.WriteRawTag(80);
-        output.WriteInt32(CancelAmount);
+      if (CancelAmount.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(CancelAmount);
       }
       cancelHistory_.WriteTo(ref output, _repeated_cancelHistory_codec);
       if (CancelReason.Length != 0) {
@@ -1604,8 +1604,8 @@ namespace V2.Basis {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Amount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Amount);
+      if (Amount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Amount);
       }
       if (ApplyNum.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ApplyNum);
@@ -1631,8 +1631,8 @@ namespace V2.Basis {
       if (BuyerTel.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BuyerTel);
       }
-      if (CancelAmount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CancelAmount);
+      if (CancelAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CancelAmount);
       }
       size += cancelHistory_.CalculateSize(_repeated_cancelHistory_codec);
       if (CancelReason.Length != 0) {
@@ -1767,7 +1767,7 @@ namespace V2.Basis {
       if (other == null) {
         return;
       }
-      if (other.Amount != 0) {
+      if (other.Amount.Length != 0) {
         Amount = other.Amount;
       }
       if (other.ApplyNum.Length != 0) {
@@ -1794,7 +1794,7 @@ namespace V2.Basis {
       if (other.BuyerTel.Length != 0) {
         BuyerTel = other.BuyerTel;
       }
-      if (other.CancelAmount != 0) {
+      if (other.CancelAmount.Length != 0) {
         CancelAmount = other.CancelAmount;
       }
       cancelHistory_.Add(other.cancelHistory_);
@@ -1933,8 +1933,8 @@ namespace V2.Basis {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Amount = input.ReadInt32();
+          case 10: {
+            Amount = input.ReadString();
             break;
           }
           case 18: {
@@ -1969,8 +1969,8 @@ namespace V2.Basis {
             BuyerTel = input.ReadString();
             break;
           }
-          case 80: {
-            CancelAmount = input.ReadInt32();
+          case 82: {
+            CancelAmount = input.ReadString();
             break;
           }
           case 90: {
@@ -2155,8 +2155,8 @@ namespace V2.Basis {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Amount = input.ReadInt32();
+          case 10: {
+            Amount = input.ReadString();
             break;
           }
           case 18: {
@@ -2191,8 +2191,8 @@ namespace V2.Basis {
             BuyerTel = input.ReadString();
             break;
           }
-          case 80: {
-            CancelAmount = input.ReadInt32();
+          case 82: {
+            CancelAmount = input.ReadString();
             break;
           }
           case 90: {

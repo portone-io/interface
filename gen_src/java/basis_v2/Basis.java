@@ -1107,10 +1107,16 @@ public final class Basis {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 amount = 1;</code>
+     * <code>string amount = 1;</code>
      * @return The amount.
      */
-    int getAmount();
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 1;</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
 
     /**
      * <code>string apply_num = 2;</code>
@@ -1203,10 +1209,16 @@ public final class Basis {
         getBuyerTelBytes();
 
     /**
-     * <code>int32 cancel_amount = 10;</code>
+     * <code>string cancel_amount = 10;</code>
      * @return The cancelAmount.
      */
-    int getCancelAmount();
+    java.lang.String getCancelAmount();
+    /**
+     * <code>string cancel_amount = 10;</code>
+     * @return The bytes for cancelAmount.
+     */
+    com.google.protobuf.ByteString
+        getCancelAmountBytes();
 
     /**
      * <code>repeated .basis_v2.CancelHistory cancel_history = 11;</code>
@@ -1698,6 +1710,7 @@ public final class Basis {
       super(builder);
     }
     private UnitTx() {
+      amount_ = "";
       applyNum_ = "";
       bankName_ = "";
       buyerAddr_ = "";
@@ -1705,6 +1718,7 @@ public final class Basis {
       buyerName_ = "";
       buyerPostcode_ = "";
       buyerTel_ = "";
+      cancelAmount_ = "";
       cancelHistory_ = java.util.Collections.emptyList();
       cancelReason_ = "";
       cancelReceiptUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -1770,9 +1784,10 @@ public final class Basis {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              amount_ = input.readInt32();
+              amount_ = s;
               break;
             }
             case 18: {
@@ -1822,9 +1837,10 @@ public final class Basis {
               buyerTel_ = s;
               break;
             }
-            case 80: {
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              cancelAmount_ = input.readInt32();
+              cancelAmount_ = s;
               break;
             }
             case 90: {
@@ -2114,14 +2130,41 @@ public final class Basis {
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 1;
-    private int amount_;
+    private volatile java.lang.Object amount_;
     /**
-     * <code>int32 amount = 1;</code>
+     * <code>string amount = 1;</code>
      * @return The amount.
      */
     @java.lang.Override
-    public int getAmount() {
-      return amount_;
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 1;</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int APPLY_NUM_FIELD_NUMBER = 2;
@@ -2402,14 +2445,41 @@ public final class Basis {
     }
 
     public static final int CANCEL_AMOUNT_FIELD_NUMBER = 10;
-    private int cancelAmount_;
+    private volatile java.lang.Object cancelAmount_;
     /**
-     * <code>int32 cancel_amount = 10;</code>
+     * <code>string cancel_amount = 10;</code>
      * @return The cancelAmount.
      */
     @java.lang.Override
-    public int getCancelAmount() {
-      return cancelAmount_;
+    public java.lang.String getCancelAmount() {
+      java.lang.Object ref = cancelAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cancelAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string cancel_amount = 10;</code>
+     * @return The bytes for cancelAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCancelAmountBytes() {
+      java.lang.Object ref = cancelAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cancelAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int CANCEL_HISTORY_FIELD_NUMBER = 11;
@@ -3759,8 +3829,8 @@ public final class Basis {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (amount_ != 0) {
-        output.writeInt32(1, amount_);
+      if (!getAmountBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, amount_);
       }
       if (!getApplyNumBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, applyNum_);
@@ -3786,8 +3856,8 @@ public final class Basis {
       if (!getBuyerTelBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, buyerTel_);
       }
-      if (cancelAmount_ != 0) {
-        output.writeInt32(10, cancelAmount_);
+      if (!getCancelAmountBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, cancelAmount_);
       }
       for (int i = 0; i < cancelHistory_.size(); i++) {
         output.writeMessage(11, cancelHistory_.get(i));
@@ -3924,9 +3994,8 @@ public final class Basis {
       if (size != -1) return size;
 
       size = 0;
-      if (amount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, amount_);
+      if (!getAmountBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, amount_);
       }
       if (!getApplyNumBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, applyNum_);
@@ -3953,9 +4022,8 @@ public final class Basis {
       if (!getBuyerTelBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, buyerTel_);
       }
-      if (cancelAmount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, cancelAmount_);
+      if (!getCancelAmountBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, cancelAmount_);
       }
       for (int i = 0; i < cancelHistory_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -4114,8 +4182,8 @@ public final class Basis {
       }
       basis_v2.Basis.UnitTx other = (basis_v2.Basis.UnitTx) obj;
 
-      if (getAmount()
-          != other.getAmount()) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
       if (!getApplyNum()
           .equals(other.getApplyNum())) return false;
       if (getBankCode()
@@ -4132,8 +4200,8 @@ public final class Basis {
           .equals(other.getBuyerPostcode())) return false;
       if (!getBuyerTel()
           .equals(other.getBuyerTel())) return false;
-      if (getCancelAmount()
-          != other.getCancelAmount()) return false;
+      if (!getCancelAmount()
+          .equals(other.getCancelAmount())) return false;
       if (!getCancelHistoryList()
           .equals(other.getCancelHistoryList())) return false;
       if (!getCancelReason()
@@ -4230,7 +4298,7 @@ public final class Basis {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getAmount();
+      hash = (53 * hash) + getAmount().hashCode();
       hash = (37 * hash) + APPLY_NUM_FIELD_NUMBER;
       hash = (53 * hash) + getApplyNum().hashCode();
       hash = (37 * hash) + BANK_CODE_FIELD_NUMBER;
@@ -4248,7 +4316,7 @@ public final class Basis {
       hash = (37 * hash) + BUYER_TEL_FIELD_NUMBER;
       hash = (53 * hash) + getBuyerTel().hashCode();
       hash = (37 * hash) + CANCEL_AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getCancelAmount();
+      hash = (53 * hash) + getCancelAmount().hashCode();
       if (getCancelHistoryCount() > 0) {
         hash = (37 * hash) + CANCEL_HISTORY_FIELD_NUMBER;
         hash = (53 * hash) + getCancelHistoryList().hashCode();
@@ -4473,7 +4541,7 @@ public final class Basis {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        amount_ = 0;
+        amount_ = "";
 
         applyNum_ = "";
 
@@ -4491,7 +4559,7 @@ public final class Basis {
 
         buyerTel_ = "";
 
-        cancelAmount_ = 0;
+        cancelAmount_ = "";
 
         if (cancelHistoryBuilder_ == null) {
           cancelHistory_ = java.util.Collections.emptyList();
@@ -4720,8 +4788,9 @@ public final class Basis {
 
       public Builder mergeFrom(basis_v2.Basis.UnitTx other) {
         if (other == basis_v2.Basis.UnitTx.getDefaultInstance()) return this;
-        if (other.getAmount() != 0) {
-          setAmount(other.getAmount());
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          onChanged();
         }
         if (!other.getApplyNum().isEmpty()) {
           applyNum_ = other.applyNum_;
@@ -4754,8 +4823,9 @@ public final class Basis {
           buyerTel_ = other.buyerTel_;
           onChanged();
         }
-        if (other.getCancelAmount() != 0) {
-          setCancelAmount(other.getCancelAmount());
+        if (!other.getCancelAmount().isEmpty()) {
+          cancelAmount_ = other.cancelAmount_;
+          onChanged();
         }
         if (cancelHistoryBuilder_ == null) {
           if (!other.cancelHistory_.isEmpty()) {
@@ -4973,33 +5043,78 @@ public final class Basis {
       }
       private int bitField0_;
 
-      private int amount_ ;
+      private java.lang.Object amount_ = "";
       /**
-       * <code>int32 amount = 1;</code>
+       * <code>string amount = 1;</code>
        * @return The amount.
        */
-      @java.lang.Override
-      public int getAmount() {
-        return amount_;
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>int32 amount = 1;</code>
+       * <code>string amount = 1;</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 1;</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
-      public Builder setAmount(int value) {
-        
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         amount_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 amount = 1;</code>
+       * <code>string amount = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
-        amount_ = 0;
+        amount_ = getDefaultInstance().getAmount();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 1;</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        amount_ = value;
         onChanged();
         return this;
       }
@@ -5567,33 +5682,78 @@ public final class Basis {
         return this;
       }
 
-      private int cancelAmount_ ;
+      private java.lang.Object cancelAmount_ = "";
       /**
-       * <code>int32 cancel_amount = 10;</code>
+       * <code>string cancel_amount = 10;</code>
        * @return The cancelAmount.
        */
-      @java.lang.Override
-      public int getCancelAmount() {
-        return cancelAmount_;
+      public java.lang.String getCancelAmount() {
+        java.lang.Object ref = cancelAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cancelAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>int32 cancel_amount = 10;</code>
+       * <code>string cancel_amount = 10;</code>
+       * @return The bytes for cancelAmount.
+       */
+      public com.google.protobuf.ByteString
+          getCancelAmountBytes() {
+        java.lang.Object ref = cancelAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cancelAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string cancel_amount = 10;</code>
        * @param value The cancelAmount to set.
        * @return This builder for chaining.
        */
-      public Builder setCancelAmount(int value) {
-        
+      public Builder setCancelAmount(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         cancelAmount_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 cancel_amount = 10;</code>
+       * <code>string cancel_amount = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearCancelAmount() {
         
-        cancelAmount_ = 0;
+        cancelAmount_ = getDefaultInstance().getCancelAmount();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cancel_amount = 10;</code>
+       * @param value The bytes for cancelAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCancelAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cancelAmount_ = value;
         onChanged();
         return this;
       }
@@ -8633,11 +8793,11 @@ public final class Basis {
       "elHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(" +
       "\t\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022" +
       "\023\n\013receipt_url\030\005 \001(\t\"\333\010\n\006UnitTx\022\016\n\006amoun" +
-      "t\030\001 \001(\005\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank_code\030" +
+      "t\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank_code\030" +
       "\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_addr\030\005" +
       " \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer_name\030" +
       "\007 \001(\t\022\026\n\016buyer_postcode\030\010 \001(\t\022\021\n\tbuyer_t" +
-      "el\030\t \001(\t\022\025\n\rcancel_amount\030\n \001(\005\022/\n\016cance" +
+      "el\030\t \001(\t\022\025\n\rcancel_amount\030\n \001(\t\022/\n\016cance" +
       "l_history\030\013 \003(\0132\027.basis_v2.CancelHistory" +
       "\022\025\n\rcancel_reason\030\014 \001(\t\022\033\n\023cancel_receip" +
       "t_urls\030\r \003(\t\022\024\n\014cancelled_at\030\016 \001(\005\022\021\n\tca" +

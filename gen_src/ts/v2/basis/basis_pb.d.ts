@@ -40,8 +40,8 @@ export namespace CancelHistory {
 }
 
 export class UnitTx extends jspb.Message {
-  getAmount(): number;
-  setAmount(value: number): void;
+  getAmount(): string;
+  setAmount(value: string): void;
 
   getApplyNum(): string;
   setApplyNum(value: string): void;
@@ -67,8 +67,8 @@ export class UnitTx extends jspb.Message {
   getBuyerTel(): string;
   setBuyerTel(value: string): void;
 
-  getCancelAmount(): number;
-  setCancelAmount(value: number): void;
+  getCancelAmount(): string;
+  setCancelAmount(value: string): void;
 
   clearCancelHistoryList(): void;
   getCancelHistoryList(): Array<CancelHistory>;
@@ -212,7 +212,7 @@ export class UnitTx extends jspb.Message {
 
 export namespace UnitTx {
   export type AsObject = {
-    amount: number,
+    amount: string,
     applyNum: string,
     bankCode: number,
     bankName: string,
@@ -221,7 +221,7 @@ export namespace UnitTx {
     buyerName: string,
     buyerPostcode: string,
     buyerTel: string,
-    cancelAmount: number,
+    cancelAmount: string,
     cancelHistoryList: Array<CancelHistory.AsObject>,
     cancelReason: string,
     cancelReceiptUrlsList: Array<string>,

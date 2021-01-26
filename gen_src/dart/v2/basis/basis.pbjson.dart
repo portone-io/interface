@@ -19,7 +19,7 @@ const CancelHistory$json = const {
 const UnitTx$json = const {
   '1': 'UnitTx',
   '2': const [
-    const {'1': 'amount', '3': 1, '4': 1, '5': 5, '10': 'amount'},
+    const {'1': 'amount', '3': 1, '4': 1, '5': 9, '10': 'amount'},
     const {'1': 'apply_num', '3': 2, '4': 1, '5': 9, '10': 'applyNum'},
     const {'1': 'bank_code', '3': 3, '4': 1, '5': 5, '10': 'bankCode'},
     const {'1': 'bank_name', '3': 4, '4': 1, '5': 9, '10': 'bankName'},
@@ -28,7 +28,7 @@ const UnitTx$json = const {
     const {'1': 'buyer_name', '3': 7, '4': 1, '5': 9, '10': 'buyerName'},
     const {'1': 'buyer_postcode', '3': 8, '4': 1, '5': 9, '10': 'buyerPostcode'},
     const {'1': 'buyer_tel', '3': 9, '4': 1, '5': 9, '10': 'buyerTel'},
-    const {'1': 'cancel_amount', '3': 10, '4': 1, '5': 5, '10': 'cancelAmount'},
+    const {'1': 'cancel_amount', '3': 10, '4': 1, '5': 9, '10': 'cancelAmount'},
     const {'1': 'cancel_history', '3': 11, '4': 3, '5': 11, '6': '.basis_v2.CancelHistory', '10': 'cancelHistory'},
     const {'1': 'cancel_reason', '3': 12, '4': 1, '5': 9, '10': 'cancelReason'},
     const {'1': 'cancel_receipt_urls', '3': 13, '4': 3, '5': 9, '10': 'cancelReceiptUrls'},

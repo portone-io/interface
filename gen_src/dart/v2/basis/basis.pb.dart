@@ -82,7 +82,7 @@ class CancelHistory extends $pb.GeneratedMessage {
 
 class UnitTx extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UnitTx', package: const $pb.PackageName('basis_v2'), createEmptyInstance: create)
-    ..a<$core.int>(1, 'amount', $pb.PbFieldType.O3)
+    ..aOS(1, 'amount')
     ..aOS(2, 'applyNum')
     ..a<$core.int>(3, 'bankCode', $pb.PbFieldType.O3)
     ..aOS(4, 'bankName')
@@ -91,7 +91,7 @@ class UnitTx extends $pb.GeneratedMessage {
     ..aOS(7, 'buyerName')
     ..aOS(8, 'buyerPostcode')
     ..aOS(9, 'buyerTel')
-    ..a<$core.int>(10, 'cancelAmount', $pb.PbFieldType.O3)
+    ..aOS(10, 'cancelAmount')
     ..pc<CancelHistory>(11, 'cancelHistory', $pb.PbFieldType.PM, subBuilder: CancelHistory.create)
     ..aOS(12, 'cancelReason')
     ..pPS(13, 'cancelReceiptUrls')
@@ -153,9 +153,9 @@ class UnitTx extends $pb.GeneratedMessage {
   static UnitTx _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.int get amount => $_getIZ(0);
+  $core.String get amount => $_getSZ(0);
   @$pb.TagNumber(1)
-  set amount($core.int v) { $_setSignedInt32(0, v); }
+  set amount($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasAmount() => $_has(0);
   @$pb.TagNumber(1)
@@ -234,9 +234,9 @@ class UnitTx extends $pb.GeneratedMessage {
   void clearBuyerTel() => clearField(9);
 
   @$pb.TagNumber(10)
-  $core.int get cancelAmount => $_getIZ(9);
+  $core.String get cancelAmount => $_getSZ(9);
   @$pb.TagNumber(10)
-  set cancelAmount($core.int v) { $_setSignedInt32(9, v); }
+  set cancelAmount($core.String v) { $_setString(9, v); }
   @$pb.TagNumber(10)
   $core.bool hasCancelAmount() => $_has(9);
   @$pb.TagNumber(10)

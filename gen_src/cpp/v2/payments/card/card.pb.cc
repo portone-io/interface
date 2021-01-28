@@ -84,7 +84,6 @@ static void InitDefaultsscc_info_CancelCardPaymentRequest_v2_2fpayments_2fcard_2
     new (ptr) ::card_v2::CancelCardPaymentRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::CancelCardPaymentRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CancelCardPaymentRequest_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -98,7 +97,6 @@ static void InitDefaultsscc_info_CancelCardPaymenttResponse_v2_2fpayments_2fcard
     new (ptr) ::card_v2::CancelCardPaymenttResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::CancelCardPaymenttResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CancelCardPaymenttResponse_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -113,7 +111,6 @@ static void InitDefaultsscc_info_CancelHistory_v2_2fpayments_2fcard_2fcard_2epro
     new (ptr) ::card_v2::CancelHistory();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::CancelHistory::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CancelHistory_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -127,7 +124,6 @@ static void InitDefaultsscc_info_CardRegisterRequest_v2_2fpayments_2fcard_2fcard
     new (ptr) ::card_v2::CardRegisterRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::CardRegisterRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CardRegisterRequest_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -141,7 +137,6 @@ static void InitDefaultsscc_info_CardRegisterResponse_v2_2fpayments_2fcard_2fcar
     new (ptr) ::card_v2::CardRegisterResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::CardRegisterResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CardRegisterResponse_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -156,7 +151,6 @@ static void InitDefaultsscc_info_CardRegisterResultData_v2_2fpayments_2fcard_2fc
     new (ptr) ::card_v2::CardRegisterResultData();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::CardRegisterResultData::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CardRegisterResultData_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -170,7 +164,6 @@ static void InitDefaultsscc_info_DeleteCardInfoRequest_v2_2fpayments_2fcard_2fca
     new (ptr) ::card_v2::DeleteCardInfoRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::DeleteCardInfoRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeleteCardInfoRequest_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -184,7 +177,6 @@ static void InitDefaultsscc_info_DeleteCardInfoResponse_v2_2fpayments_2fcard_2fc
     new (ptr) ::card_v2::DeleteCardInfoResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::DeleteCardInfoResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeleteCardInfoResponse_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -198,7 +190,6 @@ static void InitDefaultsscc_info_GetCardInfoData_v2_2fpayments_2fcard_2fcard_2ep
     new (ptr) ::card_v2::GetCardInfoData();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::GetCardInfoData::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetCardInfoData_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -212,7 +203,6 @@ static void InitDefaultsscc_info_GetCardInfoRequest_v2_2fpayments_2fcard_2fcard_
     new (ptr) ::card_v2::GetCardInfoRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::GetCardInfoRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetCardInfoRequest_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -226,7 +216,6 @@ static void InitDefaultsscc_info_GetCardInfoResponse_v2_2fpayments_2fcard_2fcard
     new (ptr) ::card_v2::GetCardInfoResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::GetCardInfoResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_GetCardInfoResponse_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -241,7 +230,6 @@ static void InitDefaultsscc_info_PayByRegisteredCardData_v2_2fpayments_2fcard_2f
     new (ptr) ::card_v2::PayByRegisteredCardData();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::PayByRegisteredCardData::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PayByRegisteredCardData_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -256,7 +244,6 @@ static void InitDefaultsscc_info_PayByRegisteredCardRequest_v2_2fpayments_2fcard
     new (ptr) ::card_v2::PayByRegisteredCardRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::PayByRegisteredCardRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PayByRegisteredCardRequest_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -270,7 +257,6 @@ static void InitDefaultsscc_info_PayByRegisteredCardResponse_v2_2fpayments_2fcar
     new (ptr) ::card_v2::PayByRegisteredCardResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::card_v2::PayByRegisteredCardResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PayByRegisteredCardResponse_v2_2fpayments_2fcard_2fcard_2eproto =
@@ -628,8 +614,6 @@ namespace card_v2 {
 
 // ===================================================================
 
-void CardRegisterRequest::InitAsDefaultInstance() {
-}
 class CardRegisterRequest::_Internal {
  public:
 };
@@ -645,57 +629,57 @@ CardRegisterRequest::CardRegisterRequest(const CardRegisterRequest& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   card_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_uid().empty()) {
-    card_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_uid(),
+    card_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_uid(), 
       GetArena());
   }
   card_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_number().empty()) {
-    card_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_number(),
+    card_number_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_number(), 
       GetArena());
   }
   expiry_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_expiry().empty()) {
-    expiry_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_expiry(),
+    expiry_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_expiry(), 
       GetArena());
   }
   birth_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_birth().empty()) {
-    birth_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_birth(),
+    birth_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_birth(), 
       GetArena());
   }
   pwd_2digit_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pwd_2digit().empty()) {
-    pwd_2digit_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pwd_2digit(),
+    pwd_2digit_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pwd_2digit(), 
       GetArena());
   }
   customer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_name().empty()) {
-    customer_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_name(),
+    customer_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_name(), 
       GetArena());
   }
   customer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_tel().empty()) {
-    customer_tel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_tel(),
+    customer_tel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_tel(), 
       GetArena());
   }
   customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_email().empty()) {
-    customer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_email(),
+    customer_email_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_email(), 
       GetArena());
   }
   customer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_addr().empty()) {
-    customer_addr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_addr(),
+    customer_addr_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_addr(), 
       GetArena());
   }
   customer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_postcode().empty()) {
-    customer_postcode_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_postcode(),
+    customer_postcode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_postcode(), 
       GetArena());
   }
   pg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg().empty()) {
-    pg_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pg(),
+    pg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:card_v2.CardRegisterRequest)
@@ -758,23 +742,22 @@ void CardRegisterRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  card_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  expiry_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  birth_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pwd_2digit_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_tel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_addr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_postcode_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_uid_.ClearToEmpty();
+  card_number_.ClearToEmpty();
+  expiry_.ClearToEmpty();
+  birth_.ClearToEmpty();
+  pwd_2digit_.ClearToEmpty();
+  customer_name_.ClearToEmpty();
+  customer_tel_.ClearToEmpty();
+  customer_email_.ClearToEmpty();
+  customer_addr_.ClearToEmpty();
+  customer_postcode_.ClearToEmpty();
+  pg_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* CardRegisterRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -1217,8 +1200,6 @@ void CardRegisterRequest::InternalSwap(CardRegisterRequest* other) {
 
 // ===================================================================
 
-void CardRegisterResultData::InitAsDefaultInstance() {
-}
 class CardRegisterResultData::_Internal {
  public:
 };
@@ -1234,57 +1215,57 @@ CardRegisterResultData::CardRegisterResultData(const CardRegisterResultData& fro
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   card_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_uid().empty()) {
-    card_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_uid(),
+    card_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_uid(), 
       GetArena());
   }
   card_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_name().empty()) {
-    card_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_name(),
+    card_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_name(), 
       GetArena());
   }
   card_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_code().empty()) {
-    card_code_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_code(),
+    card_code_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_code(), 
       GetArena());
   }
   bin_numbrer_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_bin_numbrer().empty()) {
-    bin_numbrer_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_bin_numbrer(),
+    bin_numbrer_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_bin_numbrer(), 
       GetArena());
   }
   customer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_name().empty()) {
-    customer_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_name(),
+    customer_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_name(), 
       GetArena());
   }
   customer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_tel().empty()) {
-    customer_tel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_tel(),
+    customer_tel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_tel(), 
       GetArena());
   }
   customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_email().empty()) {
-    customer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_email(),
+    customer_email_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_email(), 
       GetArena());
   }
   customer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_addr().empty()) {
-    customer_addr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_addr(),
+    customer_addr_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_addr(), 
       GetArena());
   }
   customer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_postcode().empty()) {
-    customer_postcode_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_postcode(),
+    customer_postcode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_postcode(), 
       GetArena());
   }
   pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_provider().empty()) {
-    pg_provider_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pg_provider(),
+    pg_provider_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_provider(), 
       GetArena());
   }
   pg_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_id().empty()) {
-    pg_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pg_id(),
+    pg_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_id(), 
       GetArena());
   }
   ::memcpy(&card_type_, &from.card_type_,
@@ -1306,8 +1287,9 @@ void CardRegisterResultData::SharedCtor() {
   customer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   pg_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&card_type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&updated_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&card_type_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&updated_) -
       reinterpret_cast<char*>(&card_type_)) + sizeof(updated_));
 }
 
@@ -1353,17 +1335,17 @@ void CardRegisterResultData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  card_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_code_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  bin_numbrer_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_tel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_addr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_postcode_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_provider_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_uid_.ClearToEmpty();
+  card_name_.ClearToEmpty();
+  card_code_.ClearToEmpty();
+  bin_numbrer_.ClearToEmpty();
+  customer_name_.ClearToEmpty();
+  customer_tel_.ClearToEmpty();
+  customer_email_.ClearToEmpty();
+  customer_addr_.ClearToEmpty();
+  customer_postcode_.ClearToEmpty();
+  pg_provider_.ClearToEmpty();
+  pg_id_.ClearToEmpty();
   ::memset(&card_type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&updated_) -
       reinterpret_cast<char*>(&card_type_)) + sizeof(updated_));
@@ -1372,7 +1354,6 @@ void CardRegisterResultData::Clear() {
 
 const char* CardRegisterResultData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -1890,10 +1871,6 @@ void CardRegisterResultData::InternalSwap(CardRegisterResultData* other) {
 
 // ===================================================================
 
-void CardRegisterResponse::InitAsDefaultInstance() {
-  ::card_v2::_CardRegisterResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::card_v2::CardRegisterResultData*>(
-      ::card_v2::CardRegisterResultData::internal_default_instance());
-}
 class CardRegisterResponse::_Internal {
  public:
   static const ::card_v2::CardRegisterResultData& response(const CardRegisterResponse* msg);
@@ -1914,7 +1891,7 @@ CardRegisterResponse::CardRegisterResponse(const CardRegisterResponse& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -1929,8 +1906,9 @@ CardRegisterResponse::CardRegisterResponse(const CardRegisterResponse& from)
 void CardRegisterResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CardRegisterResponse_v2_2fpayments_2fcard_2fcard_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -1967,7 +1945,7 @@ void CardRegisterResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -1978,7 +1956,6 @@ void CardRegisterResponse::Clear() {
 
 const char* CardRegisterResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -2175,8 +2152,6 @@ void CardRegisterResponse::InternalSwap(CardRegisterResponse* other) {
 
 // ===================================================================
 
-void GetCardInfoRequest::InitAsDefaultInstance() {
-}
 class GetCardInfoRequest::_Internal {
  public:
 };
@@ -2192,7 +2167,7 @@ GetCardInfoRequest::GetCardInfoRequest(const GetCardInfoRequest& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   card_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_uid().empty()) {
-    card_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_uid(),
+    card_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_uid(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:card_v2.GetCardInfoRequest)
@@ -2235,13 +2210,12 @@ void GetCardInfoRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  card_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_uid_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* GetCardInfoRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -2384,8 +2358,6 @@ void GetCardInfoRequest::InternalSwap(GetCardInfoRequest* other) {
 
 // ===================================================================
 
-void GetCardInfoData::InitAsDefaultInstance() {
-}
 class GetCardInfoData::_Internal {
  public:
 };
@@ -2401,47 +2373,47 @@ GetCardInfoData::GetCardInfoData(const GetCardInfoData& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   card_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_uid().empty()) {
-    card_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_uid(),
+    card_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_uid(), 
       GetArena());
   }
   card_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_provider().empty()) {
-    card_provider_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_provider(),
+    card_provider_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_provider(), 
       GetArena());
   }
   card_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_code().empty()) {
-    card_code_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_code(),
+    card_code_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_code(), 
       GetArena());
   }
   bin_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_bin_number().empty()) {
-    bin_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_bin_number(),
+    bin_number_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_bin_number(), 
       GetArena());
   }
   customer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_name().empty()) {
-    customer_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_name(),
+    customer_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_name(), 
       GetArena());
   }
   customer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_tel().empty()) {
-    customer_tel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_tel(),
+    customer_tel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_tel(), 
       GetArena());
   }
   customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_email().empty()) {
-    customer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_email(),
+    customer_email_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_email(), 
       GetArena());
   }
   customer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_addr().empty()) {
-    customer_addr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_addr(),
+    customer_addr_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_addr(), 
       GetArena());
   }
   customer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_postcode().empty()) {
-    customer_postcode_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_postcode(),
+    customer_postcode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_postcode(), 
       GetArena());
   }
   ::memcpy(&card_type_, &from.card_type_,
@@ -2461,8 +2433,9 @@ void GetCardInfoData::SharedCtor() {
   customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   customer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   customer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&card_type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&updated_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&card_type_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&updated_) -
       reinterpret_cast<char*>(&card_type_)) + sizeof(updated_));
 }
 
@@ -2506,15 +2479,15 @@ void GetCardInfoData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  card_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_provider_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_code_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  bin_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_tel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_addr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_postcode_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_uid_.ClearToEmpty();
+  card_provider_.ClearToEmpty();
+  card_code_.ClearToEmpty();
+  bin_number_.ClearToEmpty();
+  customer_name_.ClearToEmpty();
+  customer_tel_.ClearToEmpty();
+  customer_email_.ClearToEmpty();
+  customer_addr_.ClearToEmpty();
+  customer_postcode_.ClearToEmpty();
   ::memset(&card_type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&updated_) -
       reinterpret_cast<char*>(&card_type_)) + sizeof(updated_));
@@ -2523,7 +2496,6 @@ void GetCardInfoData::Clear() {
 
 const char* GetCardInfoData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -2981,10 +2953,6 @@ void GetCardInfoData::InternalSwap(GetCardInfoData* other) {
 
 // ===================================================================
 
-void GetCardInfoResponse::InitAsDefaultInstance() {
-  ::card_v2::_GetCardInfoResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::card_v2::GetCardInfoData*>(
-      ::card_v2::GetCardInfoData::internal_default_instance());
-}
 class GetCardInfoResponse::_Internal {
  public:
   static const ::card_v2::GetCardInfoData& response(const GetCardInfoResponse* msg);
@@ -3005,7 +2973,7 @@ GetCardInfoResponse::GetCardInfoResponse(const GetCardInfoResponse& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -3020,8 +2988,9 @@ GetCardInfoResponse::GetCardInfoResponse(const GetCardInfoResponse& from)
 void GetCardInfoResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetCardInfoResponse_v2_2fpayments_2fcard_2fcard_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -3058,7 +3027,7 @@ void GetCardInfoResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -3069,7 +3038,6 @@ void GetCardInfoResponse::Clear() {
 
 const char* GetCardInfoResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3266,8 +3234,6 @@ void GetCardInfoResponse::InternalSwap(GetCardInfoResponse* other) {
 
 // ===================================================================
 
-void DeleteCardInfoRequest::InitAsDefaultInstance() {
-}
 class DeleteCardInfoRequest::_Internal {
  public:
 };
@@ -3283,7 +3249,7 @@ DeleteCardInfoRequest::DeleteCardInfoRequest(const DeleteCardInfoRequest& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   card_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_uid().empty()) {
-    card_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_uid(),
+    card_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_uid(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:card_v2.DeleteCardInfoRequest)
@@ -3326,13 +3292,12 @@ void DeleteCardInfoRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  card_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_uid_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* DeleteCardInfoRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3475,8 +3440,6 @@ void DeleteCardInfoRequest::InternalSwap(DeleteCardInfoRequest* other) {
 
 // ===================================================================
 
-void DeleteCardInfoResponse::InitAsDefaultInstance() {
-}
 class DeleteCardInfoResponse::_Internal {
  public:
 };
@@ -3492,7 +3455,7 @@ DeleteCardInfoResponse::DeleteCardInfoResponse(const DeleteCardInfoResponse& fro
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   code_ = from.code_;
@@ -3537,14 +3500,13 @@ void DeleteCardInfoResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   code_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* DeleteCardInfoResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3711,8 +3673,6 @@ void DeleteCardInfoResponse::InternalSwap(DeleteCardInfoResponse* other) {
 
 // ===================================================================
 
-void PayByRegisteredCardRequest::InitAsDefaultInstance() {
-}
 class PayByRegisteredCardRequest::_Internal {
  public:
 };
@@ -3728,62 +3688,62 @@ PayByRegisteredCardRequest::PayByRegisteredCardRequest(const PayByRegisteredCard
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   card_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_uid().empty()) {
-    card_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_uid(),
+    card_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_uid(), 
       GetArena());
   }
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
-    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+    merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
       GetArena());
   }
   amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_amount().empty()) {
-    amount_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_amount(),
+    amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_amount(), 
       GetArena());
   }
   duty_free_amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_duty_free_amount().empty()) {
-    duty_free_amount_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_duty_free_amount(),
+    duty_free_amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_duty_free_amount(), 
       GetArena());
   }
   order_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_order_name().empty()) {
-    order_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_order_name(),
+    order_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_order_name(), 
       GetArena());
   }
   custom_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_custom_data().empty()) {
-    custom_data_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_custom_data(),
+    custom_data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_custom_data(), 
       GetArena());
   }
   callback_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_callback_url().empty()) {
-    callback_url_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_callback_url(),
+    callback_url_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_callback_url(), 
       GetArena());
   }
   buyer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_addr().empty()) {
-    buyer_addr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_addr(),
+    buyer_addr_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_addr(), 
       GetArena());
   }
   buyer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_email().empty()) {
-    buyer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_email(),
+    buyer_email_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_email(), 
       GetArena());
   }
   buyer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_name().empty()) {
-    buyer_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_name(),
+    buyer_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_name(), 
       GetArena());
   }
   buyer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_postcode().empty()) {
-    buyer_postcode_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_postcode(),
+    buyer_postcode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_postcode(), 
       GetArena());
   }
   buyer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_tel().empty()) {
-    buyer_tel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_tel(),
+    buyer_tel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_tel(), 
       GetArena());
   }
   ::memcpy(&card_installment_, &from.card_installment_,
@@ -3806,8 +3766,9 @@ void PayByRegisteredCardRequest::SharedCtor() {
   buyer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   buyer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   buyer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&card_installment_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&interest_free_by_merchant_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&card_installment_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&interest_free_by_merchant_) -
       reinterpret_cast<char*>(&card_installment_)) + sizeof(interest_free_by_merchant_));
 }
 
@@ -3854,18 +3815,18 @@ void PayByRegisteredCardRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  card_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  amount_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  duty_free_amount_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  order_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  custom_data_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  callback_url_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_addr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_postcode_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_tel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  card_uid_.ClearToEmpty();
+  merchant_uid_.ClearToEmpty();
+  amount_.ClearToEmpty();
+  duty_free_amount_.ClearToEmpty();
+  order_name_.ClearToEmpty();
+  custom_data_.ClearToEmpty();
+  callback_url_.ClearToEmpty();
+  buyer_addr_.ClearToEmpty();
+  buyer_email_.ClearToEmpty();
+  buyer_name_.ClearToEmpty();
+  buyer_postcode_.ClearToEmpty();
+  buyer_tel_.ClearToEmpty();
   ::memset(&card_installment_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&interest_free_by_merchant_) -
       reinterpret_cast<char*>(&card_installment_)) + sizeof(interest_free_by_merchant_));
@@ -3874,7 +3835,6 @@ void PayByRegisteredCardRequest::Clear() {
 
 const char* PayByRegisteredCardRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -4397,8 +4357,6 @@ void PayByRegisteredCardRequest::InternalSwap(PayByRegisteredCardRequest* other)
 
 // ===================================================================
 
-void PayByRegisteredCardData::InitAsDefaultInstance() {
-}
 class PayByRegisteredCardData::_Internal {
  public:
 };
@@ -4418,142 +4376,142 @@ PayByRegisteredCardData::PayByRegisteredCardData(const PayByRegisteredCardData& 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_amount().empty()) {
-    amount_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_amount(),
+    amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_amount(), 
       GetArena());
   }
   apply_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_apply_num().empty()) {
-    apply_num_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_apply_num(),
+    apply_num_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_apply_num(), 
       GetArena());
   }
   buyer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_addr().empty()) {
-    buyer_addr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_addr(),
+    buyer_addr_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_addr(), 
       GetArena());
   }
   buyer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_email().empty()) {
-    buyer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_email(),
+    buyer_email_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_email(), 
       GetArena());
   }
   buyer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_name().empty()) {
-    buyer_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_name(),
+    buyer_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_name(), 
       GetArena());
   }
   buyer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_postcode().empty()) {
-    buyer_postcode_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_postcode(),
+    buyer_postcode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_postcode(), 
       GetArena());
   }
   buyer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_tel().empty()) {
-    buyer_tel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_tel(),
+    buyer_tel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_tel(), 
       GetArena());
   }
   cancel_amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_cancel_amount().empty()) {
-    cancel_amount_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_cancel_amount(),
+    cancel_amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_cancel_amount(), 
       GetArena());
   }
   cancel_reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_cancel_reason().empty()) {
-    cancel_reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_cancel_reason(),
+    cancel_reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_cancel_reason(), 
       GetArena());
   }
   card_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_code().empty()) {
-    card_code_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_code(),
+    card_code_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_code(), 
       GetArena());
   }
   card_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_name().empty()) {
-    card_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_name(),
+    card_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_name(), 
       GetArena());
   }
   bin_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_bin_number().empty()) {
-    bin_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_bin_number(),
+    bin_number_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_bin_number(), 
       GetArena());
   }
   channel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_channel().empty()) {
-    channel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_channel(),
+    channel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_channel(), 
       GetArena());
   }
   currency_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_currency().empty()) {
-    currency_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_currency(),
+    currency_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_currency(), 
       GetArena());
   }
   custom_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_custom_data().empty()) {
-    custom_data_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_custom_data(),
+    custom_data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_custom_data(), 
       GetArena());
   }
   card_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_uid().empty()) {
-    card_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_uid(),
+    card_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_uid(), 
       GetArena());
   }
   customer_uid_usage_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_uid_usage().empty()) {
-    customer_uid_usage_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_uid_usage(),
+    customer_uid_usage_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_uid_usage(), 
       GetArena());
   }
   fail_reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_fail_reason().empty()) {
-    fail_reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_fail_reason(),
+    fail_reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_fail_reason(), 
       GetArena());
   }
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
-    imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_imp_uid(),
+    imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
       GetArena());
   }
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
-    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+    merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
       GetArena());
   }
   order_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_order_name().empty()) {
-    order_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_order_name(),
+    order_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_order_name(), 
       GetArena());
   }
   pay_method_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pay_method().empty()) {
-    pay_method_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pay_method(),
+    pay_method_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pay_method(), 
       GetArena());
   }
   pg_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_id().empty()) {
-    pg_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pg_id(),
+    pg_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_id(), 
       GetArena());
   }
   pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_provider().empty()) {
-    pg_provider_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pg_provider(),
+    pg_provider_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_provider(), 
       GetArena());
   }
   pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_tid().empty()) {
-    pg_tid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pg_tid(),
+    pg_tid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_tid(), 
       GetArena());
   }
   receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_receipt_url().empty()) {
-    receipt_url_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_receipt_url(),
+    receipt_url_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_receipt_url(), 
       GetArena());
   }
   status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_status().empty()) {
-    status_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_status(),
+    status_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_status(), 
       GetArena());
   }
   user_agent_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_user_agent().empty()) {
-    user_agent_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_user_agent(),
+    user_agent_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_user_agent(), 
       GetArena());
   }
   ::memcpy(&cancelled_at_, &from.cancelled_at_,
@@ -4592,8 +4550,9 @@ void PayByRegisteredCardData::SharedCtor() {
   receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   user_agent_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&cancelled_at_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&started_at_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&cancelled_at_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&started_at_) -
       reinterpret_cast<char*>(&cancelled_at_)) + sizeof(started_at_));
 }
 
@@ -4658,34 +4617,34 @@ void PayByRegisteredCardData::Clear() {
 
   cancel_history_.Clear();
   cancel_receipt_urls_.Clear();
-  amount_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  apply_num_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_addr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_postcode_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_tel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  cancel_amount_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  cancel_reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_code_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  bin_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  channel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  currency_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  custom_data_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_uid_usage_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  fail_reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  imp_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  order_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pay_method_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_provider_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_tid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  receipt_url_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  status_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  user_agent_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  amount_.ClearToEmpty();
+  apply_num_.ClearToEmpty();
+  buyer_addr_.ClearToEmpty();
+  buyer_email_.ClearToEmpty();
+  buyer_name_.ClearToEmpty();
+  buyer_postcode_.ClearToEmpty();
+  buyer_tel_.ClearToEmpty();
+  cancel_amount_.ClearToEmpty();
+  cancel_reason_.ClearToEmpty();
+  card_code_.ClearToEmpty();
+  card_name_.ClearToEmpty();
+  bin_number_.ClearToEmpty();
+  channel_.ClearToEmpty();
+  currency_.ClearToEmpty();
+  custom_data_.ClearToEmpty();
+  card_uid_.ClearToEmpty();
+  customer_uid_usage_.ClearToEmpty();
+  fail_reason_.ClearToEmpty();
+  imp_uid_.ClearToEmpty();
+  merchant_uid_.ClearToEmpty();
+  order_name_.ClearToEmpty();
+  pay_method_.ClearToEmpty();
+  pg_id_.ClearToEmpty();
+  pg_provider_.ClearToEmpty();
+  pg_tid_.ClearToEmpty();
+  receipt_url_.ClearToEmpty();
+  status_.ClearToEmpty();
+  user_agent_.ClearToEmpty();
   ::memset(&cancelled_at_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&started_at_) -
       reinterpret_cast<char*>(&cancelled_at_)) + sizeof(started_at_));
@@ -4694,7 +4653,6 @@ void PayByRegisteredCardData::Clear() {
 
 const char* PayByRegisteredCardData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -5875,10 +5833,6 @@ void PayByRegisteredCardData::InternalSwap(PayByRegisteredCardData* other) {
 
 // ===================================================================
 
-void PayByRegisteredCardResponse::InitAsDefaultInstance() {
-  ::card_v2::_PayByRegisteredCardResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::card_v2::PayByRegisteredCardData*>(
-      ::card_v2::PayByRegisteredCardData::internal_default_instance());
-}
 class PayByRegisteredCardResponse::_Internal {
  public:
   static const ::card_v2::PayByRegisteredCardData& response(const PayByRegisteredCardResponse* msg);
@@ -5899,7 +5853,7 @@ PayByRegisteredCardResponse::PayByRegisteredCardResponse(const PayByRegisteredCa
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -5914,8 +5868,9 @@ PayByRegisteredCardResponse::PayByRegisteredCardResponse(const PayByRegisteredCa
 void PayByRegisteredCardResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PayByRegisteredCardResponse_v2_2fpayments_2fcard_2fcard_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -5952,7 +5907,7 @@ void PayByRegisteredCardResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -5963,7 +5918,6 @@ void PayByRegisteredCardResponse::Clear() {
 
 const char* PayByRegisteredCardResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -6160,8 +6114,6 @@ void PayByRegisteredCardResponse::InternalSwap(PayByRegisteredCardResponse* othe
 
 // ===================================================================
 
-void CancelHistory::InitAsDefaultInstance() {
-}
 class CancelHistory::_Internal {
  public:
 };
@@ -6177,22 +6129,22 @@ CancelHistory::CancelHistory(const CancelHistory& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_tid().empty()) {
-    pg_tid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pg_tid(),
+    pg_tid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_tid(), 
       GetArena());
   }
   amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_amount().empty()) {
-    amount_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_amount(),
+    amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_amount(), 
       GetArena());
   }
   reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_reason().empty()) {
-    reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_reason(),
+    reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_reason(), 
       GetArena());
   }
   receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_receipt_url().empty()) {
-    receipt_url_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_receipt_url(),
+    receipt_url_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_receipt_url(), 
       GetArena());
   }
   cancelled_at_ = from.cancelled_at_;
@@ -6243,17 +6195,16 @@ void CancelHistory::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  pg_tid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  amount_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  receipt_url_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  pg_tid_.ClearToEmpty();
+  amount_.ClearToEmpty();
+  reason_.ClearToEmpty();
+  receipt_url_.ClearToEmpty();
   cancelled_at_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* CancelHistory::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -6510,8 +6461,6 @@ void CancelHistory::InternalSwap(CancelHistory* other) {
 
 // ===================================================================
 
-void CancelCardPaymentRequest::InitAsDefaultInstance() {
-}
 class CancelCardPaymentRequest::_Internal {
  public:
 };
@@ -6527,27 +6476,27 @@ CancelCardPaymentRequest::CancelCardPaymentRequest(const CancelCardPaymentReques
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
-    imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_imp_uid(),
+    imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
       GetArena());
   }
   amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_amount().empty()) {
-    amount_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_amount(),
+    amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_amount(), 
       GetArena());
   }
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
-    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+    merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
       GetArena());
   }
   duty_free_amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_duty_free_amount().empty()) {
-    duty_free_amount_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_duty_free_amount(),
+    duty_free_amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_duty_free_amount(), 
       GetArena());
   }
   reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_reason().empty()) {
-    reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_reason(),
+    reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_reason(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:card_v2.CancelCardPaymentRequest)
@@ -6598,17 +6547,16 @@ void CancelCardPaymentRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  imp_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  amount_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  duty_free_amount_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  imp_uid_.ClearToEmpty();
+  amount_.ClearToEmpty();
+  merchant_uid_.ClearToEmpty();
+  duty_free_amount_.ClearToEmpty();
+  reason_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* CancelCardPaymentRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -6871,10 +6819,6 @@ void CancelCardPaymentRequest::InternalSwap(CancelCardPaymentRequest* other) {
 
 // ===================================================================
 
-void CancelCardPaymenttResponse::InitAsDefaultInstance() {
-  ::card_v2::_CancelCardPaymenttResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::card_v2::PayByRegisteredCardData*>(
-      ::card_v2::PayByRegisteredCardData::internal_default_instance());
-}
 class CancelCardPaymenttResponse::_Internal {
  public:
   static const ::card_v2::PayByRegisteredCardData& response(const CancelCardPaymenttResponse* msg);
@@ -6895,7 +6839,7 @@ CancelCardPaymenttResponse::CancelCardPaymenttResponse(const CancelCardPaymenttR
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -6910,8 +6854,9 @@ CancelCardPaymenttResponse::CancelCardPaymenttResponse(const CancelCardPaymenttR
 void CancelCardPaymenttResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CancelCardPaymenttResponse_v2_2fpayments_2fcard_2fcard_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -6948,7 +6893,7 @@ void CancelCardPaymenttResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -6959,7 +6904,6 @@ void CancelCardPaymenttResponse::Clear() {
 
 const char* CancelCardPaymenttResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

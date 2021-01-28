@@ -127,7 +127,6 @@ static void InitDefaultsscc_info_CancelHistory_v1_2fpayment_2fpayment_2eproto() 
     new (ptr) ::payment::CancelHistory();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::CancelHistory::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CancelHistory_v1_2fpayment_2fpayment_2eproto =
@@ -141,7 +140,6 @@ static void InitDefaultsscc_info_Payment_v1_2fpayment_2fpayment_2eproto() {
     new (ptr) ::payment::Payment();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::Payment::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Payment_v1_2fpayment_2fpayment_2eproto =
@@ -156,7 +154,6 @@ static void InitDefaultsscc_info_PaymentBalance_v1_2fpayment_2fpayment_2eproto()
     new (ptr) ::payment::PaymentBalance();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentBalance::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PaymentBalance_v1_2fpayment_2fpayment_2eproto =
@@ -172,7 +169,6 @@ static void InitDefaultsscc_info_PaymentBalanceDetail_v1_2fpayment_2fpayment_2ep
     new (ptr) ::payment::PaymentBalanceDetail();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentBalanceDetail::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentBalanceDetail_v1_2fpayment_2fpayment_2eproto =
@@ -186,7 +182,6 @@ static void InitDefaultsscc_info_PaymentBalanceHistory_v1_2fpayment_2fpayment_2e
     new (ptr) ::payment::PaymentBalanceHistory();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentBalanceHistory::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentBalanceHistory_v1_2fpayment_2fpayment_2eproto =
@@ -201,7 +196,6 @@ static void InitDefaultsscc_info_PaymentBalanceRequest_v1_2fpayment_2fpayment_2e
     new (ptr) ::payment::PaymentBalanceRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentBalanceRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentBalanceRequest_v1_2fpayment_2fpayment_2eproto =
@@ -215,7 +209,6 @@ static void InitDefaultsscc_info_PaymentBalanceResponse_v1_2fpayment_2fpayment_2
     new (ptr) ::payment::PaymentBalanceResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentBalanceResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentBalanceResponse_v1_2fpayment_2fpayment_2eproto =
@@ -230,7 +223,6 @@ static void InitDefaultsscc_info_PaymentCancelRequest_v1_2fpayment_2fpayment_2ep
     new (ptr) ::payment::PaymentCancelRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentCancelRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentCancelRequest_v1_2fpayment_2fpayment_2eproto =
@@ -244,7 +236,6 @@ static void InitDefaultsscc_info_PaymentCancelResponse_v1_2fpayment_2fpayment_2e
     new (ptr) ::payment::PaymentCancelResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentCancelResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentCancelResponse_v1_2fpayment_2fpayment_2eproto =
@@ -259,7 +250,6 @@ static void InitDefaultsscc_info_PaymentGetPrepareRequest_v1_2fpayment_2fpayment
     new (ptr) ::payment::PaymentGetPrepareRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentGetPrepareRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentGetPrepareRequest_v1_2fpayment_2fpayment_2eproto =
@@ -273,7 +263,6 @@ static void InitDefaultsscc_info_PaymentMerchantUidRequest_v1_2fpayment_2fpaymen
     new (ptr) ::payment::PaymentMerchantUidRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentMerchantUidRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentMerchantUidRequest_v1_2fpayment_2fpayment_2eproto =
@@ -287,7 +276,6 @@ static void InitDefaultsscc_info_PaymentMerchantUidResponse_v1_2fpayment_2fpayme
     new (ptr) ::payment::PaymentMerchantUidResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentMerchantUidResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentMerchantUidResponse_v1_2fpayment_2fpayment_2eproto =
@@ -302,7 +290,6 @@ static void InitDefaultsscc_info_PaymentPage_v1_2fpayment_2fpayment_2eproto() {
     new (ptr) ::payment::PaymentPage();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentPage::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentPage_v1_2fpayment_2fpayment_2eproto =
@@ -317,7 +304,6 @@ static void InitDefaultsscc_info_PaymentPrepareRequest_v1_2fpayment_2fpayment_2e
     new (ptr) ::payment::PaymentPrepareRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentPrepareRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentPrepareRequest_v1_2fpayment_2fpayment_2eproto =
@@ -331,7 +317,6 @@ static void InitDefaultsscc_info_PaymentPrepareResponse_v1_2fpayment_2fpayment_2
     new (ptr) ::payment::PaymentPrepareResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentPrepareResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentPrepareResponse_v1_2fpayment_2fpayment_2eproto =
@@ -346,7 +331,6 @@ static void InitDefaultsscc_info_PaymentRequest_v1_2fpayment_2fpayment_2eproto()
     new (ptr) ::payment::PaymentRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentRequest_v1_2fpayment_2fpayment_2eproto =
@@ -360,7 +344,6 @@ static void InitDefaultsscc_info_PaymentResponse_v1_2fpayment_2fpayment_2eproto(
     new (ptr) ::payment::PaymentResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentResponse_v1_2fpayment_2fpayment_2eproto =
@@ -375,7 +358,6 @@ static void InitDefaultsscc_info_PaymentStatusRequest_v1_2fpayment_2fpayment_2ep
     new (ptr) ::payment::PaymentStatusRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentStatusRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentStatusRequest_v1_2fpayment_2fpayment_2eproto =
@@ -389,7 +371,6 @@ static void InitDefaultsscc_info_PaymentStatusResponse_v1_2fpayment_2fpayment_2e
     new (ptr) ::payment::PaymentStatusResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentStatusResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentStatusResponse_v1_2fpayment_2fpayment_2eproto =
@@ -404,7 +385,6 @@ static void InitDefaultsscc_info_PaymentsMerchantUidRequest_v1_2fpayment_2fpayme
     new (ptr) ::payment::PaymentsMerchantUidRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentsMerchantUidRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentsMerchantUidRequest_v1_2fpayment_2fpayment_2eproto =
@@ -418,7 +398,6 @@ static void InitDefaultsscc_info_PaymentsMerchantUidResponse_v1_2fpayment_2fpaym
     new (ptr) ::payment::PaymentsMerchantUidResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentsMerchantUidResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentsMerchantUidResponse_v1_2fpayment_2fpayment_2eproto =
@@ -433,7 +412,6 @@ static void InitDefaultsscc_info_PaymentsRequest_v1_2fpayment_2fpayment_2eproto(
     new (ptr) ::payment::PaymentsRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentsRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentsRequest_v1_2fpayment_2fpayment_2eproto =
@@ -447,7 +425,6 @@ static void InitDefaultsscc_info_PaymentsResponse_v1_2fpayment_2fpayment_2eproto
     new (ptr) ::payment::PaymentsResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::PaymentsResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentsResponse_v1_2fpayment_2fpayment_2eproto =
@@ -462,7 +439,6 @@ static void InitDefaultsscc_info_Prepare_v1_2fpayment_2fpayment_2eproto() {
     new (ptr) ::payment::Prepare();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::payment::Prepare::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Prepare_v1_2fpayment_2fpayment_2eproto =
@@ -935,8 +911,6 @@ namespace payment {
 
 // ===================================================================
 
-void Payment::InitAsDefaultInstance() {
-}
 class Payment::_Internal {
  public:
 };
@@ -956,157 +930,157 @@ Payment::Payment(const Payment& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   apply_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_apply_num().empty()) {
-    apply_num_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_apply_num(),
+    apply_num_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_apply_num(), 
       GetArena());
   }
   bank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_bank_name().empty()) {
-    bank_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_bank_name(),
+    bank_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_bank_name(), 
       GetArena());
   }
   buyer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_addr().empty()) {
-    buyer_addr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_addr(),
+    buyer_addr_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_addr(), 
       GetArena());
   }
   buyer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_email().empty()) {
-    buyer_email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_email(),
+    buyer_email_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_email(), 
       GetArena());
   }
   buyer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_name().empty()) {
-    buyer_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_name(),
+    buyer_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_name(), 
       GetArena());
   }
   buyer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_postcode().empty()) {
-    buyer_postcode_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_postcode(),
+    buyer_postcode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_postcode(), 
       GetArena());
   }
   buyer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_tel().empty()) {
-    buyer_tel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_buyer_tel(),
+    buyer_tel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_tel(), 
       GetArena());
   }
   cancel_reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_cancel_reason().empty()) {
-    cancel_reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_cancel_reason(),
+    cancel_reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_cancel_reason(), 
       GetArena());
   }
   card_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_code().empty()) {
-    card_code_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_code(),
+    card_code_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_code(), 
       GetArena());
   }
   card_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_name().empty()) {
-    card_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_name(),
+    card_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_name(), 
       GetArena());
   }
   card_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_number().empty()) {
-    card_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_card_number(),
+    card_number_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_number(), 
       GetArena());
   }
   channel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_channel().empty()) {
-    channel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_channel(),
+    channel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_channel(), 
       GetArena());
   }
   currency_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_currency().empty()) {
-    currency_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_currency(),
+    currency_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_currency(), 
       GetArena());
   }
   custom_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_custom_data().empty()) {
-    custom_data_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_custom_data(),
+    custom_data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_custom_data(), 
       GetArena());
   }
   customer_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_uid().empty()) {
-    customer_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_uid(),
+    customer_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_uid(), 
       GetArena());
   }
   customer_uid_usage_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_uid_usage().empty()) {
-    customer_uid_usage_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_customer_uid_usage(),
+    customer_uid_usage_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_uid_usage(), 
       GetArena());
   }
   fail_reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_fail_reason().empty()) {
-    fail_reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_fail_reason(),
+    fail_reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_fail_reason(), 
       GetArena());
   }
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
-    imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_imp_uid(),
+    imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
       GetArena());
   }
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
-    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+    merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
       GetArena());
   }
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
-    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
       GetArena());
   }
   pay_method_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pay_method().empty()) {
-    pay_method_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pay_method(),
+    pay_method_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pay_method(), 
       GetArena());
   }
   pg_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_id().empty()) {
-    pg_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pg_id(),
+    pg_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_id(), 
       GetArena());
   }
   pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_provider().empty()) {
-    pg_provider_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pg_provider(),
+    pg_provider_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_provider(), 
       GetArena());
   }
   pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_tid().empty()) {
-    pg_tid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pg_tid(),
+    pg_tid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_tid(), 
       GetArena());
   }
   receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_receipt_url().empty()) {
-    receipt_url_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_receipt_url(),
+    receipt_url_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_receipt_url(), 
       GetArena());
   }
   status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_status().empty()) {
-    status_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_status(),
+    status_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_status(), 
       GetArena());
   }
   user_agent_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_user_agent().empty()) {
-    user_agent_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_user_agent(),
+    user_agent_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_user_agent(), 
       GetArena());
   }
   vbank_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_vbank_code().empty()) {
-    vbank_code_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_vbank_code(),
+    vbank_code_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_vbank_code(), 
       GetArena());
   }
   vbank_holder_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_vbank_holder().empty()) {
-    vbank_holder_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_vbank_holder(),
+    vbank_holder_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_vbank_holder(), 
       GetArena());
   }
   vbank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_vbank_name().empty()) {
-    vbank_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_vbank_name(),
+    vbank_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_vbank_name(), 
       GetArena());
   }
   vbank_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_vbank_num().empty()) {
-    vbank_num_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_vbank_num(),
+    vbank_num_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_vbank_num(), 
       GetArena());
   }
   ::memcpy(&amount_, &from.amount_,
@@ -1148,8 +1122,9 @@ void Payment::SharedCtor() {
   vbank_holder_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   vbank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   vbank_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&amount_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&vbank_issued_at_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&amount_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&vbank_issued_at_) -
       reinterpret_cast<char*>(&amount_)) + sizeof(vbank_issued_at_));
 }
 
@@ -1217,37 +1192,37 @@ void Payment::Clear() {
 
   cancel_history_.Clear();
   cancel_receipt_urls_.Clear();
-  apply_num_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  bank_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_addr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_postcode_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_tel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  cancel_reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_code_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  channel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  currency_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  custom_data_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_uid_usage_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  fail_reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  imp_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pay_method_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_provider_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_tid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  receipt_url_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  status_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  user_agent_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  vbank_code_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  vbank_holder_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  vbank_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  vbank_num_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  apply_num_.ClearToEmpty();
+  bank_name_.ClearToEmpty();
+  buyer_addr_.ClearToEmpty();
+  buyer_email_.ClearToEmpty();
+  buyer_name_.ClearToEmpty();
+  buyer_postcode_.ClearToEmpty();
+  buyer_tel_.ClearToEmpty();
+  cancel_reason_.ClearToEmpty();
+  card_code_.ClearToEmpty();
+  card_name_.ClearToEmpty();
+  card_number_.ClearToEmpty();
+  channel_.ClearToEmpty();
+  currency_.ClearToEmpty();
+  custom_data_.ClearToEmpty();
+  customer_uid_.ClearToEmpty();
+  customer_uid_usage_.ClearToEmpty();
+  fail_reason_.ClearToEmpty();
+  imp_uid_.ClearToEmpty();
+  merchant_uid_.ClearToEmpty();
+  name_.ClearToEmpty();
+  pay_method_.ClearToEmpty();
+  pg_id_.ClearToEmpty();
+  pg_provider_.ClearToEmpty();
+  pg_tid_.ClearToEmpty();
+  receipt_url_.ClearToEmpty();
+  status_.ClearToEmpty();
+  user_agent_.ClearToEmpty();
+  vbank_code_.ClearToEmpty();
+  vbank_holder_.ClearToEmpty();
+  vbank_name_.ClearToEmpty();
+  vbank_num_.ClearToEmpty();
   ::memset(&amount_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&vbank_issued_at_) -
       reinterpret_cast<char*>(&amount_)) + sizeof(vbank_issued_at_));
@@ -1256,7 +1231,6 @@ void Payment::Clear() {
 
 const char* Payment::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -2663,8 +2637,6 @@ void Payment::InternalSwap(Payment* other) {
 
 // ===================================================================
 
-void CancelHistory::InitAsDefaultInstance() {
-}
 class CancelHistory::_Internal {
  public:
 };
@@ -2680,17 +2652,17 @@ CancelHistory::CancelHistory(const CancelHistory& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_tid().empty()) {
-    pg_tid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_pg_tid(),
+    pg_tid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_tid(), 
       GetArena());
   }
   reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_reason().empty()) {
-    reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_reason(),
+    reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_reason(), 
       GetArena());
   }
   receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_receipt_url().empty()) {
-    receipt_url_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_receipt_url(),
+    receipt_url_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_receipt_url(), 
       GetArena());
   }
   ::memcpy(&amount_, &from.amount_,
@@ -2704,8 +2676,9 @@ void CancelHistory::SharedCtor() {
   pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&amount_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&cancelled_at_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&amount_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&cancelled_at_) -
       reinterpret_cast<char*>(&amount_)) + sizeof(cancelled_at_));
 }
 
@@ -2743,9 +2716,9 @@ void CancelHistory::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  pg_tid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  receipt_url_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  pg_tid_.ClearToEmpty();
+  reason_.ClearToEmpty();
+  receipt_url_.ClearToEmpty();
   ::memset(&amount_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&cancelled_at_) -
       reinterpret_cast<char*>(&amount_)) + sizeof(cancelled_at_));
@@ -2754,7 +2727,6 @@ void CancelHistory::Clear() {
 
 const char* CancelHistory::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3009,8 +2981,6 @@ void CancelHistory::InternalSwap(CancelHistory* other) {
 
 // ===================================================================
 
-void PaymentPage::InitAsDefaultInstance() {
-}
 class PaymentPage::_Internal {
  public:
 };
@@ -3034,8 +3004,9 @@ PaymentPage::PaymentPage(const PaymentPage& from)
 
 void PaymentPage::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentPage_v1_2fpayment_2fpayment_2eproto.base);
-  ::memset(&total_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&next_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&total_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&next_) -
       reinterpret_cast<char*>(&total_)) + sizeof(next_));
 }
 
@@ -3079,7 +3050,6 @@ void PaymentPage::Clear() {
 
 const char* PaymentPage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3296,8 +3266,6 @@ void PaymentPage::InternalSwap(PaymentPage* other) {
 
 // ===================================================================
 
-void PaymentBalanceDetail::InitAsDefaultInstance() {
-}
 class PaymentBalanceDetail::_Internal {
  public:
 };
@@ -3318,8 +3286,9 @@ PaymentBalanceDetail::PaymentBalanceDetail(const PaymentBalanceDetail& from)
 }
 
 void PaymentBalanceDetail::SharedCtor() {
-  ::memset(&tax_free_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&service_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&tax_free_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&service_) -
       reinterpret_cast<char*>(&tax_free_)) + sizeof(service_));
 }
 
@@ -3362,7 +3331,6 @@ void PaymentBalanceDetail::Clear() {
 
 const char* PaymentBalanceDetail::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3573,16 +3541,6 @@ void PaymentBalanceDetail::InternalSwap(PaymentBalanceDetail* other) {
 
 // ===================================================================
 
-void PaymentBalance::InitAsDefaultInstance() {
-  ::payment::_PaymentBalance_default_instance_._instance.get_mutable()->cash_receipt_ = const_cast< ::payment::PaymentBalanceDetail*>(
-      ::payment::PaymentBalanceDetail::internal_default_instance());
-  ::payment::_PaymentBalance_default_instance_._instance.get_mutable()->primary_ = const_cast< ::payment::PaymentBalanceDetail*>(
-      ::payment::PaymentBalanceDetail::internal_default_instance());
-  ::payment::_PaymentBalance_default_instance_._instance.get_mutable()->secondary_ = const_cast< ::payment::PaymentBalanceDetail*>(
-      ::payment::PaymentBalanceDetail::internal_default_instance());
-  ::payment::_PaymentBalance_default_instance_._instance.get_mutable()->discount_ = const_cast< ::payment::PaymentBalanceDetail*>(
-      ::payment::PaymentBalanceDetail::internal_default_instance());
-}
 class PaymentBalance::_Internal {
  public:
   static const ::payment::PaymentBalanceDetail& cash_receipt(const PaymentBalance* msg);
@@ -3644,8 +3602,9 @@ PaymentBalance::PaymentBalance(const PaymentBalance& from)
 
 void PaymentBalance::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentBalance_v1_2fpayment_2fpayment_2eproto.base);
-  ::memset(&cash_receipt_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&amount_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&cash_receipt_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&amount_) -
       reinterpret_cast<char*>(&cash_receipt_)) + sizeof(amount_));
 }
 
@@ -3707,7 +3666,6 @@ void PaymentBalance::Clear() {
 
 const char* PaymentBalance::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3978,16 +3936,6 @@ void PaymentBalance::InternalSwap(PaymentBalance* other) {
 
 // ===================================================================
 
-void PaymentBalanceHistory::InitAsDefaultInstance() {
-  ::payment::_PaymentBalanceHistory_default_instance_._instance.get_mutable()->cash_receipt_ = const_cast< ::payment::PaymentBalanceDetail*>(
-      ::payment::PaymentBalanceDetail::internal_default_instance());
-  ::payment::_PaymentBalanceHistory_default_instance_._instance.get_mutable()->primary_ = const_cast< ::payment::PaymentBalanceDetail*>(
-      ::payment::PaymentBalanceDetail::internal_default_instance());
-  ::payment::_PaymentBalanceHistory_default_instance_._instance.get_mutable()->secondary_ = const_cast< ::payment::PaymentBalanceDetail*>(
-      ::payment::PaymentBalanceDetail::internal_default_instance());
-  ::payment::_PaymentBalanceHistory_default_instance_._instance.get_mutable()->discount_ = const_cast< ::payment::PaymentBalanceDetail*>(
-      ::payment::PaymentBalanceDetail::internal_default_instance());
-}
 class PaymentBalanceHistory::_Internal {
  public:
   static const ::payment::PaymentBalanceDetail& cash_receipt(const PaymentBalanceHistory* msg);
@@ -4047,8 +3995,9 @@ PaymentBalanceHistory::PaymentBalanceHistory(const PaymentBalanceHistory& from)
 
 void PaymentBalanceHistory::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentBalanceHistory_v1_2fpayment_2fpayment_2eproto.base);
-  ::memset(&cash_receipt_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&created_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&cash_receipt_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&created_) -
       reinterpret_cast<char*>(&cash_receipt_)) + sizeof(created_));
 }
 
@@ -4109,7 +4058,6 @@ void PaymentBalanceHistory::Clear() {
 
 const char* PaymentBalanceHistory::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -4351,8 +4299,6 @@ void PaymentBalanceHistory::InternalSwap(PaymentBalanceHistory* other) {
 
 // ===================================================================
 
-void PaymentRequest::InitAsDefaultInstance() {
-}
 class PaymentRequest::_Internal {
  public:
 };
@@ -4368,7 +4314,7 @@ PaymentRequest::PaymentRequest(const PaymentRequest& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
-    imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_imp_uid(),
+    imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:payment.PaymentRequest)
@@ -4411,13 +4357,12 @@ void PaymentRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  imp_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  imp_uid_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* PaymentRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -4560,10 +4505,6 @@ void PaymentRequest::InternalSwap(PaymentRequest* other) {
 
 // ===================================================================
 
-void PaymentResponse::InitAsDefaultInstance() {
-  ::payment::_PaymentResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::payment::Payment*>(
-      ::payment::Payment::internal_default_instance());
-}
 class PaymentResponse::_Internal {
  public:
   static const ::payment::Payment& response(const PaymentResponse* msg);
@@ -4584,7 +4525,7 @@ PaymentResponse::PaymentResponse(const PaymentResponse& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -4599,8 +4540,9 @@ PaymentResponse::PaymentResponse(const PaymentResponse& from)
 void PaymentResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentResponse_v1_2fpayment_2fpayment_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -4637,7 +4579,7 @@ void PaymentResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -4648,7 +4590,6 @@ void PaymentResponse::Clear() {
 
 const char* PaymentResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -4845,8 +4786,6 @@ void PaymentResponse::InternalSwap(PaymentResponse* other) {
 
 // ===================================================================
 
-void PaymentsRequest::InitAsDefaultInstance() {
-}
 class PaymentsRequest::_Internal {
  public:
 };
@@ -4906,7 +4845,6 @@ void PaymentsRequest::Clear() {
 
 const char* PaymentsRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -5053,8 +4991,6 @@ void PaymentsRequest::InternalSwap(PaymentsRequest* other) {
 
 // ===================================================================
 
-void PaymentsResponse::InitAsDefaultInstance() {
-}
 class PaymentsResponse::_Internal {
  public:
 };
@@ -5072,7 +5008,7 @@ PaymentsResponse::PaymentsResponse(const PaymentsResponse& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   code_ = from.code_;
@@ -5118,14 +5054,13 @@ void PaymentsResponse::Clear() {
   (void) cached_has_bits;
 
   response_.Clear();
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   code_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* PaymentsResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -5321,8 +5256,6 @@ void PaymentsResponse::InternalSwap(PaymentsResponse* other) {
 
 // ===================================================================
 
-void PaymentsMerchantUidRequest::InitAsDefaultInstance() {
-}
 class PaymentsMerchantUidRequest::_Internal {
  public:
 };
@@ -5338,17 +5271,17 @@ PaymentsMerchantUidRequest::PaymentsMerchantUidRequest(const PaymentsMerchantUid
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
-    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+    merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
       GetArena());
   }
   status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_status().empty()) {
-    status_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_status(),
+    status_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_status(), 
       GetArena());
   }
   sorting_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_sorting().empty()) {
-    sorting_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_sorting(),
+    sorting_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sorting(), 
       GetArena());
   }
   page_ = from.page_;
@@ -5397,16 +5330,15 @@ void PaymentsMerchantUidRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  status_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  sorting_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  merchant_uid_.ClearToEmpty();
+  status_.ClearToEmpty();
+  sorting_.ClearToEmpty();
   page_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* PaymentsMerchantUidRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -5633,10 +5565,6 @@ void PaymentsMerchantUidRequest::InternalSwap(PaymentsMerchantUidRequest* other)
 
 // ===================================================================
 
-void PaymentsMerchantUidResponse::InitAsDefaultInstance() {
-  ::payment::_PaymentsMerchantUidResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::payment::PaymentPage*>(
-      ::payment::PaymentPage::internal_default_instance());
-}
 class PaymentsMerchantUidResponse::_Internal {
  public:
   static const ::payment::PaymentPage& response(const PaymentsMerchantUidResponse* msg);
@@ -5657,7 +5585,7 @@ PaymentsMerchantUidResponse::PaymentsMerchantUidResponse(const PaymentsMerchantU
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -5672,8 +5600,9 @@ PaymentsMerchantUidResponse::PaymentsMerchantUidResponse(const PaymentsMerchantU
 void PaymentsMerchantUidResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentsMerchantUidResponse_v1_2fpayment_2fpayment_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -5710,7 +5639,7 @@ void PaymentsMerchantUidResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -5721,7 +5650,6 @@ void PaymentsMerchantUidResponse::Clear() {
 
 const char* PaymentsMerchantUidResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -5918,8 +5846,6 @@ void PaymentsMerchantUidResponse::InternalSwap(PaymentsMerchantUidResponse* othe
 
 // ===================================================================
 
-void PaymentStatusRequest::InitAsDefaultInstance() {
-}
 class PaymentStatusRequest::_Internal {
  public:
 };
@@ -5935,12 +5861,12 @@ PaymentStatusRequest::PaymentStatusRequest(const PaymentStatusRequest& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_status().empty()) {
-    status_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_status(),
+    status_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_status(), 
       GetArena());
   }
   sorting_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_sorting().empty()) {
-    sorting_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_sorting(),
+    sorting_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sorting(), 
       GetArena());
   }
   ::memcpy(&page_, &from.page_,
@@ -5953,8 +5879,9 @@ void PaymentStatusRequest::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentStatusRequest_v1_2fpayment_2fpayment_2eproto.base);
   status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   sorting_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&page_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&to_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&page_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&to_) -
       reinterpret_cast<char*>(&page_)) + sizeof(to_));
 }
 
@@ -5991,8 +5918,8 @@ void PaymentStatusRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  status_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  sorting_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  status_.ClearToEmpty();
+  sorting_.ClearToEmpty();
   ::memset(&page_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&to_) -
       reinterpret_cast<char*>(&page_)) + sizeof(to_));
@@ -6001,7 +5928,6 @@ void PaymentStatusRequest::Clear() {
 
 const char* PaymentStatusRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -6272,10 +6198,6 @@ void PaymentStatusRequest::InternalSwap(PaymentStatusRequest* other) {
 
 // ===================================================================
 
-void PaymentStatusResponse::InitAsDefaultInstance() {
-  ::payment::_PaymentStatusResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::payment::PaymentPage*>(
-      ::payment::PaymentPage::internal_default_instance());
-}
 class PaymentStatusResponse::_Internal {
  public:
   static const ::payment::PaymentPage& response(const PaymentStatusResponse* msg);
@@ -6296,7 +6218,7 @@ PaymentStatusResponse::PaymentStatusResponse(const PaymentStatusResponse& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -6311,8 +6233,9 @@ PaymentStatusResponse::PaymentStatusResponse(const PaymentStatusResponse& from)
 void PaymentStatusResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentStatusResponse_v1_2fpayment_2fpayment_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -6349,7 +6272,7 @@ void PaymentStatusResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -6360,7 +6283,6 @@ void PaymentStatusResponse::Clear() {
 
 const char* PaymentStatusResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -6557,8 +6479,6 @@ void PaymentStatusResponse::InternalSwap(PaymentStatusResponse* other) {
 
 // ===================================================================
 
-void PaymentMerchantUidRequest::InitAsDefaultInstance() {
-}
 class PaymentMerchantUidRequest::_Internal {
  public:
 };
@@ -6574,17 +6494,17 @@ PaymentMerchantUidRequest::PaymentMerchantUidRequest(const PaymentMerchantUidReq
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
-    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+    merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
       GetArena());
   }
   status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_status().empty()) {
-    status_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_status(),
+    status_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_status(), 
       GetArena());
   }
   sorting_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_sorting().empty()) {
-    sorting_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_sorting(),
+    sorting_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sorting(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:payment.PaymentMerchantUidRequest)
@@ -6631,15 +6551,14 @@ void PaymentMerchantUidRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  status_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  sorting_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  merchant_uid_.ClearToEmpty();
+  status_.ClearToEmpty();
+  sorting_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* PaymentMerchantUidRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -6842,10 +6761,6 @@ void PaymentMerchantUidRequest::InternalSwap(PaymentMerchantUidRequest* other) {
 
 // ===================================================================
 
-void PaymentMerchantUidResponse::InitAsDefaultInstance() {
-  ::payment::_PaymentMerchantUidResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::payment::Payment*>(
-      ::payment::Payment::internal_default_instance());
-}
 class PaymentMerchantUidResponse::_Internal {
  public:
   static const ::payment::Payment& response(const PaymentMerchantUidResponse* msg);
@@ -6866,7 +6781,7 @@ PaymentMerchantUidResponse::PaymentMerchantUidResponse(const PaymentMerchantUidR
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -6881,8 +6796,9 @@ PaymentMerchantUidResponse::PaymentMerchantUidResponse(const PaymentMerchantUidR
 void PaymentMerchantUidResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentMerchantUidResponse_v1_2fpayment_2fpayment_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -6919,7 +6835,7 @@ void PaymentMerchantUidResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -6930,7 +6846,6 @@ void PaymentMerchantUidResponse::Clear() {
 
 const char* PaymentMerchantUidResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -7127,8 +7042,6 @@ void PaymentMerchantUidResponse::InternalSwap(PaymentMerchantUidResponse* other)
 
 // ===================================================================
 
-void PaymentCancelRequest::InitAsDefaultInstance() {
-}
 class PaymentCancelRequest::_Internal {
  public:
 };
@@ -7144,32 +7057,32 @@ PaymentCancelRequest::PaymentCancelRequest(const PaymentCancelRequest& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
-    imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_imp_uid(),
+    imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
       GetArena());
   }
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
-    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+    merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
       GetArena());
   }
   reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_reason().empty()) {
-    reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_reason(),
+    reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_reason(), 
       GetArena());
   }
   refund_holder_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_refund_holder().empty()) {
-    refund_holder_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_refund_holder(),
+    refund_holder_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_refund_holder(), 
       GetArena());
   }
   refund_bank_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_refund_bank().empty()) {
-    refund_bank_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_refund_bank(),
+    refund_bank_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_refund_bank(), 
       GetArena());
   }
   refund_account_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_refund_account().empty()) {
-    refund_account_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_refund_account(),
+    refund_account_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_refund_account(), 
       GetArena());
   }
   ::memcpy(&amount_, &from.amount_,
@@ -7186,8 +7099,9 @@ void PaymentCancelRequest::SharedCtor() {
   refund_holder_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   refund_bank_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   refund_account_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&amount_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&checksum_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&amount_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&checksum_) -
       reinterpret_cast<char*>(&amount_)) + sizeof(checksum_));
 }
 
@@ -7228,12 +7142,12 @@ void PaymentCancelRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  imp_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  refund_holder_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  refund_bank_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  refund_account_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  imp_uid_.ClearToEmpty();
+  merchant_uid_.ClearToEmpty();
+  reason_.ClearToEmpty();
+  refund_holder_.ClearToEmpty();
+  refund_bank_.ClearToEmpty();
+  refund_account_.ClearToEmpty();
   ::memset(&amount_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&checksum_) -
       reinterpret_cast<char*>(&amount_)) + sizeof(checksum_));
@@ -7242,7 +7156,6 @@ void PaymentCancelRequest::Clear() {
 
 const char* PaymentCancelRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -7604,10 +7517,6 @@ void PaymentCancelRequest::InternalSwap(PaymentCancelRequest* other) {
 
 // ===================================================================
 
-void PaymentCancelResponse::InitAsDefaultInstance() {
-  ::payment::_PaymentCancelResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::payment::Payment*>(
-      ::payment::Payment::internal_default_instance());
-}
 class PaymentCancelResponse::_Internal {
  public:
   static const ::payment::Payment& response(const PaymentCancelResponse* msg);
@@ -7628,7 +7537,7 @@ PaymentCancelResponse::PaymentCancelResponse(const PaymentCancelResponse& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -7643,8 +7552,9 @@ PaymentCancelResponse::PaymentCancelResponse(const PaymentCancelResponse& from)
 void PaymentCancelResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentCancelResponse_v1_2fpayment_2fpayment_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -7681,7 +7591,7 @@ void PaymentCancelResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -7692,7 +7602,6 @@ void PaymentCancelResponse::Clear() {
 
 const char* PaymentCancelResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -7889,8 +7798,6 @@ void PaymentCancelResponse::InternalSwap(PaymentCancelResponse* other) {
 
 // ===================================================================
 
-void PaymentBalanceRequest::InitAsDefaultInstance() {
-}
 class PaymentBalanceRequest::_Internal {
  public:
 };
@@ -7906,7 +7813,7 @@ PaymentBalanceRequest::PaymentBalanceRequest(const PaymentBalanceRequest& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
-    imp_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_imp_uid(),
+    imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:payment.PaymentBalanceRequest)
@@ -7949,13 +7856,12 @@ void PaymentBalanceRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  imp_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  imp_uid_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* PaymentBalanceRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -8098,10 +8004,6 @@ void PaymentBalanceRequest::InternalSwap(PaymentBalanceRequest* other) {
 
 // ===================================================================
 
-void PaymentBalanceResponse::InitAsDefaultInstance() {
-  ::payment::_PaymentBalanceResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::payment::PaymentBalance*>(
-      ::payment::PaymentBalance::internal_default_instance());
-}
 class PaymentBalanceResponse::_Internal {
  public:
   static const ::payment::PaymentBalance& response(const PaymentBalanceResponse* msg);
@@ -8122,7 +8024,7 @@ PaymentBalanceResponse::PaymentBalanceResponse(const PaymentBalanceResponse& fro
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -8137,8 +8039,9 @@ PaymentBalanceResponse::PaymentBalanceResponse(const PaymentBalanceResponse& fro
 void PaymentBalanceResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentBalanceResponse_v1_2fpayment_2fpayment_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -8175,7 +8078,7 @@ void PaymentBalanceResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -8186,7 +8089,6 @@ void PaymentBalanceResponse::Clear() {
 
 const char* PaymentBalanceResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -8383,8 +8285,6 @@ void PaymentBalanceResponse::InternalSwap(PaymentBalanceResponse* other) {
 
 // ===================================================================
 
-void Prepare::InitAsDefaultInstance() {
-}
 class Prepare::_Internal {
  public:
 };
@@ -8400,7 +8300,7 @@ Prepare::Prepare(const Prepare& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
-    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+    merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
       GetArena());
   }
   amount_ = from.amount_;
@@ -8445,14 +8345,13 @@ void Prepare::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  merchant_uid_.ClearToEmpty();
   amount_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Prepare::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -8619,8 +8518,6 @@ void Prepare::InternalSwap(Prepare* other) {
 
 // ===================================================================
 
-void PaymentPrepareRequest::InitAsDefaultInstance() {
-}
 class PaymentPrepareRequest::_Internal {
  public:
 };
@@ -8636,7 +8533,7 @@ PaymentPrepareRequest::PaymentPrepareRequest(const PaymentPrepareRequest& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
-    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+    merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
       GetArena());
   }
   amount_ = from.amount_;
@@ -8681,14 +8578,13 @@ void PaymentPrepareRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  merchant_uid_.ClearToEmpty();
   amount_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* PaymentPrepareRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -8853,10 +8749,6 @@ void PaymentPrepareRequest::InternalSwap(PaymentPrepareRequest* other) {
 
 // ===================================================================
 
-void PaymentPrepareResponse::InitAsDefaultInstance() {
-  ::payment::_PaymentPrepareResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::payment::Prepare*>(
-      ::payment::Prepare::internal_default_instance());
-}
 class PaymentPrepareResponse::_Internal {
  public:
   static const ::payment::Prepare& response(const PaymentPrepareResponse* msg);
@@ -8877,7 +8769,7 @@ PaymentPrepareResponse::PaymentPrepareResponse(const PaymentPrepareResponse& fro
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -8892,8 +8784,9 @@ PaymentPrepareResponse::PaymentPrepareResponse(const PaymentPrepareResponse& fro
 void PaymentPrepareResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentPrepareResponse_v1_2fpayment_2fpayment_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -8930,7 +8823,7 @@ void PaymentPrepareResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -8941,7 +8834,6 @@ void PaymentPrepareResponse::Clear() {
 
 const char* PaymentPrepareResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -9138,8 +9030,6 @@ void PaymentPrepareResponse::InternalSwap(PaymentPrepareResponse* other) {
 
 // ===================================================================
 
-void PaymentGetPrepareRequest::InitAsDefaultInstance() {
-}
 class PaymentGetPrepareRequest::_Internal {
  public:
 };
@@ -9155,7 +9045,7 @@ PaymentGetPrepareRequest::PaymentGetPrepareRequest(const PaymentGetPrepareReques
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
-    merchant_uid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_merchant_uid(),
+    merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:payment.PaymentGetPrepareRequest)
@@ -9198,13 +9088,12 @@ void PaymentGetPrepareRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  merchant_uid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  merchant_uid_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* PaymentGetPrepareRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

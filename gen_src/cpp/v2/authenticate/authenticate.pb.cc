@@ -45,7 +45,6 @@ static void InitDefaultsscc_info_PubKeyRegisterRequest_v2_2fauthenticate_2fauthe
     new (ptr) ::authenticate_v2::PubKeyRegisterRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::authenticate_v2::PubKeyRegisterRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PubKeyRegisterRequest_v2_2fauthenticate_2fauthenticate_2eproto =
@@ -59,7 +58,6 @@ static void InitDefaultsscc_info_PubKeyRegisterResponse_v2_2fauthenticate_2fauth
     new (ptr) ::authenticate_v2::PubKeyRegisterResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::authenticate_v2::PubKeyRegisterResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PubKeyRegisterResponse_v2_2fauthenticate_2fauthenticate_2eproto =
@@ -73,7 +71,6 @@ static void InitDefaultsscc_info_TokenData_v2_2fauthenticate_2fauthenticate_2epr
     new (ptr) ::authenticate_v2::TokenData();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::authenticate_v2::TokenData::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TokenData_v2_2fauthenticate_2fauthenticate_2eproto =
@@ -87,7 +84,6 @@ static void InitDefaultsscc_info_TokenRequest_v2_2fauthenticate_2fauthenticate_2
     new (ptr) ::authenticate_v2::TokenRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::authenticate_v2::TokenRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TokenRequest_v2_2fauthenticate_2fauthenticate_2eproto =
@@ -101,7 +97,6 @@ static void InitDefaultsscc_info_TokenResponse_v2_2fauthenticate_2fauthenticate_
     new (ptr) ::authenticate_v2::TokenResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::authenticate_v2::TokenResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_TokenResponse_v2_2fauthenticate_2fauthenticate_2eproto =
@@ -215,8 +210,6 @@ namespace authenticate_v2 {
 
 // ===================================================================
 
-void TokenRequest::InitAsDefaultInstance() {
-}
 class TokenRequest::_Internal {
  public:
 };
@@ -232,12 +225,12 @@ TokenRequest::TokenRequest(const TokenRequest& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   imp_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_key().empty()) {
-    imp_key_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_imp_key(),
+    imp_key_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_key(), 
       GetArena());
   }
   imp_secret_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_secret().empty()) {
-    imp_secret_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_imp_secret(),
+    imp_secret_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_secret(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:authenticate_v2.TokenRequest)
@@ -282,14 +275,13 @@ void TokenRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  imp_key_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  imp_secret_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  imp_key_.ClearToEmpty();
+  imp_secret_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* TokenRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -462,8 +454,6 @@ void TokenRequest::InternalSwap(TokenRequest* other) {
 
 // ===================================================================
 
-void TokenData::InitAsDefaultInstance() {
-}
 class TokenData::_Internal {
  public:
 };
@@ -479,7 +469,7 @@ TokenData::TokenData(const TokenData& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_access_token().empty()) {
-    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
+    access_token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_access_token(), 
       GetArena());
   }
   ::memcpy(&expired_at_, &from.expired_at_,
@@ -491,8 +481,9 @@ TokenData::TokenData(const TokenData& from)
 void TokenData::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TokenData_v2_2fauthenticate_2fauthenticate_2eproto.base);
   access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&expired_at_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&now_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&expired_at_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&now_) -
       reinterpret_cast<char*>(&expired_at_)) + sizeof(now_));
 }
 
@@ -528,7 +519,7 @@ void TokenData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  access_token_.ClearToEmpty();
   ::memset(&expired_at_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&now_) -
       reinterpret_cast<char*>(&expired_at_)) + sizeof(now_));
@@ -537,7 +528,6 @@ void TokenData::Clear() {
 
 const char* TokenData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -732,10 +722,6 @@ void TokenData::InternalSwap(TokenData* other) {
 
 // ===================================================================
 
-void TokenResponse::InitAsDefaultInstance() {
-  ::authenticate_v2::_TokenResponse_default_instance_._instance.get_mutable()->response_ = const_cast< ::authenticate_v2::TokenData*>(
-      ::authenticate_v2::TokenData::internal_default_instance());
-}
 class TokenResponse::_Internal {
  public:
   static const ::authenticate_v2::TokenData& response(const TokenResponse* msg);
@@ -756,7 +742,7 @@ TokenResponse::TokenResponse(const TokenResponse& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_response()) {
@@ -771,8 +757,9 @@ TokenResponse::TokenResponse(const TokenResponse& from)
 void TokenResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TokenResponse_v2_2fauthenticate_2fauthenticate_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&response_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&code_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
       reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
@@ -809,7 +796,7 @@ void TokenResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
@@ -820,7 +807,6 @@ void TokenResponse::Clear() {
 
 const char* TokenResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -1017,8 +1003,6 @@ void TokenResponse::InternalSwap(TokenResponse* other) {
 
 // ===================================================================
 
-void PubKeyRegisterRequest::InitAsDefaultInstance() {
-}
 class PubKeyRegisterRequest::_Internal {
  public:
 };
@@ -1034,17 +1018,17 @@ PubKeyRegisterRequest::PubKeyRegisterRequest(const PubKeyRegisterRequest& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   imp_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_key().empty()) {
-    imp_key_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_imp_key(),
+    imp_key_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_key(), 
       GetArena());
   }
   public_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_public_key().empty()) {
-    public_key_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_public_key(),
+    public_key_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_public_key(), 
       GetArena());
   }
   password_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_password().empty()) {
-    password_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_password(),
+    password_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_password(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:authenticate_v2.PubKeyRegisterRequest)
@@ -1091,15 +1075,14 @@ void PubKeyRegisterRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  imp_key_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  public_key_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  password_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  imp_key_.ClearToEmpty();
+  public_key_.ClearToEmpty();
+  password_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* PubKeyRegisterRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -1302,8 +1285,6 @@ void PubKeyRegisterRequest::InternalSwap(PubKeyRegisterRequest* other) {
 
 // ===================================================================
 
-void PubKeyRegisterResponse::InitAsDefaultInstance() {
-}
 class PubKeyRegisterResponse::_Internal {
  public:
 };
@@ -1319,7 +1300,7 @@ PubKeyRegisterResponse::PubKeyRegisterResponse(const PubKeyRegisterResponse& fro
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   code_ = from.code_;
@@ -1364,14 +1345,13 @@ void PubKeyRegisterResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   code_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* PubKeyRegisterResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

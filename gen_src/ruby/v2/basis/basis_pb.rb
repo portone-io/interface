@@ -13,7 +13,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :receipt_url, :string, 5
     end
     add_message "basis_v2.UnitTx" do
-      optional :amount, :int32, 1
+      optional :amount, :string, 1
       optional :apply_num, :string, 2
       optional :bank_code, :int32, 3
       optional :bank_name, :string, 4
@@ -22,7 +22,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :buyer_name, :string, 7
       optional :buyer_postcode, :string, 8
       optional :buyer_tel, :string, 9
-      optional :cancel_amount, :int32, 10
+      optional :cancel_amount, :string, 10
       repeated :cancel_history, :message, 11, "basis_v2.CancelHistory"
       optional :cancel_reason, :string, 12
       repeated :cancel_receipt_urls, :string, 13

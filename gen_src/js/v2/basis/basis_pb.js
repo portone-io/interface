@@ -7,6 +7,8 @@
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
+// @ts-nocheck
 
 var jspb = require('google-protobuf');
 var goog = jspb;
@@ -345,7 +347,7 @@ proto.basis_v2.UnitTx.prototype.toObject = function(opt_includeInstance) {
  */
 proto.basis_v2.UnitTx.toObject = function(includeInstance, msg) {
   var f, obj = {
-    amount: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    amount: jspb.Message.getFieldWithDefault(msg, 1, ""),
     applyNum: jspb.Message.getFieldWithDefault(msg, 2, ""),
     bankCode: jspb.Message.getFieldWithDefault(msg, 3, 0),
     bankName: jspb.Message.getFieldWithDefault(msg, 4, ""),
@@ -354,7 +356,7 @@ proto.basis_v2.UnitTx.toObject = function(includeInstance, msg) {
     buyerName: jspb.Message.getFieldWithDefault(msg, 7, ""),
     buyerPostcode: jspb.Message.getFieldWithDefault(msg, 8, ""),
     buyerTel: jspb.Message.getFieldWithDefault(msg, 9, ""),
-    cancelAmount: jspb.Message.getFieldWithDefault(msg, 10, 0),
+    cancelAmount: jspb.Message.getFieldWithDefault(msg, 10, ""),
     cancelHistoryList: jspb.Message.toObjectList(msg.getCancelHistoryList(),
     proto.basis_v2.CancelHistory.toObject, includeInstance),
     cancelReason: jspb.Message.getFieldWithDefault(msg, 12, ""),
@@ -435,7 +437,7 @@ proto.basis_v2.UnitTx.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readInt32());
+      var value = /** @type {string} */ (reader.readString());
       msg.setAmount(value);
       break;
     case 2:
@@ -471,7 +473,7 @@ proto.basis_v2.UnitTx.deserializeBinaryFromReader = function(msg, reader) {
       msg.setBuyerTel(value);
       break;
     case 10:
-      var value = /** @type {number} */ (reader.readInt32());
+      var value = /** @type {string} */ (reader.readString());
       msg.setCancelAmount(value);
       break;
     case 11:
@@ -673,8 +675,8 @@ proto.basis_v2.UnitTx.prototype.serializeBinary = function() {
 proto.basis_v2.UnitTx.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getAmount();
-  if (f !== 0) {
-    writer.writeInt32(
+  if (f.length > 0) {
+    writer.writeString(
       1,
       f
     );
@@ -736,8 +738,8 @@ proto.basis_v2.UnitTx.serializeBinaryToWriter = function(message, writer) {
     );
   }
   f = message.getCancelAmount();
-  if (f !== 0) {
-    writer.writeInt32(
+  if (f.length > 0) {
+    writer.writeString(
       10,
       f
     );
@@ -1041,20 +1043,20 @@ proto.basis_v2.UnitTx.serializeBinaryToWriter = function(message, writer) {
 
 
 /**
- * optional int32 amount = 1;
- * @return {number}
+ * optional string amount = 1;
+ * @return {string}
  */
 proto.basis_v2.UnitTx.prototype.getAmount = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.basis_v2.UnitTx} returns this
  */
 proto.basis_v2.UnitTx.prototype.setAmount = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1203,20 +1205,20 @@ proto.basis_v2.UnitTx.prototype.setBuyerTel = function(value) {
 
 
 /**
- * optional int32 cancel_amount = 10;
- * @return {number}
+ * optional string cancel_amount = 10;
+ * @return {string}
  */
 proto.basis_v2.UnitTx.prototype.getCancelAmount = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.basis_v2.UnitTx} returns this
  */
 proto.basis_v2.UnitTx.prototype.setCancelAmount = function(value) {
-  return jspb.Message.setProto3IntField(this, 10, value);
+  return jspb.Message.setProto3StringField(this, 10, value);
 };
 
 

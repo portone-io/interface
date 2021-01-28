@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class UnitTx extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int32 amount = 1;</code>
+     * Generated from protobuf field <code>string amount = 1;</code>
      */
-    protected $amount = 0;
+    protected $amount = '';
     /**
      * Generated from protobuf field <code>string apply_num = 2;</code>
      */
@@ -50,9 +50,9 @@ class UnitTx extends \Google\Protobuf\Internal\Message
      */
     protected $buyer_tel = '';
     /**
-     * Generated from protobuf field <code>int32 cancel_amount = 10;</code>
+     * Generated from protobuf field <code>string cancel_amount = 10;</code>
      */
-    protected $cancel_amount = 0;
+    protected $cancel_amount = '';
     /**
      * Generated from protobuf field <code>repeated .basis_v2.CancelHistory cancel_history = 11;</code>
      */
@@ -230,7 +230,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $amount
+     *     @type string $amount
      *     @type string $apply_num
      *     @type int $bank_code
      *     @type string $bank_name
@@ -239,7 +239,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
      *     @type string $buyer_name
      *     @type string $buyer_postcode
      *     @type string $buyer_tel
-     *     @type int $cancel_amount
+     *     @type string $cancel_amount
      *     @type \Basis_v2\CancelHistory[]|\Google\Protobuf\Internal\RepeatedField $cancel_history
      *     @type string $cancel_reason
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $cancel_receipt_urls
@@ -291,8 +291,8 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 amount = 1;</code>
-     * @return int
+     * Generated from protobuf field <code>string amount = 1;</code>
+     * @return string
      */
     public function getAmount()
     {
@@ -300,13 +300,13 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 amount = 1;</code>
-     * @param int $var
+     * Generated from protobuf field <code>string amount = 1;</code>
+     * @param string $var
      * @return $this
      */
     public function setAmount($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkString($var, True);
         $this->amount = $var;
 
         return $this;
@@ -489,8 +489,8 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 cancel_amount = 10;</code>
-     * @return int
+     * Generated from protobuf field <code>string cancel_amount = 10;</code>
+     * @return string
      */
     public function getCancelAmount()
     {
@@ -498,13 +498,13 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 cancel_amount = 10;</code>
-     * @param int $var
+     * Generated from protobuf field <code>string cancel_amount = 10;</code>
+     * @param string $var
      * @return $this
      */
     public function setCancelAmount($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkString($var, True);
         $this->cancel_amount = $var;
 
         return $this;

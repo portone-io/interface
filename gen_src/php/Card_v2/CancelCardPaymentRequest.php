@@ -26,9 +26,9 @@ class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     protected $merchant_uid = '';
     /**
-     * Generated from protobuf field <code>string duty_free_amount = 4;</code>
+     * Generated from protobuf field <code>string tax_free_amount = 4;</code>
      */
-    protected $duty_free_amount = '';
+    protected $tax_free_amount = '';
     /**
      * Generated from protobuf field <code>string reason = 5;</code>
      */
@@ -43,7 +43,7 @@ class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
      *     @type string $imp_uid
      *     @type string $amount
      *     @type string $merchant_uid
-     *     @type string $duty_free_amount
+     *     @type string $tax_free_amount
      *     @type string $reason
      * }
      */
@@ -119,23 +119,23 @@ class CancelCardPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string duty_free_amount = 4;</code>
+     * Generated from protobuf field <code>string tax_free_amount = 4;</code>
      * @return string
      */
-    public function getDutyFreeAmount()
+    public function getTaxFreeAmount()
     {
-        return $this->duty_free_amount;
+        return $this->tax_free_amount;
     }
 
     /**
-     * Generated from protobuf field <code>string duty_free_amount = 4;</code>
+     * Generated from protobuf field <code>string tax_free_amount = 4;</code>
      * @param string $var
      * @return $this
      */
-    public function setDutyFreeAmount($var)
+    public function setTaxFreeAmount($var)
     {
         GPBUtil::checkString($var, True);
-        $this->duty_free_amount = $var;
+        $this->tax_free_amount = $var;
 
         return $this;
     }

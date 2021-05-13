@@ -88,7 +88,7 @@ class OnetimePaymentResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.Payment response = 3;</code>
-     * @return \Payment\Payment
+     * @return \Payment\Payment|null
      */
     public function getResponse()
     {

@@ -54,7 +54,7 @@ class PaymentBalanceHistory extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.PaymentBalanceDetail cash_receipt = 1;</code>
-     * @return \Payment\PaymentBalanceDetail
+     * @return \Payment\PaymentBalanceDetail|null
      */
     public function getCashReceipt()
     {
@@ -86,7 +86,7 @@ class PaymentBalanceHistory extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.PaymentBalanceDetail primary = 2;</code>
-     * @return \Payment\PaymentBalanceDetail
+     * @return \Payment\PaymentBalanceDetail|null
      */
     public function getPrimary()
     {
@@ -118,7 +118,7 @@ class PaymentBalanceHistory extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.PaymentBalanceDetail secondary = 3;</code>
-     * @return \Payment\PaymentBalanceDetail
+     * @return \Payment\PaymentBalanceDetail|null
      */
     public function getSecondary()
     {
@@ -150,7 +150,7 @@ class PaymentBalanceHistory extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.PaymentBalanceDetail discount = 4;</code>
-     * @return \Payment\PaymentBalanceDetail
+     * @return \Payment\PaymentBalanceDetail|null
      */
     public function getDiscount()
     {

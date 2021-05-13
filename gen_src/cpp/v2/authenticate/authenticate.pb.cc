@@ -14,95 +14,78 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_v2_2fauthenticate_2fauthenticate_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TokenData_v2_2fauthenticate_2fauthenticate_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace authenticate_v2 {
-class TokenRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TokenRequest> _instance;
-} _TokenRequest_default_instance_;
-class TokenDataDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TokenData> _instance;
-} _TokenData_default_instance_;
-class TokenResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TokenResponse> _instance;
-} _TokenResponse_default_instance_;
-class PubKeyRegisterRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PubKeyRegisterRequest> _instance;
-} _PubKeyRegisterRequest_default_instance_;
-class PubKeyRegisterResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PubKeyRegisterResponse> _instance;
-} _PubKeyRegisterResponse_default_instance_;
+constexpr TokenRequest::TokenRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : imp_key_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , imp_secret_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct TokenRequestDefaultTypeInternal {
+  constexpr TokenRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~TokenRequestDefaultTypeInternal() {}
+  union {
+    TokenRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TokenRequestDefaultTypeInternal _TokenRequest_default_instance_;
+constexpr TokenData::TokenData(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : access_token_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , expired_at_(0)
+  , now_(0){}
+struct TokenDataDefaultTypeInternal {
+  constexpr TokenDataDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~TokenDataDefaultTypeInternal() {}
+  union {
+    TokenData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TokenDataDefaultTypeInternal _TokenData_default_instance_;
+constexpr TokenResponse::TokenResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : message_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , response_(nullptr)
+  , code_(0){}
+struct TokenResponseDefaultTypeInternal {
+  constexpr TokenResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~TokenResponseDefaultTypeInternal() {}
+  union {
+    TokenResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TokenResponseDefaultTypeInternal _TokenResponse_default_instance_;
+constexpr PubKeyRegisterRequest::PubKeyRegisterRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : imp_key_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , public_key_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , password_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct PubKeyRegisterRequestDefaultTypeInternal {
+  constexpr PubKeyRegisterRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~PubKeyRegisterRequestDefaultTypeInternal() {}
+  union {
+    PubKeyRegisterRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PubKeyRegisterRequestDefaultTypeInternal _PubKeyRegisterRequest_default_instance_;
+constexpr PubKeyRegisterResponse::PubKeyRegisterResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : message_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , code_(0){}
+struct PubKeyRegisterResponseDefaultTypeInternal {
+  constexpr PubKeyRegisterResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~PubKeyRegisterResponseDefaultTypeInternal() {}
+  union {
+    PubKeyRegisterResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PubKeyRegisterResponseDefaultTypeInternal _PubKeyRegisterResponse_default_instance_;
 }  // namespace authenticate_v2
-static void InitDefaultsscc_info_PubKeyRegisterRequest_v2_2fauthenticate_2fauthenticate_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::authenticate_v2::_PubKeyRegisterRequest_default_instance_;
-    new (ptr) ::authenticate_v2::PubKeyRegisterRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PubKeyRegisterRequest_v2_2fauthenticate_2fauthenticate_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PubKeyRegisterRequest_v2_2fauthenticate_2fauthenticate_2eproto}, {}};
-
-static void InitDefaultsscc_info_PubKeyRegisterResponse_v2_2fauthenticate_2fauthenticate_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::authenticate_v2::_PubKeyRegisterResponse_default_instance_;
-    new (ptr) ::authenticate_v2::PubKeyRegisterResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PubKeyRegisterResponse_v2_2fauthenticate_2fauthenticate_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PubKeyRegisterResponse_v2_2fauthenticate_2fauthenticate_2eproto}, {}};
-
-static void InitDefaultsscc_info_TokenData_v2_2fauthenticate_2fauthenticate_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::authenticate_v2::_TokenData_default_instance_;
-    new (ptr) ::authenticate_v2::TokenData();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TokenData_v2_2fauthenticate_2fauthenticate_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_TokenData_v2_2fauthenticate_2fauthenticate_2eproto}, {}};
-
-static void InitDefaultsscc_info_TokenRequest_v2_2fauthenticate_2fauthenticate_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::authenticate_v2::_TokenRequest_default_instance_;
-    new (ptr) ::authenticate_v2::TokenRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TokenRequest_v2_2fauthenticate_2fauthenticate_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_TokenRequest_v2_2fauthenticate_2fauthenticate_2eproto}, {}};
-
-static void InitDefaultsscc_info_TokenResponse_v2_2fauthenticate_2fauthenticate_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::authenticate_v2::_TokenResponse_default_instance_;
-    new (ptr) ::authenticate_v2::TokenResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_TokenResponse_v2_2fauthenticate_2fauthenticate_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_TokenResponse_v2_2fauthenticate_2fauthenticate_2eproto}, {
-      &scc_info_TokenData_v2_2fauthenticate_2fauthenticate_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_v2_2fauthenticate_2fauthenticate_2eproto[5];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_v2_2fauthenticate_2fauthenticate_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_v2_2fauthenticate_2fauthenticate_2eproto = nullptr;
@@ -189,23 +172,21 @@ const char descriptor_table_protodef_v2_2fauthenticate_2fauthenticate_2eproto[] 
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_deps[1] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_sccs[5] = {
-  &scc_info_PubKeyRegisterRequest_v2_2fauthenticate_2fauthenticate_2eproto.base,
-  &scc_info_PubKeyRegisterResponse_v2_2fauthenticate_2fauthenticate_2eproto.base,
-  &scc_info_TokenData_v2_2fauthenticate_2fauthenticate_2eproto.base,
-  &scc_info_TokenRequest_v2_2fauthenticate_2fauthenticate_2eproto.base,
-  &scc_info_TokenResponse_v2_2fauthenticate_2fauthenticate_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto = {
-  false, false, descriptor_table_protodef_v2_2fauthenticate_2fauthenticate_2eproto, "v2/authenticate/authenticate.proto", 816,
-  &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_once, descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_sccs, descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_deps, 5, 1,
+  false, false, 816, descriptor_table_protodef_v2_2fauthenticate_2fauthenticate_2eproto, "v2/authenticate/authenticate.proto", 
+  &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_once, descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_deps, 1, 5,
   schemas, file_default_instances, TableStruct_v2_2fauthenticate_2fauthenticate_2eproto::offsets,
-  file_level_metadata_v2_2fauthenticate_2fauthenticate_2eproto, 5, file_level_enum_descriptors_v2_2fauthenticate_2fauthenticate_2eproto, file_level_service_descriptors_v2_2fauthenticate_2fauthenticate_2eproto,
+  file_level_metadata_v2_2fauthenticate_2fauthenticate_2eproto, file_level_enum_descriptors_v2_2fauthenticate_2fauthenticate_2eproto, file_level_service_descriptors_v2_2fauthenticate_2fauthenticate_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
+descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_metadata_getter(int index) {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto);
+  return descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto.file_level_metadata[index];
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_v2_2fauthenticate_2fauthenticate_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_v2_2fauthenticate_2fauthenticate_2eproto(&descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto);
 namespace authenticate_v2 {
 
 // ===================================================================
@@ -237,9 +218,8 @@ TokenRequest::TokenRequest(const TokenRequest& from)
 }
 
 void TokenRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TokenRequest_v2_2fauthenticate_2fauthenticate_2eproto.base);
-  imp_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  imp_secret_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+imp_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+imp_secret_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 TokenRequest::~TokenRequest() {
@@ -263,11 +243,6 @@ void TokenRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void TokenRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const TokenRequest& TokenRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_TokenRequest_v2_2fauthenticate_2fauthenticate_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void TokenRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:authenticate_v2.TokenRequest)
@@ -479,12 +454,11 @@ TokenData::TokenData(const TokenData& from)
 }
 
 void TokenData::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TokenData_v2_2fauthenticate_2fauthenticate_2eproto.base);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&expired_at_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&now_) -
-      reinterpret_cast<char*>(&expired_at_)) + sizeof(now_));
+access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&expired_at_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&now_) -
+    reinterpret_cast<char*>(&expired_at_)) + sizeof(now_));
 }
 
 TokenData::~TokenData() {
@@ -507,11 +481,6 @@ void TokenData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void TokenData::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const TokenData& TokenData::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_TokenData_v2_2fauthenticate_2fauthenticate_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void TokenData::Clear() {
 // @@protoc_insertion_point(message_clear_start:authenticate_v2.TokenData)
@@ -755,12 +724,11 @@ TokenResponse::TokenResponse(const TokenResponse& from)
 }
 
 void TokenResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TokenResponse_v2_2fauthenticate_2fauthenticate_2eproto.base);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
-      reinterpret_cast<char*>(&response_)) + sizeof(code_));
+message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
+    reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
 TokenResponse::~TokenResponse() {
@@ -784,11 +752,6 @@ void TokenResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void TokenResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const TokenResponse& TokenResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_TokenResponse_v2_2fauthenticate_2fauthenticate_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void TokenResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:authenticate_v2.TokenResponse)
@@ -1035,10 +998,9 @@ PubKeyRegisterRequest::PubKeyRegisterRequest(const PubKeyRegisterRequest& from)
 }
 
 void PubKeyRegisterRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PubKeyRegisterRequest_v2_2fauthenticate_2fauthenticate_2eproto.base);
-  imp_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  public_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  password_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+imp_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+public_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+password_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 PubKeyRegisterRequest::~PubKeyRegisterRequest() {
@@ -1063,11 +1025,6 @@ void PubKeyRegisterRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void PubKeyRegisterRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const PubKeyRegisterRequest& PubKeyRegisterRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PubKeyRegisterRequest_v2_2fauthenticate_2fauthenticate_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PubKeyRegisterRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:authenticate_v2.PubKeyRegisterRequest)
@@ -1308,9 +1265,8 @@ PubKeyRegisterResponse::PubKeyRegisterResponse(const PubKeyRegisterResponse& fro
 }
 
 void PubKeyRegisterResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PubKeyRegisterResponse_v2_2fauthenticate_2fauthenticate_2eproto.base);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  code_ = 0;
+message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+code_ = 0;
 }
 
 PubKeyRegisterResponse::~PubKeyRegisterResponse() {
@@ -1333,11 +1289,6 @@ void PubKeyRegisterResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) 
 void PubKeyRegisterResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const PubKeyRegisterResponse& PubKeyRegisterResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PubKeyRegisterResponse_v2_2fauthenticate_2fauthenticate_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PubKeyRegisterResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:authenticate_v2.PubKeyRegisterResponse)

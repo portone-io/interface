@@ -2,6 +2,7 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
  * @suppress {messageConventions} JS Compiler reports an error if a variable or
  *     field starts with 'MSG_' and isn't a translatable message.
  * @public
@@ -2611,7 +2612,7 @@ proto.card_v2.PayByRegisteredCardRequest.toObject = function(includeInstance, ms
     cardUid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     merchantUid: jspb.Message.getFieldWithDefault(msg, 2, ""),
     amount: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    dutyFreeAmount: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    taxFreeAmount: jspb.Message.getFieldWithDefault(msg, 4, ""),
     orderName: jspb.Message.getFieldWithDefault(msg, 5, ""),
     cardInstallment: jspb.Message.getFieldWithDefault(msg, 6, 0),
     interestFreeByMerchant: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
@@ -2672,7 +2673,7 @@ proto.card_v2.PayByRegisteredCardRequest.deserializeBinaryFromReader = function(
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDutyFreeAmount(value);
+      msg.setTaxFreeAmount(value);
       break;
     case 5:
       var value = /** @type {string} */ (reader.readString());
@@ -2764,7 +2765,7 @@ proto.card_v2.PayByRegisteredCardRequest.serializeBinaryToWriter = function(mess
       f
     );
   }
-  f = message.getDutyFreeAmount();
+  f = message.getTaxFreeAmount();
   if (f.length > 0) {
     writer.writeString(
       4,
@@ -2899,10 +2900,10 @@ proto.card_v2.PayByRegisteredCardRequest.prototype.setAmount = function(value) {
 
 
 /**
- * optional string duty_free_amount = 4;
+ * optional string tax_free_amount = 4;
  * @return {string}
  */
-proto.card_v2.PayByRegisteredCardRequest.prototype.getDutyFreeAmount = function() {
+proto.card_v2.PayByRegisteredCardRequest.prototype.getTaxFreeAmount = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
@@ -2911,7 +2912,7 @@ proto.card_v2.PayByRegisteredCardRequest.prototype.getDutyFreeAmount = function(
  * @param {string} value
  * @return {!proto.card_v2.PayByRegisteredCardRequest} returns this
  */
-proto.card_v2.PayByRegisteredCardRequest.prototype.setDutyFreeAmount = function(value) {
+proto.card_v2.PayByRegisteredCardRequest.prototype.setTaxFreeAmount = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -4851,7 +4852,7 @@ proto.card_v2.CancelCardPaymentRequest.toObject = function(includeInstance, msg)
     impUid: jspb.Message.getFieldWithDefault(msg, 1, ""),
     amount: jspb.Message.getFieldWithDefault(msg, 2, ""),
     merchantUid: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    dutyFreeAmount: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    taxFreeAmount: jspb.Message.getFieldWithDefault(msg, 4, ""),
     reason: jspb.Message.getFieldWithDefault(msg, 5, "")
   };
 
@@ -4903,7 +4904,7 @@ proto.card_v2.CancelCardPaymentRequest.deserializeBinaryFromReader = function(ms
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDutyFreeAmount(value);
+      msg.setTaxFreeAmount(value);
       break;
     case 5:
       var value = /** @type {string} */ (reader.readString());
@@ -4959,7 +4960,7 @@ proto.card_v2.CancelCardPaymentRequest.serializeBinaryToWriter = function(messag
       f
     );
   }
-  f = message.getDutyFreeAmount();
+  f = message.getTaxFreeAmount();
   if (f.length > 0) {
     writer.writeString(
       4,
@@ -5031,10 +5032,10 @@ proto.card_v2.CancelCardPaymentRequest.prototype.setMerchantUid = function(value
 
 
 /**
- * optional string duty_free_amount = 4;
+ * optional string tax_free_amount = 4;
  * @return {string}
  */
-proto.card_v2.CancelCardPaymentRequest.prototype.getDutyFreeAmount = function() {
+proto.card_v2.CancelCardPaymentRequest.prototype.getTaxFreeAmount = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
@@ -5043,7 +5044,7 @@ proto.card_v2.CancelCardPaymentRequest.prototype.getDutyFreeAmount = function() 
  * @param {string} value
  * @return {!proto.card_v2.CancelCardPaymentRequest} returns this
  */
-proto.card_v2.CancelCardPaymentRequest.prototype.setDutyFreeAmount = function(value) {
+proto.card_v2.CancelCardPaymentRequest.prototype.setTaxFreeAmount = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 

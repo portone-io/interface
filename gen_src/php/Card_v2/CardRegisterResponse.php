@@ -88,7 +88,7 @@ class CardRegisterResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.card_v2.CardRegisterResultData response = 3;</code>
-     * @return \Card_v2\CardRegisterResultData
+     * @return \Card_v2\CardRegisterResultData|null
      */
     public function getResponse()
     {

@@ -9943,16 +9943,16 @@ public final class Card {
         getAmountBytes();
 
     /**
-     * <code>string duty_free_amount = 4;</code>
-     * @return The dutyFreeAmount.
+     * <code>string tax_free_amount = 4;</code>
+     * @return The taxFreeAmount.
      */
-    java.lang.String getDutyFreeAmount();
+    java.lang.String getTaxFreeAmount();
     /**
-     * <code>string duty_free_amount = 4;</code>
-     * @return The bytes for dutyFreeAmount.
+     * <code>string tax_free_amount = 4;</code>
+     * @return The bytes for taxFreeAmount.
      */
     com.google.protobuf.ByteString
-        getDutyFreeAmountBytes();
+        getTaxFreeAmountBytes();
 
     /**
      * <pre>
@@ -10090,7 +10090,7 @@ public final class Card {
       cardUid_ = "";
       merchantUid_ = "";
       amount_ = "";
-      dutyFreeAmount_ = "";
+      taxFreeAmount_ = "";
       orderName_ = "";
       customData_ = "";
       callbackUrl_ = "";
@@ -10152,7 +10152,7 @@ public final class Card {
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              dutyFreeAmount_ = s;
+              taxFreeAmount_ = s;
               break;
             }
             case 42: {
@@ -10359,38 +10359,38 @@ public final class Card {
       }
     }
 
-    public static final int DUTY_FREE_AMOUNT_FIELD_NUMBER = 4;
-    private volatile java.lang.Object dutyFreeAmount_;
+    public static final int TAX_FREE_AMOUNT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object taxFreeAmount_;
     /**
-     * <code>string duty_free_amount = 4;</code>
-     * @return The dutyFreeAmount.
+     * <code>string tax_free_amount = 4;</code>
+     * @return The taxFreeAmount.
      */
     @java.lang.Override
-    public java.lang.String getDutyFreeAmount() {
-      java.lang.Object ref = dutyFreeAmount_;
+    public java.lang.String getTaxFreeAmount() {
+      java.lang.Object ref = taxFreeAmount_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        dutyFreeAmount_ = s;
+        taxFreeAmount_ = s;
         return s;
       }
     }
     /**
-     * <code>string duty_free_amount = 4;</code>
-     * @return The bytes for dutyFreeAmount.
+     * <code>string tax_free_amount = 4;</code>
+     * @return The bytes for taxFreeAmount.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getDutyFreeAmountBytes() {
-      java.lang.Object ref = dutyFreeAmount_;
+        getTaxFreeAmountBytes() {
+      java.lang.Object ref = taxFreeAmount_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        dutyFreeAmount_ = b;
+        taxFreeAmount_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -10758,8 +10758,8 @@ public final class Card {
       if (!getAmountBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, amount_);
       }
-      if (!getDutyFreeAmountBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, dutyFreeAmount_);
+      if (!getTaxFreeAmountBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, taxFreeAmount_);
       }
       if (!getOrderNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orderName_);
@@ -10809,8 +10809,8 @@ public final class Card {
       if (!getAmountBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, amount_);
       }
-      if (!getDutyFreeAmountBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, dutyFreeAmount_);
+      if (!getTaxFreeAmountBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, taxFreeAmount_);
       }
       if (!getOrderNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orderName_);
@@ -10865,8 +10865,8 @@ public final class Card {
           .equals(other.getMerchantUid())) return false;
       if (!getAmount()
           .equals(other.getAmount())) return false;
-      if (!getDutyFreeAmount()
-          .equals(other.getDutyFreeAmount())) return false;
+      if (!getTaxFreeAmount()
+          .equals(other.getTaxFreeAmount())) return false;
       if (!getOrderName()
           .equals(other.getOrderName())) return false;
       if (getCardInstallment()
@@ -10904,8 +10904,8 @@ public final class Card {
       hash = (53 * hash) + getMerchantUid().hashCode();
       hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
       hash = (53 * hash) + getAmount().hashCode();
-      hash = (37 * hash) + DUTY_FREE_AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getDutyFreeAmount().hashCode();
+      hash = (37 * hash) + TAX_FREE_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getTaxFreeAmount().hashCode();
       hash = (37 * hash) + ORDER_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getOrderName().hashCode();
       hash = (37 * hash) + CARD_INSTALLMENT_FIELD_NUMBER;
@@ -11066,7 +11066,7 @@ public final class Card {
 
         amount_ = "";
 
-        dutyFreeAmount_ = "";
+        taxFreeAmount_ = "";
 
         orderName_ = "";
 
@@ -11117,7 +11117,7 @@ public final class Card {
         result.cardUid_ = cardUid_;
         result.merchantUid_ = merchantUid_;
         result.amount_ = amount_;
-        result.dutyFreeAmount_ = dutyFreeAmount_;
+        result.taxFreeAmount_ = taxFreeAmount_;
         result.orderName_ = orderName_;
         result.cardInstallment_ = cardInstallment_;
         result.interestFreeByMerchant_ = interestFreeByMerchant_;
@@ -11188,8 +11188,8 @@ public final class Card {
           amount_ = other.amount_;
           onChanged();
         }
-        if (!other.getDutyFreeAmount().isEmpty()) {
-          dutyFreeAmount_ = other.dutyFreeAmount_;
+        if (!other.getTaxFreeAmount().isEmpty()) {
+          taxFreeAmount_ = other.taxFreeAmount_;
           onChanged();
         }
         if (!other.getOrderName().isEmpty()) {
@@ -11487,78 +11487,78 @@ public final class Card {
         return this;
       }
 
-      private java.lang.Object dutyFreeAmount_ = "";
+      private java.lang.Object taxFreeAmount_ = "";
       /**
-       * <code>string duty_free_amount = 4;</code>
-       * @return The dutyFreeAmount.
+       * <code>string tax_free_amount = 4;</code>
+       * @return The taxFreeAmount.
        */
-      public java.lang.String getDutyFreeAmount() {
-        java.lang.Object ref = dutyFreeAmount_;
+      public java.lang.String getTaxFreeAmount() {
+        java.lang.Object ref = taxFreeAmount_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          dutyFreeAmount_ = s;
+          taxFreeAmount_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string duty_free_amount = 4;</code>
-       * @return The bytes for dutyFreeAmount.
+       * <code>string tax_free_amount = 4;</code>
+       * @return The bytes for taxFreeAmount.
        */
       public com.google.protobuf.ByteString
-          getDutyFreeAmountBytes() {
-        java.lang.Object ref = dutyFreeAmount_;
+          getTaxFreeAmountBytes() {
+        java.lang.Object ref = taxFreeAmount_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          dutyFreeAmount_ = b;
+          taxFreeAmount_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string duty_free_amount = 4;</code>
-       * @param value The dutyFreeAmount to set.
+       * <code>string tax_free_amount = 4;</code>
+       * @param value The taxFreeAmount to set.
        * @return This builder for chaining.
        */
-      public Builder setDutyFreeAmount(
+      public Builder setTaxFreeAmount(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        dutyFreeAmount_ = value;
+        taxFreeAmount_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string duty_free_amount = 4;</code>
+       * <code>string tax_free_amount = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearDutyFreeAmount() {
+      public Builder clearTaxFreeAmount() {
         
-        dutyFreeAmount_ = getDefaultInstance().getDutyFreeAmount();
+        taxFreeAmount_ = getDefaultInstance().getTaxFreeAmount();
         onChanged();
         return this;
       }
       /**
-       * <code>string duty_free_amount = 4;</code>
-       * @param value The bytes for dutyFreeAmount to set.
+       * <code>string tax_free_amount = 4;</code>
+       * @param value The bytes for taxFreeAmount to set.
        * @return This builder for chaining.
        */
-      public Builder setDutyFreeAmountBytes(
+      public Builder setTaxFreeAmountBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        dutyFreeAmount_ = value;
+        taxFreeAmount_ = value;
         onChanged();
         return this;
       }
@@ -20024,16 +20024,16 @@ public final class Card {
         getMerchantUidBytes();
 
     /**
-     * <code>string duty_free_amount = 4;</code>
-     * @return The dutyFreeAmount.
+     * <code>string tax_free_amount = 4;</code>
+     * @return The taxFreeAmount.
      */
-    java.lang.String getDutyFreeAmount();
+    java.lang.String getTaxFreeAmount();
     /**
-     * <code>string duty_free_amount = 4;</code>
-     * @return The bytes for dutyFreeAmount.
+     * <code>string tax_free_amount = 4;</code>
+     * @return The bytes for taxFreeAmount.
      */
     com.google.protobuf.ByteString
-        getDutyFreeAmountBytes();
+        getTaxFreeAmountBytes();
 
     /**
      * <code>string reason = 5;</code>
@@ -20063,7 +20063,7 @@ public final class Card {
       impUid_ = "";
       amount_ = "";
       merchantUid_ = "";
-      dutyFreeAmount_ = "";
+      taxFreeAmount_ = "";
       reason_ = "";
     }
 
@@ -20118,7 +20118,7 @@ public final class Card {
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              dutyFreeAmount_ = s;
+              taxFreeAmount_ = s;
               break;
             }
             case 42: {
@@ -20273,38 +20273,38 @@ public final class Card {
       }
     }
 
-    public static final int DUTY_FREE_AMOUNT_FIELD_NUMBER = 4;
-    private volatile java.lang.Object dutyFreeAmount_;
+    public static final int TAX_FREE_AMOUNT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object taxFreeAmount_;
     /**
-     * <code>string duty_free_amount = 4;</code>
-     * @return The dutyFreeAmount.
+     * <code>string tax_free_amount = 4;</code>
+     * @return The taxFreeAmount.
      */
     @java.lang.Override
-    public java.lang.String getDutyFreeAmount() {
-      java.lang.Object ref = dutyFreeAmount_;
+    public java.lang.String getTaxFreeAmount() {
+      java.lang.Object ref = taxFreeAmount_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        dutyFreeAmount_ = s;
+        taxFreeAmount_ = s;
         return s;
       }
     }
     /**
-     * <code>string duty_free_amount = 4;</code>
-     * @return The bytes for dutyFreeAmount.
+     * <code>string tax_free_amount = 4;</code>
+     * @return The bytes for taxFreeAmount.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getDutyFreeAmountBytes() {
-      java.lang.Object ref = dutyFreeAmount_;
+        getTaxFreeAmountBytes() {
+      java.lang.Object ref = taxFreeAmount_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        dutyFreeAmount_ = b;
+        taxFreeAmount_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -20372,8 +20372,8 @@ public final class Card {
       if (!getMerchantUidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, merchantUid_);
       }
-      if (!getDutyFreeAmountBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, dutyFreeAmount_);
+      if (!getTaxFreeAmountBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, taxFreeAmount_);
       }
       if (!getReasonBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, reason_);
@@ -20396,8 +20396,8 @@ public final class Card {
       if (!getMerchantUidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, merchantUid_);
       }
-      if (!getDutyFreeAmountBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, dutyFreeAmount_);
+      if (!getTaxFreeAmountBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, taxFreeAmount_);
       }
       if (!getReasonBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, reason_);
@@ -20423,8 +20423,8 @@ public final class Card {
           .equals(other.getAmount())) return false;
       if (!getMerchantUid()
           .equals(other.getMerchantUid())) return false;
-      if (!getDutyFreeAmount()
-          .equals(other.getDutyFreeAmount())) return false;
+      if (!getTaxFreeAmount()
+          .equals(other.getTaxFreeAmount())) return false;
       if (!getReason()
           .equals(other.getReason())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -20444,8 +20444,8 @@ public final class Card {
       hash = (53 * hash) + getAmount().hashCode();
       hash = (37 * hash) + MERCHANT_UID_FIELD_NUMBER;
       hash = (53 * hash) + getMerchantUid().hashCode();
-      hash = (37 * hash) + DUTY_FREE_AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getDutyFreeAmount().hashCode();
+      hash = (37 * hash) + TAX_FREE_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getTaxFreeAmount().hashCode();
       hash = (37 * hash) + REASON_FIELD_NUMBER;
       hash = (53 * hash) + getReason().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -20587,7 +20587,7 @@ public final class Card {
 
         merchantUid_ = "";
 
-        dutyFreeAmount_ = "";
+        taxFreeAmount_ = "";
 
         reason_ = "";
 
@@ -20620,7 +20620,7 @@ public final class Card {
         result.impUid_ = impUid_;
         result.amount_ = amount_;
         result.merchantUid_ = merchantUid_;
-        result.dutyFreeAmount_ = dutyFreeAmount_;
+        result.taxFreeAmount_ = taxFreeAmount_;
         result.reason_ = reason_;
         onBuilt();
         return result;
@@ -20682,8 +20682,8 @@ public final class Card {
           merchantUid_ = other.merchantUid_;
           onChanged();
         }
-        if (!other.getDutyFreeAmount().isEmpty()) {
-          dutyFreeAmount_ = other.dutyFreeAmount_;
+        if (!other.getTaxFreeAmount().isEmpty()) {
+          taxFreeAmount_ = other.taxFreeAmount_;
           onChanged();
         }
         if (!other.getReason().isEmpty()) {
@@ -20947,78 +20947,78 @@ public final class Card {
         return this;
       }
 
-      private java.lang.Object dutyFreeAmount_ = "";
+      private java.lang.Object taxFreeAmount_ = "";
       /**
-       * <code>string duty_free_amount = 4;</code>
-       * @return The dutyFreeAmount.
+       * <code>string tax_free_amount = 4;</code>
+       * @return The taxFreeAmount.
        */
-      public java.lang.String getDutyFreeAmount() {
-        java.lang.Object ref = dutyFreeAmount_;
+      public java.lang.String getTaxFreeAmount() {
+        java.lang.Object ref = taxFreeAmount_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          dutyFreeAmount_ = s;
+          taxFreeAmount_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string duty_free_amount = 4;</code>
-       * @return The bytes for dutyFreeAmount.
+       * <code>string tax_free_amount = 4;</code>
+       * @return The bytes for taxFreeAmount.
        */
       public com.google.protobuf.ByteString
-          getDutyFreeAmountBytes() {
-        java.lang.Object ref = dutyFreeAmount_;
+          getTaxFreeAmountBytes() {
+        java.lang.Object ref = taxFreeAmount_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          dutyFreeAmount_ = b;
+          taxFreeAmount_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string duty_free_amount = 4;</code>
-       * @param value The dutyFreeAmount to set.
+       * <code>string tax_free_amount = 4;</code>
+       * @param value The taxFreeAmount to set.
        * @return This builder for chaining.
        */
-      public Builder setDutyFreeAmount(
+      public Builder setTaxFreeAmount(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        dutyFreeAmount_ = value;
+        taxFreeAmount_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string duty_free_amount = 4;</code>
+       * <code>string tax_free_amount = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearDutyFreeAmount() {
+      public Builder clearTaxFreeAmount() {
         
-        dutyFreeAmount_ = getDefaultInstance().getDutyFreeAmount();
+        taxFreeAmount_ = getDefaultInstance().getTaxFreeAmount();
         onChanged();
         return this;
       }
       /**
-       * <code>string duty_free_amount = 4;</code>
-       * @param value The bytes for dutyFreeAmount to set.
+       * <code>string tax_free_amount = 4;</code>
+       * @param value The bytes for taxFreeAmount to set.
        * @return This builder for chaining.
        */
-      public Builder setDutyFreeAmountBytes(
+      public Builder setTaxFreeAmountBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        dutyFreeAmount_ = value;
+        taxFreeAmount_ = value;
         onChanged();
         return this;
       }
@@ -22102,67 +22102,67 @@ public final class Card {
       "card_v2.GetCardInfoData\")\n\025DeleteCardInf" +
       "oRequest\022\020\n\010card_uid\030\001 \001(\t\"7\n\026DeleteCard" +
       "InfoResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 " +
-      "\001(\t\"\322\002\n\032PayByRegisteredCardRequest\022\020\n\010ca" +
+      "\001(\t\"\321\002\n\032PayByRegisteredCardRequest\022\020\n\010ca" +
       "rd_uid\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n\006am" +
-      "ount\030\003 \001(\t\022\030\n\020duty_free_amount\030\004 \001(\t\022\022\n\n" +
-      "order_name\030\005 \001(\t\022\030\n\020card_installment\030\006 \001" +
-      "(\005\022!\n\031interest_free_by_merchant\030\007 \001(\010\022\023\n" +
-      "\013custom_data\030\010 \001(\t\022\024\n\014callback_url\030\t \001(\t" +
-      "\022\022\n\nbuyer_addr\030\n \001(\t\022\023\n\013buyer_email\030\013 \001(" +
-      "\t\022\022\n\nbuyer_name\030\014 \001(\t\022\026\n\016buyer_postcode\030" +
-      "\r \001(\t\022\021\n\tbuyer_tel\030\016 \001(\t\"\250\006\n\027PayByRegist" +
-      "eredCardData\022\016\n\006amount\030\001 \001(\t\022\021\n\tapply_nu" +
-      "m\030\002 \001(\t\022\022\n\nbuyer_addr\030\003 \001(\t\022\023\n\013buyer_ema" +
-      "il\030\004 \001(\t\022\022\n\nbuyer_name\030\005 \001(\t\022\026\n\016buyer_po" +
-      "stcode\030\006 \001(\t\022\021\n\tbuyer_tel\030\007 \001(\t\022\025\n\rcance" +
-      "l_amount\030\010 \001(\t\022.\n\016cancel_history\030\t \003(\0132\026" +
-      ".card_v2.CancelHistory\022\025\n\rcancel_reason\030" +
-      "\n \001(\t\022\033\n\023cancel_receipt_urls\030\013 \003(\t\022\024\n\014ca" +
-      "ncelled_at\030\014 \001(\005\022\021\n\tcard_code\030\r \001(\t\022\021\n\tc" +
-      "ard_name\030\016 \001(\t\022\022\n\nbin_number\030\017 \001(\t\022\030\n\020ca" +
-      "rd_installment\030\020 \001(\005\022\021\n\tcard_type\030\021 \001(\005\022" +
-      "\033\n\023cash_receipt_issued\030\022 \001(\010\022\017\n\007channel\030" +
-      "\023 \001(\t\022\020\n\010currency\030\024 \001(\t\022\023\n\013custom_data\030\025" +
-      " \001(\t\022\020\n\010card_uid\030\026 \001(\t\022\032\n\022customer_uid_u" +
-      "sage\030\027 \001(\t\022\023\n\013fail_reason\030\030 \001(\t\022\021\n\tfaile" +
-      "d_at\030\031 \001(\005\022\017\n\007imp_uid\030\032 \001(\t\022\024\n\014merchant_" +
-      "uid\030\033 \001(\t\022\022\n\norder_name\030\034 \001(\t\022\017\n\007paid_at" +
-      "\030\035 \001(\005\022\022\n\npay_method\030\036 \001(\t\022\r\n\005pg_id\030\037 \001(" +
-      "\t\022\023\n\013pg_provider\030  \001(\t\022\016\n\006pg_tid\030! \001(\t\022\023" +
-      "\n\013receipt_url\030\" \001(\t\022\022\n\nstarted_at\030# \001(\005\022" +
-      "\016\n\006status\030$ \001(\t\022\022\n\nuser_agent\030% \001(\t\"p\n\033P" +
-      "ayByRegisteredCardResponse\022\014\n\004code\030\001 \001(\005" +
-      "\022\017\n\007message\030\002 \001(\t\0222\n\010response\030\003 \001(\0132 .ca" +
-      "rd_v2.PayByRegisteredCardData\"j\n\rCancelH" +
-      "istory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024" +
-      "\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022\023\n\013" +
-      "receipt_url\030\005 \001(\t\"{\n\030CancelCardPaymentRe" +
-      "quest\022\017\n\007imp_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024" +
-      "\n\014merchant_uid\030\003 \001(\t\022\030\n\020duty_free_amount" +
-      "\030\004 \001(\t\022\016\n\006reason\030\005 \001(\t\"o\n\032CancelCardPaym" +
-      "enttResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 " +
-      "\001(\t\0222\n\010response\030\003 \001(\0132 .card_v2.PayByReg" +
-      "isteredCardData2\314\005\n\022PaymentCardService\022w" +
-      "\n\021CardRegisterV2RPC\022\034.card_v2.CardRegist" +
-      "erRequest\032\035.card_v2.CardRegisterResponse" +
-      "\"%\202\323\344\223\002\037\"\032/api/payments/v2/card/info:\001*\022" +
-      "|\n\020GetCardInfoV2RPC\022\033.card_v2.GetCardInf" +
-      "oRequest\032\034.card_v2.GetCardInfoResponse\"-" +
-      "\202\323\344\223\002\'\022%/api/payments/v2/card/info/{card" +
-      "_uid}\022\205\001\n\023DeleteCardInfoV2RPC\022\036.card_v2." +
-      "DeleteCardInfoRequest\032\037.card_v2.DeleteCa" +
-      "rdInfoResponse\"-\202\323\344\223\002\'*%/api/payments/v2" +
-      "/card/info/{card_uid}\022\224\001\n\031PayByRegiseter" +
-      "edCardV2RPC\022#.card_v2.PayByRegisteredCar" +
-      "dRequest\032$.card_v2.PayByRegisteredCardRe" +
-      "sponse\",\202\323\344\223\002&\"$/api/payments/v2/card/pa" +
-      "y/registered\022\237\001\n\032CancelRegiseteredCardV2" +
-      "RPC\022!.card_v2.CancelCardPaymentRequest\032#" +
-      ".card_v2.CancelCardPaymenttResponse\"9\202\323\344" +
-      "\223\0023\"1/api/payments/v2/card/cancel/regist" +
-      "ered/{imp_uid}BMZ8github.com/iamport/int" +
-      "erface/gen_src/go/v2/payments/card\252\002\020V2." +
-      "Payments.Cardb\006proto3"
+      "ount\030\003 \001(\t\022\027\n\017tax_free_amount\030\004 \001(\t\022\022\n\no" +
+      "rder_name\030\005 \001(\t\022\030\n\020card_installment\030\006 \001(" +
+      "\005\022!\n\031interest_free_by_merchant\030\007 \001(\010\022\023\n\013" +
+      "custom_data\030\010 \001(\t\022\024\n\014callback_url\030\t \001(\t\022" +
+      "\022\n\nbuyer_addr\030\n \001(\t\022\023\n\013buyer_email\030\013 \001(\t" +
+      "\022\022\n\nbuyer_name\030\014 \001(\t\022\026\n\016buyer_postcode\030\r" +
+      " \001(\t\022\021\n\tbuyer_tel\030\016 \001(\t\"\250\006\n\027PayByRegiste" +
+      "redCardData\022\016\n\006amount\030\001 \001(\t\022\021\n\tapply_num" +
+      "\030\002 \001(\t\022\022\n\nbuyer_addr\030\003 \001(\t\022\023\n\013buyer_emai" +
+      "l\030\004 \001(\t\022\022\n\nbuyer_name\030\005 \001(\t\022\026\n\016buyer_pos" +
+      "tcode\030\006 \001(\t\022\021\n\tbuyer_tel\030\007 \001(\t\022\025\n\rcancel" +
+      "_amount\030\010 \001(\t\022.\n\016cancel_history\030\t \003(\0132\026." +
+      "card_v2.CancelHistory\022\025\n\rcancel_reason\030\n" +
+      " \001(\t\022\033\n\023cancel_receipt_urls\030\013 \003(\t\022\024\n\014can" +
+      "celled_at\030\014 \001(\005\022\021\n\tcard_code\030\r \001(\t\022\021\n\tca" +
+      "rd_name\030\016 \001(\t\022\022\n\nbin_number\030\017 \001(\t\022\030\n\020car" +
+      "d_installment\030\020 \001(\005\022\021\n\tcard_type\030\021 \001(\005\022\033" +
+      "\n\023cash_receipt_issued\030\022 \001(\010\022\017\n\007channel\030\023" +
+      " \001(\t\022\020\n\010currency\030\024 \001(\t\022\023\n\013custom_data\030\025 " +
+      "\001(\t\022\020\n\010card_uid\030\026 \001(\t\022\032\n\022customer_uid_us" +
+      "age\030\027 \001(\t\022\023\n\013fail_reason\030\030 \001(\t\022\021\n\tfailed" +
+      "_at\030\031 \001(\005\022\017\n\007imp_uid\030\032 \001(\t\022\024\n\014merchant_u" +
+      "id\030\033 \001(\t\022\022\n\norder_name\030\034 \001(\t\022\017\n\007paid_at\030" +
+      "\035 \001(\005\022\022\n\npay_method\030\036 \001(\t\022\r\n\005pg_id\030\037 \001(\t" +
+      "\022\023\n\013pg_provider\030  \001(\t\022\016\n\006pg_tid\030! \001(\t\022\023\n" +
+      "\013receipt_url\030\" \001(\t\022\022\n\nstarted_at\030# \001(\005\022\016" +
+      "\n\006status\030$ \001(\t\022\022\n\nuser_agent\030% \001(\t\"p\n\033Pa" +
+      "yByRegisteredCardResponse\022\014\n\004code\030\001 \001(\005\022" +
+      "\017\n\007message\030\002 \001(\t\0222\n\010response\030\003 \001(\0132 .car" +
+      "d_v2.PayByRegisteredCardData\"j\n\rCancelHi" +
+      "story\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n" +
+      "\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022\023\n\013r" +
+      "eceipt_url\030\005 \001(\t\"z\n\030CancelCardPaymentReq" +
+      "uest\022\017\n\007imp_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\024\n" +
+      "\014merchant_uid\030\003 \001(\t\022\027\n\017tax_free_amount\030\004" +
+      " \001(\t\022\016\n\006reason\030\005 \001(\t\"o\n\032CancelCardPaymen" +
+      "ttResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(" +
+      "\t\0222\n\010response\030\003 \001(\0132 .card_v2.PayByRegis" +
+      "teredCardData2\314\005\n\022PaymentCardService\022w\n\021" +
+      "CardRegisterV2RPC\022\034.card_v2.CardRegister" +
+      "Request\032\035.card_v2.CardRegisterResponse\"%" +
+      "\202\323\344\223\002\037\"\032/api/payments/v2/card/info:\001*\022|\n" +
+      "\020GetCardInfoV2RPC\022\033.card_v2.GetCardInfoR" +
+      "equest\032\034.card_v2.GetCardInfoResponse\"-\202\323" +
+      "\344\223\002\'\022%/api/payments/v2/card/info/{card_u" +
+      "id}\022\205\001\n\023DeleteCardInfoV2RPC\022\036.card_v2.De" +
+      "leteCardInfoRequest\032\037.card_v2.DeleteCard" +
+      "InfoResponse\"-\202\323\344\223\002\'*%/api/payments/v2/c" +
+      "ard/info/{card_uid}\022\224\001\n\031PayByRegisetered" +
+      "CardV2RPC\022#.card_v2.PayByRegisteredCardR" +
+      "equest\032$.card_v2.PayByRegisteredCardResp" +
+      "onse\",\202\323\344\223\002&\"$/api/payments/v2/card/pay/" +
+      "registered\022\237\001\n\032CancelRegiseteredCardV2RP" +
+      "C\022!.card_v2.CancelCardPaymentRequest\032#.c" +
+      "ard_v2.CancelCardPaymenttResponse\"9\202\323\344\223\002" +
+      "3\"1/api/payments/v2/card/cancel/register" +
+      "ed/{imp_uid}BMZ8github.com/iamport/inter" +
+      "face/gen_src/go/v2/payments/card\252\002\020V2.Pa" +
+      "yments.Cardb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22222,7 +22222,7 @@ public final class Card {
     internal_static_card_v2_PayByRegisteredCardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_card_v2_PayByRegisteredCardRequest_descriptor,
-        new java.lang.String[] { "CardUid", "MerchantUid", "Amount", "DutyFreeAmount", "OrderName", "CardInstallment", "InterestFreeByMerchant", "CustomData", "CallbackUrl", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", });
+        new java.lang.String[] { "CardUid", "MerchantUid", "Amount", "TaxFreeAmount", "OrderName", "CardInstallment", "InterestFreeByMerchant", "CustomData", "CallbackUrl", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", });
     internal_static_card_v2_PayByRegisteredCardData_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_card_v2_PayByRegisteredCardData_fieldAccessorTable = new
@@ -22246,7 +22246,7 @@ public final class Card {
     internal_static_card_v2_CancelCardPaymentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_card_v2_CancelCardPaymentRequest_descriptor,
-        new java.lang.String[] { "ImpUid", "Amount", "MerchantUid", "DutyFreeAmount", "Reason", });
+        new java.lang.String[] { "ImpUid", "Amount", "MerchantUid", "TaxFreeAmount", "Reason", });
     internal_static_card_v2_CancelCardPaymenttResponse_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_card_v2_CancelCardPaymenttResponse_fieldAccessorTable = new

@@ -17,7 +17,7 @@ class Card
         \GPBMetadata\Google\Api\Annotations::initOnce();
         $pool->internalAddGeneratedFile(
             '
-¯
+­
 v2/payments/card/card.protocard_v2"ò
 CardRegisterRequest
 card_uid (	
@@ -79,12 +79,12 @@ bin_number (	
 card_uid (	"7
 DeleteCardInfoResponse
 code (
-message (	"Ò
+message (	"Ñ
 PayByRegisteredCardRequest
 card_uid (	
 merchant_uid (	
-amount (	
-duty_free_amount (	
+amount (	
+tax_free_amount (	
 
 order_name (	
 card_installment (!
@@ -154,12 +154,12 @@ user_agent% (	"p
 amount (	
 cancelled_at (
 reason (	
-receipt_url (	"{
+receipt_url (	"z
 CancelCardPaymentRequest
 imp_uid (	
 amount (	
-merchant_uid (	
-duty_free_amount (	
+merchant_uid (	
+tax_free_amount (	
 reason (	"o
 CancelCardPaymenttResponse
 code (

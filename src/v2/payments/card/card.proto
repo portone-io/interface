@@ -114,7 +114,7 @@ message PayByRegisteredCardRequest {
     string card_uid = 1;
     string merchant_uid = 2;
     string amount = 3;
-    string duty_free_amount = 4;
+    string tax_free_amount = 4;
     string order_name = 5; // a.k.a.) name
     int32 card_installment = 6; // a.k.a.) card_quota
     bool interest_free_by_merchant = 7;
@@ -185,7 +185,7 @@ message CancelCardPaymentRequest {
     string imp_uid = 1;
     string amount = 2;
     string merchant_uid = 3;
-    string duty_free_amount = 4;
+    string tax_free_amount = 4;
     string reason = 5;
 }
 

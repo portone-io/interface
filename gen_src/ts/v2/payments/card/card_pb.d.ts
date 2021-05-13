@@ -334,8 +334,8 @@ export class PayByRegisteredCardRequest extends jspb.Message {
   getAmount(): string;
   setAmount(value: string): void;
 
-  getDutyFreeAmount(): string;
-  setDutyFreeAmount(value: string): void;
+  getTaxFreeAmount(): string;
+  setTaxFreeAmount(value: string): void;
 
   getOrderName(): string;
   setOrderName(value: string): void;
@@ -382,7 +382,7 @@ export namespace PayByRegisteredCardRequest {
     cardUid: string,
     merchantUid: string,
     amount: string,
-    dutyFreeAmount: string,
+    taxFreeAmount: string,
     orderName: string,
     cardInstallment: number,
     interestFreeByMerchant: boolean,
@@ -640,8 +640,8 @@ export class CancelCardPaymentRequest extends jspb.Message {
   getMerchantUid(): string;
   setMerchantUid(value: string): void;
 
-  getDutyFreeAmount(): string;
-  setDutyFreeAmount(value: string): void;
+  getTaxFreeAmount(): string;
+  setTaxFreeAmount(value: string): void;
 
   getReason(): string;
   setReason(value: string): void;
@@ -661,7 +661,7 @@ export namespace CancelCardPaymentRequest {
     impUid: string,
     amount: string,
     merchantUid: string,
-    dutyFreeAmount: string,
+    taxFreeAmount: string,
     reason: string,
   }
 }

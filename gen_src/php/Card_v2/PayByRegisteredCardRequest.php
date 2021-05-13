@@ -26,9 +26,9 @@ class PayByRegisteredCardRequest extends \Google\Protobuf\Internal\Message
      */
     protected $amount = '';
     /**
-     * Generated from protobuf field <code>string duty_free_amount = 4;</code>
+     * Generated from protobuf field <code>string tax_free_amount = 4;</code>
      */
-    protected $duty_free_amount = '';
+    protected $tax_free_amount = '';
     /**
      * a.k.a.) name
      *
@@ -83,7 +83,7 @@ class PayByRegisteredCardRequest extends \Google\Protobuf\Internal\Message
      *     @type string $card_uid
      *     @type string $merchant_uid
      *     @type string $amount
-     *     @type string $duty_free_amount
+     *     @type string $tax_free_amount
      *     @type string $order_name
      *           a.k.a.) name
      *     @type int $card_installment
@@ -170,23 +170,23 @@ class PayByRegisteredCardRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string duty_free_amount = 4;</code>
+     * Generated from protobuf field <code>string tax_free_amount = 4;</code>
      * @return string
      */
-    public function getDutyFreeAmount()
+    public function getTaxFreeAmount()
     {
-        return $this->duty_free_amount;
+        return $this->tax_free_amount;
     }
 
     /**
-     * Generated from protobuf field <code>string duty_free_amount = 4;</code>
+     * Generated from protobuf field <code>string tax_free_amount = 4;</code>
      * @param string $var
      * @return $this
      */
-    public function setDutyFreeAmount($var)
+    public function setTaxFreeAmount($var)
     {
         GPBUtil::checkString($var, True);
-        $this->duty_free_amount = $var;
+        $this->tax_free_amount = $var;
 
         return $this;
     }

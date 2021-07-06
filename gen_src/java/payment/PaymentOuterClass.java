@@ -27348,16 +27348,10 @@ public final class PaymentOuterClass {
         getIdBytes();
 
     /**
-     * <code>string discount = 2;</code>
+     * <code>int32 discount = 2;</code>
      * @return The discount.
      */
-    java.lang.String getDiscount();
-    /**
-     * <code>string discount = 2;</code>
-     * @return The bytes for discount.
-     */
-    com.google.protobuf.ByteString
-        getDiscountBytes();
+    int getDiscount();
   }
   /**
    * Protobuf type {@code payment.Promotion}
@@ -27373,7 +27367,6 @@ public final class PaymentOuterClass {
     }
     private Promotion() {
       id_ = "";
-      discount_ = "";
     }
 
     @java.lang.Override
@@ -27412,10 +27405,9 @@ public final class PaymentOuterClass {
               id_ = s;
               break;
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 16: {
 
-              discount_ = s;
+              discount_ = input.readInt32();
               break;
             }
             default: {
@@ -27489,41 +27481,14 @@ public final class PaymentOuterClass {
     }
 
     public static final int DISCOUNT_FIELD_NUMBER = 2;
-    private volatile java.lang.Object discount_;
+    private int discount_;
     /**
-     * <code>string discount = 2;</code>
+     * <code>int32 discount = 2;</code>
      * @return The discount.
      */
     @java.lang.Override
-    public java.lang.String getDiscount() {
-      java.lang.Object ref = discount_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        discount_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string discount = 2;</code>
-     * @return The bytes for discount.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDiscountBytes() {
-      java.lang.Object ref = discount_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        discount_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getDiscount() {
+      return discount_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -27543,8 +27508,8 @@ public final class PaymentOuterClass {
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getDiscountBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, discount_);
+      if (discount_ != 0) {
+        output.writeInt32(2, discount_);
       }
       unknownFields.writeTo(output);
     }
@@ -27558,8 +27523,9 @@ public final class PaymentOuterClass {
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getDiscountBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, discount_);
+      if (discount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, discount_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -27578,8 +27544,8 @@ public final class PaymentOuterClass {
 
       if (!getId()
           .equals(other.getId())) return false;
-      if (!getDiscount()
-          .equals(other.getDiscount())) return false;
+      if (getDiscount()
+          != other.getDiscount()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -27594,7 +27560,7 @@ public final class PaymentOuterClass {
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + DISCOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getDiscount().hashCode();
+      hash = (53 * hash) + getDiscount();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -27730,7 +27696,7 @@ public final class PaymentOuterClass {
         super.clear();
         id_ = "";
 
-        discount_ = "";
+        discount_ = 0;
 
         return this;
       }
@@ -27812,9 +27778,8 @@ public final class PaymentOuterClass {
           id_ = other.id_;
           onChanged();
         }
-        if (!other.getDiscount().isEmpty()) {
-          discount_ = other.discount_;
-          onChanged();
+        if (other.getDiscount() != 0) {
+          setDiscount(other.getDiscount());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -27921,78 +27886,33 @@ public final class PaymentOuterClass {
         return this;
       }
 
-      private java.lang.Object discount_ = "";
+      private int discount_ ;
       /**
-       * <code>string discount = 2;</code>
+       * <code>int32 discount = 2;</code>
        * @return The discount.
        */
-      public java.lang.String getDiscount() {
-        java.lang.Object ref = discount_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          discount_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public int getDiscount() {
+        return discount_;
       }
       /**
-       * <code>string discount = 2;</code>
-       * @return The bytes for discount.
-       */
-      public com.google.protobuf.ByteString
-          getDiscountBytes() {
-        java.lang.Object ref = discount_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          discount_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string discount = 2;</code>
+       * <code>int32 discount = 2;</code>
        * @param value The discount to set.
        * @return This builder for chaining.
        */
-      public Builder setDiscount(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setDiscount(int value) {
+        
         discount_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string discount = 2;</code>
+       * <code>int32 discount = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearDiscount() {
         
-        discount_ = getDefaultInstance().getDiscount();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string discount = 2;</code>
-       * @param value The bytes for discount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDiscountBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        discount_ = value;
+        discount_ = 0;
         onChanged();
         return this;
       }
@@ -28269,7 +28189,7 @@ public final class PaymentOuterClass {
       "ge\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.Pre" +
       "pare\"0\n\030PaymentGetPrepareRequest\022\024\n\014merc" +
       "hant_uid\030\001 \001(\t\")\n\tPromotion\022\n\n\002id\030\001 \001(\t\022" +
-      "\020\n\010discount\030\002 \001(\t2\341\t\n\016PaymentService\022\211\001\n" +
+      "\020\n\010discount\030\002 \001(\0052\341\t\n\016PaymentService\022\211\001\n" +
       "\021PaymentBalanceRPC\022\036.payment.PaymentBala" +
       "nceRequest\032\037.payment.PaymentBalanceRespo" +
       "nse\"3\202\323\344\223\002-\022+/api/payments/v1/payments/{" +

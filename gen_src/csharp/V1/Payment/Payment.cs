@@ -100,7 +100,7 @@ namespace V1.Payment {
             "cGFyZVJlc3BvbnNlEgwKBGNvZGUYASABKAUSDwoHbWVzc2FnZRgCIAEoCRIi",
             "CghyZXNwb25zZRgDIAEoCzIQLnBheW1lbnQuUHJlcGFyZSIwChhQYXltZW50",
             "R2V0UHJlcGFyZVJlcXVlc3QSFAoMbWVyY2hhbnRfdWlkGAEgASgJIikKCVBy",
-            "b21vdGlvbhIKCgJpZBgBIAEoCRIQCghkaXNjb3VudBgCIAEoCTLhCQoOUGF5",
+            "b21vdGlvbhIKCgJpZBgBIAEoCRIQCghkaXNjb3VudBgCIAEoBTLhCQoOUGF5",
             "bWVudFNlcnZpY2USiQEKEVBheW1lbnRCYWxhbmNlUlBDEh4ucGF5bWVudC5Q",
             "YXltZW50QmFsYW5jZVJlcXVlc3QaHy5wYXltZW50LlBheW1lbnRCYWxhbmNl",
             "UmVzcG9uc2UiM4LT5JMCLRIrL2FwaS9wYXltZW50cy92MS9wYXltZW50cy97",
@@ -173,19 +173,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<Payment> _parser = new pb::MessageParser<Payment>(() => new Payment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Payment> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Payment() {
       OnConstruction();
     }
@@ -193,6 +197,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Payment(Payment other) : this() {
       amount_ = other.amount_;
       applyNum_ = other.applyNum_;
@@ -245,6 +250,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Payment Clone() {
       return new Payment(this);
     }
@@ -253,6 +259,7 @@ namespace V1.Payment {
     public const int AmountFieldNumber = 1;
     private int amount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Amount {
       get { return amount_; }
       set {
@@ -264,6 +271,7 @@ namespace V1.Payment {
     public const int ApplyNumFieldNumber = 2;
     private string applyNum_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ApplyNum {
       get { return applyNum_; }
       set {
@@ -275,6 +283,7 @@ namespace V1.Payment {
     public const int BankCodeFieldNumber = 3;
     private int bankCode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int BankCode {
       get { return bankCode_; }
       set {
@@ -286,6 +295,7 @@ namespace V1.Payment {
     public const int BankNameFieldNumber = 4;
     private string bankName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BankName {
       get { return bankName_; }
       set {
@@ -297,6 +307,7 @@ namespace V1.Payment {
     public const int BuyerAddrFieldNumber = 5;
     private string buyerAddr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerAddr {
       get { return buyerAddr_; }
       set {
@@ -308,6 +319,7 @@ namespace V1.Payment {
     public const int BuyerEmailFieldNumber = 6;
     private string buyerEmail_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerEmail {
       get { return buyerEmail_; }
       set {
@@ -319,6 +331,7 @@ namespace V1.Payment {
     public const int BuyerNameFieldNumber = 7;
     private string buyerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerName {
       get { return buyerName_; }
       set {
@@ -330,6 +343,7 @@ namespace V1.Payment {
     public const int BuyerPostcodeFieldNumber = 8;
     private string buyerPostcode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerPostcode {
       get { return buyerPostcode_; }
       set {
@@ -341,6 +355,7 @@ namespace V1.Payment {
     public const int BuyerTelFieldNumber = 9;
     private string buyerTel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerTel {
       get { return buyerTel_; }
       set {
@@ -352,6 +367,7 @@ namespace V1.Payment {
     public const int CancelAmountFieldNumber = 10;
     private int cancelAmount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CancelAmount {
       get { return cancelAmount_; }
       set {
@@ -365,6 +381,7 @@ namespace V1.Payment {
         = pb::FieldCodec.ForMessage(90, global::V1.Payment.CancelHistory.Parser);
     private readonly pbc::RepeatedField<global::V1.Payment.CancelHistory> cancelHistory_ = new pbc::RepeatedField<global::V1.Payment.CancelHistory>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::V1.Payment.CancelHistory> CancelHistory {
       get { return cancelHistory_; }
     }
@@ -373,6 +390,7 @@ namespace V1.Payment {
     public const int CancelReasonFieldNumber = 12;
     private string cancelReason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CancelReason {
       get { return cancelReason_; }
       set {
@@ -386,6 +404,7 @@ namespace V1.Payment {
         = pb::FieldCodec.ForString(106);
     private readonly pbc::RepeatedField<string> cancelReceiptUrls_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> CancelReceiptUrls {
       get { return cancelReceiptUrls_; }
     }
@@ -394,6 +413,7 @@ namespace V1.Payment {
     public const int CancelledAtFieldNumber = 14;
     private int cancelledAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CancelledAt {
       get { return cancelledAt_; }
       set {
@@ -405,6 +425,7 @@ namespace V1.Payment {
     public const int CardCodeFieldNumber = 15;
     private string cardCode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardCode {
       get { return cardCode_; }
       set {
@@ -416,6 +437,7 @@ namespace V1.Payment {
     public const int CardNameFieldNumber = 16;
     private string cardName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardName {
       get { return cardName_; }
       set {
@@ -427,6 +449,7 @@ namespace V1.Payment {
     public const int CardNumberFieldNumber = 17;
     private string cardNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardNumber {
       get { return cardNumber_; }
       set {
@@ -438,6 +461,7 @@ namespace V1.Payment {
     public const int CardQuotaFieldNumber = 18;
     private int cardQuota_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CardQuota {
       get { return cardQuota_; }
       set {
@@ -449,6 +473,7 @@ namespace V1.Payment {
     public const int CardTypeFieldNumber = 19;
     private int cardType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CardType {
       get { return cardType_; }
       set {
@@ -460,6 +485,7 @@ namespace V1.Payment {
     public const int CashReceiptIssuedFieldNumber = 20;
     private bool cashReceiptIssued_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CashReceiptIssued {
       get { return cashReceiptIssued_; }
       set {
@@ -471,6 +497,7 @@ namespace V1.Payment {
     public const int ChannelFieldNumber = 21;
     private string channel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Channel {
       get { return channel_; }
       set {
@@ -482,6 +509,7 @@ namespace V1.Payment {
     public const int CurrencyFieldNumber = 22;
     private string currency_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Currency {
       get { return currency_; }
       set {
@@ -493,6 +521,7 @@ namespace V1.Payment {
     public const int CustomDataFieldNumber = 23;
     private string customData_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomData {
       get { return customData_; }
       set {
@@ -504,6 +533,7 @@ namespace V1.Payment {
     public const int CustomerUidFieldNumber = 24;
     private string customerUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerUid {
       get { return customerUid_; }
       set {
@@ -515,6 +545,7 @@ namespace V1.Payment {
     public const int CustomerUidUsageFieldNumber = 25;
     private string customerUidUsage_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerUidUsage {
       get { return customerUidUsage_; }
       set {
@@ -526,6 +557,7 @@ namespace V1.Payment {
     public const int EscrowFieldNumber = 26;
     private bool escrow_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Escrow {
       get { return escrow_; }
       set {
@@ -537,6 +569,7 @@ namespace V1.Payment {
     public const int FailReasonFieldNumber = 27;
     private string failReason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FailReason {
       get { return failReason_; }
       set {
@@ -548,6 +581,7 @@ namespace V1.Payment {
     public const int FailedAtFieldNumber = 28;
     private int failedAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int FailedAt {
       get { return failedAt_; }
       set {
@@ -559,6 +593,7 @@ namespace V1.Payment {
     public const int ImpUidFieldNumber = 29;
     private string impUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImpUid {
       get { return impUid_; }
       set {
@@ -570,6 +605,7 @@ namespace V1.Payment {
     public const int MerchantUidFieldNumber = 30;
     private string merchantUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MerchantUid {
       get { return merchantUid_; }
       set {
@@ -581,6 +617,7 @@ namespace V1.Payment {
     public const int NameFieldNumber = 31;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -592,6 +629,7 @@ namespace V1.Payment {
     public const int PaidAtFieldNumber = 32;
     private int paidAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PaidAt {
       get { return paidAt_; }
       set {
@@ -603,6 +641,7 @@ namespace V1.Payment {
     public const int PayMethodFieldNumber = 33;
     private string payMethod_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PayMethod {
       get { return payMethod_; }
       set {
@@ -614,6 +653,7 @@ namespace V1.Payment {
     public const int PgIdFieldNumber = 34;
     private string pgId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgId {
       get { return pgId_; }
       set {
@@ -625,6 +665,7 @@ namespace V1.Payment {
     public const int PgProviderFieldNumber = 35;
     private string pgProvider_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgProvider {
       get { return pgProvider_; }
       set {
@@ -636,6 +677,7 @@ namespace V1.Payment {
     public const int PgTidFieldNumber = 36;
     private string pgTid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgTid {
       get { return pgTid_; }
       set {
@@ -647,6 +689,7 @@ namespace V1.Payment {
     public const int ReceiptUrlFieldNumber = 37;
     private string receiptUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ReceiptUrl {
       get { return receiptUrl_; }
       set {
@@ -658,6 +701,7 @@ namespace V1.Payment {
     public const int StartedAtFieldNumber = 38;
     private int startedAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int StartedAt {
       get { return startedAt_; }
       set {
@@ -669,6 +713,7 @@ namespace V1.Payment {
     public const int StatusFieldNumber = 39;
     private string status_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Status {
       get { return status_; }
       set {
@@ -680,6 +725,7 @@ namespace V1.Payment {
     public const int UserAgentFieldNumber = 40;
     private string userAgent_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UserAgent {
       get { return userAgent_; }
       set {
@@ -691,6 +737,7 @@ namespace V1.Payment {
     public const int VbankCodeFieldNumber = 41;
     private string vbankCode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string VbankCode {
       get { return vbankCode_; }
       set {
@@ -702,6 +749,7 @@ namespace V1.Payment {
     public const int VbankDateFieldNumber = 42;
     private int vbankDate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int VbankDate {
       get { return vbankDate_; }
       set {
@@ -713,6 +761,7 @@ namespace V1.Payment {
     public const int VbankHolderFieldNumber = 43;
     private string vbankHolder_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string VbankHolder {
       get { return vbankHolder_; }
       set {
@@ -724,6 +773,7 @@ namespace V1.Payment {
     public const int VbankIssuedAtFieldNumber = 44;
     private int vbankIssuedAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int VbankIssuedAt {
       get { return vbankIssuedAt_; }
       set {
@@ -735,6 +785,7 @@ namespace V1.Payment {
     public const int VbankNameFieldNumber = 45;
     private string vbankName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string VbankName {
       get { return vbankName_; }
       set {
@@ -746,6 +797,7 @@ namespace V1.Payment {
     public const int VbankNumFieldNumber = 46;
     private string vbankNum_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string VbankNum {
       get { return vbankNum_; }
       set {
@@ -757,6 +809,7 @@ namespace V1.Payment {
     public const int PromotionFieldNumber = 47;
     private global::V1.Payment.Promotion promotion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.Promotion Promotion {
       get { return promotion_; }
       set {
@@ -765,11 +818,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Payment);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Payment other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -828,6 +883,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Amount != 0) hash ^= Amount.GetHashCode();
@@ -884,11 +940,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1083,6 +1141,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Amount != 0) {
         output.WriteRawTag(8);
@@ -1273,6 +1332,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Amount != 0) {
@@ -1419,6 +1479,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Payment other) {
       if (other == null) {
         return;
@@ -1567,6 +1628,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1775,6 +1837,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1988,19 +2051,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<CancelHistory> _parser = new pb::MessageParser<CancelHistory>(() => new CancelHistory());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CancelHistory> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelHistory() {
       OnConstruction();
     }
@@ -2008,6 +2075,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelHistory(CancelHistory other) : this() {
       pgTid_ = other.pgTid_;
       amount_ = other.amount_;
@@ -2018,6 +2086,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelHistory Clone() {
       return new CancelHistory(this);
     }
@@ -2026,6 +2095,7 @@ namespace V1.Payment {
     public const int PgTidFieldNumber = 1;
     private string pgTid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgTid {
       get { return pgTid_; }
       set {
@@ -2037,6 +2107,7 @@ namespace V1.Payment {
     public const int AmountFieldNumber = 2;
     private int amount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Amount {
       get { return amount_; }
       set {
@@ -2048,6 +2119,7 @@ namespace V1.Payment {
     public const int CancelledAtFieldNumber = 3;
     private int cancelledAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CancelledAt {
       get { return cancelledAt_; }
       set {
@@ -2059,6 +2131,7 @@ namespace V1.Payment {
     public const int ReasonFieldNumber = 4;
     private string reason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Reason {
       get { return reason_; }
       set {
@@ -2070,6 +2143,7 @@ namespace V1.Payment {
     public const int ReceiptUrlFieldNumber = 5;
     private string receiptUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ReceiptUrl {
       get { return receiptUrl_; }
       set {
@@ -2078,11 +2152,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CancelHistory);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CancelHistory other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2099,6 +2175,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PgTid.Length != 0) hash ^= PgTid.GetHashCode();
@@ -2113,11 +2190,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2150,6 +2229,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PgTid.Length != 0) {
         output.WriteRawTag(10);
@@ -2178,6 +2258,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PgTid.Length != 0) {
@@ -2202,6 +2283,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CancelHistory other) {
       if (other == null) {
         return;
@@ -2225,6 +2307,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2262,6 +2345,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2304,19 +2388,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentPage> _parser = new pb::MessageParser<PaymentPage>(() => new PaymentPage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentPage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentPage() {
       OnConstruction();
     }
@@ -2324,6 +2412,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentPage(PaymentPage other) : this() {
       total_ = other.total_;
       previous_ = other.previous_;
@@ -2333,6 +2422,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentPage Clone() {
       return new PaymentPage(this);
     }
@@ -2341,6 +2431,7 @@ namespace V1.Payment {
     public const int TotalFieldNumber = 1;
     private int total_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Total {
       get { return total_; }
       set {
@@ -2352,6 +2443,7 @@ namespace V1.Payment {
     public const int PreviousFieldNumber = 2;
     private int previous_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Previous {
       get { return previous_; }
       set {
@@ -2363,6 +2455,7 @@ namespace V1.Payment {
     public const int NextFieldNumber = 3;
     private int next_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Next {
       get { return next_; }
       set {
@@ -2376,16 +2469,19 @@ namespace V1.Payment {
         = pb::FieldCodec.ForMessage(34, global::V1.Payment.Payment.Parser);
     private readonly pbc::RepeatedField<global::V1.Payment.Payment> list_ = new pbc::RepeatedField<global::V1.Payment.Payment>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::V1.Payment.Payment> List {
       get { return list_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentPage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentPage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2401,6 +2497,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Total != 0) hash ^= Total.GetHashCode();
@@ -2414,11 +2511,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2444,6 +2543,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Total != 0) {
         output.WriteRawTag(8);
@@ -2465,6 +2565,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Total != 0) {
@@ -2484,6 +2585,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentPage other) {
       if (other == null) {
         return;
@@ -2502,6 +2604,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2535,6 +2638,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2573,19 +2677,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentBalanceDetail> _parser = new pb::MessageParser<PaymentBalanceDetail>(() => new PaymentBalanceDetail());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentBalanceDetail> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalanceDetail() {
       OnConstruction();
     }
@@ -2593,6 +2701,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalanceDetail(PaymentBalanceDetail other) : this() {
       taxFree_ = other.taxFree_;
       supply_ = other.supply_;
@@ -2602,6 +2711,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalanceDetail Clone() {
       return new PaymentBalanceDetail(this);
     }
@@ -2610,6 +2720,7 @@ namespace V1.Payment {
     public const int TaxFreeFieldNumber = 1;
     private int taxFree_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TaxFree {
       get { return taxFree_; }
       set {
@@ -2621,6 +2732,7 @@ namespace V1.Payment {
     public const int SupplyFieldNumber = 2;
     private int supply_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Supply {
       get { return supply_; }
       set {
@@ -2632,6 +2744,7 @@ namespace V1.Payment {
     public const int VatFieldNumber = 3;
     private int vat_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Vat {
       get { return vat_; }
       set {
@@ -2643,6 +2756,7 @@ namespace V1.Payment {
     public const int ServiceFieldNumber = 4;
     private int service_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Service {
       get { return service_; }
       set {
@@ -2651,11 +2765,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentBalanceDetail);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentBalanceDetail other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2671,6 +2787,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (TaxFree != 0) hash ^= TaxFree.GetHashCode();
@@ -2684,11 +2801,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2717,6 +2836,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TaxFree != 0) {
         output.WriteRawTag(8);
@@ -2741,6 +2861,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (TaxFree != 0) {
@@ -2762,6 +2883,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentBalanceDetail other) {
       if (other == null) {
         return;
@@ -2782,6 +2904,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2815,6 +2938,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2853,19 +2977,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentBalance> _parser = new pb::MessageParser<PaymentBalance>(() => new PaymentBalance());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentBalance> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalance() {
       OnConstruction();
     }
@@ -2873,6 +3001,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalance(PaymentBalance other) : this() {
       amount_ = other.amount_;
       cashReceipt_ = other.cashReceipt_ != null ? other.cashReceipt_.Clone() : null;
@@ -2884,6 +3013,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalance Clone() {
       return new PaymentBalance(this);
     }
@@ -2892,6 +3022,7 @@ namespace V1.Payment {
     public const int AmountFieldNumber = 1;
     private int amount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Amount {
       get { return amount_; }
       set {
@@ -2903,6 +3034,7 @@ namespace V1.Payment {
     public const int CashReceiptFieldNumber = 2;
     private global::V1.Payment.PaymentBalanceDetail cashReceipt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.PaymentBalanceDetail CashReceipt {
       get { return cashReceipt_; }
       set {
@@ -2914,6 +3046,7 @@ namespace V1.Payment {
     public const int PrimaryFieldNumber = 3;
     private global::V1.Payment.PaymentBalanceDetail primary_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.PaymentBalanceDetail Primary {
       get { return primary_; }
       set {
@@ -2925,6 +3058,7 @@ namespace V1.Payment {
     public const int SecondaryFieldNumber = 4;
     private global::V1.Payment.PaymentBalanceDetail secondary_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.PaymentBalanceDetail Secondary {
       get { return secondary_; }
       set {
@@ -2936,6 +3070,7 @@ namespace V1.Payment {
     public const int DiscountFieldNumber = 5;
     private global::V1.Payment.PaymentBalanceDetail discount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.PaymentBalanceDetail Discount {
       get { return discount_; }
       set {
@@ -2949,16 +3084,19 @@ namespace V1.Payment {
         = pb::FieldCodec.ForMessage(50, global::V1.Payment.PaymentBalanceHistory.Parser);
     private readonly pbc::RepeatedField<global::V1.Payment.PaymentBalanceHistory> histories_ = new pbc::RepeatedField<global::V1.Payment.PaymentBalanceHistory>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::V1.Payment.PaymentBalanceHistory> Histories {
       get { return histories_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentBalance);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentBalance other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2976,6 +3114,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Amount != 0) hash ^= Amount.GetHashCode();
@@ -2991,11 +3130,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3029,6 +3170,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Amount != 0) {
         output.WriteRawTag(8);
@@ -3058,6 +3200,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Amount != 0) {
@@ -3083,6 +3226,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentBalance other) {
       if (other == null) {
         return;
@@ -3119,6 +3263,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3172,6 +3317,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3230,19 +3376,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentBalanceHistory> _parser = new pb::MessageParser<PaymentBalanceHistory>(() => new PaymentBalanceHistory());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentBalanceHistory> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalanceHistory() {
       OnConstruction();
     }
@@ -3250,6 +3400,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalanceHistory(PaymentBalanceHistory other) : this() {
       cashReceipt_ = other.cashReceipt_ != null ? other.cashReceipt_.Clone() : null;
       primary_ = other.primary_ != null ? other.primary_.Clone() : null;
@@ -3260,6 +3411,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalanceHistory Clone() {
       return new PaymentBalanceHistory(this);
     }
@@ -3268,6 +3420,7 @@ namespace V1.Payment {
     public const int CashReceiptFieldNumber = 1;
     private global::V1.Payment.PaymentBalanceDetail cashReceipt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.PaymentBalanceDetail CashReceipt {
       get { return cashReceipt_; }
       set {
@@ -3279,6 +3432,7 @@ namespace V1.Payment {
     public const int PrimaryFieldNumber = 2;
     private global::V1.Payment.PaymentBalanceDetail primary_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.PaymentBalanceDetail Primary {
       get { return primary_; }
       set {
@@ -3290,6 +3444,7 @@ namespace V1.Payment {
     public const int SecondaryFieldNumber = 3;
     private global::V1.Payment.PaymentBalanceDetail secondary_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.PaymentBalanceDetail Secondary {
       get { return secondary_; }
       set {
@@ -3301,6 +3456,7 @@ namespace V1.Payment {
     public const int DiscountFieldNumber = 4;
     private global::V1.Payment.PaymentBalanceDetail discount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.PaymentBalanceDetail Discount {
       get { return discount_; }
       set {
@@ -3312,6 +3468,7 @@ namespace V1.Payment {
     public const int CreatedFieldNumber = 5;
     private int created_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Created {
       get { return created_; }
       set {
@@ -3320,11 +3477,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentBalanceHistory);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentBalanceHistory other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3341,6 +3500,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (cashReceipt_ != null) hash ^= CashReceipt.GetHashCode();
@@ -3355,11 +3515,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3392,6 +3554,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (cashReceipt_ != null) {
         output.WriteRawTag(10);
@@ -3420,6 +3583,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (cashReceipt_ != null) {
@@ -3444,6 +3608,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentBalanceHistory other) {
       if (other == null) {
         return;
@@ -3479,6 +3644,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3528,6 +3694,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3582,19 +3749,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentRequest> _parser = new pb::MessageParser<PaymentRequest>(() => new PaymentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentRequest() {
       OnConstruction();
     }
@@ -3602,12 +3773,14 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentRequest(PaymentRequest other) : this() {
       impUid_ = other.impUid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentRequest Clone() {
       return new PaymentRequest(this);
     }
@@ -3616,6 +3789,7 @@ namespace V1.Payment {
     public const int ImpUidFieldNumber = 1;
     private string impUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImpUid {
       get { return impUid_; }
       set {
@@ -3624,11 +3798,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3641,6 +3817,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ImpUid.Length != 0) hash ^= ImpUid.GetHashCode();
@@ -3651,11 +3828,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3672,6 +3851,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ImpUid.Length != 0) {
         output.WriteRawTag(10);
@@ -3684,6 +3864,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ImpUid.Length != 0) {
@@ -3696,6 +3877,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentRequest other) {
       if (other == null) {
         return;
@@ -3707,6 +3889,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3728,6 +3911,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3754,19 +3938,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentResponse> _parser = new pb::MessageParser<PaymentResponse>(() => new PaymentResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentResponse() {
       OnConstruction();
     }
@@ -3774,6 +3962,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentResponse(PaymentResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -3782,6 +3971,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentResponse Clone() {
       return new PaymentResponse(this);
     }
@@ -3790,6 +3980,7 @@ namespace V1.Payment {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -3801,6 +3992,7 @@ namespace V1.Payment {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -3812,6 +4004,7 @@ namespace V1.Payment {
     public const int ResponseFieldNumber = 3;
     private global::V1.Payment.Payment response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.Payment Response {
       get { return response_; }
       set {
@@ -3820,11 +4013,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3839,6 +4034,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -3851,11 +4047,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3880,6 +4078,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -3900,6 +4099,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -3918,6 +4118,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentResponse other) {
       if (other == null) {
         return;
@@ -3938,6 +4139,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3970,6 +4172,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4007,19 +4210,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentsRequest> _parser = new pb::MessageParser<PaymentsRequest>(() => new PaymentsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentsRequest() {
       OnConstruction();
     }
@@ -4027,12 +4234,14 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentsRequest(PaymentsRequest other) : this() {
       impUid_ = other.impUid_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentsRequest Clone() {
       return new PaymentsRequest(this);
     }
@@ -4043,16 +4252,19 @@ namespace V1.Payment {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> impUid_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> ImpUid {
       get { return impUid_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4065,6 +4277,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= impUid_.GetHashCode();
@@ -4075,11 +4288,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4093,6 +4308,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       impUid_.WriteTo(ref output, _repeated_impUid_codec);
       if (_unknownFields != null) {
@@ -4102,6 +4318,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += impUid_.CalculateSize(_repeated_impUid_codec);
@@ -4112,6 +4329,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentsRequest other) {
       if (other == null) {
         return;
@@ -4121,6 +4339,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4142,6 +4361,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4168,19 +4388,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentsResponse> _parser = new pb::MessageParser<PaymentsResponse>(() => new PaymentsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentsResponse() {
       OnConstruction();
     }
@@ -4188,6 +4412,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentsResponse(PaymentsResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -4196,6 +4421,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentsResponse Clone() {
       return new PaymentsResponse(this);
     }
@@ -4204,6 +4430,7 @@ namespace V1.Payment {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -4215,6 +4442,7 @@ namespace V1.Payment {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -4228,16 +4456,19 @@ namespace V1.Payment {
         = pb::FieldCodec.ForMessage(26, global::V1.Payment.Payment.Parser);
     private readonly pbc::RepeatedField<global::V1.Payment.Payment> response_ = new pbc::RepeatedField<global::V1.Payment.Payment>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::V1.Payment.Payment> Response {
       get { return response_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4252,6 +4483,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -4264,11 +4496,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4290,6 +4524,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -4307,6 +4542,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -4323,6 +4559,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentsResponse other) {
       if (other == null) {
         return;
@@ -4338,6 +4575,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4367,6 +4605,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4401,19 +4640,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentsMerchantUidRequest> _parser = new pb::MessageParser<PaymentsMerchantUidRequest>(() => new PaymentsMerchantUidRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentsMerchantUidRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentsMerchantUidRequest() {
       OnConstruction();
     }
@@ -4421,6 +4664,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentsMerchantUidRequest(PaymentsMerchantUidRequest other) : this() {
       merchantUid_ = other.merchantUid_;
       status_ = other.status_;
@@ -4430,6 +4674,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentsMerchantUidRequest Clone() {
       return new PaymentsMerchantUidRequest(this);
     }
@@ -4438,6 +4683,7 @@ namespace V1.Payment {
     public const int MerchantUidFieldNumber = 1;
     private string merchantUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MerchantUid {
       get { return merchantUid_; }
       set {
@@ -4449,6 +4695,7 @@ namespace V1.Payment {
     public const int StatusFieldNumber = 2;
     private string status_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Status {
       get { return status_; }
       set {
@@ -4460,6 +4707,7 @@ namespace V1.Payment {
     public const int PageFieldNumber = 3;
     private int page_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Page {
       get { return page_; }
       set {
@@ -4471,6 +4719,7 @@ namespace V1.Payment {
     public const int SortingFieldNumber = 4;
     private string sorting_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Sorting {
       get { return sorting_; }
       set {
@@ -4479,11 +4728,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentsMerchantUidRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentsMerchantUidRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4499,6 +4750,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MerchantUid.Length != 0) hash ^= MerchantUid.GetHashCode();
@@ -4512,11 +4764,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4545,6 +4799,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MerchantUid.Length != 0) {
         output.WriteRawTag(10);
@@ -4569,6 +4824,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MerchantUid.Length != 0) {
@@ -4590,6 +4846,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentsMerchantUidRequest other) {
       if (other == null) {
         return;
@@ -4610,6 +4867,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4643,6 +4901,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4681,19 +4940,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentsMerchantUidResponse> _parser = new pb::MessageParser<PaymentsMerchantUidResponse>(() => new PaymentsMerchantUidResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentsMerchantUidResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentsMerchantUidResponse() {
       OnConstruction();
     }
@@ -4701,6 +4964,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentsMerchantUidResponse(PaymentsMerchantUidResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -4709,6 +4973,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentsMerchantUidResponse Clone() {
       return new PaymentsMerchantUidResponse(this);
     }
@@ -4717,6 +4982,7 @@ namespace V1.Payment {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -4728,6 +4994,7 @@ namespace V1.Payment {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -4739,6 +5006,7 @@ namespace V1.Payment {
     public const int ResponseFieldNumber = 3;
     private global::V1.Payment.PaymentPage response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.PaymentPage Response {
       get { return response_; }
       set {
@@ -4747,11 +5015,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentsMerchantUidResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentsMerchantUidResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4766,6 +5036,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -4778,11 +5049,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4807,6 +5080,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -4827,6 +5101,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -4845,6 +5120,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentsMerchantUidResponse other) {
       if (other == null) {
         return;
@@ -4865,6 +5141,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4897,6 +5174,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4934,19 +5212,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentStatusRequest> _parser = new pb::MessageParser<PaymentStatusRequest>(() => new PaymentStatusRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentStatusRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentStatusRequest() {
       OnConstruction();
     }
@@ -4954,6 +5236,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentStatusRequest(PaymentStatusRequest other) : this() {
       status_ = other.status_;
       page_ = other.page_;
@@ -4965,6 +5248,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentStatusRequest Clone() {
       return new PaymentStatusRequest(this);
     }
@@ -4973,6 +5257,7 @@ namespace V1.Payment {
     public const int StatusFieldNumber = 1;
     private string status_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Status {
       get { return status_; }
       set {
@@ -4984,6 +5269,7 @@ namespace V1.Payment {
     public const int PageFieldNumber = 2;
     private int page_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Page {
       get { return page_; }
       set {
@@ -4995,6 +5281,7 @@ namespace V1.Payment {
     public const int LimitFieldNumber = 3;
     private int limit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Limit {
       get { return limit_; }
       set {
@@ -5006,6 +5293,7 @@ namespace V1.Payment {
     public const int FromFieldNumber = 4;
     private int from_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int From {
       get { return from_; }
       set {
@@ -5017,6 +5305,7 @@ namespace V1.Payment {
     public const int ToFieldNumber = 5;
     private int to_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int To {
       get { return to_; }
       set {
@@ -5028,6 +5317,7 @@ namespace V1.Payment {
     public const int SortingFieldNumber = 6;
     private string sorting_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Sorting {
       get { return sorting_; }
       set {
@@ -5036,11 +5326,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentStatusRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentStatusRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5058,6 +5350,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Status.Length != 0) hash ^= Status.GetHashCode();
@@ -5073,11 +5366,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5114,6 +5409,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Status.Length != 0) {
         output.WriteRawTag(10);
@@ -5146,6 +5442,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Status.Length != 0) {
@@ -5173,6 +5470,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentStatusRequest other) {
       if (other == null) {
         return;
@@ -5199,6 +5497,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5240,6 +5539,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5286,19 +5586,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentStatusResponse> _parser = new pb::MessageParser<PaymentStatusResponse>(() => new PaymentStatusResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentStatusResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentStatusResponse() {
       OnConstruction();
     }
@@ -5306,6 +5610,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentStatusResponse(PaymentStatusResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -5314,6 +5619,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentStatusResponse Clone() {
       return new PaymentStatusResponse(this);
     }
@@ -5322,6 +5628,7 @@ namespace V1.Payment {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -5333,6 +5640,7 @@ namespace V1.Payment {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -5344,6 +5652,7 @@ namespace V1.Payment {
     public const int ResponseFieldNumber = 3;
     private global::V1.Payment.PaymentPage response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.PaymentPage Response {
       get { return response_; }
       set {
@@ -5352,11 +5661,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentStatusResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentStatusResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5371,6 +5682,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -5383,11 +5695,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5412,6 +5726,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -5432,6 +5747,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -5450,6 +5766,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentStatusResponse other) {
       if (other == null) {
         return;
@@ -5470,6 +5787,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5502,6 +5820,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5539,19 +5858,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentMerchantUidRequest> _parser = new pb::MessageParser<PaymentMerchantUidRequest>(() => new PaymentMerchantUidRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentMerchantUidRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentMerchantUidRequest() {
       OnConstruction();
     }
@@ -5559,6 +5882,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentMerchantUidRequest(PaymentMerchantUidRequest other) : this() {
       merchantUid_ = other.merchantUid_;
       status_ = other.status_;
@@ -5567,6 +5891,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentMerchantUidRequest Clone() {
       return new PaymentMerchantUidRequest(this);
     }
@@ -5575,6 +5900,7 @@ namespace V1.Payment {
     public const int MerchantUidFieldNumber = 1;
     private string merchantUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MerchantUid {
       get { return merchantUid_; }
       set {
@@ -5586,6 +5912,7 @@ namespace V1.Payment {
     public const int StatusFieldNumber = 2;
     private string status_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Status {
       get { return status_; }
       set {
@@ -5597,6 +5924,7 @@ namespace V1.Payment {
     public const int SortingFieldNumber = 3;
     private string sorting_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Sorting {
       get { return sorting_; }
       set {
@@ -5605,11 +5933,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentMerchantUidRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentMerchantUidRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5624,6 +5954,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MerchantUid.Length != 0) hash ^= MerchantUid.GetHashCode();
@@ -5636,11 +5967,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5665,6 +5998,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MerchantUid.Length != 0) {
         output.WriteRawTag(10);
@@ -5685,6 +6019,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MerchantUid.Length != 0) {
@@ -5703,6 +6038,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentMerchantUidRequest other) {
       if (other == null) {
         return;
@@ -5720,6 +6056,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5749,6 +6086,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5783,19 +6121,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentMerchantUidResponse> _parser = new pb::MessageParser<PaymentMerchantUidResponse>(() => new PaymentMerchantUidResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentMerchantUidResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentMerchantUidResponse() {
       OnConstruction();
     }
@@ -5803,6 +6145,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentMerchantUidResponse(PaymentMerchantUidResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -5811,6 +6154,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentMerchantUidResponse Clone() {
       return new PaymentMerchantUidResponse(this);
     }
@@ -5819,6 +6163,7 @@ namespace V1.Payment {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -5830,6 +6175,7 @@ namespace V1.Payment {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -5841,6 +6187,7 @@ namespace V1.Payment {
     public const int ResponseFieldNumber = 3;
     private global::V1.Payment.Payment response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.Payment Response {
       get { return response_; }
       set {
@@ -5849,11 +6196,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentMerchantUidResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentMerchantUidResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5868,6 +6217,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -5880,11 +6230,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5909,6 +6261,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -5929,6 +6282,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -5947,6 +6301,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentMerchantUidResponse other) {
       if (other == null) {
         return;
@@ -5967,6 +6322,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5999,6 +6355,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6036,19 +6393,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentCancelRequest> _parser = new pb::MessageParser<PaymentCancelRequest>(() => new PaymentCancelRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentCancelRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentCancelRequest() {
       OnConstruction();
     }
@@ -6056,6 +6417,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentCancelRequest(PaymentCancelRequest other) : this() {
       impUid_ = other.impUid_;
       merchantUid_ = other.merchantUid_;
@@ -6070,6 +6432,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentCancelRequest Clone() {
       return new PaymentCancelRequest(this);
     }
@@ -6078,6 +6441,7 @@ namespace V1.Payment {
     public const int ImpUidFieldNumber = 1;
     private string impUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImpUid {
       get { return impUid_; }
       set {
@@ -6089,6 +6453,7 @@ namespace V1.Payment {
     public const int MerchantUidFieldNumber = 2;
     private string merchantUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MerchantUid {
       get { return merchantUid_; }
       set {
@@ -6100,6 +6465,7 @@ namespace V1.Payment {
     public const int AmountFieldNumber = 3;
     private double amount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Amount {
       get { return amount_; }
       set {
@@ -6111,6 +6477,7 @@ namespace V1.Payment {
     public const int TaxFreeFieldNumber = 4;
     private double taxFree_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double TaxFree {
       get { return taxFree_; }
       set {
@@ -6122,6 +6489,7 @@ namespace V1.Payment {
     public const int ChecksumFieldNumber = 5;
     private double checksum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Checksum {
       get { return checksum_; }
       set {
@@ -6133,6 +6501,7 @@ namespace V1.Payment {
     public const int ReasonFieldNumber = 6;
     private string reason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Reason {
       get { return reason_; }
       set {
@@ -6144,6 +6513,7 @@ namespace V1.Payment {
     public const int RefundHolderFieldNumber = 7;
     private string refundHolder_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RefundHolder {
       get { return refundHolder_; }
       set {
@@ -6155,6 +6525,7 @@ namespace V1.Payment {
     public const int RefundBankFieldNumber = 8;
     private string refundBank_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RefundBank {
       get { return refundBank_; }
       set {
@@ -6166,6 +6537,7 @@ namespace V1.Payment {
     public const int RefundAccountFieldNumber = 9;
     private string refundAccount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RefundAccount {
       get { return refundAccount_; }
       set {
@@ -6174,11 +6546,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentCancelRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentCancelRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6199,6 +6573,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ImpUid.Length != 0) hash ^= ImpUid.GetHashCode();
@@ -6217,11 +6592,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6270,6 +6647,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ImpUid.Length != 0) {
         output.WriteRawTag(10);
@@ -6314,6 +6692,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ImpUid.Length != 0) {
@@ -6350,6 +6729,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentCancelRequest other) {
       if (other == null) {
         return;
@@ -6385,6 +6765,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6438,6 +6819,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6496,19 +6878,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentCancelResponse> _parser = new pb::MessageParser<PaymentCancelResponse>(() => new PaymentCancelResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentCancelResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentCancelResponse() {
       OnConstruction();
     }
@@ -6516,6 +6902,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentCancelResponse(PaymentCancelResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -6524,6 +6911,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentCancelResponse Clone() {
       return new PaymentCancelResponse(this);
     }
@@ -6532,6 +6920,7 @@ namespace V1.Payment {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -6543,6 +6932,7 @@ namespace V1.Payment {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -6554,6 +6944,7 @@ namespace V1.Payment {
     public const int ResponseFieldNumber = 3;
     private global::V1.Payment.Payment response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.Payment Response {
       get { return response_; }
       set {
@@ -6562,11 +6953,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentCancelResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentCancelResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6581,6 +6974,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -6593,11 +6987,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6622,6 +7018,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -6642,6 +7039,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -6660,6 +7058,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentCancelResponse other) {
       if (other == null) {
         return;
@@ -6680,6 +7079,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6712,6 +7112,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6749,19 +7150,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentBalanceRequest> _parser = new pb::MessageParser<PaymentBalanceRequest>(() => new PaymentBalanceRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentBalanceRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalanceRequest() {
       OnConstruction();
     }
@@ -6769,12 +7174,14 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalanceRequest(PaymentBalanceRequest other) : this() {
       impUid_ = other.impUid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalanceRequest Clone() {
       return new PaymentBalanceRequest(this);
     }
@@ -6783,6 +7190,7 @@ namespace V1.Payment {
     public const int ImpUidFieldNumber = 1;
     private string impUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImpUid {
       get { return impUid_; }
       set {
@@ -6791,11 +7199,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentBalanceRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentBalanceRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6808,6 +7218,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ImpUid.Length != 0) hash ^= ImpUid.GetHashCode();
@@ -6818,11 +7229,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6839,6 +7252,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ImpUid.Length != 0) {
         output.WriteRawTag(10);
@@ -6851,6 +7265,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ImpUid.Length != 0) {
@@ -6863,6 +7278,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentBalanceRequest other) {
       if (other == null) {
         return;
@@ -6874,6 +7290,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6895,6 +7312,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6921,19 +7339,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentBalanceResponse> _parser = new pb::MessageParser<PaymentBalanceResponse>(() => new PaymentBalanceResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentBalanceResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalanceResponse() {
       OnConstruction();
     }
@@ -6941,6 +7363,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalanceResponse(PaymentBalanceResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -6949,6 +7372,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentBalanceResponse Clone() {
       return new PaymentBalanceResponse(this);
     }
@@ -6957,6 +7381,7 @@ namespace V1.Payment {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -6968,6 +7393,7 @@ namespace V1.Payment {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -6979,6 +7405,7 @@ namespace V1.Payment {
     public const int ResponseFieldNumber = 3;
     private global::V1.Payment.PaymentBalance response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.PaymentBalance Response {
       get { return response_; }
       set {
@@ -6987,11 +7414,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentBalanceResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentBalanceResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7006,6 +7435,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -7018,11 +7448,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7047,6 +7479,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -7067,6 +7500,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -7085,6 +7519,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentBalanceResponse other) {
       if (other == null) {
         return;
@@ -7105,6 +7540,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7137,6 +7573,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7174,19 +7611,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<Prepare> _parser = new pb::MessageParser<Prepare>(() => new Prepare());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Prepare> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Prepare() {
       OnConstruction();
     }
@@ -7194,6 +7635,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Prepare(Prepare other) : this() {
       merchantUid_ = other.merchantUid_;
       amount_ = other.amount_;
@@ -7201,6 +7643,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Prepare Clone() {
       return new Prepare(this);
     }
@@ -7209,6 +7652,7 @@ namespace V1.Payment {
     public const int MerchantUidFieldNumber = 1;
     private string merchantUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MerchantUid {
       get { return merchantUid_; }
       set {
@@ -7220,6 +7664,7 @@ namespace V1.Payment {
     public const int AmountFieldNumber = 2;
     private int amount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Amount {
       get { return amount_; }
       set {
@@ -7228,11 +7673,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Prepare);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Prepare other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7246,6 +7693,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MerchantUid.Length != 0) hash ^= MerchantUid.GetHashCode();
@@ -7257,11 +7705,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7282,6 +7732,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MerchantUid.Length != 0) {
         output.WriteRawTag(10);
@@ -7298,6 +7749,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MerchantUid.Length != 0) {
@@ -7313,6 +7765,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Prepare other) {
       if (other == null) {
         return;
@@ -7327,6 +7780,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7352,6 +7806,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7382,19 +7837,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentPrepareRequest> _parser = new pb::MessageParser<PaymentPrepareRequest>(() => new PaymentPrepareRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentPrepareRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentPrepareRequest() {
       OnConstruction();
     }
@@ -7402,6 +7861,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentPrepareRequest(PaymentPrepareRequest other) : this() {
       merchantUid_ = other.merchantUid_;
       amount_ = other.amount_;
@@ -7409,6 +7869,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentPrepareRequest Clone() {
       return new PaymentPrepareRequest(this);
     }
@@ -7417,6 +7878,7 @@ namespace V1.Payment {
     public const int MerchantUidFieldNumber = 1;
     private string merchantUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MerchantUid {
       get { return merchantUid_; }
       set {
@@ -7428,6 +7890,7 @@ namespace V1.Payment {
     public const int AmountFieldNumber = 2;
     private double amount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Amount {
       get { return amount_; }
       set {
@@ -7436,11 +7899,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentPrepareRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentPrepareRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7454,6 +7919,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MerchantUid.Length != 0) hash ^= MerchantUid.GetHashCode();
@@ -7465,11 +7931,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7490,6 +7958,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MerchantUid.Length != 0) {
         output.WriteRawTag(10);
@@ -7506,6 +7975,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MerchantUid.Length != 0) {
@@ -7521,6 +7991,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentPrepareRequest other) {
       if (other == null) {
         return;
@@ -7535,6 +8006,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7560,6 +8032,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7590,19 +8063,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentPrepareResponse> _parser = new pb::MessageParser<PaymentPrepareResponse>(() => new PaymentPrepareResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentPrepareResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentPrepareResponse() {
       OnConstruction();
     }
@@ -7610,6 +8087,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentPrepareResponse(PaymentPrepareResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -7618,6 +8096,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentPrepareResponse Clone() {
       return new PaymentPrepareResponse(this);
     }
@@ -7626,6 +8105,7 @@ namespace V1.Payment {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -7637,6 +8117,7 @@ namespace V1.Payment {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -7648,6 +8129,7 @@ namespace V1.Payment {
     public const int ResponseFieldNumber = 3;
     private global::V1.Payment.Prepare response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.Payment.Prepare Response {
       get { return response_; }
       set {
@@ -7656,11 +8138,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentPrepareResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentPrepareResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7675,6 +8159,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -7687,11 +8172,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7716,6 +8203,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -7736,6 +8224,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -7754,6 +8243,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentPrepareResponse other) {
       if (other == null) {
         return;
@@ -7774,6 +8264,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7806,6 +8297,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7843,19 +8335,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<PaymentGetPrepareRequest> _parser = new pb::MessageParser<PaymentGetPrepareRequest>(() => new PaymentGetPrepareRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PaymentGetPrepareRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentGetPrepareRequest() {
       OnConstruction();
     }
@@ -7863,12 +8359,14 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentGetPrepareRequest(PaymentGetPrepareRequest other) : this() {
       merchantUid_ = other.merchantUid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PaymentGetPrepareRequest Clone() {
       return new PaymentGetPrepareRequest(this);
     }
@@ -7877,6 +8375,7 @@ namespace V1.Payment {
     public const int MerchantUidFieldNumber = 1;
     private string merchantUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MerchantUid {
       get { return merchantUid_; }
       set {
@@ -7885,11 +8384,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PaymentGetPrepareRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PaymentGetPrepareRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7902,6 +8403,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MerchantUid.Length != 0) hash ^= MerchantUid.GetHashCode();
@@ -7912,11 +8414,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7933,6 +8437,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MerchantUid.Length != 0) {
         output.WriteRawTag(10);
@@ -7945,6 +8450,7 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MerchantUid.Length != 0) {
@@ -7957,6 +8463,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PaymentGetPrepareRequest other) {
       if (other == null) {
         return;
@@ -7968,6 +8475,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7989,6 +8497,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8015,19 +8524,23 @@ namespace V1.Payment {
     private static readonly pb::MessageParser<Promotion> _parser = new pb::MessageParser<Promotion>(() => new Promotion());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Promotion> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.Payment.PaymentReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Promotion() {
       OnConstruction();
     }
@@ -8035,6 +8548,7 @@ namespace V1.Payment {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Promotion(Promotion other) : this() {
       id_ = other.id_;
       discount_ = other.discount_;
@@ -8042,6 +8556,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Promotion Clone() {
       return new Promotion(this);
     }
@@ -8050,6 +8565,7 @@ namespace V1.Payment {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -8059,21 +8575,24 @@ namespace V1.Payment {
 
     /// <summary>Field number for the "discount" field.</summary>
     public const int DiscountFieldNumber = 2;
-    private string discount_ = "";
+    private int discount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Discount {
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Discount {
       get { return discount_; }
       set {
-        discount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        discount_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Promotion);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Promotion other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8087,10 +8606,11 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (Discount.Length != 0) hash ^= Discount.GetHashCode();
+      if (Discount != 0) hash ^= Discount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8098,11 +8618,13 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8111,9 +8633,9 @@ namespace V1.Payment {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (Discount.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Discount);
+      if (Discount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Discount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -8123,14 +8645,15 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (Discount.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Discount);
+      if (Discount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Discount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -8139,13 +8662,14 @@ namespace V1.Payment {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (Discount.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Discount);
+      if (Discount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Discount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8154,6 +8678,7 @@ namespace V1.Payment {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Promotion other) {
       if (other == null) {
         return;
@@ -8161,13 +8686,14 @@ namespace V1.Payment {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.Discount.Length != 0) {
+      if (other.Discount != 0) {
         Discount = other.Discount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8182,8 +8708,8 @@ namespace V1.Payment {
             Id = input.ReadString();
             break;
           }
-          case 18: {
-            Discount = input.ReadString();
+          case 16: {
+            Discount = input.ReadInt32();
             break;
           }
         }
@@ -8193,6 +8719,7 @@ namespace V1.Payment {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8204,8 +8731,8 @@ namespace V1.Payment {
             Id = input.ReadString();
             break;
           }
-          case 18: {
-            Discount = input.ReadString();
+          case 16: {
+            Discount = input.ReadInt32();
             break;
           }
         }

@@ -88,11 +88,11 @@ class PaymentPrepareResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.Prepare response = 3;</code>
-     * @return \Payment\Prepare
+     * @return \Payment\Prepare|null
      */
     public function getResponse()
     {
-        return isset($this->response) ? $this->response : null;
+        return $this->response;
     }
 
     public function hasResponse()

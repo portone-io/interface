@@ -936,8 +936,8 @@ export class Promotion extends jspb.Message {
   getId(): string;
   setId(value: string): void;
 
-  getDiscount(): string;
-  setDiscount(value: string): void;
+  getDiscount(): number;
+  setDiscount(value: number): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Promotion.AsObject;
@@ -952,7 +952,7 @@ export class Promotion extends jspb.Message {
 export namespace Promotion {
   export type AsObject = {
     id: string,
-    discount: string,
+    discount: number,
   }
 }
 

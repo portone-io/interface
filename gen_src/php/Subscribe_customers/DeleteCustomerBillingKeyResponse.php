@@ -88,11 +88,11 @@ class DeleteCustomerBillingKeyResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.subscribe_customers.CustomerBillingKey response = 3;</code>
-     * @return \Subscribe_customers\CustomerBillingKey
+     * @return \Subscribe_customers\CustomerBillingKey|null
      */
     public function getResponse()
     {
-        return isset($this->response) ? $this->response : null;
+        return $this->response;
     }
 
     public function hasResponse()

@@ -81,11 +81,11 @@ class PaymentBalance extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.PaymentBalanceDetail cash_receipt = 2;</code>
-     * @return \Payment\PaymentBalanceDetail
+     * @return \Payment\PaymentBalanceDetail|null
      */
     public function getCashReceipt()
     {
-        return isset($this->cash_receipt) ? $this->cash_receipt : null;
+        return $this->cash_receipt;
     }
 
     public function hasCashReceipt()
@@ -113,11 +113,11 @@ class PaymentBalance extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.PaymentBalanceDetail primary = 3;</code>
-     * @return \Payment\PaymentBalanceDetail
+     * @return \Payment\PaymentBalanceDetail|null
      */
     public function getPrimary()
     {
-        return isset($this->primary) ? $this->primary : null;
+        return $this->primary;
     }
 
     public function hasPrimary()
@@ -145,11 +145,11 @@ class PaymentBalance extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.PaymentBalanceDetail secondary = 4;</code>
-     * @return \Payment\PaymentBalanceDetail
+     * @return \Payment\PaymentBalanceDetail|null
      */
     public function getSecondary()
     {
-        return isset($this->secondary) ? $this->secondary : null;
+        return $this->secondary;
     }
 
     public function hasSecondary()
@@ -177,11 +177,11 @@ class PaymentBalance extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.PaymentBalanceDetail discount = 5;</code>
-     * @return \Payment\PaymentBalanceDetail
+     * @return \Payment\PaymentBalanceDetail|null
      */
     public function getDiscount()
     {
-        return isset($this->discount) ? $this->discount : null;
+        return $this->discount;
     }
 
     public function hasDiscount()

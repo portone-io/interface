@@ -16,15 +16,18 @@ class Basis
         }
         $pool->internalAddGeneratedFile(
             '
-±
-
+„
 v2/basis/basis.protobasis_v2"j
 CancelHistory
 pg_tid (	
 amount (	
 cancelled_at (
 reason (	
-receipt_url (	"Û
+receipt_url (	")
+	Promotion
+
+id (	
+discount ("ƒ	
 UnitTx
 amount (	
 	apply_num (	
@@ -89,7 +92,8 @@ vbank_date/ (
 
 vbank_name2 (	
 	vbank_num3 (	
-customer_email4 (	B=Z0github.com/iamport/interface/gen_src/go/v2/basisªV2.Basisbproto3'
+customer_email4 (	&
+	promotion5 (2.basis_v2.PromotionB=Z0github.com/iamport/interface/gen_src/go/v2/basisªV2.Basisbproto3'
         , true);
 
         static::$is_initialized = true;

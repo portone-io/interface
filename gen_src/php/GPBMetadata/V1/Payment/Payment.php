@@ -182,7 +182,7 @@ vbank_name- (	
 	Promotion
 
 id (	
-discount (	2·	
+discount (2·	
 PaymentServiceâ
 PaymentBalanceRPC.payment.PaymentBalanceRequest.payment.PaymentBalanceResponse"3Ç”‰ì-+/api/payments/v1/payments/{imp_uid}/balancel
 

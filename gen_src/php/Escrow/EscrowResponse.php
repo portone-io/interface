@@ -88,11 +88,11 @@ class EscrowResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.escrow.Logis response = 3;</code>
-     * @return \Escrow\Logis
+     * @return \Escrow\Logis|null
      */
     public function getResponse()
     {
-        return isset($this->response) ? $this->response : null;
+        return $this->response;
     }
 
     public function hasResponse()

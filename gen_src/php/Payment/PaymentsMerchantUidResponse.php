@@ -88,11 +88,11 @@ class PaymentsMerchantUidResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.PaymentPage response = 3;</code>
-     * @return \Payment\PaymentPage
+     * @return \Payment\PaymentPage|null
      */
     public function getResponse()
     {
-        return isset($this->response) ? $this->response : null;
+        return $this->response;
     }
 
     public function hasResponse()

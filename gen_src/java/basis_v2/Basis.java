@@ -1102,6 +1102,644 @@ public final class Basis {
 
   }
 
+  public interface PromotionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:basis_v2.Promotion)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>int32 discount = 2;</code>
+     * @return The discount.
+     */
+    int getDiscount();
+  }
+  /**
+   * Protobuf type {@code basis_v2.Promotion}
+   */
+  public static final class Promotion extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:basis_v2.Promotion)
+      PromotionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Promotion.newBuilder() to construct.
+    private Promotion(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Promotion() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Promotion();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Promotion(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 16: {
+
+              discount_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return basis_v2.Basis.internal_static_basis_v2_Promotion_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return basis_v2.Basis.internal_static_basis_v2_Promotion_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              basis_v2.Basis.Promotion.class, basis_v2.Basis.Promotion.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISCOUNT_FIELD_NUMBER = 2;
+    private int discount_;
+    /**
+     * <code>int32 discount = 2;</code>
+     * @return The discount.
+     */
+    @java.lang.Override
+    public int getDiscount() {
+      return discount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (discount_ != 0) {
+        output.writeInt32(2, discount_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (discount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, discount_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof basis_v2.Basis.Promotion)) {
+        return super.equals(obj);
+      }
+      basis_v2.Basis.Promotion other = (basis_v2.Basis.Promotion) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (getDiscount()
+          != other.getDiscount()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + DISCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getDiscount();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static basis_v2.Basis.Promotion parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static basis_v2.Basis.Promotion parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static basis_v2.Basis.Promotion parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static basis_v2.Basis.Promotion parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static basis_v2.Basis.Promotion parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static basis_v2.Basis.Promotion parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static basis_v2.Basis.Promotion parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static basis_v2.Basis.Promotion parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static basis_v2.Basis.Promotion parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static basis_v2.Basis.Promotion parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static basis_v2.Basis.Promotion parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static basis_v2.Basis.Promotion parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(basis_v2.Basis.Promotion prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code basis_v2.Promotion}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:basis_v2.Promotion)
+        basis_v2.Basis.PromotionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return basis_v2.Basis.internal_static_basis_v2_Promotion_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return basis_v2.Basis.internal_static_basis_v2_Promotion_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                basis_v2.Basis.Promotion.class, basis_v2.Basis.Promotion.Builder.class);
+      }
+
+      // Construct using basis_v2.Basis.Promotion.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        discount_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return basis_v2.Basis.internal_static_basis_v2_Promotion_descriptor;
+      }
+
+      @java.lang.Override
+      public basis_v2.Basis.Promotion getDefaultInstanceForType() {
+        return basis_v2.Basis.Promotion.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public basis_v2.Basis.Promotion build() {
+        basis_v2.Basis.Promotion result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public basis_v2.Basis.Promotion buildPartial() {
+        basis_v2.Basis.Promotion result = new basis_v2.Basis.Promotion(this);
+        result.id_ = id_;
+        result.discount_ = discount_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof basis_v2.Basis.Promotion) {
+          return mergeFrom((basis_v2.Basis.Promotion)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(basis_v2.Basis.Promotion other) {
+        if (other == basis_v2.Basis.Promotion.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.getDiscount() != 0) {
+          setDiscount(other.getDiscount());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        basis_v2.Basis.Promotion parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (basis_v2.Basis.Promotion) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int discount_ ;
+      /**
+       * <code>int32 discount = 2;</code>
+       * @return The discount.
+       */
+      @java.lang.Override
+      public int getDiscount() {
+        return discount_;
+      }
+      /**
+       * <code>int32 discount = 2;</code>
+       * @param value The discount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiscount(int value) {
+        
+        discount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 discount = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiscount() {
+        
+        discount_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:basis_v2.Promotion)
+    }
+
+    // @@protoc_insertion_point(class_scope:basis_v2.Promotion)
+    private static final basis_v2.Basis.Promotion DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new basis_v2.Basis.Promotion();
+    }
+
+    public static basis_v2.Basis.Promotion getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Promotion>
+        PARSER = new com.google.protobuf.AbstractParser<Promotion>() {
+      @java.lang.Override
+      public Promotion parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Promotion(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Promotion> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Promotion> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public basis_v2.Basis.Promotion getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface UnitTxOrBuilder extends
       // @@protoc_insertion_point(interface_extends:basis_v2.UnitTx)
       com.google.protobuf.MessageOrBuilder {
@@ -1696,6 +2334,21 @@ public final class Basis {
      */
     com.google.protobuf.ByteString
         getCustomerEmailBytes();
+
+    /**
+     * <code>.basis_v2.Promotion promotion = 53;</code>
+     * @return Whether the promotion field is set.
+     */
+    boolean hasPromotion();
+    /**
+     * <code>.basis_v2.Promotion promotion = 53;</code>
+     * @return The promotion.
+     */
+    basis_v2.Basis.Promotion getPromotion();
+    /**
+     * <code>.basis_v2.Promotion promotion = 53;</code>
+     */
+    basis_v2.Basis.PromotionOrBuilder getPromotionOrBuilder();
   }
   /**
    * Protobuf type {@code basis_v2.UnitTx}
@@ -2089,6 +2742,19 @@ public final class Basis {
               java.lang.String s = input.readStringRequireUtf8();
 
               customerEmail_ = s;
+              break;
+            }
+            case 426: {
+              basis_v2.Basis.Promotion.Builder subBuilder = null;
+              if (promotion_ != null) {
+                subBuilder = promotion_.toBuilder();
+              }
+              promotion_ = input.readMessage(basis_v2.Basis.Promotion.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(promotion_);
+                promotion_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3815,6 +4481,32 @@ public final class Basis {
       }
     }
 
+    public static final int PROMOTION_FIELD_NUMBER = 53;
+    private basis_v2.Basis.Promotion promotion_;
+    /**
+     * <code>.basis_v2.Promotion promotion = 53;</code>
+     * @return Whether the promotion field is set.
+     */
+    @java.lang.Override
+    public boolean hasPromotion() {
+      return promotion_ != null;
+    }
+    /**
+     * <code>.basis_v2.Promotion promotion = 53;</code>
+     * @return The promotion.
+     */
+    @java.lang.Override
+    public basis_v2.Basis.Promotion getPromotion() {
+      return promotion_ == null ? basis_v2.Basis.Promotion.getDefaultInstance() : promotion_;
+    }
+    /**
+     * <code>.basis_v2.Promotion promotion = 53;</code>
+     */
+    @java.lang.Override
+    public basis_v2.Basis.PromotionOrBuilder getPromotionOrBuilder() {
+      return getPromotion();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3984,6 +4676,9 @@ public final class Basis {
       }
       if (!getCustomerEmailBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 52, customerEmail_);
+      }
+      if (promotion_ != null) {
+        output.writeMessage(53, getPromotion());
       }
       unknownFields.writeTo(output);
     }
@@ -4167,6 +4862,10 @@ public final class Basis {
       if (!getCustomerEmailBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(52, customerEmail_);
       }
+      if (promotion_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(53, getPromotion());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4286,6 +4985,11 @@ public final class Basis {
           .equals(other.getVbankNum())) return false;
       if (!getCustomerEmail()
           .equals(other.getCustomerEmail())) return false;
+      if (hasPromotion() != other.hasPromotion()) return false;
+      if (hasPromotion()) {
+        if (!getPromotion()
+            .equals(other.getPromotion())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4407,6 +5111,10 @@ public final class Basis {
       hash = (53 * hash) + getVbankNum().hashCode();
       hash = (37 * hash) + CUSTOMER_EMAIL_FIELD_NUMBER;
       hash = (53 * hash) + getCustomerEmail().hashCode();
+      if (hasPromotion()) {
+        hash = (37 * hash) + PROMOTION_FIELD_NUMBER;
+        hash = (53 * hash) + getPromotion().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4649,6 +5357,12 @@ public final class Basis {
 
         customerEmail_ = "";
 
+        if (promotionBuilder_ == null) {
+          promotion_ = null;
+        } else {
+          promotion_ = null;
+          promotionBuilder_ = null;
+        }
         return this;
       }
 
@@ -4740,6 +5454,11 @@ public final class Basis {
         result.vbankName_ = vbankName_;
         result.vbankNum_ = vbankNum_;
         result.customerEmail_ = customerEmail_;
+        if (promotionBuilder_ == null) {
+          result.promotion_ = promotion_;
+        } else {
+          result.promotion_ = promotionBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5012,6 +5731,9 @@ public final class Basis {
         if (!other.getCustomerEmail().isEmpty()) {
           customerEmail_ = other.customerEmail_;
           onChanged();
+        }
+        if (other.hasPromotion()) {
+          mergePromotion(other.getPromotion());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8717,6 +9439,125 @@ public final class Basis {
         onChanged();
         return this;
       }
+
+      private basis_v2.Basis.Promotion promotion_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          basis_v2.Basis.Promotion, basis_v2.Basis.Promotion.Builder, basis_v2.Basis.PromotionOrBuilder> promotionBuilder_;
+      /**
+       * <code>.basis_v2.Promotion promotion = 53;</code>
+       * @return Whether the promotion field is set.
+       */
+      public boolean hasPromotion() {
+        return promotionBuilder_ != null || promotion_ != null;
+      }
+      /**
+       * <code>.basis_v2.Promotion promotion = 53;</code>
+       * @return The promotion.
+       */
+      public basis_v2.Basis.Promotion getPromotion() {
+        if (promotionBuilder_ == null) {
+          return promotion_ == null ? basis_v2.Basis.Promotion.getDefaultInstance() : promotion_;
+        } else {
+          return promotionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.basis_v2.Promotion promotion = 53;</code>
+       */
+      public Builder setPromotion(basis_v2.Basis.Promotion value) {
+        if (promotionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          promotion_ = value;
+          onChanged();
+        } else {
+          promotionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.basis_v2.Promotion promotion = 53;</code>
+       */
+      public Builder setPromotion(
+          basis_v2.Basis.Promotion.Builder builderForValue) {
+        if (promotionBuilder_ == null) {
+          promotion_ = builderForValue.build();
+          onChanged();
+        } else {
+          promotionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.basis_v2.Promotion promotion = 53;</code>
+       */
+      public Builder mergePromotion(basis_v2.Basis.Promotion value) {
+        if (promotionBuilder_ == null) {
+          if (promotion_ != null) {
+            promotion_ =
+              basis_v2.Basis.Promotion.newBuilder(promotion_).mergeFrom(value).buildPartial();
+          } else {
+            promotion_ = value;
+          }
+          onChanged();
+        } else {
+          promotionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.basis_v2.Promotion promotion = 53;</code>
+       */
+      public Builder clearPromotion() {
+        if (promotionBuilder_ == null) {
+          promotion_ = null;
+          onChanged();
+        } else {
+          promotion_ = null;
+          promotionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.basis_v2.Promotion promotion = 53;</code>
+       */
+      public basis_v2.Basis.Promotion.Builder getPromotionBuilder() {
+        
+        onChanged();
+        return getPromotionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.basis_v2.Promotion promotion = 53;</code>
+       */
+      public basis_v2.Basis.PromotionOrBuilder getPromotionOrBuilder() {
+        if (promotionBuilder_ != null) {
+          return promotionBuilder_.getMessageOrBuilder();
+        } else {
+          return promotion_ == null ?
+              basis_v2.Basis.Promotion.getDefaultInstance() : promotion_;
+        }
+      }
+      /**
+       * <code>.basis_v2.Promotion promotion = 53;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          basis_v2.Basis.Promotion, basis_v2.Basis.Promotion.Builder, basis_v2.Basis.PromotionOrBuilder> 
+          getPromotionFieldBuilder() {
+        if (promotionBuilder_ == null) {
+          promotionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              basis_v2.Basis.Promotion, basis_v2.Basis.Promotion.Builder, basis_v2.Basis.PromotionOrBuilder>(
+                  getPromotion(),
+                  getParentForChildren(),
+                  isClean());
+          promotion_ = null;
+        }
+        return promotionBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8776,6 +9617,11 @@ public final class Basis {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_basis_v2_CancelHistory_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_basis_v2_Promotion_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_basis_v2_Promotion_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_basis_v2_UnitTx_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8792,37 +9638,39 @@ public final class Basis {
       "\n\024v2/basis/basis.proto\022\010basis_v2\"j\n\rCanc" +
       "elHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(" +
       "\t\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022" +
-      "\023\n\013receipt_url\030\005 \001(\t\"\333\010\n\006UnitTx\022\016\n\006amoun" +
-      "t\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank_code\030" +
-      "\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_addr\030\005" +
-      " \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer_name\030" +
-      "\007 \001(\t\022\026\n\016buyer_postcode\030\010 \001(\t\022\021\n\tbuyer_t" +
-      "el\030\t \001(\t\022\025\n\rcancel_amount\030\n \001(\t\022/\n\016cance" +
-      "l_history\030\013 \003(\0132\027.basis_v2.CancelHistory" +
-      "\022\025\n\rcancel_reason\030\014 \001(\t\022\033\n\023cancel_receip" +
-      "t_urls\030\r \003(\t\022\024\n\014cancelled_at\030\016 \001(\005\022\021\n\tca" +
-      "rd_code\030\017 \001(\t\022\022\n\nbin_number\030\020 \001(\t\022\021\n\tcar" +
-      "d_name\030\021 \001(\t\022\031\n\021card_receipe_name\030\022 \001(\t\022" +
-      "\027\n\017card_owner_type\030\023 \001(\t\022\022\n\ncard_brand\030\024" +
-      " \001(\t\022\030\n\020card_credit_type\030\025 \001(\t\022\023\n\013card_n" +
-      "umber\030\026 \001(\t\022\030\n\020card_installment\030\027 \001(\005\022\021\n" +
-      "\tcard_type\030\030 \001(\005\022\033\n\023cash_receipt_issued\030" +
-      "\031 \001(\010\022\017\n\007channel\030\032 \001(\t\022\020\n\010currency\030\033 \001(\t" +
-      "\022\023\n\013custom_data\030\034 \001(\t\022\020\n\010card_uid\030\035 \001(\t\022" +
-      "\032\n\022customer_uid_usage\030\036 \001(\t\022\016\n\006escrow\030\037 " +
-      "\001(\010\022\023\n\013fail_reason\030  \001(\t\022\021\n\tfailed_at\030! " +
-      "\001(\005\022\017\n\007imp_uid\030\" \001(\t\022\024\n\014merchant_uid\030# \001" +
-      "(\t\022\022\n\norder_name\030$ \001(\t\022\017\n\007paid_at\030% \001(\005\022" +
-      "\022\n\npay_method\030& \001(\t\022\r\n\005pg_id\030\' \001(\t\022\023\n\013pg" +
-      "_provider\030( \001(\t\022\016\n\006pg_tid\030) \001(\t\022\023\n\013recei" +
-      "pt_url\030* \001(\t\022\022\n\nstarted_at\030+ \001(\005\022\016\n\006stat" +
-      "us\030, \001(\t\022\022\n\nuser_agent\030- \001(\t\022\022\n\nvbank_co" +
-      "de\030. \001(\t\022\022\n\nvbank_date\030/ \001(\005\022\024\n\014vbank_ho" +
-      "lder\0300 \001(\t\022\027\n\017vbank_issued_at\0301 \001(\005\022\022\n\nv" +
-      "bank_name\0302 \001(\t\022\021\n\tvbank_num\0303 \001(\t\022\026\n\016cu" +
-      "stomer_email\0304 \001(\tB=Z0github.com/iamport" +
-      "/interface/gen_src/go/v2/basis\252\002\010V2.Basi" +
-      "sb\006proto3"
+      "\023\n\013receipt_url\030\005 \001(\t\")\n\tPromotion\022\n\n\002id\030" +
+      "\001 \001(\t\022\020\n\010discount\030\002 \001(\005\"\203\t\n\006UnitTx\022\016\n\006am" +
+      "ount\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank_co" +
+      "de\030\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_add" +
+      "r\030\005 \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer_na" +
+      "me\030\007 \001(\t\022\026\n\016buyer_postcode\030\010 \001(\t\022\021\n\tbuye" +
+      "r_tel\030\t \001(\t\022\025\n\rcancel_amount\030\n \001(\t\022/\n\016ca" +
+      "ncel_history\030\013 \003(\0132\027.basis_v2.CancelHist" +
+      "ory\022\025\n\rcancel_reason\030\014 \001(\t\022\033\n\023cancel_rec" +
+      "eipt_urls\030\r \003(\t\022\024\n\014cancelled_at\030\016 \001(\005\022\021\n" +
+      "\tcard_code\030\017 \001(\t\022\022\n\nbin_number\030\020 \001(\t\022\021\n\t" +
+      "card_name\030\021 \001(\t\022\031\n\021card_receipe_name\030\022 \001" +
+      "(\t\022\027\n\017card_owner_type\030\023 \001(\t\022\022\n\ncard_bran" +
+      "d\030\024 \001(\t\022\030\n\020card_credit_type\030\025 \001(\t\022\023\n\013car" +
+      "d_number\030\026 \001(\t\022\030\n\020card_installment\030\027 \001(\005" +
+      "\022\021\n\tcard_type\030\030 \001(\005\022\033\n\023cash_receipt_issu" +
+      "ed\030\031 \001(\010\022\017\n\007channel\030\032 \001(\t\022\020\n\010currency\030\033 " +
+      "\001(\t\022\023\n\013custom_data\030\034 \001(\t\022\020\n\010card_uid\030\035 \001" +
+      "(\t\022\032\n\022customer_uid_usage\030\036 \001(\t\022\016\n\006escrow" +
+      "\030\037 \001(\010\022\023\n\013fail_reason\030  \001(\t\022\021\n\tfailed_at" +
+      "\030! \001(\005\022\017\n\007imp_uid\030\" \001(\t\022\024\n\014merchant_uid\030" +
+      "# \001(\t\022\022\n\norder_name\030$ \001(\t\022\017\n\007paid_at\030% \001" +
+      "(\005\022\022\n\npay_method\030& \001(\t\022\r\n\005pg_id\030\' \001(\t\022\023\n" +
+      "\013pg_provider\030( \001(\t\022\016\n\006pg_tid\030) \001(\t\022\023\n\013re" +
+      "ceipt_url\030* \001(\t\022\022\n\nstarted_at\030+ \001(\005\022\016\n\006s" +
+      "tatus\030, \001(\t\022\022\n\nuser_agent\030- \001(\t\022\022\n\nvbank" +
+      "_code\030. \001(\t\022\022\n\nvbank_date\030/ \001(\005\022\024\n\014vbank" +
+      "_holder\0300 \001(\t\022\027\n\017vbank_issued_at\0301 \001(\005\022\022" +
+      "\n\nvbank_name\0302 \001(\t\022\021\n\tvbank_num\0303 \001(\t\022\026\n" +
+      "\016customer_email\0304 \001(\t\022&\n\tpromotion\0305 \001(\013" +
+      "2\023.basis_v2.PromotionB=Z0github.com/iamp" +
+      "ort/interface/gen_src/go/v2/basis\252\002\010V2.B" +
+      "asisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8834,12 +9682,18 @@ public final class Basis {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_basis_v2_CancelHistory_descriptor,
         new java.lang.String[] { "PgTid", "Amount", "CancelledAt", "Reason", "ReceiptUrl", });
-    internal_static_basis_v2_UnitTx_descriptor =
+    internal_static_basis_v2_Promotion_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_basis_v2_Promotion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_basis_v2_Promotion_descriptor,
+        new java.lang.String[] { "Id", "Discount", });
+    internal_static_basis_v2_UnitTx_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_basis_v2_UnitTx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_basis_v2_UnitTx_descriptor,
-        new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "BinNumber", "CardName", "CardReceipeName", "CardOwnerType", "CardBrand", "CardCreditType", "CardNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", "CustomerEmail", });
+        new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "BinNumber", "CardName", "CardReceipeName", "CardOwnerType", "CardBrand", "CardCreditType", "CardNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", "CustomerEmail", "Promotion", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

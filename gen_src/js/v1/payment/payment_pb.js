@@ -2,6 +2,7 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
  * @suppress {messageConventions} JS Compiler reports an error if a variable or
  *     field starts with 'MSG_' and isn't a translatable message.
  * @public
@@ -7250,7 +7251,7 @@ proto.payment.Promotion.prototype.toObject = function(opt_includeInstance) {
 proto.payment.Promotion.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    discount: jspb.Message.getFieldWithDefault(msg, 2, "")
+    discount: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -7292,7 +7293,7 @@ proto.payment.Promotion.deserializeBinaryFromReader = function(msg, reader) {
       msg.setId(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setDiscount(value);
       break;
     default:
@@ -7332,8 +7333,8 @@ proto.payment.Promotion.serializeBinaryToWriter = function(message, writer) {
     );
   }
   f = message.getDiscount();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0) {
+    writer.writeInt32(
       2,
       f
     );
@@ -7360,20 +7361,20 @@ proto.payment.Promotion.prototype.setId = function(value) {
 
 
 /**
- * optional string discount = 2;
- * @return {string}
+ * optional int32 discount = 2;
+ * @return {number}
  */
 proto.payment.Promotion.prototype.getDiscount = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {number} value
  * @return {!proto.payment.Promotion} returns this
  */
 proto.payment.Promotion.prototype.setDiscount = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 

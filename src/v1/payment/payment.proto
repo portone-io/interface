@@ -262,5 +262,5 @@ message PaymentGetPrepareRequest {
 
 message Promotion {
     string id = 1;
-    string discount = 2;
+    int32 discount = 2;
 }

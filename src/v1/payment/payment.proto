@@ -110,6 +110,7 @@ message Payment {
     int32 vbank_issued_at = 44;
     string vbank_name = 45;
     string vbank_num = 46;
+    Promotion promotion = 47;
 }
 
 message CancelHistory {
@@ -259,4 +260,7 @@ message PaymentGetPrepareRequest {
     string merchant_uid = 1;
 }
 
-
+message Promotion {
+    string id = 1;
+    string discount = 2;
+}

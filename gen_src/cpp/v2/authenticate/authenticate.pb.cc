@@ -179,10 +179,8 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2fa
   schemas, file_default_instances, TableStruct_v2_2fauthenticate_2fauthenticate_2eproto::offsets,
   file_level_metadata_v2_2fauthenticate_2fauthenticate_2eproto, file_level_enum_descriptors_v2_2fauthenticate_2fauthenticate_2eproto, file_level_service_descriptors_v2_2fauthenticate_2fauthenticate_2eproto,
 };
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto);
-  return descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto.file_level_metadata[index];
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_getter() {
+  return &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto;
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -195,10 +193,13 @@ class TokenRequest::_Internal {
  public:
 };
 
-TokenRequest::TokenRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+TokenRequest::TokenRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:authenticate_v2.TokenRequest)
 }
 TokenRequest::TokenRequest(const TokenRequest& from)
@@ -207,29 +208,30 @@ TokenRequest::TokenRequest(const TokenRequest& from)
   imp_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_key().empty()) {
     imp_key_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_key(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   imp_secret_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_secret().empty()) {
     imp_secret_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_secret(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:authenticate_v2.TokenRequest)
 }
 
-void TokenRequest::SharedCtor() {
+inline void TokenRequest::SharedCtor() {
 imp_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 imp_secret_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 TokenRequest::~TokenRequest() {
   // @@protoc_insertion_point(destructor:authenticate_v2.TokenRequest)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void TokenRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void TokenRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   imp_key_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   imp_secret_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -260,7 +262,6 @@ const char* TokenRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string imp_key = 1;
       case 1:
@@ -282,7 +283,8 @@ const char* TokenRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -309,7 +311,7 @@ failure:
   (void) cached_has_bits;
 
   // string imp_key = 1;
-  if (this->imp_key().size() > 0) {
+  if (!this->_internal_imp_key().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_imp_key().data(), static_cast<int>(this->_internal_imp_key().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -319,7 +321,7 @@ failure:
   }
 
   // string imp_secret = 2;
-  if (this->imp_secret().size() > 0) {
+  if (!this->_internal_imp_secret().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_imp_secret().data(), static_cast<int>(this->_internal_imp_secret().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -345,14 +347,14 @@ size_t TokenRequest::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string imp_key = 1;
-  if (this->imp_key().size() > 0) {
+  if (!this->_internal_imp_key().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_imp_key());
   }
 
   // string imp_secret = 2;
-  if (this->imp_secret().size() > 0) {
+  if (!this->_internal_imp_secret().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_imp_secret());
@@ -367,41 +369,32 @@ size_t TokenRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void TokenRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:authenticate_v2.TokenRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const TokenRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TokenRequest>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:authenticate_v2.TokenRequest)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:authenticate_v2.TokenRequest)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData TokenRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    TokenRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TokenRequest::GetClassData() const { return &_class_data_; }
+
+void TokenRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<TokenRequest *>(to)->MergeFrom(
+      static_cast<const TokenRequest &>(from));
 }
+
 
 void TokenRequest::MergeFrom(const TokenRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:authenticate_v2.TokenRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.imp_key().size() > 0) {
+  if (!from._internal_imp_key().empty()) {
     _internal_set_imp_key(from._internal_imp_key());
   }
-  if (from.imp_secret().size() > 0) {
+  if (!from._internal_imp_secret().empty()) {
     _internal_set_imp_secret(from._internal_imp_secret());
   }
-}
-
-void TokenRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:authenticate_v2.TokenRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TokenRequest::CopyFrom(const TokenRequest& from) {
@@ -417,15 +410,24 @@ bool TokenRequest::IsInitialized() const {
 
 void TokenRequest::InternalSwap(TokenRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  imp_key_.Swap(&other->imp_key_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  imp_secret_.Swap(&other->imp_secret_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &imp_key_, GetArenaForAllocation(),
+      &other->imp_key_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &imp_secret_, GetArenaForAllocation(),
+      &other->imp_secret_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TokenRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_getter, &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_once,
+      file_level_metadata_v2_2fauthenticate_2fauthenticate_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -433,10 +435,13 @@ class TokenData::_Internal {
  public:
 };
 
-TokenData::TokenData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+TokenData::TokenData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:authenticate_v2.TokenData)
 }
 TokenData::TokenData(const TokenData& from)
@@ -445,7 +450,7 @@ TokenData::TokenData(const TokenData& from)
   access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_access_token().empty()) {
     access_token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_access_token(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   ::memcpy(&expired_at_, &from.expired_at_,
     static_cast<size_t>(reinterpret_cast<char*>(&now_) -
@@ -453,7 +458,7 @@ TokenData::TokenData(const TokenData& from)
   // @@protoc_insertion_point(copy_constructor:authenticate_v2.TokenData)
 }
 
-void TokenData::SharedCtor() {
+inline void TokenData::SharedCtor() {
 access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&expired_at_) - reinterpret_cast<char*>(this)),
@@ -463,12 +468,13 @@ access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStrin
 
 TokenData::~TokenData() {
   // @@protoc_insertion_point(destructor:authenticate_v2.TokenData)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void TokenData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void TokenData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -500,7 +506,6 @@ const char* TokenData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string access_token = 1;
       case 1:
@@ -527,7 +532,8 @@ const char* TokenData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -554,7 +560,7 @@ failure:
   (void) cached_has_bits;
 
   // string access_token = 1;
-  if (this->access_token().size() > 0) {
+  if (!this->_internal_access_token().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -564,13 +570,13 @@ failure:
   }
 
   // int32 expired_at = 2;
-  if (this->expired_at() != 0) {
+  if (this->_internal_expired_at() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_expired_at(), target);
   }
 
   // int32 now = 3;
-  if (this->now() != 0) {
+  if (this->_internal_now() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_now(), target);
   }
@@ -592,21 +598,21 @@ size_t TokenData::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string access_token = 1;
-  if (this->access_token().size() > 0) {
+  if (!this->_internal_access_token().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_access_token());
   }
 
   // int32 expired_at = 2;
-  if (this->expired_at() != 0) {
+  if (this->_internal_expired_at() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_expired_at());
   }
 
   // int32 now = 3;
-  if (this->now() != 0) {
+  if (this->_internal_now() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_now());
@@ -621,44 +627,35 @@ size_t TokenData::ByteSizeLong() const {
   return total_size;
 }
 
-void TokenData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:authenticate_v2.TokenData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const TokenData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TokenData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:authenticate_v2.TokenData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:authenticate_v2.TokenData)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData TokenData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    TokenData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TokenData::GetClassData() const { return &_class_data_; }
+
+void TokenData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<TokenData *>(to)->MergeFrom(
+      static_cast<const TokenData &>(from));
 }
+
 
 void TokenData::MergeFrom(const TokenData& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:authenticate_v2.TokenData)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.access_token().size() > 0) {
+  if (!from._internal_access_token().empty()) {
     _internal_set_access_token(from._internal_access_token());
   }
-  if (from.expired_at() != 0) {
+  if (from._internal_expired_at() != 0) {
     _internal_set_expired_at(from._internal_expired_at());
   }
-  if (from.now() != 0) {
+  if (from._internal_now() != 0) {
     _internal_set_now(from._internal_now());
   }
-}
-
-void TokenData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:authenticate_v2.TokenData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TokenData::CopyFrom(const TokenData& from) {
@@ -674,8 +671,12 @@ bool TokenData::IsInitialized() const {
 
 void TokenData::InternalSwap(TokenData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &access_token_, GetArenaForAllocation(),
+      &other->access_token_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(TokenData, now_)
       + sizeof(TokenData::now_)
@@ -685,9 +686,10 @@ void TokenData::InternalSwap(TokenData* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TokenData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_getter, &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_once,
+      file_level_metadata_v2_2fauthenticate_2fauthenticate_2eproto[1]);
 }
-
 
 // ===================================================================
 
@@ -700,10 +702,13 @@ const ::authenticate_v2::TokenData&
 TokenResponse::_Internal::response(const TokenResponse* msg) {
   return *msg->response_;
 }
-TokenResponse::TokenResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+TokenResponse::TokenResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:authenticate_v2.TokenResponse)
 }
 TokenResponse::TokenResponse(const TokenResponse& from)
@@ -712,7 +717,7 @@ TokenResponse::TokenResponse(const TokenResponse& from)
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
     message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_response()) {
     response_ = new ::authenticate_v2::TokenData(*from.response_);
@@ -723,7 +728,7 @@ TokenResponse::TokenResponse(const TokenResponse& from)
   // @@protoc_insertion_point(copy_constructor:authenticate_v2.TokenResponse)
 }
 
-void TokenResponse::SharedCtor() {
+inline void TokenResponse::SharedCtor() {
 message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
@@ -733,12 +738,13 @@ message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlre
 
 TokenResponse::~TokenResponse() {
   // @@protoc_insertion_point(destructor:authenticate_v2.TokenResponse)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void TokenResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void TokenResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete response_;
 }
@@ -760,7 +766,7 @@ void TokenResponse::Clear() {
   (void) cached_has_bits;
 
   message_.ClearToEmpty();
-  if (GetArena() == nullptr && response_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && response_ != nullptr) {
     delete response_;
   }
   response_ = nullptr;
@@ -773,7 +779,6 @@ const char* TokenResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int32 code = 1;
       case 1:
@@ -800,7 +805,8 @@ const char* TokenResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -827,13 +833,13 @@ failure:
   (void) cached_has_bits;
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
   }
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -843,7 +849,7 @@ failure:
   }
 
   // .authenticate_v2.TokenData response = 3;
-  if (this->has_response()) {
+  if (this->_internal_has_response()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
@@ -867,21 +873,21 @@ size_t TokenResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_message());
   }
 
   // .authenticate_v2.TokenData response = 3;
-  if (this->has_response()) {
+  if (this->_internal_has_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *response_);
   }
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_code());
@@ -896,44 +902,35 @@ size_t TokenResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void TokenResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:authenticate_v2.TokenResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  const TokenResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TokenResponse>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:authenticate_v2.TokenResponse)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:authenticate_v2.TokenResponse)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData TokenResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    TokenResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TokenResponse::GetClassData() const { return &_class_data_; }
+
+void TokenResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<TokenResponse *>(to)->MergeFrom(
+      static_cast<const TokenResponse &>(from));
 }
+
 
 void TokenResponse::MergeFrom(const TokenResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:authenticate_v2.TokenResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.message().size() > 0) {
+  if (!from._internal_message().empty()) {
     _internal_set_message(from._internal_message());
   }
-  if (from.has_response()) {
+  if (from._internal_has_response()) {
     _internal_mutable_response()->::authenticate_v2::TokenData::MergeFrom(from._internal_response());
   }
-  if (from.code() != 0) {
+  if (from._internal_code() != 0) {
     _internal_set_code(from._internal_code());
   }
-}
-
-void TokenResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:authenticate_v2.TokenResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TokenResponse::CopyFrom(const TokenResponse& from) {
@@ -949,8 +946,12 @@ bool TokenResponse::IsInitialized() const {
 
 void TokenResponse::InternalSwap(TokenResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &message_, GetArenaForAllocation(),
+      &other->message_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(TokenResponse, code_)
       + sizeof(TokenResponse::code_)
@@ -960,9 +961,10 @@ void TokenResponse::InternalSwap(TokenResponse* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TokenResponse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_getter, &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_once,
+      file_level_metadata_v2_2fauthenticate_2fauthenticate_2eproto[2]);
 }
-
 
 // ===================================================================
 
@@ -970,10 +972,13 @@ class PubKeyRegisterRequest::_Internal {
  public:
 };
 
-PubKeyRegisterRequest::PubKeyRegisterRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+PubKeyRegisterRequest::PubKeyRegisterRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:authenticate_v2.PubKeyRegisterRequest)
 }
 PubKeyRegisterRequest::PubKeyRegisterRequest(const PubKeyRegisterRequest& from)
@@ -982,22 +987,22 @@ PubKeyRegisterRequest::PubKeyRegisterRequest(const PubKeyRegisterRequest& from)
   imp_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_key().empty()) {
     imp_key_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_key(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   public_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_public_key().empty()) {
     public_key_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_public_key(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   password_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_password().empty()) {
     password_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_password(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:authenticate_v2.PubKeyRegisterRequest)
 }
 
-void PubKeyRegisterRequest::SharedCtor() {
+inline void PubKeyRegisterRequest::SharedCtor() {
 imp_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 public_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 password_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -1005,12 +1010,13 @@ password_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlr
 
 PubKeyRegisterRequest::~PubKeyRegisterRequest() {
   // @@protoc_insertion_point(destructor:authenticate_v2.PubKeyRegisterRequest)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void PubKeyRegisterRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void PubKeyRegisterRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   imp_key_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   public_key_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   password_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -1043,7 +1049,6 @@ const char* PubKeyRegisterRequest::_InternalParse(const char* ptr, ::PROTOBUF_NA
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string imp_key = 1;
       case 1:
@@ -1074,7 +1079,8 @@ const char* PubKeyRegisterRequest::_InternalParse(const char* ptr, ::PROTOBUF_NA
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -1101,7 +1107,7 @@ failure:
   (void) cached_has_bits;
 
   // string imp_key = 1;
-  if (this->imp_key().size() > 0) {
+  if (!this->_internal_imp_key().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_imp_key().data(), static_cast<int>(this->_internal_imp_key().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1111,7 +1117,7 @@ failure:
   }
 
   // string public_key = 2;
-  if (this->public_key().size() > 0) {
+  if (!this->_internal_public_key().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_public_key().data(), static_cast<int>(this->_internal_public_key().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1121,7 +1127,7 @@ failure:
   }
 
   // string password = 3;
-  if (this->password().size() > 0) {
+  if (!this->_internal_password().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_password().data(), static_cast<int>(this->_internal_password().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1147,21 +1153,21 @@ size_t PubKeyRegisterRequest::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string imp_key = 1;
-  if (this->imp_key().size() > 0) {
+  if (!this->_internal_imp_key().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_imp_key());
   }
 
   // string public_key = 2;
-  if (this->public_key().size() > 0) {
+  if (!this->_internal_public_key().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_public_key());
   }
 
   // string password = 3;
-  if (this->password().size() > 0) {
+  if (!this->_internal_password().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_password());
@@ -1176,44 +1182,35 @@ size_t PubKeyRegisterRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void PubKeyRegisterRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:authenticate_v2.PubKeyRegisterRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PubKeyRegisterRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PubKeyRegisterRequest>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:authenticate_v2.PubKeyRegisterRequest)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:authenticate_v2.PubKeyRegisterRequest)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PubKeyRegisterRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    PubKeyRegisterRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PubKeyRegisterRequest::GetClassData() const { return &_class_data_; }
+
+void PubKeyRegisterRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<PubKeyRegisterRequest *>(to)->MergeFrom(
+      static_cast<const PubKeyRegisterRequest &>(from));
 }
+
 
 void PubKeyRegisterRequest::MergeFrom(const PubKeyRegisterRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:authenticate_v2.PubKeyRegisterRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.imp_key().size() > 0) {
+  if (!from._internal_imp_key().empty()) {
     _internal_set_imp_key(from._internal_imp_key());
   }
-  if (from.public_key().size() > 0) {
+  if (!from._internal_public_key().empty()) {
     _internal_set_public_key(from._internal_public_key());
   }
-  if (from.password().size() > 0) {
+  if (!from._internal_password().empty()) {
     _internal_set_password(from._internal_password());
   }
-}
-
-void PubKeyRegisterRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:authenticate_v2.PubKeyRegisterRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void PubKeyRegisterRequest::CopyFrom(const PubKeyRegisterRequest& from) {
@@ -1229,16 +1226,29 @@ bool PubKeyRegisterRequest::IsInitialized() const {
 
 void PubKeyRegisterRequest::InternalSwap(PubKeyRegisterRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  imp_key_.Swap(&other->imp_key_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  public_key_.Swap(&other->public_key_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  password_.Swap(&other->password_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &imp_key_, GetArenaForAllocation(),
+      &other->imp_key_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &public_key_, GetArenaForAllocation(),
+      &other->public_key_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &password_, GetArenaForAllocation(),
+      &other->password_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PubKeyRegisterRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_getter, &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_once,
+      file_level_metadata_v2_2fauthenticate_2fauthenticate_2eproto[3]);
 }
-
 
 // ===================================================================
 
@@ -1246,10 +1256,13 @@ class PubKeyRegisterResponse::_Internal {
  public:
 };
 
-PubKeyRegisterResponse::PubKeyRegisterResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+PubKeyRegisterResponse::PubKeyRegisterResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:authenticate_v2.PubKeyRegisterResponse)
 }
 PubKeyRegisterResponse::PubKeyRegisterResponse(const PubKeyRegisterResponse& from)
@@ -1258,25 +1271,26 @@ PubKeyRegisterResponse::PubKeyRegisterResponse(const PubKeyRegisterResponse& fro
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
     message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   code_ = from.code_;
   // @@protoc_insertion_point(copy_constructor:authenticate_v2.PubKeyRegisterResponse)
 }
 
-void PubKeyRegisterResponse::SharedCtor() {
+inline void PubKeyRegisterResponse::SharedCtor() {
 message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 code_ = 0;
 }
 
 PubKeyRegisterResponse::~PubKeyRegisterResponse() {
   // @@protoc_insertion_point(destructor:authenticate_v2.PubKeyRegisterResponse)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void PubKeyRegisterResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void PubKeyRegisterResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -1306,7 +1320,6 @@ const char* PubKeyRegisterResponse::_InternalParse(const char* ptr, ::PROTOBUF_N
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int32 code = 1;
       case 1:
@@ -1326,7 +1339,8 @@ const char* PubKeyRegisterResponse::_InternalParse(const char* ptr, ::PROTOBUF_N
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -1353,13 +1367,13 @@ failure:
   (void) cached_has_bits;
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
   }
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1385,14 +1399,14 @@ size_t PubKeyRegisterResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_message());
   }
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_code());
@@ -1407,41 +1421,32 @@ size_t PubKeyRegisterResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void PubKeyRegisterResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:authenticate_v2.PubKeyRegisterResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PubKeyRegisterResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PubKeyRegisterResponse>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:authenticate_v2.PubKeyRegisterResponse)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:authenticate_v2.PubKeyRegisterResponse)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PubKeyRegisterResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    PubKeyRegisterResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PubKeyRegisterResponse::GetClassData() const { return &_class_data_; }
+
+void PubKeyRegisterResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<PubKeyRegisterResponse *>(to)->MergeFrom(
+      static_cast<const PubKeyRegisterResponse &>(from));
 }
+
 
 void PubKeyRegisterResponse::MergeFrom(const PubKeyRegisterResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:authenticate_v2.PubKeyRegisterResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.message().size() > 0) {
+  if (!from._internal_message().empty()) {
     _internal_set_message(from._internal_message());
   }
-  if (from.code() != 0) {
+  if (from._internal_code() != 0) {
     _internal_set_code(from._internal_code());
   }
-}
-
-void PubKeyRegisterResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:authenticate_v2.PubKeyRegisterResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void PubKeyRegisterResponse::CopyFrom(const PubKeyRegisterResponse& from) {
@@ -1457,15 +1462,20 @@ bool PubKeyRegisterResponse::IsInitialized() const {
 
 void PubKeyRegisterResponse::InternalSwap(PubKeyRegisterResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &message_, GetArenaForAllocation(),
+      &other->message_, other->GetArenaForAllocation()
+  );
   swap(code_, other->code_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PubKeyRegisterResponse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_getter, &descriptor_table_v2_2fauthenticate_2fauthenticate_2eproto_once,
+      file_level_metadata_v2_2fauthenticate_2fauthenticate_2eproto[4]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace authenticate_v2

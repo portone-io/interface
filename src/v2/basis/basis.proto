@@ -12,6 +12,11 @@ message CancelHistory {
     string receipt_url = 5;
 }
 
+message Promotion {
+    string id = 1;
+    int32 discount = 2;
+}
+
 message UnitTx {
     string amount = 1;
     string apply_num = 2;
@@ -65,5 +70,6 @@ message UnitTx {
     string vbank_name = 50;
     string vbank_num = 51;
     string customer_email = 52;
+    Promotion promotion = 53;
 }
 

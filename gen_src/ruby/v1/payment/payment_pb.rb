@@ -53,6 +53,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :vbank_issued_at, :int32, 44
       optional :vbank_name, :string, 45
       optional :vbank_num, :string, 46
+      optional :promotion, :message, 47, "payment.Promotion"
     end
     add_message "payment.CancelHistory" do
       optional :pg_tid, :string, 1
@@ -178,6 +179,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "payment.PaymentGetPrepareRequest" do
       optional :merchant_uid, :string, 1
     end
+    add_message "payment.Promotion" do
+      optional :id, :string, 1
+      optional :discount, :string, 2
+    end
   end
 end
 
@@ -206,4 +211,5 @@ module Payment
   PaymentPrepareRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("payment.PaymentPrepareRequest").msgclass
   PaymentPrepareResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("payment.PaymentPrepareResponse").msgclass
   PaymentGetPrepareRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("payment.PaymentGetPrepareRequest").msgclass
+  Promotion = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("payment.Promotion").msgclass
 end

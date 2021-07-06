@@ -92,7 +92,7 @@ class AgainPaymentResponse extends \Google\Protobuf\Internal\Message
      */
     public function getResponse()
     {
-        return isset($this->response) ? $this->response : null;
+        return $this->response;
     }
 
     public function hasResponse()

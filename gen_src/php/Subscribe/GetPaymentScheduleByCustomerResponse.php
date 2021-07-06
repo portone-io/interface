@@ -92,7 +92,7 @@ class GetPaymentScheduleByCustomerResponse extends \Google\Protobuf\Internal\Mes
      */
     public function getResponse()
     {
-        return isset($this->response) ? $this->response : null;
+        return $this->response;
     }
 
     public function hasResponse()

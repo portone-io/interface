@@ -223,6 +223,10 @@ class UnitTx extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string customer_email = 52;</code>
      */
     protected $customer_email = '';
+    /**
+     * Generated from protobuf field <code>.basis_v2.Promotion promotion = 53;</code>
+     */
+    protected $promotion = null;
 
     /**
      * Constructor.
@@ -283,6 +287,7 @@ class UnitTx extends \Google\Protobuf\Internal\Message
      *     @type string $vbank_name
      *     @type string $vbank_num
      *     @type string $customer_email
+     *     @type \Basis_v2\Promotion $promotion
      * }
      */
     public function __construct($data = NULL) {
@@ -1434,6 +1439,38 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->customer_email = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.basis_v2.Promotion promotion = 53;</code>
+     * @return \Basis_v2\Promotion|null
+     */
+    public function getPromotion()
+    {
+        return $this->promotion;
+    }
+
+    public function hasPromotion()
+    {
+        return isset($this->promotion);
+    }
+
+    public function clearPromotion()
+    {
+        unset($this->promotion);
+    }
+
+    /**
+     * Generated from protobuf field <code>.basis_v2.Promotion promotion = 53;</code>
+     * @param \Basis_v2\Promotion $var
+     * @return $this
+     */
+    public function setPromotion($var)
+    {
+        GPBUtil::checkMessage($var, \Basis_v2\Promotion::class);
+        $this->promotion = $var;
 
         return $this;
     }

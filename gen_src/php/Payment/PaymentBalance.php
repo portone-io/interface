@@ -85,7 +85,7 @@ class PaymentBalance extends \Google\Protobuf\Internal\Message
      */
     public function getCashReceipt()
     {
-        return isset($this->cash_receipt) ? $this->cash_receipt : null;
+        return $this->cash_receipt;
     }
 
     public function hasCashReceipt()
@@ -117,7 +117,7 @@ class PaymentBalance extends \Google\Protobuf\Internal\Message
      */
     public function getPrimary()
     {
-        return isset($this->primary) ? $this->primary : null;
+        return $this->primary;
     }
 
     public function hasPrimary()
@@ -149,7 +149,7 @@ class PaymentBalance extends \Google\Protobuf\Internal\Message
      */
     public function getSecondary()
     {
-        return isset($this->secondary) ? $this->secondary : null;
+        return $this->secondary;
     }
 
     public function hasSecondary()
@@ -181,7 +181,7 @@ class PaymentBalance extends \Google\Protobuf\Internal\Message
      */
     public function getDiscount()
     {
-        return isset($this->discount) ? $this->discount : null;
+        return $this->discount;
     }
 
     public function hasDiscount()

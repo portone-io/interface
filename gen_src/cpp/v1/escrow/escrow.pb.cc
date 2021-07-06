@@ -163,10 +163,8 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v1_2fe
   schemas, file_default_instances, TableStruct_v1_2fescrow_2fescrow_2eproto::offsets,
   file_level_metadata_v1_2fescrow_2fescrow_2eproto, file_level_enum_descriptors_v1_2fescrow_2fescrow_2eproto, file_level_service_descriptors_v1_2fescrow_2fescrow_2eproto,
 };
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_v1_2fescrow_2fescrow_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_v1_2fescrow_2fescrow_2eproto);
-  return descriptor_table_v1_2fescrow_2fescrow_2eproto.file_level_metadata[index];
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_v1_2fescrow_2fescrow_2eproto_getter() {
+  return &descriptor_table_v1_2fescrow_2fescrow_2eproto;
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -179,10 +177,13 @@ class Info::_Internal {
  public:
 };
 
-Info::Info(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+Info::Info(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:escrow.Info)
 }
 Info::Info(const Info& from)
@@ -191,27 +192,27 @@ Info::Info(const Info& from)
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
     name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_tel().empty()) {
     tel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_tel(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_addr().empty()) {
     addr_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_addr(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_postcode().empty()) {
     postcode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_postcode(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:escrow.Info)
 }
 
-void Info::SharedCtor() {
+inline void Info::SharedCtor() {
 name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -220,12 +221,13 @@ postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlr
 
 Info::~Info() {
   // @@protoc_insertion_point(destructor:escrow.Info)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Info::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void Info::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   tel_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   addr_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -260,7 +262,6 @@ const char* Info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string name = 1;
       case 1:
@@ -300,7 +301,8 @@ const char* Info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -327,7 +329,7 @@ failure:
   (void) cached_has_bits;
 
   // string name = 1;
-  if (this->name().size() > 0) {
+  if (!this->_internal_name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -337,7 +339,7 @@ failure:
   }
 
   // string tel = 2;
-  if (this->tel().size() > 0) {
+  if (!this->_internal_tel().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_tel().data(), static_cast<int>(this->_internal_tel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -347,7 +349,7 @@ failure:
   }
 
   // string addr = 3;
-  if (this->addr().size() > 0) {
+  if (!this->_internal_addr().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_addr().data(), static_cast<int>(this->_internal_addr().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -357,7 +359,7 @@ failure:
   }
 
   // string postcode = 4;
-  if (this->postcode().size() > 0) {
+  if (!this->_internal_postcode().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_postcode().data(), static_cast<int>(this->_internal_postcode().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -383,28 +385,28 @@ size_t Info::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string name = 1;
-  if (this->name().size() > 0) {
+  if (!this->_internal_name().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_name());
   }
 
   // string tel = 2;
-  if (this->tel().size() > 0) {
+  if (!this->_internal_tel().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_tel());
   }
 
   // string addr = 3;
-  if (this->addr().size() > 0) {
+  if (!this->_internal_addr().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_addr());
   }
 
   // string postcode = 4;
-  if (this->postcode().size() > 0) {
+  if (!this->_internal_postcode().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_postcode());
@@ -419,47 +421,38 @@ size_t Info::ByteSizeLong() const {
   return total_size;
 }
 
-void Info::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:escrow.Info)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Info* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Info>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:escrow.Info)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:escrow.Info)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Info::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Info::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Info::GetClassData() const { return &_class_data_; }
+
+void Info::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<Info *>(to)->MergeFrom(
+      static_cast<const Info &>(from));
 }
+
 
 void Info::MergeFrom(const Info& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:escrow.Info)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.name().size() > 0) {
+  if (!from._internal_name().empty()) {
     _internal_set_name(from._internal_name());
   }
-  if (from.tel().size() > 0) {
+  if (!from._internal_tel().empty()) {
     _internal_set_tel(from._internal_tel());
   }
-  if (from.addr().size() > 0) {
+  if (!from._internal_addr().empty()) {
     _internal_set_addr(from._internal_addr());
   }
-  if (from.postcode().size() > 0) {
+  if (!from._internal_postcode().empty()) {
     _internal_set_postcode(from._internal_postcode());
   }
-}
-
-void Info::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:escrow.Info)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Info::CopyFrom(const Info& from) {
@@ -475,17 +468,34 @@ bool Info::IsInitialized() const {
 
 void Info::InternalSwap(Info* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  tel_.Swap(&other->tel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  addr_.Swap(&other->addr_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  postcode_.Swap(&other->postcode_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &name_, GetArenaForAllocation(),
+      &other->name_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &tel_, GetArenaForAllocation(),
+      &other->tel_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &addr_, GetArenaForAllocation(),
+      &other->addr_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &postcode_, GetArenaForAllocation(),
+      &other->postcode_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Info::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fescrow_2fescrow_2eproto_getter, &descriptor_table_v1_2fescrow_2fescrow_2eproto_once,
+      file_level_metadata_v1_2fescrow_2fescrow_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -493,10 +503,13 @@ class Logis::_Internal {
  public:
 };
 
-Logis::Logis(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+Logis::Logis(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:escrow.Logis)
 }
 Logis::Logis(const Logis& from)
@@ -505,12 +518,12 @@ Logis::Logis(const Logis& from)
   company_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_company().empty()) {
     company_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_company(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   invoice_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_invoice().empty()) {
     invoice_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_invoice(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   ::memcpy(&sent_at_, &from.sent_at_,
     static_cast<size_t>(reinterpret_cast<char*>(&applied_at_) -
@@ -518,7 +531,7 @@ Logis::Logis(const Logis& from)
   // @@protoc_insertion_point(copy_constructor:escrow.Logis)
 }
 
-void Logis::SharedCtor() {
+inline void Logis::SharedCtor() {
 company_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 invoice_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
@@ -529,12 +542,13 @@ invoice_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlre
 
 Logis::~Logis() {
   // @@protoc_insertion_point(destructor:escrow.Logis)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Logis::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void Logis::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   company_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   invoice_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -568,7 +582,6 @@ const char* Logis::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string company = 1;
       case 1:
@@ -604,7 +617,8 @@ const char* Logis::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -631,7 +645,7 @@ failure:
   (void) cached_has_bits;
 
   // string company = 1;
-  if (this->company().size() > 0) {
+  if (!this->_internal_company().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_company().data(), static_cast<int>(this->_internal_company().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -641,7 +655,7 @@ failure:
   }
 
   // string invoice = 2;
-  if (this->invoice().size() > 0) {
+  if (!this->_internal_invoice().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_invoice().data(), static_cast<int>(this->_internal_invoice().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -651,13 +665,13 @@ failure:
   }
 
   // int32 sent_at = 3;
-  if (this->sent_at() != 0) {
+  if (this->_internal_sent_at() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_sent_at(), target);
   }
 
   // int32 applied_at = 4;
-  if (this->applied_at() != 0) {
+  if (this->_internal_applied_at() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_applied_at(), target);
   }
@@ -679,28 +693,28 @@ size_t Logis::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string company = 1;
-  if (this->company().size() > 0) {
+  if (!this->_internal_company().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_company());
   }
 
   // string invoice = 2;
-  if (this->invoice().size() > 0) {
+  if (!this->_internal_invoice().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_invoice());
   }
 
   // int32 sent_at = 3;
-  if (this->sent_at() != 0) {
+  if (this->_internal_sent_at() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_sent_at());
   }
 
   // int32 applied_at = 4;
-  if (this->applied_at() != 0) {
+  if (this->_internal_applied_at() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_applied_at());
@@ -715,47 +729,38 @@ size_t Logis::ByteSizeLong() const {
   return total_size;
 }
 
-void Logis::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:escrow.Logis)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Logis* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Logis>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:escrow.Logis)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:escrow.Logis)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Logis::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Logis::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Logis::GetClassData() const { return &_class_data_; }
+
+void Logis::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<Logis *>(to)->MergeFrom(
+      static_cast<const Logis &>(from));
 }
+
 
 void Logis::MergeFrom(const Logis& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:escrow.Logis)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.company().size() > 0) {
+  if (!from._internal_company().empty()) {
     _internal_set_company(from._internal_company());
   }
-  if (from.invoice().size() > 0) {
+  if (!from._internal_invoice().empty()) {
     _internal_set_invoice(from._internal_invoice());
   }
-  if (from.sent_at() != 0) {
+  if (from._internal_sent_at() != 0) {
     _internal_set_sent_at(from._internal_sent_at());
   }
-  if (from.applied_at() != 0) {
+  if (from._internal_applied_at() != 0) {
     _internal_set_applied_at(from._internal_applied_at());
   }
-}
-
-void Logis::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:escrow.Logis)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Logis::CopyFrom(const Logis& from) {
@@ -771,9 +776,17 @@ bool Logis::IsInitialized() const {
 
 void Logis::InternalSwap(Logis* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  company_.Swap(&other->company_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  invoice_.Swap(&other->invoice_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &company_, GetArenaForAllocation(),
+      &other->company_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &invoice_, GetArenaForAllocation(),
+      &other->invoice_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Logis, applied_at_)
       + sizeof(Logis::applied_at_)
@@ -783,9 +796,10 @@ void Logis::InternalSwap(Logis* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Logis::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fescrow_2fescrow_2eproto_getter, &descriptor_table_v1_2fescrow_2fescrow_2eproto_once,
+      file_level_metadata_v1_2fescrow_2fescrow_2eproto[1]);
 }
-
 
 // ===================================================================
 
@@ -808,10 +822,13 @@ const ::escrow::Logis&
 EscrowRequest::_Internal::logis(const EscrowRequest* msg) {
   return *msg->logis_;
 }
-EscrowRequest::EscrowRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+EscrowRequest::EscrowRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:escrow.EscrowRequest)
 }
 EscrowRequest::EscrowRequest(const EscrowRequest& from)
@@ -820,7 +837,7 @@ EscrowRequest::EscrowRequest(const EscrowRequest& from)
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
     imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_sender()) {
     sender_ = new ::escrow::Info(*from.sender_);
@@ -840,7 +857,7 @@ EscrowRequest::EscrowRequest(const EscrowRequest& from)
   // @@protoc_insertion_point(copy_constructor:escrow.EscrowRequest)
 }
 
-void EscrowRequest::SharedCtor() {
+inline void EscrowRequest::SharedCtor() {
 imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&sender_) - reinterpret_cast<char*>(this)),
@@ -850,12 +867,13 @@ imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlre
 
 EscrowRequest::~EscrowRequest() {
   // @@protoc_insertion_point(destructor:escrow.EscrowRequest)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void EscrowRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void EscrowRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   imp_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete sender_;
   if (this != internal_default_instance()) delete receiver_;
@@ -879,15 +897,15 @@ void EscrowRequest::Clear() {
   (void) cached_has_bits;
 
   imp_uid_.ClearToEmpty();
-  if (GetArena() == nullptr && sender_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && sender_ != nullptr) {
     delete sender_;
   }
   sender_ = nullptr;
-  if (GetArena() == nullptr && receiver_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && receiver_ != nullptr) {
     delete receiver_;
   }
   receiver_ = nullptr;
-  if (GetArena() == nullptr && logis_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && logis_ != nullptr) {
     delete logis_;
   }
   logis_ = nullptr;
@@ -899,7 +917,6 @@ const char* EscrowRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string imp_uid = 1;
       case 1:
@@ -933,7 +950,8 @@ const char* EscrowRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -960,7 +978,7 @@ failure:
   (void) cached_has_bits;
 
   // string imp_uid = 1;
-  if (this->imp_uid().size() > 0) {
+  if (!this->_internal_imp_uid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_imp_uid().data(), static_cast<int>(this->_internal_imp_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -970,7 +988,7 @@ failure:
   }
 
   // .escrow.Info sender = 2;
-  if (this->has_sender()) {
+  if (this->_internal_has_sender()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
@@ -978,7 +996,7 @@ failure:
   }
 
   // .escrow.Info receiver = 3;
-  if (this->has_receiver()) {
+  if (this->_internal_has_receiver()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
@@ -986,7 +1004,7 @@ failure:
   }
 
   // .escrow.Logis logis = 4;
-  if (this->has_logis()) {
+  if (this->_internal_has_logis()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
@@ -1010,28 +1028,28 @@ size_t EscrowRequest::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string imp_uid = 1;
-  if (this->imp_uid().size() > 0) {
+  if (!this->_internal_imp_uid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_imp_uid());
   }
 
   // .escrow.Info sender = 2;
-  if (this->has_sender()) {
+  if (this->_internal_has_sender()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *sender_);
   }
 
   // .escrow.Info receiver = 3;
-  if (this->has_receiver()) {
+  if (this->_internal_has_receiver()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *receiver_);
   }
 
   // .escrow.Logis logis = 4;
-  if (this->has_logis()) {
+  if (this->_internal_has_logis()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *logis_);
@@ -1046,47 +1064,38 @@ size_t EscrowRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void EscrowRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:escrow.EscrowRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const EscrowRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<EscrowRequest>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:escrow.EscrowRequest)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:escrow.EscrowRequest)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EscrowRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    EscrowRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EscrowRequest::GetClassData() const { return &_class_data_; }
+
+void EscrowRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<EscrowRequest *>(to)->MergeFrom(
+      static_cast<const EscrowRequest &>(from));
 }
+
 
 void EscrowRequest::MergeFrom(const EscrowRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:escrow.EscrowRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.imp_uid().size() > 0) {
+  if (!from._internal_imp_uid().empty()) {
     _internal_set_imp_uid(from._internal_imp_uid());
   }
-  if (from.has_sender()) {
+  if (from._internal_has_sender()) {
     _internal_mutable_sender()->::escrow::Info::MergeFrom(from._internal_sender());
   }
-  if (from.has_receiver()) {
+  if (from._internal_has_receiver()) {
     _internal_mutable_receiver()->::escrow::Info::MergeFrom(from._internal_receiver());
   }
-  if (from.has_logis()) {
+  if (from._internal_has_logis()) {
     _internal_mutable_logis()->::escrow::Logis::MergeFrom(from._internal_logis());
   }
-}
-
-void EscrowRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:escrow.EscrowRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void EscrowRequest::CopyFrom(const EscrowRequest& from) {
@@ -1102,8 +1111,12 @@ bool EscrowRequest::IsInitialized() const {
 
 void EscrowRequest::InternalSwap(EscrowRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  imp_uid_.Swap(&other->imp_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &imp_uid_, GetArenaForAllocation(),
+      &other->imp_uid_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(EscrowRequest, logis_)
       + sizeof(EscrowRequest::logis_)
@@ -1113,9 +1126,10 @@ void EscrowRequest::InternalSwap(EscrowRequest* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata EscrowRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fescrow_2fescrow_2eproto_getter, &descriptor_table_v1_2fescrow_2fescrow_2eproto_once,
+      file_level_metadata_v1_2fescrow_2fescrow_2eproto[2]);
 }
-
 
 // ===================================================================
 
@@ -1128,10 +1142,13 @@ const ::escrow::Logis&
 EscrowResponse::_Internal::response(const EscrowResponse* msg) {
   return *msg->response_;
 }
-EscrowResponse::EscrowResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+EscrowResponse::EscrowResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:escrow.EscrowResponse)
 }
 EscrowResponse::EscrowResponse(const EscrowResponse& from)
@@ -1140,7 +1157,7 @@ EscrowResponse::EscrowResponse(const EscrowResponse& from)
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
     message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_response()) {
     response_ = new ::escrow::Logis(*from.response_);
@@ -1151,7 +1168,7 @@ EscrowResponse::EscrowResponse(const EscrowResponse& from)
   // @@protoc_insertion_point(copy_constructor:escrow.EscrowResponse)
 }
 
-void EscrowResponse::SharedCtor() {
+inline void EscrowResponse::SharedCtor() {
 message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
@@ -1161,12 +1178,13 @@ message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlre
 
 EscrowResponse::~EscrowResponse() {
   // @@protoc_insertion_point(destructor:escrow.EscrowResponse)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void EscrowResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void EscrowResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete response_;
 }
@@ -1188,7 +1206,7 @@ void EscrowResponse::Clear() {
   (void) cached_has_bits;
 
   message_.ClearToEmpty();
-  if (GetArena() == nullptr && response_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && response_ != nullptr) {
     delete response_;
   }
   response_ = nullptr;
@@ -1201,7 +1219,6 @@ const char* EscrowResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int32 code = 1;
       case 1:
@@ -1228,7 +1245,8 @@ const char* EscrowResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -1255,13 +1273,13 @@ failure:
   (void) cached_has_bits;
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
   }
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1271,7 +1289,7 @@ failure:
   }
 
   // .escrow.Logis response = 3;
-  if (this->has_response()) {
+  if (this->_internal_has_response()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
@@ -1295,21 +1313,21 @@ size_t EscrowResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_message());
   }
 
   // .escrow.Logis response = 3;
-  if (this->has_response()) {
+  if (this->_internal_has_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *response_);
   }
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_code());
@@ -1324,44 +1342,35 @@ size_t EscrowResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void EscrowResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:escrow.EscrowResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  const EscrowResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<EscrowResponse>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:escrow.EscrowResponse)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:escrow.EscrowResponse)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EscrowResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    EscrowResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EscrowResponse::GetClassData() const { return &_class_data_; }
+
+void EscrowResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<EscrowResponse *>(to)->MergeFrom(
+      static_cast<const EscrowResponse &>(from));
 }
+
 
 void EscrowResponse::MergeFrom(const EscrowResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:escrow.EscrowResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.message().size() > 0) {
+  if (!from._internal_message().empty()) {
     _internal_set_message(from._internal_message());
   }
-  if (from.has_response()) {
+  if (from._internal_has_response()) {
     _internal_mutable_response()->::escrow::Logis::MergeFrom(from._internal_response());
   }
-  if (from.code() != 0) {
+  if (from._internal_code() != 0) {
     _internal_set_code(from._internal_code());
   }
-}
-
-void EscrowResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:escrow.EscrowResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void EscrowResponse::CopyFrom(const EscrowResponse& from) {
@@ -1377,8 +1386,12 @@ bool EscrowResponse::IsInitialized() const {
 
 void EscrowResponse::InternalSwap(EscrowResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &message_, GetArenaForAllocation(),
+      &other->message_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(EscrowResponse, code_)
       + sizeof(EscrowResponse::code_)
@@ -1388,9 +1401,10 @@ void EscrowResponse::InternalSwap(EscrowResponse* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata EscrowResponse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fescrow_2fescrow_2eproto_getter, &descriptor_table_v1_2fescrow_2fescrow_2eproto_once,
+      file_level_metadata_v1_2fescrow_2fescrow_2eproto[3]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace escrow

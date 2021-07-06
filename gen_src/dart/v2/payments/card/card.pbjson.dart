@@ -106,7 +106,7 @@ const PayByRegisteredCardRequest$json = const {
     const {'1': 'card_uid', '3': 1, '4': 1, '5': 9, '10': 'cardUid'},
     const {'1': 'merchant_uid', '3': 2, '4': 1, '5': 9, '10': 'merchantUid'},
     const {'1': 'amount', '3': 3, '4': 1, '5': 9, '10': 'amount'},
-    const {'1': 'duty_free_amount', '3': 4, '4': 1, '5': 9, '10': 'dutyFreeAmount'},
+    const {'1': 'tax_free_amount', '3': 4, '4': 1, '5': 9, '10': 'taxFreeAmount'},
     const {'1': 'order_name', '3': 5, '4': 1, '5': 9, '10': 'orderName'},
     const {'1': 'card_installment', '3': 6, '4': 1, '5': 5, '10': 'cardInstallment'},
     const {'1': 'interest_free_by_merchant', '3': 7, '4': 1, '5': 8, '10': 'interestFreeByMerchant'},
@@ -189,7 +189,7 @@ const CancelCardPaymentRequest$json = const {
     const {'1': 'imp_uid', '3': 1, '4': 1, '5': 9, '10': 'impUid'},
     const {'1': 'amount', '3': 2, '4': 1, '5': 9, '10': 'amount'},
     const {'1': 'merchant_uid', '3': 3, '4': 1, '5': 9, '10': 'merchantUid'},
-    const {'1': 'duty_free_amount', '3': 4, '4': 1, '5': 9, '10': 'dutyFreeAmount'},
+    const {'1': 'tax_free_amount', '3': 4, '4': 1, '5': 9, '10': 'taxFreeAmount'},
     const {'1': 'reason', '3': 5, '4': 1, '5': 9, '10': 'reason'},
   ],
 };

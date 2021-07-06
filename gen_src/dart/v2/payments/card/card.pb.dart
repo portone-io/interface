@@ -657,7 +657,7 @@ class PayByRegisteredCardRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'cardUid')
     ..aOS(2, 'merchantUid')
     ..aOS(3, 'amount')
-    ..aOS(4, 'dutyFreeAmount')
+    ..aOS(4, 'taxFreeAmount')
     ..aOS(5, 'orderName')
     ..a<$core.int>(6, 'cardInstallment', $pb.PbFieldType.O3)
     ..aOB(7, 'interestFreeByMerchant')
@@ -714,13 +714,13 @@ class PayByRegisteredCardRequest extends $pb.GeneratedMessage {
   void clearAmount() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get dutyFreeAmount => $_getSZ(3);
+  $core.String get taxFreeAmount => $_getSZ(3);
   @$pb.TagNumber(4)
-  set dutyFreeAmount($core.String v) { $_setString(3, v); }
+  set taxFreeAmount($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasDutyFreeAmount() => $_has(3);
+  $core.bool hasTaxFreeAmount() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDutyFreeAmount() => clearField(4);
+  void clearTaxFreeAmount() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.String get orderName => $_getSZ(4);
@@ -1321,7 +1321,7 @@ class CancelCardPaymentRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'impUid')
     ..aOS(2, 'amount')
     ..aOS(3, 'merchantUid')
-    ..aOS(4, 'dutyFreeAmount')
+    ..aOS(4, 'taxFreeAmount')
     ..aOS(5, 'reason')
     ..hasRequiredFields = false
   ;
@@ -1369,13 +1369,13 @@ class CancelCardPaymentRequest extends $pb.GeneratedMessage {
   void clearMerchantUid() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get dutyFreeAmount => $_getSZ(3);
+  $core.String get taxFreeAmount => $_getSZ(3);
   @$pb.TagNumber(4)
-  set dutyFreeAmount($core.String v) { $_setString(3, v); }
+  set taxFreeAmount($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasDutyFreeAmount() => $_has(3);
+  $core.bool hasTaxFreeAmount() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDutyFreeAmount() => clearField(4);
+  void clearTaxFreeAmount() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.String get reason => $_getSZ(4);

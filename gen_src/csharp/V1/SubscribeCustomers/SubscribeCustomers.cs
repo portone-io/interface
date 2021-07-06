@@ -123,19 +123,23 @@ namespace V1.SubscribeCustomers {
     private static readonly pb::MessageParser<CustomerBillingKey> _parser = new pb::MessageParser<CustomerBillingKey>(() => new CustomerBillingKey());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CustomerBillingKey> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomerBillingKey() {
       OnConstruction();
     }
@@ -143,6 +147,7 @@ namespace V1.SubscribeCustomers {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomerBillingKey(CustomerBillingKey other) : this() {
       cardCode_ = other.cardCode_;
       cardName_ = other.cardName_;
@@ -162,6 +167,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomerBillingKey Clone() {
       return new CustomerBillingKey(this);
     }
@@ -170,6 +176,7 @@ namespace V1.SubscribeCustomers {
     public const int CardCodeFieldNumber = 1;
     private string cardCode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardCode {
       get { return cardCode_; }
       set {
@@ -181,6 +188,7 @@ namespace V1.SubscribeCustomers {
     public const int CardNameFieldNumber = 2;
     private string cardName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardName {
       get { return cardName_; }
       set {
@@ -192,6 +200,7 @@ namespace V1.SubscribeCustomers {
     public const int CardNumberFieldNumber = 3;
     private string cardNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardNumber {
       get { return cardNumber_; }
       set {
@@ -203,6 +212,7 @@ namespace V1.SubscribeCustomers {
     public const int CardTypeFieldNumber = 4;
     private int cardType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CardType {
       get { return cardType_; }
       set {
@@ -214,6 +224,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerAddrFieldNumber = 5;
     private string customerAddr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerAddr {
       get { return customerAddr_; }
       set {
@@ -225,6 +236,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerEmailFieldNumber = 6;
     private string customerEmail_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerEmail {
       get { return customerEmail_; }
       set {
@@ -236,6 +248,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerNameFieldNumber = 7;
     private string customerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerName {
       get { return customerName_; }
       set {
@@ -247,6 +260,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerPostcodeFieldNumber = 8;
     private string customerPostcode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerPostcode {
       get { return customerPostcode_; }
       set {
@@ -258,6 +272,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerTelFieldNumber = 9;
     private string customerTel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerTel {
       get { return customerTel_; }
       set {
@@ -269,6 +284,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerUidFieldNumber = 10;
     private string customerUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerUid {
       get { return customerUid_; }
       set {
@@ -280,6 +296,7 @@ namespace V1.SubscribeCustomers {
     public const int InsertedFieldNumber = 11;
     private int inserted_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Inserted {
       get { return inserted_; }
       set {
@@ -291,6 +308,7 @@ namespace V1.SubscribeCustomers {
     public const int PgIdFieldNumber = 12;
     private string pgId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgId {
       get { return pgId_; }
       set {
@@ -302,6 +320,7 @@ namespace V1.SubscribeCustomers {
     public const int PgProviderFieldNumber = 13;
     private string pgProvider_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgProvider {
       get { return pgProvider_; }
       set {
@@ -313,6 +332,7 @@ namespace V1.SubscribeCustomers {
     public const int UpdatedFieldNumber = 14;
     private int updated_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Updated {
       get { return updated_; }
       set {
@@ -321,11 +341,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CustomerBillingKey);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CustomerBillingKey other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -351,6 +373,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CardCode.Length != 0) hash ^= CardCode.GetHashCode();
@@ -374,11 +397,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -447,6 +472,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CardCode.Length != 0) {
         output.WriteRawTag(10);
@@ -511,6 +537,7 @@ namespace V1.SubscribeCustomers {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CardCode.Length != 0) {
@@ -562,6 +589,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CustomerBillingKey other) {
       if (other == null) {
         return;
@@ -612,6 +640,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -685,6 +714,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -763,19 +793,23 @@ namespace V1.SubscribeCustomers {
     private static readonly pb::MessageParser<GetMultipleCustomerBillingKeyRequest> _parser = new pb::MessageParser<GetMultipleCustomerBillingKeyRequest>(() => new GetMultipleCustomerBillingKeyRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetMultipleCustomerBillingKeyRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMultipleCustomerBillingKeyRequest() {
       OnConstruction();
     }
@@ -783,12 +817,14 @@ namespace V1.SubscribeCustomers {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMultipleCustomerBillingKeyRequest(GetMultipleCustomerBillingKeyRequest other) : this() {
       customerUid_ = other.customerUid_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMultipleCustomerBillingKeyRequest Clone() {
       return new GetMultipleCustomerBillingKeyRequest(this);
     }
@@ -799,16 +835,19 @@ namespace V1.SubscribeCustomers {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> customerUid_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> CustomerUid {
       get { return customerUid_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetMultipleCustomerBillingKeyRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetMultipleCustomerBillingKeyRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -821,6 +860,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= customerUid_.GetHashCode();
@@ -831,11 +871,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -849,6 +891,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       customerUid_.WriteTo(ref output, _repeated_customerUid_codec);
       if (_unknownFields != null) {
@@ -858,6 +901,7 @@ namespace V1.SubscribeCustomers {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += customerUid_.CalculateSize(_repeated_customerUid_codec);
@@ -868,6 +912,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetMultipleCustomerBillingKeyRequest other) {
       if (other == null) {
         return;
@@ -877,6 +922,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -898,6 +944,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -924,19 +971,23 @@ namespace V1.SubscribeCustomers {
     private static readonly pb::MessageParser<GetMultipleCustomerBillingKeyResponse> _parser = new pb::MessageParser<GetMultipleCustomerBillingKeyResponse>(() => new GetMultipleCustomerBillingKeyResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetMultipleCustomerBillingKeyResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMultipleCustomerBillingKeyResponse() {
       OnConstruction();
     }
@@ -944,6 +995,7 @@ namespace V1.SubscribeCustomers {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMultipleCustomerBillingKeyResponse(GetMultipleCustomerBillingKeyResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -952,6 +1004,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMultipleCustomerBillingKeyResponse Clone() {
       return new GetMultipleCustomerBillingKeyResponse(this);
     }
@@ -960,6 +1013,7 @@ namespace V1.SubscribeCustomers {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -971,6 +1025,7 @@ namespace V1.SubscribeCustomers {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -984,16 +1039,19 @@ namespace V1.SubscribeCustomers {
         = pb::FieldCodec.ForMessage(26, global::V1.SubscribeCustomers.CustomerBillingKey.Parser);
     private readonly pbc::RepeatedField<global::V1.SubscribeCustomers.CustomerBillingKey> response_ = new pbc::RepeatedField<global::V1.SubscribeCustomers.CustomerBillingKey>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::V1.SubscribeCustomers.CustomerBillingKey> Response {
       get { return response_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetMultipleCustomerBillingKeyResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetMultipleCustomerBillingKeyResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1008,6 +1066,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -1020,11 +1079,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1046,6 +1107,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -1063,6 +1125,7 @@ namespace V1.SubscribeCustomers {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -1079,6 +1142,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetMultipleCustomerBillingKeyResponse other) {
       if (other == null) {
         return;
@@ -1094,6 +1158,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1123,6 +1188,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1157,19 +1223,23 @@ namespace V1.SubscribeCustomers {
     private static readonly pb::MessageParser<DeleteCustomerBillingKeyRequest> _parser = new pb::MessageParser<DeleteCustomerBillingKeyRequest>(() => new DeleteCustomerBillingKeyRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteCustomerBillingKeyRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCustomerBillingKeyRequest() {
       OnConstruction();
     }
@@ -1177,6 +1247,7 @@ namespace V1.SubscribeCustomers {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCustomerBillingKeyRequest(DeleteCustomerBillingKeyRequest other) : this() {
       customerUid_ = other.customerUid_;
       reason_ = other.reason_;
@@ -1185,6 +1256,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCustomerBillingKeyRequest Clone() {
       return new DeleteCustomerBillingKeyRequest(this);
     }
@@ -1193,6 +1265,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerUidFieldNumber = 1;
     private string customerUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerUid {
       get { return customerUid_; }
       set {
@@ -1204,6 +1277,7 @@ namespace V1.SubscribeCustomers {
     public const int ReasonFieldNumber = 2;
     private string reason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Reason {
       get { return reason_; }
       set {
@@ -1215,6 +1289,7 @@ namespace V1.SubscribeCustomers {
     public const int RequesterFieldNumber = 3;
     private string requester_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Requester {
       get { return requester_; }
       set {
@@ -1223,11 +1298,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteCustomerBillingKeyRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteCustomerBillingKeyRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1242,6 +1319,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CustomerUid.Length != 0) hash ^= CustomerUid.GetHashCode();
@@ -1254,11 +1332,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1283,6 +1363,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CustomerUid.Length != 0) {
         output.WriteRawTag(10);
@@ -1303,6 +1384,7 @@ namespace V1.SubscribeCustomers {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CustomerUid.Length != 0) {
@@ -1321,6 +1403,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteCustomerBillingKeyRequest other) {
       if (other == null) {
         return;
@@ -1338,6 +1421,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1367,6 +1451,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1401,19 +1486,23 @@ namespace V1.SubscribeCustomers {
     private static readonly pb::MessageParser<DeleteCustomerBillingKeyResponse> _parser = new pb::MessageParser<DeleteCustomerBillingKeyResponse>(() => new DeleteCustomerBillingKeyResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteCustomerBillingKeyResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCustomerBillingKeyResponse() {
       OnConstruction();
     }
@@ -1421,6 +1510,7 @@ namespace V1.SubscribeCustomers {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCustomerBillingKeyResponse(DeleteCustomerBillingKeyResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -1429,6 +1519,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCustomerBillingKeyResponse Clone() {
       return new DeleteCustomerBillingKeyResponse(this);
     }
@@ -1437,6 +1528,7 @@ namespace V1.SubscribeCustomers {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -1448,6 +1540,7 @@ namespace V1.SubscribeCustomers {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -1459,6 +1552,7 @@ namespace V1.SubscribeCustomers {
     public const int ResponseFieldNumber = 3;
     private global::V1.SubscribeCustomers.CustomerBillingKey response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.SubscribeCustomers.CustomerBillingKey Response {
       get { return response_; }
       set {
@@ -1467,11 +1561,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteCustomerBillingKeyResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteCustomerBillingKeyResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1486,6 +1582,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -1498,11 +1595,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1527,6 +1626,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -1547,6 +1647,7 @@ namespace V1.SubscribeCustomers {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -1565,6 +1666,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteCustomerBillingKeyResponse other) {
       if (other == null) {
         return;
@@ -1585,6 +1687,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1617,6 +1720,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1654,19 +1758,23 @@ namespace V1.SubscribeCustomers {
     private static readonly pb::MessageParser<GetCustomerBillingKeyRequest> _parser = new pb::MessageParser<GetCustomerBillingKeyRequest>(() => new GetCustomerBillingKeyRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetCustomerBillingKeyRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCustomerBillingKeyRequest() {
       OnConstruction();
     }
@@ -1674,12 +1782,14 @@ namespace V1.SubscribeCustomers {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCustomerBillingKeyRequest(GetCustomerBillingKeyRequest other) : this() {
       customerUid_ = other.customerUid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCustomerBillingKeyRequest Clone() {
       return new GetCustomerBillingKeyRequest(this);
     }
@@ -1688,6 +1798,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerUidFieldNumber = 1;
     private string customerUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerUid {
       get { return customerUid_; }
       set {
@@ -1696,11 +1807,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetCustomerBillingKeyRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetCustomerBillingKeyRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1713,6 +1826,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CustomerUid.Length != 0) hash ^= CustomerUid.GetHashCode();
@@ -1723,11 +1837,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1744,6 +1860,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CustomerUid.Length != 0) {
         output.WriteRawTag(10);
@@ -1756,6 +1873,7 @@ namespace V1.SubscribeCustomers {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CustomerUid.Length != 0) {
@@ -1768,6 +1886,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetCustomerBillingKeyRequest other) {
       if (other == null) {
         return;
@@ -1779,6 +1898,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1800,6 +1920,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1826,19 +1947,23 @@ namespace V1.SubscribeCustomers {
     private static readonly pb::MessageParser<GetCustomerBillingKeyResponse> _parser = new pb::MessageParser<GetCustomerBillingKeyResponse>(() => new GetCustomerBillingKeyResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetCustomerBillingKeyResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCustomerBillingKeyResponse() {
       OnConstruction();
     }
@@ -1846,6 +1971,7 @@ namespace V1.SubscribeCustomers {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCustomerBillingKeyResponse(GetCustomerBillingKeyResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -1854,6 +1980,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCustomerBillingKeyResponse Clone() {
       return new GetCustomerBillingKeyResponse(this);
     }
@@ -1862,6 +1989,7 @@ namespace V1.SubscribeCustomers {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -1873,6 +2001,7 @@ namespace V1.SubscribeCustomers {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -1884,6 +2013,7 @@ namespace V1.SubscribeCustomers {
     public const int ResponseFieldNumber = 3;
     private global::V1.SubscribeCustomers.CustomerBillingKey response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.SubscribeCustomers.CustomerBillingKey Response {
       get { return response_; }
       set {
@@ -1892,11 +2022,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetCustomerBillingKeyResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetCustomerBillingKeyResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1911,6 +2043,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -1923,11 +2056,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1952,6 +2087,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -1972,6 +2108,7 @@ namespace V1.SubscribeCustomers {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -1990,6 +2127,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetCustomerBillingKeyResponse other) {
       if (other == null) {
         return;
@@ -2010,6 +2148,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2042,6 +2181,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2079,19 +2219,23 @@ namespace V1.SubscribeCustomers {
     private static readonly pb::MessageParser<InsertCustomerBillingKeyRequest> _parser = new pb::MessageParser<InsertCustomerBillingKeyRequest>(() => new InsertCustomerBillingKeyRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InsertCustomerBillingKeyRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InsertCustomerBillingKeyRequest() {
       OnConstruction();
     }
@@ -2099,6 +2243,7 @@ namespace V1.SubscribeCustomers {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InsertCustomerBillingKeyRequest(InsertCustomerBillingKeyRequest other) : this() {
       customerUid_ = other.customerUid_;
       pg_ = other.pg_;
@@ -2115,6 +2260,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InsertCustomerBillingKeyRequest Clone() {
       return new InsertCustomerBillingKeyRequest(this);
     }
@@ -2123,6 +2269,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerUidFieldNumber = 1;
     private string customerUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerUid {
       get { return customerUid_; }
       set {
@@ -2134,6 +2281,7 @@ namespace V1.SubscribeCustomers {
     public const int PgFieldNumber = 2;
     private string pg_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Pg {
       get { return pg_; }
       set {
@@ -2145,6 +2293,7 @@ namespace V1.SubscribeCustomers {
     public const int CardNumberFieldNumber = 3;
     private string cardNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardNumber {
       get { return cardNumber_; }
       set {
@@ -2156,6 +2305,7 @@ namespace V1.SubscribeCustomers {
     public const int ExpiryFieldNumber = 4;
     private string expiry_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Expiry {
       get { return expiry_; }
       set {
@@ -2167,6 +2317,7 @@ namespace V1.SubscribeCustomers {
     public const int BirthFieldNumber = 5;
     private string birth_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Birth {
       get { return birth_; }
       set {
@@ -2178,6 +2329,7 @@ namespace V1.SubscribeCustomers {
     public const int Pwd2DigitFieldNumber = 6;
     private string pwd2Digit_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Pwd2Digit {
       get { return pwd2Digit_; }
       set {
@@ -2189,6 +2341,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerNameFieldNumber = 7;
     private string customerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerName {
       get { return customerName_; }
       set {
@@ -2200,6 +2353,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerTelFieldNumber = 8;
     private string customerTel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerTel {
       get { return customerTel_; }
       set {
@@ -2211,6 +2365,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerEmailFieldNumber = 9;
     private string customerEmail_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerEmail {
       get { return customerEmail_; }
       set {
@@ -2222,6 +2377,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerAddrFieldNumber = 10;
     private string customerAddr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerAddr {
       get { return customerAddr_; }
       set {
@@ -2233,6 +2389,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerPostcodeFieldNumber = 11;
     private string customerPostcode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerPostcode {
       get { return customerPostcode_; }
       set {
@@ -2241,11 +2398,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as InsertCustomerBillingKeyRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(InsertCustomerBillingKeyRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2268,6 +2427,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CustomerUid.Length != 0) hash ^= CustomerUid.GetHashCode();
@@ -2288,11 +2448,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2349,6 +2511,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CustomerUid.Length != 0) {
         output.WriteRawTag(10);
@@ -2401,6 +2564,7 @@ namespace V1.SubscribeCustomers {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CustomerUid.Length != 0) {
@@ -2443,6 +2607,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(InsertCustomerBillingKeyRequest other) {
       if (other == null) {
         return;
@@ -2484,6 +2649,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2545,6 +2711,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2611,19 +2778,23 @@ namespace V1.SubscribeCustomers {
     private static readonly pb::MessageParser<InsertCustomerBillingKeyResponse> _parser = new pb::MessageParser<InsertCustomerBillingKeyResponse>(() => new InsertCustomerBillingKeyResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InsertCustomerBillingKeyResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InsertCustomerBillingKeyResponse() {
       OnConstruction();
     }
@@ -2631,6 +2802,7 @@ namespace V1.SubscribeCustomers {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InsertCustomerBillingKeyResponse(InsertCustomerBillingKeyResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -2639,6 +2811,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InsertCustomerBillingKeyResponse Clone() {
       return new InsertCustomerBillingKeyResponse(this);
     }
@@ -2647,6 +2820,7 @@ namespace V1.SubscribeCustomers {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -2658,6 +2832,7 @@ namespace V1.SubscribeCustomers {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -2669,6 +2844,7 @@ namespace V1.SubscribeCustomers {
     public const int ResponseFieldNumber = 3;
     private global::V1.SubscribeCustomers.CustomerBillingKey response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.SubscribeCustomers.CustomerBillingKey Response {
       get { return response_; }
       set {
@@ -2677,11 +2853,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as InsertCustomerBillingKeyResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(InsertCustomerBillingKeyResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2696,6 +2874,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -2708,11 +2887,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2737,6 +2918,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -2757,6 +2939,7 @@ namespace V1.SubscribeCustomers {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -2775,6 +2958,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(InsertCustomerBillingKeyResponse other) {
       if (other == null) {
         return;
@@ -2795,6 +2979,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2827,6 +3012,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2864,19 +3050,23 @@ namespace V1.SubscribeCustomers {
     private static readonly pb::MessageParser<GetPaidByBillingKeyListRequest> _parser = new pb::MessageParser<GetPaidByBillingKeyListRequest>(() => new GetPaidByBillingKeyListRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetPaidByBillingKeyListRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPaidByBillingKeyListRequest() {
       OnConstruction();
     }
@@ -2884,6 +3074,7 @@ namespace V1.SubscribeCustomers {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPaidByBillingKeyListRequest(GetPaidByBillingKeyListRequest other) : this() {
       customerUid_ = other.customerUid_;
       page_ = other.page_;
@@ -2891,6 +3082,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPaidByBillingKeyListRequest Clone() {
       return new GetPaidByBillingKeyListRequest(this);
     }
@@ -2899,6 +3091,7 @@ namespace V1.SubscribeCustomers {
     public const int CustomerUidFieldNumber = 1;
     private string customerUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerUid {
       get { return customerUid_; }
       set {
@@ -2910,6 +3103,7 @@ namespace V1.SubscribeCustomers {
     public const int PageFieldNumber = 2;
     private int page_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Page {
       get { return page_; }
       set {
@@ -2918,11 +3112,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetPaidByBillingKeyListRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetPaidByBillingKeyListRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2936,6 +3132,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CustomerUid.Length != 0) hash ^= CustomerUid.GetHashCode();
@@ -2947,11 +3144,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2972,6 +3171,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CustomerUid.Length != 0) {
         output.WriteRawTag(10);
@@ -2988,6 +3188,7 @@ namespace V1.SubscribeCustomers {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CustomerUid.Length != 0) {
@@ -3003,6 +3204,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetPaidByBillingKeyListRequest other) {
       if (other == null) {
         return;
@@ -3017,6 +3219,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3042,6 +3245,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3072,19 +3276,23 @@ namespace V1.SubscribeCustomers {
     private static readonly pb::MessageParser<NestedGetPaidByBillingKeyListData> _parser = new pb::MessageParser<NestedGetPaidByBillingKeyListData>(() => new NestedGetPaidByBillingKeyListData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NestedGetPaidByBillingKeyListData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NestedGetPaidByBillingKeyListData() {
       OnConstruction();
     }
@@ -3092,6 +3300,7 @@ namespace V1.SubscribeCustomers {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NestedGetPaidByBillingKeyListData(NestedGetPaidByBillingKeyListData other) : this() {
       total_ = other.total_;
       previous_ = other.previous_;
@@ -3101,6 +3310,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NestedGetPaidByBillingKeyListData Clone() {
       return new NestedGetPaidByBillingKeyListData(this);
     }
@@ -3109,6 +3319,7 @@ namespace V1.SubscribeCustomers {
     public const int TotalFieldNumber = 1;
     private int total_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Total {
       get { return total_; }
       set {
@@ -3120,6 +3331,7 @@ namespace V1.SubscribeCustomers {
     public const int PreviousFieldNumber = 2;
     private int previous_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Previous {
       get { return previous_; }
       set {
@@ -3131,6 +3343,7 @@ namespace V1.SubscribeCustomers {
     public const int NextFieldNumber = 3;
     private int next_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Next {
       get { return next_; }
       set {
@@ -3144,16 +3357,19 @@ namespace V1.SubscribeCustomers {
         = pb::FieldCodec.ForMessage(34, global::V1.Payment.Payment.Parser);
     private readonly pbc::RepeatedField<global::V1.Payment.Payment> list_ = new pbc::RepeatedField<global::V1.Payment.Payment>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::V1.Payment.Payment> List {
       get { return list_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NestedGetPaidByBillingKeyListData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NestedGetPaidByBillingKeyListData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3169,6 +3385,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Total != 0) hash ^= Total.GetHashCode();
@@ -3182,11 +3399,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3212,6 +3431,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Total != 0) {
         output.WriteRawTag(8);
@@ -3233,6 +3453,7 @@ namespace V1.SubscribeCustomers {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Total != 0) {
@@ -3252,6 +3473,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NestedGetPaidByBillingKeyListData other) {
       if (other == null) {
         return;
@@ -3270,6 +3492,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3303,6 +3526,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3341,19 +3565,23 @@ namespace V1.SubscribeCustomers {
     private static readonly pb::MessageParser<GetPaidByBillingKeyListResponse> _parser = new pb::MessageParser<GetPaidByBillingKeyListResponse>(() => new GetPaidByBillingKeyListResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetPaidByBillingKeyListResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V1.SubscribeCustomers.SubscribeCustomersReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPaidByBillingKeyListResponse() {
       OnConstruction();
     }
@@ -3361,6 +3589,7 @@ namespace V1.SubscribeCustomers {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPaidByBillingKeyListResponse(GetPaidByBillingKeyListResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -3369,6 +3598,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPaidByBillingKeyListResponse Clone() {
       return new GetPaidByBillingKeyListResponse(this);
     }
@@ -3377,6 +3607,7 @@ namespace V1.SubscribeCustomers {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -3388,6 +3619,7 @@ namespace V1.SubscribeCustomers {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -3399,6 +3631,7 @@ namespace V1.SubscribeCustomers {
     public const int ResponseFieldNumber = 3;
     private global::V1.SubscribeCustomers.NestedGetPaidByBillingKeyListData response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V1.SubscribeCustomers.NestedGetPaidByBillingKeyListData Response {
       get { return response_; }
       set {
@@ -3407,11 +3640,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetPaidByBillingKeyListResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetPaidByBillingKeyListResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3426,6 +3661,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -3438,11 +3674,13 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3467,6 +3705,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -3487,6 +3726,7 @@ namespace V1.SubscribeCustomers {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -3505,6 +3745,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetPaidByBillingKeyListResponse other) {
       if (other == null) {
         return;
@@ -3525,6 +3766,7 @@ namespace V1.SubscribeCustomers {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3557,6 +3799,7 @@ namespace V1.SubscribeCustomers {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

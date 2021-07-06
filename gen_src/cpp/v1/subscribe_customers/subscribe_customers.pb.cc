@@ -440,10 +440,8 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v1_2fs
   schemas, file_default_instances, TableStruct_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto::offsets,
   file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto, file_level_enum_descriptors_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto, file_level_service_descriptors_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto,
 };
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto);
-  return descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto.file_level_metadata[index];
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter() {
+  return &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto;
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -456,10 +454,13 @@ class CustomerBillingKey::_Internal {
  public:
 };
 
-CustomerBillingKey::CustomerBillingKey(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+CustomerBillingKey::CustomerBillingKey(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:subscribe_customers.CustomerBillingKey)
 }
 CustomerBillingKey::CustomerBillingKey(const CustomerBillingKey& from)
@@ -468,57 +469,57 @@ CustomerBillingKey::CustomerBillingKey(const CustomerBillingKey& from)
   card_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_code().empty()) {
     card_code_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_code(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   card_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_name().empty()) {
     card_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_name(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   card_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_number().empty()) {
     card_number_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_number(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_addr().empty()) {
     customer_addr_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_addr(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_email().empty()) {
     customer_email_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_email(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_name().empty()) {
     customer_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_name(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_postcode().empty()) {
     customer_postcode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_postcode(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_tel().empty()) {
     customer_tel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_tel(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_uid().empty()) {
     customer_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_uid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   pg_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_id().empty()) {
     pg_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_id(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_provider().empty()) {
     pg_provider_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_provider(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   ::memcpy(&card_type_, &from.card_type_,
     static_cast<size_t>(reinterpret_cast<char*>(&updated_) -
@@ -526,7 +527,7 @@ CustomerBillingKey::CustomerBillingKey(const CustomerBillingKey& from)
   // @@protoc_insertion_point(copy_constructor:subscribe_customers.CustomerBillingKey)
 }
 
-void CustomerBillingKey::SharedCtor() {
+inline void CustomerBillingKey::SharedCtor() {
 card_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 card_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 card_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -546,12 +547,13 @@ pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString
 
 CustomerBillingKey::~CustomerBillingKey() {
   // @@protoc_insertion_point(destructor:subscribe_customers.CustomerBillingKey)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CustomerBillingKey::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void CustomerBillingKey::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   card_code_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   card_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   card_number_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -603,7 +605,6 @@ const char* CustomerBillingKey::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string card_code = 1;
       case 1:
@@ -727,7 +728,8 @@ const char* CustomerBillingKey::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -754,7 +756,7 @@ failure:
   (void) cached_has_bits;
 
   // string card_code = 1;
-  if (this->card_code().size() > 0) {
+  if (!this->_internal_card_code().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_code().data(), static_cast<int>(this->_internal_card_code().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -764,7 +766,7 @@ failure:
   }
 
   // string card_name = 2;
-  if (this->card_name().size() > 0) {
+  if (!this->_internal_card_name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_name().data(), static_cast<int>(this->_internal_card_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -774,7 +776,7 @@ failure:
   }
 
   // string card_number = 3;
-  if (this->card_number().size() > 0) {
+  if (!this->_internal_card_number().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_number().data(), static_cast<int>(this->_internal_card_number().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -784,13 +786,13 @@ failure:
   }
 
   // int32 card_type = 4;
-  if (this->card_type() != 0) {
+  if (this->_internal_card_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_card_type(), target);
   }
 
   // string customer_addr = 5;
-  if (this->customer_addr().size() > 0) {
+  if (!this->_internal_customer_addr().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_addr().data(), static_cast<int>(this->_internal_customer_addr().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -800,7 +802,7 @@ failure:
   }
 
   // string customer_email = 6;
-  if (this->customer_email().size() > 0) {
+  if (!this->_internal_customer_email().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_email().data(), static_cast<int>(this->_internal_customer_email().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -810,7 +812,7 @@ failure:
   }
 
   // string customer_name = 7;
-  if (this->customer_name().size() > 0) {
+  if (!this->_internal_customer_name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_name().data(), static_cast<int>(this->_internal_customer_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -820,7 +822,7 @@ failure:
   }
 
   // string customer_postcode = 8;
-  if (this->customer_postcode().size() > 0) {
+  if (!this->_internal_customer_postcode().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_postcode().data(), static_cast<int>(this->_internal_customer_postcode().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -830,7 +832,7 @@ failure:
   }
 
   // string customer_tel = 9;
-  if (this->customer_tel().size() > 0) {
+  if (!this->_internal_customer_tel().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_tel().data(), static_cast<int>(this->_internal_customer_tel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -840,7 +842,7 @@ failure:
   }
 
   // string customer_uid = 10;
-  if (this->customer_uid().size() > 0) {
+  if (!this->_internal_customer_uid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_uid().data(), static_cast<int>(this->_internal_customer_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -850,13 +852,13 @@ failure:
   }
 
   // int32 inserted = 11;
-  if (this->inserted() != 0) {
+  if (this->_internal_inserted() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(11, this->_internal_inserted(), target);
   }
 
   // string pg_id = 12;
-  if (this->pg_id().size() > 0) {
+  if (!this->_internal_pg_id().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg_id().data(), static_cast<int>(this->_internal_pg_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -866,7 +868,7 @@ failure:
   }
 
   // string pg_provider = 13;
-  if (this->pg_provider().size() > 0) {
+  if (!this->_internal_pg_provider().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg_provider().data(), static_cast<int>(this->_internal_pg_provider().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -876,7 +878,7 @@ failure:
   }
 
   // int32 updated = 14;
-  if (this->updated() != 0) {
+  if (this->_internal_updated() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(14, this->_internal_updated(), target);
   }
@@ -898,98 +900,98 @@ size_t CustomerBillingKey::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string card_code = 1;
-  if (this->card_code().size() > 0) {
+  if (!this->_internal_card_code().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_code());
   }
 
   // string card_name = 2;
-  if (this->card_name().size() > 0) {
+  if (!this->_internal_card_name().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_name());
   }
 
   // string card_number = 3;
-  if (this->card_number().size() > 0) {
+  if (!this->_internal_card_number().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_number());
   }
 
   // string customer_addr = 5;
-  if (this->customer_addr().size() > 0) {
+  if (!this->_internal_customer_addr().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_addr());
   }
 
   // string customer_email = 6;
-  if (this->customer_email().size() > 0) {
+  if (!this->_internal_customer_email().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_email());
   }
 
   // string customer_name = 7;
-  if (this->customer_name().size() > 0) {
+  if (!this->_internal_customer_name().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_name());
   }
 
   // string customer_postcode = 8;
-  if (this->customer_postcode().size() > 0) {
+  if (!this->_internal_customer_postcode().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_postcode());
   }
 
   // string customer_tel = 9;
-  if (this->customer_tel().size() > 0) {
+  if (!this->_internal_customer_tel().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_tel());
   }
 
   // string customer_uid = 10;
-  if (this->customer_uid().size() > 0) {
+  if (!this->_internal_customer_uid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_uid());
   }
 
   // string pg_id = 12;
-  if (this->pg_id().size() > 0) {
+  if (!this->_internal_pg_id().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pg_id());
   }
 
   // string pg_provider = 13;
-  if (this->pg_provider().size() > 0) {
+  if (!this->_internal_pg_provider().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pg_provider());
   }
 
   // int32 card_type = 4;
-  if (this->card_type() != 0) {
+  if (this->_internal_card_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_card_type());
   }
 
   // int32 inserted = 11;
-  if (this->inserted() != 0) {
+  if (this->_internal_inserted() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_inserted());
   }
 
   // int32 updated = 14;
-  if (this->updated() != 0) {
+  if (this->_internal_updated() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_updated());
@@ -1004,77 +1006,68 @@ size_t CustomerBillingKey::ByteSizeLong() const {
   return total_size;
 }
 
-void CustomerBillingKey::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe_customers.CustomerBillingKey)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CustomerBillingKey* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CustomerBillingKey>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe_customers.CustomerBillingKey)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe_customers.CustomerBillingKey)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CustomerBillingKey::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    CustomerBillingKey::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CustomerBillingKey::GetClassData() const { return &_class_data_; }
+
+void CustomerBillingKey::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<CustomerBillingKey *>(to)->MergeFrom(
+      static_cast<const CustomerBillingKey &>(from));
 }
+
 
 void CustomerBillingKey::MergeFrom(const CustomerBillingKey& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:subscribe_customers.CustomerBillingKey)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.card_code().size() > 0) {
+  if (!from._internal_card_code().empty()) {
     _internal_set_card_code(from._internal_card_code());
   }
-  if (from.card_name().size() > 0) {
+  if (!from._internal_card_name().empty()) {
     _internal_set_card_name(from._internal_card_name());
   }
-  if (from.card_number().size() > 0) {
+  if (!from._internal_card_number().empty()) {
     _internal_set_card_number(from._internal_card_number());
   }
-  if (from.customer_addr().size() > 0) {
+  if (!from._internal_customer_addr().empty()) {
     _internal_set_customer_addr(from._internal_customer_addr());
   }
-  if (from.customer_email().size() > 0) {
+  if (!from._internal_customer_email().empty()) {
     _internal_set_customer_email(from._internal_customer_email());
   }
-  if (from.customer_name().size() > 0) {
+  if (!from._internal_customer_name().empty()) {
     _internal_set_customer_name(from._internal_customer_name());
   }
-  if (from.customer_postcode().size() > 0) {
+  if (!from._internal_customer_postcode().empty()) {
     _internal_set_customer_postcode(from._internal_customer_postcode());
   }
-  if (from.customer_tel().size() > 0) {
+  if (!from._internal_customer_tel().empty()) {
     _internal_set_customer_tel(from._internal_customer_tel());
   }
-  if (from.customer_uid().size() > 0) {
+  if (!from._internal_customer_uid().empty()) {
     _internal_set_customer_uid(from._internal_customer_uid());
   }
-  if (from.pg_id().size() > 0) {
+  if (!from._internal_pg_id().empty()) {
     _internal_set_pg_id(from._internal_pg_id());
   }
-  if (from.pg_provider().size() > 0) {
+  if (!from._internal_pg_provider().empty()) {
     _internal_set_pg_provider(from._internal_pg_provider());
   }
-  if (from.card_type() != 0) {
+  if (from._internal_card_type() != 0) {
     _internal_set_card_type(from._internal_card_type());
   }
-  if (from.inserted() != 0) {
+  if (from._internal_inserted() != 0) {
     _internal_set_inserted(from._internal_inserted());
   }
-  if (from.updated() != 0) {
+  if (from._internal_updated() != 0) {
     _internal_set_updated(from._internal_updated());
   }
-}
-
-void CustomerBillingKey::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe_customers.CustomerBillingKey)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CustomerBillingKey::CopyFrom(const CustomerBillingKey& from) {
@@ -1090,18 +1083,62 @@ bool CustomerBillingKey::IsInitialized() const {
 
 void CustomerBillingKey::InternalSwap(CustomerBillingKey* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  card_code_.Swap(&other->card_code_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_name_.Swap(&other->card_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_number_.Swap(&other->card_number_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_addr_.Swap(&other->customer_addr_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_email_.Swap(&other->customer_email_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_name_.Swap(&other->customer_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_postcode_.Swap(&other->customer_postcode_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_tel_.Swap(&other->customer_tel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_uid_.Swap(&other->customer_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_id_.Swap(&other->pg_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_provider_.Swap(&other->pg_provider_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &card_code_, GetArenaForAllocation(),
+      &other->card_code_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &card_name_, GetArenaForAllocation(),
+      &other->card_name_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &card_number_, GetArenaForAllocation(),
+      &other->card_number_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_addr_, GetArenaForAllocation(),
+      &other->customer_addr_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_email_, GetArenaForAllocation(),
+      &other->customer_email_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_name_, GetArenaForAllocation(),
+      &other->customer_name_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_postcode_, GetArenaForAllocation(),
+      &other->customer_postcode_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_tel_, GetArenaForAllocation(),
+      &other->customer_tel_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_uid_, GetArenaForAllocation(),
+      &other->customer_uid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &pg_id_, GetArenaForAllocation(),
+      &other->pg_id_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &pg_provider_, GetArenaForAllocation(),
+      &other->pg_provider_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CustomerBillingKey, updated_)
       + sizeof(CustomerBillingKey::updated_)
@@ -1111,9 +1148,10 @@ void CustomerBillingKey::InternalSwap(CustomerBillingKey* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CustomerBillingKey::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter, &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once,
+      file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -1121,11 +1159,14 @@ class GetMultipleCustomerBillingKeyRequest::_Internal {
  public:
 };
 
-GetMultipleCustomerBillingKeyRequest::GetMultipleCustomerBillingKeyRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+GetMultipleCustomerBillingKeyRequest::GetMultipleCustomerBillingKeyRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
   customer_uid_(arena) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:subscribe_customers.GetMultipleCustomerBillingKeyRequest)
 }
 GetMultipleCustomerBillingKeyRequest::GetMultipleCustomerBillingKeyRequest(const GetMultipleCustomerBillingKeyRequest& from)
@@ -1135,17 +1176,18 @@ GetMultipleCustomerBillingKeyRequest::GetMultipleCustomerBillingKeyRequest(const
   // @@protoc_insertion_point(copy_constructor:subscribe_customers.GetMultipleCustomerBillingKeyRequest)
 }
 
-void GetMultipleCustomerBillingKeyRequest::SharedCtor() {
+inline void GetMultipleCustomerBillingKeyRequest::SharedCtor() {
 }
 
 GetMultipleCustomerBillingKeyRequest::~GetMultipleCustomerBillingKeyRequest() {
   // @@protoc_insertion_point(destructor:subscribe_customers.GetMultipleCustomerBillingKeyRequest)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void GetMultipleCustomerBillingKeyRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void GetMultipleCustomerBillingKeyRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void GetMultipleCustomerBillingKeyRequest::ArenaDtor(void* object) {
@@ -1173,7 +1215,6 @@ const char* GetMultipleCustomerBillingKeyRequest::_InternalParse(const char* ptr
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // repeated string customer_uid = 1;
       case 1:
@@ -1191,7 +1232,8 @@ const char* GetMultipleCustomerBillingKeyRequest::_InternalParse(const char* ptr
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -1260,36 +1302,27 @@ size_t GetMultipleCustomerBillingKeyRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void GetMultipleCustomerBillingKeyRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe_customers.GetMultipleCustomerBillingKeyRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const GetMultipleCustomerBillingKeyRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetMultipleCustomerBillingKeyRequest>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe_customers.GetMultipleCustomerBillingKeyRequest)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe_customers.GetMultipleCustomerBillingKeyRequest)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetMultipleCustomerBillingKeyRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    GetMultipleCustomerBillingKeyRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetMultipleCustomerBillingKeyRequest::GetClassData() const { return &_class_data_; }
+
+void GetMultipleCustomerBillingKeyRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<GetMultipleCustomerBillingKeyRequest *>(to)->MergeFrom(
+      static_cast<const GetMultipleCustomerBillingKeyRequest &>(from));
 }
+
 
 void GetMultipleCustomerBillingKeyRequest::MergeFrom(const GetMultipleCustomerBillingKeyRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:subscribe_customers.GetMultipleCustomerBillingKeyRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   customer_uid_.MergeFrom(from.customer_uid_);
-}
-
-void GetMultipleCustomerBillingKeyRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe_customers.GetMultipleCustomerBillingKeyRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void GetMultipleCustomerBillingKeyRequest::CopyFrom(const GetMultipleCustomerBillingKeyRequest& from) {
@@ -1305,14 +1338,15 @@ bool GetMultipleCustomerBillingKeyRequest::IsInitialized() const {
 
 void GetMultipleCustomerBillingKeyRequest::InternalSwap(GetMultipleCustomerBillingKeyRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   customer_uid_.InternalSwap(&other->customer_uid_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetMultipleCustomerBillingKeyRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter, &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once,
+      file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto[1]);
 }
-
 
 // ===================================================================
 
@@ -1320,11 +1354,14 @@ class GetMultipleCustomerBillingKeyResponse::_Internal {
  public:
 };
 
-GetMultipleCustomerBillingKeyResponse::GetMultipleCustomerBillingKeyResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+GetMultipleCustomerBillingKeyResponse::GetMultipleCustomerBillingKeyResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
   response_(arena) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:subscribe_customers.GetMultipleCustomerBillingKeyResponse)
 }
 GetMultipleCustomerBillingKeyResponse::GetMultipleCustomerBillingKeyResponse(const GetMultipleCustomerBillingKeyResponse& from)
@@ -1334,25 +1371,26 @@ GetMultipleCustomerBillingKeyResponse::GetMultipleCustomerBillingKeyResponse(con
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
     message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   code_ = from.code_;
   // @@protoc_insertion_point(copy_constructor:subscribe_customers.GetMultipleCustomerBillingKeyResponse)
 }
 
-void GetMultipleCustomerBillingKeyResponse::SharedCtor() {
+inline void GetMultipleCustomerBillingKeyResponse::SharedCtor() {
 message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 code_ = 0;
 }
 
 GetMultipleCustomerBillingKeyResponse::~GetMultipleCustomerBillingKeyResponse() {
   // @@protoc_insertion_point(destructor:subscribe_customers.GetMultipleCustomerBillingKeyResponse)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void GetMultipleCustomerBillingKeyResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void GetMultipleCustomerBillingKeyResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -1383,7 +1421,6 @@ const char* GetMultipleCustomerBillingKeyResponse::_InternalParse(const char* pt
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int32 code = 1;
       case 1:
@@ -1415,7 +1452,8 @@ const char* GetMultipleCustomerBillingKeyResponse::_InternalParse(const char* pt
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -1442,13 +1480,13 @@ failure:
   (void) cached_has_bits;
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
   }
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1489,14 +1527,14 @@ size_t GetMultipleCustomerBillingKeyResponse::ByteSizeLong() const {
   }
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_message());
   }
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_code());
@@ -1511,42 +1549,33 @@ size_t GetMultipleCustomerBillingKeyResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void GetMultipleCustomerBillingKeyResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe_customers.GetMultipleCustomerBillingKeyResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  const GetMultipleCustomerBillingKeyResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetMultipleCustomerBillingKeyResponse>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe_customers.GetMultipleCustomerBillingKeyResponse)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe_customers.GetMultipleCustomerBillingKeyResponse)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetMultipleCustomerBillingKeyResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    GetMultipleCustomerBillingKeyResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetMultipleCustomerBillingKeyResponse::GetClassData() const { return &_class_data_; }
+
+void GetMultipleCustomerBillingKeyResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<GetMultipleCustomerBillingKeyResponse *>(to)->MergeFrom(
+      static_cast<const GetMultipleCustomerBillingKeyResponse &>(from));
 }
+
 
 void GetMultipleCustomerBillingKeyResponse::MergeFrom(const GetMultipleCustomerBillingKeyResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:subscribe_customers.GetMultipleCustomerBillingKeyResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   response_.MergeFrom(from.response_);
-  if (from.message().size() > 0) {
+  if (!from._internal_message().empty()) {
     _internal_set_message(from._internal_message());
   }
-  if (from.code() != 0) {
+  if (from._internal_code() != 0) {
     _internal_set_code(from._internal_code());
   }
-}
-
-void GetMultipleCustomerBillingKeyResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe_customers.GetMultipleCustomerBillingKeyResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void GetMultipleCustomerBillingKeyResponse::CopyFrom(const GetMultipleCustomerBillingKeyResponse& from) {
@@ -1562,16 +1591,21 @@ bool GetMultipleCustomerBillingKeyResponse::IsInitialized() const {
 
 void GetMultipleCustomerBillingKeyResponse::InternalSwap(GetMultipleCustomerBillingKeyResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   response_.InternalSwap(&other->response_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &message_, GetArenaForAllocation(),
+      &other->message_, other->GetArenaForAllocation()
+  );
   swap(code_, other->code_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetMultipleCustomerBillingKeyResponse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter, &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once,
+      file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto[2]);
 }
-
 
 // ===================================================================
 
@@ -1579,10 +1613,13 @@ class DeleteCustomerBillingKeyRequest::_Internal {
  public:
 };
 
-DeleteCustomerBillingKeyRequest::DeleteCustomerBillingKeyRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+DeleteCustomerBillingKeyRequest::DeleteCustomerBillingKeyRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:subscribe_customers.DeleteCustomerBillingKeyRequest)
 }
 DeleteCustomerBillingKeyRequest::DeleteCustomerBillingKeyRequest(const DeleteCustomerBillingKeyRequest& from)
@@ -1591,22 +1628,22 @@ DeleteCustomerBillingKeyRequest::DeleteCustomerBillingKeyRequest(const DeleteCus
   customer_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_uid().empty()) {
     customer_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_uid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_reason().empty()) {
     reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_reason(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   requester_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_requester().empty()) {
     requester_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_requester(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:subscribe_customers.DeleteCustomerBillingKeyRequest)
 }
 
-void DeleteCustomerBillingKeyRequest::SharedCtor() {
+inline void DeleteCustomerBillingKeyRequest::SharedCtor() {
 customer_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 requester_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -1614,12 +1651,13 @@ requester_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAl
 
 DeleteCustomerBillingKeyRequest::~DeleteCustomerBillingKeyRequest() {
   // @@protoc_insertion_point(destructor:subscribe_customers.DeleteCustomerBillingKeyRequest)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void DeleteCustomerBillingKeyRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void DeleteCustomerBillingKeyRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   customer_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   reason_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   requester_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -1652,7 +1690,6 @@ const char* DeleteCustomerBillingKeyRequest::_InternalParse(const char* ptr, ::P
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string customer_uid = 1;
       case 1:
@@ -1683,7 +1720,8 @@ const char* DeleteCustomerBillingKeyRequest::_InternalParse(const char* ptr, ::P
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -1710,7 +1748,7 @@ failure:
   (void) cached_has_bits;
 
   // string customer_uid = 1;
-  if (this->customer_uid().size() > 0) {
+  if (!this->_internal_customer_uid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_uid().data(), static_cast<int>(this->_internal_customer_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1720,7 +1758,7 @@ failure:
   }
 
   // string reason = 2;
-  if (this->reason().size() > 0) {
+  if (!this->_internal_reason().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1730,7 +1768,7 @@ failure:
   }
 
   // string requester = 3;
-  if (this->requester().size() > 0) {
+  if (!this->_internal_requester().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_requester().data(), static_cast<int>(this->_internal_requester().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1756,21 +1794,21 @@ size_t DeleteCustomerBillingKeyRequest::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string customer_uid = 1;
-  if (this->customer_uid().size() > 0) {
+  if (!this->_internal_customer_uid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_uid());
   }
 
   // string reason = 2;
-  if (this->reason().size() > 0) {
+  if (!this->_internal_reason().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_reason());
   }
 
   // string requester = 3;
-  if (this->requester().size() > 0) {
+  if (!this->_internal_requester().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_requester());
@@ -1785,44 +1823,35 @@ size_t DeleteCustomerBillingKeyRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void DeleteCustomerBillingKeyRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe_customers.DeleteCustomerBillingKeyRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const DeleteCustomerBillingKeyRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<DeleteCustomerBillingKeyRequest>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe_customers.DeleteCustomerBillingKeyRequest)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe_customers.DeleteCustomerBillingKeyRequest)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DeleteCustomerBillingKeyRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    DeleteCustomerBillingKeyRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DeleteCustomerBillingKeyRequest::GetClassData() const { return &_class_data_; }
+
+void DeleteCustomerBillingKeyRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<DeleteCustomerBillingKeyRequest *>(to)->MergeFrom(
+      static_cast<const DeleteCustomerBillingKeyRequest &>(from));
 }
+
 
 void DeleteCustomerBillingKeyRequest::MergeFrom(const DeleteCustomerBillingKeyRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:subscribe_customers.DeleteCustomerBillingKeyRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.customer_uid().size() > 0) {
+  if (!from._internal_customer_uid().empty()) {
     _internal_set_customer_uid(from._internal_customer_uid());
   }
-  if (from.reason().size() > 0) {
+  if (!from._internal_reason().empty()) {
     _internal_set_reason(from._internal_reason());
   }
-  if (from.requester().size() > 0) {
+  if (!from._internal_requester().empty()) {
     _internal_set_requester(from._internal_requester());
   }
-}
-
-void DeleteCustomerBillingKeyRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe_customers.DeleteCustomerBillingKeyRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void DeleteCustomerBillingKeyRequest::CopyFrom(const DeleteCustomerBillingKeyRequest& from) {
@@ -1838,16 +1867,29 @@ bool DeleteCustomerBillingKeyRequest::IsInitialized() const {
 
 void DeleteCustomerBillingKeyRequest::InternalSwap(DeleteCustomerBillingKeyRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  customer_uid_.Swap(&other->customer_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  reason_.Swap(&other->reason_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  requester_.Swap(&other->requester_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_uid_, GetArenaForAllocation(),
+      &other->customer_uid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &reason_, GetArenaForAllocation(),
+      &other->reason_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &requester_, GetArenaForAllocation(),
+      &other->requester_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteCustomerBillingKeyRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter, &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once,
+      file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto[3]);
 }
-
 
 // ===================================================================
 
@@ -1860,10 +1902,13 @@ const ::subscribe_customers::CustomerBillingKey&
 DeleteCustomerBillingKeyResponse::_Internal::response(const DeleteCustomerBillingKeyResponse* msg) {
   return *msg->response_;
 }
-DeleteCustomerBillingKeyResponse::DeleteCustomerBillingKeyResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+DeleteCustomerBillingKeyResponse::DeleteCustomerBillingKeyResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:subscribe_customers.DeleteCustomerBillingKeyResponse)
 }
 DeleteCustomerBillingKeyResponse::DeleteCustomerBillingKeyResponse(const DeleteCustomerBillingKeyResponse& from)
@@ -1872,7 +1917,7 @@ DeleteCustomerBillingKeyResponse::DeleteCustomerBillingKeyResponse(const DeleteC
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
     message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_response()) {
     response_ = new ::subscribe_customers::CustomerBillingKey(*from.response_);
@@ -1883,7 +1928,7 @@ DeleteCustomerBillingKeyResponse::DeleteCustomerBillingKeyResponse(const DeleteC
   // @@protoc_insertion_point(copy_constructor:subscribe_customers.DeleteCustomerBillingKeyResponse)
 }
 
-void DeleteCustomerBillingKeyResponse::SharedCtor() {
+inline void DeleteCustomerBillingKeyResponse::SharedCtor() {
 message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
@@ -1893,12 +1938,13 @@ message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlre
 
 DeleteCustomerBillingKeyResponse::~DeleteCustomerBillingKeyResponse() {
   // @@protoc_insertion_point(destructor:subscribe_customers.DeleteCustomerBillingKeyResponse)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void DeleteCustomerBillingKeyResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void DeleteCustomerBillingKeyResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete response_;
 }
@@ -1920,7 +1966,7 @@ void DeleteCustomerBillingKeyResponse::Clear() {
   (void) cached_has_bits;
 
   message_.ClearToEmpty();
-  if (GetArena() == nullptr && response_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && response_ != nullptr) {
     delete response_;
   }
   response_ = nullptr;
@@ -1933,7 +1979,6 @@ const char* DeleteCustomerBillingKeyResponse::_InternalParse(const char* ptr, ::
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int32 code = 1;
       case 1:
@@ -1960,7 +2005,8 @@ const char* DeleteCustomerBillingKeyResponse::_InternalParse(const char* ptr, ::
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -1987,13 +2033,13 @@ failure:
   (void) cached_has_bits;
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
   }
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2003,7 +2049,7 @@ failure:
   }
 
   // .subscribe_customers.CustomerBillingKey response = 3;
-  if (this->has_response()) {
+  if (this->_internal_has_response()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
@@ -2027,21 +2073,21 @@ size_t DeleteCustomerBillingKeyResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_message());
   }
 
   // .subscribe_customers.CustomerBillingKey response = 3;
-  if (this->has_response()) {
+  if (this->_internal_has_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *response_);
   }
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_code());
@@ -2056,44 +2102,35 @@ size_t DeleteCustomerBillingKeyResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void DeleteCustomerBillingKeyResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe_customers.DeleteCustomerBillingKeyResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  const DeleteCustomerBillingKeyResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<DeleteCustomerBillingKeyResponse>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe_customers.DeleteCustomerBillingKeyResponse)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe_customers.DeleteCustomerBillingKeyResponse)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DeleteCustomerBillingKeyResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    DeleteCustomerBillingKeyResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DeleteCustomerBillingKeyResponse::GetClassData() const { return &_class_data_; }
+
+void DeleteCustomerBillingKeyResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<DeleteCustomerBillingKeyResponse *>(to)->MergeFrom(
+      static_cast<const DeleteCustomerBillingKeyResponse &>(from));
 }
+
 
 void DeleteCustomerBillingKeyResponse::MergeFrom(const DeleteCustomerBillingKeyResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:subscribe_customers.DeleteCustomerBillingKeyResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.message().size() > 0) {
+  if (!from._internal_message().empty()) {
     _internal_set_message(from._internal_message());
   }
-  if (from.has_response()) {
+  if (from._internal_has_response()) {
     _internal_mutable_response()->::subscribe_customers::CustomerBillingKey::MergeFrom(from._internal_response());
   }
-  if (from.code() != 0) {
+  if (from._internal_code() != 0) {
     _internal_set_code(from._internal_code());
   }
-}
-
-void DeleteCustomerBillingKeyResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe_customers.DeleteCustomerBillingKeyResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void DeleteCustomerBillingKeyResponse::CopyFrom(const DeleteCustomerBillingKeyResponse& from) {
@@ -2109,8 +2146,12 @@ bool DeleteCustomerBillingKeyResponse::IsInitialized() const {
 
 void DeleteCustomerBillingKeyResponse::InternalSwap(DeleteCustomerBillingKeyResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &message_, GetArenaForAllocation(),
+      &other->message_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(DeleteCustomerBillingKeyResponse, code_)
       + sizeof(DeleteCustomerBillingKeyResponse::code_)
@@ -2120,9 +2161,10 @@ void DeleteCustomerBillingKeyResponse::InternalSwap(DeleteCustomerBillingKeyResp
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteCustomerBillingKeyResponse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter, &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once,
+      file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto[4]);
 }
-
 
 // ===================================================================
 
@@ -2130,10 +2172,13 @@ class GetCustomerBillingKeyRequest::_Internal {
  public:
 };
 
-GetCustomerBillingKeyRequest::GetCustomerBillingKeyRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+GetCustomerBillingKeyRequest::GetCustomerBillingKeyRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:subscribe_customers.GetCustomerBillingKeyRequest)
 }
 GetCustomerBillingKeyRequest::GetCustomerBillingKeyRequest(const GetCustomerBillingKeyRequest& from)
@@ -2142,23 +2187,24 @@ GetCustomerBillingKeyRequest::GetCustomerBillingKeyRequest(const GetCustomerBill
   customer_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_uid().empty()) {
     customer_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_uid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:subscribe_customers.GetCustomerBillingKeyRequest)
 }
 
-void GetCustomerBillingKeyRequest::SharedCtor() {
+inline void GetCustomerBillingKeyRequest::SharedCtor() {
 customer_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 GetCustomerBillingKeyRequest::~GetCustomerBillingKeyRequest() {
   // @@protoc_insertion_point(destructor:subscribe_customers.GetCustomerBillingKeyRequest)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void GetCustomerBillingKeyRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void GetCustomerBillingKeyRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   customer_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -2187,7 +2233,6 @@ const char* GetCustomerBillingKeyRequest::_InternalParse(const char* ptr, ::PROT
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string customer_uid = 1;
       case 1:
@@ -2200,7 +2245,8 @@ const char* GetCustomerBillingKeyRequest::_InternalParse(const char* ptr, ::PROT
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -2227,7 +2273,7 @@ failure:
   (void) cached_has_bits;
 
   // string customer_uid = 1;
-  if (this->customer_uid().size() > 0) {
+  if (!this->_internal_customer_uid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_uid().data(), static_cast<int>(this->_internal_customer_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2253,7 +2299,7 @@ size_t GetCustomerBillingKeyRequest::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string customer_uid = 1;
-  if (this->customer_uid().size() > 0) {
+  if (!this->_internal_customer_uid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_uid());
@@ -2268,38 +2314,29 @@ size_t GetCustomerBillingKeyRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void GetCustomerBillingKeyRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe_customers.GetCustomerBillingKeyRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const GetCustomerBillingKeyRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetCustomerBillingKeyRequest>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe_customers.GetCustomerBillingKeyRequest)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe_customers.GetCustomerBillingKeyRequest)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetCustomerBillingKeyRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    GetCustomerBillingKeyRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetCustomerBillingKeyRequest::GetClassData() const { return &_class_data_; }
+
+void GetCustomerBillingKeyRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<GetCustomerBillingKeyRequest *>(to)->MergeFrom(
+      static_cast<const GetCustomerBillingKeyRequest &>(from));
 }
+
 
 void GetCustomerBillingKeyRequest::MergeFrom(const GetCustomerBillingKeyRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:subscribe_customers.GetCustomerBillingKeyRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.customer_uid().size() > 0) {
+  if (!from._internal_customer_uid().empty()) {
     _internal_set_customer_uid(from._internal_customer_uid());
   }
-}
-
-void GetCustomerBillingKeyRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe_customers.GetCustomerBillingKeyRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void GetCustomerBillingKeyRequest::CopyFrom(const GetCustomerBillingKeyRequest& from) {
@@ -2315,14 +2352,19 @@ bool GetCustomerBillingKeyRequest::IsInitialized() const {
 
 void GetCustomerBillingKeyRequest::InternalSwap(GetCustomerBillingKeyRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  customer_uid_.Swap(&other->customer_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_uid_, GetArenaForAllocation(),
+      &other->customer_uid_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetCustomerBillingKeyRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter, &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once,
+      file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto[5]);
 }
-
 
 // ===================================================================
 
@@ -2335,10 +2377,13 @@ const ::subscribe_customers::CustomerBillingKey&
 GetCustomerBillingKeyResponse::_Internal::response(const GetCustomerBillingKeyResponse* msg) {
   return *msg->response_;
 }
-GetCustomerBillingKeyResponse::GetCustomerBillingKeyResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+GetCustomerBillingKeyResponse::GetCustomerBillingKeyResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:subscribe_customers.GetCustomerBillingKeyResponse)
 }
 GetCustomerBillingKeyResponse::GetCustomerBillingKeyResponse(const GetCustomerBillingKeyResponse& from)
@@ -2347,7 +2392,7 @@ GetCustomerBillingKeyResponse::GetCustomerBillingKeyResponse(const GetCustomerBi
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
     message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_response()) {
     response_ = new ::subscribe_customers::CustomerBillingKey(*from.response_);
@@ -2358,7 +2403,7 @@ GetCustomerBillingKeyResponse::GetCustomerBillingKeyResponse(const GetCustomerBi
   // @@protoc_insertion_point(copy_constructor:subscribe_customers.GetCustomerBillingKeyResponse)
 }
 
-void GetCustomerBillingKeyResponse::SharedCtor() {
+inline void GetCustomerBillingKeyResponse::SharedCtor() {
 message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
@@ -2368,12 +2413,13 @@ message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlre
 
 GetCustomerBillingKeyResponse::~GetCustomerBillingKeyResponse() {
   // @@protoc_insertion_point(destructor:subscribe_customers.GetCustomerBillingKeyResponse)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void GetCustomerBillingKeyResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void GetCustomerBillingKeyResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete response_;
 }
@@ -2395,7 +2441,7 @@ void GetCustomerBillingKeyResponse::Clear() {
   (void) cached_has_bits;
 
   message_.ClearToEmpty();
-  if (GetArena() == nullptr && response_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && response_ != nullptr) {
     delete response_;
   }
   response_ = nullptr;
@@ -2408,7 +2454,6 @@ const char* GetCustomerBillingKeyResponse::_InternalParse(const char* ptr, ::PRO
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int32 code = 1;
       case 1:
@@ -2435,7 +2480,8 @@ const char* GetCustomerBillingKeyResponse::_InternalParse(const char* ptr, ::PRO
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -2462,13 +2508,13 @@ failure:
   (void) cached_has_bits;
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
   }
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2478,7 +2524,7 @@ failure:
   }
 
   // .subscribe_customers.CustomerBillingKey response = 3;
-  if (this->has_response()) {
+  if (this->_internal_has_response()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
@@ -2502,21 +2548,21 @@ size_t GetCustomerBillingKeyResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_message());
   }
 
   // .subscribe_customers.CustomerBillingKey response = 3;
-  if (this->has_response()) {
+  if (this->_internal_has_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *response_);
   }
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_code());
@@ -2531,44 +2577,35 @@ size_t GetCustomerBillingKeyResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void GetCustomerBillingKeyResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe_customers.GetCustomerBillingKeyResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  const GetCustomerBillingKeyResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetCustomerBillingKeyResponse>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe_customers.GetCustomerBillingKeyResponse)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe_customers.GetCustomerBillingKeyResponse)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetCustomerBillingKeyResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    GetCustomerBillingKeyResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetCustomerBillingKeyResponse::GetClassData() const { return &_class_data_; }
+
+void GetCustomerBillingKeyResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<GetCustomerBillingKeyResponse *>(to)->MergeFrom(
+      static_cast<const GetCustomerBillingKeyResponse &>(from));
 }
+
 
 void GetCustomerBillingKeyResponse::MergeFrom(const GetCustomerBillingKeyResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:subscribe_customers.GetCustomerBillingKeyResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.message().size() > 0) {
+  if (!from._internal_message().empty()) {
     _internal_set_message(from._internal_message());
   }
-  if (from.has_response()) {
+  if (from._internal_has_response()) {
     _internal_mutable_response()->::subscribe_customers::CustomerBillingKey::MergeFrom(from._internal_response());
   }
-  if (from.code() != 0) {
+  if (from._internal_code() != 0) {
     _internal_set_code(from._internal_code());
   }
-}
-
-void GetCustomerBillingKeyResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe_customers.GetCustomerBillingKeyResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void GetCustomerBillingKeyResponse::CopyFrom(const GetCustomerBillingKeyResponse& from) {
@@ -2584,8 +2621,12 @@ bool GetCustomerBillingKeyResponse::IsInitialized() const {
 
 void GetCustomerBillingKeyResponse::InternalSwap(GetCustomerBillingKeyResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &message_, GetArenaForAllocation(),
+      &other->message_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(GetCustomerBillingKeyResponse, code_)
       + sizeof(GetCustomerBillingKeyResponse::code_)
@@ -2595,9 +2636,10 @@ void GetCustomerBillingKeyResponse::InternalSwap(GetCustomerBillingKeyResponse* 
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetCustomerBillingKeyResponse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter, &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once,
+      file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto[6]);
 }
-
 
 // ===================================================================
 
@@ -2605,10 +2647,13 @@ class InsertCustomerBillingKeyRequest::_Internal {
  public:
 };
 
-InsertCustomerBillingKeyRequest::InsertCustomerBillingKeyRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+InsertCustomerBillingKeyRequest::InsertCustomerBillingKeyRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:subscribe_customers.InsertCustomerBillingKeyRequest)
 }
 InsertCustomerBillingKeyRequest::InsertCustomerBillingKeyRequest(const InsertCustomerBillingKeyRequest& from)
@@ -2617,62 +2662,62 @@ InsertCustomerBillingKeyRequest::InsertCustomerBillingKeyRequest(const InsertCus
   customer_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_uid().empty()) {
     customer_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_uid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   pg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg().empty()) {
     pg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   card_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_number().empty()) {
     card_number_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_number(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   expiry_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_expiry().empty()) {
     expiry_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_expiry(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   birth_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_birth().empty()) {
     birth_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_birth(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   pwd_2digit_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pwd_2digit().empty()) {
     pwd_2digit_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pwd_2digit(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_name().empty()) {
     customer_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_name(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_tel().empty()) {
     customer_tel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_tel(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_email().empty()) {
     customer_email_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_email(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_addr().empty()) {
     customer_addr_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_addr(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_postcode().empty()) {
     customer_postcode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_postcode(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:subscribe_customers.InsertCustomerBillingKeyRequest)
 }
 
-void InsertCustomerBillingKeyRequest::SharedCtor() {
+inline void InsertCustomerBillingKeyRequest::SharedCtor() {
 customer_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 pg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 card_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -2688,12 +2733,13 @@ customer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmpty
 
 InsertCustomerBillingKeyRequest::~InsertCustomerBillingKeyRequest() {
   // @@protoc_insertion_point(destructor:subscribe_customers.InsertCustomerBillingKeyRequest)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void InsertCustomerBillingKeyRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void InsertCustomerBillingKeyRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   customer_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   pg_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   card_number_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -2742,7 +2788,6 @@ const char* InsertCustomerBillingKeyRequest::_InternalParse(const char* ptr, ::P
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string customer_uid = 1;
       case 1:
@@ -2845,7 +2890,8 @@ const char* InsertCustomerBillingKeyRequest::_InternalParse(const char* ptr, ::P
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -2872,7 +2918,7 @@ failure:
   (void) cached_has_bits;
 
   // string customer_uid = 1;
-  if (this->customer_uid().size() > 0) {
+  if (!this->_internal_customer_uid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_uid().data(), static_cast<int>(this->_internal_customer_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2882,7 +2928,7 @@ failure:
   }
 
   // string pg = 2;
-  if (this->pg().size() > 0) {
+  if (!this->_internal_pg().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg().data(), static_cast<int>(this->_internal_pg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2892,7 +2938,7 @@ failure:
   }
 
   // string card_number = 3;
-  if (this->card_number().size() > 0) {
+  if (!this->_internal_card_number().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_number().data(), static_cast<int>(this->_internal_card_number().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2902,7 +2948,7 @@ failure:
   }
 
   // string expiry = 4;
-  if (this->expiry().size() > 0) {
+  if (!this->_internal_expiry().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_expiry().data(), static_cast<int>(this->_internal_expiry().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2912,7 +2958,7 @@ failure:
   }
 
   // string birth = 5;
-  if (this->birth().size() > 0) {
+  if (!this->_internal_birth().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_birth().data(), static_cast<int>(this->_internal_birth().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2922,7 +2968,7 @@ failure:
   }
 
   // string pwd_2digit = 6;
-  if (this->pwd_2digit().size() > 0) {
+  if (!this->_internal_pwd_2digit().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pwd_2digit().data(), static_cast<int>(this->_internal_pwd_2digit().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2932,7 +2978,7 @@ failure:
   }
 
   // string customer_name = 7;
-  if (this->customer_name().size() > 0) {
+  if (!this->_internal_customer_name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_name().data(), static_cast<int>(this->_internal_customer_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2942,7 +2988,7 @@ failure:
   }
 
   // string customer_tel = 8;
-  if (this->customer_tel().size() > 0) {
+  if (!this->_internal_customer_tel().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_tel().data(), static_cast<int>(this->_internal_customer_tel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2952,7 +2998,7 @@ failure:
   }
 
   // string customer_email = 9;
-  if (this->customer_email().size() > 0) {
+  if (!this->_internal_customer_email().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_email().data(), static_cast<int>(this->_internal_customer_email().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2962,7 +3008,7 @@ failure:
   }
 
   // string customer_addr = 10;
-  if (this->customer_addr().size() > 0) {
+  if (!this->_internal_customer_addr().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_addr().data(), static_cast<int>(this->_internal_customer_addr().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2972,7 +3018,7 @@ failure:
   }
 
   // string customer_postcode = 11;
-  if (this->customer_postcode().size() > 0) {
+  if (!this->_internal_customer_postcode().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_postcode().data(), static_cast<int>(this->_internal_customer_postcode().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2998,77 +3044,77 @@ size_t InsertCustomerBillingKeyRequest::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string customer_uid = 1;
-  if (this->customer_uid().size() > 0) {
+  if (!this->_internal_customer_uid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_uid());
   }
 
   // string pg = 2;
-  if (this->pg().size() > 0) {
+  if (!this->_internal_pg().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pg());
   }
 
   // string card_number = 3;
-  if (this->card_number().size() > 0) {
+  if (!this->_internal_card_number().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_number());
   }
 
   // string expiry = 4;
-  if (this->expiry().size() > 0) {
+  if (!this->_internal_expiry().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_expiry());
   }
 
   // string birth = 5;
-  if (this->birth().size() > 0) {
+  if (!this->_internal_birth().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_birth());
   }
 
   // string pwd_2digit = 6;
-  if (this->pwd_2digit().size() > 0) {
+  if (!this->_internal_pwd_2digit().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pwd_2digit());
   }
 
   // string customer_name = 7;
-  if (this->customer_name().size() > 0) {
+  if (!this->_internal_customer_name().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_name());
   }
 
   // string customer_tel = 8;
-  if (this->customer_tel().size() > 0) {
+  if (!this->_internal_customer_tel().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_tel());
   }
 
   // string customer_email = 9;
-  if (this->customer_email().size() > 0) {
+  if (!this->_internal_customer_email().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_email());
   }
 
   // string customer_addr = 10;
-  if (this->customer_addr().size() > 0) {
+  if (!this->_internal_customer_addr().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_addr());
   }
 
   // string customer_postcode = 11;
-  if (this->customer_postcode().size() > 0) {
+  if (!this->_internal_customer_postcode().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_postcode());
@@ -3083,68 +3129,59 @@ size_t InsertCustomerBillingKeyRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void InsertCustomerBillingKeyRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe_customers.InsertCustomerBillingKeyRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const InsertCustomerBillingKeyRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InsertCustomerBillingKeyRequest>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe_customers.InsertCustomerBillingKeyRequest)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe_customers.InsertCustomerBillingKeyRequest)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData InsertCustomerBillingKeyRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    InsertCustomerBillingKeyRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InsertCustomerBillingKeyRequest::GetClassData() const { return &_class_data_; }
+
+void InsertCustomerBillingKeyRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<InsertCustomerBillingKeyRequest *>(to)->MergeFrom(
+      static_cast<const InsertCustomerBillingKeyRequest &>(from));
 }
+
 
 void InsertCustomerBillingKeyRequest::MergeFrom(const InsertCustomerBillingKeyRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:subscribe_customers.InsertCustomerBillingKeyRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.customer_uid().size() > 0) {
+  if (!from._internal_customer_uid().empty()) {
     _internal_set_customer_uid(from._internal_customer_uid());
   }
-  if (from.pg().size() > 0) {
+  if (!from._internal_pg().empty()) {
     _internal_set_pg(from._internal_pg());
   }
-  if (from.card_number().size() > 0) {
+  if (!from._internal_card_number().empty()) {
     _internal_set_card_number(from._internal_card_number());
   }
-  if (from.expiry().size() > 0) {
+  if (!from._internal_expiry().empty()) {
     _internal_set_expiry(from._internal_expiry());
   }
-  if (from.birth().size() > 0) {
+  if (!from._internal_birth().empty()) {
     _internal_set_birth(from._internal_birth());
   }
-  if (from.pwd_2digit().size() > 0) {
+  if (!from._internal_pwd_2digit().empty()) {
     _internal_set_pwd_2digit(from._internal_pwd_2digit());
   }
-  if (from.customer_name().size() > 0) {
+  if (!from._internal_customer_name().empty()) {
     _internal_set_customer_name(from._internal_customer_name());
   }
-  if (from.customer_tel().size() > 0) {
+  if (!from._internal_customer_tel().empty()) {
     _internal_set_customer_tel(from._internal_customer_tel());
   }
-  if (from.customer_email().size() > 0) {
+  if (!from._internal_customer_email().empty()) {
     _internal_set_customer_email(from._internal_customer_email());
   }
-  if (from.customer_addr().size() > 0) {
+  if (!from._internal_customer_addr().empty()) {
     _internal_set_customer_addr(from._internal_customer_addr());
   }
-  if (from.customer_postcode().size() > 0) {
+  if (!from._internal_customer_postcode().empty()) {
     _internal_set_customer_postcode(from._internal_customer_postcode());
   }
-}
-
-void InsertCustomerBillingKeyRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe_customers.InsertCustomerBillingKeyRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void InsertCustomerBillingKeyRequest::CopyFrom(const InsertCustomerBillingKeyRequest& from) {
@@ -3160,24 +3197,69 @@ bool InsertCustomerBillingKeyRequest::IsInitialized() const {
 
 void InsertCustomerBillingKeyRequest::InternalSwap(InsertCustomerBillingKeyRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  customer_uid_.Swap(&other->customer_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_.Swap(&other->pg_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_number_.Swap(&other->card_number_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  expiry_.Swap(&other->expiry_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  birth_.Swap(&other->birth_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pwd_2digit_.Swap(&other->pwd_2digit_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_name_.Swap(&other->customer_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_tel_.Swap(&other->customer_tel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_email_.Swap(&other->customer_email_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_addr_.Swap(&other->customer_addr_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_postcode_.Swap(&other->customer_postcode_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_uid_, GetArenaForAllocation(),
+      &other->customer_uid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &pg_, GetArenaForAllocation(),
+      &other->pg_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &card_number_, GetArenaForAllocation(),
+      &other->card_number_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &expiry_, GetArenaForAllocation(),
+      &other->expiry_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &birth_, GetArenaForAllocation(),
+      &other->birth_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &pwd_2digit_, GetArenaForAllocation(),
+      &other->pwd_2digit_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_name_, GetArenaForAllocation(),
+      &other->customer_name_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_tel_, GetArenaForAllocation(),
+      &other->customer_tel_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_email_, GetArenaForAllocation(),
+      &other->customer_email_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_addr_, GetArenaForAllocation(),
+      &other->customer_addr_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_postcode_, GetArenaForAllocation(),
+      &other->customer_postcode_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata InsertCustomerBillingKeyRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter, &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once,
+      file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto[7]);
 }
-
 
 // ===================================================================
 
@@ -3190,10 +3272,13 @@ const ::subscribe_customers::CustomerBillingKey&
 InsertCustomerBillingKeyResponse::_Internal::response(const InsertCustomerBillingKeyResponse* msg) {
   return *msg->response_;
 }
-InsertCustomerBillingKeyResponse::InsertCustomerBillingKeyResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+InsertCustomerBillingKeyResponse::InsertCustomerBillingKeyResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:subscribe_customers.InsertCustomerBillingKeyResponse)
 }
 InsertCustomerBillingKeyResponse::InsertCustomerBillingKeyResponse(const InsertCustomerBillingKeyResponse& from)
@@ -3202,7 +3287,7 @@ InsertCustomerBillingKeyResponse::InsertCustomerBillingKeyResponse(const InsertC
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
     message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_response()) {
     response_ = new ::subscribe_customers::CustomerBillingKey(*from.response_);
@@ -3213,7 +3298,7 @@ InsertCustomerBillingKeyResponse::InsertCustomerBillingKeyResponse(const InsertC
   // @@protoc_insertion_point(copy_constructor:subscribe_customers.InsertCustomerBillingKeyResponse)
 }
 
-void InsertCustomerBillingKeyResponse::SharedCtor() {
+inline void InsertCustomerBillingKeyResponse::SharedCtor() {
 message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
@@ -3223,12 +3308,13 @@ message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlre
 
 InsertCustomerBillingKeyResponse::~InsertCustomerBillingKeyResponse() {
   // @@protoc_insertion_point(destructor:subscribe_customers.InsertCustomerBillingKeyResponse)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void InsertCustomerBillingKeyResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void InsertCustomerBillingKeyResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete response_;
 }
@@ -3250,7 +3336,7 @@ void InsertCustomerBillingKeyResponse::Clear() {
   (void) cached_has_bits;
 
   message_.ClearToEmpty();
-  if (GetArena() == nullptr && response_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && response_ != nullptr) {
     delete response_;
   }
   response_ = nullptr;
@@ -3263,7 +3349,6 @@ const char* InsertCustomerBillingKeyResponse::_InternalParse(const char* ptr, ::
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int32 code = 1;
       case 1:
@@ -3290,7 +3375,8 @@ const char* InsertCustomerBillingKeyResponse::_InternalParse(const char* ptr, ::
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -3317,13 +3403,13 @@ failure:
   (void) cached_has_bits;
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
   }
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -3333,7 +3419,7 @@ failure:
   }
 
   // .subscribe_customers.CustomerBillingKey response = 3;
-  if (this->has_response()) {
+  if (this->_internal_has_response()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
@@ -3357,21 +3443,21 @@ size_t InsertCustomerBillingKeyResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_message());
   }
 
   // .subscribe_customers.CustomerBillingKey response = 3;
-  if (this->has_response()) {
+  if (this->_internal_has_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *response_);
   }
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_code());
@@ -3386,44 +3472,35 @@ size_t InsertCustomerBillingKeyResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void InsertCustomerBillingKeyResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe_customers.InsertCustomerBillingKeyResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  const InsertCustomerBillingKeyResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InsertCustomerBillingKeyResponse>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe_customers.InsertCustomerBillingKeyResponse)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe_customers.InsertCustomerBillingKeyResponse)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData InsertCustomerBillingKeyResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    InsertCustomerBillingKeyResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InsertCustomerBillingKeyResponse::GetClassData() const { return &_class_data_; }
+
+void InsertCustomerBillingKeyResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<InsertCustomerBillingKeyResponse *>(to)->MergeFrom(
+      static_cast<const InsertCustomerBillingKeyResponse &>(from));
 }
+
 
 void InsertCustomerBillingKeyResponse::MergeFrom(const InsertCustomerBillingKeyResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:subscribe_customers.InsertCustomerBillingKeyResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.message().size() > 0) {
+  if (!from._internal_message().empty()) {
     _internal_set_message(from._internal_message());
   }
-  if (from.has_response()) {
+  if (from._internal_has_response()) {
     _internal_mutable_response()->::subscribe_customers::CustomerBillingKey::MergeFrom(from._internal_response());
   }
-  if (from.code() != 0) {
+  if (from._internal_code() != 0) {
     _internal_set_code(from._internal_code());
   }
-}
-
-void InsertCustomerBillingKeyResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe_customers.InsertCustomerBillingKeyResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void InsertCustomerBillingKeyResponse::CopyFrom(const InsertCustomerBillingKeyResponse& from) {
@@ -3439,8 +3516,12 @@ bool InsertCustomerBillingKeyResponse::IsInitialized() const {
 
 void InsertCustomerBillingKeyResponse::InternalSwap(InsertCustomerBillingKeyResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &message_, GetArenaForAllocation(),
+      &other->message_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(InsertCustomerBillingKeyResponse, code_)
       + sizeof(InsertCustomerBillingKeyResponse::code_)
@@ -3450,9 +3531,10 @@ void InsertCustomerBillingKeyResponse::InternalSwap(InsertCustomerBillingKeyResp
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata InsertCustomerBillingKeyResponse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter, &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once,
+      file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto[8]);
 }
-
 
 // ===================================================================
 
@@ -3460,10 +3542,13 @@ class GetPaidByBillingKeyListRequest::_Internal {
  public:
 };
 
-GetPaidByBillingKeyListRequest::GetPaidByBillingKeyListRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+GetPaidByBillingKeyListRequest::GetPaidByBillingKeyListRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:subscribe_customers.GetPaidByBillingKeyListRequest)
 }
 GetPaidByBillingKeyListRequest::GetPaidByBillingKeyListRequest(const GetPaidByBillingKeyListRequest& from)
@@ -3472,25 +3557,26 @@ GetPaidByBillingKeyListRequest::GetPaidByBillingKeyListRequest(const GetPaidByBi
   customer_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_uid().empty()) {
     customer_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_uid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   page_ = from.page_;
   // @@protoc_insertion_point(copy_constructor:subscribe_customers.GetPaidByBillingKeyListRequest)
 }
 
-void GetPaidByBillingKeyListRequest::SharedCtor() {
+inline void GetPaidByBillingKeyListRequest::SharedCtor() {
 customer_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 page_ = 0;
 }
 
 GetPaidByBillingKeyListRequest::~GetPaidByBillingKeyListRequest() {
   // @@protoc_insertion_point(destructor:subscribe_customers.GetPaidByBillingKeyListRequest)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void GetPaidByBillingKeyListRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void GetPaidByBillingKeyListRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   customer_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -3520,7 +3606,6 @@ const char* GetPaidByBillingKeyListRequest::_InternalParse(const char* ptr, ::PR
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string customer_uid = 1;
       case 1:
@@ -3540,7 +3625,8 @@ const char* GetPaidByBillingKeyListRequest::_InternalParse(const char* ptr, ::PR
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -3567,7 +3653,7 @@ failure:
   (void) cached_has_bits;
 
   // string customer_uid = 1;
-  if (this->customer_uid().size() > 0) {
+  if (!this->_internal_customer_uid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_uid().data(), static_cast<int>(this->_internal_customer_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -3577,7 +3663,7 @@ failure:
   }
 
   // int32 page = 2;
-  if (this->page() != 0) {
+  if (this->_internal_page() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_page(), target);
   }
@@ -3599,14 +3685,14 @@ size_t GetPaidByBillingKeyListRequest::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string customer_uid = 1;
-  if (this->customer_uid().size() > 0) {
+  if (!this->_internal_customer_uid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_uid());
   }
 
   // int32 page = 2;
-  if (this->page() != 0) {
+  if (this->_internal_page() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_page());
@@ -3621,41 +3707,32 @@ size_t GetPaidByBillingKeyListRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void GetPaidByBillingKeyListRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe_customers.GetPaidByBillingKeyListRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const GetPaidByBillingKeyListRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetPaidByBillingKeyListRequest>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe_customers.GetPaidByBillingKeyListRequest)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe_customers.GetPaidByBillingKeyListRequest)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPaidByBillingKeyListRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    GetPaidByBillingKeyListRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPaidByBillingKeyListRequest::GetClassData() const { return &_class_data_; }
+
+void GetPaidByBillingKeyListRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<GetPaidByBillingKeyListRequest *>(to)->MergeFrom(
+      static_cast<const GetPaidByBillingKeyListRequest &>(from));
 }
+
 
 void GetPaidByBillingKeyListRequest::MergeFrom(const GetPaidByBillingKeyListRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:subscribe_customers.GetPaidByBillingKeyListRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.customer_uid().size() > 0) {
+  if (!from._internal_customer_uid().empty()) {
     _internal_set_customer_uid(from._internal_customer_uid());
   }
-  if (from.page() != 0) {
+  if (from._internal_page() != 0) {
     _internal_set_page(from._internal_page());
   }
-}
-
-void GetPaidByBillingKeyListRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe_customers.GetPaidByBillingKeyListRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void GetPaidByBillingKeyListRequest::CopyFrom(const GetPaidByBillingKeyListRequest& from) {
@@ -3671,15 +3748,20 @@ bool GetPaidByBillingKeyListRequest::IsInitialized() const {
 
 void GetPaidByBillingKeyListRequest::InternalSwap(GetPaidByBillingKeyListRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  customer_uid_.Swap(&other->customer_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_uid_, GetArenaForAllocation(),
+      &other->customer_uid_, other->GetArenaForAllocation()
+  );
   swap(page_, other->page_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetPaidByBillingKeyListRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter, &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once,
+      file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto[9]);
 }
-
 
 // ===================================================================
 
@@ -3690,11 +3772,14 @@ class NestedGetPaidByBillingKeyListData::_Internal {
 void NestedGetPaidByBillingKeyListData::clear_list() {
   list_.Clear();
 }
-NestedGetPaidByBillingKeyListData::NestedGetPaidByBillingKeyListData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+NestedGetPaidByBillingKeyListData::NestedGetPaidByBillingKeyListData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
   list_(arena) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:subscribe_customers.NestedGetPaidByBillingKeyListData)
 }
 NestedGetPaidByBillingKeyListData::NestedGetPaidByBillingKeyListData(const NestedGetPaidByBillingKeyListData& from)
@@ -3707,7 +3792,7 @@ NestedGetPaidByBillingKeyListData::NestedGetPaidByBillingKeyListData(const Neste
   // @@protoc_insertion_point(copy_constructor:subscribe_customers.NestedGetPaidByBillingKeyListData)
 }
 
-void NestedGetPaidByBillingKeyListData::SharedCtor() {
+inline void NestedGetPaidByBillingKeyListData::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&total_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&next_) -
@@ -3716,12 +3801,13 @@ void NestedGetPaidByBillingKeyListData::SharedCtor() {
 
 NestedGetPaidByBillingKeyListData::~NestedGetPaidByBillingKeyListData() {
   // @@protoc_insertion_point(destructor:subscribe_customers.NestedGetPaidByBillingKeyListData)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void NestedGetPaidByBillingKeyListData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void NestedGetPaidByBillingKeyListData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void NestedGetPaidByBillingKeyListData::ArenaDtor(void* object) {
@@ -3752,7 +3838,6 @@ const char* NestedGetPaidByBillingKeyListData::_InternalParse(const char* ptr, :
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int32 total = 1;
       case 1:
@@ -3789,7 +3874,8 @@ const char* NestedGetPaidByBillingKeyListData::_InternalParse(const char* ptr, :
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -3816,19 +3902,19 @@ failure:
   (void) cached_has_bits;
 
   // int32 total = 1;
-  if (this->total() != 0) {
+  if (this->_internal_total() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_total(), target);
   }
 
   // int32 previous = 2;
-  if (this->previous() != 0) {
+  if (this->_internal_previous() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_previous(), target);
   }
 
   // int32 next = 3;
-  if (this->next() != 0) {
+  if (this->_internal_next() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_next(), target);
   }
@@ -3865,21 +3951,21 @@ size_t NestedGetPaidByBillingKeyListData::ByteSizeLong() const {
   }
 
   // int32 total = 1;
-  if (this->total() != 0) {
+  if (this->_internal_total() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_total());
   }
 
   // int32 previous = 2;
-  if (this->previous() != 0) {
+  if (this->_internal_previous() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_previous());
   }
 
   // int32 next = 3;
-  if (this->next() != 0) {
+  if (this->_internal_next() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_next());
@@ -3894,45 +3980,36 @@ size_t NestedGetPaidByBillingKeyListData::ByteSizeLong() const {
   return total_size;
 }
 
-void NestedGetPaidByBillingKeyListData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe_customers.NestedGetPaidByBillingKeyListData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const NestedGetPaidByBillingKeyListData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<NestedGetPaidByBillingKeyListData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe_customers.NestedGetPaidByBillingKeyListData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe_customers.NestedGetPaidByBillingKeyListData)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData NestedGetPaidByBillingKeyListData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    NestedGetPaidByBillingKeyListData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*NestedGetPaidByBillingKeyListData::GetClassData() const { return &_class_data_; }
+
+void NestedGetPaidByBillingKeyListData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<NestedGetPaidByBillingKeyListData *>(to)->MergeFrom(
+      static_cast<const NestedGetPaidByBillingKeyListData &>(from));
 }
+
 
 void NestedGetPaidByBillingKeyListData::MergeFrom(const NestedGetPaidByBillingKeyListData& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:subscribe_customers.NestedGetPaidByBillingKeyListData)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   list_.MergeFrom(from.list_);
-  if (from.total() != 0) {
+  if (from._internal_total() != 0) {
     _internal_set_total(from._internal_total());
   }
-  if (from.previous() != 0) {
+  if (from._internal_previous() != 0) {
     _internal_set_previous(from._internal_previous());
   }
-  if (from.next() != 0) {
+  if (from._internal_next() != 0) {
     _internal_set_next(from._internal_next());
   }
-}
-
-void NestedGetPaidByBillingKeyListData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe_customers.NestedGetPaidByBillingKeyListData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void NestedGetPaidByBillingKeyListData::CopyFrom(const NestedGetPaidByBillingKeyListData& from) {
@@ -3948,7 +4025,7 @@ bool NestedGetPaidByBillingKeyListData::IsInitialized() const {
 
 void NestedGetPaidByBillingKeyListData::InternalSwap(NestedGetPaidByBillingKeyListData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   list_.InternalSwap(&other->list_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(NestedGetPaidByBillingKeyListData, next_)
@@ -3959,9 +4036,10 @@ void NestedGetPaidByBillingKeyListData::InternalSwap(NestedGetPaidByBillingKeyLi
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata NestedGetPaidByBillingKeyListData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter, &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once,
+      file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto[10]);
 }
-
 
 // ===================================================================
 
@@ -3974,10 +4052,13 @@ const ::subscribe_customers::NestedGetPaidByBillingKeyListData&
 GetPaidByBillingKeyListResponse::_Internal::response(const GetPaidByBillingKeyListResponse* msg) {
   return *msg->response_;
 }
-GetPaidByBillingKeyListResponse::GetPaidByBillingKeyListResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+GetPaidByBillingKeyListResponse::GetPaidByBillingKeyListResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:subscribe_customers.GetPaidByBillingKeyListResponse)
 }
 GetPaidByBillingKeyListResponse::GetPaidByBillingKeyListResponse(const GetPaidByBillingKeyListResponse& from)
@@ -3986,7 +4067,7 @@ GetPaidByBillingKeyListResponse::GetPaidByBillingKeyListResponse(const GetPaidBy
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
     message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_response()) {
     response_ = new ::subscribe_customers::NestedGetPaidByBillingKeyListData(*from.response_);
@@ -3997,7 +4078,7 @@ GetPaidByBillingKeyListResponse::GetPaidByBillingKeyListResponse(const GetPaidBy
   // @@protoc_insertion_point(copy_constructor:subscribe_customers.GetPaidByBillingKeyListResponse)
 }
 
-void GetPaidByBillingKeyListResponse::SharedCtor() {
+inline void GetPaidByBillingKeyListResponse::SharedCtor() {
 message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
@@ -4007,12 +4088,13 @@ message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlre
 
 GetPaidByBillingKeyListResponse::~GetPaidByBillingKeyListResponse() {
   // @@protoc_insertion_point(destructor:subscribe_customers.GetPaidByBillingKeyListResponse)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void GetPaidByBillingKeyListResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void GetPaidByBillingKeyListResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete response_;
 }
@@ -4034,7 +4116,7 @@ void GetPaidByBillingKeyListResponse::Clear() {
   (void) cached_has_bits;
 
   message_.ClearToEmpty();
-  if (GetArena() == nullptr && response_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && response_ != nullptr) {
     delete response_;
   }
   response_ = nullptr;
@@ -4047,7 +4129,6 @@ const char* GetPaidByBillingKeyListResponse::_InternalParse(const char* ptr, ::P
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int32 code = 1;
       case 1:
@@ -4074,7 +4155,8 @@ const char* GetPaidByBillingKeyListResponse::_InternalParse(const char* ptr, ::P
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -4101,13 +4183,13 @@ failure:
   (void) cached_has_bits;
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
   }
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -4117,7 +4199,7 @@ failure:
   }
 
   // .subscribe_customers.NestedGetPaidByBillingKeyListData response = 3;
-  if (this->has_response()) {
+  if (this->_internal_has_response()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
@@ -4141,21 +4223,21 @@ size_t GetPaidByBillingKeyListResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_message());
   }
 
   // .subscribe_customers.NestedGetPaidByBillingKeyListData response = 3;
-  if (this->has_response()) {
+  if (this->_internal_has_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *response_);
   }
 
   // int32 code = 1;
-  if (this->code() != 0) {
+  if (this->_internal_code() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_code());
@@ -4170,44 +4252,35 @@ size_t GetPaidByBillingKeyListResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void GetPaidByBillingKeyListResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:subscribe_customers.GetPaidByBillingKeyListResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  const GetPaidByBillingKeyListResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetPaidByBillingKeyListResponse>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:subscribe_customers.GetPaidByBillingKeyListResponse)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:subscribe_customers.GetPaidByBillingKeyListResponse)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetPaidByBillingKeyListResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    GetPaidByBillingKeyListResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetPaidByBillingKeyListResponse::GetClassData() const { return &_class_data_; }
+
+void GetPaidByBillingKeyListResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<GetPaidByBillingKeyListResponse *>(to)->MergeFrom(
+      static_cast<const GetPaidByBillingKeyListResponse &>(from));
 }
+
 
 void GetPaidByBillingKeyListResponse::MergeFrom(const GetPaidByBillingKeyListResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:subscribe_customers.GetPaidByBillingKeyListResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.message().size() > 0) {
+  if (!from._internal_message().empty()) {
     _internal_set_message(from._internal_message());
   }
-  if (from.has_response()) {
+  if (from._internal_has_response()) {
     _internal_mutable_response()->::subscribe_customers::NestedGetPaidByBillingKeyListData::MergeFrom(from._internal_response());
   }
-  if (from.code() != 0) {
+  if (from._internal_code() != 0) {
     _internal_set_code(from._internal_code());
   }
-}
-
-void GetPaidByBillingKeyListResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:subscribe_customers.GetPaidByBillingKeyListResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void GetPaidByBillingKeyListResponse::CopyFrom(const GetPaidByBillingKeyListResponse& from) {
@@ -4223,8 +4296,12 @@ bool GetPaidByBillingKeyListResponse::IsInitialized() const {
 
 void GetPaidByBillingKeyListResponse::InternalSwap(GetPaidByBillingKeyListResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &message_, GetArenaForAllocation(),
+      &other->message_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(GetPaidByBillingKeyListResponse, code_)
       + sizeof(GetPaidByBillingKeyListResponse::code_)
@@ -4234,9 +4311,10 @@ void GetPaidByBillingKeyListResponse::InternalSwap(GetPaidByBillingKeyListRespon
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetPaidByBillingKeyListResponse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_getter, &descriptor_table_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto_once,
+      file_level_metadata_v1_2fsubscribe_5fcustomers_2fsubscribe_5fcustomers_2eproto[11]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace subscribe_customers

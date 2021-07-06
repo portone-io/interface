@@ -75,7 +75,7 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
      */
     public function getSender()
     {
-        return isset($this->sender) ? $this->sender : null;
+        return $this->sender;
     }
 
     public function hasSender()
@@ -107,7 +107,7 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
      */
     public function getReceiver()
     {
-        return isset($this->receiver) ? $this->receiver : null;
+        return $this->receiver;
     }
 
     public function hasReceiver()
@@ -139,7 +139,7 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
      */
     public function getLogis()
     {
-        return isset($this->logis) ? $this->logis : null;
+        return $this->logis;
     }
 
     public function hasLogis()

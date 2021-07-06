@@ -58,6 +58,7 @@ class Payment extends $pb.GeneratedMessage {
     ..a<$core.int>(44, 'vbankIssuedAt', $pb.PbFieldType.O3)
     ..aOS(45, 'vbankName')
     ..aOS(46, 'vbankNum')
+    ..aOM<Promotion>(47, 'promotion', subBuilder: Promotion.create)
     ..hasRequiredFields = false
   ;
 
@@ -477,6 +478,17 @@ class Payment extends $pb.GeneratedMessage {
   $core.bool hasVbankNum() => $_has(45);
   @$pb.TagNumber(46)
   void clearVbankNum() => clearField(46);
+
+  @$pb.TagNumber(47)
+  Promotion get promotion => $_getN(46);
+  @$pb.TagNumber(47)
+  set promotion(Promotion v) { setField(47, v); }
+  @$pb.TagNumber(47)
+  $core.bool hasPromotion() => $_has(46);
+  @$pb.TagNumber(47)
+  void clearPromotion() => clearField(47);
+  @$pb.TagNumber(47)
+  Promotion ensurePromotion() => $_ensure(46);
 }
 
 class CancelHistory extends $pb.GeneratedMessage {
@@ -1746,6 +1758,47 @@ class PaymentGetPrepareRequest extends $pb.GeneratedMessage {
   $core.bool hasMerchantUid() => $_has(0);
   @$pb.TagNumber(1)
   void clearMerchantUid() => clearField(1);
+}
+
+class Promotion extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Promotion', package: const $pb.PackageName('payment'), createEmptyInstance: create)
+    ..aOS(1, 'id')
+    ..aOS(2, 'discount')
+    ..hasRequiredFields = false
+  ;
+
+  Promotion._() : super();
+  factory Promotion() => create();
+  factory Promotion.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Promotion.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  Promotion clone() => Promotion()..mergeFromMessage(this);
+  Promotion copyWith(void Function(Promotion) updates) => super.copyWith((message) => updates(message as Promotion));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Promotion create() => Promotion._();
+  Promotion createEmptyInstance() => create();
+  static $pb.PbList<Promotion> createRepeated() => $pb.PbList<Promotion>();
+  @$core.pragma('dart2js:noInline')
+  static Promotion getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Promotion>(create);
+  static Promotion _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get discount => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set discount($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDiscount() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDiscount() => clearField(2);
 }
 
 class PaymentServiceApi {

@@ -33,6 +33,19 @@ struct CancelHistoryDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CancelHistoryDefaultTypeInternal _CancelHistory_default_instance_;
+constexpr Promotion::Promotion(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , discount_(0){}
+struct PromotionDefaultTypeInternal {
+  constexpr PromotionDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~PromotionDefaultTypeInternal() {}
+  union {
+    Promotion _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PromotionDefaultTypeInternal _Promotion_default_instance_;
 constexpr UnitTx::UnitTx(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : cancel_history_()
@@ -76,6 +89,7 @@ constexpr UnitTx::UnitTx(
   , vbank_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , vbank_num_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , customer_email_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , promotion_(nullptr)
   , bank_code_(0)
   , cancelled_at_(0)
   , card_installment_(0)
@@ -97,7 +111,7 @@ struct UnitTxDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT UnitTxDefaultTypeInternal _UnitTx_default_instance_;
 }  // namespace basis_v2
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_v2_2fbasis_2fbasis_2eproto[2];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_v2_2fbasis_2fbasis_2eproto[3];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_v2_2fbasis_2fbasis_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_v2_2fbasis_2fbasis_2eproto = nullptr;
 
@@ -112,6 +126,13 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_v2_2fbasis_2fbasis_2eproto::of
   PROTOBUF_FIELD_OFFSET(::basis_v2::CancelHistory, cancelled_at_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::CancelHistory, reason_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::CancelHistory, receipt_url_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::basis_v2::Promotion, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::basis_v2::Promotion, id_),
+  PROTOBUF_FIELD_OFFSET(::basis_v2::Promotion, discount_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -169,14 +190,17 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_v2_2fbasis_2fbasis_2eproto::of
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, vbank_name_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, vbank_num_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, customer_email_),
+  PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, promotion_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::basis_v2::CancelHistory)},
-  { 10, -1, sizeof(::basis_v2::UnitTx)},
+  { 10, -1, sizeof(::basis_v2::Promotion)},
+  { 17, -1, sizeof(::basis_v2::UnitTx)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::basis_v2::_CancelHistory_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::basis_v2::_Promotion_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::basis_v2::_UnitTx_default_instance_),
 };
 
@@ -184,49 +208,49 @@ const char descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto[] PROTOBUF_SECTI
   "\n\024v2/basis/basis.proto\022\010basis_v2\"j\n\rCanc"
   "elHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001("
   "\t\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022"
-  "\023\n\013receipt_url\030\005 \001(\t\"\333\010\n\006UnitTx\022\016\n\006amoun"
-  "t\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank_code\030"
-  "\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_addr\030\005"
-  " \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer_name\030"
-  "\007 \001(\t\022\026\n\016buyer_postcode\030\010 \001(\t\022\021\n\tbuyer_t"
-  "el\030\t \001(\t\022\025\n\rcancel_amount\030\n \001(\t\022/\n\016cance"
-  "l_history\030\013 \003(\0132\027.basis_v2.CancelHistory"
-  "\022\025\n\rcancel_reason\030\014 \001(\t\022\033\n\023cancel_receip"
-  "t_urls\030\r \003(\t\022\024\n\014cancelled_at\030\016 \001(\005\022\021\n\tca"
-  "rd_code\030\017 \001(\t\022\022\n\nbin_number\030\020 \001(\t\022\021\n\tcar"
-  "d_name\030\021 \001(\t\022\031\n\021card_receipe_name\030\022 \001(\t\022"
-  "\027\n\017card_owner_type\030\023 \001(\t\022\022\n\ncard_brand\030\024"
-  " \001(\t\022\030\n\020card_credit_type\030\025 \001(\t\022\023\n\013card_n"
-  "umber\030\026 \001(\t\022\030\n\020card_installment\030\027 \001(\005\022\021\n"
-  "\tcard_type\030\030 \001(\005\022\033\n\023cash_receipt_issued\030"
-  "\031 \001(\010\022\017\n\007channel\030\032 \001(\t\022\020\n\010currency\030\033 \001(\t"
-  "\022\023\n\013custom_data\030\034 \001(\t\022\020\n\010card_uid\030\035 \001(\t\022"
-  "\032\n\022customer_uid_usage\030\036 \001(\t\022\016\n\006escrow\030\037 "
-  "\001(\010\022\023\n\013fail_reason\030  \001(\t\022\021\n\tfailed_at\030! "
-  "\001(\005\022\017\n\007imp_uid\030\" \001(\t\022\024\n\014merchant_uid\030# \001"
-  "(\t\022\022\n\norder_name\030$ \001(\t\022\017\n\007paid_at\030% \001(\005\022"
-  "\022\n\npay_method\030& \001(\t\022\r\n\005pg_id\030\' \001(\t\022\023\n\013pg"
-  "_provider\030( \001(\t\022\016\n\006pg_tid\030) \001(\t\022\023\n\013recei"
-  "pt_url\030* \001(\t\022\022\n\nstarted_at\030+ \001(\005\022\016\n\006stat"
-  "us\030, \001(\t\022\022\n\nuser_agent\030- \001(\t\022\022\n\nvbank_co"
-  "de\030. \001(\t\022\022\n\nvbank_date\030/ \001(\005\022\024\n\014vbank_ho"
-  "lder\0300 \001(\t\022\027\n\017vbank_issued_at\0301 \001(\005\022\022\n\nv"
-  "bank_name\0302 \001(\t\022\021\n\tvbank_num\0303 \001(\t\022\026\n\016cu"
-  "stomer_email\0304 \001(\tB=Z0github.com/iamport"
-  "/interface/gen_src/go/v2/basis\252\002\010V2.Basi"
-  "sb\006proto3"
+  "\023\n\013receipt_url\030\005 \001(\t\")\n\tPromotion\022\n\n\002id\030"
+  "\001 \001(\t\022\020\n\010discount\030\002 \001(\005\"\203\t\n\006UnitTx\022\016\n\006am"
+  "ount\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank_co"
+  "de\030\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_add"
+  "r\030\005 \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer_na"
+  "me\030\007 \001(\t\022\026\n\016buyer_postcode\030\010 \001(\t\022\021\n\tbuye"
+  "r_tel\030\t \001(\t\022\025\n\rcancel_amount\030\n \001(\t\022/\n\016ca"
+  "ncel_history\030\013 \003(\0132\027.basis_v2.CancelHist"
+  "ory\022\025\n\rcancel_reason\030\014 \001(\t\022\033\n\023cancel_rec"
+  "eipt_urls\030\r \003(\t\022\024\n\014cancelled_at\030\016 \001(\005\022\021\n"
+  "\tcard_code\030\017 \001(\t\022\022\n\nbin_number\030\020 \001(\t\022\021\n\t"
+  "card_name\030\021 \001(\t\022\031\n\021card_receipe_name\030\022 \001"
+  "(\t\022\027\n\017card_owner_type\030\023 \001(\t\022\022\n\ncard_bran"
+  "d\030\024 \001(\t\022\030\n\020card_credit_type\030\025 \001(\t\022\023\n\013car"
+  "d_number\030\026 \001(\t\022\030\n\020card_installment\030\027 \001(\005"
+  "\022\021\n\tcard_type\030\030 \001(\005\022\033\n\023cash_receipt_issu"
+  "ed\030\031 \001(\010\022\017\n\007channel\030\032 \001(\t\022\020\n\010currency\030\033 "
+  "\001(\t\022\023\n\013custom_data\030\034 \001(\t\022\020\n\010card_uid\030\035 \001"
+  "(\t\022\032\n\022customer_uid_usage\030\036 \001(\t\022\016\n\006escrow"
+  "\030\037 \001(\010\022\023\n\013fail_reason\030  \001(\t\022\021\n\tfailed_at"
+  "\030! \001(\005\022\017\n\007imp_uid\030\" \001(\t\022\024\n\014merchant_uid\030"
+  "# \001(\t\022\022\n\norder_name\030$ \001(\t\022\017\n\007paid_at\030% \001"
+  "(\005\022\022\n\npay_method\030& \001(\t\022\r\n\005pg_id\030\' \001(\t\022\023\n"
+  "\013pg_provider\030( \001(\t\022\016\n\006pg_tid\030) \001(\t\022\023\n\013re"
+  "ceipt_url\030* \001(\t\022\022\n\nstarted_at\030+ \001(\005\022\016\n\006s"
+  "tatus\030, \001(\t\022\022\n\nuser_agent\030- \001(\t\022\022\n\nvbank"
+  "_code\030. \001(\t\022\022\n\nvbank_date\030/ \001(\005\022\024\n\014vbank"
+  "_holder\0300 \001(\t\022\027\n\017vbank_issued_at\0301 \001(\005\022\022"
+  "\n\nvbank_name\0302 \001(\t\022\021\n\tvbank_num\0303 \001(\t\022\026\n"
+  "\016customer_email\0304 \001(\t\022&\n\tpromotion\0305 \001(\013"
+  "2\023.basis_v2.PromotionB=Z0github.com/iamp"
+  "ort/interface/gen_src/go/v2/basis\252\002\010V2.B"
+  "asisb\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2fbasis_2fbasis_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2fbasis_2fbasis_2eproto = {
-  false, false, 1329, descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto, "v2/basis/basis.proto", 
-  &descriptor_table_v2_2fbasis_2fbasis_2eproto_once, nullptr, 0, 2,
+  false, false, 1412, descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto, "v2/basis/basis.proto", 
+  &descriptor_table_v2_2fbasis_2fbasis_2eproto_once, nullptr, 0, 3,
   schemas, file_default_instances, TableStruct_v2_2fbasis_2fbasis_2eproto::offsets,
   file_level_metadata_v2_2fbasis_2fbasis_2eproto, file_level_enum_descriptors_v2_2fbasis_2fbasis_2eproto, file_level_service_descriptors_v2_2fbasis_2fbasis_2eproto,
 };
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_v2_2fbasis_2fbasis_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_v2_2fbasis_2fbasis_2eproto);
-  return descriptor_table_v2_2fbasis_2fbasis_2eproto.file_level_metadata[index];
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_v2_2fbasis_2fbasis_2eproto_getter() {
+  return &descriptor_table_v2_2fbasis_2fbasis_2eproto;
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -239,10 +263,13 @@ class CancelHistory::_Internal {
  public:
 };
 
-CancelHistory::CancelHistory(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+CancelHistory::CancelHistory(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:basis_v2.CancelHistory)
 }
 CancelHistory::CancelHistory(const CancelHistory& from)
@@ -251,28 +278,28 @@ CancelHistory::CancelHistory(const CancelHistory& from)
   pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_tid().empty()) {
     pg_tid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_tid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_amount().empty()) {
     amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_amount(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_reason().empty()) {
     reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_reason(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_receipt_url().empty()) {
     receipt_url_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_receipt_url(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   cancelled_at_ = from.cancelled_at_;
   // @@protoc_insertion_point(copy_constructor:basis_v2.CancelHistory)
 }
 
-void CancelHistory::SharedCtor() {
+inline void CancelHistory::SharedCtor() {
 pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -282,12 +309,13 @@ cancelled_at_ = 0;
 
 CancelHistory::~CancelHistory() {
   // @@protoc_insertion_point(destructor:basis_v2.CancelHistory)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CancelHistory::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void CancelHistory::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   pg_tid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   amount_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   reason_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -323,7 +351,6 @@ const char* CancelHistory::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string pg_tid = 1;
       case 1:
@@ -370,7 +397,8 @@ const char* CancelHistory::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -397,7 +425,7 @@ failure:
   (void) cached_has_bits;
 
   // string pg_tid = 1;
-  if (this->pg_tid().size() > 0) {
+  if (!this->_internal_pg_tid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg_tid().data(), static_cast<int>(this->_internal_pg_tid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -407,7 +435,7 @@ failure:
   }
 
   // string amount = 2;
-  if (this->amount().size() > 0) {
+  if (!this->_internal_amount().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_amount().data(), static_cast<int>(this->_internal_amount().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -417,13 +445,13 @@ failure:
   }
 
   // int32 cancelled_at = 3;
-  if (this->cancelled_at() != 0) {
+  if (this->_internal_cancelled_at() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_cancelled_at(), target);
   }
 
   // string reason = 4;
-  if (this->reason().size() > 0) {
+  if (!this->_internal_reason().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -433,7 +461,7 @@ failure:
   }
 
   // string receipt_url = 5;
-  if (this->receipt_url().size() > 0) {
+  if (!this->_internal_receipt_url().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_receipt_url().data(), static_cast<int>(this->_internal_receipt_url().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -459,35 +487,35 @@ size_t CancelHistory::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string pg_tid = 1;
-  if (this->pg_tid().size() > 0) {
+  if (!this->_internal_pg_tid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pg_tid());
   }
 
   // string amount = 2;
-  if (this->amount().size() > 0) {
+  if (!this->_internal_amount().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_amount());
   }
 
   // string reason = 4;
-  if (this->reason().size() > 0) {
+  if (!this->_internal_reason().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_reason());
   }
 
   // string receipt_url = 5;
-  if (this->receipt_url().size() > 0) {
+  if (!this->_internal_receipt_url().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_receipt_url());
   }
 
   // int32 cancelled_at = 3;
-  if (this->cancelled_at() != 0) {
+  if (this->_internal_cancelled_at() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_cancelled_at());
@@ -502,50 +530,41 @@ size_t CancelHistory::ByteSizeLong() const {
   return total_size;
 }
 
-void CancelHistory::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:basis_v2.CancelHistory)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CancelHistory* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CancelHistory>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:basis_v2.CancelHistory)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:basis_v2.CancelHistory)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CancelHistory::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    CancelHistory::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CancelHistory::GetClassData() const { return &_class_data_; }
+
+void CancelHistory::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<CancelHistory *>(to)->MergeFrom(
+      static_cast<const CancelHistory &>(from));
 }
+
 
 void CancelHistory::MergeFrom(const CancelHistory& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:basis_v2.CancelHistory)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.pg_tid().size() > 0) {
+  if (!from._internal_pg_tid().empty()) {
     _internal_set_pg_tid(from._internal_pg_tid());
   }
-  if (from.amount().size() > 0) {
+  if (!from._internal_amount().empty()) {
     _internal_set_amount(from._internal_amount());
   }
-  if (from.reason().size() > 0) {
+  if (!from._internal_reason().empty()) {
     _internal_set_reason(from._internal_reason());
   }
-  if (from.receipt_url().size() > 0) {
+  if (!from._internal_receipt_url().empty()) {
     _internal_set_receipt_url(from._internal_receipt_url());
   }
-  if (from.cancelled_at() != 0) {
+  if (from._internal_cancelled_at() != 0) {
     _internal_set_cancelled_at(from._internal_cancelled_at());
   }
-}
-
-void CancelHistory::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:basis_v2.CancelHistory)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CancelHistory::CopyFrom(const CancelHistory& from) {
@@ -561,31 +580,283 @@ bool CancelHistory::IsInitialized() const {
 
 void CancelHistory::InternalSwap(CancelHistory* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  pg_tid_.Swap(&other->pg_tid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  amount_.Swap(&other->amount_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  reason_.Swap(&other->reason_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  receipt_url_.Swap(&other->receipt_url_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &pg_tid_, GetArenaForAllocation(),
+      &other->pg_tid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &amount_, GetArenaForAllocation(),
+      &other->amount_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &reason_, GetArenaForAllocation(),
+      &other->reason_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &receipt_url_, GetArenaForAllocation(),
+      &other->receipt_url_, other->GetArenaForAllocation()
+  );
   swap(cancelled_at_, other->cancelled_at_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CancelHistory::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v2_2fbasis_2fbasis_2eproto_getter, &descriptor_table_v2_2fbasis_2fbasis_2eproto_once,
+      file_level_metadata_v2_2fbasis_2fbasis_2eproto[0]);
 }
 
+// ===================================================================
+
+class Promotion::_Internal {
+ public:
+};
+
+Promotion::Promotion(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
+  // @@protoc_insertion_point(arena_constructor:basis_v2.Promotion)
+}
+Promotion::Promotion(const Promotion& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_id().empty()) {
+    id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_id(), 
+      GetArenaForAllocation());
+  }
+  discount_ = from.discount_;
+  // @@protoc_insertion_point(copy_constructor:basis_v2.Promotion)
+}
+
+inline void Promotion::SharedCtor() {
+id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+discount_ = 0;
+}
+
+Promotion::~Promotion() {
+  // @@protoc_insertion_point(destructor:basis_v2.Promotion)
+  if (GetArenaForAllocation() != nullptr) return;
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+inline void Promotion::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void Promotion::ArenaDtor(void* object) {
+  Promotion* _this = reinterpret_cast< Promotion* >(object);
+  (void)_this;
+}
+void Promotion::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Promotion::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void Promotion::Clear() {
+// @@protoc_insertion_point(message_clear_start:basis_v2.Promotion)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  id_.ClearToEmpty();
+  discount_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Promotion::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.Promotion.id"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 discount = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          discount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Promotion::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:basis_v2.Promotion)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string id = 1;
+  if (!this->_internal_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_id().data(), static_cast<int>(this->_internal_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "basis_v2.Promotion.id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_id(), target);
+  }
+
+  // int32 discount = 2;
+  if (this->_internal_discount() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_discount(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:basis_v2.Promotion)
+  return target;
+}
+
+size_t Promotion::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:basis_v2.Promotion)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string id = 1;
+  if (!this->_internal_id().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_id());
+  }
+
+  // int32 discount = 2;
+  if (this->_internal_discount() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_discount());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Promotion::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Promotion::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Promotion::GetClassData() const { return &_class_data_; }
+
+void Promotion::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<Promotion *>(to)->MergeFrom(
+      static_cast<const Promotion &>(from));
+}
+
+
+void Promotion::MergeFrom(const Promotion& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:basis_v2.Promotion)
+  GOOGLE_DCHECK_NE(&from, this);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_id().empty()) {
+    _internal_set_id(from._internal_id());
+  }
+  if (from._internal_discount() != 0) {
+    _internal_set_discount(from._internal_discount());
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void Promotion::CopyFrom(const Promotion& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:basis_v2.Promotion)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Promotion::IsInitialized() const {
+  return true;
+}
+
+void Promotion::InternalSwap(Promotion* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &id_, GetArenaForAllocation(),
+      &other->id_, other->GetArenaForAllocation()
+  );
+  swap(discount_, other->discount_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Promotion::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v2_2fbasis_2fbasis_2eproto_getter, &descriptor_table_v2_2fbasis_2fbasis_2eproto_once,
+      file_level_metadata_v2_2fbasis_2fbasis_2eproto[1]);
+}
 
 // ===================================================================
 
 class UnitTx::_Internal {
  public:
+  static const ::basis_v2::Promotion& promotion(const UnitTx* msg);
 };
 
-UnitTx::UnitTx(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+const ::basis_v2::Promotion&
+UnitTx::_Internal::promotion(const UnitTx* msg) {
+  return *msg->promotion_;
+}
+UnitTx::UnitTx(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
   cancel_history_(arena),
   cancel_receipt_urls_(arena) {
   SharedCtor();
-  RegisterArenaDtor(arena);
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
   // @@protoc_insertion_point(arena_constructor:basis_v2.UnitTx)
 }
 UnitTx::UnitTx(const UnitTx& from)
@@ -596,197 +867,202 @@ UnitTx::UnitTx(const UnitTx& from)
   amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_amount().empty()) {
     amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_amount(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   apply_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_apply_num().empty()) {
     apply_num_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_apply_num(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   bank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_bank_name().empty()) {
     bank_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_bank_name(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   buyer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_addr().empty()) {
     buyer_addr_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_addr(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   buyer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_email().empty()) {
     buyer_email_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_email(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   buyer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_name().empty()) {
     buyer_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_name(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   buyer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_postcode().empty()) {
     buyer_postcode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_postcode(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   buyer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_buyer_tel().empty()) {
     buyer_tel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_buyer_tel(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   cancel_amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_cancel_amount().empty()) {
     cancel_amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_cancel_amount(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   cancel_reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_cancel_reason().empty()) {
     cancel_reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_cancel_reason(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   card_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_code().empty()) {
     card_code_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_code(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   bin_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_bin_number().empty()) {
     bin_number_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_bin_number(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   card_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_name().empty()) {
     card_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_name(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   card_receipe_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_receipe_name().empty()) {
     card_receipe_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_receipe_name(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   card_owner_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_owner_type().empty()) {
     card_owner_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_owner_type(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   card_brand_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_brand().empty()) {
     card_brand_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_brand(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   card_credit_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_credit_type().empty()) {
     card_credit_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_credit_type(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   card_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_number().empty()) {
     card_number_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_number(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   channel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_channel().empty()) {
     channel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_channel(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   currency_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_currency().empty()) {
     currency_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_currency(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   custom_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_custom_data().empty()) {
     custom_data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_custom_data(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   card_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_card_uid().empty()) {
     card_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_card_uid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_uid_usage_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_uid_usage().empty()) {
     customer_uid_usage_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_uid_usage(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   fail_reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_fail_reason().empty()) {
     fail_reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_fail_reason(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
     imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
     merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   order_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_order_name().empty()) {
     order_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_order_name(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   pay_method_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pay_method().empty()) {
     pay_method_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pay_method(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   pg_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_id().empty()) {
     pg_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_id(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_provider().empty()) {
     pg_provider_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_provider(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_tid().empty()) {
     pg_tid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_tid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_receipt_url().empty()) {
     receipt_url_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_receipt_url(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_status().empty()) {
     status_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_status(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   user_agent_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_user_agent().empty()) {
     user_agent_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_user_agent(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   vbank_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_vbank_code().empty()) {
     vbank_code_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_vbank_code(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   vbank_holder_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_vbank_holder().empty()) {
     vbank_holder_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_vbank_holder(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   vbank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_vbank_name().empty()) {
     vbank_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_vbank_name(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   vbank_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_vbank_num().empty()) {
     vbank_num_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_vbank_num(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customer_email().empty()) {
     customer_email_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_email(), 
-      GetArena());
+      GetArenaForAllocation());
+  }
+  if (from._internal_has_promotion()) {
+    promotion_ = new ::basis_v2::Promotion(*from.promotion_);
+  } else {
+    promotion_ = nullptr;
   }
   ::memcpy(&bank_code_, &from.bank_code_,
     static_cast<size_t>(reinterpret_cast<char*>(&vbank_issued_at_) -
@@ -794,7 +1070,7 @@ UnitTx::UnitTx(const UnitTx& from)
   // @@protoc_insertion_point(copy_constructor:basis_v2.UnitTx)
 }
 
-void UnitTx::SharedCtor() {
+inline void UnitTx::SharedCtor() {
 amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 apply_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 bank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -835,19 +1111,20 @@ vbank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringA
 vbank_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&bank_code_) - reinterpret_cast<char*>(this)),
+    reinterpret_cast<char*>(&promotion_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&vbank_issued_at_) -
-    reinterpret_cast<char*>(&bank_code_)) + sizeof(vbank_issued_at_));
+    reinterpret_cast<char*>(&promotion_)) + sizeof(vbank_issued_at_));
 }
 
 UnitTx::~UnitTx() {
   // @@protoc_insertion_point(destructor:basis_v2.UnitTx)
+  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void UnitTx::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void UnitTx::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   amount_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   apply_num_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   bank_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -887,6 +1164,7 @@ void UnitTx::SharedDtor() {
   vbank_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   vbank_num_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   customer_email_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete promotion_;
 }
 
 void UnitTx::ArenaDtor(void* object) {
@@ -946,6 +1224,10 @@ void UnitTx::Clear() {
   vbank_name_.ClearToEmpty();
   vbank_num_.ClearToEmpty();
   customer_email_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && promotion_ != nullptr) {
+    delete promotion_;
+  }
+  promotion_ = nullptr;
   ::memset(&bank_code_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&vbank_issued_at_) -
       reinterpret_cast<char*>(&bank_code_)) + sizeof(vbank_issued_at_));
@@ -957,7 +1239,6 @@ const char* UnitTx::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string amount = 1;
       case 1:
@@ -1413,9 +1694,17 @@ const char* UnitTx::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // .basis_v2.Promotion promotion = 53;
+      case 53:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 170)) {
+          ptr = ctx->ParseMessage(_internal_mutable_promotion(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -1442,7 +1731,7 @@ failure:
   (void) cached_has_bits;
 
   // string amount = 1;
-  if (this->amount().size() > 0) {
+  if (!this->_internal_amount().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_amount().data(), static_cast<int>(this->_internal_amount().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1452,7 +1741,7 @@ failure:
   }
 
   // string apply_num = 2;
-  if (this->apply_num().size() > 0) {
+  if (!this->_internal_apply_num().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_apply_num().data(), static_cast<int>(this->_internal_apply_num().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1462,13 +1751,13 @@ failure:
   }
 
   // int32 bank_code = 3;
-  if (this->bank_code() != 0) {
+  if (this->_internal_bank_code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_bank_code(), target);
   }
 
   // string bank_name = 4;
-  if (this->bank_name().size() > 0) {
+  if (!this->_internal_bank_name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_bank_name().data(), static_cast<int>(this->_internal_bank_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1478,7 +1767,7 @@ failure:
   }
 
   // string buyer_addr = 5;
-  if (this->buyer_addr().size() > 0) {
+  if (!this->_internal_buyer_addr().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_buyer_addr().data(), static_cast<int>(this->_internal_buyer_addr().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1488,7 +1777,7 @@ failure:
   }
 
   // string buyer_email = 6;
-  if (this->buyer_email().size() > 0) {
+  if (!this->_internal_buyer_email().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_buyer_email().data(), static_cast<int>(this->_internal_buyer_email().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1498,7 +1787,7 @@ failure:
   }
 
   // string buyer_name = 7;
-  if (this->buyer_name().size() > 0) {
+  if (!this->_internal_buyer_name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_buyer_name().data(), static_cast<int>(this->_internal_buyer_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1508,7 +1797,7 @@ failure:
   }
 
   // string buyer_postcode = 8;
-  if (this->buyer_postcode().size() > 0) {
+  if (!this->_internal_buyer_postcode().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_buyer_postcode().data(), static_cast<int>(this->_internal_buyer_postcode().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1518,7 +1807,7 @@ failure:
   }
 
   // string buyer_tel = 9;
-  if (this->buyer_tel().size() > 0) {
+  if (!this->_internal_buyer_tel().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_buyer_tel().data(), static_cast<int>(this->_internal_buyer_tel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1528,7 +1817,7 @@ failure:
   }
 
   // string cancel_amount = 10;
-  if (this->cancel_amount().size() > 0) {
+  if (!this->_internal_cancel_amount().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cancel_amount().data(), static_cast<int>(this->_internal_cancel_amount().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1546,7 +1835,7 @@ failure:
   }
 
   // string cancel_reason = 12;
-  if (this->cancel_reason().size() > 0) {
+  if (!this->_internal_cancel_reason().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cancel_reason().data(), static_cast<int>(this->_internal_cancel_reason().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1566,13 +1855,13 @@ failure:
   }
 
   // int32 cancelled_at = 14;
-  if (this->cancelled_at() != 0) {
+  if (this->_internal_cancelled_at() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(14, this->_internal_cancelled_at(), target);
   }
 
   // string card_code = 15;
-  if (this->card_code().size() > 0) {
+  if (!this->_internal_card_code().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_code().data(), static_cast<int>(this->_internal_card_code().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1582,7 +1871,7 @@ failure:
   }
 
   // string bin_number = 16;
-  if (this->bin_number().size() > 0) {
+  if (!this->_internal_bin_number().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_bin_number().data(), static_cast<int>(this->_internal_bin_number().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1592,7 +1881,7 @@ failure:
   }
 
   // string card_name = 17;
-  if (this->card_name().size() > 0) {
+  if (!this->_internal_card_name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_name().data(), static_cast<int>(this->_internal_card_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1602,7 +1891,7 @@ failure:
   }
 
   // string card_receipe_name = 18;
-  if (this->card_receipe_name().size() > 0) {
+  if (!this->_internal_card_receipe_name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_receipe_name().data(), static_cast<int>(this->_internal_card_receipe_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1612,7 +1901,7 @@ failure:
   }
 
   // string card_owner_type = 19;
-  if (this->card_owner_type().size() > 0) {
+  if (!this->_internal_card_owner_type().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_owner_type().data(), static_cast<int>(this->_internal_card_owner_type().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1622,7 +1911,7 @@ failure:
   }
 
   // string card_brand = 20;
-  if (this->card_brand().size() > 0) {
+  if (!this->_internal_card_brand().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_brand().data(), static_cast<int>(this->_internal_card_brand().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1632,7 +1921,7 @@ failure:
   }
 
   // string card_credit_type = 21;
-  if (this->card_credit_type().size() > 0) {
+  if (!this->_internal_card_credit_type().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_credit_type().data(), static_cast<int>(this->_internal_card_credit_type().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1642,7 +1931,7 @@ failure:
   }
 
   // string card_number = 22;
-  if (this->card_number().size() > 0) {
+  if (!this->_internal_card_number().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_number().data(), static_cast<int>(this->_internal_card_number().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1652,25 +1941,25 @@ failure:
   }
 
   // int32 card_installment = 23;
-  if (this->card_installment() != 0) {
+  if (this->_internal_card_installment() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(23, this->_internal_card_installment(), target);
   }
 
   // int32 card_type = 24;
-  if (this->card_type() != 0) {
+  if (this->_internal_card_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(24, this->_internal_card_type(), target);
   }
 
   // bool cash_receipt_issued = 25;
-  if (this->cash_receipt_issued() != 0) {
+  if (this->_internal_cash_receipt_issued() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(25, this->_internal_cash_receipt_issued(), target);
   }
 
   // string channel = 26;
-  if (this->channel().size() > 0) {
+  if (!this->_internal_channel().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_channel().data(), static_cast<int>(this->_internal_channel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1680,7 +1969,7 @@ failure:
   }
 
   // string currency = 27;
-  if (this->currency().size() > 0) {
+  if (!this->_internal_currency().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_currency().data(), static_cast<int>(this->_internal_currency().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1690,7 +1979,7 @@ failure:
   }
 
   // string custom_data = 28;
-  if (this->custom_data().size() > 0) {
+  if (!this->_internal_custom_data().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_custom_data().data(), static_cast<int>(this->_internal_custom_data().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1700,7 +1989,7 @@ failure:
   }
 
   // string card_uid = 29;
-  if (this->card_uid().size() > 0) {
+  if (!this->_internal_card_uid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_card_uid().data(), static_cast<int>(this->_internal_card_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1710,7 +1999,7 @@ failure:
   }
 
   // string customer_uid_usage = 30;
-  if (this->customer_uid_usage().size() > 0) {
+  if (!this->_internal_customer_uid_usage().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_uid_usage().data(), static_cast<int>(this->_internal_customer_uid_usage().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1720,13 +2009,13 @@ failure:
   }
 
   // bool escrow = 31;
-  if (this->escrow() != 0) {
+  if (this->_internal_escrow() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(31, this->_internal_escrow(), target);
   }
 
   // string fail_reason = 32;
-  if (this->fail_reason().size() > 0) {
+  if (!this->_internal_fail_reason().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_fail_reason().data(), static_cast<int>(this->_internal_fail_reason().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1736,13 +2025,13 @@ failure:
   }
 
   // int32 failed_at = 33;
-  if (this->failed_at() != 0) {
+  if (this->_internal_failed_at() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(33, this->_internal_failed_at(), target);
   }
 
   // string imp_uid = 34;
-  if (this->imp_uid().size() > 0) {
+  if (!this->_internal_imp_uid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_imp_uid().data(), static_cast<int>(this->_internal_imp_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1752,7 +2041,7 @@ failure:
   }
 
   // string merchant_uid = 35;
-  if (this->merchant_uid().size() > 0) {
+  if (!this->_internal_merchant_uid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_merchant_uid().data(), static_cast<int>(this->_internal_merchant_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1762,7 +2051,7 @@ failure:
   }
 
   // string order_name = 36;
-  if (this->order_name().size() > 0) {
+  if (!this->_internal_order_name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_order_name().data(), static_cast<int>(this->_internal_order_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1772,13 +2061,13 @@ failure:
   }
 
   // int32 paid_at = 37;
-  if (this->paid_at() != 0) {
+  if (this->_internal_paid_at() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(37, this->_internal_paid_at(), target);
   }
 
   // string pay_method = 38;
-  if (this->pay_method().size() > 0) {
+  if (!this->_internal_pay_method().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pay_method().data(), static_cast<int>(this->_internal_pay_method().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1788,7 +2077,7 @@ failure:
   }
 
   // string pg_id = 39;
-  if (this->pg_id().size() > 0) {
+  if (!this->_internal_pg_id().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg_id().data(), static_cast<int>(this->_internal_pg_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1798,7 +2087,7 @@ failure:
   }
 
   // string pg_provider = 40;
-  if (this->pg_provider().size() > 0) {
+  if (!this->_internal_pg_provider().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg_provider().data(), static_cast<int>(this->_internal_pg_provider().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1808,7 +2097,7 @@ failure:
   }
 
   // string pg_tid = 41;
-  if (this->pg_tid().size() > 0) {
+  if (!this->_internal_pg_tid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg_tid().data(), static_cast<int>(this->_internal_pg_tid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1818,7 +2107,7 @@ failure:
   }
 
   // string receipt_url = 42;
-  if (this->receipt_url().size() > 0) {
+  if (!this->_internal_receipt_url().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_receipt_url().data(), static_cast<int>(this->_internal_receipt_url().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1828,13 +2117,13 @@ failure:
   }
 
   // int32 started_at = 43;
-  if (this->started_at() != 0) {
+  if (this->_internal_started_at() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(43, this->_internal_started_at(), target);
   }
 
   // string status = 44;
-  if (this->status().size() > 0) {
+  if (!this->_internal_status().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_status().data(), static_cast<int>(this->_internal_status().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1844,7 +2133,7 @@ failure:
   }
 
   // string user_agent = 45;
-  if (this->user_agent().size() > 0) {
+  if (!this->_internal_user_agent().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_user_agent().data(), static_cast<int>(this->_internal_user_agent().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1854,7 +2143,7 @@ failure:
   }
 
   // string vbank_code = 46;
-  if (this->vbank_code().size() > 0) {
+  if (!this->_internal_vbank_code().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_vbank_code().data(), static_cast<int>(this->_internal_vbank_code().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1864,13 +2153,13 @@ failure:
   }
 
   // int32 vbank_date = 47;
-  if (this->vbank_date() != 0) {
+  if (this->_internal_vbank_date() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(47, this->_internal_vbank_date(), target);
   }
 
   // string vbank_holder = 48;
-  if (this->vbank_holder().size() > 0) {
+  if (!this->_internal_vbank_holder().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_vbank_holder().data(), static_cast<int>(this->_internal_vbank_holder().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1880,13 +2169,13 @@ failure:
   }
 
   // int32 vbank_issued_at = 49;
-  if (this->vbank_issued_at() != 0) {
+  if (this->_internal_vbank_issued_at() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(49, this->_internal_vbank_issued_at(), target);
   }
 
   // string vbank_name = 50;
-  if (this->vbank_name().size() > 0) {
+  if (!this->_internal_vbank_name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_vbank_name().data(), static_cast<int>(this->_internal_vbank_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1896,7 +2185,7 @@ failure:
   }
 
   // string vbank_num = 51;
-  if (this->vbank_num().size() > 0) {
+  if (!this->_internal_vbank_num().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_vbank_num().data(), static_cast<int>(this->_internal_vbank_num().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1906,13 +2195,21 @@ failure:
   }
 
   // string customer_email = 52;
-  if (this->customer_email().size() > 0) {
+  if (!this->_internal_customer_email().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customer_email().data(), static_cast<int>(this->_internal_customer_email().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "basis_v2.UnitTx.customer_email");
     target = stream->WriteStringMaybeAliased(
         52, this->_internal_customer_email(), target);
+  }
+
+  // .basis_v2.Promotion promotion = 53;
+  if (this->_internal_has_promotion()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        53, _Internal::promotion(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1947,346 +2244,353 @@ size_t UnitTx::ByteSizeLong() const {
   }
 
   // string amount = 1;
-  if (this->amount().size() > 0) {
+  if (!this->_internal_amount().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_amount());
   }
 
   // string apply_num = 2;
-  if (this->apply_num().size() > 0) {
+  if (!this->_internal_apply_num().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_apply_num());
   }
 
   // string bank_name = 4;
-  if (this->bank_name().size() > 0) {
+  if (!this->_internal_bank_name().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_bank_name());
   }
 
   // string buyer_addr = 5;
-  if (this->buyer_addr().size() > 0) {
+  if (!this->_internal_buyer_addr().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_buyer_addr());
   }
 
   // string buyer_email = 6;
-  if (this->buyer_email().size() > 0) {
+  if (!this->_internal_buyer_email().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_buyer_email());
   }
 
   // string buyer_name = 7;
-  if (this->buyer_name().size() > 0) {
+  if (!this->_internal_buyer_name().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_buyer_name());
   }
 
   // string buyer_postcode = 8;
-  if (this->buyer_postcode().size() > 0) {
+  if (!this->_internal_buyer_postcode().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_buyer_postcode());
   }
 
   // string buyer_tel = 9;
-  if (this->buyer_tel().size() > 0) {
+  if (!this->_internal_buyer_tel().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_buyer_tel());
   }
 
   // string cancel_amount = 10;
-  if (this->cancel_amount().size() > 0) {
+  if (!this->_internal_cancel_amount().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_cancel_amount());
   }
 
   // string cancel_reason = 12;
-  if (this->cancel_reason().size() > 0) {
+  if (!this->_internal_cancel_reason().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_cancel_reason());
   }
 
   // string card_code = 15;
-  if (this->card_code().size() > 0) {
+  if (!this->_internal_card_code().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_code());
   }
 
   // string bin_number = 16;
-  if (this->bin_number().size() > 0) {
+  if (!this->_internal_bin_number().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_bin_number());
   }
 
   // string card_name = 17;
-  if (this->card_name().size() > 0) {
+  if (!this->_internal_card_name().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_name());
   }
 
   // string card_receipe_name = 18;
-  if (this->card_receipe_name().size() > 0) {
+  if (!this->_internal_card_receipe_name().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_receipe_name());
   }
 
   // string card_owner_type = 19;
-  if (this->card_owner_type().size() > 0) {
+  if (!this->_internal_card_owner_type().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_owner_type());
   }
 
   // string card_brand = 20;
-  if (this->card_brand().size() > 0) {
+  if (!this->_internal_card_brand().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_brand());
   }
 
   // string card_credit_type = 21;
-  if (this->card_credit_type().size() > 0) {
+  if (!this->_internal_card_credit_type().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_credit_type());
   }
 
   // string card_number = 22;
-  if (this->card_number().size() > 0) {
+  if (!this->_internal_card_number().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_number());
   }
 
   // string channel = 26;
-  if (this->channel().size() > 0) {
+  if (!this->_internal_channel().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_channel());
   }
 
   // string currency = 27;
-  if (this->currency().size() > 0) {
+  if (!this->_internal_currency().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_currency());
   }
 
   // string custom_data = 28;
-  if (this->custom_data().size() > 0) {
+  if (!this->_internal_custom_data().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_custom_data());
   }
 
   // string card_uid = 29;
-  if (this->card_uid().size() > 0) {
+  if (!this->_internal_card_uid().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_card_uid());
   }
 
   // string customer_uid_usage = 30;
-  if (this->customer_uid_usage().size() > 0) {
+  if (!this->_internal_customer_uid_usage().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_uid_usage());
   }
 
   // string fail_reason = 32;
-  if (this->fail_reason().size() > 0) {
+  if (!this->_internal_fail_reason().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_fail_reason());
   }
 
   // string imp_uid = 34;
-  if (this->imp_uid().size() > 0) {
+  if (!this->_internal_imp_uid().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_imp_uid());
   }
 
   // string merchant_uid = 35;
-  if (this->merchant_uid().size() > 0) {
+  if (!this->_internal_merchant_uid().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_merchant_uid());
   }
 
   // string order_name = 36;
-  if (this->order_name().size() > 0) {
+  if (!this->_internal_order_name().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_order_name());
   }
 
   // string pay_method = 38;
-  if (this->pay_method().size() > 0) {
+  if (!this->_internal_pay_method().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pay_method());
   }
 
   // string pg_id = 39;
-  if (this->pg_id().size() > 0) {
+  if (!this->_internal_pg_id().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pg_id());
   }
 
   // string pg_provider = 40;
-  if (this->pg_provider().size() > 0) {
+  if (!this->_internal_pg_provider().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pg_provider());
   }
 
   // string pg_tid = 41;
-  if (this->pg_tid().size() > 0) {
+  if (!this->_internal_pg_tid().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pg_tid());
   }
 
   // string receipt_url = 42;
-  if (this->receipt_url().size() > 0) {
+  if (!this->_internal_receipt_url().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_receipt_url());
   }
 
   // string status = 44;
-  if (this->status().size() > 0) {
+  if (!this->_internal_status().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_status());
   }
 
   // string user_agent = 45;
-  if (this->user_agent().size() > 0) {
+  if (!this->_internal_user_agent().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_user_agent());
   }
 
   // string vbank_code = 46;
-  if (this->vbank_code().size() > 0) {
+  if (!this->_internal_vbank_code().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_vbank_code());
   }
 
   // string vbank_holder = 48;
-  if (this->vbank_holder().size() > 0) {
+  if (!this->_internal_vbank_holder().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_vbank_holder());
   }
 
   // string vbank_name = 50;
-  if (this->vbank_name().size() > 0) {
+  if (!this->_internal_vbank_name().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_vbank_name());
   }
 
   // string vbank_num = 51;
-  if (this->vbank_num().size() > 0) {
+  if (!this->_internal_vbank_num().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_vbank_num());
   }
 
   // string customer_email = 52;
-  if (this->customer_email().size() > 0) {
+  if (!this->_internal_customer_email().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customer_email());
   }
 
+  // .basis_v2.Promotion promotion = 53;
+  if (this->_internal_has_promotion()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *promotion_);
+  }
+
   // int32 bank_code = 3;
-  if (this->bank_code() != 0) {
+  if (this->_internal_bank_code() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_bank_code());
   }
 
   // int32 cancelled_at = 14;
-  if (this->cancelled_at() != 0) {
+  if (this->_internal_cancelled_at() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_cancelled_at());
   }
 
   // int32 card_installment = 23;
-  if (this->card_installment() != 0) {
+  if (this->_internal_card_installment() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_card_installment());
   }
 
   // int32 card_type = 24;
-  if (this->card_type() != 0) {
+  if (this->_internal_card_type() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_card_type());
   }
 
   // bool cash_receipt_issued = 25;
-  if (this->cash_receipt_issued() != 0) {
+  if (this->_internal_cash_receipt_issued() != 0) {
     total_size += 2 + 1;
   }
 
   // bool escrow = 31;
-  if (this->escrow() != 0) {
+  if (this->_internal_escrow() != 0) {
     total_size += 2 + 1;
   }
 
   // int32 failed_at = 33;
-  if (this->failed_at() != 0) {
+  if (this->_internal_failed_at() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_failed_at());
   }
 
   // int32 paid_at = 37;
-  if (this->paid_at() != 0) {
+  if (this->_internal_paid_at() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_paid_at());
   }
 
   // int32 started_at = 43;
-  if (this->started_at() != 0) {
+  if (this->_internal_started_at() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_started_at());
   }
 
   // int32 vbank_date = 47;
-  if (this->vbank_date() != 0) {
+  if (this->_internal_vbank_date() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_vbank_date());
   }
 
   // int32 vbank_issued_at = 49;
-  if (this->vbank_issued_at() != 0) {
+  if (this->_internal_vbank_issued_at() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_vbank_issued_at());
@@ -2301,187 +2605,181 @@ size_t UnitTx::ByteSizeLong() const {
   return total_size;
 }
 
-void UnitTx::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:basis_v2.UnitTx)
-  GOOGLE_DCHECK_NE(&from, this);
-  const UnitTx* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<UnitTx>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:basis_v2.UnitTx)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:basis_v2.UnitTx)
-    MergeFrom(*source);
-  }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UnitTx::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    UnitTx::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UnitTx::GetClassData() const { return &_class_data_; }
+
+void UnitTx::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<UnitTx *>(to)->MergeFrom(
+      static_cast<const UnitTx &>(from));
 }
+
 
 void UnitTx::MergeFrom(const UnitTx& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:basis_v2.UnitTx)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   cancel_history_.MergeFrom(from.cancel_history_);
   cancel_receipt_urls_.MergeFrom(from.cancel_receipt_urls_);
-  if (from.amount().size() > 0) {
+  if (!from._internal_amount().empty()) {
     _internal_set_amount(from._internal_amount());
   }
-  if (from.apply_num().size() > 0) {
+  if (!from._internal_apply_num().empty()) {
     _internal_set_apply_num(from._internal_apply_num());
   }
-  if (from.bank_name().size() > 0) {
+  if (!from._internal_bank_name().empty()) {
     _internal_set_bank_name(from._internal_bank_name());
   }
-  if (from.buyer_addr().size() > 0) {
+  if (!from._internal_buyer_addr().empty()) {
     _internal_set_buyer_addr(from._internal_buyer_addr());
   }
-  if (from.buyer_email().size() > 0) {
+  if (!from._internal_buyer_email().empty()) {
     _internal_set_buyer_email(from._internal_buyer_email());
   }
-  if (from.buyer_name().size() > 0) {
+  if (!from._internal_buyer_name().empty()) {
     _internal_set_buyer_name(from._internal_buyer_name());
   }
-  if (from.buyer_postcode().size() > 0) {
+  if (!from._internal_buyer_postcode().empty()) {
     _internal_set_buyer_postcode(from._internal_buyer_postcode());
   }
-  if (from.buyer_tel().size() > 0) {
+  if (!from._internal_buyer_tel().empty()) {
     _internal_set_buyer_tel(from._internal_buyer_tel());
   }
-  if (from.cancel_amount().size() > 0) {
+  if (!from._internal_cancel_amount().empty()) {
     _internal_set_cancel_amount(from._internal_cancel_amount());
   }
-  if (from.cancel_reason().size() > 0) {
+  if (!from._internal_cancel_reason().empty()) {
     _internal_set_cancel_reason(from._internal_cancel_reason());
   }
-  if (from.card_code().size() > 0) {
+  if (!from._internal_card_code().empty()) {
     _internal_set_card_code(from._internal_card_code());
   }
-  if (from.bin_number().size() > 0) {
+  if (!from._internal_bin_number().empty()) {
     _internal_set_bin_number(from._internal_bin_number());
   }
-  if (from.card_name().size() > 0) {
+  if (!from._internal_card_name().empty()) {
     _internal_set_card_name(from._internal_card_name());
   }
-  if (from.card_receipe_name().size() > 0) {
+  if (!from._internal_card_receipe_name().empty()) {
     _internal_set_card_receipe_name(from._internal_card_receipe_name());
   }
-  if (from.card_owner_type().size() > 0) {
+  if (!from._internal_card_owner_type().empty()) {
     _internal_set_card_owner_type(from._internal_card_owner_type());
   }
-  if (from.card_brand().size() > 0) {
+  if (!from._internal_card_brand().empty()) {
     _internal_set_card_brand(from._internal_card_brand());
   }
-  if (from.card_credit_type().size() > 0) {
+  if (!from._internal_card_credit_type().empty()) {
     _internal_set_card_credit_type(from._internal_card_credit_type());
   }
-  if (from.card_number().size() > 0) {
+  if (!from._internal_card_number().empty()) {
     _internal_set_card_number(from._internal_card_number());
   }
-  if (from.channel().size() > 0) {
+  if (!from._internal_channel().empty()) {
     _internal_set_channel(from._internal_channel());
   }
-  if (from.currency().size() > 0) {
+  if (!from._internal_currency().empty()) {
     _internal_set_currency(from._internal_currency());
   }
-  if (from.custom_data().size() > 0) {
+  if (!from._internal_custom_data().empty()) {
     _internal_set_custom_data(from._internal_custom_data());
   }
-  if (from.card_uid().size() > 0) {
+  if (!from._internal_card_uid().empty()) {
     _internal_set_card_uid(from._internal_card_uid());
   }
-  if (from.customer_uid_usage().size() > 0) {
+  if (!from._internal_customer_uid_usage().empty()) {
     _internal_set_customer_uid_usage(from._internal_customer_uid_usage());
   }
-  if (from.fail_reason().size() > 0) {
+  if (!from._internal_fail_reason().empty()) {
     _internal_set_fail_reason(from._internal_fail_reason());
   }
-  if (from.imp_uid().size() > 0) {
+  if (!from._internal_imp_uid().empty()) {
     _internal_set_imp_uid(from._internal_imp_uid());
   }
-  if (from.merchant_uid().size() > 0) {
+  if (!from._internal_merchant_uid().empty()) {
     _internal_set_merchant_uid(from._internal_merchant_uid());
   }
-  if (from.order_name().size() > 0) {
+  if (!from._internal_order_name().empty()) {
     _internal_set_order_name(from._internal_order_name());
   }
-  if (from.pay_method().size() > 0) {
+  if (!from._internal_pay_method().empty()) {
     _internal_set_pay_method(from._internal_pay_method());
   }
-  if (from.pg_id().size() > 0) {
+  if (!from._internal_pg_id().empty()) {
     _internal_set_pg_id(from._internal_pg_id());
   }
-  if (from.pg_provider().size() > 0) {
+  if (!from._internal_pg_provider().empty()) {
     _internal_set_pg_provider(from._internal_pg_provider());
   }
-  if (from.pg_tid().size() > 0) {
+  if (!from._internal_pg_tid().empty()) {
     _internal_set_pg_tid(from._internal_pg_tid());
   }
-  if (from.receipt_url().size() > 0) {
+  if (!from._internal_receipt_url().empty()) {
     _internal_set_receipt_url(from._internal_receipt_url());
   }
-  if (from.status().size() > 0) {
+  if (!from._internal_status().empty()) {
     _internal_set_status(from._internal_status());
   }
-  if (from.user_agent().size() > 0) {
+  if (!from._internal_user_agent().empty()) {
     _internal_set_user_agent(from._internal_user_agent());
   }
-  if (from.vbank_code().size() > 0) {
+  if (!from._internal_vbank_code().empty()) {
     _internal_set_vbank_code(from._internal_vbank_code());
   }
-  if (from.vbank_holder().size() > 0) {
+  if (!from._internal_vbank_holder().empty()) {
     _internal_set_vbank_holder(from._internal_vbank_holder());
   }
-  if (from.vbank_name().size() > 0) {
+  if (!from._internal_vbank_name().empty()) {
     _internal_set_vbank_name(from._internal_vbank_name());
   }
-  if (from.vbank_num().size() > 0) {
+  if (!from._internal_vbank_num().empty()) {
     _internal_set_vbank_num(from._internal_vbank_num());
   }
-  if (from.customer_email().size() > 0) {
+  if (!from._internal_customer_email().empty()) {
     _internal_set_customer_email(from._internal_customer_email());
   }
-  if (from.bank_code() != 0) {
+  if (from._internal_has_promotion()) {
+    _internal_mutable_promotion()->::basis_v2::Promotion::MergeFrom(from._internal_promotion());
+  }
+  if (from._internal_bank_code() != 0) {
     _internal_set_bank_code(from._internal_bank_code());
   }
-  if (from.cancelled_at() != 0) {
+  if (from._internal_cancelled_at() != 0) {
     _internal_set_cancelled_at(from._internal_cancelled_at());
   }
-  if (from.card_installment() != 0) {
+  if (from._internal_card_installment() != 0) {
     _internal_set_card_installment(from._internal_card_installment());
   }
-  if (from.card_type() != 0) {
+  if (from._internal_card_type() != 0) {
     _internal_set_card_type(from._internal_card_type());
   }
-  if (from.cash_receipt_issued() != 0) {
+  if (from._internal_cash_receipt_issued() != 0) {
     _internal_set_cash_receipt_issued(from._internal_cash_receipt_issued());
   }
-  if (from.escrow() != 0) {
+  if (from._internal_escrow() != 0) {
     _internal_set_escrow(from._internal_escrow());
   }
-  if (from.failed_at() != 0) {
+  if (from._internal_failed_at() != 0) {
     _internal_set_failed_at(from._internal_failed_at());
   }
-  if (from.paid_at() != 0) {
+  if (from._internal_paid_at() != 0) {
     _internal_set_paid_at(from._internal_paid_at());
   }
-  if (from.started_at() != 0) {
+  if (from._internal_started_at() != 0) {
     _internal_set_started_at(from._internal_started_at());
   }
-  if (from.vbank_date() != 0) {
+  if (from._internal_vbank_date() != 0) {
     _internal_set_vbank_date(from._internal_vbank_date());
   }
-  if (from.vbank_issued_at() != 0) {
+  if (from._internal_vbank_issued_at() != 0) {
     _internal_set_vbank_issued_at(from._internal_vbank_issued_at());
   }
-}
-
-void UnitTx::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:basis_v2.UnitTx)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void UnitTx::CopyFrom(const UnitTx& from) {
@@ -2497,66 +2795,226 @@ bool UnitTx::IsInitialized() const {
 
 void UnitTx::InternalSwap(UnitTx* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   cancel_history_.InternalSwap(&other->cancel_history_);
   cancel_receipt_urls_.InternalSwap(&other->cancel_receipt_urls_);
-  amount_.Swap(&other->amount_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  apply_num_.Swap(&other->apply_num_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  bank_name_.Swap(&other->bank_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_addr_.Swap(&other->buyer_addr_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_email_.Swap(&other->buyer_email_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_name_.Swap(&other->buyer_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_postcode_.Swap(&other->buyer_postcode_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  buyer_tel_.Swap(&other->buyer_tel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  cancel_amount_.Swap(&other->cancel_amount_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  cancel_reason_.Swap(&other->cancel_reason_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_code_.Swap(&other->card_code_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  bin_number_.Swap(&other->bin_number_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_name_.Swap(&other->card_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_receipe_name_.Swap(&other->card_receipe_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_owner_type_.Swap(&other->card_owner_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_brand_.Swap(&other->card_brand_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_credit_type_.Swap(&other->card_credit_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_number_.Swap(&other->card_number_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  channel_.Swap(&other->channel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  currency_.Swap(&other->currency_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  custom_data_.Swap(&other->custom_data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  card_uid_.Swap(&other->card_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_uid_usage_.Swap(&other->customer_uid_usage_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  fail_reason_.Swap(&other->fail_reason_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  imp_uid_.Swap(&other->imp_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  merchant_uid_.Swap(&other->merchant_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  order_name_.Swap(&other->order_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pay_method_.Swap(&other->pay_method_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_id_.Swap(&other->pg_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_provider_.Swap(&other->pg_provider_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  pg_tid_.Swap(&other->pg_tid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  receipt_url_.Swap(&other->receipt_url_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  status_.Swap(&other->status_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  user_agent_.Swap(&other->user_agent_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  vbank_code_.Swap(&other->vbank_code_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  vbank_holder_.Swap(&other->vbank_holder_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  vbank_name_.Swap(&other->vbank_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  vbank_num_.Swap(&other->vbank_num_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  customer_email_.Swap(&other->customer_email_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &amount_, GetArenaForAllocation(),
+      &other->amount_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &apply_num_, GetArenaForAllocation(),
+      &other->apply_num_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &bank_name_, GetArenaForAllocation(),
+      &other->bank_name_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &buyer_addr_, GetArenaForAllocation(),
+      &other->buyer_addr_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &buyer_email_, GetArenaForAllocation(),
+      &other->buyer_email_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &buyer_name_, GetArenaForAllocation(),
+      &other->buyer_name_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &buyer_postcode_, GetArenaForAllocation(),
+      &other->buyer_postcode_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &buyer_tel_, GetArenaForAllocation(),
+      &other->buyer_tel_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &cancel_amount_, GetArenaForAllocation(),
+      &other->cancel_amount_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &cancel_reason_, GetArenaForAllocation(),
+      &other->cancel_reason_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &card_code_, GetArenaForAllocation(),
+      &other->card_code_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &bin_number_, GetArenaForAllocation(),
+      &other->bin_number_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &card_name_, GetArenaForAllocation(),
+      &other->card_name_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &card_receipe_name_, GetArenaForAllocation(),
+      &other->card_receipe_name_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &card_owner_type_, GetArenaForAllocation(),
+      &other->card_owner_type_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &card_brand_, GetArenaForAllocation(),
+      &other->card_brand_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &card_credit_type_, GetArenaForAllocation(),
+      &other->card_credit_type_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &card_number_, GetArenaForAllocation(),
+      &other->card_number_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &channel_, GetArenaForAllocation(),
+      &other->channel_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &currency_, GetArenaForAllocation(),
+      &other->currency_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &custom_data_, GetArenaForAllocation(),
+      &other->custom_data_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &card_uid_, GetArenaForAllocation(),
+      &other->card_uid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_uid_usage_, GetArenaForAllocation(),
+      &other->customer_uid_usage_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &fail_reason_, GetArenaForAllocation(),
+      &other->fail_reason_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &imp_uid_, GetArenaForAllocation(),
+      &other->imp_uid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &merchant_uid_, GetArenaForAllocation(),
+      &other->merchant_uid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &order_name_, GetArenaForAllocation(),
+      &other->order_name_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &pay_method_, GetArenaForAllocation(),
+      &other->pay_method_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &pg_id_, GetArenaForAllocation(),
+      &other->pg_id_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &pg_provider_, GetArenaForAllocation(),
+      &other->pg_provider_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &pg_tid_, GetArenaForAllocation(),
+      &other->pg_tid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &receipt_url_, GetArenaForAllocation(),
+      &other->receipt_url_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &status_, GetArenaForAllocation(),
+      &other->status_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &user_agent_, GetArenaForAllocation(),
+      &other->user_agent_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &vbank_code_, GetArenaForAllocation(),
+      &other->vbank_code_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &vbank_holder_, GetArenaForAllocation(),
+      &other->vbank_holder_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &vbank_name_, GetArenaForAllocation(),
+      &other->vbank_name_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &vbank_num_, GetArenaForAllocation(),
+      &other->vbank_num_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customer_email_, GetArenaForAllocation(),
+      &other->customer_email_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(UnitTx, vbank_issued_at_)
       + sizeof(UnitTx::vbank_issued_at_)
-      - PROTOBUF_FIELD_OFFSET(UnitTx, bank_code_)>(
-          reinterpret_cast<char*>(&bank_code_),
-          reinterpret_cast<char*>(&other->bank_code_));
+      - PROTOBUF_FIELD_OFFSET(UnitTx, promotion_)>(
+          reinterpret_cast<char*>(&promotion_),
+          reinterpret_cast<char*>(&other->promotion_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UnitTx::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_v2_2fbasis_2fbasis_2eproto_getter, &descriptor_table_v2_2fbasis_2fbasis_2eproto_once,
+      file_level_metadata_v2_2fbasis_2fbasis_2eproto[2]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace basis_v2
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::basis_v2::CancelHistory* Arena::CreateMaybeMessage< ::basis_v2::CancelHistory >(Arena* arena) {
   return Arena::CreateMessageInternal< ::basis_v2::CancelHistory >(arena);
+}
+template<> PROTOBUF_NOINLINE ::basis_v2::Promotion* Arena::CreateMaybeMessage< ::basis_v2::Promotion >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::basis_v2::Promotion >(arena);
 }
 template<> PROTOBUF_NOINLINE ::basis_v2::UnitTx* Arena::CreateMaybeMessage< ::basis_v2::UnitTx >(Arena* arena) {
   return Arena::CreateMessageInternal< ::basis_v2::UnitTx >(arena);

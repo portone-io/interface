@@ -147,6 +147,11 @@ export class Payment extends jspb.Message {
   getVbankNum(): string;
   setVbankNum(value: string): void;
 
+  hasPromotion(): boolean;
+  clearPromotion(): void;
+  getPromotion(): Promotion | undefined;
+  setPromotion(value?: Promotion): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Payment.AsObject;
   static toObject(includeInstance: boolean, msg: Payment): Payment.AsObject;
@@ -205,6 +210,7 @@ export namespace Payment {
     vbankIssuedAt: number,
     vbankName: string,
     vbankNum: string,
+    promotion?: Promotion.AsObject,
   }
 }
 
@@ -923,6 +929,30 @@ export class PaymentGetPrepareRequest extends jspb.Message {
 export namespace PaymentGetPrepareRequest {
   export type AsObject = {
     merchantUid: string,
+  }
+}
+
+export class Promotion extends jspb.Message {
+  getId(): string;
+  setId(value: string): void;
+
+  getDiscount(): number;
+  setDiscount(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Promotion.AsObject;
+  static toObject(includeInstance: boolean, msg: Promotion): Promotion.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: Promotion, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Promotion;
+  static deserializeBinaryFromReader(message: Promotion, reader: jspb.BinaryReader): Promotion;
+}
+
+export namespace Promotion {
+  export type AsObject = {
+    id: string,
+    discount: number,
   }
 }
 

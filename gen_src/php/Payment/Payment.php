@@ -197,6 +197,10 @@ class Payment extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string vbank_num = 46;</code>
      */
     protected $vbank_num = '';
+    /**
+     * Generated from protobuf field <code>.payment.Promotion promotion = 47;</code>
+     */
+    protected $promotion = null;
 
     /**
      * Constructor.
@@ -250,6 +254,7 @@ class Payment extends \Google\Protobuf\Internal\Message
      *     @type int $vbank_issued_at
      *     @type string $vbank_name
      *     @type string $vbank_num
+     *     @type \Payment\Promotion $promotion
      * }
      */
     public function __construct($data = NULL) {
@@ -1265,6 +1270,38 @@ class Payment extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->vbank_num = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.payment.Promotion promotion = 47;</code>
+     * @return \Payment\Promotion
+     */
+    public function getPromotion()
+    {
+        return isset($this->promotion) ? $this->promotion : null;
+    }
+
+    public function hasPromotion()
+    {
+        return isset($this->promotion);
+    }
+
+    public function clearPromotion()
+    {
+        unset($this->promotion);
+    }
+
+    /**
+     * Generated from protobuf field <code>.payment.Promotion promotion = 47;</code>
+     * @param \Payment\Promotion $var
+     * @return $this
+     */
+    public function setPromotion($var)
+    {
+        GPBUtil::checkMessage($var, \Payment\Promotion::class);
+        $this->promotion = $var;
 
         return $this;
     }

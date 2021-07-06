@@ -88,7 +88,7 @@ class CancelCardPaymenttResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.card_v2.PayByRegisteredCardData response = 3;</code>
-     * @return \Card_v2\PayByRegisteredCardData|null
+     * @return \Card_v2\PayByRegisteredCardData
      */
     public function getResponse()
     {

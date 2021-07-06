@@ -516,6 +516,21 @@ public final class PaymentOuterClass {
      */
     com.google.protobuf.ByteString
         getVbankNumBytes();
+
+    /**
+     * <code>.payment.Promotion promotion = 47;</code>
+     * @return Whether the promotion field is set.
+     */
+    boolean hasPromotion();
+    /**
+     * <code>.payment.Promotion promotion = 47;</code>
+     * @return The promotion.
+     */
+    payment.PaymentOuterClass.Promotion getPromotion();
+    /**
+     * <code>.payment.Promotion promotion = 47;</code>
+     */
+    payment.PaymentOuterClass.PromotionOrBuilder getPromotionOrBuilder();
   }
   /**
    * Protobuf type {@code payment.Payment}
@@ -863,6 +878,19 @@ public final class PaymentOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               vbankNum_ = s;
+              break;
+            }
+            case 378: {
+              payment.PaymentOuterClass.Promotion.Builder subBuilder = null;
+              if (promotion_ != null) {
+                subBuilder = promotion_.toBuilder();
+              }
+              promotion_ = input.readMessage(payment.PaymentOuterClass.Promotion.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(promotion_);
+                promotion_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -2299,6 +2327,32 @@ public final class PaymentOuterClass {
       }
     }
 
+    public static final int PROMOTION_FIELD_NUMBER = 47;
+    private payment.PaymentOuterClass.Promotion promotion_;
+    /**
+     * <code>.payment.Promotion promotion = 47;</code>
+     * @return Whether the promotion field is set.
+     */
+    @java.lang.Override
+    public boolean hasPromotion() {
+      return promotion_ != null;
+    }
+    /**
+     * <code>.payment.Promotion promotion = 47;</code>
+     * @return The promotion.
+     */
+    @java.lang.Override
+    public payment.PaymentOuterClass.Promotion getPromotion() {
+      return promotion_ == null ? payment.PaymentOuterClass.Promotion.getDefaultInstance() : promotion_;
+    }
+    /**
+     * <code>.payment.Promotion promotion = 47;</code>
+     */
+    @java.lang.Override
+    public payment.PaymentOuterClass.PromotionOrBuilder getPromotionOrBuilder() {
+      return getPromotion();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2450,6 +2504,9 @@ public final class PaymentOuterClass {
       }
       if (!getVbankNumBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 46, vbankNum_);
+      }
+      if (promotion_ != null) {
+        output.writeMessage(47, getPromotion());
       }
       unknownFields.writeTo(output);
     }
@@ -2617,6 +2674,10 @@ public final class PaymentOuterClass {
       if (!getVbankNumBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(46, vbankNum_);
       }
+      if (promotion_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(47, getPromotion());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2724,6 +2785,11 @@ public final class PaymentOuterClass {
           .equals(other.getVbankName())) return false;
       if (!getVbankNum()
           .equals(other.getVbankNum())) return false;
+      if (hasPromotion() != other.hasPromotion()) return false;
+      if (hasPromotion()) {
+        if (!getPromotion()
+            .equals(other.getPromotion())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2833,6 +2899,10 @@ public final class PaymentOuterClass {
       hash = (53 * hash) + getVbankName().hashCode();
       hash = (37 * hash) + VBANK_NUM_FIELD_NUMBER;
       hash = (53 * hash) + getVbankNum().hashCode();
+      if (hasPromotion()) {
+        hash = (37 * hash) + PROMOTION_FIELD_NUMBER;
+        hash = (53 * hash) + getPromotion().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3063,6 +3133,12 @@ public final class PaymentOuterClass {
 
         vbankNum_ = "";
 
+        if (promotionBuilder_ == null) {
+          promotion_ = null;
+        } else {
+          promotion_ = null;
+          promotionBuilder_ = null;
+        }
         return this;
       }
 
@@ -3148,6 +3224,11 @@ public final class PaymentOuterClass {
         result.vbankIssuedAt_ = vbankIssuedAt_;
         result.vbankName_ = vbankName_;
         result.vbankNum_ = vbankNum_;
+        if (promotionBuilder_ == null) {
+          result.promotion_ = promotion_;
+        } else {
+          result.promotion_ = promotionBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3394,6 +3475,9 @@ public final class PaymentOuterClass {
         if (!other.getVbankNum().isEmpty()) {
           vbankNum_ = other.vbankNum_;
           onChanged();
+        }
+        if (other.hasPromotion()) {
+          mergePromotion(other.getPromotion());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6532,6 +6616,125 @@ public final class PaymentOuterClass {
         vbankNum_ = value;
         onChanged();
         return this;
+      }
+
+      private payment.PaymentOuterClass.Promotion promotion_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          payment.PaymentOuterClass.Promotion, payment.PaymentOuterClass.Promotion.Builder, payment.PaymentOuterClass.PromotionOrBuilder> promotionBuilder_;
+      /**
+       * <code>.payment.Promotion promotion = 47;</code>
+       * @return Whether the promotion field is set.
+       */
+      public boolean hasPromotion() {
+        return promotionBuilder_ != null || promotion_ != null;
+      }
+      /**
+       * <code>.payment.Promotion promotion = 47;</code>
+       * @return The promotion.
+       */
+      public payment.PaymentOuterClass.Promotion getPromotion() {
+        if (promotionBuilder_ == null) {
+          return promotion_ == null ? payment.PaymentOuterClass.Promotion.getDefaultInstance() : promotion_;
+        } else {
+          return promotionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payment.Promotion promotion = 47;</code>
+       */
+      public Builder setPromotion(payment.PaymentOuterClass.Promotion value) {
+        if (promotionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          promotion_ = value;
+          onChanged();
+        } else {
+          promotionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payment.Promotion promotion = 47;</code>
+       */
+      public Builder setPromotion(
+          payment.PaymentOuterClass.Promotion.Builder builderForValue) {
+        if (promotionBuilder_ == null) {
+          promotion_ = builderForValue.build();
+          onChanged();
+        } else {
+          promotionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payment.Promotion promotion = 47;</code>
+       */
+      public Builder mergePromotion(payment.PaymentOuterClass.Promotion value) {
+        if (promotionBuilder_ == null) {
+          if (promotion_ != null) {
+            promotion_ =
+              payment.PaymentOuterClass.Promotion.newBuilder(promotion_).mergeFrom(value).buildPartial();
+          } else {
+            promotion_ = value;
+          }
+          onChanged();
+        } else {
+          promotionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payment.Promotion promotion = 47;</code>
+       */
+      public Builder clearPromotion() {
+        if (promotionBuilder_ == null) {
+          promotion_ = null;
+          onChanged();
+        } else {
+          promotion_ = null;
+          promotionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payment.Promotion promotion = 47;</code>
+       */
+      public payment.PaymentOuterClass.Promotion.Builder getPromotionBuilder() {
+        
+        onChanged();
+        return getPromotionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payment.Promotion promotion = 47;</code>
+       */
+      public payment.PaymentOuterClass.PromotionOrBuilder getPromotionOrBuilder() {
+        if (promotionBuilder_ != null) {
+          return promotionBuilder_.getMessageOrBuilder();
+        } else {
+          return promotion_ == null ?
+              payment.PaymentOuterClass.Promotion.getDefaultInstance() : promotion_;
+        }
+      }
+      /**
+       * <code>.payment.Promotion promotion = 47;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          payment.PaymentOuterClass.Promotion, payment.PaymentOuterClass.Promotion.Builder, payment.PaymentOuterClass.PromotionOrBuilder> 
+          getPromotionFieldBuilder() {
+        if (promotionBuilder_ == null) {
+          promotionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              payment.PaymentOuterClass.Promotion, payment.PaymentOuterClass.Promotion.Builder, payment.PaymentOuterClass.PromotionOrBuilder>(
+                  getPromotion(),
+                  getParentForChildren(),
+                  isClean());
+          promotion_ = null;
+        }
+        return promotionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -27128,6 +27331,724 @@ public final class PaymentOuterClass {
 
   }
 
+  public interface PromotionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payment.Promotion)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string discount = 2;</code>
+     * @return The discount.
+     */
+    java.lang.String getDiscount();
+    /**
+     * <code>string discount = 2;</code>
+     * @return The bytes for discount.
+     */
+    com.google.protobuf.ByteString
+        getDiscountBytes();
+  }
+  /**
+   * Protobuf type {@code payment.Promotion}
+   */
+  public static final class Promotion extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payment.Promotion)
+      PromotionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Promotion.newBuilder() to construct.
+    private Promotion(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Promotion() {
+      id_ = "";
+      discount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Promotion();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Promotion(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              discount_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return payment.PaymentOuterClass.internal_static_payment_Promotion_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return payment.PaymentOuterClass.internal_static_payment_Promotion_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              payment.PaymentOuterClass.Promotion.class, payment.PaymentOuterClass.Promotion.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISCOUNT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object discount_;
+    /**
+     * <code>string discount = 2;</code>
+     * @return The discount.
+     */
+    @java.lang.Override
+    public java.lang.String getDiscount() {
+      java.lang.Object ref = discount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        discount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string discount = 2;</code>
+     * @return The bytes for discount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDiscountBytes() {
+      java.lang.Object ref = discount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        discount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!getDiscountBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, discount_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getDiscountBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, discount_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof payment.PaymentOuterClass.Promotion)) {
+        return super.equals(obj);
+      }
+      payment.PaymentOuterClass.Promotion other = (payment.PaymentOuterClass.Promotion) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getDiscount()
+          .equals(other.getDiscount())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + DISCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getDiscount().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static payment.PaymentOuterClass.Promotion parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.Promotion parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.Promotion parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.Promotion parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.Promotion parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static payment.PaymentOuterClass.Promotion parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.Promotion parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.Promotion parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.Promotion parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.Promotion parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static payment.PaymentOuterClass.Promotion parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static payment.PaymentOuterClass.Promotion parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(payment.PaymentOuterClass.Promotion prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payment.Promotion}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payment.Promotion)
+        payment.PaymentOuterClass.PromotionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return payment.PaymentOuterClass.internal_static_payment_Promotion_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return payment.PaymentOuterClass.internal_static_payment_Promotion_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                payment.PaymentOuterClass.Promotion.class, payment.PaymentOuterClass.Promotion.Builder.class);
+      }
+
+      // Construct using payment.PaymentOuterClass.Promotion.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        discount_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return payment.PaymentOuterClass.internal_static_payment_Promotion_descriptor;
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.Promotion getDefaultInstanceForType() {
+        return payment.PaymentOuterClass.Promotion.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.Promotion build() {
+        payment.PaymentOuterClass.Promotion result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public payment.PaymentOuterClass.Promotion buildPartial() {
+        payment.PaymentOuterClass.Promotion result = new payment.PaymentOuterClass.Promotion(this);
+        result.id_ = id_;
+        result.discount_ = discount_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof payment.PaymentOuterClass.Promotion) {
+          return mergeFrom((payment.PaymentOuterClass.Promotion)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(payment.PaymentOuterClass.Promotion other) {
+        if (other == payment.PaymentOuterClass.Promotion.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getDiscount().isEmpty()) {
+          discount_ = other.discount_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        payment.PaymentOuterClass.Promotion parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (payment.PaymentOuterClass.Promotion) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object discount_ = "";
+      /**
+       * <code>string discount = 2;</code>
+       * @return The discount.
+       */
+      public java.lang.String getDiscount() {
+        java.lang.Object ref = discount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          discount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string discount = 2;</code>
+       * @return The bytes for discount.
+       */
+      public com.google.protobuf.ByteString
+          getDiscountBytes() {
+        java.lang.Object ref = discount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          discount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string discount = 2;</code>
+       * @param value The discount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiscount(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        discount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string discount = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiscount() {
+        
+        discount_ = getDefaultInstance().getDiscount();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string discount = 2;</code>
+       * @param value The bytes for discount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiscountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        discount_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payment.Promotion)
+    }
+
+    // @@protoc_insertion_point(class_scope:payment.Promotion)
+    private static final payment.PaymentOuterClass.Promotion DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new payment.PaymentOuterClass.Promotion();
+    }
+
+    public static payment.PaymentOuterClass.Promotion getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Promotion>
+        PARSER = new com.google.protobuf.AbstractParser<Promotion>() {
+      @java.lang.Override
+      public Promotion parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Promotion(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Promotion> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Promotion> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public payment.PaymentOuterClass.Promotion getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payment_Payment_descriptor;
   private static final 
@@ -27248,6 +28169,11 @@ public final class PaymentOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payment_PaymentGetPrepareRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payment_Promotion_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payment_Promotion_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -27258,7 +28184,7 @@ public final class PaymentOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030v1/payment/payment.proto\022\007payment\032\034goo" +
-      "gle/api/annotations.proto\"\305\007\n\007Payment\022\016\n" +
+      "gle/api/annotations.proto\"\354\007\n\007Payment\022\016\n" +
       "\006amount\030\001 \001(\005\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank" +
       "_code\030\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_" +
       "addr\030\005 \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer" +
@@ -27282,99 +28208,101 @@ public final class PaymentOuterClass {
       "s\030\' \001(\t\022\022\n\nuser_agent\030( \001(\t\022\022\n\nvbank_cod" +
       "e\030) \001(\t\022\022\n\nvbank_date\030* \001(\005\022\024\n\014vbank_hol" +
       "der\030+ \001(\t\022\027\n\017vbank_issued_at\030, \001(\005\022\022\n\nvb" +
-      "ank_name\030- \001(\t\022\021\n\tvbank_num\030. \001(\t\"j\n\rCan" +
-      "celHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001" +
-      "(\005\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t" +
-      "\022\023\n\013receipt_url\030\005 \001(\t\"\\\n\013PaymentPage\022\r\n\005" +
-      "total\030\001 \001(\005\022\020\n\010previous\030\002 \001(\005\022\014\n\004next\030\003 " +
-      "\001(\005\022\036\n\004list\030\004 \003(\0132\020.payment.Payment\"V\n\024P" +
-      "aymentBalanceDetail\022\020\n\010tax_free\030\001 \001(\005\022\016\n" +
-      "\006supply\030\002 \001(\005\022\013\n\003vat\030\003 \001(\005\022\017\n\007service\030\004 " +
-      "\001(\005\"\233\002\n\016PaymentBalance\022\016\n\006amount\030\001 \001(\005\0223" +
-      "\n\014cash_receipt\030\002 \001(\0132\035.payment.PaymentBa" +
-      "lanceDetail\022.\n\007primary\030\003 \001(\0132\035.payment.P" +
-      "aymentBalanceDetail\0220\n\tsecondary\030\004 \001(\0132\035" +
-      ".payment.PaymentBalanceDetail\022/\n\010discoun" +
-      "t\030\005 \001(\0132\035.payment.PaymentBalanceDetail\0221" +
-      "\n\thistories\030\006 \003(\0132\036.payment.PaymentBalan" +
-      "ceHistory\"\360\001\n\025PaymentBalanceHistory\0223\n\014c" +
-      "ash_receipt\030\001 \001(\0132\035.payment.PaymentBalan" +
-      "ceDetail\022.\n\007primary\030\002 \001(\0132\035.payment.Paym" +
-      "entBalanceDetail\0220\n\tsecondary\030\003 \001(\0132\035.pa" +
-      "yment.PaymentBalanceDetail\022/\n\010discount\030\004" +
-      " \001(\0132\035.payment.PaymentBalanceDetail\022\017\n\007c" +
-      "reated\030\005 \001(\005\"!\n\016PaymentRequest\022\017\n\007imp_ui" +
-      "d\030\001 \001(\t\"T\n\017PaymentResponse\022\014\n\004code\030\001 \001(\005" +
-      "\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.pa" +
-      "yment.Payment\"\"\n\017PaymentsRequest\022\017\n\007imp_" +
-      "uid\030\001 \003(\t\"U\n\020PaymentsResponse\022\014\n\004code\030\001 " +
-      "\001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \003(\0132\020" +
-      ".payment.Payment\"a\n\032PaymentsMerchantUidR" +
-      "equest\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006status\030\002" +
-      " \001(\t\022\014\n\004page\030\003 \001(\005\022\017\n\007sorting\030\004 \001(\t\"d\n\033P" +
-      "aymentsMerchantUidResponse\022\014\n\004code\030\001 \001(\005" +
-      "\022\017\n\007message\030\002 \001(\t\022&\n\010response\030\003 \001(\0132\024.pa" +
-      "yment.PaymentPage\"n\n\024PaymentStatusReques" +
-      "t\022\016\n\006status\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit" +
-      "\030\003 \001(\005\022\014\n\004from\030\004 \001(\005\022\n\n\002to\030\005 \001(\005\022\017\n\007sort" +
-      "ing\030\006 \001(\t\"^\n\025PaymentStatusResponse\022\014\n\004co" +
-      "de\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022&\n\010response\030\003 " +
-      "\001(\0132\024.payment.PaymentPage\"R\n\031PaymentMerc" +
-      "hantUidRequest\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006" +
-      "status\030\002 \001(\t\022\017\n\007sorting\030\003 \001(\t\"_\n\032Payment" +
-      "MerchantUidResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007mes" +
-      "sage\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.P" +
-      "ayment\"\305\001\n\024PaymentCancelRequest\022\017\n\007imp_u" +
-      "id\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount" +
-      "\030\003 \001(\001\022\020\n\010tax_free\030\004 \001(\001\022\020\n\010checksum\030\005 \001" +
-      "(\001\022\016\n\006reason\030\006 \001(\t\022\025\n\rrefund_holder\030\007 \001(" +
-      "\t\022\023\n\013refund_bank\030\010 \001(\t\022\026\n\016refund_account" +
-      "\030\t \001(\t\"Z\n\025PaymentCancelResponse\022\014\n\004code\030" +
-      "\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\013" +
-      "2\020.payment.Payment\"(\n\025PaymentBalanceRequ" +
-      "est\022\017\n\007imp_uid\030\001 \001(\t\"b\n\026PaymentBalanceRe" +
-      "sponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022)\n" +
-      "\010response\030\003 \001(\0132\027.payment.PaymentBalance" +
-      "\"/\n\007Prepare\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006amo" +
-      "unt\030\002 \001(\005\"=\n\025PaymentPrepareRequest\022\024\n\014me" +
-      "rchant_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\"[\n\026Paym" +
-      "entPrepareResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007mess" +
-      "age\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.Pr" +
-      "epare\"0\n\030PaymentGetPrepareRequest\022\024\n\014mer" +
-      "chant_uid\030\001 \001(\t2\341\t\n\016PaymentService\022\211\001\n\021P" +
-      "aymentBalanceRPC\022\036.payment.PaymentBalanc" +
-      "eRequest\032\037.payment.PaymentBalanceRespons" +
-      "e\"3\202\323\344\223\002-\022+/api/payments/v1/payments/{im" +
-      "p_uid}/balance\022l\n\nPaymentRPC\022\027.payment.P" +
-      "aymentRequest\032\030.payment.PaymentResponse\"" +
-      "+\202\323\344\223\002%\022#/api/payments/v1/payments/{imp_" +
-      "uid}\022e\n\013PaymentsRPC\022\030.payment.PaymentsRe" +
-      "quest\032\031.payment.PaymentsResponse\"!\202\323\344\223\002\033" +
-      "\022\031/api/payments/v1/payments\022\240\001\n\025PaymentM" +
-      "erchantUidRPC\022\".payment.PaymentMerchantU" +
-      "idRequest\032#.payment.PaymentMerchantUidRe" +
-      "sponse\">\202\323\344\223\0028\0226/api/payments/v1/payment" +
-      "s/find/{merchant_uid}/{status}\022\246\001\n\026Payme" +
-      "ntsMerchantUidRPC\022#.payment.PaymentsMerc" +
-      "hantUidRequest\032$.payment.PaymentsMerchan" +
-      "tUidResponse\"A\202\323\344\223\002;\0229/api/payments/v1/p" +
-      "ayments/findAll/{merchant_uid}/{status}\022" +
-      "\205\001\n\021PaymentsStatusRPC\022\035.payment.PaymentS" +
-      "tatusRequest\032\036.payment.PaymentStatusResp" +
-      "onse\"1\202\323\344\223\002+\022)/api/payments/v1/payments/" +
-      "status/{status}\022~\n\020PaymentCancelRPC\022\035.pa" +
-      "yment.PaymentCancelRequest\032\036.payment.Pay" +
-      "mentCancelResponse\"+\202\323\344\223\002%\" /api/payment" +
-      "s/v1/payments/cancel:\001*\022\202\001\n\021PaymentPrepa" +
-      "reRPC\022\036.payment.PaymentPrepareRequest\032\037." +
-      "payment.PaymentPrepareResponse\",\202\323\344\223\002&\"!" +
-      "/api/payments/v1/payments/prepare:\001*\022\224\001\n" +
-      "\024PaymentGetPrepareRPC\022!.payment.PaymentG" +
-      "etPrepareRequest\032\037.payment.PaymentPrepar" +
-      "eResponse\"8\202\323\344\223\0022\0220/api/payments/v1/paym" +
-      "ents/prepare/{merchant_uid}BAZ2github.co" +
-      "m/iamport/interface/gen_src/go/v1/paymen" +
-      "t\252\002\nV1.Paymentb\006proto3"
+      "ank_name\030- \001(\t\022\021\n\tvbank_num\030. \001(\t\022%\n\tpro" +
+      "motion\030/ \001(\0132\022.payment.Promotion\"j\n\rCanc" +
+      "elHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(" +
+      "\005\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022" +
+      "\023\n\013receipt_url\030\005 \001(\t\"\\\n\013PaymentPage\022\r\n\005t" +
+      "otal\030\001 \001(\005\022\020\n\010previous\030\002 \001(\005\022\014\n\004next\030\003 \001" +
+      "(\005\022\036\n\004list\030\004 \003(\0132\020.payment.Payment\"V\n\024Pa" +
+      "ymentBalanceDetail\022\020\n\010tax_free\030\001 \001(\005\022\016\n\006" +
+      "supply\030\002 \001(\005\022\013\n\003vat\030\003 \001(\005\022\017\n\007service\030\004 \001" +
+      "(\005\"\233\002\n\016PaymentBalance\022\016\n\006amount\030\001 \001(\005\0223\n" +
+      "\014cash_receipt\030\002 \001(\0132\035.payment.PaymentBal" +
+      "anceDetail\022.\n\007primary\030\003 \001(\0132\035.payment.Pa" +
+      "ymentBalanceDetail\0220\n\tsecondary\030\004 \001(\0132\035." +
+      "payment.PaymentBalanceDetail\022/\n\010discount" +
+      "\030\005 \001(\0132\035.payment.PaymentBalanceDetail\0221\n" +
+      "\thistories\030\006 \003(\0132\036.payment.PaymentBalanc" +
+      "eHistory\"\360\001\n\025PaymentBalanceHistory\0223\n\014ca" +
+      "sh_receipt\030\001 \001(\0132\035.payment.PaymentBalanc" +
+      "eDetail\022.\n\007primary\030\002 \001(\0132\035.payment.Payme" +
+      "ntBalanceDetail\0220\n\tsecondary\030\003 \001(\0132\035.pay" +
+      "ment.PaymentBalanceDetail\022/\n\010discount\030\004 " +
+      "\001(\0132\035.payment.PaymentBalanceDetail\022\017\n\007cr" +
+      "eated\030\005 \001(\005\"!\n\016PaymentRequest\022\017\n\007imp_uid" +
+      "\030\001 \001(\t\"T\n\017PaymentResponse\022\014\n\004code\030\001 \001(\005\022" +
+      "\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.pay" +
+      "ment.Payment\"\"\n\017PaymentsRequest\022\017\n\007imp_u" +
+      "id\030\001 \003(\t\"U\n\020PaymentsResponse\022\014\n\004code\030\001 \001" +
+      "(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \003(\0132\020." +
+      "payment.Payment\"a\n\032PaymentsMerchantUidRe" +
+      "quest\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006status\030\002 " +
+      "\001(\t\022\014\n\004page\030\003 \001(\005\022\017\n\007sorting\030\004 \001(\t\"d\n\033Pa" +
+      "ymentsMerchantUidResponse\022\014\n\004code\030\001 \001(\005\022" +
+      "\017\n\007message\030\002 \001(\t\022&\n\010response\030\003 \001(\0132\024.pay" +
+      "ment.PaymentPage\"n\n\024PaymentStatusRequest" +
+      "\022\016\n\006status\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030" +
+      "\003 \001(\005\022\014\n\004from\030\004 \001(\005\022\n\n\002to\030\005 \001(\005\022\017\n\007sorti" +
+      "ng\030\006 \001(\t\"^\n\025PaymentStatusResponse\022\014\n\004cod" +
+      "e\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022&\n\010response\030\003 \001" +
+      "(\0132\024.payment.PaymentPage\"R\n\031PaymentMerch" +
+      "antUidRequest\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006s" +
+      "tatus\030\002 \001(\t\022\017\n\007sorting\030\003 \001(\t\"_\n\032PaymentM" +
+      "erchantUidResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007mess" +
+      "age\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.Pa" +
+      "yment\"\305\001\n\024PaymentCancelRequest\022\017\n\007imp_ui" +
+      "d\030\001 \001(\t\022\024\n\014merchant_uid\030\002 \001(\t\022\016\n\006amount\030" +
+      "\003 \001(\001\022\020\n\010tax_free\030\004 \001(\001\022\020\n\010checksum\030\005 \001(" +
+      "\001\022\016\n\006reason\030\006 \001(\t\022\025\n\rrefund_holder\030\007 \001(\t" +
+      "\022\023\n\013refund_bank\030\010 \001(\t\022\026\n\016refund_account\030" +
+      "\t \001(\t\"Z\n\025PaymentCancelResponse\022\014\n\004code\030\001" +
+      " \001(\005\022\017\n\007message\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132" +
+      "\020.payment.Payment\"(\n\025PaymentBalanceReque" +
+      "st\022\017\n\007imp_uid\030\001 \001(\t\"b\n\026PaymentBalanceRes" +
+      "ponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022)\n\010" +
+      "response\030\003 \001(\0132\027.payment.PaymentBalance\"" +
+      "/\n\007Prepare\022\024\n\014merchant_uid\030\001 \001(\t\022\016\n\006amou" +
+      "nt\030\002 \001(\005\"=\n\025PaymentPrepareRequest\022\024\n\014mer" +
+      "chant_uid\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\"[\n\026Payme" +
+      "ntPrepareResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messa" +
+      "ge\030\002 \001(\t\022\"\n\010response\030\003 \001(\0132\020.payment.Pre" +
+      "pare\"0\n\030PaymentGetPrepareRequest\022\024\n\014merc" +
+      "hant_uid\030\001 \001(\t\")\n\tPromotion\022\n\n\002id\030\001 \001(\t\022" +
+      "\020\n\010discount\030\002 \001(\t2\341\t\n\016PaymentService\022\211\001\n" +
+      "\021PaymentBalanceRPC\022\036.payment.PaymentBala" +
+      "nceRequest\032\037.payment.PaymentBalanceRespo" +
+      "nse\"3\202\323\344\223\002-\022+/api/payments/v1/payments/{" +
+      "imp_uid}/balance\022l\n\nPaymentRPC\022\027.payment" +
+      ".PaymentRequest\032\030.payment.PaymentRespons" +
+      "e\"+\202\323\344\223\002%\022#/api/payments/v1/payments/{im" +
+      "p_uid}\022e\n\013PaymentsRPC\022\030.payment.Payments" +
+      "Request\032\031.payment.PaymentsResponse\"!\202\323\344\223" +
+      "\002\033\022\031/api/payments/v1/payments\022\240\001\n\025Paymen" +
+      "tMerchantUidRPC\022\".payment.PaymentMerchan" +
+      "tUidRequest\032#.payment.PaymentMerchantUid" +
+      "Response\">\202\323\344\223\0028\0226/api/payments/v1/payme" +
+      "nts/find/{merchant_uid}/{status}\022\246\001\n\026Pay" +
+      "mentsMerchantUidRPC\022#.payment.PaymentsMe" +
+      "rchantUidRequest\032$.payment.PaymentsMerch" +
+      "antUidResponse\"A\202\323\344\223\002;\0229/api/payments/v1" +
+      "/payments/findAll/{merchant_uid}/{status" +
+      "}\022\205\001\n\021PaymentsStatusRPC\022\035.payment.Paymen" +
+      "tStatusRequest\032\036.payment.PaymentStatusRe" +
+      "sponse\"1\202\323\344\223\002+\022)/api/payments/v1/payment" +
+      "s/status/{status}\022~\n\020PaymentCancelRPC\022\035." +
+      "payment.PaymentCancelRequest\032\036.payment.P" +
+      "aymentCancelResponse\"+\202\323\344\223\002%\" /api/payme" +
+      "nts/v1/payments/cancel:\001*\022\202\001\n\021PaymentPre" +
+      "pareRPC\022\036.payment.PaymentPrepareRequest\032" +
+      "\037.payment.PaymentPrepareResponse\",\202\323\344\223\002&" +
+      "\"!/api/payments/v1/payments/prepare:\001*\022\224" +
+      "\001\n\024PaymentGetPrepareRPC\022!.payment.Paymen" +
+      "tGetPrepareRequest\032\037.payment.PaymentPrep" +
+      "areResponse\"8\202\323\344\223\0022\0220/api/payments/v1/pa" +
+      "yments/prepare/{merchant_uid}BAZ2github." +
+      "com/iamport/interface/gen_src/go/v1/paym" +
+      "ent\252\002\nV1.Paymentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -27386,7 +28314,7 @@ public final class PaymentOuterClass {
     internal_static_payment_Payment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payment_Payment_descriptor,
-        new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "CardNumber", "CardQuota", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CustomerUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "Name", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", });
+        new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "CardName", "CardNumber", "CardQuota", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CustomerUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "Name", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", "Promotion", });
     internal_static_payment_CancelHistory_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_payment_CancelHistory_fieldAccessorTable = new
@@ -27525,6 +28453,12 @@ public final class PaymentOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payment_PaymentGetPrepareRequest_descriptor,
         new java.lang.String[] { "MerchantUid", });
+    internal_static_payment_Promotion_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_payment_Promotion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payment_Promotion_descriptor,
+        new java.lang.String[] { "Id", "Discount", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

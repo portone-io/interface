@@ -54,6 +54,7 @@ const Payment$json = const {
     const {'1': 'vbank_issued_at', '3': 44, '4': 1, '5': 5, '10': 'vbankIssuedAt'},
     const {'1': 'vbank_name', '3': 45, '4': 1, '5': 9, '10': 'vbankName'},
     const {'1': 'vbank_num', '3': 46, '4': 1, '5': 9, '10': 'vbankNum'},
+    const {'1': 'promotion', '3': 47, '4': 1, '5': 11, '6': '.payment.Promotion', '10': 'promotion'},
   ],
 };
 
@@ -273,6 +274,14 @@ const PaymentGetPrepareRequest$json = const {
   ],
 };
 
+const Promotion$json = const {
+  '1': 'Promotion',
+  '2': const [
+    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    const {'1': 'discount', '3': 2, '4': 1, '5': 9, '10': 'discount'},
+  ],
+};
+
 const PaymentServiceBase$json = const {
   '1': 'PaymentService',
   '2': const [
@@ -298,6 +307,7 @@ const PaymentServiceBase$messageJson = const {
   '.payment.PaymentResponse': PaymentResponse$json,
   '.payment.Payment': Payment$json,
   '.payment.CancelHistory': CancelHistory$json,
+  '.payment.Promotion': Promotion$json,
   '.payment.PaymentsRequest': PaymentsRequest$json,
   '.payment.PaymentsResponse': PaymentsResponse$json,
   '.payment.PaymentMerchantUidRequest': PaymentMerchantUidRequest$json,

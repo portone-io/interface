@@ -158,6 +158,7 @@ const SubscribeCustomersServiceBase$messageJson = const {
   '.subscribe_customers.NestedGetPaidByBillingKeyListData': NestedGetPaidByBillingKeyListData$json,
   '.payment.Payment': $2.Payment$json,
   '.payment.CancelHistory': $2.CancelHistory$json,
+  '.payment.Promotion': $2.Promotion$json,
   '.subscribe.GetPaymentScheduleByCustomerRequest': $4.GetPaymentScheduleByCustomerRequest$json,
   '.subscribe.GetPaymentScheduleByCustomerResponse': $4.GetPaymentScheduleByCustomerResponse$json,
   '.subscribe.NestedGetPaymentScheduleByCustomerData': $4.NestedGetPaymentScheduleByCustomerData$json,

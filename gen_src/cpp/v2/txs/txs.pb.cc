@@ -14,41 +14,44 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-
-PROTOBUF_PRAGMA_INIT_SEG
+extern PROTOBUF_INTERNAL_EXPORT_v2_2fbasis_2fbasis_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_UnitTx_v2_2fbasis_2fbasis_2eproto;
 namespace txs_v2 {
-constexpr GetTxsRecordsRequest::GetTxsRecordsRequest(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : imp_uid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , merchant_uid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , paid_by_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , status_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , sorting_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , page_(0){}
-struct GetTxsRecordsRequestDefaultTypeInternal {
-  constexpr GetTxsRecordsRequestDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GetTxsRecordsRequestDefaultTypeInternal() {}
-  union {
-    GetTxsRecordsRequest _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetTxsRecordsRequestDefaultTypeInternal _GetTxsRecordsRequest_default_instance_;
-constexpr GetTxsRecordsReponse::GetTxsRecordsReponse(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : response_()
-  , message_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , code_(0){}
-struct GetTxsRecordsReponseDefaultTypeInternal {
-  constexpr GetTxsRecordsReponseDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GetTxsRecordsReponseDefaultTypeInternal() {}
-  union {
-    GetTxsRecordsReponse _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetTxsRecordsReponseDefaultTypeInternal _GetTxsRecordsReponse_default_instance_;
+class GetTxsRecordsRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetTxsRecordsRequest> _instance;
+} _GetTxsRecordsRequest_default_instance_;
+class GetTxsRecordsReponseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetTxsRecordsReponse> _instance;
+} _GetTxsRecordsReponse_default_instance_;
 }  // namespace txs_v2
+static void InitDefaultsscc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::txs_v2::_GetTxsRecordsReponse_default_instance_;
+    new (ptr) ::txs_v2::GetTxsRecordsReponse();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto}, {
+      &scc_info_UnitTx_v2_2fbasis_2fbasis_2eproto.base,}};
+
+static void InitDefaultsscc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::txs_v2::_GetTxsRecordsRequest_default_instance_;
+    new (ptr) ::txs_v2::GetTxsRecordsRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto}, {}};
+
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_v2_2ftxs_2ftxs_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_v2_2ftxs_2ftxs_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_v2_2ftxs_2ftxs_2eproto = nullptr;
@@ -103,21 +106,20 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
   &::descriptor_table_v2_2fbasis_2fbasis_2eproto,
 };
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v2_2ftxs_2ftxs_2eproto_sccs[2] = {
+  &scc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto.base,
+  &scc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto.base,
+};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2ftxs_2ftxs_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2ftxs_2ftxs_2eproto = {
-  false, false, 490, descriptor_table_protodef_v2_2ftxs_2ftxs_2eproto, "v2/txs/txs.proto", 
-  &descriptor_table_v2_2ftxs_2ftxs_2eproto_once, descriptor_table_v2_2ftxs_2ftxs_2eproto_deps, 2, 2,
+  false, false, descriptor_table_protodef_v2_2ftxs_2ftxs_2eproto, "v2/txs/txs.proto", 490,
+  &descriptor_table_v2_2ftxs_2ftxs_2eproto_once, descriptor_table_v2_2ftxs_2ftxs_2eproto_sccs, descriptor_table_v2_2ftxs_2ftxs_2eproto_deps, 2, 2,
   schemas, file_default_instances, TableStruct_v2_2ftxs_2ftxs_2eproto::offsets,
-  file_level_metadata_v2_2ftxs_2ftxs_2eproto, file_level_enum_descriptors_v2_2ftxs_2ftxs_2eproto, file_level_service_descriptors_v2_2ftxs_2ftxs_2eproto,
+  file_level_metadata_v2_2ftxs_2ftxs_2eproto, 2, file_level_enum_descriptors_v2_2ftxs_2ftxs_2eproto, file_level_service_descriptors_v2_2ftxs_2ftxs_2eproto,
 };
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_v2_2ftxs_2ftxs_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_v2_2ftxs_2ftxs_2eproto);
-  return descriptor_table_v2_2ftxs_2ftxs_2eproto.file_level_metadata[index];
-}
 
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_v2_2ftxs_2ftxs_2eproto(&descriptor_table_v2_2ftxs_2ftxs_2eproto);
+static bool dynamic_init_dummy_v2_2ftxs_2ftxs_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_v2_2ftxs_2ftxs_2eproto)), true);
 namespace txs_v2 {
 
 // ===================================================================
@@ -165,12 +167,13 @@ GetTxsRecordsRequest::GetTxsRecordsRequest(const GetTxsRecordsRequest& from)
 }
 
 void GetTxsRecordsRequest::SharedCtor() {
-imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-paid_by_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-sorting_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-page_ = 0;
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto.base);
+  imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  paid_by_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  sorting_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  page_ = 0;
 }
 
 GetTxsRecordsRequest::~GetTxsRecordsRequest() {
@@ -197,6 +200,11 @@ void GetTxsRecordsRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void GetTxsRecordsRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GetTxsRecordsRequest& GetTxsRecordsRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GetTxsRecordsRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:txs_v2.GetTxsRecordsRequest)
@@ -529,8 +537,9 @@ GetTxsRecordsReponse::GetTxsRecordsReponse(const GetTxsRecordsReponse& from)
 }
 
 void GetTxsRecordsReponse::SharedCtor() {
-message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-code_ = 0;
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto.base);
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  code_ = 0;
 }
 
 GetTxsRecordsReponse::~GetTxsRecordsReponse() {
@@ -553,6 +562,11 @@ void GetTxsRecordsReponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void GetTxsRecordsReponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GetTxsRecordsReponse& GetTxsRecordsReponse::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GetTxsRecordsReponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:txs_v2.GetTxsRecordsReponse)

@@ -513,7 +513,7 @@ class HttpRule extends \Google\Protobuf\Internal\Message
      * for services that provide content to Web (HTML) clients.
      *
      * Generated from protobuf field <code>.google.api.CustomHttpPattern custom = 8;</code>
-     * @return \Google\Api\CustomHttpPattern|null
+     * @return \Google\Api\CustomHttpPattern
      */
     public function getCustom()
     {

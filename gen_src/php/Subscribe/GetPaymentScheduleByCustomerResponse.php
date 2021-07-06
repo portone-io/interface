@@ -88,7 +88,7 @@ class GetPaymentScheduleByCustomerResponse extends \Google\Protobuf\Internal\Mes
 
     /**
      * Generated from protobuf field <code>.subscribe.NestedGetPaymentScheduleByCustomerData response = 3;</code>
-     * @return \Subscribe\NestedGetPaymentScheduleByCustomerData|null
+     * @return \Subscribe\NestedGetPaymentScheduleByCustomerData
      */
     public function getResponse()
     {

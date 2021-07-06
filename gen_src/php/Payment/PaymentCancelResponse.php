@@ -88,7 +88,7 @@ class PaymentCancelResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.Payment response = 3;</code>
-     * @return \Payment\Payment|null
+     * @return \Payment\Payment
      */
     public function getResponse()
     {

@@ -88,7 +88,7 @@ class EscrowResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.escrow.Logis response = 3;</code>
-     * @return \Escrow\Logis|null
+     * @return \Escrow\Logis
      */
     public function getResponse()
     {

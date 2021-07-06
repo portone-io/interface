@@ -73,7 +73,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :card_uid, :string, 1
       optional :merchant_uid, :string, 2
       optional :amount, :string, 3
-      optional :duty_free_amount, :string, 4
+      optional :tax_free_amount, :string, 4
       optional :order_name, :string, 5
       optional :card_installment, :int32, 6
       optional :interest_free_by_merchant, :bool, 7
@@ -140,7 +140,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :imp_uid, :string, 1
       optional :amount, :string, 2
       optional :merchant_uid, :string, 3
-      optional :duty_free_amount, :string, 4
+      optional :tax_free_amount, :string, 4
       optional :reason, :string, 5
     end
     add_message "card_v2.CancelCardPaymenttResponse" do

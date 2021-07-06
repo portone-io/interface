@@ -36,16 +36,6 @@ public interface HttpRuleOrBuilder extends
    * </pre>
    *
    * <code>string get = 2;</code>
-   * @return Whether the get field is set.
-   */
-  boolean hasGet();
-  /**
-   * <pre>
-   * Maps to HTTP GET. Used for listing and getting information about
-   * resources.
-   * </pre>
-   *
-   * <code>string get = 2;</code>
    * @return The get.
    */
   java.lang.String getGet();
@@ -61,15 +51,6 @@ public interface HttpRuleOrBuilder extends
   com.google.protobuf.ByteString
       getGetBytes();
 
-  /**
-   * <pre>
-   * Maps to HTTP PUT. Used for replacing a resource.
-   * </pre>
-   *
-   * <code>string put = 3;</code>
-   * @return Whether the put field is set.
-   */
-  boolean hasPut();
   /**
    * <pre>
    * Maps to HTTP PUT. Used for replacing a resource.
@@ -96,15 +77,6 @@ public interface HttpRuleOrBuilder extends
    * </pre>
    *
    * <code>string post = 4;</code>
-   * @return Whether the post field is set.
-   */
-  boolean hasPost();
-  /**
-   * <pre>
-   * Maps to HTTP POST. Used for creating a resource or performing an action.
-   * </pre>
-   *
-   * <code>string post = 4;</code>
    * @return The post.
    */
   java.lang.String getPost();
@@ -125,15 +97,6 @@ public interface HttpRuleOrBuilder extends
    * </pre>
    *
    * <code>string delete = 5;</code>
-   * @return Whether the delete field is set.
-   */
-  boolean hasDelete();
-  /**
-   * <pre>
-   * Maps to HTTP DELETE. Used for deleting a resource.
-   * </pre>
-   *
-   * <code>string delete = 5;</code>
    * @return The delete.
    */
   java.lang.String getDelete();
@@ -148,15 +111,6 @@ public interface HttpRuleOrBuilder extends
   com.google.protobuf.ByteString
       getDeleteBytes();
 
-  /**
-   * <pre>
-   * Maps to HTTP PATCH. Used for updating a resource.
-   * </pre>
-   *
-   * <code>string patch = 6;</code>
-   * @return Whether the patch field is set.
-   */
-  boolean hasPatch();
   /**
    * <pre>
    * Maps to HTTP PATCH. Used for updating a resource.

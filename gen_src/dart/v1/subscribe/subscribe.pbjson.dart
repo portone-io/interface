@@ -212,6 +212,7 @@ const SubscribeServiceBase$messageJson = const {
   '.subscribe.OnetimePaymentResponse': OnetimePaymentResponse$json,
   '.payment.Payment': $2.Payment$json,
   '.payment.CancelHistory': $2.CancelHistory$json,
+  '.payment.Promotion': $2.Promotion$json,
   '.subscribe.AgainPaymentRequest': AgainPaymentRequest$json,
   '.subscribe.AgainPaymentResponse': AgainPaymentResponse$json,
   '.subscribe.SchedulePayemntRequest': SchedulePayemntRequest$json,

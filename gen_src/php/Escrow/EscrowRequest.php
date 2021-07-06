@@ -71,7 +71,7 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.escrow.Info sender = 2;</code>
-     * @return \Escrow\Info|null
+     * @return \Escrow\Info
      */
     public function getSender()
     {
@@ -103,7 +103,7 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.escrow.Info receiver = 3;</code>
-     * @return \Escrow\Info|null
+     * @return \Escrow\Info
      */
     public function getReceiver()
     {
@@ -135,7 +135,7 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.escrow.Logis logis = 4;</code>
-     * @return \Escrow\Logis|null
+     * @return \Escrow\Logis
      */
     public function getLogis()
     {

@@ -17,8 +17,8 @@ class Payment
         \GPBMetadata\Google\Api\Annotations::initOnce();
         $pool->internalAddGeneratedFile(
             '
-¿$
-v1/payment/payment.protopayment"≈
+í%
+v1/payment/payment.protopayment"Ï
 Payment
 amount (
 	apply_num (	
@@ -75,7 +75,8 @@ vbank_date* (
 vbank_issued_at, (
 
 vbank_name- (	
-	vbank_num. (	"j
+	vbank_num. (	%
+	promotion/ (2.payment.Promotion"j
 CancelHistory
 pg_tid (	
 amount (
@@ -177,7 +178,11 @@ vbank_name- (	
 message (	"
 response (2.payment.Prepare"0
 PaymentGetPrepareRequest
-merchant_uid (	2·	
+merchant_uid (	")
+	Promotion
+
+id (	
+discount (	2·	
 PaymentServiceâ
 PaymentBalanceRPC.payment.PaymentBalanceRequest.payment.PaymentBalanceResponse"3Ç”‰ì-+/api/payments/v1/payments/{imp_uid}/balancel
 

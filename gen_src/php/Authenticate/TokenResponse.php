@@ -88,7 +88,7 @@ class TokenResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.authenticate.Token response = 3;</code>
-     * @return \Authenticate\Token|null
+     * @return \Authenticate\Token
      */
     public function getResponse()
     {

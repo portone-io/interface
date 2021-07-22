@@ -89,15 +89,17 @@ constexpr UnitTx::UnitTx(
   , vbank_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , vbank_num_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , customer_email_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , npoint_pay_amount_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , promotion_(nullptr)
   , bank_code_(0)
   , cancelled_at_(0)
   , card_installment_(0)
   , card_type_(0)
-  , cash_receipt_issued_(false)
-  , escrow_(false)
   , failed_at_(0)
   , paid_at_(0)
+  , cash_receipt_issued_(false)
+  , escrow_(false)
+  , sandbox_(false)
   , started_at_(0)
   , vbank_date_(0)
   , vbank_issued_at_(0){}
@@ -191,6 +193,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_v2_2fbasis_2fbasis_2eproto::of
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, vbank_num_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, customer_email_),
   PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, promotion_),
+  PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, npoint_pay_amount_),
+  PROTOBUF_FIELD_OFFSET(::basis_v2::UnitTx, sandbox_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::basis_v2::CancelHistory)},
@@ -209,7 +213,7 @@ const char descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto[] PROTOBUF_SECTI
   "elHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001("
   "\t\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022"
   "\023\n\013receipt_url\030\005 \001(\t\")\n\tPromotion\022\n\n\002id\030"
-  "\001 \001(\t\022\020\n\010discount\030\002 \001(\005\"\203\t\n\006UnitTx\022\016\n\006am"
+  "\001 \001(\t\022\020\n\010discount\030\002 \001(\005\"\257\t\n\006UnitTx\022\016\n\006am"
   "ount\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank_co"
   "de\030\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_add"
   "r\030\005 \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer_na"
@@ -238,13 +242,14 @@ const char descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto[] PROTOBUF_SECTI
   "_holder\0300 \001(\t\022\027\n\017vbank_issued_at\0301 \001(\005\022\022"
   "\n\nvbank_name\0302 \001(\t\022\021\n\tvbank_num\0303 \001(\t\022\026\n"
   "\016customer_email\0304 \001(\t\022&\n\tpromotion\0305 \001(\013"
-  "2\023.basis_v2.PromotionB=Z0github.com/iamp"
-  "ort/interface/gen_src/go/v2/basis\252\002\010V2.B"
-  "asisb\006proto3"
+  "2\023.basis_v2.Promotion\022\031\n\021npoint_pay_amou"
+  "nt\0306 \001(\t\022\017\n\007sandbox\0307 \001(\010B=Z0github.com/"
+  "iamport/interface/gen_src/go/v2/basis\252\002\010"
+  "V2.Basisb\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2fbasis_2fbasis_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2fbasis_2fbasis_2eproto = {
-  false, false, 1412, descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto, "v2/basis/basis.proto", 
+  false, false, 1456, descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto, "v2/basis/basis.proto", 
   &descriptor_table_v2_2fbasis_2fbasis_2eproto_once, nullptr, 0, 3,
   schemas, file_default_instances, TableStruct_v2_2fbasis_2fbasis_2eproto::offsets,
   file_level_metadata_v2_2fbasis_2fbasis_2eproto, file_level_enum_descriptors_v2_2fbasis_2fbasis_2eproto, file_level_service_descriptors_v2_2fbasis_2fbasis_2eproto,
@@ -1059,6 +1064,11 @@ UnitTx::UnitTx(const UnitTx& from)
     customer_email_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customer_email(), 
       GetArenaForAllocation());
   }
+  npoint_pay_amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_npoint_pay_amount().empty()) {
+    npoint_pay_amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_npoint_pay_amount(), 
+      GetArenaForAllocation());
+  }
   if (from._internal_has_promotion()) {
     promotion_ = new ::basis_v2::Promotion(*from.promotion_);
   } else {
@@ -1110,6 +1120,7 @@ vbank_holder_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStrin
 vbank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 vbank_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+npoint_pay_amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&promotion_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&vbank_issued_at_) -
@@ -1164,6 +1175,7 @@ inline void UnitTx::SharedDtor() {
   vbank_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   vbank_num_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   customer_email_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  npoint_pay_amount_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete promotion_;
 }
 
@@ -1224,6 +1236,7 @@ void UnitTx::Clear() {
   vbank_name_.ClearToEmpty();
   vbank_num_.ClearToEmpty();
   customer_email_.ClearToEmpty();
+  npoint_pay_amount_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && promotion_ != nullptr) {
     delete promotion_;
   }
@@ -1698,6 +1711,22 @@ const char* UnitTx::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
       case 53:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 170)) {
           ptr = ctx->ParseMessage(_internal_mutable_promotion(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string npoint_pay_amount = 54;
+      case 54:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 178)) {
+          auto str = _internal_mutable_npoint_pay_amount();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "basis_v2.UnitTx.npoint_pay_amount"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bool sandbox = 55;
+      case 55:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 184)) {
+          sandbox_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2212,6 +2241,22 @@ failure:
         53, _Internal::promotion(this), target, stream);
   }
 
+  // string npoint_pay_amount = 54;
+  if (!this->_internal_npoint_pay_amount().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_npoint_pay_amount().data(), static_cast<int>(this->_internal_npoint_pay_amount().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "basis_v2.UnitTx.npoint_pay_amount");
+    target = stream->WriteStringMaybeAliased(
+        54, this->_internal_npoint_pay_amount(), target);
+  }
+
+  // bool sandbox = 55;
+  if (this->_internal_sandbox() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(55, this->_internal_sandbox(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -2516,6 +2561,13 @@ size_t UnitTx::ByteSizeLong() const {
         this->_internal_customer_email());
   }
 
+  // string npoint_pay_amount = 54;
+  if (!this->_internal_npoint_pay_amount().empty()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_npoint_pay_amount());
+  }
+
   // .basis_v2.Promotion promotion = 53;
   if (this->_internal_has_promotion()) {
     total_size += 2 +
@@ -2551,16 +2603,6 @@ size_t UnitTx::ByteSizeLong() const {
         this->_internal_card_type());
   }
 
-  // bool cash_receipt_issued = 25;
-  if (this->_internal_cash_receipt_issued() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool escrow = 31;
-  if (this->_internal_escrow() != 0) {
-    total_size += 2 + 1;
-  }
-
   // int32 failed_at = 33;
   if (this->_internal_failed_at() != 0) {
     total_size += 2 +
@@ -2573,6 +2615,21 @@ size_t UnitTx::ByteSizeLong() const {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_paid_at());
+  }
+
+  // bool cash_receipt_issued = 25;
+  if (this->_internal_cash_receipt_issued() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // bool escrow = 31;
+  if (this->_internal_escrow() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // bool sandbox = 55;
+  if (this->_internal_sandbox() != 0) {
+    total_size += 2 + 1;
   }
 
   // int32 started_at = 43;
@@ -2743,6 +2800,9 @@ void UnitTx::MergeFrom(const UnitTx& from) {
   if (!from._internal_customer_email().empty()) {
     _internal_set_customer_email(from._internal_customer_email());
   }
+  if (!from._internal_npoint_pay_amount().empty()) {
+    _internal_set_npoint_pay_amount(from._internal_npoint_pay_amount());
+  }
   if (from._internal_has_promotion()) {
     _internal_mutable_promotion()->::basis_v2::Promotion::MergeFrom(from._internal_promotion());
   }
@@ -2758,17 +2818,20 @@ void UnitTx::MergeFrom(const UnitTx& from) {
   if (from._internal_card_type() != 0) {
     _internal_set_card_type(from._internal_card_type());
   }
+  if (from._internal_failed_at() != 0) {
+    _internal_set_failed_at(from._internal_failed_at());
+  }
+  if (from._internal_paid_at() != 0) {
+    _internal_set_paid_at(from._internal_paid_at());
+  }
   if (from._internal_cash_receipt_issued() != 0) {
     _internal_set_cash_receipt_issued(from._internal_cash_receipt_issued());
   }
   if (from._internal_escrow() != 0) {
     _internal_set_escrow(from._internal_escrow());
   }
-  if (from._internal_failed_at() != 0) {
-    _internal_set_failed_at(from._internal_failed_at());
-  }
-  if (from._internal_paid_at() != 0) {
-    _internal_set_paid_at(from._internal_paid_at());
+  if (from._internal_sandbox() != 0) {
+    _internal_set_sandbox(from._internal_sandbox());
   }
   if (from._internal_started_at() != 0) {
     _internal_set_started_at(from._internal_started_at());
@@ -2992,6 +3055,11 @@ void UnitTx::InternalSwap(UnitTx* other) {
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       &customer_email_, GetArenaForAllocation(),
       &other->customer_email_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &npoint_pay_amount_, GetArenaForAllocation(),
+      &other->npoint_pay_amount_, other->GetArenaForAllocation()
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(UnitTx, vbank_issued_at_)

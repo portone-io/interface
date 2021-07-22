@@ -28,7 +28,7 @@ namespace V2.Basis {
             "dG9yeRIOCgZwZ190aWQYASABKAkSDgoGYW1vdW50GAIgASgJEhQKDGNhbmNl",
             "bGxlZF9hdBgDIAEoBRIOCgZyZWFzb24YBCABKAkSEwoLcmVjZWlwdF91cmwY",
             "BSABKAkiKQoJUHJvbW90aW9uEgoKAmlkGAEgASgJEhAKCGRpc2NvdW50GAIg",
-            "ASgFIoMJCgZVbml0VHgSDgoGYW1vdW50GAEgASgJEhEKCWFwcGx5X251bRgC",
+            "ASgFIq8JCgZVbml0VHgSDgoGYW1vdW50GAEgASgJEhEKCWFwcGx5X251bRgC",
             "IAEoCRIRCgliYW5rX2NvZGUYAyABKAUSEQoJYmFua19uYW1lGAQgASgJEhIK",
             "CmJ1eWVyX2FkZHIYBSABKAkSEwoLYnV5ZXJfZW1haWwYBiABKAkSEgoKYnV5",
             "ZXJfbmFtZRgHIAEoCRIWCg5idXllcl9wb3N0Y29kZRgIIAEoCRIRCglidXll",
@@ -53,15 +53,16 @@ namespace V2.Basis {
             "CRISCgp2YmFua19kYXRlGC8gASgFEhQKDHZiYW5rX2hvbGRlchgwIAEoCRIX",
             "Cg92YmFua19pc3N1ZWRfYXQYMSABKAUSEgoKdmJhbmtfbmFtZRgyIAEoCRIR",
             "Cgl2YmFua19udW0YMyABKAkSFgoOY3VzdG9tZXJfZW1haWwYNCABKAkSJgoJ",
-            "cHJvbW90aW9uGDUgASgLMhMuYmFzaXNfdjIuUHJvbW90aW9uQj1aMGdpdGh1",
-            "Yi5jb20vaWFtcG9ydC9pbnRlcmZhY2UvZ2VuX3NyYy9nby92Mi9iYXNpc6oC",
-            "CFYyLkJhc2lzYgZwcm90bzM="));
+            "cHJvbW90aW9uGDUgASgLMhMuYmFzaXNfdjIuUHJvbW90aW9uEhkKEW5wb2lu",
+            "dF9wYXlfYW1vdW50GDYgASgJEg8KB3NhbmRib3gYNyABKAhCPVowZ2l0aHVi",
+            "LmNvbS9pYW1wb3J0L2ludGVyZmFjZS9nZW5fc3JjL2dvL3YyL2Jhc2lzqgII",
+            "VjIuQmFzaXNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Basis.CancelHistory), global::V2.Basis.CancelHistory.Parser, new[]{ "PgTid", "Amount", "CancelledAt", "Reason", "ReceiptUrl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V2.Basis.Promotion), global::V2.Basis.Promotion.Parser, new[]{ "Id", "Discount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Basis.UnitTx), global::V2.Basis.UnitTx.Parser, new[]{ "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "BinNumber", "CardName", "CardReceipeName", "CardOwnerType", "CardBrand", "CardCreditType", "CardNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", "CustomerEmail", "Promotion" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::V2.Basis.UnitTx), global::V2.Basis.UnitTx.Parser, new[]{ "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "BinNumber", "CardName", "CardReceipeName", "CardOwnerType", "CardBrand", "CardCreditType", "CardNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", "CustomerEmail", "Promotion", "NpointPayAmount", "Sandbox" }, null, null, null, null)
           }));
     }
     #endregion
@@ -718,6 +719,8 @@ namespace V2.Basis {
       vbankNum_ = other.vbankNum_;
       customerEmail_ = other.customerEmail_;
       promotion_ = other.promotion_ != null ? other.promotion_.Clone() : null;
+      npointPayAmount_ = other.npointPayAmount_;
+      sandbox_ = other.sandbox_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1364,6 +1367,30 @@ namespace V2.Basis {
       }
     }
 
+    /// <summary>Field number for the "npoint_pay_amount" field.</summary>
+    public const int NpointPayAmountFieldNumber = 54;
+    private string npointPayAmount_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NpointPayAmount {
+      get { return npointPayAmount_; }
+      set {
+        npointPayAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sandbox" field.</summary>
+    public const int SandboxFieldNumber = 55;
+    private bool sandbox_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Sandbox {
+      get { return sandbox_; }
+      set {
+        sandbox_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1432,6 +1459,8 @@ namespace V2.Basis {
       if (VbankNum != other.VbankNum) return false;
       if (CustomerEmail != other.CustomerEmail) return false;
       if (!object.Equals(Promotion, other.Promotion)) return false;
+      if (NpointPayAmount != other.NpointPayAmount) return false;
+      if (Sandbox != other.Sandbox) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1492,6 +1521,8 @@ namespace V2.Basis {
       if (VbankNum.Length != 0) hash ^= VbankNum.GetHashCode();
       if (CustomerEmail.Length != 0) hash ^= CustomerEmail.GetHashCode();
       if (promotion_ != null) hash ^= Promotion.GetHashCode();
+      if (NpointPayAmount.Length != 0) hash ^= NpointPayAmount.GetHashCode();
+      if (Sandbox != false) hash ^= Sandbox.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1716,6 +1747,14 @@ namespace V2.Basis {
         output.WriteRawTag(170, 3);
         output.WriteMessage(Promotion);
       }
+      if (NpointPayAmount.Length != 0) {
+        output.WriteRawTag(178, 3);
+        output.WriteString(NpointPayAmount);
+      }
+      if (Sandbox != false) {
+        output.WriteRawTag(184, 3);
+        output.WriteBool(Sandbox);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1932,6 +1971,14 @@ namespace V2.Basis {
         output.WriteRawTag(170, 3);
         output.WriteMessage(Promotion);
       }
+      if (NpointPayAmount.Length != 0) {
+        output.WriteRawTag(178, 3);
+        output.WriteString(NpointPayAmount);
+      }
+      if (Sandbox != false) {
+        output.WriteRawTag(184, 3);
+        output.WriteBool(Sandbox);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2096,6 +2143,12 @@ namespace V2.Basis {
       }
       if (promotion_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Promotion);
+      }
+      if (NpointPayAmount.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(NpointPayAmount);
+      }
+      if (Sandbox != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2266,6 +2319,12 @@ namespace V2.Basis {
           Promotion = new global::V2.Basis.Promotion();
         }
         Promotion.MergeFrom(other.Promotion);
+      }
+      if (other.NpointPayAmount.Length != 0) {
+        NpointPayAmount = other.NpointPayAmount;
+      }
+      if (other.Sandbox != false) {
+        Sandbox = other.Sandbox;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2497,6 +2556,14 @@ namespace V2.Basis {
             input.ReadMessage(Promotion);
             break;
           }
+          case 434: {
+            NpointPayAmount = input.ReadString();
+            break;
+          }
+          case 440: {
+            Sandbox = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2725,6 +2792,14 @@ namespace V2.Basis {
               Promotion = new global::V2.Basis.Promotion();
             }
             input.ReadMessage(Promotion);
+            break;
+          }
+          case 434: {
+            NpointPayAmount = input.ReadString();
+            break;
+          }
+          case 440: {
+            Sandbox = input.ReadBool();
             break;
           }
         }

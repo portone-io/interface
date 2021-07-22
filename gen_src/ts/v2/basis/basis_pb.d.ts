@@ -229,6 +229,12 @@ export class UnitTx extends jspb.Message {
   getPromotion(): Promotion | undefined;
   setPromotion(value?: Promotion): void;
 
+  getNpointPayAmount(): string;
+  setNpointPayAmount(value: string): void;
+
+  getSandbox(): boolean;
+  setSandbox(value: boolean): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnitTx.AsObject;
   static toObject(includeInstance: boolean, msg: UnitTx): UnitTx.AsObject;
@@ -294,6 +300,8 @@ export namespace UnitTx {
     vbankNum: string,
     customerEmail: string,
     promotion?: Promotion.AsObject,
+    npointPayAmount: string,
+    sandbox: boolean,
   }
 }
 

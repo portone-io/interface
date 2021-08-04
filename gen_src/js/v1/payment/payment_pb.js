@@ -653,7 +653,8 @@ proto.payment.Payment.toObject = function(includeInstance, msg) {
     vbankIssuedAt: jspb.Message.getFieldWithDefault(msg, 44, 0),
     vbankName: jspb.Message.getFieldWithDefault(msg, 45, ""),
     vbankNum: jspb.Message.getFieldWithDefault(msg, 46, ""),
-    promotion: (f = msg.getPromotion()) && proto.payment.Promotion.toObject(includeInstance, f)
+    promotion: (f = msg.getPromotion()) && proto.payment.Promotion.toObject(includeInstance, f),
+    embPgProvider: jspb.Message.getFieldWithDefault(msg, 48, "")
   };
 
   if (includeInstance) {
@@ -879,6 +880,10 @@ proto.payment.Payment.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.payment.Promotion;
       reader.readMessage(value,proto.payment.Promotion.deserializeBinaryFromReader);
       msg.setPromotion(value);
+      break;
+    case 48:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setEmbPgProvider(value);
       break;
     default:
       reader.skipField();
@@ -1238,6 +1243,13 @@ proto.payment.Payment.serializeBinaryToWriter = function(message, writer) {
       47,
       f,
       proto.payment.Promotion.serializeBinaryToWriter
+    );
+  }
+  f = message.getEmbPgProvider();
+  if (f.length > 0) {
+    writer.writeString(
+      48,
+      f
     );
   }
 };
@@ -2144,6 +2156,24 @@ proto.payment.Payment.prototype.clearPromotion = function() {
  */
 proto.payment.Payment.prototype.hasPromotion = function() {
   return jspb.Message.getField(this, 47) != null;
+};
+
+
+/**
+ * optional string emb_pg_provider = 48;
+ * @return {string}
+ */
+proto.payment.Payment.prototype.getEmbPgProvider = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 48, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.payment.Payment} returns this
+ */
+proto.payment.Payment.prototype.setEmbPgProvider = function(value) {
+  return jspb.Message.setProto3StringField(this, 48, value);
 };
 
 

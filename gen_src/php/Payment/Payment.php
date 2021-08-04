@@ -201,6 +201,10 @@ class Payment extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.payment.Promotion promotion = 47;</code>
      */
     protected $promotion = null;
+    /**
+     * Generated from protobuf field <code>string emb_pg_provider = 48;</code>
+     */
+    protected $emb_pg_provider = '';
 
     /**
      * Constructor.
@@ -255,6 +259,7 @@ class Payment extends \Google\Protobuf\Internal\Message
      *     @type string $vbank_name
      *     @type string $vbank_num
      *     @type \Payment\Promotion $promotion
+     *     @type string $emb_pg_provider
      * }
      */
     public function __construct($data = NULL) {
@@ -1302,6 +1307,28 @@ class Payment extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Payment\Promotion::class);
         $this->promotion = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string emb_pg_provider = 48;</code>
+     * @return string
+     */
+    public function getEmbPgProvider()
+    {
+        return $this->emb_pg_provider;
+    }
+
+    /**
+     * Generated from protobuf field <code>string emb_pg_provider = 48;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setEmbPgProvider($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->emb_pg_provider = $var;
 
         return $this;
     }

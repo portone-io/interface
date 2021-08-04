@@ -2349,6 +2349,36 @@ public final class Basis {
      * <code>.basis_v2.Promotion promotion = 53;</code>
      */
     basis_v2.Basis.PromotionOrBuilder getPromotionOrBuilder();
+
+    /**
+     * <code>string npoint_pay_amount = 54;</code>
+     * @return The npointPayAmount.
+     */
+    java.lang.String getNpointPayAmount();
+    /**
+     * <code>string npoint_pay_amount = 54;</code>
+     * @return The bytes for npointPayAmount.
+     */
+    com.google.protobuf.ByteString
+        getNpointPayAmountBytes();
+
+    /**
+     * <code>bool sandbox = 55;</code>
+     * @return The sandbox.
+     */
+    boolean getSandbox();
+
+    /**
+     * <code>string emb_pg_provider = 56;</code>
+     * @return The embPgProvider.
+     */
+    java.lang.String getEmbPgProvider();
+    /**
+     * <code>string emb_pg_provider = 56;</code>
+     * @return The bytes for embPgProvider.
+     */
+    com.google.protobuf.ByteString
+        getEmbPgProviderBytes();
   }
   /**
    * Protobuf type {@code basis_v2.UnitTx}
@@ -2404,6 +2434,8 @@ public final class Basis {
       vbankName_ = "";
       vbankNum_ = "";
       customerEmail_ = "";
+      npointPayAmount_ = "";
+      embPgProvider_ = "";
     }
 
     @java.lang.Override
@@ -2755,6 +2787,23 @@ public final class Basis {
                 promotion_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 434: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              npointPayAmount_ = s;
+              break;
+            }
+            case 440: {
+
+              sandbox_ = input.readBool();
+              break;
+            }
+            case 450: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              embPgProvider_ = s;
               break;
             }
             default: {
@@ -4507,6 +4556,93 @@ public final class Basis {
       return getPromotion();
     }
 
+    public static final int NPOINT_PAY_AMOUNT_FIELD_NUMBER = 54;
+    private volatile java.lang.Object npointPayAmount_;
+    /**
+     * <code>string npoint_pay_amount = 54;</code>
+     * @return The npointPayAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getNpointPayAmount() {
+      java.lang.Object ref = npointPayAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        npointPayAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string npoint_pay_amount = 54;</code>
+     * @return The bytes for npointPayAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNpointPayAmountBytes() {
+      java.lang.Object ref = npointPayAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        npointPayAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SANDBOX_FIELD_NUMBER = 55;
+    private boolean sandbox_;
+    /**
+     * <code>bool sandbox = 55;</code>
+     * @return The sandbox.
+     */
+    @java.lang.Override
+    public boolean getSandbox() {
+      return sandbox_;
+    }
+
+    public static final int EMB_PG_PROVIDER_FIELD_NUMBER = 56;
+    private volatile java.lang.Object embPgProvider_;
+    /**
+     * <code>string emb_pg_provider = 56;</code>
+     * @return The embPgProvider.
+     */
+    @java.lang.Override
+    public java.lang.String getEmbPgProvider() {
+      java.lang.Object ref = embPgProvider_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        embPgProvider_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string emb_pg_provider = 56;</code>
+     * @return The bytes for embPgProvider.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmbPgProviderBytes() {
+      java.lang.Object ref = embPgProvider_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        embPgProvider_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4679,6 +4815,15 @@ public final class Basis {
       }
       if (promotion_ != null) {
         output.writeMessage(53, getPromotion());
+      }
+      if (!getNpointPayAmountBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 54, npointPayAmount_);
+      }
+      if (sandbox_ != false) {
+        output.writeBool(55, sandbox_);
+      }
+      if (!getEmbPgProviderBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 56, embPgProvider_);
       }
       unknownFields.writeTo(output);
     }
@@ -4866,6 +5011,16 @@ public final class Basis {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(53, getPromotion());
       }
+      if (!getNpointPayAmountBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(54, npointPayAmount_);
+      }
+      if (sandbox_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(55, sandbox_);
+      }
+      if (!getEmbPgProviderBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(56, embPgProvider_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4990,6 +5145,12 @@ public final class Basis {
         if (!getPromotion()
             .equals(other.getPromotion())) return false;
       }
+      if (!getNpointPayAmount()
+          .equals(other.getNpointPayAmount())) return false;
+      if (getSandbox()
+          != other.getSandbox()) return false;
+      if (!getEmbPgProvider()
+          .equals(other.getEmbPgProvider())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5115,6 +5276,13 @@ public final class Basis {
         hash = (37 * hash) + PROMOTION_FIELD_NUMBER;
         hash = (53 * hash) + getPromotion().hashCode();
       }
+      hash = (37 * hash) + NPOINT_PAY_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getNpointPayAmount().hashCode();
+      hash = (37 * hash) + SANDBOX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSandbox());
+      hash = (37 * hash) + EMB_PG_PROVIDER_FIELD_NUMBER;
+      hash = (53 * hash) + getEmbPgProvider().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5363,6 +5531,12 @@ public final class Basis {
           promotion_ = null;
           promotionBuilder_ = null;
         }
+        npointPayAmount_ = "";
+
+        sandbox_ = false;
+
+        embPgProvider_ = "";
+
         return this;
       }
 
@@ -5459,6 +5633,9 @@ public final class Basis {
         } else {
           result.promotion_ = promotionBuilder_.build();
         }
+        result.npointPayAmount_ = npointPayAmount_;
+        result.sandbox_ = sandbox_;
+        result.embPgProvider_ = embPgProvider_;
         onBuilt();
         return result;
       }
@@ -5734,6 +5911,17 @@ public final class Basis {
         }
         if (other.hasPromotion()) {
           mergePromotion(other.getPromotion());
+        }
+        if (!other.getNpointPayAmount().isEmpty()) {
+          npointPayAmount_ = other.npointPayAmount_;
+          onChanged();
+        }
+        if (other.getSandbox() != false) {
+          setSandbox(other.getSandbox());
+        }
+        if (!other.getEmbPgProvider().isEmpty()) {
+          embPgProvider_ = other.embPgProvider_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9558,6 +9746,189 @@ public final class Basis {
         }
         return promotionBuilder_;
       }
+
+      private java.lang.Object npointPayAmount_ = "";
+      /**
+       * <code>string npoint_pay_amount = 54;</code>
+       * @return The npointPayAmount.
+       */
+      public java.lang.String getNpointPayAmount() {
+        java.lang.Object ref = npointPayAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          npointPayAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string npoint_pay_amount = 54;</code>
+       * @return The bytes for npointPayAmount.
+       */
+      public com.google.protobuf.ByteString
+          getNpointPayAmountBytes() {
+        java.lang.Object ref = npointPayAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          npointPayAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string npoint_pay_amount = 54;</code>
+       * @param value The npointPayAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNpointPayAmount(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        npointPayAmount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string npoint_pay_amount = 54;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNpointPayAmount() {
+        
+        npointPayAmount_ = getDefaultInstance().getNpointPayAmount();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string npoint_pay_amount = 54;</code>
+       * @param value The bytes for npointPayAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNpointPayAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        npointPayAmount_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean sandbox_ ;
+      /**
+       * <code>bool sandbox = 55;</code>
+       * @return The sandbox.
+       */
+      @java.lang.Override
+      public boolean getSandbox() {
+        return sandbox_;
+      }
+      /**
+       * <code>bool sandbox = 55;</code>
+       * @param value The sandbox to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSandbox(boolean value) {
+        
+        sandbox_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool sandbox = 55;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSandbox() {
+        
+        sandbox_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object embPgProvider_ = "";
+      /**
+       * <code>string emb_pg_provider = 56;</code>
+       * @return The embPgProvider.
+       */
+      public java.lang.String getEmbPgProvider() {
+        java.lang.Object ref = embPgProvider_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          embPgProvider_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string emb_pg_provider = 56;</code>
+       * @return The bytes for embPgProvider.
+       */
+      public com.google.protobuf.ByteString
+          getEmbPgProviderBytes() {
+        java.lang.Object ref = embPgProvider_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          embPgProvider_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string emb_pg_provider = 56;</code>
+       * @param value The embPgProvider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmbPgProvider(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        embPgProvider_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string emb_pg_provider = 56;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmbPgProvider() {
+        
+        embPgProvider_ = getDefaultInstance().getEmbPgProvider();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string emb_pg_provider = 56;</code>
+       * @param value The bytes for embPgProvider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmbPgProviderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        embPgProvider_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9639,7 +10010,7 @@ public final class Basis {
       "elHistory\022\016\n\006pg_tid\030\001 \001(\t\022\016\n\006amount\030\002 \001(" +
       "\t\022\024\n\014cancelled_at\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\022" +
       "\023\n\013receipt_url\030\005 \001(\t\")\n\tPromotion\022\n\n\002id\030" +
-      "\001 \001(\t\022\020\n\010discount\030\002 \001(\005\"\203\t\n\006UnitTx\022\016\n\006am" +
+      "\001 \001(\t\022\020\n\010discount\030\002 \001(\005\"\310\t\n\006UnitTx\022\016\n\006am" +
       "ount\030\001 \001(\t\022\021\n\tapply_num\030\002 \001(\t\022\021\n\tbank_co" +
       "de\030\003 \001(\005\022\021\n\tbank_name\030\004 \001(\t\022\022\n\nbuyer_add" +
       "r\030\005 \001(\t\022\023\n\013buyer_email\030\006 \001(\t\022\022\n\nbuyer_na" +
@@ -9668,9 +10039,11 @@ public final class Basis {
       "_holder\0300 \001(\t\022\027\n\017vbank_issued_at\0301 \001(\005\022\022" +
       "\n\nvbank_name\0302 \001(\t\022\021\n\tvbank_num\0303 \001(\t\022\026\n" +
       "\016customer_email\0304 \001(\t\022&\n\tpromotion\0305 \001(\013" +
-      "2\023.basis_v2.PromotionB=Z0github.com/iamp" +
-      "ort/interface/gen_src/go/v2/basis\252\002\010V2.B" +
-      "asisb\006proto3"
+      "2\023.basis_v2.Promotion\022\031\n\021npoint_pay_amou" +
+      "nt\0306 \001(\t\022\017\n\007sandbox\0307 \001(\010\022\027\n\017emb_pg_prov" +
+      "ider\0308 \001(\tB=Z0github.com/iamport/interfa" +
+      "ce/gen_src/go/v2/basis\252\002\010V2.Basisb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9693,7 +10066,7 @@ public final class Basis {
     internal_static_basis_v2_UnitTx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_basis_v2_UnitTx_descriptor,
-        new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "BinNumber", "CardName", "CardReceipeName", "CardOwnerType", "CardBrand", "CardCreditType", "CardNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", "CustomerEmail", "Promotion", });
+        new java.lang.String[] { "Amount", "ApplyNum", "BankCode", "BankName", "BuyerAddr", "BuyerEmail", "BuyerName", "BuyerPostcode", "BuyerTel", "CancelAmount", "CancelHistory", "CancelReason", "CancelReceiptUrls", "CancelledAt", "CardCode", "BinNumber", "CardName", "CardReceipeName", "CardOwnerType", "CardBrand", "CardCreditType", "CardNumber", "CardInstallment", "CardType", "CashReceiptIssued", "Channel", "Currency", "CustomData", "CardUid", "CustomerUidUsage", "Escrow", "FailReason", "FailedAt", "ImpUid", "MerchantUid", "OrderName", "PaidAt", "PayMethod", "PgId", "PgProvider", "PgTid", "ReceiptUrl", "StartedAt", "Status", "UserAgent", "VbankCode", "VbankDate", "VbankHolder", "VbankIssuedAt", "VbankName", "VbankNum", "CustomerEmail", "Promotion", "NpointPayAmount", "Sandbox", "EmbPgProvider", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

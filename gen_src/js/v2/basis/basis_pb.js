@@ -583,7 +583,10 @@ proto.basis_v2.UnitTx.toObject = function(includeInstance, msg) {
     vbankName: jspb.Message.getFieldWithDefault(msg, 50, ""),
     vbankNum: jspb.Message.getFieldWithDefault(msg, 51, ""),
     customerEmail: jspb.Message.getFieldWithDefault(msg, 52, ""),
-    promotion: (f = msg.getPromotion()) && proto.basis_v2.Promotion.toObject(includeInstance, f)
+    promotion: (f = msg.getPromotion()) && proto.basis_v2.Promotion.toObject(includeInstance, f),
+    npointPayAmount: jspb.Message.getFieldWithDefault(msg, 54, ""),
+    sandbox: jspb.Message.getBooleanFieldWithDefault(msg, 55, false),
+    embPgProvider: jspb.Message.getFieldWithDefault(msg, 56, "")
   };
 
   if (includeInstance) {
@@ -833,6 +836,18 @@ proto.basis_v2.UnitTx.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.basis_v2.Promotion;
       reader.readMessage(value,proto.basis_v2.Promotion.deserializeBinaryFromReader);
       msg.setPromotion(value);
+      break;
+    case 54:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setNpointPayAmount(value);
+      break;
+    case 55:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setSandbox(value);
+      break;
+    case 56:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setEmbPgProvider(value);
       break;
     default:
       reader.skipField();
@@ -1234,6 +1249,27 @@ proto.basis_v2.UnitTx.serializeBinaryToWriter = function(message, writer) {
       53,
       f,
       proto.basis_v2.Promotion.serializeBinaryToWriter
+    );
+  }
+  f = message.getNpointPayAmount();
+  if (f.length > 0) {
+    writer.writeString(
+      54,
+      f
+    );
+  }
+  f = message.getSandbox();
+  if (f) {
+    writer.writeBool(
+      55,
+      f
+    );
+  }
+  f = message.getEmbPgProvider();
+  if (f.length > 0) {
+    writer.writeString(
+      56,
+      f
     );
   }
 };
@@ -2248,6 +2284,60 @@ proto.basis_v2.UnitTx.prototype.clearPromotion = function() {
  */
 proto.basis_v2.UnitTx.prototype.hasPromotion = function() {
   return jspb.Message.getField(this, 53) != null;
+};
+
+
+/**
+ * optional string npoint_pay_amount = 54;
+ * @return {string}
+ */
+proto.basis_v2.UnitTx.prototype.getNpointPayAmount = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 54, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.basis_v2.UnitTx} returns this
+ */
+proto.basis_v2.UnitTx.prototype.setNpointPayAmount = function(value) {
+  return jspb.Message.setProto3StringField(this, 54, value);
+};
+
+
+/**
+ * optional bool sandbox = 55;
+ * @return {boolean}
+ */
+proto.basis_v2.UnitTx.prototype.getSandbox = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 55, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.basis_v2.UnitTx} returns this
+ */
+proto.basis_v2.UnitTx.prototype.setSandbox = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 55, value);
+};
+
+
+/**
+ * optional string emb_pg_provider = 56;
+ * @return {string}
+ */
+proto.basis_v2.UnitTx.prototype.getEmbPgProvider = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 56, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.basis_v2.UnitTx} returns this
+ */
+proto.basis_v2.UnitTx.prototype.setEmbPgProvider = function(value) {
+  return jspb.Message.setProto3StringField(this, 56, value);
 };
 
 

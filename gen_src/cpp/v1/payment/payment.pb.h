@@ -310,6 +310,7 @@ class Payment final :
     kVbankHolderFieldNumber = 43,
     kVbankNameFieldNumber = 45,
     kVbankNumFieldNumber = 46,
+    kEmbPgProviderFieldNumber = 48,
     kPromotionFieldNumber = 47,
     kAmountFieldNumber = 1,
     kBankCodeFieldNumber = 3,
@@ -801,6 +802,20 @@ class Payment final :
   std::string* _internal_mutable_vbank_num();
   public:
 
+  // string emb_pg_provider = 48;
+  void clear_emb_pg_provider();
+  const std::string& emb_pg_provider() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_emb_pg_provider(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_emb_pg_provider();
+  PROTOBUF_MUST_USE_RESULT std::string* release_emb_pg_provider();
+  void set_allocated_emb_pg_provider(std::string* emb_pg_provider);
+  private:
+  const std::string& _internal_emb_pg_provider() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_emb_pg_provider(const std::string& value);
+  std::string* _internal_mutable_emb_pg_provider();
+  public:
+
   // .payment.Promotion promotion = 47;
   bool has_promotion() const;
   private:
@@ -976,6 +991,7 @@ class Payment final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vbank_holder_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vbank_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vbank_num_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr emb_pg_provider_;
   ::payment::Promotion* promotion_;
   ::PROTOBUF_NAMESPACE_ID::int32 amount_;
   ::PROTOBUF_NAMESPACE_ID::int32 bank_code_;
@@ -7177,6 +7193,52 @@ inline void Payment::set_allocated_promotion(::payment::Promotion* promotion) {
   }
   promotion_ = promotion;
   // @@protoc_insertion_point(field_set_allocated:payment.Payment.promotion)
+}
+
+// string emb_pg_provider = 48;
+inline void Payment::clear_emb_pg_provider() {
+  emb_pg_provider_.ClearToEmpty();
+}
+inline const std::string& Payment::emb_pg_provider() const {
+  // @@protoc_insertion_point(field_get:payment.Payment.emb_pg_provider)
+  return _internal_emb_pg_provider();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void Payment::set_emb_pg_provider(ArgT0&& arg0, ArgT... args) {
+ 
+ emb_pg_provider_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:payment.Payment.emb_pg_provider)
+}
+inline std::string* Payment::mutable_emb_pg_provider() {
+  std::string* _s = _internal_mutable_emb_pg_provider();
+  // @@protoc_insertion_point(field_mutable:payment.Payment.emb_pg_provider)
+  return _s;
+}
+inline const std::string& Payment::_internal_emb_pg_provider() const {
+  return emb_pg_provider_.Get();
+}
+inline void Payment::_internal_set_emb_pg_provider(const std::string& value) {
+  
+  emb_pg_provider_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* Payment::_internal_mutable_emb_pg_provider() {
+  
+  return emb_pg_provider_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* Payment::release_emb_pg_provider() {
+  // @@protoc_insertion_point(field_release:payment.Payment.emb_pg_provider)
+  return emb_pg_provider_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void Payment::set_allocated_emb_pg_provider(std::string* emb_pg_provider) {
+  if (emb_pg_provider != nullptr) {
+    
+  } else {
+    
+  }
+  emb_pg_provider_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), emb_pg_provider,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:payment.Payment.emb_pg_provider)
 }
 
 // -------------------------------------------------------------------

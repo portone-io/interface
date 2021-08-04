@@ -152,6 +152,9 @@ export class Payment extends jspb.Message {
   getPromotion(): Promotion | undefined;
   setPromotion(value?: Promotion): void;
 
+  getEmbPgProvider(): string;
+  setEmbPgProvider(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Payment.AsObject;
   static toObject(includeInstance: boolean, msg: Payment): Payment.AsObject;
@@ -211,6 +214,7 @@ export namespace Payment {
     vbankName: string,
     vbankNum: string,
     promotion?: Promotion.AsObject,
+    embPgProvider: string,
   }
 }
 

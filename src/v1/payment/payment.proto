@@ -111,6 +111,7 @@ message Payment {
     string vbank_name = 45;
     string vbank_num = 46;
     Promotion promotion = 47;
+    string emb_pg_provider = 48;
 }
 
 message CancelHistory {

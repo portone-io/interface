@@ -71,5 +71,8 @@ message UnitTx {
     string vbank_num = 51;
     string customer_email = 52;
     Promotion promotion = 53;
+    string npoint_pay_amount = 54;
+    bool sandbox = 55;
+    string emb_pg_provider = 56;
 }
 

@@ -587,15 +587,18 @@ class UnitTx final :
     kVbankNameFieldNumber = 50,
     kVbankNumFieldNumber = 51,
     kCustomerEmailFieldNumber = 52,
+    kNpointPayAmountFieldNumber = 54,
+    kEmbPgProviderFieldNumber = 56,
     kPromotionFieldNumber = 53,
     kBankCodeFieldNumber = 3,
     kCancelledAtFieldNumber = 14,
     kCardInstallmentFieldNumber = 23,
     kCardTypeFieldNumber = 24,
-    kCashReceiptIssuedFieldNumber = 25,
-    kEscrowFieldNumber = 31,
     kFailedAtFieldNumber = 33,
     kPaidAtFieldNumber = 37,
+    kCashReceiptIssuedFieldNumber = 25,
+    kEscrowFieldNumber = 31,
+    kSandboxFieldNumber = 55,
     kStartedAtFieldNumber = 43,
     kVbankDateFieldNumber = 47,
     kVbankIssuedAtFieldNumber = 49,
@@ -1188,6 +1191,34 @@ class UnitTx final :
   std::string* _internal_mutable_customer_email();
   public:
 
+  // string npoint_pay_amount = 54;
+  void clear_npoint_pay_amount();
+  const std::string& npoint_pay_amount() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_npoint_pay_amount(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_npoint_pay_amount();
+  PROTOBUF_MUST_USE_RESULT std::string* release_npoint_pay_amount();
+  void set_allocated_npoint_pay_amount(std::string* npoint_pay_amount);
+  private:
+  const std::string& _internal_npoint_pay_amount() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_npoint_pay_amount(const std::string& value);
+  std::string* _internal_mutable_npoint_pay_amount();
+  public:
+
+  // string emb_pg_provider = 56;
+  void clear_emb_pg_provider();
+  const std::string& emb_pg_provider() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_emb_pg_provider(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_emb_pg_provider();
+  PROTOBUF_MUST_USE_RESULT std::string* release_emb_pg_provider();
+  void set_allocated_emb_pg_provider(std::string* emb_pg_provider);
+  private:
+  const std::string& _internal_emb_pg_provider() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_emb_pg_provider(const std::string& value);
+  std::string* _internal_mutable_emb_pg_provider();
+  public:
+
   // .basis_v2.Promotion promotion = 53;
   bool has_promotion() const;
   private:
@@ -1242,6 +1273,24 @@ class UnitTx final :
   void _internal_set_card_type(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
+  // int32 failed_at = 33;
+  void clear_failed_at();
+  ::PROTOBUF_NAMESPACE_ID::int32 failed_at() const;
+  void set_failed_at(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_failed_at() const;
+  void _internal_set_failed_at(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 paid_at = 37;
+  void clear_paid_at();
+  ::PROTOBUF_NAMESPACE_ID::int32 paid_at() const;
+  void set_paid_at(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_paid_at() const;
+  void _internal_set_paid_at(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
   // bool cash_receipt_issued = 25;
   void clear_cash_receipt_issued();
   bool cash_receipt_issued() const;
@@ -1260,22 +1309,13 @@ class UnitTx final :
   void _internal_set_escrow(bool value);
   public:
 
-  // int32 failed_at = 33;
-  void clear_failed_at();
-  ::PROTOBUF_NAMESPACE_ID::int32 failed_at() const;
-  void set_failed_at(::PROTOBUF_NAMESPACE_ID::int32 value);
+  // bool sandbox = 55;
+  void clear_sandbox();
+  bool sandbox() const;
+  void set_sandbox(bool value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_failed_at() const;
-  void _internal_set_failed_at(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // int32 paid_at = 37;
-  void clear_paid_at();
-  ::PROTOBUF_NAMESPACE_ID::int32 paid_at() const;
-  void set_paid_at(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_paid_at() const;
-  void _internal_set_paid_at(::PROTOBUF_NAMESPACE_ID::int32 value);
+  bool _internal_sandbox() const;
+  void _internal_set_sandbox(bool value);
   public:
 
   // int32 started_at = 43;
@@ -1353,15 +1393,18 @@ class UnitTx final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vbank_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vbank_num_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr customer_email_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr npoint_pay_amount_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr emb_pg_provider_;
   ::basis_v2::Promotion* promotion_;
   ::PROTOBUF_NAMESPACE_ID::int32 bank_code_;
   ::PROTOBUF_NAMESPACE_ID::int32 cancelled_at_;
   ::PROTOBUF_NAMESPACE_ID::int32 card_installment_;
   ::PROTOBUF_NAMESPACE_ID::int32 card_type_;
-  bool cash_receipt_issued_;
-  bool escrow_;
   ::PROTOBUF_NAMESPACE_ID::int32 failed_at_;
   ::PROTOBUF_NAMESPACE_ID::int32 paid_at_;
+  bool cash_receipt_issued_;
+  bool escrow_;
+  bool sandbox_;
   ::PROTOBUF_NAMESPACE_ID::int32 started_at_;
   ::PROTOBUF_NAMESPACE_ID::int32 vbank_date_;
   ::PROTOBUF_NAMESPACE_ID::int32 vbank_issued_at_;
@@ -3874,6 +3917,118 @@ inline void UnitTx::set_allocated_promotion(::basis_v2::Promotion* promotion) {
   }
   promotion_ = promotion;
   // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.promotion)
+}
+
+// string npoint_pay_amount = 54;
+inline void UnitTx::clear_npoint_pay_amount() {
+  npoint_pay_amount_.ClearToEmpty();
+}
+inline const std::string& UnitTx::npoint_pay_amount() const {
+  // @@protoc_insertion_point(field_get:basis_v2.UnitTx.npoint_pay_amount)
+  return _internal_npoint_pay_amount();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UnitTx::set_npoint_pay_amount(ArgT0&& arg0, ArgT... args) {
+ 
+ npoint_pay_amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:basis_v2.UnitTx.npoint_pay_amount)
+}
+inline std::string* UnitTx::mutable_npoint_pay_amount() {
+  std::string* _s = _internal_mutable_npoint_pay_amount();
+  // @@protoc_insertion_point(field_mutable:basis_v2.UnitTx.npoint_pay_amount)
+  return _s;
+}
+inline const std::string& UnitTx::_internal_npoint_pay_amount() const {
+  return npoint_pay_amount_.Get();
+}
+inline void UnitTx::_internal_set_npoint_pay_amount(const std::string& value) {
+  
+  npoint_pay_amount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* UnitTx::_internal_mutable_npoint_pay_amount() {
+  
+  return npoint_pay_amount_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* UnitTx::release_npoint_pay_amount() {
+  // @@protoc_insertion_point(field_release:basis_v2.UnitTx.npoint_pay_amount)
+  return npoint_pay_amount_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void UnitTx::set_allocated_npoint_pay_amount(std::string* npoint_pay_amount) {
+  if (npoint_pay_amount != nullptr) {
+    
+  } else {
+    
+  }
+  npoint_pay_amount_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), npoint_pay_amount,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.npoint_pay_amount)
+}
+
+// bool sandbox = 55;
+inline void UnitTx::clear_sandbox() {
+  sandbox_ = false;
+}
+inline bool UnitTx::_internal_sandbox() const {
+  return sandbox_;
+}
+inline bool UnitTx::sandbox() const {
+  // @@protoc_insertion_point(field_get:basis_v2.UnitTx.sandbox)
+  return _internal_sandbox();
+}
+inline void UnitTx::_internal_set_sandbox(bool value) {
+  
+  sandbox_ = value;
+}
+inline void UnitTx::set_sandbox(bool value) {
+  _internal_set_sandbox(value);
+  // @@protoc_insertion_point(field_set:basis_v2.UnitTx.sandbox)
+}
+
+// string emb_pg_provider = 56;
+inline void UnitTx::clear_emb_pg_provider() {
+  emb_pg_provider_.ClearToEmpty();
+}
+inline const std::string& UnitTx::emb_pg_provider() const {
+  // @@protoc_insertion_point(field_get:basis_v2.UnitTx.emb_pg_provider)
+  return _internal_emb_pg_provider();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void UnitTx::set_emb_pg_provider(ArgT0&& arg0, ArgT... args) {
+ 
+ emb_pg_provider_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:basis_v2.UnitTx.emb_pg_provider)
+}
+inline std::string* UnitTx::mutable_emb_pg_provider() {
+  std::string* _s = _internal_mutable_emb_pg_provider();
+  // @@protoc_insertion_point(field_mutable:basis_v2.UnitTx.emb_pg_provider)
+  return _s;
+}
+inline const std::string& UnitTx::_internal_emb_pg_provider() const {
+  return emb_pg_provider_.Get();
+}
+inline void UnitTx::_internal_set_emb_pg_provider(const std::string& value) {
+  
+  emb_pg_provider_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* UnitTx::_internal_mutable_emb_pg_provider() {
+  
+  return emb_pg_provider_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* UnitTx::release_emb_pg_provider() {
+  // @@protoc_insertion_point(field_release:basis_v2.UnitTx.emb_pg_provider)
+  return emb_pg_provider_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void UnitTx::set_allocated_emb_pg_provider(std::string* emb_pg_provider) {
+  if (emb_pg_provider != nullptr) {
+    
+  } else {
+    
+  }
+  emb_pg_provider_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), emb_pg_provider,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:basis_v2.UnitTx.emb_pg_provider)
 }
 
 #ifdef __GNUC__

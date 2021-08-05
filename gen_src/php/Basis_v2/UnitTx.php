@@ -227,6 +227,18 @@ class UnitTx extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.basis_v2.Promotion promotion = 53;</code>
      */
     protected $promotion = null;
+    /**
+     * Generated from protobuf field <code>string npoint_pay_amount = 54;</code>
+     */
+    protected $npoint_pay_amount = '';
+    /**
+     * Generated from protobuf field <code>bool sandbox = 55;</code>
+     */
+    protected $sandbox = false;
+    /**
+     * Generated from protobuf field <code>string emb_pg_provider = 56;</code>
+     */
+    protected $emb_pg_provider = '';
 
     /**
      * Constructor.
@@ -288,6 +300,9 @@ class UnitTx extends \Google\Protobuf\Internal\Message
      *     @type string $vbank_num
      *     @type string $customer_email
      *     @type \Basis_v2\Promotion $promotion
+     *     @type string $npoint_pay_amount
+     *     @type bool $sandbox
+     *     @type string $emb_pg_provider
      * }
      */
     public function __construct($data = NULL) {
@@ -1471,6 +1486,72 @@ class UnitTx extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Basis_v2\Promotion::class);
         $this->promotion = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string npoint_pay_amount = 54;</code>
+     * @return string
+     */
+    public function getNpointPayAmount()
+    {
+        return $this->npoint_pay_amount;
+    }
+
+    /**
+     * Generated from protobuf field <code>string npoint_pay_amount = 54;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setNpointPayAmount($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->npoint_pay_amount = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool sandbox = 55;</code>
+     * @return bool
+     */
+    public function getSandbox()
+    {
+        return $this->sandbox;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool sandbox = 55;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSandbox($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->sandbox = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string emb_pg_provider = 56;</code>
+     * @return string
+     */
+    public function getEmbPgProvider()
+    {
+        return $this->emb_pg_provider;
+    }
+
+    /**
+     * Generated from protobuf field <code>string emb_pg_provider = 56;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setEmbPgProvider($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->emb_pg_provider = $var;
 
         return $this;
     }

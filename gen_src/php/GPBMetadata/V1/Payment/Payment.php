@@ -17,8 +17,8 @@ class Payment
         \GPBMetadata\Google\Api\Annotations::initOnce();
         $pool->internalAddGeneratedFile(
             '
-’%
-v1/payment/payment.protopayment"ì
+«%
+v1/payment/payment.protopayment"…
 Payment
 amount (
 	apply_num (	
@@ -76,7 +76,8 @@ vbank_date* (
 
 vbank_name- (	
 	vbank_num. (	%
-	promotion/ (2.payment.Promotion"j
+	promotion/ (2.payment.Promotion
+emb_pg_provider0 (	"j
 CancelHistory
 pg_tid (	
 amount (

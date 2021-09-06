@@ -137,23 +137,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<CardRegisterRequest> _parser = new pb::MessageParser<CardRegisterRequest>(() => new CardRegisterRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CardRegisterRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CardRegisterRequest() {
       OnConstruction();
     }
@@ -161,7 +157,6 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CardRegisterRequest(CardRegisterRequest other) : this() {
       cardUid_ = other.cardUid_;
       cardNumber_ = other.cardNumber_;
@@ -178,7 +173,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CardRegisterRequest Clone() {
       return new CardRegisterRequest(this);
     }
@@ -190,7 +184,6 @@ namespace V2.Payments.Card {
     /// a.k.a.) customer_uid
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardUid {
       get { return cardUid_; }
       set {
@@ -202,7 +195,6 @@ namespace V2.Payments.Card {
     public const int CardNumberFieldNumber = 2;
     private string cardNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardNumber {
       get { return cardNumber_; }
       set {
@@ -214,7 +206,6 @@ namespace V2.Payments.Card {
     public const int ExpiryFieldNumber = 3;
     private string expiry_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Expiry {
       get { return expiry_; }
       set {
@@ -226,7 +217,6 @@ namespace V2.Payments.Card {
     public const int BirthFieldNumber = 4;
     private string birth_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Birth {
       get { return birth_; }
       set {
@@ -238,7 +228,6 @@ namespace V2.Payments.Card {
     public const int Pwd2DigitFieldNumber = 5;
     private string pwd2Digit_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Pwd2Digit {
       get { return pwd2Digit_; }
       set {
@@ -250,7 +239,6 @@ namespace V2.Payments.Card {
     public const int CustomerNameFieldNumber = 6;
     private string customerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerName {
       get { return customerName_; }
       set {
@@ -262,7 +250,6 @@ namespace V2.Payments.Card {
     public const int CustomerTelFieldNumber = 7;
     private string customerTel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerTel {
       get { return customerTel_; }
       set {
@@ -274,7 +261,6 @@ namespace V2.Payments.Card {
     public const int CustomerEmailFieldNumber = 8;
     private string customerEmail_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerEmail {
       get { return customerEmail_; }
       set {
@@ -286,7 +272,6 @@ namespace V2.Payments.Card {
     public const int CustomerAddrFieldNumber = 9;
     private string customerAddr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerAddr {
       get { return customerAddr_; }
       set {
@@ -298,7 +283,6 @@ namespace V2.Payments.Card {
     public const int CustomerPostcodeFieldNumber = 10;
     private string customerPostcode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerPostcode {
       get { return customerPostcode_; }
       set {
@@ -310,7 +294,6 @@ namespace V2.Payments.Card {
     public const int PgFieldNumber = 11;
     private string pg_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Pg {
       get { return pg_; }
       set {
@@ -319,13 +302,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CardRegisterRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CardRegisterRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -348,7 +329,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CardUid.Length != 0) hash ^= CardUid.GetHashCode();
@@ -369,13 +349,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -432,7 +410,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CardUid.Length != 0) {
         output.WriteRawTag(10);
@@ -485,7 +462,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CardUid.Length != 0) {
@@ -528,7 +504,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CardRegisterRequest other) {
       if (other == null) {
         return;
@@ -570,7 +545,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -632,7 +606,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -699,23 +672,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<CardRegisterResultData> _parser = new pb::MessageParser<CardRegisterResultData>(() => new CardRegisterResultData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CardRegisterResultData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CardRegisterResultData() {
       OnConstruction();
     }
@@ -723,7 +692,6 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CardRegisterResultData(CardRegisterResultData other) : this() {
       cardUid_ = other.cardUid_;
       cardName_ = other.cardName_;
@@ -743,7 +711,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CardRegisterResultData Clone() {
       return new CardRegisterResultData(this);
     }
@@ -752,7 +719,6 @@ namespace V2.Payments.Card {
     public const int CardUidFieldNumber = 1;
     private string cardUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardUid {
       get { return cardUid_; }
       set {
@@ -767,7 +733,6 @@ namespace V2.Payments.Card {
     /// card alias of the user
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardName {
       get { return cardName_; }
       set {
@@ -779,7 +744,6 @@ namespace V2.Payments.Card {
     public const int CardCodeFieldNumber = 3;
     private string cardCode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardCode {
       get { return cardCode_; }
       set {
@@ -794,7 +758,6 @@ namespace V2.Payments.Card {
     /// Only masked company can provide
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BinNumbrer {
       get { return binNumbrer_; }
       set {
@@ -806,7 +769,6 @@ namespace V2.Payments.Card {
     public const int CardTypeFieldNumber = 5;
     private int cardType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CardType {
       get { return cardType_; }
       set {
@@ -818,7 +780,6 @@ namespace V2.Payments.Card {
     public const int CustomerNameFieldNumber = 6;
     private string customerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerName {
       get { return customerName_; }
       set {
@@ -830,7 +791,6 @@ namespace V2.Payments.Card {
     public const int CustomerTelFieldNumber = 7;
     private string customerTel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerTel {
       get { return customerTel_; }
       set {
@@ -842,7 +802,6 @@ namespace V2.Payments.Card {
     public const int CustomerEmailFieldNumber = 8;
     private string customerEmail_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerEmail {
       get { return customerEmail_; }
       set {
@@ -854,7 +813,6 @@ namespace V2.Payments.Card {
     public const int CustomerAddrFieldNumber = 9;
     private string customerAddr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerAddr {
       get { return customerAddr_; }
       set {
@@ -866,7 +824,6 @@ namespace V2.Payments.Card {
     public const int CustomerPostcodeFieldNumber = 10;
     private string customerPostcode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerPostcode {
       get { return customerPostcode_; }
       set {
@@ -878,7 +835,6 @@ namespace V2.Payments.Card {
     public const int InsertedFieldNumber = 11;
     private int inserted_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Inserted {
       get { return inserted_; }
       set {
@@ -890,7 +846,6 @@ namespace V2.Payments.Card {
     public const int UpdatedFieldNumber = 12;
     private int updated_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Updated {
       get { return updated_; }
       set {
@@ -902,7 +857,6 @@ namespace V2.Payments.Card {
     public const int PgProviderFieldNumber = 13;
     private string pgProvider_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgProvider {
       get { return pgProvider_; }
       set {
@@ -914,7 +868,6 @@ namespace V2.Payments.Card {
     public const int PgIdFieldNumber = 14;
     private string pgId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgId {
       get { return pgId_; }
       set {
@@ -923,13 +876,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CardRegisterResultData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CardRegisterResultData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -955,7 +906,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CardUid.Length != 0) hash ^= CardUid.GetHashCode();
@@ -979,13 +929,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1054,7 +1002,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CardUid.Length != 0) {
         output.WriteRawTag(10);
@@ -1119,7 +1066,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CardUid.Length != 0) {
@@ -1171,7 +1117,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CardRegisterResultData other) {
       if (other == null) {
         return;
@@ -1222,7 +1167,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1296,7 +1240,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1375,23 +1318,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<CardRegisterResponse> _parser = new pb::MessageParser<CardRegisterResponse>(() => new CardRegisterResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CardRegisterResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CardRegisterResponse() {
       OnConstruction();
     }
@@ -1399,7 +1338,6 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CardRegisterResponse(CardRegisterResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -1408,7 +1346,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CardRegisterResponse Clone() {
       return new CardRegisterResponse(this);
     }
@@ -1417,7 +1354,6 @@ namespace V2.Payments.Card {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -1429,7 +1365,6 @@ namespace V2.Payments.Card {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -1441,7 +1376,6 @@ namespace V2.Payments.Card {
     public const int ResponseFieldNumber = 3;
     private global::V2.Payments.Card.CardRegisterResultData response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V2.Payments.Card.CardRegisterResultData Response {
       get { return response_; }
       set {
@@ -1450,13 +1384,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CardRegisterResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CardRegisterResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1471,7 +1403,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -1484,13 +1415,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1515,7 +1444,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -1536,7 +1464,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -1555,7 +1482,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CardRegisterResponse other) {
       if (other == null) {
         return;
@@ -1576,7 +1502,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1609,7 +1534,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1647,23 +1571,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<GetCardInfoRequest> _parser = new pb::MessageParser<GetCardInfoRequest>(() => new GetCardInfoRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetCardInfoRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCardInfoRequest() {
       OnConstruction();
     }
@@ -1671,14 +1591,12 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCardInfoRequest(GetCardInfoRequest other) : this() {
       cardUid_ = other.cardUid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCardInfoRequest Clone() {
       return new GetCardInfoRequest(this);
     }
@@ -1687,7 +1605,6 @@ namespace V2.Payments.Card {
     public const int CardUidFieldNumber = 1;
     private string cardUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardUid {
       get { return cardUid_; }
       set {
@@ -1696,13 +1613,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetCardInfoRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetCardInfoRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1715,7 +1630,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CardUid.Length != 0) hash ^= CardUid.GetHashCode();
@@ -1726,13 +1640,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1749,7 +1661,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CardUid.Length != 0) {
         output.WriteRawTag(10);
@@ -1762,7 +1673,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CardUid.Length != 0) {
@@ -1775,7 +1685,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetCardInfoRequest other) {
       if (other == null) {
         return;
@@ -1787,7 +1696,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1809,7 +1717,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1836,23 +1743,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<GetCardInfoData> _parser = new pb::MessageParser<GetCardInfoData>(() => new GetCardInfoData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetCardInfoData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCardInfoData() {
       OnConstruction();
     }
@@ -1860,7 +1763,6 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCardInfoData(GetCardInfoData other) : this() {
       cardUid_ = other.cardUid_;
       cardProvider_ = other.cardProvider_;
@@ -1878,7 +1780,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCardInfoData Clone() {
       return new GetCardInfoData(this);
     }
@@ -1887,7 +1788,6 @@ namespace V2.Payments.Card {
     public const int CardUidFieldNumber = 1;
     private string cardUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardUid {
       get { return cardUid_; }
       set {
@@ -1899,7 +1799,6 @@ namespace V2.Payments.Card {
     public const int CardProviderFieldNumber = 2;
     private string cardProvider_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardProvider {
       get { return cardProvider_; }
       set {
@@ -1911,7 +1810,6 @@ namespace V2.Payments.Card {
     public const int CardCodeFieldNumber = 3;
     private string cardCode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardCode {
       get { return cardCode_; }
       set {
@@ -1923,7 +1821,6 @@ namespace V2.Payments.Card {
     public const int BinNumberFieldNumber = 4;
     private string binNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BinNumber {
       get { return binNumber_; }
       set {
@@ -1935,7 +1832,6 @@ namespace V2.Payments.Card {
     public const int CardTypeFieldNumber = 5;
     private int cardType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CardType {
       get { return cardType_; }
       set {
@@ -1947,7 +1843,6 @@ namespace V2.Payments.Card {
     public const int CustomerNameFieldNumber = 6;
     private string customerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerName {
       get { return customerName_; }
       set {
@@ -1959,7 +1854,6 @@ namespace V2.Payments.Card {
     public const int CustomerTelFieldNumber = 7;
     private string customerTel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerTel {
       get { return customerTel_; }
       set {
@@ -1971,7 +1865,6 @@ namespace V2.Payments.Card {
     public const int CustomerEmailFieldNumber = 8;
     private string customerEmail_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerEmail {
       get { return customerEmail_; }
       set {
@@ -1983,7 +1876,6 @@ namespace V2.Payments.Card {
     public const int CustomerAddrFieldNumber = 9;
     private string customerAddr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerAddr {
       get { return customerAddr_; }
       set {
@@ -1995,7 +1887,6 @@ namespace V2.Payments.Card {
     public const int CustomerPostcodeFieldNumber = 10;
     private string customerPostcode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerPostcode {
       get { return customerPostcode_; }
       set {
@@ -2007,7 +1898,6 @@ namespace V2.Payments.Card {
     public const int InsertedFieldNumber = 11;
     private int inserted_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Inserted {
       get { return inserted_; }
       set {
@@ -2019,7 +1909,6 @@ namespace V2.Payments.Card {
     public const int UpdatedFieldNumber = 12;
     private int updated_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Updated {
       get { return updated_; }
       set {
@@ -2028,13 +1917,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetCardInfoData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetCardInfoData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2058,7 +1945,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CardUid.Length != 0) hash ^= CardUid.GetHashCode();
@@ -2080,13 +1966,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2147,7 +2031,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CardUid.Length != 0) {
         output.WriteRawTag(10);
@@ -2204,7 +2087,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CardUid.Length != 0) {
@@ -2250,7 +2132,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetCardInfoData other) {
       if (other == null) {
         return;
@@ -2295,7 +2176,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2361,7 +2241,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2432,23 +2311,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<GetCardInfoResponse> _parser = new pb::MessageParser<GetCardInfoResponse>(() => new GetCardInfoResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetCardInfoResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCardInfoResponse() {
       OnConstruction();
     }
@@ -2456,7 +2331,6 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCardInfoResponse(GetCardInfoResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -2465,7 +2339,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCardInfoResponse Clone() {
       return new GetCardInfoResponse(this);
     }
@@ -2474,7 +2347,6 @@ namespace V2.Payments.Card {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -2486,7 +2358,6 @@ namespace V2.Payments.Card {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -2498,7 +2369,6 @@ namespace V2.Payments.Card {
     public const int ResponseFieldNumber = 3;
     private global::V2.Payments.Card.GetCardInfoData response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V2.Payments.Card.GetCardInfoData Response {
       get { return response_; }
       set {
@@ -2507,13 +2377,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetCardInfoResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetCardInfoResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2528,7 +2396,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -2541,13 +2408,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2572,7 +2437,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -2593,7 +2457,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -2612,7 +2475,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetCardInfoResponse other) {
       if (other == null) {
         return;
@@ -2633,7 +2495,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2666,7 +2527,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2704,23 +2564,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<DeleteCardInfoRequest> _parser = new pb::MessageParser<DeleteCardInfoRequest>(() => new DeleteCardInfoRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteCardInfoRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCardInfoRequest() {
       OnConstruction();
     }
@@ -2728,14 +2584,12 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCardInfoRequest(DeleteCardInfoRequest other) : this() {
       cardUid_ = other.cardUid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCardInfoRequest Clone() {
       return new DeleteCardInfoRequest(this);
     }
@@ -2744,7 +2598,6 @@ namespace V2.Payments.Card {
     public const int CardUidFieldNumber = 1;
     private string cardUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardUid {
       get { return cardUid_; }
       set {
@@ -2753,13 +2606,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteCardInfoRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteCardInfoRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2772,7 +2623,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CardUid.Length != 0) hash ^= CardUid.GetHashCode();
@@ -2783,13 +2633,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2806,7 +2654,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CardUid.Length != 0) {
         output.WriteRawTag(10);
@@ -2819,7 +2666,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CardUid.Length != 0) {
@@ -2832,7 +2678,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteCardInfoRequest other) {
       if (other == null) {
         return;
@@ -2844,7 +2689,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2866,7 +2710,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2893,23 +2736,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<DeleteCardInfoResponse> _parser = new pb::MessageParser<DeleteCardInfoResponse>(() => new DeleteCardInfoResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteCardInfoResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCardInfoResponse() {
       OnConstruction();
     }
@@ -2917,7 +2756,6 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCardInfoResponse(DeleteCardInfoResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -2925,7 +2763,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCardInfoResponse Clone() {
       return new DeleteCardInfoResponse(this);
     }
@@ -2934,7 +2771,6 @@ namespace V2.Payments.Card {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -2946,7 +2782,6 @@ namespace V2.Payments.Card {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -2955,13 +2790,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteCardInfoResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteCardInfoResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2975,7 +2808,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -2987,13 +2819,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3014,7 +2844,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -3031,7 +2860,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -3047,7 +2875,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteCardInfoResponse other) {
       if (other == null) {
         return;
@@ -3062,7 +2889,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3088,7 +2914,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3119,23 +2944,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<PayByRegisteredCardRequest> _parser = new pb::MessageParser<PayByRegisteredCardRequest>(() => new PayByRegisteredCardRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PayByRegisteredCardRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PayByRegisteredCardRequest() {
       OnConstruction();
     }
@@ -3143,7 +2964,6 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PayByRegisteredCardRequest(PayByRegisteredCardRequest other) : this() {
       cardUid_ = other.cardUid_;
       merchantUid_ = other.merchantUid_;
@@ -3163,7 +2983,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PayByRegisteredCardRequest Clone() {
       return new PayByRegisteredCardRequest(this);
     }
@@ -3172,7 +2991,6 @@ namespace V2.Payments.Card {
     public const int CardUidFieldNumber = 1;
     private string cardUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardUid {
       get { return cardUid_; }
       set {
@@ -3184,7 +3002,6 @@ namespace V2.Payments.Card {
     public const int MerchantUidFieldNumber = 2;
     private string merchantUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MerchantUid {
       get { return merchantUid_; }
       set {
@@ -3196,7 +3013,6 @@ namespace V2.Payments.Card {
     public const int AmountFieldNumber = 3;
     private string amount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Amount {
       get { return amount_; }
       set {
@@ -3208,7 +3024,6 @@ namespace V2.Payments.Card {
     public const int TaxFreeAmountFieldNumber = 4;
     private string taxFreeAmount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TaxFreeAmount {
       get { return taxFreeAmount_; }
       set {
@@ -3223,7 +3038,6 @@ namespace V2.Payments.Card {
     /// a.k.a.) name
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OrderName {
       get { return orderName_; }
       set {
@@ -3238,7 +3052,6 @@ namespace V2.Payments.Card {
     /// a.k.a.) card_quota
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CardInstallment {
       get { return cardInstallment_; }
       set {
@@ -3250,7 +3063,6 @@ namespace V2.Payments.Card {
     public const int InterestFreeByMerchantFieldNumber = 7;
     private bool interestFreeByMerchant_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool InterestFreeByMerchant {
       get { return interestFreeByMerchant_; }
       set {
@@ -3262,7 +3074,6 @@ namespace V2.Payments.Card {
     public const int CustomDataFieldNumber = 8;
     private string customData_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomData {
       get { return customData_; }
       set {
@@ -3274,7 +3085,6 @@ namespace V2.Payments.Card {
     public const int CallbackUrlFieldNumber = 9;
     private string callbackUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CallbackUrl {
       get { return callbackUrl_; }
       set {
@@ -3286,7 +3096,6 @@ namespace V2.Payments.Card {
     public const int BuyerAddrFieldNumber = 10;
     private string buyerAddr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerAddr {
       get { return buyerAddr_; }
       set {
@@ -3298,7 +3107,6 @@ namespace V2.Payments.Card {
     public const int BuyerEmailFieldNumber = 11;
     private string buyerEmail_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerEmail {
       get { return buyerEmail_; }
       set {
@@ -3310,7 +3118,6 @@ namespace V2.Payments.Card {
     public const int BuyerNameFieldNumber = 12;
     private string buyerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerName {
       get { return buyerName_; }
       set {
@@ -3322,7 +3129,6 @@ namespace V2.Payments.Card {
     public const int BuyerPostcodeFieldNumber = 13;
     private string buyerPostcode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerPostcode {
       get { return buyerPostcode_; }
       set {
@@ -3334,7 +3140,6 @@ namespace V2.Payments.Card {
     public const int BuyerTelFieldNumber = 14;
     private string buyerTel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerTel {
       get { return buyerTel_; }
       set {
@@ -3343,13 +3148,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PayByRegisteredCardRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PayByRegisteredCardRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3375,7 +3178,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CardUid.Length != 0) hash ^= CardUid.GetHashCode();
@@ -3399,13 +3201,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3474,7 +3274,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CardUid.Length != 0) {
         output.WriteRawTag(10);
@@ -3539,7 +3338,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CardUid.Length != 0) {
@@ -3591,7 +3389,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PayByRegisteredCardRequest other) {
       if (other == null) {
         return;
@@ -3642,7 +3439,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3716,7 +3512,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3795,23 +3590,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<PayByRegisteredCardData> _parser = new pb::MessageParser<PayByRegisteredCardData>(() => new PayByRegisteredCardData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PayByRegisteredCardData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PayByRegisteredCardData() {
       OnConstruction();
     }
@@ -3819,7 +3610,6 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PayByRegisteredCardData(PayByRegisteredCardData other) : this() {
       amount_ = other.amount_;
       applyNum_ = other.applyNum_;
@@ -3862,7 +3652,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PayByRegisteredCardData Clone() {
       return new PayByRegisteredCardData(this);
     }
@@ -3871,7 +3660,6 @@ namespace V2.Payments.Card {
     public const int AmountFieldNumber = 1;
     private string amount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Amount {
       get { return amount_; }
       set {
@@ -3883,7 +3671,6 @@ namespace V2.Payments.Card {
     public const int ApplyNumFieldNumber = 2;
     private string applyNum_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ApplyNum {
       get { return applyNum_; }
       set {
@@ -3895,7 +3682,6 @@ namespace V2.Payments.Card {
     public const int BuyerAddrFieldNumber = 3;
     private string buyerAddr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerAddr {
       get { return buyerAddr_; }
       set {
@@ -3907,7 +3693,6 @@ namespace V2.Payments.Card {
     public const int BuyerEmailFieldNumber = 4;
     private string buyerEmail_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerEmail {
       get { return buyerEmail_; }
       set {
@@ -3919,7 +3704,6 @@ namespace V2.Payments.Card {
     public const int BuyerNameFieldNumber = 5;
     private string buyerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerName {
       get { return buyerName_; }
       set {
@@ -3931,7 +3715,6 @@ namespace V2.Payments.Card {
     public const int BuyerPostcodeFieldNumber = 6;
     private string buyerPostcode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerPostcode {
       get { return buyerPostcode_; }
       set {
@@ -3943,7 +3726,6 @@ namespace V2.Payments.Card {
     public const int BuyerTelFieldNumber = 7;
     private string buyerTel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerTel {
       get { return buyerTel_; }
       set {
@@ -3955,7 +3737,6 @@ namespace V2.Payments.Card {
     public const int CancelAmountFieldNumber = 8;
     private string cancelAmount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CancelAmount {
       get { return cancelAmount_; }
       set {
@@ -3969,7 +3750,6 @@ namespace V2.Payments.Card {
         = pb::FieldCodec.ForMessage(74, global::V2.Payments.Card.CancelHistory.Parser);
     private readonly pbc::RepeatedField<global::V2.Payments.Card.CancelHistory> cancelHistory_ = new pbc::RepeatedField<global::V2.Payments.Card.CancelHistory>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::V2.Payments.Card.CancelHistory> CancelHistory {
       get { return cancelHistory_; }
     }
@@ -3978,7 +3758,6 @@ namespace V2.Payments.Card {
     public const int CancelReasonFieldNumber = 10;
     private string cancelReason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CancelReason {
       get { return cancelReason_; }
       set {
@@ -3992,7 +3771,6 @@ namespace V2.Payments.Card {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> cancelReceiptUrls_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> CancelReceiptUrls {
       get { return cancelReceiptUrls_; }
     }
@@ -4001,7 +3779,6 @@ namespace V2.Payments.Card {
     public const int CancelledAtFieldNumber = 12;
     private int cancelledAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CancelledAt {
       get { return cancelledAt_; }
       set {
@@ -4013,7 +3790,6 @@ namespace V2.Payments.Card {
     public const int CardCodeFieldNumber = 13;
     private string cardCode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardCode {
       get { return cardCode_; }
       set {
@@ -4025,7 +3801,6 @@ namespace V2.Payments.Card {
     public const int CardNameFieldNumber = 14;
     private string cardName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardName {
       get { return cardName_; }
       set {
@@ -4037,7 +3812,6 @@ namespace V2.Payments.Card {
     public const int BinNumberFieldNumber = 15;
     private string binNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BinNumber {
       get { return binNumber_; }
       set {
@@ -4049,7 +3823,6 @@ namespace V2.Payments.Card {
     public const int CardInstallmentFieldNumber = 16;
     private int cardInstallment_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CardInstallment {
       get { return cardInstallment_; }
       set {
@@ -4061,7 +3834,6 @@ namespace V2.Payments.Card {
     public const int CardTypeFieldNumber = 17;
     private int cardType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CardType {
       get { return cardType_; }
       set {
@@ -4073,7 +3845,6 @@ namespace V2.Payments.Card {
     public const int CashReceiptIssuedFieldNumber = 18;
     private bool cashReceiptIssued_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CashReceiptIssued {
       get { return cashReceiptIssued_; }
       set {
@@ -4085,7 +3856,6 @@ namespace V2.Payments.Card {
     public const int ChannelFieldNumber = 19;
     private string channel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Channel {
       get { return channel_; }
       set {
@@ -4097,7 +3867,6 @@ namespace V2.Payments.Card {
     public const int CurrencyFieldNumber = 20;
     private string currency_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Currency {
       get { return currency_; }
       set {
@@ -4109,7 +3878,6 @@ namespace V2.Payments.Card {
     public const int CustomDataFieldNumber = 21;
     private string customData_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomData {
       get { return customData_; }
       set {
@@ -4124,7 +3892,6 @@ namespace V2.Payments.Card {
     /// a.k.a.) customer_uid
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardUid {
       get { return cardUid_; }
       set {
@@ -4136,7 +3903,6 @@ namespace V2.Payments.Card {
     public const int CustomerUidUsageFieldNumber = 23;
     private string customerUidUsage_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerUidUsage {
       get { return customerUidUsage_; }
       set {
@@ -4148,7 +3914,6 @@ namespace V2.Payments.Card {
     public const int FailReasonFieldNumber = 24;
     private string failReason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FailReason {
       get { return failReason_; }
       set {
@@ -4160,7 +3925,6 @@ namespace V2.Payments.Card {
     public const int FailedAtFieldNumber = 25;
     private int failedAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int FailedAt {
       get { return failedAt_; }
       set {
@@ -4172,7 +3936,6 @@ namespace V2.Payments.Card {
     public const int ImpUidFieldNumber = 26;
     private string impUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImpUid {
       get { return impUid_; }
       set {
@@ -4184,7 +3947,6 @@ namespace V2.Payments.Card {
     public const int MerchantUidFieldNumber = 27;
     private string merchantUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MerchantUid {
       get { return merchantUid_; }
       set {
@@ -4196,7 +3958,6 @@ namespace V2.Payments.Card {
     public const int OrderNameFieldNumber = 28;
     private string orderName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OrderName {
       get { return orderName_; }
       set {
@@ -4208,7 +3969,6 @@ namespace V2.Payments.Card {
     public const int PaidAtFieldNumber = 29;
     private int paidAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PaidAt {
       get { return paidAt_; }
       set {
@@ -4220,7 +3980,6 @@ namespace V2.Payments.Card {
     public const int PayMethodFieldNumber = 30;
     private string payMethod_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PayMethod {
       get { return payMethod_; }
       set {
@@ -4232,7 +3991,6 @@ namespace V2.Payments.Card {
     public const int PgIdFieldNumber = 31;
     private string pgId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgId {
       get { return pgId_; }
       set {
@@ -4244,7 +4002,6 @@ namespace V2.Payments.Card {
     public const int PgProviderFieldNumber = 32;
     private string pgProvider_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgProvider {
       get { return pgProvider_; }
       set {
@@ -4256,7 +4013,6 @@ namespace V2.Payments.Card {
     public const int PgTidFieldNumber = 33;
     private string pgTid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgTid {
       get { return pgTid_; }
       set {
@@ -4268,7 +4024,6 @@ namespace V2.Payments.Card {
     public const int ReceiptUrlFieldNumber = 34;
     private string receiptUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ReceiptUrl {
       get { return receiptUrl_; }
       set {
@@ -4280,7 +4035,6 @@ namespace V2.Payments.Card {
     public const int StartedAtFieldNumber = 35;
     private int startedAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int StartedAt {
       get { return startedAt_; }
       set {
@@ -4292,7 +4046,6 @@ namespace V2.Payments.Card {
     public const int StatusFieldNumber = 36;
     private string status_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Status {
       get { return status_; }
       set {
@@ -4304,7 +4057,6 @@ namespace V2.Payments.Card {
     public const int UserAgentFieldNumber = 37;
     private string userAgent_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UserAgent {
       get { return userAgent_; }
       set {
@@ -4313,13 +4065,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PayByRegisteredCardData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PayByRegisteredCardData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4368,7 +4118,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Amount.Length != 0) hash ^= Amount.GetHashCode();
@@ -4415,13 +4164,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4576,7 +4323,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Amount.Length != 0) {
         output.WriteRawTag(10);
@@ -4727,7 +4473,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Amount.Length != 0) {
@@ -4844,7 +4589,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PayByRegisteredCardData other) {
       if (other == null) {
         return;
@@ -4960,7 +4704,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5126,7 +4869,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5297,23 +5039,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<PayByRegisteredCardResponse> _parser = new pb::MessageParser<PayByRegisteredCardResponse>(() => new PayByRegisteredCardResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PayByRegisteredCardResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PayByRegisteredCardResponse() {
       OnConstruction();
     }
@@ -5321,7 +5059,6 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PayByRegisteredCardResponse(PayByRegisteredCardResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -5330,7 +5067,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PayByRegisteredCardResponse Clone() {
       return new PayByRegisteredCardResponse(this);
     }
@@ -5339,7 +5075,6 @@ namespace V2.Payments.Card {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -5351,7 +5086,6 @@ namespace V2.Payments.Card {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -5363,7 +5097,6 @@ namespace V2.Payments.Card {
     public const int ResponseFieldNumber = 3;
     private global::V2.Payments.Card.PayByRegisteredCardData response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V2.Payments.Card.PayByRegisteredCardData Response {
       get { return response_; }
       set {
@@ -5372,13 +5105,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PayByRegisteredCardResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PayByRegisteredCardResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5393,7 +5124,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -5406,13 +5136,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5437,7 +5165,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -5458,7 +5185,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -5477,7 +5203,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PayByRegisteredCardResponse other) {
       if (other == null) {
         return;
@@ -5498,7 +5223,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5531,7 +5255,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5569,23 +5292,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<CancelHistory> _parser = new pb::MessageParser<CancelHistory>(() => new CancelHistory());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CancelHistory> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelHistory() {
       OnConstruction();
     }
@@ -5593,7 +5312,6 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelHistory(CancelHistory other) : this() {
       pgTid_ = other.pgTid_;
       amount_ = other.amount_;
@@ -5604,7 +5322,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelHistory Clone() {
       return new CancelHistory(this);
     }
@@ -5613,7 +5330,6 @@ namespace V2.Payments.Card {
     public const int PgTidFieldNumber = 1;
     private string pgTid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgTid {
       get { return pgTid_; }
       set {
@@ -5625,7 +5341,6 @@ namespace V2.Payments.Card {
     public const int AmountFieldNumber = 2;
     private string amount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Amount {
       get { return amount_; }
       set {
@@ -5637,7 +5352,6 @@ namespace V2.Payments.Card {
     public const int CancelledAtFieldNumber = 3;
     private int cancelledAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CancelledAt {
       get { return cancelledAt_; }
       set {
@@ -5649,7 +5363,6 @@ namespace V2.Payments.Card {
     public const int ReasonFieldNumber = 4;
     private string reason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Reason {
       get { return reason_; }
       set {
@@ -5661,7 +5374,6 @@ namespace V2.Payments.Card {
     public const int ReceiptUrlFieldNumber = 5;
     private string receiptUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ReceiptUrl {
       get { return receiptUrl_; }
       set {
@@ -5670,13 +5382,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CancelHistory);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CancelHistory other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5693,7 +5403,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PgTid.Length != 0) hash ^= PgTid.GetHashCode();
@@ -5708,13 +5417,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5747,7 +5454,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PgTid.Length != 0) {
         output.WriteRawTag(10);
@@ -5776,7 +5482,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PgTid.Length != 0) {
@@ -5801,7 +5506,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CancelHistory other) {
       if (other == null) {
         return;
@@ -5825,7 +5529,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5863,7 +5566,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5906,23 +5608,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<CancelCardPaymentRequest> _parser = new pb::MessageParser<CancelCardPaymentRequest>(() => new CancelCardPaymentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CancelCardPaymentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelCardPaymentRequest() {
       OnConstruction();
     }
@@ -5930,7 +5628,6 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelCardPaymentRequest(CancelCardPaymentRequest other) : this() {
       impUid_ = other.impUid_;
       amount_ = other.amount_;
@@ -5941,7 +5638,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelCardPaymentRequest Clone() {
       return new CancelCardPaymentRequest(this);
     }
@@ -5950,7 +5646,6 @@ namespace V2.Payments.Card {
     public const int ImpUidFieldNumber = 1;
     private string impUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImpUid {
       get { return impUid_; }
       set {
@@ -5962,7 +5657,6 @@ namespace V2.Payments.Card {
     public const int AmountFieldNumber = 2;
     private string amount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Amount {
       get { return amount_; }
       set {
@@ -5974,7 +5668,6 @@ namespace V2.Payments.Card {
     public const int MerchantUidFieldNumber = 3;
     private string merchantUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MerchantUid {
       get { return merchantUid_; }
       set {
@@ -5986,7 +5679,6 @@ namespace V2.Payments.Card {
     public const int TaxFreeAmountFieldNumber = 4;
     private string taxFreeAmount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TaxFreeAmount {
       get { return taxFreeAmount_; }
       set {
@@ -5998,7 +5690,6 @@ namespace V2.Payments.Card {
     public const int ReasonFieldNumber = 5;
     private string reason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Reason {
       get { return reason_; }
       set {
@@ -6007,13 +5698,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CancelCardPaymentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CancelCardPaymentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6030,7 +5719,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ImpUid.Length != 0) hash ^= ImpUid.GetHashCode();
@@ -6045,13 +5733,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6084,7 +5770,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ImpUid.Length != 0) {
         output.WriteRawTag(10);
@@ -6113,7 +5798,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ImpUid.Length != 0) {
@@ -6138,7 +5822,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CancelCardPaymentRequest other) {
       if (other == null) {
         return;
@@ -6162,7 +5845,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6200,7 +5882,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6243,23 +5924,19 @@ namespace V2.Payments.Card {
     private static readonly pb::MessageParser<CancelCardPaymenttResponse> _parser = new pb::MessageParser<CancelCardPaymenttResponse>(() => new CancelCardPaymenttResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CancelCardPaymenttResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Payments.Card.CardReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelCardPaymenttResponse() {
       OnConstruction();
     }
@@ -6267,7 +5944,6 @@ namespace V2.Payments.Card {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelCardPaymenttResponse(CancelCardPaymenttResponse other) : this() {
       code_ = other.code_;
       message_ = other.message_;
@@ -6276,7 +5952,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelCardPaymenttResponse Clone() {
       return new CancelCardPaymenttResponse(this);
     }
@@ -6285,7 +5960,6 @@ namespace V2.Payments.Card {
     public const int CodeFieldNumber = 1;
     private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Code {
       get { return code_; }
       set {
@@ -6297,7 +5971,6 @@ namespace V2.Payments.Card {
     public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -6309,7 +5982,6 @@ namespace V2.Payments.Card {
     public const int ResponseFieldNumber = 3;
     private global::V2.Payments.Card.PayByRegisteredCardData response_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V2.Payments.Card.PayByRegisteredCardData Response {
       get { return response_; }
       set {
@@ -6318,13 +5990,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CancelCardPaymenttResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CancelCardPaymenttResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6339,7 +6009,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != 0) hash ^= Code.GetHashCode();
@@ -6352,13 +6021,11 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6383,7 +6050,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != 0) {
         output.WriteRawTag(8);
@@ -6404,7 +6070,6 @@ namespace V2.Payments.Card {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != 0) {
@@ -6423,7 +6088,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CancelCardPaymenttResponse other) {
       if (other == null) {
         return;
@@ -6444,7 +6108,6 @@ namespace V2.Payments.Card {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6477,7 +6140,6 @@ namespace V2.Payments.Card {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

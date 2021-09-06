@@ -14,41 +14,44 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-
-PROTOBUF_PRAGMA_INIT_SEG
+extern PROTOBUF_INTERNAL_EXPORT_v2_2fbasis_2fbasis_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_UnitTx_v2_2fbasis_2fbasis_2eproto;
 namespace txs_v2 {
-constexpr GetTxsRecordsRequest::GetTxsRecordsRequest(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : imp_uid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , merchant_uid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , paid_by_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , status_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , sorting_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , page_(0){}
-struct GetTxsRecordsRequestDefaultTypeInternal {
-  constexpr GetTxsRecordsRequestDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GetTxsRecordsRequestDefaultTypeInternal() {}
-  union {
-    GetTxsRecordsRequest _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetTxsRecordsRequestDefaultTypeInternal _GetTxsRecordsRequest_default_instance_;
-constexpr GetTxsRecordsReponse::GetTxsRecordsReponse(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : response_()
-  , message_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , code_(0){}
-struct GetTxsRecordsReponseDefaultTypeInternal {
-  constexpr GetTxsRecordsReponseDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GetTxsRecordsReponseDefaultTypeInternal() {}
-  union {
-    GetTxsRecordsReponse _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetTxsRecordsReponseDefaultTypeInternal _GetTxsRecordsReponse_default_instance_;
+class GetTxsRecordsRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetTxsRecordsRequest> _instance;
+} _GetTxsRecordsRequest_default_instance_;
+class GetTxsRecordsReponseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetTxsRecordsReponse> _instance;
+} _GetTxsRecordsReponse_default_instance_;
 }  // namespace txs_v2
+static void InitDefaultsscc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::txs_v2::_GetTxsRecordsReponse_default_instance_;
+    new (ptr) ::txs_v2::GetTxsRecordsReponse();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto}, {
+      &scc_info_UnitTx_v2_2fbasis_2fbasis_2eproto.base,}};
+
+static void InitDefaultsscc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::txs_v2::_GetTxsRecordsRequest_default_instance_;
+    new (ptr) ::txs_v2::GetTxsRecordsRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto}, {}};
+
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_v2_2ftxs_2ftxs_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_v2_2ftxs_2ftxs_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_v2_2ftxs_2ftxs_2eproto = nullptr;
@@ -103,19 +106,20 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
   &::descriptor_table_v2_2fbasis_2fbasis_2eproto,
 };
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v2_2ftxs_2ftxs_2eproto_sccs[2] = {
+  &scc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto.base,
+  &scc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto.base,
+};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2ftxs_2ftxs_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2ftxs_2ftxs_2eproto = {
-  false, false, 490, descriptor_table_protodef_v2_2ftxs_2ftxs_2eproto, "v2/txs/txs.proto", 
-  &descriptor_table_v2_2ftxs_2ftxs_2eproto_once, descriptor_table_v2_2ftxs_2ftxs_2eproto_deps, 2, 2,
+  false, false, descriptor_table_protodef_v2_2ftxs_2ftxs_2eproto, "v2/txs/txs.proto", 490,
+  &descriptor_table_v2_2ftxs_2ftxs_2eproto_once, descriptor_table_v2_2ftxs_2ftxs_2eproto_sccs, descriptor_table_v2_2ftxs_2ftxs_2eproto_deps, 2, 2,
   schemas, file_default_instances, TableStruct_v2_2ftxs_2ftxs_2eproto::offsets,
-  file_level_metadata_v2_2ftxs_2ftxs_2eproto, file_level_enum_descriptors_v2_2ftxs_2ftxs_2eproto, file_level_service_descriptors_v2_2ftxs_2ftxs_2eproto,
+  file_level_metadata_v2_2ftxs_2ftxs_2eproto, 2, file_level_enum_descriptors_v2_2ftxs_2ftxs_2eproto, file_level_service_descriptors_v2_2ftxs_2ftxs_2eproto,
 };
-PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_v2_2ftxs_2ftxs_2eproto_getter() {
-  return &descriptor_table_v2_2ftxs_2ftxs_2eproto;
-}
 
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_v2_2ftxs_2ftxs_2eproto(&descriptor_table_v2_2ftxs_2ftxs_2eproto);
+static bool dynamic_init_dummy_v2_2ftxs_2ftxs_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_v2_2ftxs_2ftxs_2eproto)), true);
 namespace txs_v2 {
 
 // ===================================================================
@@ -124,13 +128,10 @@ class GetTxsRecordsRequest::_Internal {
  public:
 };
 
-GetTxsRecordsRequest::GetTxsRecordsRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+GetTxsRecordsRequest::GetTxsRecordsRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:txs_v2.GetTxsRecordsRequest)
 }
 GetTxsRecordsRequest::GetTxsRecordsRequest(const GetTxsRecordsRequest& from)
@@ -139,50 +140,50 @@ GetTxsRecordsRequest::GetTxsRecordsRequest(const GetTxsRecordsRequest& from)
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
     imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
     merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   paid_by_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_paid_by().empty()) {
     paid_by_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_paid_by(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_status().empty()) {
     status_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_status(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   sorting_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_sorting().empty()) {
     sorting_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sorting(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   page_ = from.page_;
   // @@protoc_insertion_point(copy_constructor:txs_v2.GetTxsRecordsRequest)
 }
 
-inline void GetTxsRecordsRequest::SharedCtor() {
-imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-paid_by_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-sorting_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-page_ = 0;
+void GetTxsRecordsRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto.base);
+  imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  paid_by_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  sorting_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  page_ = 0;
 }
 
 GetTxsRecordsRequest::~GetTxsRecordsRequest() {
   // @@protoc_insertion_point(destructor:txs_v2.GetTxsRecordsRequest)
-  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void GetTxsRecordsRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void GetTxsRecordsRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   imp_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   merchant_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   paid_by_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -199,6 +200,11 @@ void GetTxsRecordsRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void GetTxsRecordsRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GetTxsRecordsRequest& GetTxsRecordsRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetTxsRecordsRequest_v2_2ftxs_2ftxs_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GetTxsRecordsRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:txs_v2.GetTxsRecordsRequest)
@@ -220,6 +226,7 @@ const char* GetTxsRecordsRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // string imp_uid = 1;
       case 1:
@@ -275,8 +282,7 @@ const char* GetTxsRecordsRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         continue;
       default: {
       handle_unusual:
-        if ((tag == 0) || ((tag & 7) == 4)) {
-          CHK_(ptr);
+        if ((tag & 7) == 4 || tag == 0) {
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -303,7 +309,7 @@ failure:
   (void) cached_has_bits;
 
   // string imp_uid = 1;
-  if (!this->_internal_imp_uid().empty()) {
+  if (this->imp_uid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_imp_uid().data(), static_cast<int>(this->_internal_imp_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -313,7 +319,7 @@ failure:
   }
 
   // string merchant_uid = 2;
-  if (!this->_internal_merchant_uid().empty()) {
+  if (this->merchant_uid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_merchant_uid().data(), static_cast<int>(this->_internal_merchant_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -323,7 +329,7 @@ failure:
   }
 
   // string paid_by = 3;
-  if (!this->_internal_paid_by().empty()) {
+  if (this->paid_by().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_paid_by().data(), static_cast<int>(this->_internal_paid_by().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -333,7 +339,7 @@ failure:
   }
 
   // string status = 4;
-  if (!this->_internal_status().empty()) {
+  if (this->status().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_status().data(), static_cast<int>(this->_internal_status().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -343,13 +349,13 @@ failure:
   }
 
   // int32 page = 5;
-  if (this->_internal_page() != 0) {
+  if (this->page() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_page(), target);
   }
 
   // string sorting = 6;
-  if (!this->_internal_sorting().empty()) {
+  if (this->sorting().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_sorting().data(), static_cast<int>(this->_internal_sorting().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -375,42 +381,42 @@ size_t GetTxsRecordsRequest::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string imp_uid = 1;
-  if (!this->_internal_imp_uid().empty()) {
+  if (this->imp_uid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_imp_uid());
   }
 
   // string merchant_uid = 2;
-  if (!this->_internal_merchant_uid().empty()) {
+  if (this->merchant_uid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_merchant_uid());
   }
 
   // string paid_by = 3;
-  if (!this->_internal_paid_by().empty()) {
+  if (this->paid_by().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_paid_by());
   }
 
   // string status = 4;
-  if (!this->_internal_status().empty()) {
+  if (this->status().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_status());
   }
 
   // string sorting = 6;
-  if (!this->_internal_sorting().empty()) {
+  if (this->sorting().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_sorting());
   }
 
   // int32 page = 5;
-  if (this->_internal_page() != 0) {
+  if (this->page() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_page());
@@ -425,44 +431,53 @@ size_t GetTxsRecordsRequest::ByteSizeLong() const {
   return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetTxsRecordsRequest::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    GetTxsRecordsRequest::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetTxsRecordsRequest::GetClassData() const { return &_class_data_; }
-
-void GetTxsRecordsRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
-  static_cast<GetTxsRecordsRequest *>(to)->MergeFrom(
-      static_cast<const GetTxsRecordsRequest &>(from));
+void GetTxsRecordsRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:txs_v2.GetTxsRecordsRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const GetTxsRecordsRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetTxsRecordsRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:txs_v2.GetTxsRecordsRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:txs_v2.GetTxsRecordsRequest)
+    MergeFrom(*source);
+  }
 }
-
 
 void GetTxsRecordsRequest::MergeFrom(const GetTxsRecordsRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:txs_v2.GetTxsRecordsRequest)
   GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_imp_uid().empty()) {
+  if (from.imp_uid().size() > 0) {
     _internal_set_imp_uid(from._internal_imp_uid());
   }
-  if (!from._internal_merchant_uid().empty()) {
+  if (from.merchant_uid().size() > 0) {
     _internal_set_merchant_uid(from._internal_merchant_uid());
   }
-  if (!from._internal_paid_by().empty()) {
+  if (from.paid_by().size() > 0) {
     _internal_set_paid_by(from._internal_paid_by());
   }
-  if (!from._internal_status().empty()) {
+  if (from.status().size() > 0) {
     _internal_set_status(from._internal_status());
   }
-  if (!from._internal_sorting().empty()) {
+  if (from.sorting().size() > 0) {
     _internal_set_sorting(from._internal_sorting());
   }
-  if (from._internal_page() != 0) {
+  if (from.page() != 0) {
     _internal_set_page(from._internal_page());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetTxsRecordsRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:txs_v2.GetTxsRecordsRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void GetTxsRecordsRequest::CopyFrom(const GetTxsRecordsRequest& from) {
@@ -478,40 +493,19 @@ bool GetTxsRecordsRequest::IsInitialized() const {
 
 void GetTxsRecordsRequest::InternalSwap(GetTxsRecordsRequest* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &imp_uid_, GetArenaForAllocation(),
-      &other->imp_uid_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &merchant_uid_, GetArenaForAllocation(),
-      &other->merchant_uid_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &paid_by_, GetArenaForAllocation(),
-      &other->paid_by_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &status_, GetArenaForAllocation(),
-      &other->status_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &sorting_, GetArenaForAllocation(),
-      &other->sorting_, other->GetArenaForAllocation()
-  );
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  imp_uid_.Swap(&other->imp_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  merchant_uid_.Swap(&other->merchant_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  paid_by_.Swap(&other->paid_by_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  status_.Swap(&other->status_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  sorting_.Swap(&other->sorting_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(page_, other->page_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetTxsRecordsRequest::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
-      &descriptor_table_v2_2ftxs_2ftxs_2eproto_getter, &descriptor_table_v2_2ftxs_2ftxs_2eproto_once,
-      file_level_metadata_v2_2ftxs_2ftxs_2eproto[0]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
@@ -522,14 +516,11 @@ class GetTxsRecordsReponse::_Internal {
 void GetTxsRecordsReponse::clear_response() {
   response_.Clear();
 }
-GetTxsRecordsReponse::GetTxsRecordsReponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
+GetTxsRecordsReponse::GetTxsRecordsReponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
   response_(arena) {
   SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:txs_v2.GetTxsRecordsReponse)
 }
 GetTxsRecordsReponse::GetTxsRecordsReponse(const GetTxsRecordsReponse& from)
@@ -539,26 +530,26 @@ GetTxsRecordsReponse::GetTxsRecordsReponse(const GetTxsRecordsReponse& from)
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
     message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   code_ = from.code_;
   // @@protoc_insertion_point(copy_constructor:txs_v2.GetTxsRecordsReponse)
 }
 
-inline void GetTxsRecordsReponse::SharedCtor() {
-message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-code_ = 0;
+void GetTxsRecordsReponse::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto.base);
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  code_ = 0;
 }
 
 GetTxsRecordsReponse::~GetTxsRecordsReponse() {
   // @@protoc_insertion_point(destructor:txs_v2.GetTxsRecordsReponse)
-  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void GetTxsRecordsReponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void GetTxsRecordsReponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -571,6 +562,11 @@ void GetTxsRecordsReponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void GetTxsRecordsReponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GetTxsRecordsReponse& GetTxsRecordsReponse::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetTxsRecordsReponse_v2_2ftxs_2ftxs_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GetTxsRecordsReponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:txs_v2.GetTxsRecordsReponse)
@@ -589,6 +585,7 @@ const char* GetTxsRecordsReponse::_InternalParse(const char* ptr, ::PROTOBUF_NAM
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // int32 code = 1;
       case 1:
@@ -620,8 +617,7 @@ const char* GetTxsRecordsReponse::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         continue;
       default: {
       handle_unusual:
-        if ((tag == 0) || ((tag & 7) == 4)) {
-          CHK_(ptr);
+        if ((tag & 7) == 4 || tag == 0) {
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -648,13 +644,13 @@ failure:
   (void) cached_has_bits;
 
   // int32 code = 1;
-  if (this->_internal_code() != 0) {
+  if (this->code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
   }
 
   // string message = 2;
-  if (!this->_internal_message().empty()) {
+  if (this->message().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -695,14 +691,14 @@ size_t GetTxsRecordsReponse::ByteSizeLong() const {
   }
 
   // string message = 2;
-  if (!this->_internal_message().empty()) {
+  if (this->message().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_message());
   }
 
   // int32 code = 1;
-  if (this->_internal_code() != 0) {
+  if (this->code() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_code());
@@ -717,33 +713,42 @@ size_t GetTxsRecordsReponse::ByteSizeLong() const {
   return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetTxsRecordsReponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    GetTxsRecordsReponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetTxsRecordsReponse::GetClassData() const { return &_class_data_; }
-
-void GetTxsRecordsReponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
-  static_cast<GetTxsRecordsReponse *>(to)->MergeFrom(
-      static_cast<const GetTxsRecordsReponse &>(from));
+void GetTxsRecordsReponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:txs_v2.GetTxsRecordsReponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const GetTxsRecordsReponse* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetTxsRecordsReponse>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:txs_v2.GetTxsRecordsReponse)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:txs_v2.GetTxsRecordsReponse)
+    MergeFrom(*source);
+  }
 }
-
 
 void GetTxsRecordsReponse::MergeFrom(const GetTxsRecordsReponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:txs_v2.GetTxsRecordsReponse)
   GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   response_.MergeFrom(from.response_);
-  if (!from._internal_message().empty()) {
+  if (from.message().size() > 0) {
     _internal_set_message(from._internal_message());
   }
-  if (from._internal_code() != 0) {
+  if (from.code() != 0) {
     _internal_set_code(from._internal_code());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetTxsRecordsReponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:txs_v2.GetTxsRecordsReponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void GetTxsRecordsReponse::CopyFrom(const GetTxsRecordsReponse& from) {
@@ -759,21 +764,16 @@ bool GetTxsRecordsReponse::IsInitialized() const {
 
 void GetTxsRecordsReponse::InternalSwap(GetTxsRecordsReponse* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   response_.InternalSwap(&other->response_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &message_, GetArenaForAllocation(),
-      &other->message_, other->GetArenaForAllocation()
-  );
+  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(code_, other->code_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetTxsRecordsReponse::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
-      &descriptor_table_v2_2ftxs_2ftxs_2eproto_getter, &descriptor_table_v2_2ftxs_2ftxs_2eproto_once,
-      file_level_metadata_v2_2ftxs_2ftxs_2eproto[1]);
+  return GetMetadataStatic();
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace txs_v2

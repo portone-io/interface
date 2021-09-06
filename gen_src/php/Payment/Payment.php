@@ -1281,11 +1281,11 @@ class Payment extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.Promotion promotion = 47;</code>
-     * @return \Payment\Promotion|null
+     * @return \Payment\Promotion
      */
     public function getPromotion()
     {
-        return $this->promotion;
+        return isset($this->promotion) ? $this->promotion : null;
     }
 
     public function hasPromotion()

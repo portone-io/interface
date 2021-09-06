@@ -14,12 +14,12 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-
-PROTOBUF_PRAGMA_INIT_SEG
+extern PROTOBUF_INTERNAL_EXPORT_google_2fapi_2fhttp_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_HttpRule_google_2fapi_2fhttp_2eproto;
 namespace google {
 namespace api {
 }  // namespace api
 }  // namespace google
+static constexpr ::PROTOBUF_NAMESPACE_ID::Metadata* file_level_metadata_google_2fapi_2fannotations_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_google_2fapi_2fannotations_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_google_2fapi_2fannotations_2eproto = nullptr;
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_google_2fapi_2fannotations_2eproto::offsets[1] = {};
@@ -40,22 +40,21 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_google_2fapi_2fhttp_2eproto,
   &::descriptor_table_google_2fprotobuf_2fdescriptor_2eproto,
 };
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_google_2fapi_2fannotations_2eproto_sccs[1] = {
+};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_google_2fapi_2fannotations_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_google_2fapi_2fannotations_2eproto = {
-  false, false, 316, descriptor_table_protodef_google_2fapi_2fannotations_2eproto, "google/api/annotations.proto", 
-  &descriptor_table_google_2fapi_2fannotations_2eproto_once, descriptor_table_google_2fapi_2fannotations_2eproto_deps, 2, 0,
+  false, false, descriptor_table_protodef_google_2fapi_2fannotations_2eproto, "google/api/annotations.proto", 316,
+  &descriptor_table_google_2fapi_2fannotations_2eproto_once, descriptor_table_google_2fapi_2fannotations_2eproto_sccs, descriptor_table_google_2fapi_2fannotations_2eproto_deps, 0, 2,
   schemas, file_default_instances, TableStruct_google_2fapi_2fannotations_2eproto::offsets,
-  nullptr, file_level_enum_descriptors_google_2fapi_2fannotations_2eproto, file_level_service_descriptors_google_2fapi_2fannotations_2eproto,
+  file_level_metadata_google_2fapi_2fannotations_2eproto, 0, file_level_enum_descriptors_google_2fapi_2fannotations_2eproto, file_level_service_descriptors_google_2fapi_2fannotations_2eproto,
 };
-PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_google_2fapi_2fannotations_2eproto_getter() {
-  return &descriptor_table_google_2fapi_2fannotations_2eproto;
-}
 
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_google_2fapi_2fannotations_2eproto(&descriptor_table_google_2fapi_2fannotations_2eproto);
+static bool dynamic_init_dummy_google_2fapi_2fannotations_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_google_2fapi_2fannotations_2eproto)), true);
 namespace google {
 namespace api {
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::MethodOptions,
+::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::MethodOptions,
     ::PROTOBUF_NAMESPACE_ID::internal::MessageTypeTraits< ::google::api::HttpRule >, 11, false >
   http(kHttpFieldNumber, ::google::api::HttpRule::default_instance());
 

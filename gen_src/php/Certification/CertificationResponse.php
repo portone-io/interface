@@ -88,11 +88,11 @@ class CertificationResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.certification.Certification response = 3;</code>
-     * @return \Certification\Certification|null
+     * @return \Certification\Certification
      */
     public function getResponse()
     {
-        return $this->response;
+        return isset($this->response) ? $this->response : null;
     }
 
     public function hasResponse()

@@ -1,0 +1,70 @@
+syntax = "proto3";
+package link_v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/iamport/interface/gen_src/go/v1/link";
+option csharp_namespace = "V1.Supplements.Link";
+
+service Link {
+    rpc GenerateShortenedURLV2RPC(GenerateShortenedURLRequest) returns (GenerateShortenedURLResponse) {
+        option (google.api.http) = {
+            post: "/api/supplements/v1/link/shorten"
+            body: "*"
+        };
+    }
+
+    rpc StoreContentsV2RPC(StoreContentsRequest) returns (StoreContentsResponse) {
+        option (google.api.http) = {
+            post: "/api/supplements/v1/contents"
+            body: "*"
+        };
+    }
+
+    rpc GetContentsV2RPC(GetContentsRequest) returns (GetContentsResponse) {
+        option (google.api.http) = {
+            get: "/api/supplements/v1/contents/{guid}"
+        };
+    }
+
+    rpc GeneratePaymentURLV2RPC(GeneratePaymentURLRequest) returns (GeneratePaymentURLResponse) {
+        option (google.api.http) = {
+            post: "/api/supplements/v1/link/payment"
+            body: "*"
+        };
+    }
+}
+
+message GenerateShortenedURLRequest {
+    string url = 1;
+    int64 expired_at = 2;
+}
+
+message GenerateShortenedURLResponse {
+    string shortened_url = 1;
+}
+
+message StoreContentsRequest {
+    string contents = 1;
+}
+
+message StoreContentsResponse {
+    string guid = 1;
+}
+
+message GetContentsRequest {
+    string guid = 1;
+}
+
+message GetContentsResponse {
+    string contents = 1;
+}
+
+message GeneratePaymentURLRequest {
+    string payment_info = 1;
+    int64 expired_at = 2;
+}
+
+message GeneratePaymentURLResponse {
+    string shortened_url = 1;
+}

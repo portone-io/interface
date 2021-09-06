@@ -88,11 +88,11 @@ class PaymentBalanceResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.PaymentBalance response = 3;</code>
-     * @return \Payment\PaymentBalance|null
+     * @return \Payment\PaymentBalance
      */
     public function getResponse()
     {
-        return $this->response;
+        return isset($this->response) ? $this->response : null;
     }
 
     public function hasResponse()

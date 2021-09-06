@@ -88,11 +88,11 @@ class GetPaidByBillingKeyListResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.subscribe_customers.NestedGetPaidByBillingKeyListData response = 3;</code>
-     * @return \Subscribe_customers\NestedGetPaidByBillingKeyListData|null
+     * @return \Subscribe_customers\NestedGetPaidByBillingKeyListData
      */
     public function getResponse()
     {
-        return $this->response;
+        return isset($this->response) ? $this->response : null;
     }
 
     public function hasResponse()

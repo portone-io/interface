@@ -14,63 +14,61 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-
-PROTOBUF_PRAGMA_INIT_SEG
+extern PROTOBUF_INTERNAL_EXPORT_v1_2fcertification_2fcertification_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Certification_v1_2fcertification_2fcertification_2eproto;
 namespace certification {
-constexpr CertificationRequest::CertificationRequest(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : imp_uid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
-struct CertificationRequestDefaultTypeInternal {
-  constexpr CertificationRequestDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~CertificationRequestDefaultTypeInternal() {}
-  union {
-    CertificationRequest _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CertificationRequestDefaultTypeInternal _CertificationRequest_default_instance_;
-constexpr CertificationResponse::CertificationResponse(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : message_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , response_(nullptr)
-  , code_(0){}
-struct CertificationResponseDefaultTypeInternal {
-  constexpr CertificationResponseDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~CertificationResponseDefaultTypeInternal() {}
-  union {
-    CertificationResponse _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CertificationResponseDefaultTypeInternal _CertificationResponse_default_instance_;
-constexpr Certification::Certification(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : imp_uid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , merchant_uid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , pg_tid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , pg_provider_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , gender_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , birthday_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , phone_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , carrier_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , unique_key_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , unique_in_site_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , origin_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , birth_(0)
-  , foreigner_(false)
-  , certified_(false)
-  , certified_at_(0){}
-struct CertificationDefaultTypeInternal {
-  constexpr CertificationDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~CertificationDefaultTypeInternal() {}
-  union {
-    Certification _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CertificationDefaultTypeInternal _Certification_default_instance_;
+class CertificationRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CertificationRequest> _instance;
+} _CertificationRequest_default_instance_;
+class CertificationResponseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CertificationResponse> _instance;
+} _CertificationResponse_default_instance_;
+class CertificationDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Certification> _instance;
+} _Certification_default_instance_;
 }  // namespace certification
+static void InitDefaultsscc_info_Certification_v1_2fcertification_2fcertification_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::certification::_Certification_default_instance_;
+    new (ptr) ::certification::Certification();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Certification_v1_2fcertification_2fcertification_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Certification_v1_2fcertification_2fcertification_2eproto}, {}};
+
+static void InitDefaultsscc_info_CertificationRequest_v1_2fcertification_2fcertification_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::certification::_CertificationRequest_default_instance_;
+    new (ptr) ::certification::CertificationRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CertificationRequest_v1_2fcertification_2fcertification_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CertificationRequest_v1_2fcertification_2fcertification_2eproto}, {}};
+
+static void InitDefaultsscc_info_CertificationResponse_v1_2fcertification_2fcertification_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::certification::_CertificationResponse_default_instance_;
+    new (ptr) ::certification::CertificationResponse();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CertificationResponse_v1_2fcertification_2fcertification_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CertificationResponse_v1_2fcertification_2fcertification_2eproto}, {
+      &scc_info_Certification_v1_2fcertification_2fcertification_2eproto.base,}};
+
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_v1_2fcertification_2fcertification_2eproto[3];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_v1_2fcertification_2fcertification_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_v1_2fcertification_2fcertification_2eproto = nullptr;
@@ -153,19 +151,21 @@ const char descriptor_table_protodef_v1_2fcertification_2fcertification_2eproto[
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v1_2fcertification_2fcertification_2eproto_deps[1] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
 };
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_2fcertification_2fcertification_2eproto_sccs[3] = {
+  &scc_info_Certification_v1_2fcertification_2fcertification_2eproto.base,
+  &scc_info_CertificationRequest_v1_2fcertification_2fcertification_2eproto.base,
+  &scc_info_CertificationResponse_v1_2fcertification_2fcertification_2eproto.base,
+};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v1_2fcertification_2fcertification_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v1_2fcertification_2fcertification_2eproto = {
-  false, false, 952, descriptor_table_protodef_v1_2fcertification_2fcertification_2eproto, "v1/certification/certification.proto", 
-  &descriptor_table_v1_2fcertification_2fcertification_2eproto_once, descriptor_table_v1_2fcertification_2fcertification_2eproto_deps, 1, 3,
+  false, false, descriptor_table_protodef_v1_2fcertification_2fcertification_2eproto, "v1/certification/certification.proto", 952,
+  &descriptor_table_v1_2fcertification_2fcertification_2eproto_once, descriptor_table_v1_2fcertification_2fcertification_2eproto_sccs, descriptor_table_v1_2fcertification_2fcertification_2eproto_deps, 3, 1,
   schemas, file_default_instances, TableStruct_v1_2fcertification_2fcertification_2eproto::offsets,
-  file_level_metadata_v1_2fcertification_2fcertification_2eproto, file_level_enum_descriptors_v1_2fcertification_2fcertification_2eproto, file_level_service_descriptors_v1_2fcertification_2fcertification_2eproto,
+  file_level_metadata_v1_2fcertification_2fcertification_2eproto, 3, file_level_enum_descriptors_v1_2fcertification_2fcertification_2eproto, file_level_service_descriptors_v1_2fcertification_2fcertification_2eproto,
 };
-PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_v1_2fcertification_2fcertification_2eproto_getter() {
-  return &descriptor_table_v1_2fcertification_2fcertification_2eproto;
-}
 
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_v1_2fcertification_2fcertification_2eproto(&descriptor_table_v1_2fcertification_2fcertification_2eproto);
+static bool dynamic_init_dummy_v1_2fcertification_2fcertification_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_v1_2fcertification_2fcertification_2eproto)), true);
 namespace certification {
 
 // ===================================================================
@@ -174,13 +174,10 @@ class CertificationRequest::_Internal {
  public:
 };
 
-CertificationRequest::CertificationRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+CertificationRequest::CertificationRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:certification.CertificationRequest)
 }
 CertificationRequest::CertificationRequest(const CertificationRequest& from)
@@ -189,24 +186,24 @@ CertificationRequest::CertificationRequest(const CertificationRequest& from)
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
     imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:certification.CertificationRequest)
 }
 
-inline void CertificationRequest::SharedCtor() {
-imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+void CertificationRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CertificationRequest_v1_2fcertification_2fcertification_2eproto.base);
+  imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 CertificationRequest::~CertificationRequest() {
   // @@protoc_insertion_point(destructor:certification.CertificationRequest)
-  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void CertificationRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void CertificationRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   imp_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -219,6 +216,11 @@ void CertificationRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void CertificationRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const CertificationRequest& CertificationRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CertificationRequest_v1_2fcertification_2fcertification_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void CertificationRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:certification.CertificationRequest)
@@ -235,6 +237,7 @@ const char* CertificationRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // string imp_uid = 1;
       case 1:
@@ -247,8 +250,7 @@ const char* CertificationRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         continue;
       default: {
       handle_unusual:
-        if ((tag == 0) || ((tag & 7) == 4)) {
-          CHK_(ptr);
+        if ((tag & 7) == 4 || tag == 0) {
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -275,7 +277,7 @@ failure:
   (void) cached_has_bits;
 
   // string imp_uid = 1;
-  if (!this->_internal_imp_uid().empty()) {
+  if (this->imp_uid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_imp_uid().data(), static_cast<int>(this->_internal_imp_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -301,7 +303,7 @@ size_t CertificationRequest::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string imp_uid = 1;
-  if (!this->_internal_imp_uid().empty()) {
+  if (this->imp_uid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_imp_uid());
@@ -316,29 +318,38 @@ size_t CertificationRequest::ByteSizeLong() const {
   return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CertificationRequest::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    CertificationRequest::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CertificationRequest::GetClassData() const { return &_class_data_; }
-
-void CertificationRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
-  static_cast<CertificationRequest *>(to)->MergeFrom(
-      static_cast<const CertificationRequest &>(from));
+void CertificationRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:certification.CertificationRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CertificationRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CertificationRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:certification.CertificationRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:certification.CertificationRequest)
+    MergeFrom(*source);
+  }
 }
-
 
 void CertificationRequest::MergeFrom(const CertificationRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:certification.CertificationRequest)
   GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_imp_uid().empty()) {
+  if (from.imp_uid().size() > 0) {
     _internal_set_imp_uid(from._internal_imp_uid());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CertificationRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:certification.CertificationRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void CertificationRequest::CopyFrom(const CertificationRequest& from) {
@@ -354,19 +365,14 @@ bool CertificationRequest::IsInitialized() const {
 
 void CertificationRequest::InternalSwap(CertificationRequest* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &imp_uid_, GetArenaForAllocation(),
-      &other->imp_uid_, other->GetArenaForAllocation()
-  );
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  imp_uid_.Swap(&other->imp_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CertificationRequest::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
-      &descriptor_table_v1_2fcertification_2fcertification_2eproto_getter, &descriptor_table_v1_2fcertification_2fcertification_2eproto_once,
-      file_level_metadata_v1_2fcertification_2fcertification_2eproto[0]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
@@ -379,13 +385,10 @@ const ::certification::Certification&
 CertificationResponse::_Internal::response(const CertificationResponse* msg) {
   return *msg->response_;
 }
-CertificationResponse::CertificationResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+CertificationResponse::CertificationResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:certification.CertificationResponse)
 }
 CertificationResponse::CertificationResponse(const CertificationResponse& from)
@@ -394,7 +397,7 @@ CertificationResponse::CertificationResponse(const CertificationResponse& from)
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
     message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   if (from._internal_has_response()) {
     response_ = new ::certification::Certification(*from.response_);
@@ -405,23 +408,23 @@ CertificationResponse::CertificationResponse(const CertificationResponse& from)
   // @@protoc_insertion_point(copy_constructor:certification.CertificationResponse)
 }
 
-inline void CertificationResponse::SharedCtor() {
-message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
-    reinterpret_cast<char*>(&response_)) + sizeof(code_));
+void CertificationResponse::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CertificationResponse_v1_2fcertification_2fcertification_2eproto.base);
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
+      reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
 CertificationResponse::~CertificationResponse() {
   // @@protoc_insertion_point(destructor:certification.CertificationResponse)
-  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void CertificationResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void CertificationResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete response_;
 }
@@ -435,6 +438,11 @@ void CertificationResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void CertificationResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const CertificationResponse& CertificationResponse::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CertificationResponse_v1_2fcertification_2fcertification_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void CertificationResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:certification.CertificationResponse)
@@ -443,7 +451,7 @@ void CertificationResponse::Clear() {
   (void) cached_has_bits;
 
   message_.ClearToEmpty();
-  if (GetArenaForAllocation() == nullptr && response_ != nullptr) {
+  if (GetArena() == nullptr && response_ != nullptr) {
     delete response_;
   }
   response_ = nullptr;
@@ -456,6 +464,7 @@ const char* CertificationResponse::_InternalParse(const char* ptr, ::PROTOBUF_NA
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // int32 code = 1;
       case 1:
@@ -482,8 +491,7 @@ const char* CertificationResponse::_InternalParse(const char* ptr, ::PROTOBUF_NA
         continue;
       default: {
       handle_unusual:
-        if ((tag == 0) || ((tag & 7) == 4)) {
-          CHK_(ptr);
+        if ((tag & 7) == 4 || tag == 0) {
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -510,13 +518,13 @@ failure:
   (void) cached_has_bits;
 
   // int32 code = 1;
-  if (this->_internal_code() != 0) {
+  if (this->code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
   }
 
   // string message = 2;
-  if (!this->_internal_message().empty()) {
+  if (this->message().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -526,7 +534,7 @@ failure:
   }
 
   // .certification.Certification response = 3;
-  if (this->_internal_has_response()) {
+  if (this->has_response()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
@@ -550,21 +558,21 @@ size_t CertificationResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string message = 2;
-  if (!this->_internal_message().empty()) {
+  if (this->message().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_message());
   }
 
   // .certification.Certification response = 3;
-  if (this->_internal_has_response()) {
+  if (this->has_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *response_);
   }
 
   // int32 code = 1;
-  if (this->_internal_code() != 0) {
+  if (this->code() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_code());
@@ -579,35 +587,44 @@ size_t CertificationResponse::ByteSizeLong() const {
   return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CertificationResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    CertificationResponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CertificationResponse::GetClassData() const { return &_class_data_; }
-
-void CertificationResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
-  static_cast<CertificationResponse *>(to)->MergeFrom(
-      static_cast<const CertificationResponse &>(from));
+void CertificationResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:certification.CertificationResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CertificationResponse* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CertificationResponse>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:certification.CertificationResponse)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:certification.CertificationResponse)
+    MergeFrom(*source);
+  }
 }
-
 
 void CertificationResponse::MergeFrom(const CertificationResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:certification.CertificationResponse)
   GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message().empty()) {
+  if (from.message().size() > 0) {
     _internal_set_message(from._internal_message());
   }
-  if (from._internal_has_response()) {
+  if (from.has_response()) {
     _internal_mutable_response()->::certification::Certification::MergeFrom(from._internal_response());
   }
-  if (from._internal_code() != 0) {
+  if (from.code() != 0) {
     _internal_set_code(from._internal_code());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CertificationResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:certification.CertificationResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void CertificationResponse::CopyFrom(const CertificationResponse& from) {
@@ -623,12 +640,8 @@ bool CertificationResponse::IsInitialized() const {
 
 void CertificationResponse::InternalSwap(CertificationResponse* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &message_, GetArenaForAllocation(),
-      &other->message_, other->GetArenaForAllocation()
-  );
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CertificationResponse, code_)
       + sizeof(CertificationResponse::code_)
@@ -638,10 +651,9 @@ void CertificationResponse::InternalSwap(CertificationResponse* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CertificationResponse::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
-      &descriptor_table_v1_2fcertification_2fcertification_2eproto_getter, &descriptor_table_v1_2fcertification_2fcertification_2eproto_once,
-      file_level_metadata_v1_2fcertification_2fcertification_2eproto[1]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
@@ -649,13 +661,10 @@ class Certification::_Internal {
  public:
 };
 
-Certification::Certification(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+Certification::Certification(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:certification.Certification)
 }
 Certification::Certification(const Certification& from)
@@ -664,62 +673,62 @@ Certification::Certification(const Certification& from)
   imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imp_uid().empty()) {
     imp_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imp_uid(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_merchant_uid().empty()) {
     merchant_uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_merchant_uid(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_tid().empty()) {
     pg_tid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_tid(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_pg_provider().empty()) {
     pg_provider_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pg_provider(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
     name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   gender_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_gender().empty()) {
     gender_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_gender(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   birthday_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_birthday().empty()) {
     birthday_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_birthday(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   phone_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_phone().empty()) {
     phone_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_phone(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   carrier_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_carrier().empty()) {
     carrier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_carrier(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   unique_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_unique_key().empty()) {
     unique_key_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_unique_key(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   unique_in_site_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_unique_in_site().empty()) {
     unique_in_site_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_unique_in_site(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   origin_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_origin().empty()) {
     origin_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_origin(), 
-      GetArenaForAllocation());
+      GetArena());
   }
   ::memcpy(&birth_, &from.birth_,
     static_cast<size_t>(reinterpret_cast<char*>(&certified_at_) -
@@ -727,34 +736,34 @@ Certification::Certification(const Certification& from)
   // @@protoc_insertion_point(copy_constructor:certification.Certification)
 }
 
-inline void Certification::SharedCtor() {
-imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-gender_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-birthday_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-phone_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-carrier_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-unique_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-unique_in_site_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-origin_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&birth_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&certified_at_) -
-    reinterpret_cast<char*>(&birth_)) + sizeof(certified_at_));
+void Certification::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Certification_v1_2fcertification_2fcertification_2eproto.base);
+  imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  gender_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  birthday_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  phone_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  carrier_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  unique_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  unique_in_site_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  origin_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&birth_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&certified_at_) -
+      reinterpret_cast<char*>(&birth_)) + sizeof(certified_at_));
 }
 
 Certification::~Certification() {
   // @@protoc_insertion_point(destructor:certification.Certification)
-  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void Certification::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void Certification::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   imp_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   merchant_uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   pg_tid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -778,6 +787,11 @@ void Certification::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void Certification::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const Certification& Certification::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Certification_v1_2fcertification_2fcertification_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void Certification::Clear() {
 // @@protoc_insertion_point(message_clear_start:certification.Certification)
@@ -808,6 +822,7 @@ const char* Certification::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // string imp_uid = 1;
       case 1:
@@ -947,8 +962,7 @@ const char* Certification::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         continue;
       default: {
       handle_unusual:
-        if ((tag == 0) || ((tag & 7) == 4)) {
-          CHK_(ptr);
+        if ((tag & 7) == 4 || tag == 0) {
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -975,7 +989,7 @@ failure:
   (void) cached_has_bits;
 
   // string imp_uid = 1;
-  if (!this->_internal_imp_uid().empty()) {
+  if (this->imp_uid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_imp_uid().data(), static_cast<int>(this->_internal_imp_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -985,7 +999,7 @@ failure:
   }
 
   // string merchant_uid = 2;
-  if (!this->_internal_merchant_uid().empty()) {
+  if (this->merchant_uid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_merchant_uid().data(), static_cast<int>(this->_internal_merchant_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -995,7 +1009,7 @@ failure:
   }
 
   // string pg_tid = 3;
-  if (!this->_internal_pg_tid().empty()) {
+  if (this->pg_tid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg_tid().data(), static_cast<int>(this->_internal_pg_tid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1005,7 +1019,7 @@ failure:
   }
 
   // string pg_provider = 4;
-  if (!this->_internal_pg_provider().empty()) {
+  if (this->pg_provider().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_pg_provider().data(), static_cast<int>(this->_internal_pg_provider().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1015,7 +1029,7 @@ failure:
   }
 
   // string name = 5;
-  if (!this->_internal_name().empty()) {
+  if (this->name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1025,7 +1039,7 @@ failure:
   }
 
   // string gender = 6;
-  if (!this->_internal_gender().empty()) {
+  if (this->gender().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_gender().data(), static_cast<int>(this->_internal_gender().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1035,13 +1049,13 @@ failure:
   }
 
   // int32 birth = 7;
-  if (this->_internal_birth() != 0) {
+  if (this->birth() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(7, this->_internal_birth(), target);
   }
 
   // string birthday = 8;
-  if (!this->_internal_birthday().empty()) {
+  if (this->birthday().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_birthday().data(), static_cast<int>(this->_internal_birthday().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1051,13 +1065,13 @@ failure:
   }
 
   // bool foreigner = 9;
-  if (this->_internal_foreigner() != 0) {
+  if (this->foreigner() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(9, this->_internal_foreigner(), target);
   }
 
   // string phone = 10;
-  if (!this->_internal_phone().empty()) {
+  if (this->phone().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_phone().data(), static_cast<int>(this->_internal_phone().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1067,7 +1081,7 @@ failure:
   }
 
   // string carrier = 11;
-  if (!this->_internal_carrier().empty()) {
+  if (this->carrier().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_carrier().data(), static_cast<int>(this->_internal_carrier().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1077,19 +1091,19 @@ failure:
   }
 
   // bool certified = 12;
-  if (this->_internal_certified() != 0) {
+  if (this->certified() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(12, this->_internal_certified(), target);
   }
 
   // int32 certified_at = 13;
-  if (this->_internal_certified_at() != 0) {
+  if (this->certified_at() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(13, this->_internal_certified_at(), target);
   }
 
   // string unique_key = 14;
-  if (!this->_internal_unique_key().empty()) {
+  if (this->unique_key().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_unique_key().data(), static_cast<int>(this->_internal_unique_key().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1099,7 +1113,7 @@ failure:
   }
 
   // string unique_in_site = 15;
-  if (!this->_internal_unique_in_site().empty()) {
+  if (this->unique_in_site().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_unique_in_site().data(), static_cast<int>(this->_internal_unique_in_site().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1109,7 +1123,7 @@ failure:
   }
 
   // string origin = 16;
-  if (!this->_internal_origin().empty()) {
+  if (this->origin().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_origin().data(), static_cast<int>(this->_internal_origin().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1135,108 +1149,108 @@ size_t Certification::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string imp_uid = 1;
-  if (!this->_internal_imp_uid().empty()) {
+  if (this->imp_uid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_imp_uid());
   }
 
   // string merchant_uid = 2;
-  if (!this->_internal_merchant_uid().empty()) {
+  if (this->merchant_uid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_merchant_uid());
   }
 
   // string pg_tid = 3;
-  if (!this->_internal_pg_tid().empty()) {
+  if (this->pg_tid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pg_tid());
   }
 
   // string pg_provider = 4;
-  if (!this->_internal_pg_provider().empty()) {
+  if (this->pg_provider().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_pg_provider());
   }
 
   // string name = 5;
-  if (!this->_internal_name().empty()) {
+  if (this->name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_name());
   }
 
   // string gender = 6;
-  if (!this->_internal_gender().empty()) {
+  if (this->gender().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_gender());
   }
 
   // string birthday = 8;
-  if (!this->_internal_birthday().empty()) {
+  if (this->birthday().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_birthday());
   }
 
   // string phone = 10;
-  if (!this->_internal_phone().empty()) {
+  if (this->phone().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_phone());
   }
 
   // string carrier = 11;
-  if (!this->_internal_carrier().empty()) {
+  if (this->carrier().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_carrier());
   }
 
   // string unique_key = 14;
-  if (!this->_internal_unique_key().empty()) {
+  if (this->unique_key().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_unique_key());
   }
 
   // string unique_in_site = 15;
-  if (!this->_internal_unique_in_site().empty()) {
+  if (this->unique_in_site().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_unique_in_site());
   }
 
   // string origin = 16;
-  if (!this->_internal_origin().empty()) {
+  if (this->origin().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_origin());
   }
 
   // int32 birth = 7;
-  if (this->_internal_birth() != 0) {
+  if (this->birth() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_birth());
   }
 
   // bool foreigner = 9;
-  if (this->_internal_foreigner() != 0) {
+  if (this->foreigner() != 0) {
     total_size += 1 + 1;
   }
 
   // bool certified = 12;
-  if (this->_internal_certified() != 0) {
+  if (this->certified() != 0) {
     total_size += 1 + 1;
   }
 
   // int32 certified_at = 13;
-  if (this->_internal_certified_at() != 0) {
+  if (this->certified_at() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_certified_at());
@@ -1251,74 +1265,83 @@ size_t Certification::ByteSizeLong() const {
   return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Certification::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    Certification::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Certification::GetClassData() const { return &_class_data_; }
-
-void Certification::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
-  static_cast<Certification *>(to)->MergeFrom(
-      static_cast<const Certification &>(from));
+void Certification::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:certification.Certification)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Certification* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Certification>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:certification.Certification)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:certification.Certification)
+    MergeFrom(*source);
+  }
 }
-
 
 void Certification::MergeFrom(const Certification& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:certification.Certification)
   GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_imp_uid().empty()) {
+  if (from.imp_uid().size() > 0) {
     _internal_set_imp_uid(from._internal_imp_uid());
   }
-  if (!from._internal_merchant_uid().empty()) {
+  if (from.merchant_uid().size() > 0) {
     _internal_set_merchant_uid(from._internal_merchant_uid());
   }
-  if (!from._internal_pg_tid().empty()) {
+  if (from.pg_tid().size() > 0) {
     _internal_set_pg_tid(from._internal_pg_tid());
   }
-  if (!from._internal_pg_provider().empty()) {
+  if (from.pg_provider().size() > 0) {
     _internal_set_pg_provider(from._internal_pg_provider());
   }
-  if (!from._internal_name().empty()) {
+  if (from.name().size() > 0) {
     _internal_set_name(from._internal_name());
   }
-  if (!from._internal_gender().empty()) {
+  if (from.gender().size() > 0) {
     _internal_set_gender(from._internal_gender());
   }
-  if (!from._internal_birthday().empty()) {
+  if (from.birthday().size() > 0) {
     _internal_set_birthday(from._internal_birthday());
   }
-  if (!from._internal_phone().empty()) {
+  if (from.phone().size() > 0) {
     _internal_set_phone(from._internal_phone());
   }
-  if (!from._internal_carrier().empty()) {
+  if (from.carrier().size() > 0) {
     _internal_set_carrier(from._internal_carrier());
   }
-  if (!from._internal_unique_key().empty()) {
+  if (from.unique_key().size() > 0) {
     _internal_set_unique_key(from._internal_unique_key());
   }
-  if (!from._internal_unique_in_site().empty()) {
+  if (from.unique_in_site().size() > 0) {
     _internal_set_unique_in_site(from._internal_unique_in_site());
   }
-  if (!from._internal_origin().empty()) {
+  if (from.origin().size() > 0) {
     _internal_set_origin(from._internal_origin());
   }
-  if (from._internal_birth() != 0) {
+  if (from.birth() != 0) {
     _internal_set_birth(from._internal_birth());
   }
-  if (from._internal_foreigner() != 0) {
+  if (from.foreigner() != 0) {
     _internal_set_foreigner(from._internal_foreigner());
   }
-  if (from._internal_certified() != 0) {
+  if (from.certified() != 0) {
     _internal_set_certified(from._internal_certified());
   }
-  if (from._internal_certified_at() != 0) {
+  if (from.certified_at() != 0) {
     _internal_set_certified_at(from._internal_certified_at());
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void Certification::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:certification.Certification)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void Certification::CopyFrom(const Certification& from) {
@@ -1334,67 +1357,19 @@ bool Certification::IsInitialized() const {
 
 void Certification::InternalSwap(Certification* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &imp_uid_, GetArenaForAllocation(),
-      &other->imp_uid_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &merchant_uid_, GetArenaForAllocation(),
-      &other->merchant_uid_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &pg_tid_, GetArenaForAllocation(),
-      &other->pg_tid_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &pg_provider_, GetArenaForAllocation(),
-      &other->pg_provider_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &name_, GetArenaForAllocation(),
-      &other->name_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &gender_, GetArenaForAllocation(),
-      &other->gender_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &birthday_, GetArenaForAllocation(),
-      &other->birthday_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &phone_, GetArenaForAllocation(),
-      &other->phone_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &carrier_, GetArenaForAllocation(),
-      &other->carrier_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &unique_key_, GetArenaForAllocation(),
-      &other->unique_key_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &unique_in_site_, GetArenaForAllocation(),
-      &other->unique_in_site_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &origin_, GetArenaForAllocation(),
-      &other->origin_, other->GetArenaForAllocation()
-  );
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  imp_uid_.Swap(&other->imp_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  merchant_uid_.Swap(&other->merchant_uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  pg_tid_.Swap(&other->pg_tid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  pg_provider_.Swap(&other->pg_provider_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  gender_.Swap(&other->gender_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  birthday_.Swap(&other->birthday_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  phone_.Swap(&other->phone_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  carrier_.Swap(&other->carrier_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  unique_key_.Swap(&other->unique_key_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  unique_in_site_.Swap(&other->unique_in_site_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  origin_.Swap(&other->origin_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Certification, certified_at_)
       + sizeof(Certification::certified_at_)
@@ -1404,10 +1379,9 @@ void Certification::InternalSwap(Certification* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Certification::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
-      &descriptor_table_v1_2fcertification_2fcertification_2eproto_getter, &descriptor_table_v1_2fcertification_2fcertification_2eproto_once,
-      file_level_metadata_v1_2fcertification_2fcertification_2eproto[2]);
+  return GetMetadataStatic();
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace certification

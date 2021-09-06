@@ -1460,11 +1460,11 @@ class UnitTx extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.basis_v2.Promotion promotion = 53;</code>
-     * @return \Basis_v2\Promotion|null
+     * @return \Basis_v2\Promotion
      */
     public function getPromotion()
     {
-        return $this->promotion;
+        return isset($this->promotion) ? $this->promotion : null;
     }
 
     public function hasPromotion()

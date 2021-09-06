@@ -88,11 +88,11 @@ class GetCardInfoResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.card_v2.GetCardInfoData response = 3;</code>
-     * @return \Card_v2\GetCardInfoData|null
+     * @return \Card_v2\GetCardInfoData
      */
     public function getResponse()
     {
-        return $this->response;
+        return isset($this->response) ? $this->response : null;
     }
 
     public function hasResponse()

@@ -71,11 +71,11 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.escrow.Info sender = 2;</code>
-     * @return \Escrow\Info|null
+     * @return \Escrow\Info
      */
     public function getSender()
     {
-        return $this->sender;
+        return isset($this->sender) ? $this->sender : null;
     }
 
     public function hasSender()
@@ -103,11 +103,11 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.escrow.Info receiver = 3;</code>
-     * @return \Escrow\Info|null
+     * @return \Escrow\Info
      */
     public function getReceiver()
     {
-        return $this->receiver;
+        return isset($this->receiver) ? $this->receiver : null;
     }
 
     public function hasReceiver()
@@ -135,11 +135,11 @@ class EscrowRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.escrow.Logis logis = 4;</code>
-     * @return \Escrow\Logis|null
+     * @return \Escrow\Logis
      */
     public function getLogis()
     {
-        return $this->logis;
+        return isset($this->logis) ? $this->logis : null;
     }
 
     public function hasLogis()

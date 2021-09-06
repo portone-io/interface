@@ -77,23 +77,19 @@ namespace V2.Basis {
     private static readonly pb::MessageParser<CancelHistory> _parser = new pb::MessageParser<CancelHistory>(() => new CancelHistory());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CancelHistory> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Basis.BasisReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelHistory() {
       OnConstruction();
     }
@@ -101,7 +97,6 @@ namespace V2.Basis {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelHistory(CancelHistory other) : this() {
       pgTid_ = other.pgTid_;
       amount_ = other.amount_;
@@ -112,7 +107,6 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelHistory Clone() {
       return new CancelHistory(this);
     }
@@ -121,7 +115,6 @@ namespace V2.Basis {
     public const int PgTidFieldNumber = 1;
     private string pgTid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgTid {
       get { return pgTid_; }
       set {
@@ -133,7 +126,6 @@ namespace V2.Basis {
     public const int AmountFieldNumber = 2;
     private string amount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Amount {
       get { return amount_; }
       set {
@@ -145,7 +137,6 @@ namespace V2.Basis {
     public const int CancelledAtFieldNumber = 3;
     private int cancelledAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CancelledAt {
       get { return cancelledAt_; }
       set {
@@ -157,7 +148,6 @@ namespace V2.Basis {
     public const int ReasonFieldNumber = 4;
     private string reason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Reason {
       get { return reason_; }
       set {
@@ -169,7 +159,6 @@ namespace V2.Basis {
     public const int ReceiptUrlFieldNumber = 5;
     private string receiptUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ReceiptUrl {
       get { return receiptUrl_; }
       set {
@@ -178,13 +167,11 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CancelHistory);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CancelHistory other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -201,7 +188,6 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PgTid.Length != 0) hash ^= PgTid.GetHashCode();
@@ -216,13 +202,11 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -255,7 +239,6 @@ namespace V2.Basis {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PgTid.Length != 0) {
         output.WriteRawTag(10);
@@ -284,7 +267,6 @@ namespace V2.Basis {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PgTid.Length != 0) {
@@ -309,7 +291,6 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CancelHistory other) {
       if (other == null) {
         return;
@@ -333,7 +314,6 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -371,7 +351,6 @@ namespace V2.Basis {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -414,23 +393,19 @@ namespace V2.Basis {
     private static readonly pb::MessageParser<Promotion> _parser = new pb::MessageParser<Promotion>(() => new Promotion());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Promotion> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Basis.BasisReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Promotion() {
       OnConstruction();
     }
@@ -438,7 +413,6 @@ namespace V2.Basis {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Promotion(Promotion other) : this() {
       id_ = other.id_;
       discount_ = other.discount_;
@@ -446,7 +420,6 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Promotion Clone() {
       return new Promotion(this);
     }
@@ -455,7 +428,6 @@ namespace V2.Basis {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -467,7 +439,6 @@ namespace V2.Basis {
     public const int DiscountFieldNumber = 2;
     private int discount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Discount {
       get { return discount_; }
       set {
@@ -476,13 +447,11 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Promotion);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Promotion other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -496,7 +465,6 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -508,13 +476,11 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -535,7 +501,6 @@ namespace V2.Basis {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
@@ -552,7 +517,6 @@ namespace V2.Basis {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
@@ -568,7 +532,6 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Promotion other) {
       if (other == null) {
         return;
@@ -583,7 +546,6 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -609,7 +571,6 @@ namespace V2.Basis {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -640,23 +601,19 @@ namespace V2.Basis {
     private static readonly pb::MessageParser<UnitTx> _parser = new pb::MessageParser<UnitTx>(() => new UnitTx());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UnitTx> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::V2.Basis.BasisReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UnitTx() {
       OnConstruction();
     }
@@ -664,7 +621,6 @@ namespace V2.Basis {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UnitTx(UnitTx other) : this() {
       amount_ = other.amount_;
       applyNum_ = other.applyNum_;
@@ -726,7 +682,6 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UnitTx Clone() {
       return new UnitTx(this);
     }
@@ -735,7 +690,6 @@ namespace V2.Basis {
     public const int AmountFieldNumber = 1;
     private string amount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Amount {
       get { return amount_; }
       set {
@@ -747,7 +701,6 @@ namespace V2.Basis {
     public const int ApplyNumFieldNumber = 2;
     private string applyNum_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ApplyNum {
       get { return applyNum_; }
       set {
@@ -759,7 +712,6 @@ namespace V2.Basis {
     public const int BankCodeFieldNumber = 3;
     private int bankCode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int BankCode {
       get { return bankCode_; }
       set {
@@ -771,7 +723,6 @@ namespace V2.Basis {
     public const int BankNameFieldNumber = 4;
     private string bankName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BankName {
       get { return bankName_; }
       set {
@@ -783,7 +734,6 @@ namespace V2.Basis {
     public const int BuyerAddrFieldNumber = 5;
     private string buyerAddr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerAddr {
       get { return buyerAddr_; }
       set {
@@ -795,7 +745,6 @@ namespace V2.Basis {
     public const int BuyerEmailFieldNumber = 6;
     private string buyerEmail_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerEmail {
       get { return buyerEmail_; }
       set {
@@ -807,7 +756,6 @@ namespace V2.Basis {
     public const int BuyerNameFieldNumber = 7;
     private string buyerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerName {
       get { return buyerName_; }
       set {
@@ -819,7 +767,6 @@ namespace V2.Basis {
     public const int BuyerPostcodeFieldNumber = 8;
     private string buyerPostcode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerPostcode {
       get { return buyerPostcode_; }
       set {
@@ -831,7 +778,6 @@ namespace V2.Basis {
     public const int BuyerTelFieldNumber = 9;
     private string buyerTel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuyerTel {
       get { return buyerTel_; }
       set {
@@ -843,7 +789,6 @@ namespace V2.Basis {
     public const int CancelAmountFieldNumber = 10;
     private string cancelAmount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CancelAmount {
       get { return cancelAmount_; }
       set {
@@ -857,7 +802,6 @@ namespace V2.Basis {
         = pb::FieldCodec.ForMessage(90, global::V2.Basis.CancelHistory.Parser);
     private readonly pbc::RepeatedField<global::V2.Basis.CancelHistory> cancelHistory_ = new pbc::RepeatedField<global::V2.Basis.CancelHistory>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::V2.Basis.CancelHistory> CancelHistory {
       get { return cancelHistory_; }
     }
@@ -866,7 +810,6 @@ namespace V2.Basis {
     public const int CancelReasonFieldNumber = 12;
     private string cancelReason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CancelReason {
       get { return cancelReason_; }
       set {
@@ -880,7 +823,6 @@ namespace V2.Basis {
         = pb::FieldCodec.ForString(106);
     private readonly pbc::RepeatedField<string> cancelReceiptUrls_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> CancelReceiptUrls {
       get { return cancelReceiptUrls_; }
     }
@@ -889,7 +831,6 @@ namespace V2.Basis {
     public const int CancelledAtFieldNumber = 14;
     private int cancelledAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CancelledAt {
       get { return cancelledAt_; }
       set {
@@ -901,7 +842,6 @@ namespace V2.Basis {
     public const int CardCodeFieldNumber = 15;
     private string cardCode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardCode {
       get { return cardCode_; }
       set {
@@ -913,7 +853,6 @@ namespace V2.Basis {
     public const int BinNumberFieldNumber = 16;
     private string binNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BinNumber {
       get { return binNumber_; }
       set {
@@ -928,7 +867,6 @@ namespace V2.Basis {
     /// card issuer
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardName {
       get { return cardName_; }
       set {
@@ -940,7 +878,6 @@ namespace V2.Basis {
     public const int CardReceipeNameFieldNumber = 18;
     private string cardReceipeName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardReceipeName {
       get { return cardReceipeName_; }
       set {
@@ -952,7 +889,6 @@ namespace V2.Basis {
     public const int CardOwnerTypeFieldNumber = 19;
     private string cardOwnerType_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardOwnerType {
       get { return cardOwnerType_; }
       set {
@@ -964,7 +900,6 @@ namespace V2.Basis {
     public const int CardBrandFieldNumber = 20;
     private string cardBrand_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardBrand {
       get { return cardBrand_; }
       set {
@@ -976,7 +911,6 @@ namespace V2.Basis {
     public const int CardCreditTypeFieldNumber = 21;
     private string cardCreditType_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardCreditType {
       get { return cardCreditType_; }
       set {
@@ -988,7 +922,6 @@ namespace V2.Basis {
     public const int CardNumberFieldNumber = 22;
     private string cardNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardNumber {
       get { return cardNumber_; }
       set {
@@ -1000,7 +933,6 @@ namespace V2.Basis {
     public const int CardInstallmentFieldNumber = 23;
     private int cardInstallment_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CardInstallment {
       get { return cardInstallment_; }
       set {
@@ -1012,7 +944,6 @@ namespace V2.Basis {
     public const int CardTypeFieldNumber = 24;
     private int cardType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CardType {
       get { return cardType_; }
       set {
@@ -1024,7 +955,6 @@ namespace V2.Basis {
     public const int CashReceiptIssuedFieldNumber = 25;
     private bool cashReceiptIssued_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CashReceiptIssued {
       get { return cashReceiptIssued_; }
       set {
@@ -1036,7 +966,6 @@ namespace V2.Basis {
     public const int ChannelFieldNumber = 26;
     private string channel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Channel {
       get { return channel_; }
       set {
@@ -1048,7 +977,6 @@ namespace V2.Basis {
     public const int CurrencyFieldNumber = 27;
     private string currency_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Currency {
       get { return currency_; }
       set {
@@ -1060,7 +988,6 @@ namespace V2.Basis {
     public const int CustomDataFieldNumber = 28;
     private string customData_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomData {
       get { return customData_; }
       set {
@@ -1072,7 +999,6 @@ namespace V2.Basis {
     public const int CardUidFieldNumber = 29;
     private string cardUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CardUid {
       get { return cardUid_; }
       set {
@@ -1084,7 +1010,6 @@ namespace V2.Basis {
     public const int CustomerUidUsageFieldNumber = 30;
     private string customerUidUsage_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerUidUsage {
       get { return customerUidUsage_; }
       set {
@@ -1096,7 +1021,6 @@ namespace V2.Basis {
     public const int EscrowFieldNumber = 31;
     private bool escrow_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Escrow {
       get { return escrow_; }
       set {
@@ -1108,7 +1032,6 @@ namespace V2.Basis {
     public const int FailReasonFieldNumber = 32;
     private string failReason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FailReason {
       get { return failReason_; }
       set {
@@ -1120,7 +1043,6 @@ namespace V2.Basis {
     public const int FailedAtFieldNumber = 33;
     private int failedAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int FailedAt {
       get { return failedAt_; }
       set {
@@ -1132,7 +1054,6 @@ namespace V2.Basis {
     public const int ImpUidFieldNumber = 34;
     private string impUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImpUid {
       get { return impUid_; }
       set {
@@ -1144,7 +1065,6 @@ namespace V2.Basis {
     public const int MerchantUidFieldNumber = 35;
     private string merchantUid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MerchantUid {
       get { return merchantUid_; }
       set {
@@ -1156,7 +1076,6 @@ namespace V2.Basis {
     public const int OrderNameFieldNumber = 36;
     private string orderName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OrderName {
       get { return orderName_; }
       set {
@@ -1168,7 +1087,6 @@ namespace V2.Basis {
     public const int PaidAtFieldNumber = 37;
     private int paidAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PaidAt {
       get { return paidAt_; }
       set {
@@ -1180,7 +1098,6 @@ namespace V2.Basis {
     public const int PayMethodFieldNumber = 38;
     private string payMethod_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PayMethod {
       get { return payMethod_; }
       set {
@@ -1192,7 +1109,6 @@ namespace V2.Basis {
     public const int PgIdFieldNumber = 39;
     private string pgId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgId {
       get { return pgId_; }
       set {
@@ -1204,7 +1120,6 @@ namespace V2.Basis {
     public const int PgProviderFieldNumber = 40;
     private string pgProvider_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgProvider {
       get { return pgProvider_; }
       set {
@@ -1216,7 +1131,6 @@ namespace V2.Basis {
     public const int PgTidFieldNumber = 41;
     private string pgTid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PgTid {
       get { return pgTid_; }
       set {
@@ -1228,7 +1142,6 @@ namespace V2.Basis {
     public const int ReceiptUrlFieldNumber = 42;
     private string receiptUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ReceiptUrl {
       get { return receiptUrl_; }
       set {
@@ -1240,7 +1153,6 @@ namespace V2.Basis {
     public const int StartedAtFieldNumber = 43;
     private int startedAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int StartedAt {
       get { return startedAt_; }
       set {
@@ -1252,7 +1164,6 @@ namespace V2.Basis {
     public const int StatusFieldNumber = 44;
     private string status_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Status {
       get { return status_; }
       set {
@@ -1264,7 +1175,6 @@ namespace V2.Basis {
     public const int UserAgentFieldNumber = 45;
     private string userAgent_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UserAgent {
       get { return userAgent_; }
       set {
@@ -1276,7 +1186,6 @@ namespace V2.Basis {
     public const int VbankCodeFieldNumber = 46;
     private string vbankCode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string VbankCode {
       get { return vbankCode_; }
       set {
@@ -1288,7 +1197,6 @@ namespace V2.Basis {
     public const int VbankDateFieldNumber = 47;
     private int vbankDate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int VbankDate {
       get { return vbankDate_; }
       set {
@@ -1300,7 +1208,6 @@ namespace V2.Basis {
     public const int VbankHolderFieldNumber = 48;
     private string vbankHolder_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string VbankHolder {
       get { return vbankHolder_; }
       set {
@@ -1312,7 +1219,6 @@ namespace V2.Basis {
     public const int VbankIssuedAtFieldNumber = 49;
     private int vbankIssuedAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int VbankIssuedAt {
       get { return vbankIssuedAt_; }
       set {
@@ -1324,7 +1230,6 @@ namespace V2.Basis {
     public const int VbankNameFieldNumber = 50;
     private string vbankName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string VbankName {
       get { return vbankName_; }
       set {
@@ -1336,7 +1241,6 @@ namespace V2.Basis {
     public const int VbankNumFieldNumber = 51;
     private string vbankNum_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string VbankNum {
       get { return vbankNum_; }
       set {
@@ -1348,7 +1252,6 @@ namespace V2.Basis {
     public const int CustomerEmailFieldNumber = 52;
     private string customerEmail_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerEmail {
       get { return customerEmail_; }
       set {
@@ -1360,7 +1263,6 @@ namespace V2.Basis {
     public const int PromotionFieldNumber = 53;
     private global::V2.Basis.Promotion promotion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::V2.Basis.Promotion Promotion {
       get { return promotion_; }
       set {
@@ -1372,7 +1274,6 @@ namespace V2.Basis {
     public const int NpointPayAmountFieldNumber = 54;
     private string npointPayAmount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NpointPayAmount {
       get { return npointPayAmount_; }
       set {
@@ -1384,7 +1285,6 @@ namespace V2.Basis {
     public const int SandboxFieldNumber = 55;
     private bool sandbox_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Sandbox {
       get { return sandbox_; }
       set {
@@ -1396,7 +1296,6 @@ namespace V2.Basis {
     public const int EmbPgProviderFieldNumber = 56;
     private string embPgProvider_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EmbPgProvider {
       get { return embPgProvider_; }
       set {
@@ -1405,13 +1304,11 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UnitTx);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UnitTx other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1479,7 +1376,6 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Amount.Length != 0) hash ^= Amount.GetHashCode();
@@ -1545,13 +1441,11 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1782,7 +1676,6 @@ namespace V2.Basis {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Amount.Length != 0) {
         output.WriteRawTag(10);
@@ -2009,7 +1902,6 @@ namespace V2.Basis {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Amount.Length != 0) {
@@ -2183,7 +2075,6 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UnitTx other) {
       if (other == null) {
         return;
@@ -2359,7 +2250,6 @@ namespace V2.Basis {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2604,7 +2494,6 @@ namespace V2.Basis {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

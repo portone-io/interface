@@ -88,11 +88,11 @@ class InsertCustomerBillingKeyResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.subscribe_customers.CustomerBillingKey response = 3;</code>
-     * @return \Subscribe_customers\CustomerBillingKey|null
+     * @return \Subscribe_customers\CustomerBillingKey
      */
     public function getResponse()
     {
-        return $this->response;
+        return isset($this->response) ? $this->response : null;
     }
 
     public function hasResponse()

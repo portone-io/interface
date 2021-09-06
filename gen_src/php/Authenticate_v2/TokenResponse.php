@@ -88,11 +88,11 @@ class TokenResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.authenticate_v2.TokenData response = 3;</code>
-     * @return \Authenticate_v2\TokenData|null
+     * @return \Authenticate_v2\TokenData
      */
     public function getResponse()
     {
-        return $this->response;
+        return isset($this->response) ? $this->response : null;
     }
 
     public function hasResponse()

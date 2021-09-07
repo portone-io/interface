@@ -2,6 +2,7 @@ syntax = "proto3";
 package link_v1;
 
 import "google/api/annotations.proto";
+import "google/protobuf/struct.proto";
 
 option go_package = "github.com/iamport/interface/gen_src/go/v1/link";
 option csharp_namespace = "V1.Supplements.Link";
@@ -61,7 +62,7 @@ message GetContentsResponse {
 }
 
 message GeneratePaymentURLRequest {
-    string payment_info = 1;
+    google.protobuf.Struct payment_info = 1;
     int64 expired_at = 2;
 }
 

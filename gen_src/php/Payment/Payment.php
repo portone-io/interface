@@ -1281,7 +1281,7 @@ class Payment extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.Promotion promotion = 47;</code>
-     * @return \Payment\Promotion
+     * @return \Payment\Promotion|null
      */
     public function getPromotion()
     {

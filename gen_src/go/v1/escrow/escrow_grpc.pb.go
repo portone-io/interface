@@ -76,7 +76,7 @@ type UnsafeEscrowServiceServer interface {
 }
 
 func RegisterEscrowServiceServer(s grpc.ServiceRegistrar, srv EscrowServiceServer) {
-	s.RegisterService(&EscrowService_ServiceDesc, srv)
+	s.RegisterService(&_EscrowService_serviceDesc, srv)
 }
 
 func _EscrowService_EscrowPostRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -115,10 +115,7 @@ func _EscrowService_EscrowPutRPC_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
-// EscrowService_ServiceDesc is the grpc.ServiceDesc for EscrowService service.
-// It's only intended for direct use with grpc.RegisterService,
-// and not to be introspected or modified (even as a copy)
-var EscrowService_ServiceDesc = grpc.ServiceDesc{
+var _EscrowService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "escrow.EscrowService",
 	HandlerType: (*EscrowServiceServer)(nil),
 	Methods: []grpc.MethodDesc{

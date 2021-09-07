@@ -3498,16 +3498,19 @@ public final class LinkOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string payment_info = 1;</code>
+     * <code>.google.protobuf.Struct payment_info = 1;</code>
+     * @return Whether the paymentInfo field is set.
+     */
+    boolean hasPaymentInfo();
+    /**
+     * <code>.google.protobuf.Struct payment_info = 1;</code>
      * @return The paymentInfo.
      */
-    java.lang.String getPaymentInfo();
+    com.google.protobuf.Struct getPaymentInfo();
     /**
-     * <code>string payment_info = 1;</code>
-     * @return The bytes for paymentInfo.
+     * <code>.google.protobuf.Struct payment_info = 1;</code>
      */
-    com.google.protobuf.ByteString
-        getPaymentInfoBytes();
+    com.google.protobuf.StructOrBuilder getPaymentInfoOrBuilder();
 
     /**
      * <code>int64 expired_at = 2;</code>
@@ -3528,7 +3531,6 @@ public final class LinkOuterClass {
       super(builder);
     }
     private GeneratePaymentURLRequest() {
-      paymentInfo_ = "";
     }
 
     @java.lang.Override
@@ -3562,9 +3564,16 @@ public final class LinkOuterClass {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (paymentInfo_ != null) {
+                subBuilder = paymentInfo_.toBuilder();
+              }
+              paymentInfo_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(paymentInfo_);
+                paymentInfo_ = subBuilder.buildPartial();
+              }
 
-              paymentInfo_ = s;
               break;
             }
             case 16: {
@@ -3605,41 +3614,29 @@ public final class LinkOuterClass {
     }
 
     public static final int PAYMENT_INFO_FIELD_NUMBER = 1;
-    private volatile java.lang.Object paymentInfo_;
+    private com.google.protobuf.Struct paymentInfo_;
     /**
-     * <code>string payment_info = 1;</code>
+     * <code>.google.protobuf.Struct payment_info = 1;</code>
+     * @return Whether the paymentInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasPaymentInfo() {
+      return paymentInfo_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Struct payment_info = 1;</code>
      * @return The paymentInfo.
      */
     @java.lang.Override
-    public java.lang.String getPaymentInfo() {
-      java.lang.Object ref = paymentInfo_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        paymentInfo_ = s;
-        return s;
-      }
+    public com.google.protobuf.Struct getPaymentInfo() {
+      return paymentInfo_ == null ? com.google.protobuf.Struct.getDefaultInstance() : paymentInfo_;
     }
     /**
-     * <code>string payment_info = 1;</code>
-     * @return The bytes for paymentInfo.
+     * <code>.google.protobuf.Struct payment_info = 1;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPaymentInfoBytes() {
-      java.lang.Object ref = paymentInfo_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        paymentInfo_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public com.google.protobuf.StructOrBuilder getPaymentInfoOrBuilder() {
+      return getPaymentInfo();
     }
 
     public static final int EXPIRED_AT_FIELD_NUMBER = 2;
@@ -3667,8 +3664,8 @@ public final class LinkOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPaymentInfoBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, paymentInfo_);
+      if (paymentInfo_ != null) {
+        output.writeMessage(1, getPaymentInfo());
       }
       if (expiredAt_ != 0L) {
         output.writeInt64(2, expiredAt_);
@@ -3682,8 +3679,9 @@ public final class LinkOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPaymentInfoBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, paymentInfo_);
+      if (paymentInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPaymentInfo());
       }
       if (expiredAt_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -3704,8 +3702,11 @@ public final class LinkOuterClass {
       }
       link_v1.LinkOuterClass.GeneratePaymentURLRequest other = (link_v1.LinkOuterClass.GeneratePaymentURLRequest) obj;
 
-      if (!getPaymentInfo()
-          .equals(other.getPaymentInfo())) return false;
+      if (hasPaymentInfo() != other.hasPaymentInfo()) return false;
+      if (hasPaymentInfo()) {
+        if (!getPaymentInfo()
+            .equals(other.getPaymentInfo())) return false;
+      }
       if (getExpiredAt()
           != other.getExpiredAt()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -3719,8 +3720,10 @@ public final class LinkOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PAYMENT_INFO_FIELD_NUMBER;
-      hash = (53 * hash) + getPaymentInfo().hashCode();
+      if (hasPaymentInfo()) {
+        hash = (37 * hash) + PAYMENT_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentInfo().hashCode();
+      }
       hash = (37 * hash) + EXPIRED_AT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getExpiredAt());
@@ -3857,8 +3860,12 @@ public final class LinkOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        paymentInfo_ = "";
-
+        if (paymentInfoBuilder_ == null) {
+          paymentInfo_ = null;
+        } else {
+          paymentInfo_ = null;
+          paymentInfoBuilder_ = null;
+        }
         expiredAt_ = 0L;
 
         return this;
@@ -3887,7 +3894,11 @@ public final class LinkOuterClass {
       @java.lang.Override
       public link_v1.LinkOuterClass.GeneratePaymentURLRequest buildPartial() {
         link_v1.LinkOuterClass.GeneratePaymentURLRequest result = new link_v1.LinkOuterClass.GeneratePaymentURLRequest(this);
-        result.paymentInfo_ = paymentInfo_;
+        if (paymentInfoBuilder_ == null) {
+          result.paymentInfo_ = paymentInfo_;
+        } else {
+          result.paymentInfo_ = paymentInfoBuilder_.build();
+        }
         result.expiredAt_ = expiredAt_;
         onBuilt();
         return result;
@@ -3937,9 +3948,8 @@ public final class LinkOuterClass {
 
       public Builder mergeFrom(link_v1.LinkOuterClass.GeneratePaymentURLRequest other) {
         if (other == link_v1.LinkOuterClass.GeneratePaymentURLRequest.getDefaultInstance()) return this;
-        if (!other.getPaymentInfo().isEmpty()) {
-          paymentInfo_ = other.paymentInfo_;
-          onChanged();
+        if (other.hasPaymentInfo()) {
+          mergePaymentInfo(other.getPaymentInfo());
         }
         if (other.getExpiredAt() != 0L) {
           setExpiredAt(other.getExpiredAt());
@@ -3973,80 +3983,123 @@ public final class LinkOuterClass {
         return this;
       }
 
-      private java.lang.Object paymentInfo_ = "";
+      private com.google.protobuf.Struct paymentInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> paymentInfoBuilder_;
       /**
-       * <code>string payment_info = 1;</code>
+       * <code>.google.protobuf.Struct payment_info = 1;</code>
+       * @return Whether the paymentInfo field is set.
+       */
+      public boolean hasPaymentInfo() {
+        return paymentInfoBuilder_ != null || paymentInfo_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Struct payment_info = 1;</code>
        * @return The paymentInfo.
        */
-      public java.lang.String getPaymentInfo() {
-        java.lang.Object ref = paymentInfo_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          paymentInfo_ = s;
-          return s;
+      public com.google.protobuf.Struct getPaymentInfo() {
+        if (paymentInfoBuilder_ == null) {
+          return paymentInfo_ == null ? com.google.protobuf.Struct.getDefaultInstance() : paymentInfo_;
         } else {
-          return (java.lang.String) ref;
+          return paymentInfoBuilder_.getMessage();
         }
       }
       /**
-       * <code>string payment_info = 1;</code>
-       * @return The bytes for paymentInfo.
+       * <code>.google.protobuf.Struct payment_info = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getPaymentInfoBytes() {
-        java.lang.Object ref = paymentInfo_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          paymentInfo_ = b;
-          return b;
+      public Builder setPaymentInfo(com.google.protobuf.Struct value) {
+        if (paymentInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          paymentInfo_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          paymentInfoBuilder_.setMessage(value);
         }
+
+        return this;
       }
       /**
-       * <code>string payment_info = 1;</code>
-       * @param value The paymentInfo to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.Struct payment_info = 1;</code>
        */
       public Builder setPaymentInfo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        paymentInfo_ = value;
-        onChanged();
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (paymentInfoBuilder_ == null) {
+          paymentInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          paymentInfoBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
       }
       /**
-       * <code>string payment_info = 1;</code>
-       * @return This builder for chaining.
+       * <code>.google.protobuf.Struct payment_info = 1;</code>
+       */
+      public Builder mergePaymentInfo(com.google.protobuf.Struct value) {
+        if (paymentInfoBuilder_ == null) {
+          if (paymentInfo_ != null) {
+            paymentInfo_ =
+              com.google.protobuf.Struct.newBuilder(paymentInfo_).mergeFrom(value).buildPartial();
+          } else {
+            paymentInfo_ = value;
+          }
+          onChanged();
+        } else {
+          paymentInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct payment_info = 1;</code>
        */
       public Builder clearPaymentInfo() {
-        
-        paymentInfo_ = getDefaultInstance().getPaymentInfo();
-        onChanged();
+        if (paymentInfoBuilder_ == null) {
+          paymentInfo_ = null;
+          onChanged();
+        } else {
+          paymentInfo_ = null;
+          paymentInfoBuilder_ = null;
+        }
+
         return this;
       }
       /**
-       * <code>string payment_info = 1;</code>
-       * @param value The bytes for paymentInfo to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.Struct payment_info = 1;</code>
        */
-      public Builder setPaymentInfoBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      public com.google.protobuf.Struct.Builder getPaymentInfoBuilder() {
         
-        paymentInfo_ = value;
         onChanged();
-        return this;
+        return getPaymentInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Struct payment_info = 1;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getPaymentInfoOrBuilder() {
+        if (paymentInfoBuilder_ != null) {
+          return paymentInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return paymentInfo_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : paymentInfo_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Struct payment_info = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getPaymentInfoFieldBuilder() {
+        if (paymentInfoBuilder_ == null) {
+          paymentInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getPaymentInfo(),
+                  getParentForChildren(),
+                  isClean());
+          paymentInfo_ = null;
+        }
+        return paymentInfoBuilder_;
       }
 
       private long expiredAt_ ;
@@ -4750,38 +4803,41 @@ public final class LinkOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\036v1/supplements/link/link.proto\022\007link_v" +
-      "1\032\034google/api/annotations.proto\">\n\033Gener" +
-      "ateShortenedURLRequest\022\013\n\003url\030\001 \001(\t\022\022\n\ne" +
-      "xpired_at\030\002 \001(\003\"5\n\034GenerateShortenedURLR" +
-      "esponse\022\025\n\rshortened_url\030\001 \001(\t\"(\n\024StoreC" +
-      "ontentsRequest\022\020\n\010contents\030\001 \001(\t\"%\n\025Stor" +
-      "eContentsResponse\022\014\n\004guid\030\001 \001(\t\"\"\n\022GetCo" +
-      "ntentsRequest\022\014\n\004guid\030\001 \001(\t\"\'\n\023GetConten" +
-      "tsResponse\022\020\n\010contents\030\001 \001(\t\"E\n\031Generate" +
-      "PaymentURLRequest\022\024\n\014payment_info\030\001 \001(\t\022" +
-      "\022\n\nexpired_at\030\002 \001(\003\"3\n\032GeneratePaymentUR" +
-      "LResponse\022\025\n\rshortened_url\030\001 \001(\t2\252\004\n\004Lin" +
-      "k\022\225\001\n\031GenerateShortenedURLV2RPC\022$.link_v" +
-      "1.GenerateShortenedURLRequest\032%.link_v1." +
-      "GenerateShortenedURLResponse\"+\202\323\344\223\002%\" /a" +
-      "pi/supplements/v1/link/shorten:\001*\022|\n\022Sto" +
-      "reContentsV2RPC\022\035.link_v1.StoreContentsR" +
-      "equest\032\036.link_v1.StoreContentsResponse\"\'" +
-      "\202\323\344\223\002!\"\034/api/supplements/v1/contents:\001*\022" +
-      "z\n\020GetContentsV2RPC\022\033.link_v1.GetContent" +
-      "sRequest\032\034.link_v1.GetContentsResponse\"+" +
-      "\202\323\344\223\002%\022#/api/supplements/v1/contents/{gu" +
-      "id}\022\217\001\n\027GeneratePaymentURLV2RPC\022\".link_v" +
-      "1.GeneratePaymentURLRequest\032#.link_v1.Ge" +
-      "neratePaymentURLResponse\"+\202\323\344\223\002%\" /api/s" +
-      "upplements/v1/link/payment:\001*BGZ/github." +
-      "com/iamport/interface/gen_src/go/v1/link" +
-      "\252\002\023V1.Supplements.Linkb\006proto3"
+      "1\032\034google/api/annotations.proto\032\034google/" +
+      "protobuf/struct.proto\">\n\033GenerateShorten" +
+      "edURLRequest\022\013\n\003url\030\001 \001(\t\022\022\n\nexpired_at\030" +
+      "\002 \001(\003\"5\n\034GenerateShortenedURLResponse\022\025\n" +
+      "\rshortened_url\030\001 \001(\t\"(\n\024StoreContentsReq" +
+      "uest\022\020\n\010contents\030\001 \001(\t\"%\n\025StoreContentsR" +
+      "esponse\022\014\n\004guid\030\001 \001(\t\"\"\n\022GetContentsRequ" +
+      "est\022\014\n\004guid\030\001 \001(\t\"\'\n\023GetContentsResponse" +
+      "\022\020\n\010contents\030\001 \001(\t\"^\n\031GeneratePaymentURL" +
+      "Request\022-\n\014payment_info\030\001 \001(\0132\027.google.p" +
+      "rotobuf.Struct\022\022\n\nexpired_at\030\002 \001(\003\"3\n\032Ge" +
+      "neratePaymentURLResponse\022\025\n\rshortened_ur" +
+      "l\030\001 \001(\t2\252\004\n\004Link\022\225\001\n\031GenerateShortenedUR" +
+      "LV2RPC\022$.link_v1.GenerateShortenedURLReq" +
+      "uest\032%.link_v1.GenerateShortenedURLRespo" +
+      "nse\"+\202\323\344\223\002%\" /api/supplements/v1/link/sh" +
+      "orten:\001*\022|\n\022StoreContentsV2RPC\022\035.link_v1" +
+      ".StoreContentsRequest\032\036.link_v1.StoreCon" +
+      "tentsResponse\"\'\202\323\344\223\002!\"\034/api/supplements/" +
+      "v1/contents:\001*\022z\n\020GetContentsV2RPC\022\033.lin" +
+      "k_v1.GetContentsRequest\032\034.link_v1.GetCon" +
+      "tentsResponse\"+\202\323\344\223\002%\022#/api/supplements/" +
+      "v1/contents/{guid}\022\217\001\n\027GeneratePaymentUR" +
+      "LV2RPC\022\".link_v1.GeneratePaymentURLReque" +
+      "st\032#.link_v1.GeneratePaymentURLResponse\"" +
+      "+\202\323\344\223\002%\" /api/supplements/v1/link/paymen" +
+      "t:\001*BGZ/github.com/iamport/interface/gen" +
+      "_src/go/v1/link\252\002\023V1.Supplements.Linkb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.StructProto.getDescriptor(),
         });
     internal_static_link_v1_GenerateShortenedURLRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4837,6 +4893,7 @@ public final class LinkOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

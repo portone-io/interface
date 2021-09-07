@@ -2,6 +2,7 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
  * @suppress {messageConventions} JS Compiler reports an error if a variable or
  *     field starts with 'MSG_' and isn't a translatable message.
  * @public
@@ -16,6 +17,8 @@ var global = Function('return this')();
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
+var google_protobuf_struct_pb = require('google-protobuf/google/protobuf/struct_pb.js');
+goog.object.extend(proto, google_protobuf_struct_pb);
 goog.exportSymbol('proto.link_v1.GeneratePaymentURLRequest', null, global);
 goog.exportSymbol('proto.link_v1.GeneratePaymentURLResponse', null, global);
 goog.exportSymbol('proto.link_v1.GenerateShortenedURLRequest', null, global);
@@ -1034,7 +1037,7 @@ proto.link_v1.GeneratePaymentURLRequest.prototype.toObject = function(opt_includ
  */
 proto.link_v1.GeneratePaymentURLRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    paymentInfo: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    paymentInfo: (f = msg.getPaymentInfo()) && google_protobuf_struct_pb.Struct.toObject(includeInstance, f),
     expiredAt: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
@@ -1073,7 +1076,8 @@ proto.link_v1.GeneratePaymentURLRequest.deserializeBinaryFromReader = function(m
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = new google_protobuf_struct_pb.Struct;
+      reader.readMessage(value,google_protobuf_struct_pb.Struct.deserializeBinaryFromReader);
       msg.setPaymentInfo(value);
       break;
     case 2:
@@ -1110,10 +1114,11 @@ proto.link_v1.GeneratePaymentURLRequest.prototype.serializeBinary = function() {
 proto.link_v1.GeneratePaymentURLRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getPaymentInfo();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f != null) {
+    writer.writeMessage(
       1,
-      f
+      f,
+      google_protobuf_struct_pb.Struct.serializeBinaryToWriter
     );
   }
   f = message.getExpiredAt();
@@ -1127,20 +1132,39 @@ proto.link_v1.GeneratePaymentURLRequest.serializeBinaryToWriter = function(messa
 
 
 /**
- * optional string payment_info = 1;
- * @return {string}
+ * optional google.protobuf.Struct payment_info = 1;
+ * @return {?proto.google.protobuf.Struct}
  */
 proto.link_v1.GeneratePaymentURLRequest.prototype.getPaymentInfo = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type{?proto.google.protobuf.Struct} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_struct_pb.Struct, 1));
 };
 
 
 /**
- * @param {string} value
+ * @param {?proto.google.protobuf.Struct|undefined} value
+ * @return {!proto.link_v1.GeneratePaymentURLRequest} returns this
+*/
+proto.link_v1.GeneratePaymentURLRequest.prototype.setPaymentInfo = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
  * @return {!proto.link_v1.GeneratePaymentURLRequest} returns this
  */
-proto.link_v1.GeneratePaymentURLRequest.prototype.setPaymentInfo = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+proto.link_v1.GeneratePaymentURLRequest.prototype.clearPaymentInfo = function() {
+  return this.setPaymentInfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.link_v1.GeneratePaymentURLRequest.prototype.hasPaymentInfo = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 

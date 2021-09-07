@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class GeneratePaymentURLRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string payment_info = 1;</code>
+     * Generated from protobuf field <code>.google.protobuf.Struct payment_info = 1;</code>
      */
-    protected $payment_info = '';
+    protected $payment_info = null;
     /**
      * Generated from protobuf field <code>int64 expired_at = 2;</code>
      */
@@ -28,7 +28,7 @@ class GeneratePaymentURLRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $payment_info
+     *     @type \Google\Protobuf\Struct $payment_info
      *     @type int|string $expired_at
      * }
      */
@@ -38,22 +38,32 @@ class GeneratePaymentURLRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string payment_info = 1;</code>
-     * @return string
+     * Generated from protobuf field <code>.google.protobuf.Struct payment_info = 1;</code>
+     * @return \Google\Protobuf\Struct|null
      */
     public function getPaymentInfo()
     {
-        return $this->payment_info;
+        return isset($this->payment_info) ? $this->payment_info : null;
+    }
+
+    public function hasPaymentInfo()
+    {
+        return isset($this->payment_info);
+    }
+
+    public function clearPaymentInfo()
+    {
+        unset($this->payment_info);
     }
 
     /**
-     * Generated from protobuf field <code>string payment_info = 1;</code>
-     * @param string $var
+     * Generated from protobuf field <code>.google.protobuf.Struct payment_info = 1;</code>
+     * @param \Google\Protobuf\Struct $var
      * @return $this
      */
     public function setPaymentInfo($var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkMessage($var, \Google\Protobuf\Struct::class);
         $this->payment_info = $var;
 
         return $this;

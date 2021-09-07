@@ -14,63 +14,106 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_v2_2fbasis_2fbasis_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CancelHistory_v2_2fbasis_2fbasis_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_v2_2fbasis_2fbasis_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Promotion_v2_2fbasis_2fbasis_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace basis_v2 {
-class CancelHistoryDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CancelHistory> _instance;
-} _CancelHistory_default_instance_;
-class PromotionDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Promotion> _instance;
-} _Promotion_default_instance_;
-class UnitTxDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UnitTx> _instance;
-} _UnitTx_default_instance_;
+constexpr CancelHistory::CancelHistory(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : pg_tid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , amount_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , reason_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , receipt_url_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , cancelled_at_(0){}
+struct CancelHistoryDefaultTypeInternal {
+  constexpr CancelHistoryDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CancelHistoryDefaultTypeInternal() {}
+  union {
+    CancelHistory _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CancelHistoryDefaultTypeInternal _CancelHistory_default_instance_;
+constexpr Promotion::Promotion(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , discount_(0){}
+struct PromotionDefaultTypeInternal {
+  constexpr PromotionDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~PromotionDefaultTypeInternal() {}
+  union {
+    Promotion _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PromotionDefaultTypeInternal _Promotion_default_instance_;
+constexpr UnitTx::UnitTx(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : cancel_history_()
+  , cancel_receipt_urls_()
+  , amount_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , apply_num_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , bank_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , buyer_addr_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , buyer_email_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , buyer_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , buyer_postcode_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , buyer_tel_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , cancel_amount_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , cancel_reason_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , card_code_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , bin_number_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , card_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , card_receipe_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , card_owner_type_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , card_brand_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , card_credit_type_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , card_number_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , channel_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , currency_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , custom_data_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , card_uid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , customer_uid_usage_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , fail_reason_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , imp_uid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , merchant_uid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , order_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , pay_method_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , pg_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , pg_provider_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , pg_tid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , receipt_url_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , status_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , user_agent_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , vbank_code_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , vbank_holder_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , vbank_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , vbank_num_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , customer_email_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , npoint_pay_amount_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , emb_pg_provider_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , promotion_(nullptr)
+  , bank_code_(0)
+  , cancelled_at_(0)
+  , card_installment_(0)
+  , card_type_(0)
+  , failed_at_(0)
+  , paid_at_(0)
+  , cash_receipt_issued_(false)
+  , escrow_(false)
+  , sandbox_(false)
+  , started_at_(0)
+  , vbank_date_(0)
+  , vbank_issued_at_(0){}
+struct UnitTxDefaultTypeInternal {
+  constexpr UnitTxDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~UnitTxDefaultTypeInternal() {}
+  union {
+    UnitTx _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT UnitTxDefaultTypeInternal _UnitTx_default_instance_;
 }  // namespace basis_v2
-static void InitDefaultsscc_info_CancelHistory_v2_2fbasis_2fbasis_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::basis_v2::_CancelHistory_default_instance_;
-    new (ptr) ::basis_v2::CancelHistory();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CancelHistory_v2_2fbasis_2fbasis_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CancelHistory_v2_2fbasis_2fbasis_2eproto}, {}};
-
-static void InitDefaultsscc_info_Promotion_v2_2fbasis_2fbasis_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::basis_v2::_Promotion_default_instance_;
-    new (ptr) ::basis_v2::Promotion();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Promotion_v2_2fbasis_2fbasis_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Promotion_v2_2fbasis_2fbasis_2eproto}, {}};
-
-static void InitDefaultsscc_info_UnitTx_v2_2fbasis_2fbasis_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::basis_v2::_UnitTx_default_instance_;
-    new (ptr) ::basis_v2::UnitTx();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_UnitTx_v2_2fbasis_2fbasis_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_UnitTx_v2_2fbasis_2fbasis_2eproto}, {
-      &scc_info_CancelHistory_v2_2fbasis_2fbasis_2eproto.base,
-      &scc_info_Promotion_v2_2fbasis_2fbasis_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_v2_2fbasis_2fbasis_2eproto[3];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_v2_2fbasis_2fbasis_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_v2_2fbasis_2fbasis_2eproto = nullptr;
@@ -207,23 +250,21 @@ const char descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto[] PROTOBUF_SECTI
   "ce/gen_src/go/v2/basis\252\002\010V2.Basisb\006proto"
   "3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v2_2fbasis_2fbasis_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v2_2fbasis_2fbasis_2eproto_sccs[3] = {
-  &scc_info_CancelHistory_v2_2fbasis_2fbasis_2eproto.base,
-  &scc_info_Promotion_v2_2fbasis_2fbasis_2eproto.base,
-  &scc_info_UnitTx_v2_2fbasis_2fbasis_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v2_2fbasis_2fbasis_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v2_2fbasis_2fbasis_2eproto = {
-  false, false, descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto, "v2/basis/basis.proto", 1481,
-  &descriptor_table_v2_2fbasis_2fbasis_2eproto_once, descriptor_table_v2_2fbasis_2fbasis_2eproto_sccs, descriptor_table_v2_2fbasis_2fbasis_2eproto_deps, 3, 0,
+  false, false, 1481, descriptor_table_protodef_v2_2fbasis_2fbasis_2eproto, "v2/basis/basis.proto", 
+  &descriptor_table_v2_2fbasis_2fbasis_2eproto_once, nullptr, 0, 3,
   schemas, file_default_instances, TableStruct_v2_2fbasis_2fbasis_2eproto::offsets,
-  file_level_metadata_v2_2fbasis_2fbasis_2eproto, 3, file_level_enum_descriptors_v2_2fbasis_2fbasis_2eproto, file_level_service_descriptors_v2_2fbasis_2fbasis_2eproto,
+  file_level_metadata_v2_2fbasis_2fbasis_2eproto, file_level_enum_descriptors_v2_2fbasis_2fbasis_2eproto, file_level_service_descriptors_v2_2fbasis_2fbasis_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
+descriptor_table_v2_2fbasis_2fbasis_2eproto_metadata_getter(int index) {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_v2_2fbasis_2fbasis_2eproto);
+  return descriptor_table_v2_2fbasis_2fbasis_2eproto.file_level_metadata[index];
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_v2_2fbasis_2fbasis_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_v2_2fbasis_2fbasis_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_v2_2fbasis_2fbasis_2eproto(&descriptor_table_v2_2fbasis_2fbasis_2eproto);
 namespace basis_v2 {
 
 // ===================================================================
@@ -266,12 +307,11 @@ CancelHistory::CancelHistory(const CancelHistory& from)
 }
 
 void CancelHistory::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CancelHistory_v2_2fbasis_2fbasis_2eproto.base);
-  pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  cancelled_at_ = 0;
+pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+cancelled_at_ = 0;
 }
 
 CancelHistory::~CancelHistory() {
@@ -297,11 +337,6 @@ void CancelHistory::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void CancelHistory::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CancelHistory& CancelHistory::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CancelHistory_v2_2fbasis_2fbasis_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CancelHistory::Clear() {
 // @@protoc_insertion_point(message_clear_start:basis_v2.CancelHistory)
@@ -598,9 +633,8 @@ Promotion::Promotion(const Promotion& from)
 }
 
 void Promotion::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Promotion_v2_2fbasis_2fbasis_2eproto.base);
-  id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  discount_ = 0;
+id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+discount_ = 0;
 }
 
 Promotion::~Promotion() {
@@ -623,11 +657,6 @@ void Promotion::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void Promotion::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const Promotion& Promotion::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Promotion_v2_2fbasis_2fbasis_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Promotion::Clear() {
 // @@protoc_insertion_point(message_clear_start:basis_v2.Promotion)
@@ -1047,52 +1076,51 @@ UnitTx::UnitTx(const UnitTx& from)
 }
 
 void UnitTx::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_UnitTx_v2_2fbasis_2fbasis_2eproto.base);
-  amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  apply_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  bank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  buyer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  buyer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  buyer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  buyer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  buyer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  cancel_amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  cancel_reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  card_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  bin_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  card_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  card_receipe_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  card_owner_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  card_brand_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  card_credit_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  card_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  channel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  currency_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  custom_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  card_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  customer_uid_usage_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  fail_reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  order_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  pay_method_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  pg_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  user_agent_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  vbank_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  vbank_holder_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  vbank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  vbank_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  npoint_pay_amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  emb_pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&promotion_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&vbank_issued_at_) -
-      reinterpret_cast<char*>(&promotion_)) + sizeof(vbank_issued_at_));
+amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+apply_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+bank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+buyer_addr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+buyer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+buyer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+buyer_postcode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+buyer_tel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+cancel_amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+cancel_reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+card_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+bin_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+card_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+card_receipe_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+card_owner_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+card_brand_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+card_credit_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+card_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+channel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+currency_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+custom_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+card_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+customer_uid_usage_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+fail_reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+imp_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+merchant_uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+order_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+pay_method_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+pg_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+pg_tid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+receipt_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+user_agent_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+vbank_code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+vbank_holder_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+vbank_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+vbank_num_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+customer_email_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+npoint_pay_amount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+emb_pg_provider_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&promotion_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&vbank_issued_at_) -
+    reinterpret_cast<char*>(&promotion_)) + sizeof(vbank_issued_at_));
 }
 
 UnitTx::~UnitTx() {
@@ -1156,11 +1184,6 @@ void UnitTx::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void UnitTx::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const UnitTx& UnitTx::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UnitTx_v2_2fbasis_2fbasis_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void UnitTx::Clear() {
 // @@protoc_insertion_point(message_clear_start:basis_v2.UnitTx)

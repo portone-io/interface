@@ -88,7 +88,7 @@ class PaymentPrepareResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.Prepare response = 3;</code>
-     * @return \Payment\Prepare
+     * @return \Payment\Prepare|null
      */
     public function getResponse()
     {

@@ -88,7 +88,7 @@ class CertificationResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.certification.Certification response = 3;</code>
-     * @return \Certification\Certification
+     * @return \Certification\Certification|null
      */
     public function getResponse()
     {

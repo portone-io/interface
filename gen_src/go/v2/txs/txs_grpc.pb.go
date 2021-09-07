@@ -62,7 +62,7 @@ type UnsafeTxsServiceServer interface {
 }
 
 func RegisterTxsServiceServer(s grpc.ServiceRegistrar, srv TxsServiceServer) {
-	s.RegisterService(&TxsService_ServiceDesc, srv)
+	s.RegisterService(&_TxsService_serviceDesc, srv)
 }
 
 func _TxsService_GetTxsRecordService_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -83,10 +83,7 @@ func _TxsService_GetTxsRecordService_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
-// TxsService_ServiceDesc is the grpc.ServiceDesc for TxsService service.
-// It's only intended for direct use with grpc.RegisterService,
-// and not to be introspected or modified (even as a copy)
-var TxsService_ServiceDesc = grpc.ServiceDesc{
+var _TxsService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "txs_v2.TxsService",
 	HandlerType: (*TxsServiceServer)(nil),
 	Methods: []grpc.MethodDesc{

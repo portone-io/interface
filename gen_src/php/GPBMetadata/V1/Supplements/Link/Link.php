@@ -15,10 +15,11 @@ class Link
           return;
         }
         \GPBMetadata\Google\Api\Annotations::initOnce();
+        \GPBMetadata\Google\Protobuf\Struct::initOnce();
         $pool->internalAddGeneratedFile(
             '
-¸
-v1/supplements/link/link.protolink_v1">
+ï
+v1/supplements/link/link.protolink_v1google/protobuf/struct.proto">
 GenerateShortenedURLRequest
 url (	
 
@@ -32,9 +33,9 @@ expired_at ("5
 GetContentsRequest
 guid (	"\'
 GetContentsResponse
-contents (	"E
-GeneratePaymentURLRequest
-payment_info (	
+contents (	"^
+GeneratePaymentURLRequest-
+payment_info (2.google.protobuf.Struct
 
 expired_at ("3
 GeneratePaymentURLResponse

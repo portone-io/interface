@@ -88,7 +88,7 @@ class PaymentBalanceResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.payment.PaymentBalance response = 3;</code>
-     * @return \Payment\PaymentBalance
+     * @return \Payment\PaymentBalance|null
      */
     public function getResponse()
     {

@@ -104,7 +104,7 @@ type UnsafeLinkServer interface {
 }
 
 func RegisterLinkServer(s grpc.ServiceRegistrar, srv LinkServer) {
-	s.RegisterService(&Link_ServiceDesc, srv)
+	s.RegisterService(&_Link_serviceDesc, srv)
 }
 
 func _Link_GenerateShortenedURLV2RPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -179,10 +179,7 @@ func _Link_GeneratePaymentURLV2RPC_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
-// Link_ServiceDesc is the grpc.ServiceDesc for Link service.
-// It's only intended for direct use with grpc.RegisterService,
-// and not to be introspected or modified (even as a copy)
-var Link_ServiceDesc = grpc.ServiceDesc{
+var _Link_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "link_v1.Link",
 	HandlerType: (*LinkServer)(nil),
 	Methods: []grpc.MethodDesc{

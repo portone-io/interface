@@ -14,61 +14,51 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_v1_2fauthenticate_2ftoken_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Token_v1_2fauthenticate_2ftoken_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace authenticate {
-class TokenDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Token> _instance;
-} _Token_default_instance_;
-class TokenRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TokenRequest> _instance;
-} _TokenRequest_default_instance_;
-class TokenResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TokenResponse> _instance;
-} _TokenResponse_default_instance_;
+constexpr Token::Token(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : access_token_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , now_(0)
+  , expired_at_(0){}
+struct TokenDefaultTypeInternal {
+  constexpr TokenDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~TokenDefaultTypeInternal() {}
+  union {
+    Token _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TokenDefaultTypeInternal _Token_default_instance_;
+constexpr TokenRequest::TokenRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : imp_key_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , imp_secret_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct TokenRequestDefaultTypeInternal {
+  constexpr TokenRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~TokenRequestDefaultTypeInternal() {}
+  union {
+    TokenRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TokenRequestDefaultTypeInternal _TokenRequest_default_instance_;
+constexpr TokenResponse::TokenResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : message_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , response_(nullptr)
+  , code_(0){}
+struct TokenResponseDefaultTypeInternal {
+  constexpr TokenResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~TokenResponseDefaultTypeInternal() {}
+  union {
+    TokenResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TokenResponseDefaultTypeInternal _TokenResponse_default_instance_;
 }  // namespace authenticate
-static void InitDefaultsscc_info_Token_v1_2fauthenticate_2ftoken_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::authenticate::_Token_default_instance_;
-    new (ptr) ::authenticate::Token();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Token_v1_2fauthenticate_2ftoken_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Token_v1_2fauthenticate_2ftoken_2eproto}, {}};
-
-static void InitDefaultsscc_info_TokenRequest_v1_2fauthenticate_2ftoken_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::authenticate::_TokenRequest_default_instance_;
-    new (ptr) ::authenticate::TokenRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TokenRequest_v1_2fauthenticate_2ftoken_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_TokenRequest_v1_2fauthenticate_2ftoken_2eproto}, {}};
-
-static void InitDefaultsscc_info_TokenResponse_v1_2fauthenticate_2ftoken_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::authenticate::_TokenResponse_default_instance_;
-    new (ptr) ::authenticate::TokenResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_TokenResponse_v1_2fauthenticate_2ftoken_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_TokenResponse_v1_2fauthenticate_2ftoken_2eproto}, {
-      &scc_info_Token_v1_2fauthenticate_2ftoken_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_v1_2fauthenticate_2ftoken_2eproto[3];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_v1_2fauthenticate_2ftoken_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_v1_2fauthenticate_2ftoken_2eproto = nullptr;
@@ -128,21 +118,21 @@ const char descriptor_table_protodef_v1_2fauthenticate_2ftoken_2eproto[] PROTOBU
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v1_2fauthenticate_2ftoken_2eproto_deps[1] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_2fauthenticate_2ftoken_2eproto_sccs[3] = {
-  &scc_info_Token_v1_2fauthenticate_2ftoken_2eproto.base,
-  &scc_info_TokenRequest_v1_2fauthenticate_2ftoken_2eproto.base,
-  &scc_info_TokenResponse_v1_2fauthenticate_2ftoken_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v1_2fauthenticate_2ftoken_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v1_2fauthenticate_2ftoken_2eproto = {
-  false, false, descriptor_table_protodef_v1_2fauthenticate_2ftoken_2eproto, "v1/authenticate/token.proto", 485,
-  &descriptor_table_v1_2fauthenticate_2ftoken_2eproto_once, descriptor_table_v1_2fauthenticate_2ftoken_2eproto_sccs, descriptor_table_v1_2fauthenticate_2ftoken_2eproto_deps, 3, 1,
+  false, false, 485, descriptor_table_protodef_v1_2fauthenticate_2ftoken_2eproto, "v1/authenticate/token.proto", 
+  &descriptor_table_v1_2fauthenticate_2ftoken_2eproto_once, descriptor_table_v1_2fauthenticate_2ftoken_2eproto_deps, 1, 3,
   schemas, file_default_instances, TableStruct_v1_2fauthenticate_2ftoken_2eproto::offsets,
-  file_level_metadata_v1_2fauthenticate_2ftoken_2eproto, 3, file_level_enum_descriptors_v1_2fauthenticate_2ftoken_2eproto, file_level_service_descriptors_v1_2fauthenticate_2ftoken_2eproto,
+  file_level_metadata_v1_2fauthenticate_2ftoken_2eproto, file_level_enum_descriptors_v1_2fauthenticate_2ftoken_2eproto, file_level_service_descriptors_v1_2fauthenticate_2ftoken_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
+descriptor_table_v1_2fauthenticate_2ftoken_2eproto_metadata_getter(int index) {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_v1_2fauthenticate_2ftoken_2eproto);
+  return descriptor_table_v1_2fauthenticate_2ftoken_2eproto.file_level_metadata[index];
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_v1_2fauthenticate_2ftoken_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_v1_2fauthenticate_2ftoken_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_v1_2fauthenticate_2ftoken_2eproto(&descriptor_table_v1_2fauthenticate_2ftoken_2eproto);
 namespace authenticate {
 
 // ===================================================================
@@ -172,12 +162,11 @@ Token::Token(const Token& from)
 }
 
 void Token::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Token_v1_2fauthenticate_2ftoken_2eproto.base);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&now_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&expired_at_) -
-      reinterpret_cast<char*>(&now_)) + sizeof(expired_at_));
+access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&now_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&expired_at_) -
+    reinterpret_cast<char*>(&now_)) + sizeof(expired_at_));
 }
 
 Token::~Token() {
@@ -200,11 +189,6 @@ void Token::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void Token::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const Token& Token::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Token_v1_2fauthenticate_2ftoken_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Token::Clear() {
 // @@protoc_insertion_point(message_clear_start:authenticate.Token)
@@ -442,9 +426,8 @@ TokenRequest::TokenRequest(const TokenRequest& from)
 }
 
 void TokenRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TokenRequest_v1_2fauthenticate_2ftoken_2eproto.base);
-  imp_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  imp_secret_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+imp_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+imp_secret_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 TokenRequest::~TokenRequest() {
@@ -468,11 +451,6 @@ void TokenRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void TokenRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const TokenRequest& TokenRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_TokenRequest_v1_2fauthenticate_2ftoken_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void TokenRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:authenticate.TokenRequest)
@@ -692,12 +670,11 @@ TokenResponse::TokenResponse(const TokenResponse& from)
 }
 
 void TokenResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TokenResponse_v1_2fauthenticate_2ftoken_2eproto.base);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
-      reinterpret_cast<char*>(&response_)) + sizeof(code_));
+message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&response_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&code_) -
+    reinterpret_cast<char*>(&response_)) + sizeof(code_));
 }
 
 TokenResponse::~TokenResponse() {
@@ -721,11 +698,6 @@ void TokenResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void TokenResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const TokenResponse& TokenResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_TokenResponse_v1_2fauthenticate_2ftoken_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void TokenResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:authenticate.TokenResponse)

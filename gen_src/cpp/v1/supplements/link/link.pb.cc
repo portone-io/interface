@@ -14,144 +14,108 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace link_v1 {
-class GenerateShortenedURLRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GenerateShortenedURLRequest> _instance;
-} _GenerateShortenedURLRequest_default_instance_;
-class GenerateShortenedURLResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GenerateShortenedURLResponse> _instance;
-} _GenerateShortenedURLResponse_default_instance_;
-class StoreContentsRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<StoreContentsRequest> _instance;
-} _StoreContentsRequest_default_instance_;
-class StoreContentsResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<StoreContentsResponse> _instance;
-} _StoreContentsResponse_default_instance_;
-class GetContentsRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetContentsRequest> _instance;
-} _GetContentsRequest_default_instance_;
-class GetContentsResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetContentsResponse> _instance;
-} _GetContentsResponse_default_instance_;
-class GeneratePaymentURLRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GeneratePaymentURLRequest> _instance;
-} _GeneratePaymentURLRequest_default_instance_;
-class GeneratePaymentURLResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GeneratePaymentURLResponse> _instance;
-} _GeneratePaymentURLResponse_default_instance_;
+constexpr GenerateShortenedURLRequest::GenerateShortenedURLRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : url_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , expired_at_(PROTOBUF_LONGLONG(0)){}
+struct GenerateShortenedURLRequestDefaultTypeInternal {
+  constexpr GenerateShortenedURLRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GenerateShortenedURLRequestDefaultTypeInternal() {}
+  union {
+    GenerateShortenedURLRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerateShortenedURLRequestDefaultTypeInternal _GenerateShortenedURLRequest_default_instance_;
+constexpr GenerateShortenedURLResponse::GenerateShortenedURLResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : shortened_url_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct GenerateShortenedURLResponseDefaultTypeInternal {
+  constexpr GenerateShortenedURLResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GenerateShortenedURLResponseDefaultTypeInternal() {}
+  union {
+    GenerateShortenedURLResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerateShortenedURLResponseDefaultTypeInternal _GenerateShortenedURLResponse_default_instance_;
+constexpr StoreContentsRequest::StoreContentsRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : contents_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct StoreContentsRequestDefaultTypeInternal {
+  constexpr StoreContentsRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~StoreContentsRequestDefaultTypeInternal() {}
+  union {
+    StoreContentsRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT StoreContentsRequestDefaultTypeInternal _StoreContentsRequest_default_instance_;
+constexpr StoreContentsResponse::StoreContentsResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : guid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct StoreContentsResponseDefaultTypeInternal {
+  constexpr StoreContentsResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~StoreContentsResponseDefaultTypeInternal() {}
+  union {
+    StoreContentsResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT StoreContentsResponseDefaultTypeInternal _StoreContentsResponse_default_instance_;
+constexpr GetContentsRequest::GetContentsRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : guid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct GetContentsRequestDefaultTypeInternal {
+  constexpr GetContentsRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GetContentsRequestDefaultTypeInternal() {}
+  union {
+    GetContentsRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetContentsRequestDefaultTypeInternal _GetContentsRequest_default_instance_;
+constexpr GetContentsResponse::GetContentsResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : contents_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct GetContentsResponseDefaultTypeInternal {
+  constexpr GetContentsResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GetContentsResponseDefaultTypeInternal() {}
+  union {
+    GetContentsResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetContentsResponseDefaultTypeInternal _GetContentsResponse_default_instance_;
+constexpr GeneratePaymentURLRequest::GeneratePaymentURLRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : payment_info_(nullptr)
+  , expired_at_(PROTOBUF_LONGLONG(0)){}
+struct GeneratePaymentURLRequestDefaultTypeInternal {
+  constexpr GeneratePaymentURLRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GeneratePaymentURLRequestDefaultTypeInternal() {}
+  union {
+    GeneratePaymentURLRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GeneratePaymentURLRequestDefaultTypeInternal _GeneratePaymentURLRequest_default_instance_;
+constexpr GeneratePaymentURLResponse::GeneratePaymentURLResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : shortened_url_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct GeneratePaymentURLResponseDefaultTypeInternal {
+  constexpr GeneratePaymentURLResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GeneratePaymentURLResponseDefaultTypeInternal() {}
+  union {
+    GeneratePaymentURLResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GeneratePaymentURLResponseDefaultTypeInternal _GeneratePaymentURLResponse_default_instance_;
 }  // namespace link_v1
-static void InitDefaultsscc_info_GeneratePaymentURLRequest_v1_2fsupplements_2flink_2flink_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::link_v1::_GeneratePaymentURLRequest_default_instance_;
-    new (ptr) ::link_v1::GeneratePaymentURLRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GeneratePaymentURLRequest_v1_2fsupplements_2flink_2flink_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GeneratePaymentURLRequest_v1_2fsupplements_2flink_2flink_2eproto}, {}};
-
-static void InitDefaultsscc_info_GeneratePaymentURLResponse_v1_2fsupplements_2flink_2flink_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::link_v1::_GeneratePaymentURLResponse_default_instance_;
-    new (ptr) ::link_v1::GeneratePaymentURLResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GeneratePaymentURLResponse_v1_2fsupplements_2flink_2flink_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GeneratePaymentURLResponse_v1_2fsupplements_2flink_2flink_2eproto}, {}};
-
-static void InitDefaultsscc_info_GenerateShortenedURLRequest_v1_2fsupplements_2flink_2flink_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::link_v1::_GenerateShortenedURLRequest_default_instance_;
-    new (ptr) ::link_v1::GenerateShortenedURLRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GenerateShortenedURLRequest_v1_2fsupplements_2flink_2flink_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GenerateShortenedURLRequest_v1_2fsupplements_2flink_2flink_2eproto}, {}};
-
-static void InitDefaultsscc_info_GenerateShortenedURLResponse_v1_2fsupplements_2flink_2flink_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::link_v1::_GenerateShortenedURLResponse_default_instance_;
-    new (ptr) ::link_v1::GenerateShortenedURLResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GenerateShortenedURLResponse_v1_2fsupplements_2flink_2flink_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GenerateShortenedURLResponse_v1_2fsupplements_2flink_2flink_2eproto}, {}};
-
-static void InitDefaultsscc_info_GetContentsRequest_v1_2fsupplements_2flink_2flink_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::link_v1::_GetContentsRequest_default_instance_;
-    new (ptr) ::link_v1::GetContentsRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetContentsRequest_v1_2fsupplements_2flink_2flink_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GetContentsRequest_v1_2fsupplements_2flink_2flink_2eproto}, {}};
-
-static void InitDefaultsscc_info_GetContentsResponse_v1_2fsupplements_2flink_2flink_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::link_v1::_GetContentsResponse_default_instance_;
-    new (ptr) ::link_v1::GetContentsResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetContentsResponse_v1_2fsupplements_2flink_2flink_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GetContentsResponse_v1_2fsupplements_2flink_2flink_2eproto}, {}};
-
-static void InitDefaultsscc_info_StoreContentsRequest_v1_2fsupplements_2flink_2flink_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::link_v1::_StoreContentsRequest_default_instance_;
-    new (ptr) ::link_v1::StoreContentsRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_StoreContentsRequest_v1_2fsupplements_2flink_2flink_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_StoreContentsRequest_v1_2fsupplements_2flink_2flink_2eproto}, {}};
-
-static void InitDefaultsscc_info_StoreContentsResponse_v1_2fsupplements_2flink_2flink_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::link_v1::_StoreContentsResponse_default_instance_;
-    new (ptr) ::link_v1::StoreContentsResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_StoreContentsResponse_v1_2fsupplements_2flink_2flink_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_StoreContentsResponse_v1_2fsupplements_2flink_2flink_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_v1_2fsupplements_2flink_2flink_2eproto[8];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_v1_2fsupplements_2flink_2flink_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_v1_2fsupplements_2flink_2flink_2eproto = nullptr;
@@ -232,57 +196,55 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_v1_2fsupplements_2flink_2flink_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\036v1/supplements/link/link.proto\022\007link_v"
-  "1\032\034google/api/annotations.proto\">\n\033Gener"
-  "ateShortenedURLRequest\022\013\n\003url\030\001 \001(\t\022\022\n\ne"
-  "xpired_at\030\002 \001(\003\"5\n\034GenerateShortenedURLR"
-  "esponse\022\025\n\rshortened_url\030\001 \001(\t\"(\n\024StoreC"
-  "ontentsRequest\022\020\n\010contents\030\001 \001(\t\"%\n\025Stor"
-  "eContentsResponse\022\014\n\004guid\030\001 \001(\t\"\"\n\022GetCo"
-  "ntentsRequest\022\014\n\004guid\030\001 \001(\t\"\'\n\023GetConten"
-  "tsResponse\022\020\n\010contents\030\001 \001(\t\"E\n\031Generate"
-  "PaymentURLRequest\022\024\n\014payment_info\030\001 \001(\t\022"
-  "\022\n\nexpired_at\030\002 \001(\003\"3\n\032GeneratePaymentUR"
-  "LResponse\022\025\n\rshortened_url\030\001 \001(\t2\252\004\n\004Lin"
-  "k\022\225\001\n\031GenerateShortenedURLV2RPC\022$.link_v"
-  "1.GenerateShortenedURLRequest\032%.link_v1."
-  "GenerateShortenedURLResponse\"+\202\323\344\223\002%\" /a"
-  "pi/supplements/v1/link/shorten:\001*\022|\n\022Sto"
-  "reContentsV2RPC\022\035.link_v1.StoreContentsR"
-  "equest\032\036.link_v1.StoreContentsResponse\"\'"
-  "\202\323\344\223\002!\"\034/api/supplements/v1/contents:\001*\022"
-  "z\n\020GetContentsV2RPC\022\033.link_v1.GetContent"
-  "sRequest\032\034.link_v1.GetContentsResponse\"+"
-  "\202\323\344\223\002%\022#/api/supplements/v1/contents/{gu"
-  "id}\022\217\001\n\027GeneratePaymentURLV2RPC\022\".link_v"
-  "1.GeneratePaymentURLRequest\032#.link_v1.Ge"
-  "neratePaymentURLResponse\"+\202\323\344\223\002%\" /api/s"
-  "upplements/v1/link/payment:\001*BGZ/github."
-  "com/iamport/interface/gen_src/go/v1/link"
-  "\252\002\023V1.Supplements.Linkb\006proto3"
+  "1\032\034google/api/annotations.proto\032\034google/"
+  "protobuf/struct.proto\">\n\033GenerateShorten"
+  "edURLRequest\022\013\n\003url\030\001 \001(\t\022\022\n\nexpired_at\030"
+  "\002 \001(\003\"5\n\034GenerateShortenedURLResponse\022\025\n"
+  "\rshortened_url\030\001 \001(\t\"(\n\024StoreContentsReq"
+  "uest\022\020\n\010contents\030\001 \001(\t\"%\n\025StoreContentsR"
+  "esponse\022\014\n\004guid\030\001 \001(\t\"\"\n\022GetContentsRequ"
+  "est\022\014\n\004guid\030\001 \001(\t\"\'\n\023GetContentsResponse"
+  "\022\020\n\010contents\030\001 \001(\t\"^\n\031GeneratePaymentURL"
+  "Request\022-\n\014payment_info\030\001 \001(\0132\027.google.p"
+  "rotobuf.Struct\022\022\n\nexpired_at\030\002 \001(\003\"3\n\032Ge"
+  "neratePaymentURLResponse\022\025\n\rshortened_ur"
+  "l\030\001 \001(\t2\252\004\n\004Link\022\225\001\n\031GenerateShortenedUR"
+  "LV2RPC\022$.link_v1.GenerateShortenedURLReq"
+  "uest\032%.link_v1.GenerateShortenedURLRespo"
+  "nse\"+\202\323\344\223\002%\" /api/supplements/v1/link/sh"
+  "orten:\001*\022|\n\022StoreContentsV2RPC\022\035.link_v1"
+  ".StoreContentsRequest\032\036.link_v1.StoreCon"
+  "tentsResponse\"\'\202\323\344\223\002!\"\034/api/supplements/"
+  "v1/contents:\001*\022z\n\020GetContentsV2RPC\022\033.lin"
+  "k_v1.GetContentsRequest\032\034.link_v1.GetCon"
+  "tentsResponse\"+\202\323\344\223\002%\022#/api/supplements/"
+  "v1/contents/{guid}\022\217\001\n\027GeneratePaymentUR"
+  "LV2RPC\022\".link_v1.GeneratePaymentURLReque"
+  "st\032#.link_v1.GeneratePaymentURLResponse\""
+  "+\202\323\344\223\002%\" /api/supplements/v1/link/paymen"
+  "t:\001*BGZ/github.com/iamport/interface/gen"
+  "_src/go/v1/link\252\002\023V1.Supplements.Linkb\006p"
+  "roto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v1_2fsupplements_2flink_2flink_2eproto_deps[1] = {
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_v1_2fsupplements_2flink_2flink_2eproto_deps[2] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_v1_2fsupplements_2flink_2flink_2eproto_sccs[8] = {
-  &scc_info_GeneratePaymentURLRequest_v1_2fsupplements_2flink_2flink_2eproto.base,
-  &scc_info_GeneratePaymentURLResponse_v1_2fsupplements_2flink_2flink_2eproto.base,
-  &scc_info_GenerateShortenedURLRequest_v1_2fsupplements_2flink_2flink_2eproto.base,
-  &scc_info_GenerateShortenedURLResponse_v1_2fsupplements_2flink_2flink_2eproto.base,
-  &scc_info_GetContentsRequest_v1_2fsupplements_2flink_2flink_2eproto.base,
-  &scc_info_GetContentsResponse_v1_2fsupplements_2flink_2flink_2eproto.base,
-  &scc_info_StoreContentsRequest_v1_2fsupplements_2flink_2flink_2eproto.base,
-  &scc_info_StoreContentsResponse_v1_2fsupplements_2flink_2flink_2eproto.base,
+  &::descriptor_table_google_2fprotobuf_2fstruct_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_v1_2fsupplements_2flink_2flink_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_v1_2fsupplements_2flink_2flink_2eproto = {
-  false, false, descriptor_table_protodef_v1_2fsupplements_2flink_2flink_2eproto, "v1/supplements/link/link.proto", 1110,
-  &descriptor_table_v1_2fsupplements_2flink_2flink_2eproto_once, descriptor_table_v1_2fsupplements_2flink_2flink_2eproto_sccs, descriptor_table_v1_2fsupplements_2flink_2flink_2eproto_deps, 8, 1,
+  false, false, 1165, descriptor_table_protodef_v1_2fsupplements_2flink_2flink_2eproto, "v1/supplements/link/link.proto", 
+  &descriptor_table_v1_2fsupplements_2flink_2flink_2eproto_once, descriptor_table_v1_2fsupplements_2flink_2flink_2eproto_deps, 2, 8,
   schemas, file_default_instances, TableStruct_v1_2fsupplements_2flink_2flink_2eproto::offsets,
-  file_level_metadata_v1_2fsupplements_2flink_2flink_2eproto, 8, file_level_enum_descriptors_v1_2fsupplements_2flink_2flink_2eproto, file_level_service_descriptors_v1_2fsupplements_2flink_2flink_2eproto,
+  file_level_metadata_v1_2fsupplements_2flink_2flink_2eproto, file_level_enum_descriptors_v1_2fsupplements_2flink_2flink_2eproto, file_level_service_descriptors_v1_2fsupplements_2flink_2flink_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
+descriptor_table_v1_2fsupplements_2flink_2flink_2eproto_metadata_getter(int index) {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_v1_2fsupplements_2flink_2flink_2eproto);
+  return descriptor_table_v1_2fsupplements_2flink_2flink_2eproto.file_level_metadata[index];
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_v1_2fsupplements_2flink_2flink_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_v1_2fsupplements_2flink_2flink_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_v1_2fsupplements_2flink_2flink_2eproto(&descriptor_table_v1_2fsupplements_2flink_2flink_2eproto);
 namespace link_v1 {
 
 // ===================================================================
@@ -310,9 +272,8 @@ GenerateShortenedURLRequest::GenerateShortenedURLRequest(const GenerateShortened
 }
 
 void GenerateShortenedURLRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GenerateShortenedURLRequest_v1_2fsupplements_2flink_2flink_2eproto.base);
-  url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  expired_at_ = PROTOBUF_LONGLONG(0);
+url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+expired_at_ = PROTOBUF_LONGLONG(0);
 }
 
 GenerateShortenedURLRequest::~GenerateShortenedURLRequest() {
@@ -335,11 +296,6 @@ void GenerateShortenedURLRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Are
 void GenerateShortenedURLRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const GenerateShortenedURLRequest& GenerateShortenedURLRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GenerateShortenedURLRequest_v1_2fsupplements_2flink_2flink_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GenerateShortenedURLRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:link_v1.GenerateShortenedURLRequest)
@@ -542,8 +498,7 @@ GenerateShortenedURLResponse::GenerateShortenedURLResponse(const GenerateShorten
 }
 
 void GenerateShortenedURLResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GenerateShortenedURLResponse_v1_2fsupplements_2flink_2flink_2eproto.base);
-  shortened_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+shortened_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 GenerateShortenedURLResponse::~GenerateShortenedURLResponse() {
@@ -566,11 +521,6 @@ void GenerateShortenedURLResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Ar
 void GenerateShortenedURLResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const GenerateShortenedURLResponse& GenerateShortenedURLResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GenerateShortenedURLResponse_v1_2fsupplements_2flink_2flink_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GenerateShortenedURLResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:link_v1.GenerateShortenedURLResponse)
@@ -748,8 +698,7 @@ StoreContentsRequest::StoreContentsRequest(const StoreContentsRequest& from)
 }
 
 void StoreContentsRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_StoreContentsRequest_v1_2fsupplements_2flink_2flink_2eproto.base);
-  contents_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+contents_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 StoreContentsRequest::~StoreContentsRequest() {
@@ -772,11 +721,6 @@ void StoreContentsRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void StoreContentsRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const StoreContentsRequest& StoreContentsRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_StoreContentsRequest_v1_2fsupplements_2flink_2flink_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void StoreContentsRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:link_v1.StoreContentsRequest)
@@ -954,8 +898,7 @@ StoreContentsResponse::StoreContentsResponse(const StoreContentsResponse& from)
 }
 
 void StoreContentsResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_StoreContentsResponse_v1_2fsupplements_2flink_2flink_2eproto.base);
-  guid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+guid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 StoreContentsResponse::~StoreContentsResponse() {
@@ -978,11 +921,6 @@ void StoreContentsResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void StoreContentsResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const StoreContentsResponse& StoreContentsResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_StoreContentsResponse_v1_2fsupplements_2flink_2flink_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void StoreContentsResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:link_v1.StoreContentsResponse)
@@ -1160,8 +1098,7 @@ GetContentsRequest::GetContentsRequest(const GetContentsRequest& from)
 }
 
 void GetContentsRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetContentsRequest_v1_2fsupplements_2flink_2flink_2eproto.base);
-  guid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+guid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 GetContentsRequest::~GetContentsRequest() {
@@ -1184,11 +1121,6 @@ void GetContentsRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void GetContentsRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const GetContentsRequest& GetContentsRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetContentsRequest_v1_2fsupplements_2flink_2flink_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GetContentsRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:link_v1.GetContentsRequest)
@@ -1366,8 +1298,7 @@ GetContentsResponse::GetContentsResponse(const GetContentsResponse& from)
 }
 
 void GetContentsResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetContentsResponse_v1_2fsupplements_2flink_2flink_2eproto.base);
-  contents_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+contents_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 GetContentsResponse::~GetContentsResponse() {
@@ -1390,11 +1321,6 @@ void GetContentsResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void GetContentsResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const GetContentsResponse& GetContentsResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetContentsResponse_v1_2fsupplements_2flink_2flink_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GetContentsResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:link_v1.GetContentsResponse)
@@ -1552,8 +1478,19 @@ void GetContentsResponse::InternalSwap(GetContentsResponse* other) {
 
 class GeneratePaymentURLRequest::_Internal {
  public:
+  static const PROTOBUF_NAMESPACE_ID::Struct& payment_info(const GeneratePaymentURLRequest* msg);
 };
 
+const PROTOBUF_NAMESPACE_ID::Struct&
+GeneratePaymentURLRequest::_Internal::payment_info(const GeneratePaymentURLRequest* msg) {
+  return *msg->payment_info_;
+}
+void GeneratePaymentURLRequest::clear_payment_info() {
+  if (GetArena() == nullptr && payment_info_ != nullptr) {
+    delete payment_info_;
+  }
+  payment_info_ = nullptr;
+}
 GeneratePaymentURLRequest::GeneratePaymentURLRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
@@ -1563,19 +1500,20 @@ GeneratePaymentURLRequest::GeneratePaymentURLRequest(::PROTOBUF_NAMESPACE_ID::Ar
 GeneratePaymentURLRequest::GeneratePaymentURLRequest(const GeneratePaymentURLRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  payment_info_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_payment_info().empty()) {
-    payment_info_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_payment_info(), 
-      GetArena());
+  if (from._internal_has_payment_info()) {
+    payment_info_ = new PROTOBUF_NAMESPACE_ID::Struct(*from.payment_info_);
+  } else {
+    payment_info_ = nullptr;
   }
   expired_at_ = from.expired_at_;
   // @@protoc_insertion_point(copy_constructor:link_v1.GeneratePaymentURLRequest)
 }
 
 void GeneratePaymentURLRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GeneratePaymentURLRequest_v1_2fsupplements_2flink_2flink_2eproto.base);
-  payment_info_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  expired_at_ = PROTOBUF_LONGLONG(0);
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&payment_info_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&expired_at_) -
+    reinterpret_cast<char*>(&payment_info_)) + sizeof(expired_at_));
 }
 
 GeneratePaymentURLRequest::~GeneratePaymentURLRequest() {
@@ -1586,7 +1524,7 @@ GeneratePaymentURLRequest::~GeneratePaymentURLRequest() {
 
 void GeneratePaymentURLRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  payment_info_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete payment_info_;
 }
 
 void GeneratePaymentURLRequest::ArenaDtor(void* object) {
@@ -1598,11 +1536,6 @@ void GeneratePaymentURLRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena
 void GeneratePaymentURLRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const GeneratePaymentURLRequest& GeneratePaymentURLRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GeneratePaymentURLRequest_v1_2fsupplements_2flink_2flink_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GeneratePaymentURLRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:link_v1.GeneratePaymentURLRequest)
@@ -1610,7 +1543,10 @@ void GeneratePaymentURLRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  payment_info_.ClearToEmpty();
+  if (GetArena() == nullptr && payment_info_ != nullptr) {
+    delete payment_info_;
+  }
+  payment_info_ = nullptr;
   expired_at_ = PROTOBUF_LONGLONG(0);
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -1622,12 +1558,10 @@ const char* GeneratePaymentURLRequest::_InternalParse(const char* ptr, ::PROTOBU
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string payment_info = 1;
+      // .google.protobuf.Struct payment_info = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_payment_info();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "link_v1.GeneratePaymentURLRequest.payment_info"));
+          ptr = ctx->ParseMessage(_internal_mutable_payment_info(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1666,14 +1600,12 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string payment_info = 1;
-  if (this->payment_info().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_payment_info().data(), static_cast<int>(this->_internal_payment_info().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "link_v1.GeneratePaymentURLRequest.payment_info");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_payment_info(), target);
+  // .google.protobuf.Struct payment_info = 1;
+  if (this->has_payment_info()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::payment_info(this), target, stream);
   }
 
   // int64 expired_at = 2;
@@ -1698,11 +1630,11 @@ size_t GeneratePaymentURLRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string payment_info = 1;
-  if (this->payment_info().size() > 0) {
+  // .google.protobuf.Struct payment_info = 1;
+  if (this->has_payment_info()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_payment_info());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *payment_info_);
   }
 
   // int64 expired_at = 2;
@@ -1743,8 +1675,8 @@ void GeneratePaymentURLRequest::MergeFrom(const GeneratePaymentURLRequest& from)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.payment_info().size() > 0) {
-    _internal_set_payment_info(from._internal_payment_info());
+  if (from.has_payment_info()) {
+    _internal_mutable_payment_info()->PROTOBUF_NAMESPACE_ID::Struct::MergeFrom(from._internal_payment_info());
   }
   if (from.expired_at() != 0) {
     _internal_set_expired_at(from._internal_expired_at());
@@ -1772,8 +1704,12 @@ bool GeneratePaymentURLRequest::IsInitialized() const {
 void GeneratePaymentURLRequest::InternalSwap(GeneratePaymentURLRequest* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  payment_info_.Swap(&other->payment_info_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(expired_at_, other->expired_at_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GeneratePaymentURLRequest, expired_at_)
+      + sizeof(GeneratePaymentURLRequest::expired_at_)
+      - PROTOBUF_FIELD_OFFSET(GeneratePaymentURLRequest, payment_info_)>(
+          reinterpret_cast<char*>(&payment_info_),
+          reinterpret_cast<char*>(&other->payment_info_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GeneratePaymentURLRequest::GetMetadata() const {
@@ -1805,8 +1741,7 @@ GeneratePaymentURLResponse::GeneratePaymentURLResponse(const GeneratePaymentURLR
 }
 
 void GeneratePaymentURLResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GeneratePaymentURLResponse_v1_2fsupplements_2flink_2flink_2eproto.base);
-  shortened_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+shortened_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 GeneratePaymentURLResponse::~GeneratePaymentURLResponse() {
@@ -1829,11 +1764,6 @@ void GeneratePaymentURLResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Aren
 void GeneratePaymentURLResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const GeneratePaymentURLResponse& GeneratePaymentURLResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GeneratePaymentURLResponse_v1_2fsupplements_2flink_2flink_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GeneratePaymentURLResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:link_v1.GeneratePaymentURLResponse)

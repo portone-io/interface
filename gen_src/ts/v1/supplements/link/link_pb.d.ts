@@ -3,6 +3,7 @@
 
 import * as jspb from "google-protobuf";
 import * as google_api_annotations_pb from "../../../google/api/annotations_pb";
+import * as google_protobuf_struct_pb from "google-protobuf/google/protobuf/struct_pb";
 
 export class GenerateShortenedURLRequest extends jspb.Message {
   getUrl(): string;
@@ -129,8 +130,10 @@ export namespace GetContentsResponse {
 }
 
 export class GeneratePaymentURLRequest extends jspb.Message {
-  getPaymentInfo(): string;
-  setPaymentInfo(value: string): void;
+  hasPaymentInfo(): boolean;
+  clearPaymentInfo(): void;
+  getPaymentInfo(): google_protobuf_struct_pb.Struct | undefined;
+  setPaymentInfo(value?: google_protobuf_struct_pb.Struct): void;
 
   getExpiredAt(): number;
   setExpiredAt(value: number): void;
@@ -147,7 +150,7 @@ export class GeneratePaymentURLRequest extends jspb.Message {
 
 export namespace GeneratePaymentURLRequest {
   export type AsObject = {
-    paymentInfo: string,
+    paymentInfo?: google_protobuf_struct_pb.Struct.AsObject,
     expiredAt: number,
   }
 }

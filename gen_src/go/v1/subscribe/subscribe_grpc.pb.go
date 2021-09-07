@@ -132,7 +132,7 @@ type UnsafeSubscribeServiceServer interface {
 }
 
 func RegisterSubscribeServiceServer(s grpc.ServiceRegistrar, srv SubscribeServiceServer) {
-	s.RegisterService(&SubscribeService_ServiceDesc, srv)
+	s.RegisterService(&_SubscribeService_serviceDesc, srv)
 }
 
 func _SubscribeService_OnetimePaymentRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -243,10 +243,7 @@ func _SubscribeService_GetScheduledPaymentByCustomerUidRPC_Handler(srv interface
 	return interceptor(ctx, in, info, handler)
 }
 
-// SubscribeService_ServiceDesc is the grpc.ServiceDesc for SubscribeService service.
-// It's only intended for direct use with grpc.RegisterService,
-// and not to be introspected or modified (even as a copy)
-var SubscribeService_ServiceDesc = grpc.ServiceDesc{
+var _SubscribeService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "subscribe.SubscribeService",
 	HandlerType: (*SubscribeServiceServer)(nil),
 	Methods: []grpc.MethodDesc{

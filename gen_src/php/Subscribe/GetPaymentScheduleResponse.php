@@ -88,7 +88,7 @@ class GetPaymentScheduleResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.subscribe.UnitSchedulePaymentResponse response = 3;</code>
-     * @return \Subscribe\UnitSchedulePaymentResponse
+     * @return \Subscribe\UnitSchedulePaymentResponse|null
      */
     public function getResponse()
     {

@@ -25,32 +25,33 @@ namespace V1.Supplements.Link {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch52MS9zdXBwbGVtZW50cy9saW5rL2xpbmsucHJvdG8SB2xpbmtfdjEaHGdv",
-            "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iPgobR2VuZXJhdGVTaG9ydGVu",
-            "ZWRVUkxSZXF1ZXN0EgsKA3VybBgBIAEoCRISCgpleHBpcmVkX2F0GAIgASgD",
-            "IjUKHEdlbmVyYXRlU2hvcnRlbmVkVVJMUmVzcG9uc2USFQoNc2hvcnRlbmVk",
-            "X3VybBgBIAEoCSIoChRTdG9yZUNvbnRlbnRzUmVxdWVzdBIQCghjb250ZW50",
-            "cxgBIAEoCSIlChVTdG9yZUNvbnRlbnRzUmVzcG9uc2USDAoEZ3VpZBgBIAEo",
-            "CSIiChJHZXRDb250ZW50c1JlcXVlc3QSDAoEZ3VpZBgBIAEoCSInChNHZXRD",
-            "b250ZW50c1Jlc3BvbnNlEhAKCGNvbnRlbnRzGAEgASgJIkUKGUdlbmVyYXRl",
-            "UGF5bWVudFVSTFJlcXVlc3QSFAoMcGF5bWVudF9pbmZvGAEgASgJEhIKCmV4",
-            "cGlyZWRfYXQYAiABKAMiMwoaR2VuZXJhdGVQYXltZW50VVJMUmVzcG9uc2US",
-            "FQoNc2hvcnRlbmVkX3VybBgBIAEoCTKqBAoETGluaxKVAQoZR2VuZXJhdGVT",
-            "aG9ydGVuZWRVUkxWMlJQQxIkLmxpbmtfdjEuR2VuZXJhdGVTaG9ydGVuZWRV",
-            "UkxSZXF1ZXN0GiUubGlua192MS5HZW5lcmF0ZVNob3J0ZW5lZFVSTFJlc3Bv",
-            "bnNlIiuC0+STAiUiIC9hcGkvc3VwcGxlbWVudHMvdjEvbGluay9zaG9ydGVu",
-            "OgEqEnwKElN0b3JlQ29udGVudHNWMlJQQxIdLmxpbmtfdjEuU3RvcmVDb250",
-            "ZW50c1JlcXVlc3QaHi5saW5rX3YxLlN0b3JlQ29udGVudHNSZXNwb25zZSIn",
-            "gtPkkwIhIhwvYXBpL3N1cHBsZW1lbnRzL3YxL2NvbnRlbnRzOgEqEnoKEEdl",
-            "dENvbnRlbnRzVjJSUEMSGy5saW5rX3YxLkdldENvbnRlbnRzUmVxdWVzdBoc",
-            "LmxpbmtfdjEuR2V0Q29udGVudHNSZXNwb25zZSIrgtPkkwIlEiMvYXBpL3N1",
-            "cHBsZW1lbnRzL3YxL2NvbnRlbnRzL3tndWlkfRKPAQoXR2VuZXJhdGVQYXlt",
-            "ZW50VVJMVjJSUEMSIi5saW5rX3YxLkdlbmVyYXRlUGF5bWVudFVSTFJlcXVl",
-            "c3QaIy5saW5rX3YxLkdlbmVyYXRlUGF5bWVudFVSTFJlc3BvbnNlIiuC0+ST",
-            "AiUiIC9hcGkvc3VwcGxlbWVudHMvdjEvbGluay9wYXltZW50OgEqQkdaL2dp",
-            "dGh1Yi5jb20vaWFtcG9ydC9pbnRlcmZhY2UvZ2VuX3NyYy9nby92MS9saW5r",
-            "qgITVjEuU3VwcGxlbWVudHMuTGlua2IGcHJvdG8z"));
+            "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9z",
+            "dHJ1Y3QucHJvdG8iPgobR2VuZXJhdGVTaG9ydGVuZWRVUkxSZXF1ZXN0EgsK",
+            "A3VybBgBIAEoCRISCgpleHBpcmVkX2F0GAIgASgDIjUKHEdlbmVyYXRlU2hv",
+            "cnRlbmVkVVJMUmVzcG9uc2USFQoNc2hvcnRlbmVkX3VybBgBIAEoCSIoChRT",
+            "dG9yZUNvbnRlbnRzUmVxdWVzdBIQCghjb250ZW50cxgBIAEoCSIlChVTdG9y",
+            "ZUNvbnRlbnRzUmVzcG9uc2USDAoEZ3VpZBgBIAEoCSIiChJHZXRDb250ZW50",
+            "c1JlcXVlc3QSDAoEZ3VpZBgBIAEoCSInChNHZXRDb250ZW50c1Jlc3BvbnNl",
+            "EhAKCGNvbnRlbnRzGAEgASgJIl4KGUdlbmVyYXRlUGF5bWVudFVSTFJlcXVl",
+            "c3QSLQoMcGF5bWVudF9pbmZvGAEgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0",
+            "cnVjdBISCgpleHBpcmVkX2F0GAIgASgDIjMKGkdlbmVyYXRlUGF5bWVudFVS",
+            "TFJlc3BvbnNlEhUKDXNob3J0ZW5lZF91cmwYASABKAkyqgQKBExpbmsSlQEK",
+            "GUdlbmVyYXRlU2hvcnRlbmVkVVJMVjJSUEMSJC5saW5rX3YxLkdlbmVyYXRl",
+            "U2hvcnRlbmVkVVJMUmVxdWVzdBolLmxpbmtfdjEuR2VuZXJhdGVTaG9ydGVu",
+            "ZWRVUkxSZXNwb25zZSIrgtPkkwIlIiAvYXBpL3N1cHBsZW1lbnRzL3YxL2xp",
+            "bmsvc2hvcnRlbjoBKhJ8ChJTdG9yZUNvbnRlbnRzVjJSUEMSHS5saW5rX3Yx",
+            "LlN0b3JlQ29udGVudHNSZXF1ZXN0Gh4ubGlua192MS5TdG9yZUNvbnRlbnRz",
+            "UmVzcG9uc2UiJ4LT5JMCISIcL2FwaS9zdXBwbGVtZW50cy92MS9jb250ZW50",
+            "czoBKhJ6ChBHZXRDb250ZW50c1YyUlBDEhsubGlua192MS5HZXRDb250ZW50",
+            "c1JlcXVlc3QaHC5saW5rX3YxLkdldENvbnRlbnRzUmVzcG9uc2UiK4LT5JMC",
+            "JRIjL2FwaS9zdXBwbGVtZW50cy92MS9jb250ZW50cy97Z3VpZH0SjwEKF0dl",
+            "bmVyYXRlUGF5bWVudFVSTFYyUlBDEiIubGlua192MS5HZW5lcmF0ZVBheW1l",
+            "bnRVUkxSZXF1ZXN0GiMubGlua192MS5HZW5lcmF0ZVBheW1lbnRVUkxSZXNw",
+            "b25zZSIrgtPkkwIlIiAvYXBpL3N1cHBsZW1lbnRzL3YxL2xpbmsvcGF5bWVu",
+            "dDoBKkJHWi9naXRodWIuY29tL2lhbXBvcnQvaW50ZXJmYWNlL2dlbl9zcmMv",
+            "Z28vdjEvbGlua6oCE1YxLlN1cHBsZW1lbnRzLkxpbmtiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.Annotations.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.Annotations.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::V1.Supplements.Link.GenerateShortenedURLRequest), global::V1.Supplements.Link.GenerateShortenedURLRequest.Parser, new[]{ "Url", "ExpiredAt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::V1.Supplements.Link.GenerateShortenedURLResponse), global::V1.Supplements.Link.GenerateShortenedURLResponse.Parser, new[]{ "ShortenedUrl" }, null, null, null, null),
@@ -1163,7 +1164,7 @@ namespace V1.Supplements.Link {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GeneratePaymentURLRequest(GeneratePaymentURLRequest other) : this() {
-      paymentInfo_ = other.paymentInfo_;
+      paymentInfo_ = other.paymentInfo_ != null ? other.paymentInfo_.Clone() : null;
       expiredAt_ = other.expiredAt_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1175,12 +1176,12 @@ namespace V1.Supplements.Link {
 
     /// <summary>Field number for the "payment_info" field.</summary>
     public const int PaymentInfoFieldNumber = 1;
-    private string paymentInfo_ = "";
+    private global::Google.Protobuf.WellKnownTypes.Struct paymentInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PaymentInfo {
+    public global::Google.Protobuf.WellKnownTypes.Struct PaymentInfo {
       get { return paymentInfo_; }
       set {
-        paymentInfo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        paymentInfo_ = value;
       }
     }
 
@@ -1208,7 +1209,7 @@ namespace V1.Supplements.Link {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PaymentInfo != other.PaymentInfo) return false;
+      if (!object.Equals(PaymentInfo, other.PaymentInfo)) return false;
       if (ExpiredAt != other.ExpiredAt) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1216,7 +1217,7 @@ namespace V1.Supplements.Link {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (PaymentInfo.Length != 0) hash ^= PaymentInfo.GetHashCode();
+      if (paymentInfo_ != null) hash ^= PaymentInfo.GetHashCode();
       if (ExpiredAt != 0L) hash ^= ExpiredAt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1234,9 +1235,9 @@ namespace V1.Supplements.Link {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PaymentInfo.Length != 0) {
+      if (paymentInfo_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(PaymentInfo);
+        output.WriteMessage(PaymentInfo);
       }
       if (ExpiredAt != 0L) {
         output.WriteRawTag(16);
@@ -1251,9 +1252,9 @@ namespace V1.Supplements.Link {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PaymentInfo.Length != 0) {
+      if (paymentInfo_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(PaymentInfo);
+        output.WriteMessage(PaymentInfo);
       }
       if (ExpiredAt != 0L) {
         output.WriteRawTag(16);
@@ -1268,8 +1269,8 @@ namespace V1.Supplements.Link {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (PaymentInfo.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PaymentInfo);
+      if (paymentInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PaymentInfo);
       }
       if (ExpiredAt != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ExpiredAt);
@@ -1285,8 +1286,11 @@ namespace V1.Supplements.Link {
       if (other == null) {
         return;
       }
-      if (other.PaymentInfo.Length != 0) {
-        PaymentInfo = other.PaymentInfo;
+      if (other.paymentInfo_ != null) {
+        if (paymentInfo_ == null) {
+          PaymentInfo = new global::Google.Protobuf.WellKnownTypes.Struct();
+        }
+        PaymentInfo.MergeFrom(other.PaymentInfo);
       }
       if (other.ExpiredAt != 0L) {
         ExpiredAt = other.ExpiredAt;
@@ -1306,7 +1310,10 @@ namespace V1.Supplements.Link {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            PaymentInfo = input.ReadString();
+            if (paymentInfo_ == null) {
+              PaymentInfo = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(PaymentInfo);
             break;
           }
           case 16: {
@@ -1328,7 +1335,10 @@ namespace V1.Supplements.Link {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            PaymentInfo = input.ReadString();
+            if (paymentInfo_ == null) {
+              PaymentInfo = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(PaymentInfo);
             break;
           }
           case 16: {

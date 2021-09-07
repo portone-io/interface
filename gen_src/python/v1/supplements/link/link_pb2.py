@@ -12,6 +12,7 @@ _sym_db = _symbol_database.Default()
 
 
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z/github.com/iamport/interface/gen_src/go/v1/link\252\002\023V1.Supplements.Link',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1ev1/supplements/link/link.proto\x12\x07link_v1\x1a\x1cgoogle/api/annotations.proto\">\n\x1bGenerateShortenedURLRequest\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x12\n\nexpired_at\x18\x02 \x01(\x03\"5\n\x1cGenerateShortenedURLResponse\x12\x15\n\rshortened_url\x18\x01 \x01(\t\"(\n\x14StoreContentsRequest\x12\x10\n\x08\x63ontents\x18\x01 \x01(\t\"%\n\x15StoreContentsResponse\x12\x0c\n\x04guid\x18\x01 \x01(\t\"\"\n\x12GetContentsRequest\x12\x0c\n\x04guid\x18\x01 \x01(\t\"\'\n\x13GetContentsResponse\x12\x10\n\x08\x63ontents\x18\x01 \x01(\t\"E\n\x19GeneratePaymentURLRequest\x12\x14\n\x0cpayment_info\x18\x01 \x01(\t\x12\x12\n\nexpired_at\x18\x02 \x01(\x03\"3\n\x1aGeneratePaymentURLResponse\x12\x15\n\rshortened_url\x18\x01 \x01(\t2\xaa\x04\n\x04Link\x12\x95\x01\n\x19GenerateShortenedURLV2RPC\x12$.link_v1.GenerateShortenedURLRequest\x1a%.link_v1.GenerateShortenedURLResponse\"+\x82\xd3\xe4\x93\x02%\" /api/supplements/v1/link/shorten:\x01*\x12|\n\x12StoreContentsV2RPC\x12\x1d.link_v1.StoreContentsRequest\x1a\x1e.link_v1.StoreContentsResponse\"\'\x82\xd3\xe4\x93\x02!\"\x1c/api/supplements/v1/contents:\x01*\x12z\n\x10GetContentsV2RPC\x12\x1b.link_v1.GetContentsRequest\x1a\x1c.link_v1.GetContentsResponse\"+\x82\xd3\xe4\x93\x02%\x12#/api/supplements/v1/contents/{guid}\x12\x8f\x01\n\x17GeneratePaymentURLV2RPC\x12\".link_v1.GeneratePaymentURLRequest\x1a#.link_v1.GeneratePaymentURLResponse\"+\x82\xd3\xe4\x93\x02%\" /api/supplements/v1/link/payment:\x01*BGZ/github.com/iamport/interface/gen_src/go/v1/link\xaa\x02\x13V1.Supplements.Linkb\x06proto3'
+  serialized_pb=b'\n\x1ev1/supplements/link/link.proto\x12\x07link_v1\x1a\x1cgoogle/api/annotations.proto\x1a\x1cgoogle/protobuf/struct.proto\">\n\x1bGenerateShortenedURLRequest\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x12\n\nexpired_at\x18\x02 \x01(\x03\"5\n\x1cGenerateShortenedURLResponse\x12\x15\n\rshortened_url\x18\x01 \x01(\t\"(\n\x14StoreContentsRequest\x12\x10\n\x08\x63ontents\x18\x01 \x01(\t\"%\n\x15StoreContentsResponse\x12\x0c\n\x04guid\x18\x01 \x01(\t\"\"\n\x12GetContentsRequest\x12\x0c\n\x04guid\x18\x01 \x01(\t\"\'\n\x13GetContentsResponse\x12\x10\n\x08\x63ontents\x18\x01 \x01(\t\"^\n\x19GeneratePaymentURLRequest\x12-\n\x0cpayment_info\x18\x01 \x01(\x0b\x32\x17.google.protobuf.Struct\x12\x12\n\nexpired_at\x18\x02 \x01(\x03\"3\n\x1aGeneratePaymentURLResponse\x12\x15\n\rshortened_url\x18\x01 \x01(\t2\xaa\x04\n\x04Link\x12\x95\x01\n\x19GenerateShortenedURLV2RPC\x12$.link_v1.GenerateShortenedURLRequest\x1a%.link_v1.GenerateShortenedURLResponse\"+\x82\xd3\xe4\x93\x02%\" /api/supplements/v1/link/shorten:\x01*\x12|\n\x12StoreContentsV2RPC\x12\x1d.link_v1.StoreContentsRequest\x1a\x1e.link_v1.StoreContentsResponse\"\'\x82\xd3\xe4\x93\x02!\"\x1c/api/supplements/v1/contents:\x01*\x12z\n\x10GetContentsV2RPC\x12\x1b.link_v1.GetContentsRequest\x1a\x1c.link_v1.GetContentsResponse\"+\x82\xd3\xe4\x93\x02%\x12#/api/supplements/v1/contents/{guid}\x12\x8f\x01\n\x17GeneratePaymentURLV2RPC\x12\".link_v1.GeneratePaymentURLRequest\x1a#.link_v1.GeneratePaymentURLResponse\"+\x82\xd3\xe4\x93\x02%\" /api/supplements/v1/link/payment:\x01*BGZ/github.com/iamport/interface/gen_src/go/v1/link\xaa\x02\x13V1.Supplements.Linkb\x06proto3'
   ,
-  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_struct__pb2.DESCRIPTOR,])
 
 
 
@@ -61,8 +62,8 @@ _GENERATESHORTENEDURLREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=73,
-  serialized_end=135,
+  serialized_start=103,
+  serialized_end=165,
 )
 
 
@@ -93,8 +94,8 @@ _GENERATESHORTENEDURLRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=137,
-  serialized_end=190,
+  serialized_start=167,
+  serialized_end=220,
 )
 
 
@@ -125,8 +126,8 @@ _STORECONTENTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=192,
-  serialized_end=232,
+  serialized_start=222,
+  serialized_end=262,
 )
 
 
@@ -157,8 +158,8 @@ _STORECONTENTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=234,
-  serialized_end=271,
+  serialized_start=264,
+  serialized_end=301,
 )
 
 
@@ -189,8 +190,8 @@ _GETCONTENTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=273,
-  serialized_end=307,
+  serialized_start=303,
+  serialized_end=337,
 )
 
 
@@ -221,8 +222,8 @@ _GETCONTENTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=309,
-  serialized_end=348,
+  serialized_start=339,
+  serialized_end=378,
 )
 
 
@@ -236,8 +237,8 @@ _GENERATEPAYMENTURLREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='payment_info', full_name='link_v1.GeneratePaymentURLRequest.payment_info', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -260,8 +261,8 @@ _GENERATEPAYMENTURLREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=350,
-  serialized_end=419,
+  serialized_start=380,
+  serialized_end=474,
 )
 
 
@@ -292,10 +293,11 @@ _GENERATEPAYMENTURLRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=421,
-  serialized_end=472,
+  serialized_start=476,
+  serialized_end=527,
 )
 
+_GENERATEPAYMENTURLREQUEST.fields_by_name['payment_info'].message_type = google_dot_protobuf_dot_struct__pb2._STRUCT
 DESCRIPTOR.message_types_by_name['GenerateShortenedURLRequest'] = _GENERATESHORTENEDURLREQUEST
 DESCRIPTOR.message_types_by_name['GenerateShortenedURLResponse'] = _GENERATESHORTENEDURLRESPONSE
 DESCRIPTOR.message_types_by_name['StoreContentsRequest'] = _STORECONTENTSREQUEST
@@ -372,8 +374,8 @@ _LINK = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=475,
-  serialized_end=1029,
+  serialized_start=530,
+  serialized_end=1084,
   methods=[
   _descriptor.MethodDescriptor(
     name='GenerateShortenedURLV2RPC',

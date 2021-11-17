@@ -62,7 +62,7 @@ type UnsafeTokenServiceServer interface {
 }
 
 func RegisterTokenServiceServer(s grpc.ServiceRegistrar, srv TokenServiceServer) {
-	s.RegisterService(&TokenService_ServiceDesc, srv)
+	s.RegisterService(&_TokenService_serviceDesc, srv)
 }
 
 func _TokenService_TokenRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -83,10 +83,7 @@ func _TokenService_TokenRPC_Handler(srv interface{}, ctx context.Context, dec fu
 	return interceptor(ctx, in, info, handler)
 }
 
-// TokenService_ServiceDesc is the grpc.ServiceDesc for TokenService service.
-// It's only intended for direct use with grpc.RegisterService,
-// and not to be introspected or modified (even as a copy)
-var TokenService_ServiceDesc = grpc.ServiceDesc{
+var _TokenService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "authenticate.TokenService",
 	HandlerType: (*TokenServiceServer)(nil),
 	Methods: []grpc.MethodDesc{

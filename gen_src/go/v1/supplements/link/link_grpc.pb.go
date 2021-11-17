@@ -21,6 +21,7 @@ type LinkClient interface {
 	StoreContentsV2RPC(ctx context.Context, in *StoreContentsRequest, opts ...grpc.CallOption) (*StoreContentsResponse, error)
 	GetContentsV2RPC(ctx context.Context, in *GetContentsRequest, opts ...grpc.CallOption) (*GetContentsResponse, error)
 	GeneratePaymentURLV2RPC(ctx context.Context, in *GeneratePaymentURLRequest, opts ...grpc.CallOption) (*GeneratePaymentURLResponse, error)
+	ExpirePaymentURLV2RPC(ctx context.Context, in *ExpirePaymentURLRequest, opts ...grpc.CallOption) (*ExpirePaymentURLResponse, error)
 }
 
 type linkClient struct {
@@ -67,6 +68,15 @@ func (c *linkClient) GeneratePaymentURLV2RPC(ctx context.Context, in *GeneratePa
 	return out, nil
 }
 
+func (c *linkClient) ExpirePaymentURLV2RPC(ctx context.Context, in *ExpirePaymentURLRequest, opts ...grpc.CallOption) (*ExpirePaymentURLResponse, error) {
+	out := new(ExpirePaymentURLResponse)
+	err := c.cc.Invoke(ctx, "/link_v1.Link/ExpirePaymentURLV2RPC", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // LinkServer is the server API for Link service.
 // All implementations must embed UnimplementedLinkServer
 // for forward compatibility
@@ -75,6 +85,7 @@ type LinkServer interface {
 	StoreContentsV2RPC(context.Context, *StoreContentsRequest) (*StoreContentsResponse, error)
 	GetContentsV2RPC(context.Context, *GetContentsRequest) (*GetContentsResponse, error)
 	GeneratePaymentURLV2RPC(context.Context, *GeneratePaymentURLRequest) (*GeneratePaymentURLResponse, error)
+	ExpirePaymentURLV2RPC(context.Context, *ExpirePaymentURLRequest) (*ExpirePaymentURLResponse, error)
 	mustEmbedUnimplementedLinkServer()
 }
 
@@ -94,6 +105,9 @@ func (UnimplementedLinkServer) GetContentsV2RPC(context.Context, *GetContentsReq
 func (UnimplementedLinkServer) GeneratePaymentURLV2RPC(context.Context, *GeneratePaymentURLRequest) (*GeneratePaymentURLResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GeneratePaymentURLV2RPC not implemented")
 }
+func (UnimplementedLinkServer) ExpirePaymentURLV2RPC(context.Context, *ExpirePaymentURLRequest) (*ExpirePaymentURLResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ExpirePaymentURLV2RPC not implemented")
+}
 func (UnimplementedLinkServer) mustEmbedUnimplementedLinkServer() {}
 
 // UnsafeLinkServer may be embedded to opt out of forward compatibility for this service.
@@ -104,7 +118,7 @@ type UnsafeLinkServer interface {
 }
 
 func RegisterLinkServer(s grpc.ServiceRegistrar, srv LinkServer) {
-	s.RegisterService(&Link_ServiceDesc, srv)
+	s.RegisterService(&_Link_serviceDesc, srv)
 }
 
 func _Link_GenerateShortenedURLV2RPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -179,10 +193,25 @@ func _Link_GeneratePaymentURLV2RPC_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
-// Link_ServiceDesc is the grpc.ServiceDesc for Link service.
-// It's only intended for direct use with grpc.RegisterService,
-// and not to be introspected or modified (even as a copy)
-var Link_ServiceDesc = grpc.ServiceDesc{
+func _Link_ExpirePaymentURLV2RPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ExpirePaymentURLRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(LinkServer).ExpirePaymentURLV2RPC(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/link_v1.Link/ExpirePaymentURLV2RPC",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(LinkServer).ExpirePaymentURLV2RPC(ctx, req.(*ExpirePaymentURLRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _Link_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "link_v1.Link",
 	HandlerType: (*LinkServer)(nil),
 	Methods: []grpc.MethodDesc{
@@ -201,6 +230,10 @@ var Link_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GeneratePaymentURLV2RPC",
 			Handler:    _Link_GeneratePaymentURLV2RPC_Handler,
+		},
+		{
+			MethodName: "ExpirePaymentURLV2RPC",
+			Handler:    _Link_ExpirePaymentURLV2RPC_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -76,7 +76,7 @@ type UnsafeAuthenticateServiceServer interface {
 }
 
 func RegisterAuthenticateServiceServer(s grpc.ServiceRegistrar, srv AuthenticateServiceServer) {
-	s.RegisterService(&AuthenticateService_ServiceDesc, srv)
+	s.RegisterService(&_AuthenticateService_serviceDesc, srv)
 }
 
 func _AuthenticateService_TokenV2RPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -115,10 +115,7 @@ func _AuthenticateService_RegisterPubKeyV2RPC_Handler(srv interface{}, ctx conte
 	return interceptor(ctx, in, info, handler)
 }
 
-// AuthenticateService_ServiceDesc is the grpc.ServiceDesc for AuthenticateService service.
-// It's only intended for direct use with grpc.RegisterService,
-// and not to be introspected or modified (even as a copy)
-var AuthenticateService_ServiceDesc = grpc.ServiceDesc{
+var _AuthenticateService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "authenticate_v2.AuthenticateService",
 	HandlerType: (*AuthenticateServiceServer)(nil),
 	Methods: []grpc.MethodDesc{

@@ -33,6 +33,13 @@ service Link {
             body: "*"
         };
     }
+
+    rpc ExpirePaymentURLV2RPC(ExpirePaymentURLRequest) returns (ExpirePaymentURLResponse) {
+        option (google.api.http) = {
+            put: "/api/supplements/v1/link/payment/{guid}"
+            body: "*"
+        };
+    }
 }
 
 message GenerateShortenedURLRequest {
@@ -67,4 +74,11 @@ message GeneratePaymentURLRequest {
 
 message GeneratePaymentURLResponse {
     string shortened_url = 1;
+}
+
+message ExpirePaymentURLRequest {
+    string guid = 1;
+}
+
+message ExpirePaymentURLResponse {
 }

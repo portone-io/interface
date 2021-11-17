@@ -118,7 +118,7 @@ type UnsafePaymentCardServiceServer interface {
 }
 
 func RegisterPaymentCardServiceServer(s grpc.ServiceRegistrar, srv PaymentCardServiceServer) {
-	s.RegisterService(&PaymentCardService_ServiceDesc, srv)
+	s.RegisterService(&_PaymentCardService_serviceDesc, srv)
 }
 
 func _PaymentCardService_CardRegisterV2RPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -211,10 +211,7 @@ func _PaymentCardService_CancelRegiseteredCardV2RPC_Handler(srv interface{}, ctx
 	return interceptor(ctx, in, info, handler)
 }
 
-// PaymentCardService_ServiceDesc is the grpc.ServiceDesc for PaymentCardService service.
-// It's only intended for direct use with grpc.RegisterService,
-// and not to be introspected or modified (even as a copy)
-var PaymentCardService_ServiceDesc = grpc.ServiceDesc{
+var _PaymentCardService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "card_v2.PaymentCardService",
 	HandlerType: (*PaymentCardServiceServer)(nil),
 	Methods: []grpc.MethodDesc{

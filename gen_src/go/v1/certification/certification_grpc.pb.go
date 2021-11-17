@@ -76,7 +76,7 @@ type UnsafeCertificationServiceServer interface {
 }
 
 func RegisterCertificationServiceServer(s grpc.ServiceRegistrar, srv CertificationServiceServer) {
-	s.RegisterService(&CertificationService_ServiceDesc, srv)
+	s.RegisterService(&_CertificationService_serviceDesc, srv)
 }
 
 func _CertificationService_CertificationGetRPC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -115,10 +115,7 @@ func _CertificationService_CertificationDeleteRPC_Handler(srv interface{}, ctx c
 	return interceptor(ctx, in, info, handler)
 }
 
-// CertificationService_ServiceDesc is the grpc.ServiceDesc for CertificationService service.
-// It's only intended for direct use with grpc.RegisterService,
-// and not to be introspected or modified (even as a copy)
-var CertificationService_ServiceDesc = grpc.ServiceDesc{
+var _CertificationService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "certification.CertificationService",
 	HandlerType: (*CertificationServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
